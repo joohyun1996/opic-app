@@ -1,0 +1,161 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─── 사용자 ───────────────────────────────────────
+
+model User {
+  id          Int       @id @default(autoincrement())
+  username    String    @unique
+  password    String
+  role        String    @default("member")
+  createdAt   DateTime  @default(now())
+
+  userWords        UserWord[]
+  grammarProgress  GrammarProgress[]
+  grammarErrors    GrammarError[]
+  shadowingVideos  ShadowingVideo[]
+  speakingSessions SpeakingSession[]
+}
+
+// ─── 단어 ─────────────────────────────────────────
+
+model Word {
+  id           Int       @id @default(autoincrement())
+  word         String    @unique
+  phonetic     String?
+  meaningKo    String
+  meaningEn    String?
+  example      String?
+  exampleKo    String?
+  level        Int
+  category     String
+  partOfSpeech String?
+  collocations String[]
+  createdAt    DateTime  @default(now())
+
+  userWords    UserWord[]
+
+  @@index([level])
+  @@index([category])
+  @@index([level, category])
+}
+
+model UserWord {
+  userId       Int
+  wordId       Int
+  status       String    @default("new")
+  correctCount Int       @default(0)
+  wrongCount   Int       @default(0)
+  nextReview   DateTime?
+  lastStudied  DateTime?
+  createdAt    DateTime  @default(now())
+
+  user         User      @relation(fields: [userId], references: [id])
+  word         Word      @relation(fields: [wordId], references: [id])
+
+  @@id([userId, wordId])
+  @@index([userId, status, nextReview])
+  @@index([userId, status])
+}
+
+// ─── 문법 ─────────────────────────────────────────
+
+model GrammarChapter {
+  id             String    @id
+  category       String
+  title          String
+  order          Int
+  coreConceptKo  String
+  structureTable Json
+  goodExamples   Json
+  badExamples    Json
+  opicTip        String?
+  quizBank       Json
+  createdAt      DateTime  @default(now())
+
+  progress       GrammarProgress[]
+}
+
+model GrammarProgress {
+  userId      Int
+  chapterId   String
+  status      String    @default("not_started")
+  lastScore   Int?
+  lastStudied DateTime?
+  doneAt      DateTime?
+
+  user        User           @relation(fields: [userId], references: [id])
+  chapter     GrammarChapter @relation(fields: [chapterId], references: [id])
+
+  @@id([userId, chapterId])
+  @@index([userId, status])
+  @@index([userId, lastStudied])
+}
+
+// ─── 오답 기록 ────────────────────────────────────
+
+model GrammarError {
+  id          Int       @id @default(autoincrement())
+  userId      Int
+  source      String
+  original    String
+  corrected   String
+  errorType   String
+  errorDetail String?
+  chapterId   String?
+  createdAt   DateTime  @default(now())
+
+  user        User      @relation(fields: [userId], references: [id])
+
+  @@index([userId, errorType])
+  @@index([userId, createdAt])
+}
+
+// ─── 스피킹 세션 ──────────────────────────────────
+
+model SpeakingSession {
+  id             Int       @id @default(autoincrement())
+  userId         Int
+  questionType   String
+  question       String
+  originalText   String
+  correctedText  String
+  feedback       Json
+  opicLevel      String?
+  pauseCount     Int       @default(0)
+  wordTimestamps Json?
+  audioPath      String?
+  createdAt      DateTime  @default(now())
+
+  user           User      @relation(fields: [userId], references: [id])
+
+  @@index([userId, createdAt])
+  @@index([userId, opicLevel])
+}
+
+// ─── 섀도잉 ───────────────────────────────────────
+
+model ShadowingVideo {
+  id          Int       @id @default(autoincrement())
+  userId      Int
+  youtubeUrl  String
+  title       String
+  thumbnail   String?
+  duration    Int?
+  subtitles   Json
+  isShared    Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+
+  user        User      @relation(fields: [userId], references: [id])
+}

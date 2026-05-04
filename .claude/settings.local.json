@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/login)",
+      "Bash(npm install *)",
+      "Bash(npm test *)",
+      "Bash(git -C /Users/jooh/Desktop/develop/opic-app status)",
+      "Bash(git -C /Users/jooh/Desktop/develop/opic-app log --oneline -3)",
+      "Bash(git -C /Users/jooh/Desktop/develop/opic-app add SPEC.md AGENTS.md CLAUDE.md app/page.tsx package.json package-lock.json vitest.config.ts 'app/\\(main\\)/' app/api/admin/ app/api/user-words/ app/api/words/ components/navigation/ components/words/ lib/tts.ts tests/)",
+      "Bash(git -C /Users/jooh/Desktop/develop/opic-app commit -m ' *)",
+      "Bash(git -C /Users/jooh/Desktop/develop/opic-app push origin dev)"
+    ]
+  }
+}

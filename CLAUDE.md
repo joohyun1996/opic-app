@@ -83,3 +83,9 @@ Next.js 16 + Prisma 7 + shadcn/ui 기반 영어/중국어 학습 웹앱
     utter.lang = lang === 'en' ? 'en-US' : 'zh-CN'
     window.speechSynthesis.speak(utter)
   }
+
+
+## 단어 데이터 규칙
+- 번역/뜻이 불확실한 경우 값 앞에 * 표시
+- 예: "*난해한"
+- * 붙은 단어는 추후 수동 검토 대상

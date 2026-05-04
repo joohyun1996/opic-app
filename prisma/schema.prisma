@@ -1,10 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
-  provider = "prisma-client"
+  provider = "prisma-client-js"
   output   = "../app/generated/prisma"
 }
 
@@ -12,14 +7,12 @@ datasource db {
   provider = "postgresql"
 }
 
-// ─── 사용자 ───────────────────────────────────────
-
 model User {
-  id          Int       @id @default(autoincrement())
-  username    String    @unique
-  password    String
-  role        String    @default("member")
-  createdAt   DateTime  @default(now())
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  password  String
+  role      String   @default("member")
+  createdAt DateTime @default(now())
 
   userWords        UserWord[]
   grammarProgress  GrammarProgress[]
@@ -28,11 +21,10 @@ model User {
   speakingSessions SpeakingSession[]
 }
 
-// ─── 단어 ─────────────────────────────────────────
-
 model Word {
-  id           Int       @id @default(autoincrement())
-  word         String    @unique
+  id           Int      @id @default(autoincrement())
+  language     String
+  word         String
   phonetic     String?
   meaningKo    String
   meaningEn    String?
@@ -42,13 +34,14 @@ model Word {
   category     String
   partOfSpeech String?
   collocations String[]
-  createdAt    DateTime  @default(now())
+  createdAt    DateTime @default(now())
 
-  userWords    UserWord[]
+  userWords UserWord[]
 
-  @@index([level])
-  @@index([category])
-  @@index([level, category])
+  @@unique([language, word])
+  @@index([language, level])
+  @@index([language, category])
+  @@index([language, level, category])
 }
 
 model UserWord {
@@ -61,18 +54,17 @@ model UserWord {
   lastStudied  DateTime?
   createdAt    DateTime  @default(now())
 
-  user         User      @relation(fields: [userId], references: [id])
-  word         Word      @relation(fields: [wordId], references: [id])
+  user User @relation(fields: [userId], references: [id])
+  word Word @relation(fields: [wordId], references: [id])
 
   @@id([userId, wordId])
   @@index([userId, status, nextReview])
   @@index([userId, status])
 }
 
-// ─── 문법 ─────────────────────────────────────────
-
 model GrammarChapter {
-  id             String    @id
+  id             String   @id
+  language       String
   category       String
   title          String
   order          Int
@@ -80,11 +72,14 @@ model GrammarChapter {
   structureTable Json
   goodExamples   Json
   badExamples    Json
-  opicTip        String?
+  examTip        String?
   quizBank       Json
-  createdAt      DateTime  @default(now())
+  createdAt      DateTime @default(now())
 
-  progress       GrammarProgress[]
+  progress GrammarProgress[]
+
+  @@index([language, category])
+  @@index([language, order])
 }
 
 model GrammarProgress {
@@ -95,67 +90,67 @@ model GrammarProgress {
   lastStudied DateTime?
   doneAt      DateTime?
 
-  user        User           @relation(fields: [userId], references: [id])
-  chapter     GrammarChapter @relation(fields: [chapterId], references: [id])
+  user    User           @relation(fields: [userId], references: [id])
+  chapter GrammarChapter @relation(fields: [chapterId], references: [id])
 
   @@id([userId, chapterId])
   @@index([userId, status])
   @@index([userId, lastStudied])
 }
 
-// ─── 오답 기록 ────────────────────────────────────
-
 model GrammarError {
-  id          Int       @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   userId      Int
+  language    String
   source      String
   original    String
   corrected   String
   errorType   String
   errorDetail String?
   chapterId   String?
-  createdAt   DateTime  @default(now())
+  createdAt   DateTime @default(now())
 
-  user        User      @relation(fields: [userId], references: [id])
+  user User @relation(fields: [userId], references: [id])
 
-  @@index([userId, errorType])
-  @@index([userId, createdAt])
+  @@index([userId, language, errorType])
+  @@index([userId, language, createdAt])
 }
 
-// ─── 스피킹 세션 ──────────────────────────────────
-
 model SpeakingSession {
-  id             Int       @id @default(autoincrement())
+  id             Int      @id @default(autoincrement())
   userId         Int
+  language       String
   questionType   String
   question       String
   originalText   String
   correctedText  String
   feedback       Json
-  opicLevel      String?
-  pauseCount     Int       @default(0)
+  examLevel      String?
+  pauseCount     Int      @default(0)
   wordTimestamps Json?
   audioPath      String?
-  createdAt      DateTime  @default(now())
+  createdAt      DateTime @default(now())
 
-  user           User      @relation(fields: [userId], references: [id])
+  user User @relation(fields: [userId], references: [id])
 
-  @@index([userId, createdAt])
-  @@index([userId, opicLevel])
+  @@index([userId, language, createdAt])
+  @@index([userId, language, examLevel])
 }
 
-// ─── 섀도잉 ───────────────────────────────────────
-
 model ShadowingVideo {
-  id          Int       @id @default(autoincrement())
-  userId      Int
-  youtubeUrl  String
-  title       String
-  thumbnail   String?
-  duration    Int?
-  subtitles   Json
-  isShared    Boolean   @default(false)
-  createdAt   DateTime  @default(now())
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  language   String
+  youtubeUrl String
+  title      String
+  thumbnail  String?
+  duration   Int?
+  subtitles  Json
+  isShared   Boolean  @default(false)
+  createdAt  DateTime @default(now())
 
-  user        User      @relation(fields: [userId], references: [id])
+  user User @relation(fields: [userId], references: [id])
+
+  @@index([language])
+  @@index([userId, language])
 }

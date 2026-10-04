@@ -65,9 +65,15 @@ DB가 비어 있다. 기존 씨드 스크립트는 한 번도 실행된 적이 �
   - level = `min(5, floor(index/1000)+1)` (`:70`과 동일)
   - phonetic, partOfSpeech, meaningEn, example은 Free Dictionary API로 조회
   - category = partOfSpeech, 없으면 `general`
-- 중국어: `scripts/seed-words-zh.ts:13`의 hsk-vocabulary `hsk1~6.json`
-  - level = HSK 급수, category = `HSK<n>`
-  - 병음과 영어 뜻은 원본 필드에서 가져온다 (씨드 스크립트의 매핑 참고)
+- 중국어: ~~`scripts/seed-words-zh.ts:13`의 gigamorph/hsk-vocabulary~~ (저장소가 사라짐, 404) → **`drkameleon/complete-hsk-vocabulary`** (MIT)
+  - URL: `https://raw.githubusercontent.com/drkameleon/complete-hsk-vocabulary/main/wordlists/exclusive/old/{1..6}.json`
+  - 2026-10-04 확인 기준 급수별 150/147/298/598/1298/2500, 합계 4,991개
+  - 매핑:
+    - `word` = `simplified`, `phonetic` = `forms[0].transcriptions.pinyin`
+    - `meaningEn` = `forms[0].meanings`를 `"; "`로 연결, `partOfSpeech` = `pos[0]` (없으면 null)
+    - `level` = 파일 번호, `category` = `HSK<n>`
+  - 여러 독음(`forms`가 2개 이상)인 단어는 `forms[0]`만 사용한다. 개수를 HANDOFF에 적는다
+  - 중국어 예문은 출처에 없으므로 `example` / `exampleKo`는 null
 
 ### 한국어 뜻 (`meaningKo`)·예문 번역 (`exampleKo`)
 - **Anthropic/OpenAI API 호출 금지.** GPT(구현 에이전트)가 직접 작성한다.
@@ -81,7 +87,7 @@ DB가 비어 있다. 기존 씨드 스크립트는 한 번도 실행된 적이 �
 
 ### 추가 수용 기준
 - [ ] AC11: source JSON의 모든 레코드는 `WordInput` 필드를 전부 갖고, `meaningKo`가 빈 문자열인 레코드는 0개다
-- [ ] AC12: 영어 5,000개(사전 조회 실패분 포함), 중국어는 HSK 1~6 원본 합계에서 정규화 중복을 뺀 수와 같다. HANDOFF에 수치를 적는다
+- [ ] AC12: 영어 5,000개(사전 조회 실패분 포함), 중국어는 HSK 1~6 원본 합계(4,991)에서 정규화 중복을 뺀 수와 같다. HANDOFF에 수치를 적는다
 - [ ] AC13: `exports/words.json`에서 언어별 Day 1에 2개 이상의 level이 섞여 있다 (실제 데이터로 AC3 확인)
 - [ ] AC14: `*` 표시된 단어 수를 언어별로 HANDOFF에 적는다
 

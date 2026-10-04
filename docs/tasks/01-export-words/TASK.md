@@ -16,6 +16,8 @@ PostgreSQL의 `Word` 테이블을 네이티브 앱에 내장할 `words.json`으�
 | `scripts/export-words.ts` | 생성 | Prisma로 Word 조회 → 순수 함수 호출 → JSON 파일 쓰기 |
 | `tests/lib/word-export.test.ts` | 생성 | 순수 함수 단위 테스트 |
 | `exports/words.json` | 생성 | 실행 결과물 (커밋 대상) |
+| `scripts/collect-words.ts` | 생성 | (추가 2026-10-04) 원본 출처 조회 → `exports/source/words-{en,zh}.json` |
+| `exports/source/words-en.json`, `exports/source/words-zh.json` | 생성 | (추가) 수집 원본, 커밋 대상 |
 
 ## 관련 파일 (읽기만)
 - `prisma/schema.prisma` § `model Word` — 필드 목록
@@ -54,6 +56,34 @@ PostgreSQL의 `Word` 테이블을 네이티브 앱에 내장할 `words.json`으�
 ### 실행
 - `npx tsx scripts/export-words.ts` (기존 seed 스크립트와 같은 방식이면 그것을 따른다)
 - 완료 시 언어별 단어 수, 최대 seq, Day 수(`ceil(maxSeq/40)`), dataVersion을 출력한다.
+
+## 추가 요구사항 (2026-10-04, 1차 리뷰 M1 대응)
+DB가 비어 있다. 기존 씨드 스크립트는 한 번도 실행된 적이 없다. **DB와 유료 API를 거치지 않고**, GPT가 씨드 스크립트의 원래 출처에서 직접 조회해 단어 데이터를 만든다.
+
+### 출처 (기존 씨드와 동일)
+- 영어: `scripts/seed-words-en.ts:11-14`의 Google 10000 목록 상위 5,000개
+  - level = `min(5, floor(index/1000)+1)` (`:70`과 동일)
+  - phonetic, partOfSpeech, meaningEn, example은 Free Dictionary API로 조회
+  - category = partOfSpeech, 없으면 `general`
+- 중국어: `scripts/seed-words-zh.ts:13`의 hsk-vocabulary `hsk1~6.json`
+  - level = HSK 급수, category = `HSK<n>`
+  - 병음과 영어 뜻은 원본 필드에서 가져온다 (씨드 스크립트의 매핑 참고)
+
+### 한국어 뜻 (`meaningKo`)·예문 번역 (`exampleKo`)
+- **Anthropic/OpenAI API 호출 금지.** GPT(구현 에이전트)가 직접 작성한다.
+- 뜻이 확실하지 않으면 값 앞에 `*`를 붙인다 (AGENTS.md 규칙). 사전 조회에 실패한 단어도 `*`를 붙인다.
+- 분량이 많으므로 배치로 나눠 작성해도 된다. 중간 결과는 같은 source 파일에 이어서 쓴다.
+
+### 흐름
+1. `scripts/collect-words.ts`: 출처 조회 → source JSON에 저장 (`meaningKo`는 비워 둠)
+2. GPT가 source JSON의 `meaningKo` / `exampleKo`를 채운다
+3. `scripts/export-words.ts`에 source JSON 입력 경로를 추가한다. Prisma 조회 대신 source JSON을 읽어 `buildWordExport`에 넘긴다. `buildWordExport`는 수정하지 않는다.
+
+### 추가 수용 기준
+- [ ] AC11: source JSON의 모든 레코드는 `WordInput` 필드를 전부 갖고, `meaningKo`가 빈 문자열인 레코드는 0개다
+- [ ] AC12: 영어 5,000개(사전 조회 실패분 포함), 중국어는 HSK 1~6 원본 합계에서 정규화 중복을 뺀 수와 같다. HANDOFF에 수치를 적는다
+- [ ] AC13: `exports/words.json`에서 언어별 Day 1에 2개 이상의 level이 섞여 있다 (실제 데이터로 AC3 확인)
+- [ ] AC14: `*` 표시된 단어 수를 언어별로 HANDOFF에 적는다
 
 ## 수용 기준
 - [ ] AC1: 같은 입력과 같은 시드면, 입력 순서를 바꿔도 seq 결과가 같다

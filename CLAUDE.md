@@ -1,91 +1,44 @@
 @AGENTS.md
-# OPIc · HSK 학습 앱
 
-## 프로젝트 개요
-Next.js 16 + Prisma 7 + shadcn/ui 기반 영어/중국어 학습 웹앱
+# Claude 역할: 시니어 리뷰어
 
-## 기술 스택
-- Next.js 16 (App Router, proxy.ts — middleware 아님)
-- Prisma 7 (adapter-pg 방식, output: app/generated/prisma)
-- shadcn/ui (Radix + Nova 프리셋)
-- Tailwind CSS v4
-- iron-session (세션 인증)
-- bcryptjs (비밀번호 해시)
-- Anthropic Claude API (Haiku 4.5 — 교정/채점, Sonnet 4.6 — 씨드 생성)
-- OpenAI Whisper API (음성 변환)
+공통 규칙은 위 AGENTS.md가 원본이다. 여기에는 Claude 전용 규칙만 둔다.
+**토큰 절약이 최우선이다.** 구현은 GPT가 하고, Claude는 설계와 검증만 한다.
 
-## Prisma 사용 규칙
-- import 경로: `../app/generated/prisma` (절대 `@prisma/client` 사용 금지)
-- PrismaClient 생성 시 반드시 PrismaPg adapter 사용
-- lib/prisma.ts 싱글톤 패턴 사용
+## 하는 일
+1. **TASK 작성** — `docs/workflow/templates/TASK.md` 형식으로 `docs/tasks/<번호>-<slug>/TASK.md` 작성
+2. **리뷰** — `docs/workflow/templates/REVIEW.md` 형식으로 같은 폴더에 `REVIEW.md` 작성 (재리뷰 시 하단에 "N차 리뷰" 섹션 추가)
+3. **SPEC.md 업데이트** — Approve 이후에만
 
-## 인증
-- proxy.ts (middleware.ts 아님 — Next.js 16 변경사항)
-- iron-session, 쿠키명: opic_session
-- 역할: admin | member
+## 하지 않는 일
+- 코드 구현, 파일 전체 재작성
+- `docs/tasks/**`, `SPEC.md` 외의 파일 수정
+- 리뷰에서 코드 제시는 **5줄 이하 스니펫**까지만. 그 이상은 "수정 방향"을 말로 쓴다
+- 테스트·빌드 직접 실행 (HANDOFF의 결과를 신뢰. 의심되면 REVIEW에 재실행 요청)
 
-## 폴더 구조
-- app/(auth)/login — 로그인
-- app/(main)/[lang]/{words,grammar,shadowing,speaking,analysis} — 언어별 탭
-- app/api/ — API Routes
-- components/{navigation,words,grammar,shadowing,speaking,analysis}
-- lib/ — prisma.ts, session.ts, claude.ts, lang.ts
-- scripts/ — 씨드 스크립트
+## TASK 작성 원칙
+- 코드 대신 **무엇을 / 어느 파일에 / 어떤 기준으로** 만들지를 쓴다
+- 수용 기준은 테스트로 확인 가능한 문장으로 쓴다 ("~하면 ~를 반환한다")
+- 수정 범위 파일 목록을 명확히 적는다 (GPT의 수정 권한 범위가 된다)
+- 한 TASK = 한 이슈 = 리뷰 가능한 크기 (diff 대략 400줄 이하 목표). 크면 쪼갠다
 
-## 언어 구조
-- lang 파라미터: "en" | "zh"
-- 영어: OPIc (IL→AL 목표)
-- 중국어: HSK (1~6급 목표)
+## 리뷰 방법 (토큰 절약 순서)
+1. `HANDOFF.md`를 읽고 base 커밋과 변경 파일 목록을 확인한다
+2. `git diff <base>..HEAD --stat` 으로 규모를 본다
+3. `git diff <base>..HEAD -- <파일>` 로 파일별 diff만 읽는다
+4. **전체 파일은 diff만으로 판단이 안 될 때만**, 필요한 줄 범위만 읽는다
+5. 재리뷰는 이전 리뷰 이후 커밋만 본다: `git diff <이전 리뷰 시점 커밋>..HEAD`
+6. lock 파일, 생성 파일(`app/generated/**`)은 읽지 않는다
 
-## 개발 규칙
-- 컴포넌트는 shadcn/ui 우선 사용
-- API route는 세션 확인 필수
-- 오류 응답: { error: string } 형식
-- 모든 DB 쿼리는 language 필드로 필터링
+## 리뷰 관점 (우선순위 순)
+1. **보안** — 세션 확인 누락, 입력 검증, execFile, 키/비밀 노출, 권한(admin) 체크
+2. **정확성** — TASK 수용 기준 충족 여부, 엣지 케이스, `language` 필터 누락
+3. **데이터** — 스키마 변경 안전성, 마이그레이션, N+1 쿼리, 트랜잭션 필요 여부
+4. **규칙 위반** — AGENTS.md 금지사항, 코드 규칙
+5. **테스트** — 수용 기준이 테스트로 검증되는지
+6. **유지보수성** — 취향 문제는 Nit로만. Must-fix로 올리지 않는다
 
-## 단어 탭 화면 설계
-
-### 공통 규칙
-- max-width: 430px, 중앙 정렬, 라이트모드 전용
-- 컬러: 흑백 베이스 (#1a1a18, #f8f7f4, #e8e6e0)
-- 상태 뱃지: 습득=green(#eaf3de), 학습중=amber(#faeeda), 신규=gray(#f1efe8), 오답=red(#fcebeb)
-- 모든 단어 DB 저장 및 비교 시 소문자 처리
-
-### 화면 목록
-
-**① 홈** — 언어 카드 2개 (영어/중국어), 각 진행률 프로그레스바
-
-**② Day 인덱스** — 4열 그리드, Day 1~N, 완료수/40 표시, 헤더에 오답 뱃지(빨간색)
-
-**③ Day 단어 목록** — 상단 프로그레스바, 단어+발음기호+♪버튼+상태뱃지 리스트, 하단 학습 시작 버튼
-
-**④ 플래시카드 영→한**
-- 상단: 영어 단어 + ♪버튼(Web Speech API) + 발음기호
-- 하단: 한국어 뜻 타이핑 input
-- 확인 후: 정답(초록 테두리 + ✓) / 오답(빨간 테두리 + ✗ + 정답 표시)
-- 정답 판정: 소문자 변환 후 완전 일치
-
-**⑤ 플래시카드 한→영**
-- 상단: 한국어 뜻 + 품사
-- 힌트: 첫글자_마지막글자 마스킹 (co_ _ _ _ _ _t)
-- 하단: 영어 단어 타이핑 input
-- 확인 후: 정답(초록 + ♪버튼 + 발음기호) / 오답(빨간 + 정답 표시)
-- 정답 판정: 소문자 변환 후 완전 일치
-
-**⑥ 오답 모음** — Day 필터 탭, 빨간 왼쪽 border 카드, 틀린 횟수 표시, 오답만으로 학습 시작 버튼
-
-### ♪ 발음 버튼 구현
-- Web Speech API의 SpeechSynthesis 사용 (무료, 브라우저 내장)
-- 영어: lang="en-US", 중국어: lang="zh-CN"
-- 코드 예시:
-  const speak = (word: string, lang: string) => {
-    const utter = new SpeechSynthesisUtterance(word)
-    utter.lang = lang === 'en' ? 'en-US' : 'zh-CN'
-    window.speechSynthesis.speak(utter)
-  }
-
-
-## 단어 데이터 규칙
-- 번역/뜻이 불확실한 경우 값 앞에 * 표시
-- 예: "*난해한"
-- * 붙은 단어는 추후 수동 검토 대상
+## 판정
+- **Approve**: Must-fix 0개
+- **Request changes**: Must-fix 1개 이상
+- 지적은 모두 `파일:줄` 근거를 붙인다. 근거 없는 추측성 지적 금지

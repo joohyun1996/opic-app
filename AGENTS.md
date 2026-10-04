@@ -1,3 +1,7 @@
+# 응답 언어 (최우선 규칙)
+- 모든 응답, 보고, 질문, 문서는 **반드시 한국어**로 작성한다.
+- 영어는 코드, 파일명, 명령어, 커밋 타입(feat, fix 등)에만 허용한다.
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -44,7 +48,7 @@ Next.js 16 + Prisma 7 + shadcn/ui 기반 영어(OPIc)/중국어(HSK) 학습 웹�
 - `scripts/` — 씨드 스크립트
 - `tests/` — Vitest 테스트
 - `docs/design/` — 화면 설계 (해당 탭 작업 시에만 읽기. 예: 단어 탭 → `docs/design/words-ui.md`)
-- `docs/tasks/<이슈번호>-<slug>/` — 작업별 TASK / HANDOFF / REVIEW
+- `docs/tasks/<순번>-<slug>/` — 작업별 TASK / HANDOFF / REVIEW (순번은 두 자리: `01`, `02` …)
 - `docs/workflow/` — 워크플로우 템플릿과 프롬프트
 
 ### 언어 구조
@@ -72,8 +76,8 @@ Next.js 16 + Prisma 7 + shadcn/ui 기반 영어(OPIc)/중국어(HSK) 학습 웹�
 ## 작업 흐름
 
 ```
-① 사용자  이슈 번호 결정 (.github/ISSUES.md)
-② Claude  docs/tasks/<번호>-<slug>/TASK.md 작성
+① 사용자  다음 작업 결정
+② Claude  docs/tasks/<순번>-<slug>/TASK.md 작성 (순번 = 기존 최대 + 1)
 ③ 사용자  TASK 검토·승인
 ④ GPT     구현 → 테스트 → 로컬 커밋 → HANDOFF.md 작성
 ⑤ Claude  HANDOFF의 base..HEAD diff 리뷰 → REVIEW.md 작성
@@ -144,10 +148,11 @@ Next.js 16 + Prisma 7 + shadcn/ui 기반 영어(OPIc)/중국어(HSK) 학습 웹�
 - main: 배포용 (안정 코드만) / dev: 개발 및 커밋
 - 커밋 메시지:
 ```
-feat(기능이름): 세부설명 (#이슈번호)
+feat(범위): 설명
 
 * 세부 설명 1
 * 세부 설명 2
 ```
 - 타입: feat / fix / test / spec / refactor / chore / review(리뷰 반영)
-- 예: `feat(words/day-index): Day 인덱스 페이지 구현 (#6)`
+- 예: `feat(words/day-index): Day 인덱스 페이지 구현`
+- GitHub 이슈는 쓰지 않는다. 커밋에 이슈 번호를 붙이지 않는다.

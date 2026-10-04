@@ -6,27 +6,27 @@
 
 ## ② Claude — TASK 작성
 ```
-#<번호> "<기능 이름>" TASK를 docs/tasks/<번호>-<slug>/TASK.md 로 작성해줘.
-.github/ISSUES.md의 #<번호> 항목과 SPEC.md 관련 섹션만 참고해.
+"<기능 이름>" TASK를 docs/tasks/<순번>-<slug>/TASK.md 로 작성해줘.
+SPEC.md 관련 섹션과 docs/decisions/ 만 참고해. 순번은 docs/tasks/ 의 최대 순번 + 1.
 코드는 쓰지 말고, 수정 범위와 수용 기준을 명확히.
 ```
 
 ## ④ GPT — 구현
 ```
-docs/tasks/<번호>-<slug>/TASK.md 를 구현해줘. (TASK는 승인됨)
+docs/tasks/<순번>-<slug>/TASK.md 를 구현해줘. (TASK는 승인됨)
 AGENTS.md의 "구현 에이전트(GPT) 규칙"을 따르고,
 완료 조건을 전부 통과하면 커밋 후 같은 폴더에 HANDOFF.md를 템플릿대로 작성해.
 ```
 
 ## ⑤ Claude — 리뷰
 ```
-docs/tasks/<번호>-<slug>/HANDOFF.md 기준으로 리뷰해서 REVIEW.md 작성해줘.
+docs/tasks/<순번>-<slug>/HANDOFF.md 기준으로 리뷰해서 REVIEW.md 작성해줘.
 diff만 보고, 전체 파일은 꼭 필요할 때만.
 ```
 
 ## ⑥ GPT — 리뷰 반영
 ```
-docs/tasks/<번호>-<slug>/REVIEW.md 의 <N>차 리뷰를 반영해줘.
+docs/tasks/<순번>-<slug>/REVIEW.md 의 <N>차 리뷰를 반영해줘.
 Must-fix는 전부, Should-fix는 반영 또는 이유 기록.
 동의 안 되는 항목은 반영하지 말고 HANDOFF "리뷰 반영" 표에 반론으로 적어.
 새 커밋으로 하고, HANDOFF에 "리뷰 반영 (<N>차)" 섹션 추가.
@@ -34,13 +34,13 @@ Must-fix는 전부, Should-fix는 반영 또는 이유 기록.
 
 ## ⑤' Claude — 재리뷰
 ```
-docs/tasks/<번호>-<slug>/HANDOFF.md 의 "리뷰 반영 (<N>차)" 커밋 범위만 재리뷰해서
+docs/tasks/<순번>-<slug>/HANDOFF.md 의 "리뷰 반영 (<N>차)" 커밋 범위만 재리뷰해서
 REVIEW.md에 <N+1>차 리뷰 섹션 추가해줘.
 ```
 
 ## ⑦ Claude — 마무리
 ```
-#<번호> Approve 됐으니 SPEC.md 업데이트해줘. (변경 이력 포함)
+docs/tasks/<순번>-<slug> Approve 됐으니 SPEC.md 업데이트해줘. (변경 이력 포함)
 ```
 
 ---

@@ -1,6 +1,6 @@
-# HANDOFF: <기능 이름> (#<이슈번호>)
+# HANDOFF: <기능 이름>
 
-> 작성: GPT · 경로: docs/tasks/<번호>-<slug>/HANDOFF.md
+> 작성: GPT · 경로: docs/tasks/<순번>-<slug>/HANDOFF.md
 
 ## 커밋 범위
 - base: `<시작 전 커밋 해시>`

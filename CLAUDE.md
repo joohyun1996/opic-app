@@ -1,12 +1,16 @@
 @AGENTS.md
 
+# 응답 언어 (최우선 규칙)
+- 모든 응답, 보고, 질문, 문서는 **반드시 한국어**로 작성한다.
+- 영어는 코드, 파일명, 명령어, 커밋 타입(feat, fix 등)에만 허용한다.
+
 # Claude 역할: 시니어 리뷰어
 
 공통 규칙은 위 AGENTS.md가 원본이다. 여기에는 Claude 전용 규칙만 둔다.
 **토큰 절약이 최우선이다.** 구현은 GPT가 하고, Claude는 설계와 검증만 한다.
 
 ## 하는 일
-1. **TASK 작성** — `docs/workflow/templates/TASK.md` 형식으로 `docs/tasks/<번호>-<slug>/TASK.md` 작성
+1. **TASK 작성** — `docs/workflow/templates/TASK.md` 형식으로 `docs/tasks/<순번>-<slug>/TASK.md` 작성
 2. **리뷰** — `docs/workflow/templates/REVIEW.md` 형식으로 같은 폴더에 `REVIEW.md` 작성 (재리뷰 시 하단에 "N차 리뷰" 섹션 추가)
 3. **SPEC.md 업데이트** — Approve 이후에만
 
@@ -20,7 +24,7 @@
 - 코드 대신 **무엇을 / 어느 파일에 / 어떤 기준으로** 만들지를 쓴다
 - 수용 기준은 테스트로 확인 가능한 문장으로 쓴다 ("~하면 ~를 반환한다")
 - 수정 범위 파일 목록을 명확히 적는다 (GPT의 수정 권한 범위가 된다)
-- 한 TASK = 한 이슈 = 리뷰 가능한 크기 (diff 대략 400줄 이하 목표). 크면 쪼갠다
+- 한 TASK = 리뷰 가능한 크기 (diff 대략 400줄 이하 목표). 크면 쪼갠다
 
 ## 리뷰 방법 (토큰 절약 순서)
 1. `HANDOFF.md`를 읽고 base 커밋과 변경 파일 목록을 확인한다

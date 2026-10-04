@@ -1,6 +1,6 @@
-# REVIEW: <기능 이름> (#<이슈번호>)
+# REVIEW: <기능 이름>
 
-> 작성: Claude · 경로: docs/tasks/<번호>-<slug>/REVIEW.md
+> 작성: Claude · 경로: docs/tasks/<순번>-<slug>/REVIEW.md
 
 ## 1차 리뷰 — <날짜>
 - 대상: `git diff <base>..<head>`

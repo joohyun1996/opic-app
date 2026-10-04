@@ -1,7 +1,7 @@
-# TASK: <기능 이름> (#<이슈번호>)
+# TASK: <기능 이름>
 
 > 작성: Claude · 승인: [ ] 사용자
-> 경로: docs/tasks/<번호>-<slug>/TASK.md
+> 경로: docs/tasks/<순번>-<slug>/TASK.md
 
 ## 목표
 <무엇을 만드는지 한두 문장>

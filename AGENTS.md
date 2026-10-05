@@ -2,157 +2,99 @@
 - 모든 응답, 보고, 질문, 문서는 **반드시 한국어**로 작성한다.
 - 영어는 코드, 파일명, 명령어, 커밋 타입(feat, fix 등)에만 허용한다.
 
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
-
 # AGENTS.md — 모든 AI 에이전트 공통 규칙 (단일 원본)
 
-> 이 파일이 규칙의 **유일한 원본**이다. Codex(GPT)는 이 파일을 자동으로 읽고, Claude Code는 CLAUDE.md의 `@AGENTS.md`로 읽는다.
-> 규칙을 바꿀 때는 이 파일만 고친다. CLAUDE.md에는 Claude 역할 규칙만 둔다.
->
-> 문서 충돌 시 우선순위: **AGENTS.md > 현재 작업의 TASK.md > SPEC.md > docs/design/\* > Opic-App-Blueprint.md**
-> (Blueprint는 초기 설계 초안이라 Next.js 14 / middleware.ts 등 구버전 내용이 있다. 참고만 하고 그대로 따르지 않는다.)
+> 이 파일이 규칙의 유일한 원본이다. Claude Code는 CLAUDE.md의 `@AGENTS.md`로 읽는다.
+> 문서 충돌 시 우선순위: **AGENTS.md > 현재 작업의 TASK.md > SPEC.md > docs/design/\***.
 
 ## 프로젝트 요약
-Next.js 16 + Prisma 7 + shadcn/ui 기반 영어(OPIc)/중국어(HSK) 학습 웹앱. 본인 + 소수 지인용 비공개 앱.
+Kotlin + Jetpack Compose 기반 안드로이드 전용 영어(OPIc) 학습 앱. 서버·로그인 없이 완전 오프라인으로 동작하며 APK를 직접 배포한다. 1차 출시는 영어만, 중국어(HSK)는 후속 기능이다.
 
 ### 기술 스택
-- Next.js 16 (App Router, `proxy.ts` — middleware 아님)
-- Prisma 7 (adapter-pg 방식, output: `app/generated/prisma`)
-- shadcn/ui (Radix + Nova 프리셋), Tailwind CSS v4
-- iron-session (세션 인증, 쿠키명 `opic_session`), bcryptjs
-- Anthropic API: Haiku 4.5 (런타임 교정/채점), Sonnet 4.6 (씨드 생성)
-- OpenAI Whisper API (음성 변환), Web Speech API (TTS)
-- 테스트: Vitest (`npm test`)
+- Kotlin, Jetpack Compose, Room(SQLite)
+- MediaPipe + Gemma 3n E4B: 머니로그 `core/llm`을 복사해 사용
+- 음성 인식: 미정
+- 세부 버전: TASK 04(안드로이드 골격)에서 확정
 
-### Prisma 규칙
-- import 경로: `app/generated/prisma` (`@prisma/client` 직접 import 금지)
-- PrismaClient 생성 시 반드시 PrismaPg adapter 사용
-- `lib/prisma.ts` globalThis 싱글톤만 사용 (새 PrismaClient 생성 금지)
-- 모든 DB 쿼리는 `language` 필드로 필터링
+### 폴더 구조 (TASK 04에서 생성 예정)
+- `app/` — 안드로이드 앱
+- `core/{llm,database,model,common}` — 공통 기능과 도메인 로직
+- `feature/{words,grammar,shadowing,speaking,analysis}` — 기능별 화면
+- `exports/` — 앱 내장 단어 데이터와 원본
+- `docs/` — 결정·설계·작업 문서
 
-### 인증
-- `proxy.ts` 하나로 전체 차단. 공개 경로는 로그인 페이지 + `/api/auth/login`뿐
-- 역할: `admin` | `member`. 회원가입 없음 (admin만 계정 추가)
-- 모든 API route는 세션 확인 필수
-
-### 폴더 구조
-- `app/(auth)/login` — 로그인
-- `app/(main)/[lang]/{words,grammar,shadowing,speaking,analysis}` — 언어별 탭
-- `app/api/` — API Routes
-- `components/{navigation,words,grammar,shadowing,speaking,analysis}`
-- `lib/` — prisma.ts, session.ts, claude.ts, lang.ts, tts.ts
-- `scripts/` — 씨드 스크립트
-- `tests/` — Vitest 테스트
-- `docs/design/` — 화면 설계 (해당 탭 작업 시에만 읽기. 예: 단어 탭 → `docs/design/words-ui.md`)
-- `docs/tasks/<순번>-<slug>/` — 작업별 TASK / HANDOFF / REVIEW (순번은 두 자리: `01`, `02` …)
-- `docs/workflow/` — 워크플로우 템플릿과 프롬프트
-
-### 언어 구조
-- lang 파라미터: `"en"` | `"zh"`
-- 영어: OPIc (IL→AL), 발음기호 IPA / 중국어: HSK (1~6급), 병음
+### 데이터 규칙
+- `exports/words.json`(dataVersion 포함)을 앱에 내장한다. 저장된 dataVersion보다 크면 Word만 한 트랜잭션에서 upsert하고 UserWord는 건드리지 않는다.
+- `OnConflictStrategy.REPLACE` 사용 금지. 삭제 후 삽입으로 id가 바뀌면 UserWord 기록이 깨진다. `(language, word)`로 찾아 기존 행은 UPDATE, 새 행은 INSERT한다. `@Upsert`는 이 키에 맞게 동작할 때 허용한다.
+- 기존 단어의 `seq`는 절대 바꾸지 않는다. 삭제는 행 제거 대신 `deleted = true`로 표시한다.
+- Day = `(seq - 1) / 40 + 1`. deleted 단어는 해당 Day에서 숨기기만 한다.
+- 단어 저장·비교는 소문자로 한다. 뜻이 불확실하면 값 앞에 `*`를 붙인다.
+- 모든 DB 쿼리는 `language` 필드로 필터링한다.
+- 단어 수정은 `exports/words.json`을 직접 고치고 dataVersion을 1 올린다. 생성 스크립트는 `web-final` 태그에 보존되어 있다.
 
 ### 코드 규칙
-- TypeScript 100%, 함수형 컴포넌트만
-- 컴포넌트는 shadcn/ui 우선
-- API 응답은 항상 JSON, 오류는 `{ error: string }`
-- AI API 프롬프트는 JSON만 반환하도록 작성
-- 단어 데이터: 뜻이 불확실하면 값 앞에 `*` (예: `"*난해한"`) → 추후 수동 검토 대상
-- 단어 저장/비교는 소문자 처리
-
----
+- Kotlin 100%, UI는 Jetpack Compose만 사용한다 (XML 레이아웃 금지).
+- 채점·Day 계산 같은 도메인 로직은 `core/common`의 순수 Kotlin으로 두고 단위 테스트를 작성한다.
+- LLM 프롬프트는 JSON만 반환하도록 작성한다.
 
 ## 역할 분담
-
 | 역할 | 담당 | 하는 일 | 하지 않는 일 |
 |------|------|---------|-------------|
-| 구현 | GPT (Codex) | TASK대로 구현, 테스트, 커밋, HANDOFF 작성, REVIEW 반영 | TASK 범위 밖 수정, 설계 임의 변경, push |
+| 구현 | GPT (Codex) | TASK대로 구현, 테스트, 로컬 커밋, HANDOFF 작성, REVIEW 반영 | TASK 범위 밖 수정, 설계 임의 변경, push |
 | 리뷰 | Claude (Claude Code) | TASK 작성, diff 리뷰, REVIEW 작성, SPEC 업데이트 | 코드 구현 |
 | 결정 | 사용자 | TASK 승인, 의견 충돌 판정, push | |
 
 ## 작업 흐름
+1. 사용자가 다음 작업을 결정한다.
+2. Claude가 `docs/tasks/<순번>-<slug>/TASK.md`를 작성한다 (순번은 기존 최대 + 1).
+3. 사용자가 TASK를 검토·승인한다.
+4. GPT가 구현·검증·로컬 커밋 후 HANDOFF.md를 작성한다.
+5. Claude가 base..HEAD diff를 리뷰해 REVIEW.md를 작성한다.
+6. GPT가 리뷰를 반영해 새 커밋과 HANDOFF의 리뷰 반영 섹션을 추가한다. 재리뷰를 반복한다.
+7. Claude가 Approve 후 SPEC.md를 업데이트한다.
+8. 사용자가 dev를 push한다.
 
-```
-① 사용자  다음 작업 결정
-② Claude  docs/tasks/<순번>-<slug>/TASK.md 작성 (순번 = 기존 최대 + 1)
-③ 사용자  TASK 검토·승인
-④ GPT     구현 → 테스트 → 로컬 커밋 → HANDOFF.md 작성
-⑤ Claude  HANDOFF의 base..HEAD diff 리뷰 → REVIEW.md 작성
-⑥ GPT     REVIEW 반영 → 커밋 → HANDOFF "리뷰 반영" 섹션 추가 → ⑤로
-⑦ Claude  Approve → SPEC.md 업데이트
-⑧ 사용자  push (dev)
-```
-
-템플릿: `docs/workflow/templates/{TASK,HANDOFF,REVIEW}.md`
-복붙용 프롬프트: `docs/workflow/PROMPTS.md`
-
----
+템플릿: `docs/workflow/templates/{TASK,HANDOFF,REVIEW}.md`.
 
 ## 구현 에이전트(GPT) 규칙
-
 ### 시작 전
-1. `docs/tasks/<현재 작업>/TASK.md`를 읽는다. **TASK.md가 없으면 구현하지 말고 사용자에게 요청한다.**
-2. TASK의 "관련 파일"과 "참고 문서"만 읽는다. 저장소 전체 탐색은 하지 않는다.
-3. Next.js API를 쓰기 전 `node_modules/next/dist/docs/`의 해당 가이드를 확인한다.
-4. 시작 커밋 해시를 기록해 둔다 (`git rev-parse --short HEAD`) → HANDOFF의 base.
+1. 현재 작업의 TASK.md를 읽는다. 없으면 구현하지 말고 사용자에게 요청한다.
+2. TASK의 관련 파일과 참고 문서만 읽는다. 저장소 전체 탐색은 하지 않는다.
+3. 시작 커밋 해시를 기록해 HANDOFF의 base로 쓴다.
 
 ### 파일 수정 권한
-- 사용자가 승인한 TASK의 **"수정 범위"에 적힌 파일은 추가 허락 없이 생성/수정**한다.
-- 아래는 **반드시 사용자 허락**을 먼저 받는다:
-  - 수정 범위 밖 파일의 생성/수정/삭제
-  - 패키지 설치·삭제
-  - `prisma/schema.prisma` 변경, 마이그레이션 실행
-  - AGENTS.md / CLAUDE.md 수정
-- TASK가 모호하거나 틀렸다고 판단되면 추측으로 진행하지 말고 사용자에게 묻는다.
+- 승인된 TASK의 수정 범위에 적힌 파일은 추가 허락 없이 생성·수정한다.
+- 범위 밖 파일 생성·수정·삭제, 패키지 설치·삭제, Room 스키마(엔티티) 변경, Migration 추가, AGENTS.md·CLAUDE.md 수정은 사용자 허락을 먼저 받는다.
+- TASK가 모호하거나 틀렸으면 추측으로 진행하지 말고 사용자에게 묻는다.
 
-### 완료 조건 (전부 통과해야 HANDOFF 작성)
-- [ ] `npx tsc --noEmit` 통과
-- [ ] `npm run lint` 통과
-- [ ] `npm test` 통과 (기능마다 테스트 작성, 기능 변경 시 테스트도 수정)
-- [ ] TASK의 수용 기준 전부 충족
-- [ ] dev 브랜치에 로컬 커밋 (**push 금지**)
-- [ ] `docs/tasks/<현재 작업>/HANDOFF.md` 작성 (템플릿 그대로)
+### 완료 조건
+- `./gradlew test`, `./gradlew lint` 통과 (TASK 04부터 적용; 그 전에는 TASK의 검증 기준으로 대신한다).
+- TASK의 수용 기준 전부 충족.
+- dev 브랜치에 로컬 커밋 (push 금지).
+- 템플릿대로 HANDOFF.md 작성.
 
 ### REVIEW 반영
-- **Must-fix**: 전부 반영한다.
-- **Should-fix**: 반영하거나, 안 하면 HANDOFF에 이유를 적는다.
-- **Nit**: 선택.
-- 리뷰에 동의하지 않으면 반영하지 말고 HANDOFF "리뷰 반영" 표에 반론을 적는다 → 사용자가 판단.
-- 수정은 **새 커밋**으로 한다. `commit --amend`, rebase, force push 금지 (리뷰 diff 추적용).
-- 재리뷰 요청 시 HANDOFF에 "리뷰 반영 커밋 범위"를 적는다.
+- Must-fix는 전부 반영한다. Should-fix는 반영하거나 HANDOFF에 이유를 적는다. Nit은 선택이다.
+- 동의하지 않는 지적은 HANDOFF의 리뷰 반영 표에 반론을 적고 사용자 판단을 받는다.
+- 수정은 새 커밋으로 한다. commit --amend, rebase, force push 금지.
+- 재리뷰 요청 시 HANDOFF에 리뷰 반영 커밋 범위를 적는다.
 
-### 보고 형식 (사용자에게)
-- 변경된 부분만 diff 형식으로 (`+` 추가 / `-` 삭제) + 변경 이유 한 줄
-- 전체 파일 출력 금지
+### 보고 형식
+- 변경 부분만 diff 형식으로 (`+` 추가 / `-` 삭제) 보고하고 변경 이유를 한 줄 적는다. 전체 파일은 출력하지 않는다.
 
----
-
-## 금지사항 (모든 에이전트)
-- `@prisma/client` 직접 import
-- `middleware.ts` 파일명 사용 (`proxy.ts` 사용)
-- API 키 하드코딩, `.env*` 커밋
-- `ANTHROPIC_API_KEY` / `OPENAI_API_KEY`를 시스템 환경변수로 설정 (구독 대신 API 과금됨. 키는 `.env.local`에만)
-- yt-dlp를 `exec` 문자열로 호출 (반드시 `execFile` + 인자 배열). 유튜브 URL은 정규식으로 사전 검증
-- 세션 확인 없는 API route
+## 금지사항
+- 모델 다운로드 외 네트워크 권한 사용
+- API 키 하드코딩, `.env*`·`local.properties`·keystore 커밋
+- `OnConflictStrategy.REPLACE` 사용
 - main 브랜치 직접 커밋
 
 ## SPEC.md 규칙
-- 새 기능 추가 시 해당 섹션에 기록, 변경 시 하단 변경 이력에 추가 (삭제 금지)
-- API 변경 시 이전/이후 URL 모두 기록
-- Approve 이후 Claude가 업데이트한다
+- 새 기능은 해당 섹션에 기록하고 변경 사항은 하단 변경 이력에 추가한다 (삭제 금지).
+- API 변경 시 이전·이후 URL 모두 기록한다.
+- Approve 이후 Claude가 업데이트한다.
 
 ## Git 규칙
-- main: 배포용 (안정 코드만) / dev: 개발 및 커밋
-- 커밋 메시지:
-```
-feat(범위): 설명
-
-* 세부 설명 1
-* 세부 설명 2
-```
-- 타입: feat / fix / test / spec / refactor / chore / review(리뷰 반영)
-- 예: `feat(words/day-index): Day 인덱스 페이지 구현`
-- GitHub 이슈는 쓰지 않는다. 커밋에 이슈 번호를 붙이지 않는다.
+- main은 안정 코드, dev는 개발 및 커밋용이다.
+- 커밋 메시지 형식: `feat(범위): 설명` 뒤에 빈 줄과 `* 세부 설명`을 적는다.
+- 타입: feat / fix / test / spec / refactor / chore / review.
+- GitHub 이슈는 쓰지 않고 커밋에 이슈 번호를 붙이지 않는다.

@@ -48,3 +48,15 @@
 - M1 대응: 선택지 1~3을 모두 버리고, **GPT가 원래 출처에서 직접 조회하고 한국어 뜻을 직접 작성**한다. 유료 API 호출 없음.
 - TASK.md에 "추가 요구사항"과 AC11~AC14를 추가했다. 수정 범위에 `scripts/collect-words.ts`와 `exports/source/*.json`을 추가했다.
 - M2(HANDOFF.md 저장)는 그대로 유지한다.
+
+---
+
+## 2차 리뷰 (GPT 교차 검증) — 2026-10-05
+- 대상: `git diff 5de210f..636d189 -- . ':!exports/.cache'`
+- 판정: **Approve**
+- 수용 기준: `exports/words.json`의 현재 영어 첫 배포본은 dataVersion 1, 5,517개, seq 1~5517 연속, 중복·빈 뜻 0개다. Day 1·70·138 모두 level 1~5가 섞인다. TASK 01의 1,100개는 TASK 02의 영어 전용 재생성에 포함됐다.
+- Must-fix: 없음 (0개)
+- Should-fix: 없음 (0개)
+- Nit: 없음
+- 품질 표본: 시드 `20261005`로 현재 출력에서 50개 추출. 발음·품사·뜻·예문·번역 오류 0개, 토익 800점이면 확실히 알 쉬운 단어 0개.
+- 검증: `npx tsc --noEmit` 통과, `npm test` 55개 통과. `scripts/export-words.ts:38-56`은 필수 영어 필드와 번역을 검사한다.

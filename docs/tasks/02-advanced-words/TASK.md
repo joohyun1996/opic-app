@@ -1,6 +1,7 @@
 # TASK: 고급 영어 단어 추가 (GRE·TOEFL·IELTS)
 
-> 작성: Claude · 승인: [ ] 사용자
+> 작성: Claude · 승인: [x] 사용자 (2026-10-05)
+> **구현: Claude** (GPT 토큰 소진, 2026-10-05 사용자 지시). 토큰 부족에 대비해 아래 "단계"로 나눠 단계마다 커밋한다.
 > 경로: docs/tasks/02-advanced-words/TASK.md
 > 선행: TASK 01 완료 (커밋된 `exports/words.json`)
 > 근거: `docs/decisions/001-native-pivot.md` § 단어 데이터, `Opic-App-Blueprint.md:501` (원래 설계: COCA + GRE + AWL)
@@ -17,6 +18,24 @@ TASK 01에서 쉬운 단어를 빼고 나니 영어가 약 1,100개만 남았다
 - **발음기호:** kaikki.org (Wiktionary 데이터) `https://kaikki.org/dictionary/English/meaning/{w[0]}/{w[0:2]}/{w}.jsonl`의 `sounds[].ipa` 중 첫 번째 값. 실패하면 ECDICT `phonetic`을 `/…/`로 감싸서 쓰고, 그 단어의 뜻 앞에 `*`를 붙인다.
   - 2026-10-05 확인: `add`, `infrastructure` 모두 200 응답, 2초 이내
 
+## 단계 (2026-10-05 추가)
+각 단계는 독립 커밋이다. 중간에 멈추면 HANDOFF의 "진행 상황"을 보고 다음 단계부터 이어서 한다.
+
+| 단계 | 내용 | 산출물 | 이어하기 기준 |
+|------|------|--------|---------------|
+| 02-1 | 수집 스크립트 + 1차 기계 필터 + 테스트 | `collect-advanced-words.ts`, `advanced-filter.ts`, 테스트, source JSON(후보) | source JSON 존재 여부 |
+| 02-2 | 2차 판정 (쉬운 단어 등 제외) | `exports/source/advanced-batches/judge-*.tsv` | 판정 안 된 후보가 남았는지 |
+| 02-3 | 한국어 뜻·예문 작성 | `exports/source/advanced-batches/fill-*.tsv` | 뜻이 빈 단어가 남았는지 |
+| 02-4 | kaikki IPA 조회 (판정 후 남은 단어만) | source JSON의 `phonetic` | `phonetic`이 null인 단어가 남았는지 |
+| 02-5 | level 계산, `words.json` 재생성, 검증, HANDOFF | `exports/words.json` | — |
+
+- 판정·작성 결과는 TSV 배치 파일로 커밋하고, 스크립트의 `apply` 명령으로 source JSON에 병합한다. 배치 파일이 진행 기록 역할을 한다.
+- TSV 형식:
+  - 판정 `judge-NN.tsv`: `word<TAB>keep` 또는 `word<TAB>exclude<TAB>사유`
+  - 작성 `fill-NN.tsv`: `word<TAB>meaningKo<TAB>example<TAB>exampleKo[<TAB>meaningEn 덮어쓰기]`
+- 1차 필터 추가 조건: ECDICT `exchange`에 `0:`(원형 표시)이 있는 굴절형과, `definition`이 빈 행은 제외한다. 2026-10-05 측정 기준 후보는 **5,180개**다.
+- 판정을 IPA 조회보다 먼저 한다 (조회 수를 줄이기 위해).
+
 ## 수정 범위
 | 파일 | 작업 | 내용 |
 |------|------|------|
@@ -25,6 +44,7 @@ TASK 01에서 쉬운 단어를 빼고 나니 영어가 약 1,100개만 남았다
 | `tests/lib/advanced-filter.test.ts` | 생성 | 필터·파싱 단위 테스트 |
 | `scripts/export-words.ts` | 수정 | source 입력에 `words-en-advanced.json` 추가 |
 | `exports/source/words-en-advanced.json` | 생성 | 수집 원본 (커밋 대상) |
+| `exports/source/advanced-batches/*.tsv` | 생성 | 판정·작성 배치 (커밋 대상) |
 | `exports/words.json` | 수정 | 재생성 |
 | `.gitignore` | 수정 | `exports/.cache/` 추가 (ECDICT 원본 66MB는 커밋 금지) |
 

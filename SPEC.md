@@ -12,6 +12,7 @@
 | 2026-10-04 | v0.3.0 | 네이티브 전환 결정 (ADR 001). 아래 "전환 기록" 참고 |
 | 2026-10-05 | v0.4.0 | 단어 데이터 `exports/words.json` 확정 (영어 5,517개, dataVersion 1), 웹 코드 제거 (TASK 01~03) |
 | 2026-10-05 | v0.5.0 | 안드로이드 골격 + Room 단어 스키마 (TASK 04) |
+| 2026-10-05 | v0.6.0 | 기기 내 LLM 이식 + 문장 교정 채점 실측 (TASK 05) |
 
 ## 인증
 ### POST /api/auth/login
@@ -122,6 +123,16 @@
   | POST /api/admin/words/seed | `WordDao.upsertWords(words)` — `(language, word)` 조회 후 UPDATE/INSERT, 기존 id·seq 유지 |
   | GET /api/words/stats | 미구현 (단어 탭 TASK) |
 - 미구현: `words.json` 적재와 dataVersion 비교, 단어 화면
+
+### 기기 내 LLM + 문장 교정 (2026-10-05, TASK 05)
+- `:core:llm` — 머니로그 `core/llm` 7개 파일 복사 (`4d5adfa`, 원본과 패키지명 외 동일). Gemma 3n E4B, 모델 경로 `com.jooh.opic`의 `no_backup/llm` (머니로그와 별도)
+- 권한: `INTERNET` 1개 (모델 다운로드 전용, `HttpModelStore`만 사용). HF 토큰은 `HfTokenStore`(암호화, `opic_hf_token_store`)
+- 교정 (`core:common`)
+  - `buildCorrectionPrompt(sentence)` → JSON `{correct, corrected, errors:[{type, original, fix, explanationKo}]}`
+  - type: tense | article | preposition | agreement | word_choice | word_order | other (모르는 값은 other)
+  - `parseCorrection(raw, original)` → Ok / InvalidJson / Contradiction. 모순: correct=true인데 errors 있음, correct=false인데 errors 없음, corrected가 원문과 같은데 errors 있음
+- S23+ 실측 (20문장): 유효 JSON 20/20, 모순 0, 판정 일치 20/20, 문장당 중앙값 22.0초·최대 25.6초, 첫 로딩 11.0초. 한국어 설명의 문법 용어 오류 2/14 (`docs/tasks/05-llm-port/BENCHMARK.md`)
+- debug 빌드 전용 "LLM 검증" 화면 (사용자 기능 아님)
 
 ## 문법
 (기능 추가 시 여기에 작성)

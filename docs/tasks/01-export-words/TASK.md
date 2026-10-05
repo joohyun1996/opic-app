@@ -61,7 +61,7 @@ PostgreSQL의 `Word` 테이블을 네이티브 앱에 내장할 `words.json`으�
 DB가 비어 있다. 기존 씨드 스크립트는 한 번도 실행된 적이 없다. **DB와 유료 API를 거치지 않고**, GPT가 씨드 스크립트의 원래 출처에서 직접 조회해 단어 데이터를 만든다.
 
 ### 출처 (기존 씨드와 동일)
-- 영어: `scripts/seed-words-en.ts:11-14`의 Google 10000 목록 상위 5,000개
+- 영어: `scripts/seed-words-en.ts:11-14`의 Google 10000 목록 전체 (아래 제외 규칙 적용)
   - level = `min(5, floor(index/1000)+1)` (`:70`과 동일)
   - phonetic, partOfSpeech, meaningEn, example은 Free Dictionary API로 조회
   - category = partOfSpeech, 없으면 `general`
@@ -79,7 +79,7 @@ DB가 비어 있다. 기존 씨드 스크립트는 한 번도 실행된 적이 �
 - ~~Free Dictionary API 조회~~ → **사용하지 않는다.** 기본 단어(`add`, `all`, `be`, `city` 등)가 매번 522 타임아웃으로 실패해 쓸 수 없다. 위 "출처"의 Free Dictionary API 항목과 이전 "사전 API 실패 처리" 규칙은 폐기한다.
 - 영어 `phonetic`(IPA), `partOfSpeech`, `meaningEn`, `example`도 GPT가 직접 작성한다. 확실하지 않은 값은 `*` 규칙을 그대로 따른다.
 - `category` = `partOfSpeech` (기존과 동일)
-- **학습 가치 없는 항목 제외.** Google 10000 목록을 순서대로 읽으면서 아래 항목은 건너뛰고, 다음 순위 단어로 채워 5,000개를 만든다.
+- **학습 가치 없는 항목 제외.** Google 10000 목록을 순서대로 읽으면서 아래 항목은 제외한다.
   - 한 글자 단어 (`a`, `i`는 유지)
   - 약어, 웹·기술 용어 (`www`, `com`, `pdf`, `html`, `inc`, `usa`, `dvd`, `mp3` 등)
   - 고유명사 (지명, 회사명, 인명)
@@ -92,7 +92,7 @@ DB가 비어 있다. 기존 씨드 스크립트는 한 번도 실행된 적이 �
     - **불규칙형은 유지한다:** `people`, `children`, `men`, `women`, `better`, `best`, `written` 등
     - 별도 품사·뜻으로 자주 쓰이는 형태는 유지한다: `following`, `building`, `meeting`, `interested` 등
   - 제외 사유는 정확히 적는다. 예: `added` → "단순 변화형: add", `men` → (유지)
-  - 이미 작성한 단어는 다시 쓰지 않는다. 다시 포함되는 단어를 먼저 작성한 뒤, 5,000개 경계를 다시 계산한다.
+  - 이미 작성한 단어는 다시 쓰지 않는다. 다시 포함되는 단어 중 쉬운 단어가 아닌 것만 작성한다.
 - **쉬운 단어 제외 (2026-10-05, 사용자 결정).** 주 사용자는 토익 820~920점이다.
   - GPT가 단어마다 판정한다: **"토익 800점 이상이면 확실히 아는 단어"면 제외**, 사유는 `쉬운 단어(토익 800+)`
   - 애매하면 **포함**한다 (모르는 단어를 빠뜨리는 것보다 아는 단어가 섞이는 편이 낫다)

@@ -16,7 +16,7 @@ class HfTokenStore(context: Context) {
 
     private val prefs = EncryptedSharedPreferences.create(
         context.applicationContext,
-        "hf_token_store",
+        "opic_hf_token_store",
         masterKey,
         EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
         EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM,

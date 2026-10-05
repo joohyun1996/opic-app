@@ -107,7 +107,7 @@ E4B는 텍스트 전용으로 사용한다. 후보: whisper.cpp(JNI), sherpa-onn
 ## 후속 작업 순서 (2026-10-04 갱신)
 1. TASK 01 단어 내보내기 (`exports/words.json`, `seq`·dataVersion 포함)
 2. TASK 02 고급 영어 단어 추가 (ECDICT GRE·TOEFL·IELTS 태그, 2026-10-05 추가). 원래 설계의 GRE/AWL을 복원하는 작업이며, Node 스크립트가 필요하므로 웹 코드 제거 전에 한다
-3. TASK 03 웹 코드 제거 + AGENTS.md / CLAUDE.md를 Kotlin/Room 기준으로 개정
+3. TASK 03 웹 코드 제거 + AGENTS.md / CLAUDE.md를 Kotlin/Room 기준으로 개정 (`docs/tasks/03-remove-web/`)
 4. TASK 04 안드로이드 골격 (모듈 구조, Room)
 5. `core/llm` 이식 + 채점 품질·속도 검증
 6. 단어 탭 이식

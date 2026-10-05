@@ -23,7 +23,7 @@
 - 이유:
   - **이력 유지:** 요구사항, 결정, SPEC 변경 이력, 웹앱의 Day 오류 근거 커밋이 한 저장소에 이어진다.
   - **관리 단순화:** 저장소 하나, 워크플로우 문서 하나로 운영하고 문서 복사본이 갈라지지 않는다.
-- 웹 코드는 `web-final` 태그(`620b400`)로 보존되므로 dev에서 삭제한다 (TASK 02).
+- 웹 코드는 `web-final` 태그(`620b400`)로 보존되므로 dev에서 삭제한다 (TASK 03).
 - 남길 것: `docs/`, `SPEC.md`, `exports/words.json`, `.github/`
 - 죽은 웹 코드가 남아 에이전트가 잘못 참고할 위험은, 삭제와 AGENTS.md 개정으로 없앤다.
 
@@ -99,10 +99,11 @@ E4B는 텍스트 전용으로 사용한다. 후보: whisper.cpp(JNI), sherpa-onn
 
 ## 후속 작업 순서 (2026-10-04 갱신)
 1. TASK 01 단어 내보내기 (`exports/words.json`, `seq`·dataVersion 포함)
-2. TASK 02 웹 코드 제거 + AGENTS.md / CLAUDE.md를 Kotlin/Room 기준으로 개정
-3. TASK 03 안드로이드 골격 (모듈 구조, Room)
-4. `core/llm` 이식 + 채점 품질·속도 검증
-5. 단어 탭 이식
-6. STT 검증 (스피킹 직전)
+2. TASK 02 고급 영어 단어 추가 (ECDICT GRE·TOEFL·IELTS 태그, 2026-10-05 추가). 원래 설계의 GRE/AWL을 복원하는 작업이며, Node 스크립트가 필요하므로 웹 코드 제거 전에 한다
+3. TASK 03 웹 코드 제거 + AGENTS.md / CLAUDE.md를 Kotlin/Room 기준으로 개정
+4. TASK 04 안드로이드 골격 (모듈 구조, Room)
+5. `core/llm` 이식 + 채점 품질·속도 검증
+6. 단어 탭 이식
+7. STT 검증 (스피킹 직전)
 
 완료: `web-final` 태그 (`620b400`).

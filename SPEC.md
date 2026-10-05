@@ -1,6 +1,6 @@
 # OPIc · HSK 학습 앱 기능 명세서
 
-> 마지막 업데이트: 2026-10-04
+> 마지막 업데이트: 2026-10-05
 >
 > ⚠️ 2026-10-04 Kotlin 네이티브 앱 전환 결정 (`docs/decisions/001-native-pivot.md`). 이 문서는 웹앱 기준 최종본이며 `web-final` 태그로 보관된다. 이후 명세는 새 저장소의 SPEC.md에서 이어진다.
 
@@ -11,6 +11,7 @@
 | 2026-05-04 | v0.2.0 | Phase 1 단어 탭 구현 |
 | 2026-10-04 | v0.3.0 | 네이티브 전환 결정 (ADR 001). 아래 "전환 기록" 참고 |
 | 2026-10-05 | v0.4.0 | 단어 데이터 `exports/words.json` 확정 (영어 5,517개, dataVersion 1), 웹 코드 제거 (TASK 01~03) |
+| 2026-10-05 | v0.5.0 | 안드로이드 골격 + Room 단어 스키마 (TASK 04) |
 
 ## 인증
 ### POST /api/auth/login
@@ -103,6 +104,24 @@
 - 영어 level 1~5: 출처별 빈도 순 5등분
 - 중국어 4,991개는 `exports/source/words-zh.json`에 보관 (앱 미포함). 추가 시 HSK 1급 → 6급 순서
 - 생성 스크립트는 삭제됨 (`web-final` 이후 커밋 `4d1e460`에 마지막 버전). 이후 수정은 파일 직접 편집 + dataVersion 증가
+
+### 안드로이드 골격 + Room 스키마 (2026-10-05, TASK 04)
+- 패키지 `com.jooh.opic`, 모듈 `:app`, `:core:common`, `:core:model`, `:core:database`
+- 빌드: Gradle 9.5.0, AGP 9.3.3, Kotlin 2.2.10, Room 2.8.5, compileSdk 37 / minSdk 34 / targetSdk 35 (머니로그와 동일)
+- Day 계산 (`core:common`): `dayOf(seq) = (seq-1)/40+1`, `seqRange(day)`, `totalDays(maxSeq)`
+- 상태 (`core:model`): UserWord 없음 → NEW, correctCount ≥ 3 → MASTERED, 그 외 LEARNING
+- Room v1 테이블
+  - `words`: 자동 id, `(language, word)` UNIQUE, `(language, seq)` UNIQUE, `words.json` 필드와 1:1
+  - `user_words`: `wordId` PK, correctCount, wrongCount, lastStudiedAt. 외래키 `NO_ACTION` (CASCADE 금지)
+  - `data_meta`: key/value (저장된 dataVersion용)
+- DAO (웹 API 대체)
+  | 이전 API | 이후 DAO |
+  |------|------|
+  | GET /api/words | `WordDao.getDayWords(language, day)` — deleted 제외, seq 순 |
+  | POST /api/user-words | `UserWordDao.recordResult(wordId, correct, now)` |
+  | POST /api/admin/words/seed | `WordDao.upsertWords(words)` — `(language, word)` 조회 후 UPDATE/INSERT, 기존 id·seq 유지 |
+  | GET /api/words/stats | 미구현 (단어 탭 TASK) |
+- 미구현: `words.json` 적재와 dataVersion 비교, 단어 화면
 
 ## 문법
 (기능 추가 시 여기에 작성)

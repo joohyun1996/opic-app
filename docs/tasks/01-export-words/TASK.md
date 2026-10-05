@@ -84,6 +84,15 @@ DB가 비어 있다. 기존 씨드 스크립트는 한 번도 실행된 적이 �
   - 약어, 웹·기술 용어 (`www`, `com`, `pdf`, `html`, `inc`, `usa`, `dvd`, `mp3` 등)
   - 고유명사 (지명, 회사명, 인명)
   - 같은 단어의 단순 굴절형(복수형, 3인칭 단수형 등)은 원형이 목록에 이미 있으면 제외한다 (예: `books` → `book`이 있으면 제외)
+- **제외 기준 보정 (2026-10-05, 중간 점검 결과).** 제외가 과하게 적용됐다. 아래처럼 다시 판정한다.
+  - 웹·기술 용어는 **표기·형식·약어만** 제외한다 (`www`, `html`, `pdf`, `php`, `url`, `rpg` 등). 일상에서 쓰는 일반 단어는 유지한다. OPIc은 인터넷·기술 주제가 자주 나온다.
+    - 유지 예: `email`, `online`, `internet`, `website`, `web`, `download`, `password`, `keyboard`, `wireless`, `backup`, `developer`, `software`, `blog`, `archive`, `installation`, `transmission`, `dynamic`, `affiliate`
+    - 기준: 일반 영한사전에 보통 단어로 올라 있으면 유지한다
+  - 단순 굴절형은 **규칙 변화만** 제외한다 (`-s`/`-es`/`-ed`/`-ing`, 규칙적인 철자 변화 포함).
+    - **불규칙형은 유지한다:** `people`, `children`, `men`, `women`, `better`, `best`, `written` 등
+    - 별도 품사·뜻으로 자주 쓰이는 형태는 유지한다: `following`, `building`, `meeting`, `interested` 등
+  - 제외 사유는 정확히 적는다. 예: `added` → "단순 변화형: add", `men` → (유지)
+  - 이미 작성한 단어는 다시 쓰지 않는다. 다시 포함되는 단어를 먼저 작성한 뒤, 5,000개 경계를 다시 계산한다.
 - `level`은 제외한 뒤의 순위로 계산한다: `min(5, floor(index/1000)+1)`
 - 제외한 단어와 사유는 `exports/source/words-en.json`의 `metadata.excluded`에 기록하고, 개수를 HANDOFF에 적는다.
 - 이미 수집한 영어 200개도 이 방식으로 다시 작성한다. 중국어는 그대로 둔다.
@@ -103,6 +112,7 @@ DB가 비어 있다. 기존 씨드 스크립트는 한 번도 실행된 적이 �
 - [ ] AC12: 영어 5,000개(제외 항목을 뺀 뒤), 중국어는 HSK 1~6 원본 합계(4,991)에서 정규화 중복을 뺀 수와 같다. HANDOFF에 수치를 적는다
 - [ ] AC13: `exports/words.json`에서 언어별 Day 1에 2개 이상의 level이 섞여 있다 (실제 데이터로 AC3 확인)
 - [ ] AC15: 영어 source에 한 글자 단어(`a`, `i` 제외)와 `metadata.excluded`에 있는 단어가 0개다 (테스트 또는 검증 스크립트로 확인)
+- [ ] AC16: 영어 source에 다음 단어가 모두 포함된다: `email`, `online`, `internet`, `password`, `people`, `children`, `women`, `better`, `following`
 - [ ] AC14: `*` 표시된 단어 수를 언어별로 HANDOFF에 적는다
 
 ## 수용 기준

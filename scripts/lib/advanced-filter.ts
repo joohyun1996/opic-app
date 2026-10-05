@@ -69,7 +69,7 @@ export function parseDefinition(definition: string): { partOfSpeech: string | nu
 }
 
 export type JudgeLine = { word: string; keep: true } | { word: string; keep: false; reason: string }
-export type FillLine = { word: string; meaningKo: string; example: string; exampleKo: string; meaningEn?: string }
+export type FillLine = { word: string; partOfSpeech: string; meaningKo: string; meaningEn: string; example: string; exampleKo: string }
 
 function tsvLines(text: string): string[][] {
   return text.split('\n').map(line => line.replace(/\r$/, '')).filter(line => line.trim()).map(line => line.split('\t'))
@@ -83,10 +83,16 @@ export function parseJudge(text: string): JudgeLine[] {
   })
 }
 
+const FILL_POS: Record<string, string> = {
+  n: 'noun', v: 'verb', adj: 'adjective', adv: 'adverb', prep: 'preposition', conj: 'conjunction', pron: 'pronoun', int: 'interjection',
+}
+
+// 작성 TSV: word, 품사 약어(n|v|adj|adv|prep|conj|pron|int), meaningKo, meaningEn, example, exampleKo
 export function parseFill(text: string): FillLine[] {
-  return tsvLines(text).map(([word, meaningKo, example, exampleKo, meaningEn]) => {
-    if (!word || !meaningKo?.trim() || !example?.trim() || !exampleKo?.trim()) throw new Error(`작성 형식 오류: ${word}`)
-    return { word, meaningKo: meaningKo.trim(), example: example.trim(), exampleKo: exampleKo.trim(), ...(meaningEn?.trim() ? { meaningEn: meaningEn.trim() } : {}) }
+  return tsvLines(text).map(cells => {
+    const [word, pos, meaningKo, meaningEn, example, exampleKo] = cells.map(cell => cell?.trim())
+    if (cells.length !== 6 || !FILL_POS[pos] || !meaningKo || !meaningEn || !example || !exampleKo) throw new Error(`작성 형식 오류: ${word}`)
+    return { word, partOfSpeech: FILL_POS[pos], meaningKo, meaningEn, example, exampleKo }
   })
 }
 

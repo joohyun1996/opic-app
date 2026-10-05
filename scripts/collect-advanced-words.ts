@@ -73,7 +73,7 @@ async function apply() {
     for (const line of parseFill(await readFile(new URL(file, batchDir), 'utf8'))) {
       const word = byWord.get(line.word)
       if (!word) { if (!source.metadata.excluded.some(e => e.word === line.word)) throw new Error(`${file}: 없는 단어 ${line.word}`); continue }
-      Object.assign(word, { meaningKo: line.meaningKo, example: line.example, exampleKo: line.exampleKo }, line.meaningEn ? { meaningEn: line.meaningEn } : {})
+      Object.assign(word, { partOfSpeech: line.partOfSpeech, category: line.partOfSpeech, meaningKo: line.meaningKo, meaningEn: line.meaningEn, example: line.example, exampleKo: line.exampleKo })
     }
   }
   source.metadata.judged = [...judged]

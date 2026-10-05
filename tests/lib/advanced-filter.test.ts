@@ -40,10 +40,12 @@ describe('advanced-filter', () => {
       { word: 'abate', keep: true }, { word: 'nod', keep: false, reason: '쉬운 단어(토익 800+)' },
     ])
     expect(() => parseJudge('nod\texclude\n')).toThrow()
-    expect(parseFill('abate\t줄어들다\tThe storm abated.\t폭풍이 잦아들었다.\n')[0]).toEqual({
-      word: 'abate', meaningKo: '줄어들다', example: 'The storm abated.', exampleKo: '폭풍이 잦아들었다.',
+    expect(parseFill('abate\tv\t줄어들다\tto become less strong\tThe storm abated.\t폭풍이 잦아들었다.\n')[0]).toEqual({
+      word: 'abate', partOfSpeech: 'verb', meaningKo: '줄어들다', meaningEn: 'to become less strong',
+      example: 'The storm abated.', exampleKo: '폭풍이 잦아들었다.',
     })
-    expect(() => parseFill('abate\t줄어들다\n')).toThrow()
+    expect(() => parseFill('abate\tv\t줄어들다\n')).toThrow()
+    expect(() => parseFill('abate\tx\t줄어들다\ten\tex\tko\n')).toThrow()
   })
 
   it('AC8: frq 순으로 5등분해 level 차이가 1 이하다', () => {

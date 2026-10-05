@@ -1,0 +1,700 @@
+nod	keep
+athlete	exclude	쉬운 단어(토익 800+)
+immigrant	exclude	쉬운 단어(토익 800+)
+perceive	keep
+symptom	exclude	쉬운 단어(토익 800+)
+toss	exclude	쉬운 단어(토익 800+)
+embrace	exclude	쉬운 단어(토익 800+)
+historian	exclude	쉬운 단어(토익 800+)
+yell	exclude	쉬운 단어(토익 800+)
+pant	keep
+testify	keep
+evolve	keep
+characterize	keep
+fade	exclude	쉬운 단어(토익 800+)
+violate	exclude	쉬운 단어(토익 800+)
+flee	exclude	쉬운 단어(토익 800+)
+gesture	exclude	쉬운 단어(토익 800+)
+counselor	exclude	쉬운 단어(토익 800+)
+sustain	exclude	쉬운 단어(토익 800+)
+consume	exclude	쉬운 단어(토익 800+)
+psychologist	exclude	쉬운 단어(토익 800+)
+porch	exclude	쉬운 단어(토익 800+)
+scandal	exclude	쉬운 단어(토익 800+)
+resemble	exclude	쉬운 단어(토익 800+)
+guideline	exclude	쉬운 단어(토익 800+)
+rifle	keep
+modest	exclude	쉬운 단어(토익 800+)
+handful	exclude	쉬운 단어(토익 800+)
+eager	exclude	쉬운 단어(토익 800+)
+overlook	exclude	쉬운 단어(토익 800+)
+undergo	exclude	쉬운 단어(토익 800+)
+assert	keep
+shrug	exclude	쉬운 단어(토익 800+)
+depict	keep
+seize	keep
+frustration	exclude	쉬운 단어(토익 800+)
+discourse	keep
+portray	exclude	쉬운 단어(토익 800+)
+tactic	keep
+nonetheless	keep
+recruit	exclude	쉬운 단어(토익 800+)
+gaze	exclude	쉬운 단어(토익 800+)
+reinforce	keep
+clue	exclude	쉬운 단어(토익 800+)
+sigh	exclude	쉬운 단어(토익 800+)
+couch	exclude	쉬운 단어(토익 800+)
+compose	exclude	쉬운 단어(토익 800+)
+regulate	exclude	쉬운 단어(토익 800+)
+resign	exclude	쉬운 단어(토익 800+)
+ritual	exclude	쉬운 단어(토익 800+)
+presidency	keep
+beg	exclude	쉬운 단어(토익 800+)
+slam	exclude	쉬운 단어(토익 800+)
+harsh	exclude	쉬운 단어(토익 800+)
+corridor	exclude	쉬운 단어(토익 800+)
+pitcher	exclude	쉬운 단어(토익 800+)
+rumor	exclude	쉬운 단어(토익 800+)
+allegation	keep
+initiate	exclude	쉬운 단어(토익 800+)
+plead	keep
+suburb	exclude	쉬운 단어(토익 800+)
+motivate	exclude	쉬운 단어(토익 800+)
+seemingly	keep
+enforce	exclude	쉬운 단어(토익 800+)
+contend	keep
+assemble	exclude	쉬운 단어(토익 800+)
+hallway	exclude	쉬운 단어(토익 800+)
+obstacle	exclude	쉬운 단어(토익 800+)
+motive	exclude	쉬운 단어(토익 800+)
+drift	keep
+prosecution	keep
+leap	exclude	쉬운 단어(토익 800+)
+guilt	exclude	쉬운 단어(토익 800+)
+limb	keep
+ideology	keep
+endure	exclude	쉬운 단어(토익 800+)
+administer	keep
+spill	exclude	쉬운 단어(토익 800+)
+convict	exclude	쉬운 단어(토익 800+)
+undermine	keep
+rhetoric	keep
+profound	exclude	쉬운 단어(토익 800+)
+trait	keep
+astronomer	keep
+scatter	exclude	쉬운 단어(토익 800+)
+convey	exclude	쉬운 단어(토익 800+)
+relieve	exclude	쉬운 단어(토익 800+)
+suspend	exclude	쉬운 단어(토익 800+)
+rebuild	exclude	쉬운 단어(토익 800+)
+bounce	exclude	쉬운 단어(토익 800+)
+dedicate	exclude	쉬운 단어(토익 800+)
+carve	exclude	쉬운 단어(토익 800+)
+counterpart	keep
+amid	keep
+carbohydrate	keep
+diagnose	exclude	쉬운 단어(토익 800+)
+crawl	exclude	쉬운 단어(토익 800+)
+handsome	exclude	쉬운 단어(토익 800+)
+hug	exclude	쉬운 단어(토익 800+)
+endorse	keep
+sunlight	exclude	쉬운 단어(토익 800+)
+reluctant	exclude	쉬운 단어(토익 800+)
+peel	exclude	쉬운 단어(토익 800+)
+metaphor	keep
+diplomatic	keep
+vanish	exclude	쉬운 단어(토익 800+)
+confess	exclude	쉬운 단어(토익 800+)
+diminish	exclude	쉬운 단어(토익 800+)
+isolate	exclude	쉬운 단어(토익 800+)
+prohibit	exclude	쉬운 단어(토익 800+)
+enroll	exclude	쉬운 단어(토익 800+)
+stumble	keep
+descend	keep
+cooperate	exclude	쉬운 단어(토익 800+)
+shortage	exclude	쉬운 단어(토익 800+)
+sentiment	keep
+oversee	exclude	쉬운 단어(토익 800+)
+monument	exclude	쉬운 단어(토익 800+)
+nominee	exclude	쉬운 단어(토익 800+)
+slap	exclude	쉬운 단어(토익 800+)
+jaw	exclude	쉬운 단어(토익 800+)
+grief	exclude	쉬운 단어(토익 800+)
+dignity	exclude	쉬운 단어(토익 800+)
+specialize	exclude	쉬운 단어(토익 800+)
+tuck	keep
+dilemma	exclude	쉬운 단어(토익 800+)
+ancestor	exclude	쉬운 단어(토익 800+)
+condemn	keep
+optimistic	exclude	쉬운 단어(토익 800+)
+shrimp	exclude	쉬운 단어(토익 800+)
+equip	exclude	쉬운 단어(토익 800+)
+grin	exclude	쉬운 단어(토익 800+)
+hostile	exclude	쉬운 단어(토익 800+)
+conceive	keep
+grasp	exclude	쉬운 단어(토익 800+)
+haul	keep
+concede	keep
+thigh	keep
+discourage	keep
+ideological	keep
+secular	keep
+casualty	keep
+terrific	keep
+instinct	exclude	쉬운 단어(토익 800+)
+instruct	exclude	쉬운 단어(토익 800+)
+skull	exclude	쉬운 단어(토익 800+)
+verdict	exclude	쉬운 단어(토익 800+)
+manipulate	exclude	쉬운 단어(토익 800+)
+subsidy	keep
+whip	exclude	쉬운 단어(토익 800+)
+mushroom	exclude	쉬운 단어(토익 800+)
+dessert	exclude	쉬운 단어(토익 800+)
+breeze	exclude	쉬운 단어(토익 800+)
+touchdown	exclude	쉬운 단어(토익 800+)
+costly	exclude	쉬운 단어(토익 800+)
+ambitious	exclude	쉬운 단어(토익 800+)
+influential	exclude	쉬운 단어(토익 800+)
+aesthetic	keep
+accomplishment	exclude	쉬운 단어(토익 800+)
+cocaine	exclude	쉬운 단어(토익 800+)
+illusion	exclude	쉬운 단어(토익 800+)
+tolerate	exclude	쉬운 단어(토익 800+)
+scramble	keep
+sibling	exclude	쉬운 단어(토익 800+)
+irony	keep
+alley	exclude	쉬운 단어(토익 800+)
+persist	exclude	쉬운 단어(토익 800+)
+exploit	exclude	쉬운 단어(토익 800+)
+organism	keep
+sensation	exclude	쉬운 단어(토익 800+)
+shove	keep
+comprise	keep
+outfit	exclude	쉬운 단어(토익 800+)
+unprecedented	keep
+damn	exclude	쉬운 단어(토익 800+)
+banker	exclude	쉬운 단어(토익 800+)
+interfere	exclude	쉬운 단어(토익 800+)
+speculation	keep
+uncover	exclude	쉬운 단어(토익 800+)
+stimulate	exclude	쉬운 단어(토익 800+)
+stance	keep
+compel	keep
+proclaim	keep
+hike	exclude	쉬운 단어(토익 800+)
+scent	exclude	쉬운 단어(토익 800+)
+inherit	exclude	쉬운 단어(토익 800+)
+shrink	exclude	쉬운 단어(토익 800+)
+fierce	exclude	쉬운 단어(토익 800+)
+envision	keep
+aisle	exclude	쉬운 단어(토익 800+)
+risky	exclude	쉬운 단어(토익 800+)
+distract	exclude	쉬운 단어(토익 800+)
+chunk	keep
+invade	exclude	쉬운 단어(토익 800+)
+coup	keep
+classify	exclude	쉬운 단어(토익 800+)
+curiosity	exclude	쉬운 단어(토익 800+)
+aggression	exclude	쉬운 단어(토익 800+)
+stimulus	keep
+ecosystem	exclude	쉬운 단어(토익 800+)
+boast	keep
+tighten	exclude	쉬운 단어(토익 800+)
+unfold	keep
+supposedly	exclude	쉬운 단어(토익 800+)
+streak	keep
+deem	keep
+glimpse	exclude	쉬운 단어(토익 800+)
+premise	keep
+sneak	exclude	쉬운 단어(토익 800+)
+artifact	keep
+rib	keep
+debris	keep
+cling	keep
+plunge	keep
+refuge	keep
+chill	exclude	쉬운 단어(토익 800+)
+cheer	exclude	쉬운 단어(토익 800+)
+intact	keep
+thrive	keep
+elaborate	keep
+steak	exclude	쉬운 단어(토익 800+)
+conception	keep
+conscience	exclude	쉬운 단어(토익 800+)
+feminist	keep
+expedition	exclude	쉬운 단어(토익 800+)
+butt	keep
+patron	keep
+widow	exclude	쉬운 단어(토익 800+)
+impulse	keep
+forbid	exclude	쉬운 단어(토익 800+)
+predator	exclude	쉬운 단어(토익 800+)
+poke	keep
+soar	keep
+enact	keep
+autonomy	keep
+landmark	exclude	쉬운 단어(토익 800+)
+distinctive	keep
+routinely	keep
+fragile	exclude	쉬운 단어(토익 800+)
+objection	exclude	쉬운 단어(토익 800+)
+prevail	keep
+fragment	keep
+mansion	exclude	쉬운 단어(토익 800+)
+authorize	exclude	쉬운 단어(토익 800+)
+ego	keep
+frown	keep
+molecule	exclude	쉬운 단어(토익 800+)
+favorable	exclude	쉬운 단어(토익 800+)
+youngster	exclude	쉬운 단어(토익 800+)
+contemplate	keep
+overwhelm	exclude	쉬운 단어(토익 800+)
+spark	keep
+fatigue	exclude	쉬운 단어(토익 800+)
+speculate	keep
+bucket	exclude	쉬운 단어(토익 800+)
+preach	keep
+confession	exclude	쉬운 단어(토익 800+)
+provoke	keep
+depart	exclude	쉬운 단어(토익 800+)
+soak	exclude	쉬운 단어(토익 800+)
+mutter	keep
+riot	exclude	쉬운 단어(토익 800+)
+nutrient	keep
+sovereignty	keep
+frustrate	keep
+articulate	keep
+accusation	keep
+cue	keep
+seldom	keep
+vague	exclude	쉬운 단어(토익 800+)
+weave	keep
+plea	keep
+bulb	exclude	쉬운 단어(토익 800+)
+narrator	exclude	쉬운 단어(토익 800+)
+diplomat	exclude	쉬운 단어(토익 800+)
+epidemic	exclude	쉬운 단어(토익 800+)
+inherent	keep
+accelerate	exclude	쉬운 단어(토익 800+)
+drown	exclude	쉬운 단어(토익 800+)
+dictate	keep
+stereotype	exclude	쉬운 단어(토익 800+)
+pistol	exclude	쉬운 단어(토익 800+)
+apology	exclude	쉬운 단어(토익 800+)
+beloved	exclude	쉬운 단어(토익 800+)
+nominate	exclude	쉬운 단어(토익 800+)
+devise	keep
+skeptical	exclude	쉬운 단어(토익 800+)
+scrutiny	keep
+suppress	keep
+betray	exclude	쉬운 단어(토익 800+)
+bureaucracy	keep
+critique	keep
+aboard	keep
+compassion	keep
+complication	keep
+militia	keep
+concession	keep
+rejection	exclude	쉬운 단어(토익 800+)
+tenure	keep
+inadequate	keep
+locker	exclude	쉬운 단어(토익 800+)
+haunt	keep
+evoke	keep
+vein	keep
+surrender	exclude	쉬운 단어(토익 800+)
+scar	exclude	쉬운 단어(토익 800+)
+inspect	exclude	쉬운 단어(토익 800+)
+compensate	exclude	쉬운 단어(토익 800+)
+hover	keep
+viable	keep
+clarify	keep
+sketch	exclude	쉬운 단어(토익 800+)
+countless	exclude	쉬운 단어(토익 800+)
+strive	keep
+neglect	exclude	쉬운 단어(토익 800+)
+warfare	keep
+tilt	keep
+biologist	keep
+antibiotic	exclude	쉬운 단어(토익 800+)
+prosperity	keep
+accumulate	exclude	쉬운 단어(토익 800+)
+prosecute	keep
+intervene	exclude	쉬운 단어(토익 800+)
+embody	keep
+creep	keep
+crab	exclude	쉬운 단어(토익 800+)
+vinegar	exclude	쉬운 단어(토익 800+)
+manuscript	keep
+morality	keep
+stun	keep
+philosopher	exclude	쉬운 단어(토익 800+)
+clutch	keep
+conceal	keep
+leak	exclude	쉬운 단어(토익 800+)
+trillion	exclude	쉬운 단어(토익 800+)
+homicide	keep
+herd	keep
+passionate	keep
+snack	exclude	쉬운 단어(토익 800+)
+migrant	exclude	쉬운 단어(토익 800+)
+competence	keep
+distress	keep
+imagery	keep
+paradigm	keep
+appetite	exclude	쉬운 단어(토익 800+)
+hostility	keep
+spectator	exclude	쉬운 단어(토익 800+)
+comet	exclude	쉬운 단어(토익 800+)
+bleed	exclude	쉬운 단어(토익 800+)
+choke	exclude	쉬운 단어(토익 800+)
+pesticide	keep
+delegate	exclude	쉬운 단어(토익 800+)
+cautious	exclude	쉬운 단어(토익 800+)
+tremble	keep
+prejudice	exclude	쉬운 단어(토익 800+)
+designate	keep
+robe	keep
+enlist	exclude	쉬운 단어(토익 800+)
+predecessor	keep
+induce	keep
+rookie	exclude	쉬운 단어(토익 800+)
+gown	keep
+notably	keep
+correlate	keep
+halt	exclude	쉬운 단어(토익 800+)
+exile	keep
+roar	keep
+revive	exclude	쉬운 단어(토익 800+)
+reside	keep
+originate	keep
+erupt	keep
+loom	keep
+notable	keep
+cane	keep
+fortunate	keep
+disrupt	keep
+breakthrough	keep
+odor	keep
+hut	keep
+attain	keep
+dinosaur	exclude	쉬운 단어(토익 800+)
+orthodox	keep
+outbreak	exclude	쉬운 단어(토익 800+)
+grim	keep
+bead	keep
+drought	exclude	쉬운 단어(토익 800+)
+uphold	keep
+commentator	keep
+believer	keep
+grind	keep
+prescribe	keep
+subway	keep
+transplant	exclude	쉬운 단어(토익 800+)
+explosive	exclude	쉬운 단어(토익 800+)
+illuminate	keep
+congressman	keep
+penetrate	keep
+evolutionary	keep
+innocence	keep
+flaw	keep
+optimism	exclude	쉬운 단어(토익 800+)
+posture	keep
+reassure	keep
+rehearsal	exclude	쉬운 단어(토익 800+)
+invoke	keep
+correspond	keep
+discard	exclude	쉬운 단어(토익 800+)
+revival	keep
+restraint	keep
+abundance	keep
+despair	keep
+attendant	keep
+assassination	keep
+trophy	exclude	쉬운 단어(토익 800+)
+ironic	exclude	쉬운 단어(토익 800+)
+contradiction	keep
+rattle	keep
+shatter	exclude	쉬운 단어(토익 800+)
+descent	keep
+startle	keep
+tease	keep
+vow	keep
+rigid	keep
+tumble	keep
+psychiatric	keep
+rotate	keep
+recount	keep
+scrape	keep
+prey	exclude	쉬운 단어(토익 800+)
+bump	exclude	쉬운 단어(토익 800+)
+peculiar	keep
+nurture	keep
+vivid	exclude	쉬운 단어(토익 800+)
+furious	exclude	쉬운 단어(토익 800+)
+undoubtedly	keep
+omit	keep
+obsession	exclude	쉬운 단어(토익 800+)
+corpse	keep
+certainty	keep
+melody	exclude	쉬운 단어(토익 800+)
+physicist	exclude	쉬운 단어(토익 800+)
+utterly	keep
+memoir	exclude	쉬운 단어(토익 800+)
+cultivate	keep
+realization	keep
+meadow	keep
+defy	keep
+tempt	keep
+scrap	keep
+inject	keep
+applause	keep
+evenly	keep
+supervise	exclude	쉬운 단어(토익 800+)
+precede	keep
+aspiration	keep
+gravel	keep
+precedent	keep
+indictment	keep
+collision	exclude	쉬운 단어(토익 800+)
+encompass	keep
+diplomacy	exclude	쉬운 단어(토익 800+)
+faction	keep
+skillet	keep
+immense	keep
+aftermath	exclude	쉬운 단어(토익 800+)
+crust	keep
+gasp	keep
+mosquito	exclude	쉬운 단어(토익 800+)
+intimacy	keep
+divert	keep
+thoughtful	keep
+vine	keep
+outrage	exclude	쉬운 단어(토익 800+)
+monopoly	exclude	쉬운 단어(토익 800+)
+summon	keep
+dangle	keep
+jerk	keep
+weep	exclude	쉬운 단어(토익 800+)
+liquor	exclude	쉬운 단어(토익 800+)
+dioxide	keep
+affirm	keep
+emergence	keep
+linger	keep
+applaud	exclude	쉬운 단어(토익 800+)
+stabilize	keep
+plantation	keep
+predictable	exclude	쉬운 단어(토익 800+)
+presume	keep
+proponent	keep
+constituent	keep
+curse	keep
+resignation	keep
+reconciliation	keep
+deed	keep
+miserable	exclude	쉬운 단어(토익 800+)
+erase	exclude	쉬운 단어(토익 800+)
+irrelevant	exclude	쉬운 단어(토익 800+)
+foolish	exclude	쉬운 단어(토익 800+)
+ignorance	exclude	쉬운 단어(토익 800+)
+wetland	keep
+playground	exclude	쉬운 단어(토익 800+)
+primitive	exclude	쉬운 단어(토익 800+)
+balcony	exclude	쉬운 단어(토익 800+)
+mosque	exclude	쉬운 단어(토익 800+)
+recycle	exclude	쉬운 단어(토익 800+)
+coincidence	exclude	쉬운 단어(토익 800+)
+resentment	keep
+justification	keep
+destructive	exclude	쉬운 단어(토익 800+)
+repetition	exclude	쉬운 단어(토익 800+)
+niche	keep
+terrify	exclude	쉬운 단어(토익 800+)
+bark	exclude	쉬운 단어(토익 800+)
+fascinate	exclude	쉬운 단어(토익 800+)
+stab	keep
+propaganda	exclude	쉬운 단어(토익 800+)
+underscore	keep
+formulate	keep
+prop	keep
+fulfil	keep
+corrupt	exclude	쉬운 단어(토익 800+)
+specimen	keep
+obscure	keep
+spectacle	keep
+thrill	exclude	쉬운 단어(토익 800+)
+bout	keep
+sniff	keep
+cone	keep
+stroll	exclude	쉬운 단어(토익 800+)
+circulate	keep
+endeavor	keep
+absurd	exclude	쉬운 단어(토익 800+)
+temptation	exclude	쉬운 단어(토익 800+)
+feast	exclude	쉬운 단어(토익 800+)
+conductor	exclude	쉬운 단어(토익 800+)
+analogy	keep
+inhabitant	keep
+intensify	exclude	쉬운 단어(토익 800+)
+sway	keep
+postwar	keep
+erosion	keep
+manifest	keep
+lick	keep
+predominantly	keep
+idiot	exclude	쉬운 단어(토익 800+)
+courthouse	keep
+defect	keep
+accountant	exclude	쉬운 단어(토익 800+)
+owl	exclude	쉬운 단어(토익 800+)
+slash	keep
+artery	keep
+curator	keep
+mist	keep
+humble	exclude	쉬운 단어(토익 800+)
+gum	exclude	쉬운 단어(토익 800+)
+fishery	keep
+cosmic	keep
+ponder	keep
+sanctuary	keep
+denounce	keep
+credible	keep
+wary	keep
+embed	keep
+linen	keep
+memorable	exclude	쉬운 단어(토익 800+)
+drip	keep
+elevate	keep
+loosen	keep
+chore	exclude	쉬운 단어(토익 800+)
+fringe	keep
+lengthy	exclude	쉬운 단어(토익 800+)
+hedge	keep
+murmur	keep
+maid	exclude	쉬운 단어(토익 800+)
+inhabit	keep
+injustice	keep
+quota	keep
+stride	keep
+soy	keep
+oversight	keep
+dub	keep
+snatch	keep
+slogan	exclude	쉬운 단어(토익 800+)
+outrageous	exclude	쉬운 단어(토익 800+)
+perch	keep
+shrine	keep
+albeit	keep
+misery	keep
+addict	exclude	쉬운 단어(토익 800+)
+marginal	keep
+ramp	keep
+hail	keep
+garment	keep
+activate	keep
+naive	keep
+exert	keep
+kindergarten	exclude	쉬운 단어(토익 800+)
+cereal	exclude	쉬운 단어(토익 800+)
+fracture	keep
+turnover	keep
+pyramid	exclude	쉬운 단어(토익 800+)
+descendant	keep
+scarf	exclude	쉬운 단어(토익 800+)
+clash	keep
+mammal	exclude	쉬운 단어(토익 800+)
+pumpkin	exclude	쉬운 단어(토익 800+)
+imitate	exclude	쉬운 단어(토익 800+)
+notorious	keep
+compost	keep
+lethal	keep
+entail	keep
+toast	exclude	쉬운 단어(토익 800+)
+credential	keep
+swirl	keep
+distraction	keep
+fling	keep
+roam	exclude	쉬운 단어(토익 800+)
+heir	keep
+insure	keep
+asteroid	exclude	쉬운 단어(토익 800+)
+straightforward	keep
+anticipation	keep
+glorious	keep
+overturn	keep
+deprive	keep
+standpoint	keep
+empower	keep
+flourish	keep
+tug	keep
+shiver	keep
+lobster	exclude	쉬운 단어(토익 800+)
+solidarity	keep
+saddle	keep
+partisan	keep
+abundant	keep
+prone	keep
+formidable	keep
+burial	keep
+mobilize	keep
+vigorous	keep
+questionable	keep
+poise	keep
+marital	keep
+vicious	exclude	쉬운 단어(토익 800+)
+homemade	exclude	쉬운 단어(토익 800+)
+wedge	keep
+tense	keep
+disturbance	keep
+emit	exclude	쉬운 단어(토익 800+)
+acquaintance	keep
+contempt	keep
+efficacy	keep
+anthropologist	keep
+ample	keep
+potent	keep
+exclaim	keep
+oyster	exclude	쉬운 단어(토익 800+)
+scholarly	keep
+pastry	exclude	쉬운 단어(토익 800+)
+volcano	exclude	쉬운 단어(토익 800+)
+pasture	keep
+rebellion	exclude	쉬운 단어(토익 800+)
+chuckle	keep
+swamp	exclude	쉬운 단어(토익 800+)
+fictional	exclude	쉬운 단어(토익 800+)
+bait	keep
+oath	keep
+embargo	keep
+erect	keep
+implant	keep
+deficiency	keep
+blur	keep
+fertilizer	exclude	쉬운 단어(토익 800+)
+altitude	exclude	쉬운 단어(토익 800+)
+glare	keep
+squint	keep
+flashlight	exclude	쉬운 단어(토익 800+)
+urgency	keep
+differentiate	keep
+collaborate	exclude	쉬운 단어(토익 800+)
+succession	keep
+waitress	exclude	쉬운 단어(토익 800+)
+remnant	keep
+recite	keep
+communal	keep
+wrestle	keep
+underestimate	exclude	쉬운 단어(토익 800+)
+maturity	keep
+devastate	keep
+petty	keep
+temper	keep
+blossom	exclude	쉬운 단어(토익 800+)
+spacecraft	exclude	쉬운 단어(토익 800+)
+prestigious	exclude	쉬운 단어(토익 800+)
+discomfort	exclude	쉬운 단어(토익 800+)
+backpack	exclude	쉬운 단어(토익 800+)
+massacre	exclude	쉬운 단어(토익 800+)
+spur	keep
+trench	keep
+devotion	keep

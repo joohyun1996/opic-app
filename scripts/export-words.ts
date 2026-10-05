@@ -25,7 +25,7 @@ async function main() {
   const sources = paths.length ? paths.map(path => resolve(path)) : [
     new URL('../exports/source/words-en.json', import.meta.url),
     new URL('../exports/source/words-en-advanced.json', import.meta.url),
-    new URL('../exports/source/words-zh.json', import.meta.url),
+    // 중국어는 영어 출시 후 추가 (ADR 001 § 언어 범위)
   ]
   const input: WordInput[] = []
   for (const path of sources) {

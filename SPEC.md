@@ -10,6 +10,7 @@
 | 2026-05-04 | v0.1.0 | 초기 세팅 (인증, 스키마) |
 | 2026-05-04 | v0.2.0 | Phase 1 단어 탭 구현 |
 | 2026-10-04 | v0.3.0 | 네이티브 전환 결정 (ADR 001). 아래 "전환 기록" 참고 |
+| 2026-10-05 | v0.4.0 | 단어 데이터 `exports/words.json` 확정 (영어 5,517개, dataVersion 1), 웹 코드 제거 (TASK 01~03) |
 
 ## 인증
 ### POST /api/auth/login
@@ -95,6 +96,13 @@
 | GET /api/words/stats | Day별 통계 DAO |
 | POST /api/user-words | UserWord 기록 DAO |
 | POST /api/admin/words/seed | 제거 (단어는 내장 `words.json` + dataVersion) |
+
+### 단어 데이터 (2026-10-05, TASK 01·02)
+- 파일: `exports/words.json` — `{ dataVersion, seed, exportedAt, words: [{ language, word, seq, phonetic, meaningKo, meaningEn, example, exampleKo, level, category, partOfSpeech, collocations, deleted }] }`
+- 영어 5,517개 (Day 138개): Google 10000 중 토익 800+ 쉬운 단어 제외 1,100개 + ECDICT GRE·TOEFL·IELTS 4,417개. 고정 시드(20261004)로 전체 섞음
+- 영어 level 1~5: 출처별 빈도 순 5등분
+- 중국어 4,991개는 `exports/source/words-zh.json`에 보관 (앱 미포함). 추가 시 HSK 1급 → 6급 순서
+- 생성 스크립트는 삭제됨 (`web-final` 이후 커밋 `4d1e460`에 마지막 버전). 이후 수정은 파일 직접 편집 + dataVersion 증가
 
 ## 문법
 (기능 추가 시 여기에 작성)

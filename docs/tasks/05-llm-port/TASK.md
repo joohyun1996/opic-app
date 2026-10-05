@@ -43,7 +43,7 @@
   - 출력 형식: `{"correct": Boolean, "corrected": String, "errors": [{"type": String, "original": String, "fix": String, "explanationKo": String}]}`
   - `type`은 `tense | article | preposition | agreement | word_choice | word_order | other` 중 하나
   - 설명은 한국어, 한 문장
-- `parseCorrection(raw: String): CorrectionParse` — 결과는 `Ok(result)` / `InvalidJson` / `Contradiction` 셋 중 하나
+- `parseCorrection(raw: String, original: String): CorrectionParse` (모순 판정에 원문이 필요해 `original`을 받는다, 2026-10-05 정정) — 결과는 `Ok(result)` / `InvalidJson` / `Contradiction` 셋 중 하나
   - 앞뒤 공백, ```` ```json ```` 코드 펜스, JSON 앞뒤의 잡문은 걷어내고 첫 `{`부터 짝이 맞는 `}`까지 파싱한다
   - 모순 판정: `correct = true`인데 errors가 있음 / `correct = false`인데 errors가 비었음 / `corrected`가 원문과 같은데 errors가 있음
   - 모르는 `type`은 `other`로 바꾸고 Ok로 둔다
@@ -77,7 +77,7 @@
 - [ ] AC5: `parseCorrection`이 ① 정상 JSON → Ok ② 코드 펜스·앞뒤 잡문이 붙은 JSON → Ok ③ 잘린 JSON → InvalidJson ④ 모순 3종 각각 → Contradiction ⑤ 모르는 type → Ok + `other` 를 반환한다 (단위 테스트)
 - [ ] AC6: `buildCorrectionPrompt` 결과에 입력 문장과 "JSON만 반환" 지시, 7개 type 목록이 들어 있다 (단위 테스트)
 - [ ] AC7: release 빌드에서는 LLM 검증 화면에 들어갈 수 없다
-- [ ] AC8: HF 토큰이 소스·Logcat·커밋 파일 어디에도 없다 (`git grep -n "hf_"` 결과 0줄, Logcat 출력에 토큰 없음)
+- [ ] AC8: HF 토큰이 소스·Logcat·커밋 파일 어디에도 없다 (`git grep -nE "hf_[A-Za-z0-9]{30,}"` 결과 0줄, Logcat 출력에 토큰 없음. `hf_token_store` 같은 키 이름은 허용, 2026-10-05 정정)
 - [ ] AC9: BENCHMARK.md에 S23+ 실측 20문장 결과와 요약 수치가 있다
 - [ ] AC10: `git diff <base> HEAD -- exports/ docs/decisions/ SPEC.md core/database/` 결과가 없다
 

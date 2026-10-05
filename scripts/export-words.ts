@@ -24,6 +24,7 @@ async function main() {
   const paths = process.argv.slice(2)
   const sources = paths.length ? paths.map(path => resolve(path)) : [
     new URL('../exports/source/words-en.json', import.meta.url),
+    new URL('../exports/source/words-en-advanced.json', import.meta.url),
     new URL('../exports/source/words-zh.json', import.meta.url),
   ]
   const input: WordInput[] = []

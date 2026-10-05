@@ -76,6 +76,17 @@ async function apply() {
       Object.assign(word, { partOfSpeech: line.partOfSpeech, category: line.partOfSpeech, meaningKo: line.meaningKo, meaningEn: line.meaningEn, example: line.example, exampleKo: line.exampleKo })
     }
   }
+  // 직접 작성한 IPA: ipa-NN.tsv (word<TAB>/IPA/). 조회 실패 목록에서도 뺀다.
+  const failures = new Set(source.metadata.ipaFailures)
+  for (const file of files.filter(f => f.startsWith('ipa-'))) {
+    for (const [wordText, ipa] of (await readFile(new URL(file, batchDir), 'utf8')).split('\n').filter(Boolean).map(l => l.split('\t'))) {
+      const word = byWord.get(wordText)
+      if (!word || !/^\/.+\/$/.test(ipa?.trim() ?? '')) throw new Error(`${file}: IPA 형식 오류 ${wordText}`)
+      word.phonetic = ipa.trim()
+      failures.delete(wordText)
+    }
+  }
+  source.metadata.ipaFailures = [...failures]
   source.metadata.judged = [...judged]
   source.words = source.words.filter(w => byWord.has(w.word))
   await save(source)
@@ -84,6 +95,10 @@ async function apply() {
 
 async function ipa() {
   const source = await load()
+  if (process.argv.includes('--reset')) {
+    for (const word of source.words) word.phonetic = null
+    source.metadata.ipaFailures = []
+  }
   const failures = new Set(source.metadata.ipaFailures)
   const judged = new Set(source.metadata.judged as string[])
   const todo = source.words.filter(w => w.phonetic === null && judged.has(w.word) && !failures.has(w.word))
@@ -94,11 +109,12 @@ async function ipa() {
         const response = await fetch(KAIKKI(word.word), { signal: AbortSignal.timeout(8000) })
         if (response.status === 404) break
         if (!response.ok) throw new Error(String(response.status))
-        for (const line of (await response.text()).split('\n').filter(Boolean)) {
-          const entry = JSON.parse(line)
-          const found = entry.sounds?.find((s: { ipa?: string }) => s.ipa?.startsWith('/'))?.ipa
-          if (found) { word.phonetic = found; return }
-        }
+        // 미국식 발음(General-American, US)을 우선하고, 없으면 첫 번째 /…/ 표기를 쓴다.
+        const sounds = (await response.text()).split('\n').filter(Boolean)
+          .flatMap(line => (JSON.parse(line).sounds ?? []) as { ipa?: string; tags?: string[] }[])
+          .filter(sound => sound.ipa?.startsWith('/'))
+        const found = sounds.find(sound => sound.tags?.some(tag => tag === 'General-American' || tag === 'US')) ?? sounds[0]
+        if (found?.ipa) { word.phonetic = found.ipa; return }
         break
       } catch { await new Promise(r => setTimeout(r, 500 * 2 ** attempt)) }
     }
@@ -127,7 +143,7 @@ async function finalize() {
   const failures = new Set(source.metadata.ipaFailures)
   for (const word of source.words) {
     if (!word.meaningKo || !word.example || !word.phonetic || !word.partOfSpeech) throw new Error(`미완성 단어: ${word.word}`)
-    if (failures.has(word.word) && !word.meaningKo.startsWith('*')) word.meaningKo = `*${word.meaningKo}`
+    if (failures.has(word.word)) throw new Error(`IPA 미확정 단어: ${word.word} (ipa-NN.tsv에 직접 작성)`)
     word.category = word.partOfSpeech
   }
   const levels = assignLevels(source.words)

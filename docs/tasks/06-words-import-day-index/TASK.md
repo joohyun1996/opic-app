@@ -1,6 +1,6 @@
 # TASK: 단어 데이터 적재 + 홈·Day 목록 화면
 
-> 작성: Claude · 승인: [ ] 사용자
+> 작성: Claude · 승인: [x] 사용자 (2026-10-06)
 > 경로: docs/tasks/06-words-import-day-index/TASK.md
 > 근거: `docs/decisions/001-native-pivot.md` § 단어 데이터, § Day 구성 / `AGENTS.md` § 데이터 규칙 / `docs/design/words-ui.md` ①② / `SPEC.md` § 안드로이드 골격 + Room 스키마
 

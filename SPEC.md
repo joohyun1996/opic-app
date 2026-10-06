@@ -15,6 +15,7 @@
 | 2026-10-05 | v0.6.0 | 기기 내 LLM 이식 + 문장 교정 채점 실측 (TASK 05) |
 | 2026-10-06 | v0.7.0 | 단어 데이터 적재 + 홈·Day 목록 화면 (TASK 06) |
 | 2026-10-06 | v0.8.0 | Day 단어 목록 + 영→한·한→영 플래시카드 + 발음 (TASK 07). 영→한 채점 규칙 변경 |
+| 2026-10-06 | v0.9.0 | 오답 모음 + 오답만 학습 (TASK 08). 오답 정의 변경. 단어 탭 이식 완료 |
 
 ## 인증
 ### POST /api/auth/login
@@ -165,6 +166,18 @@
 - DAO 추가: `WordDao.getDayWordsWithProgress(language, firstSeq, lastSeq)` → `WordWithProgress(word, correctCount?, wrongCount?)`
 - 발음: Android `TextToSpeech`(Locale.US) 하나를 공유. 엔진·영어 음성이 없으면 ♪ 비활성 + 1회 안내
 - 적재: 파일 앞 256자에서 dataVersion을 먼저 읽어 같으면 전체 파싱 생략 (S23+ 재실행 260ms)
+
+### 오답 모음 (2026-10-06, TASK 08)
+- **오답 정의 변경**
+  | 이전 (v0.7.0~) | 이후 |
+  |---|---|
+  | `wrongCount > 0` | `wrongCount > 0 AND correctCount < 3` — 습득하면 오답에서 빠진다 |
+  - `DayStats.wrong`, 뱃지, ③ "오답 N", ⑥ 목록이 모두 이 정의
+- ⑥ 오답 모음 (`wrong`): Day 필터 칩(전체 + 오답 있는 Day), 빨간 세로선 카드(단어·발음·♪·뜻·틀린 횟수·Day), 하단 영→한/한→영 학습
+  - 진입: Day 목록 "오답 N개 →" 뱃지, 홈 "오답 N개 다시 보기 →"
+- 오답 학습 (`study/wrong/{day}/{mode}`, day 0 = 전체): 시작 시 카드 목록 고정
+- DAO 추가: `WordDao.getWrongWords(language, firstSeq, lastSeq)`
+- 학습 기록 쓰기 실패 시 `Log.e("WordStudy")` + 화면에 "기록 저장 실패"
 
 ## 문법
 (기능 추가 시 여기에 작성)

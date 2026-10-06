@@ -105,7 +105,7 @@ class WordImporterTest {
         db.userWordDao().recordResult(hidden.id, false, 4)
         val range = seqRange(2)
         assertEquals(listOf(41, 80), dao.getDayWords("en", range.first, range.last).map { it.seq })
-        assertEquals(DayStats(2, 2, 1, 1), dao.dayStats("en", WORDS_PER_DAY).single { it.day == 2 })
+        assertEquals(DayStats(2, 2, 1, 0), dao.dayStats("en", WORDS_PER_DAY).single { it.day == 2 })
         assertEquals(listOf(DayStats(2, 1, 0, 0)), dao.dayStats("zh", WORDS_PER_DAY))
     }
 
@@ -139,5 +139,23 @@ class WordImporterTest {
         assertEquals(3, rows[0].correctCount)
         assertEquals(null, rows[1].correctCount)
         assertEquals(DayStats(1, 2, 1, 0), dao.dayStats("en", WORDS_PER_DAY).single())
+    }
+
+    @Test fun wrongWordsExcludeMasteredDeletedAndOtherLanguage() = runBlocking {
+        importer.importWords(file(1, word("wrong", 1), word("mastered", 2), word("right", 3), word("hidden", 4, deleted = true),
+            word("later", 41), word("chinese", 1, "zh")))
+        val progress = db.userWordDao()
+        suspend fun record(text: String, language: String = "en", correct: Int = 0, wrong: Int = 0) {
+            val id = dao.find(language, text)!!.id
+            repeat(correct) { progress.recordResult(id, true, 0) }
+            repeat(wrong) { progress.recordResult(id, false, 0) }
+        }
+        record("wrong", wrong = 1); record("mastered", correct = 3, wrong = 1); record("right", correct = 1)
+        record("hidden", wrong = 1); record("later", wrong = 2); record("chinese", "zh", wrong = 1)
+        assertEquals(listOf("wrong", "later"), dao.getWrongWords("en", 1, Int.MAX_VALUE).map { it.word.word })
+        val day1 = seqRange(1)
+        assertEquals(listOf("wrong"), dao.getWrongWords("en", day1.first, day1.last).map { it.word.word })
+        assertEquals(listOf(1, 1), dao.dayStats("en", WORDS_PER_DAY).map { it.wrong })
+        assertEquals(listOf("chinese"), dao.getWrongWords("zh", 1, Int.MAX_VALUE).map { it.word.word })
     }
 }

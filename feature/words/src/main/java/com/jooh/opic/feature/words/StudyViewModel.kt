@@ -1,5 +1,6 @@
 package com.jooh.opic.feature.words
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
@@ -19,6 +20,12 @@ enum class StudyMode(val route: String, val title: String) {
     companion object { fun of(route: String?) = entries.firstOrNull { it.route == route } ?: EN_KO }
 }
 
+/** 학습 대상: Day N 전체, 또는 오답 단어(day = 0이면 모든 Day). */
+data class StudySource(val day: Int, val wrongOnly: Boolean) {
+    val key get() = if (wrongOnly) "wrong-$day" else "day-$day"
+    val backLabel get() = if (wrongOnly) "← 오답 모음" else "← Day $day"
+}
+
 data class StudyState(
     val loading: Boolean = true,
     val cards: List<WordEntity> = emptyList(),
@@ -29,6 +36,7 @@ data class StudyState(
     val corrected: Boolean = false,
     /** 단어 id → 최종 정답 여부 */
     val results: Map<Long, Boolean> = emptyMap(),
+    val saveFailed: Boolean = false,
 ) {
     val current get() = cards.getOrNull(index)
     val finished get() = !loading && index >= cards.size
@@ -38,7 +46,7 @@ data class StudyState(
 
 class StudyViewModel(
     private val database: OpicDatabase,
-    private val day: Int,
+    private val source: StudySource,
     val mode: StudyMode,
     private val onRecorded: () -> Unit,
 ) : ViewModel() {
@@ -51,8 +59,11 @@ class StudyViewModel(
 
     private fun load() {
         viewModelScope.launch {
-            val range = seqRange(day)
-            val cards = database.wordDao().getDayWords("en", range.first, range.last)
+            // 카드 목록은 시작할 때 한 번만 읽는다. 세션 중 습득해도 카드가 빠지지 않는다.
+            val dao = database.wordDao()
+            val range = if (source.day == 0) 1..Int.MAX_VALUE else seqRange(source.day)
+            val cards = if (source.wrongOnly) dao.getWrongWords("en", range.first, range.last).map { it.word }
+                else dao.getDayWords("en", range.first, range.last)
             mutableState.value = StudyState(loading = false, cards = cards)
         }
     }
@@ -71,8 +82,7 @@ class StudyViewModel(
         val previous = lastWrite
         lastWrite = viewModelScope.launch {
             previous?.join()
-            database.userWordDao().recordResult(word.id, correct, System.currentTimeMillis())
-            onRecorded()
+            save { database.userWordDao().recordResult(word.id, correct, System.currentTimeMillis()) }
         }
     }
 
@@ -85,8 +95,19 @@ class StudyViewModel(
         val previous = lastWrite
         lastWrite = viewModelScope.launch {
             previous?.join()
-            database.userWordDao().correctLastWrong(word.id, System.currentTimeMillis())
+            save { database.userWordDao().correctLastWrong(word.id, System.currentTimeMillis()) }
+        }
+    }
+
+    private suspend fun save(write: suspend () -> Unit) {
+        try {
+            write()
             onRecorded()
+        } catch (error: kotlin.coroutines.cancellation.CancellationException) {
+            throw error
+        } catch (error: Exception) {
+            Log.e("WordStudy", "학습 기록 저장 실패", error)
+            mutableState.update { it.copy(saveFailed = true) }
         }
     }
 
@@ -94,12 +115,12 @@ class StudyViewModel(
         if (it.checked == null) it else it.copy(index = it.index + 1, input = "", checked = null, corrected = false)
     }
 
-    fun restart() = mutableState.update { StudyState(loading = false, cards = it.cards) }
+    fun restart() = mutableState.update { StudyState(loading = false, cards = it.cards, saveFailed = it.saveFailed) }
 
     class Factory(
-        private val database: OpicDatabase, private val day: Int, private val mode: StudyMode, private val onRecorded: () -> Unit,
+        private val database: OpicDatabase, private val source: StudySource, private val mode: StudyMode, private val onRecorded: () -> Unit,
     ) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel> create(modelClass: Class<T>): T = StudyViewModel(database, day, mode, onRecorded) as T
+        override fun <T : ViewModel> create(modelClass: Class<T>): T = StudyViewModel(database, source, mode, onRecorded) as T
     }
 }

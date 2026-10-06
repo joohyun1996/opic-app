@@ -25,15 +25,16 @@ import com.jooh.opic.core.database.WordEntity
 /** ④ 영→한 / ⑤ 한→영 플래시카드와 결과 화면 */
 @Composable
 internal fun StudyScreen(
-    database: OpicDatabase, day: Int, mode: StudyMode, speaker: Speaker,
+    database: OpicDatabase, source: StudySource, mode: StudyMode, speaker: Speaker,
     onRecorded: () -> Unit, onBack: () -> Unit,
 ) {
-    val model: StudyViewModel = viewModel(key = "study-$day-${mode.route}", factory = StudyViewModel.Factory(database, day, mode, onRecorded))
+    val model: StudyViewModel = viewModel(key = "study-${source.key}-${mode.route}", factory = StudyViewModel.Factory(database, source, mode, onRecorded))
     val state by model.state.collectAsState()
     DisposableEffect(Unit) { onDispose { speaker.stop() } }
 
     Column(Modifier.fillMaxSize().imePadding()) {
-        TextButton(onClick = onBack) { Text("← Day $day") }
+        TextButton(onClick = onBack) { Text(source.backLabel) }
+        if (state.saveFailed) Text("기록 저장 실패", color = WrongInk, style = MaterialTheme.typography.bodySmall)
         val word = state.current
         when {
             state.loading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator(color = Ink) }

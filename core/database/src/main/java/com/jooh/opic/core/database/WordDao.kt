@@ -23,12 +23,22 @@ interface WordDao {
     @Query("""
         SELECT (w.seq - 1) / :wordsPerDay + 1 AS day, COUNT(*) AS total,
                SUM(CASE WHEN u.correctCount >= 3 THEN 1 ELSE 0 END) AS mastered,
-               SUM(CASE WHEN u.wrongCount > 0 THEN 1 ELSE 0 END) AS wrong
+               SUM(CASE WHEN u.wrongCount > 0 AND u.correctCount < 3 THEN 1 ELSE 0 END) AS wrong
         FROM words w LEFT JOIN user_words u ON u.wordId = w.id
         WHERE w.language = :language AND w.deleted = 0
         GROUP BY (w.seq - 1) / :wordsPerDay ORDER BY day
     """)
     suspend fun dayStats(language: String, wordsPerDay: Int): List<DayStats>
+
+    /** 오답 단어: 틀린 적이 있고 아직 습득(정답 3회) 전. 전체는 firstSeq = 1, lastSeq = Int.MAX_VALUE. */
+    @Query("""
+        SELECT w.*, u.correctCount AS correctCount, u.wrongCount AS wrongCount
+        FROM words w JOIN user_words u ON u.wordId = w.id
+        WHERE w.language = :language AND w.seq BETWEEN :firstSeq AND :lastSeq AND w.deleted = 0
+          AND u.wrongCount > 0 AND u.correctCount < 3
+        ORDER BY w.seq
+    """)
+    suspend fun getWrongWords(language: String, firstSeq: Int, lastSeq: Int): List<WordWithProgress>
 
     @Query("SELECT MAX(seq) FROM words WHERE language = :language")
     suspend fun maxSeq(language: String): Int?

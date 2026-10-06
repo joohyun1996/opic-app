@@ -68,7 +68,7 @@ internal fun DayScreen(database: OpicDatabase, day: Int, speaker: Speaker, onBac
                             Text(row.word.phonetic, style = MaterialTheme.typography.bodySmall, color = Color.Gray)
                         }
                         SpeakButton(speaker, row.word.word)
-                        if ((row.wrongCount ?: 0) > 0) {
+                        if ((row.wrongCount ?: 0) > 0 && (row.correctCount ?: 0) < 3) {
                             WrongBadge(row.wrongCount ?: 0)
                             Spacer(Modifier.width(4.dp))
                         }

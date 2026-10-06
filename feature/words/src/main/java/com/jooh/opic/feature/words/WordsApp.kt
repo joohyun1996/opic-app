@@ -69,6 +69,7 @@ fun WordsApp(database: OpicDatabase, importResult: ImportResult?, debugContent: 
                                         Text("Day ${state.days.size}개 · 학습 시작 →")
                                     }
                                 }
+                                if (state.wrong > 0) TextButton(onClick = { nav.navigate("wrong") }) { Text("오답 ${state.wrong}개 다시 보기 →", color = WrongInk) }
                                 Card(onClick = {}, enabled = false, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(disabledContainerColor = New)) {
                                     Text("중국어 (HSK) — 준비 중", Modifier.padding(20.dp))
                                 }
@@ -81,8 +82,8 @@ fun WordsApp(database: OpicDatabase, importResult: ImportResult?, debugContent: 
                                 TextButton(onClick = { nav.safeBack() }) { Text("← 홈") }
                                 Text("영어 · Day 목록", style = MaterialTheme.typography.headlineSmall)
                                 Text("${state.days.size}일 · ${state.total}개 단어", Modifier.padding(vertical = 8.dp))
-                                if (state.wrong > 0) Surface(color = Color(0xFFFCEBEB), shape = MaterialTheme.shapes.small) {
-                                    Text("오답 ${state.wrong}개", Modifier.padding(8.dp), color = Color(0xFF9B2626))
+                                if (state.wrong > 0) Surface(onClick = { nav.navigate("wrong") }, color = WrongBg, shape = MaterialTheme.shapes.small) {
+                                    Text("오답 ${state.wrong}개 →", Modifier.padding(8.dp), color = WrongInk)
                                 }
                                 LazyVerticalGrid(columns = GridCells.Fixed(4), contentPadding = PaddingValues(vertical = 12.dp),
                                     horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -105,7 +106,16 @@ fun WordsApp(database: OpicDatabase, importResult: ImportResult?, debugContent: 
                         }
                         composable("study/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
                             val day = entry.arguments?.getInt("day") ?: 1
-                            StudyScreen(database, day, StudyMode.of(entry.arguments?.getString("mode")), speaker,
+                            StudyScreen(database, StudySource(day, wrongOnly = false), StudyMode.of(entry.arguments?.getString("mode")), speaker,
+                                onRecorded = { model.refresh() }, onBack = { nav.safeBack() })
+                        }
+                        composable("wrong") {
+                            WrongScreen(database, speaker, onBack = { nav.safeBack() },
+                                onStudy = { day, mode -> nav.navigate("study/wrong/$day/${mode.route}") })
+                        }
+                        composable("study/wrong/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
+                            val day = entry.arguments?.getInt("day") ?: 0
+                            StudyScreen(database, StudySource(day, wrongOnly = true), StudyMode.of(entry.arguments?.getString("mode")), speaker,
                                 onRecorded = { model.refresh() }, onBack = { nav.safeBack() })
                         }
                         if (debugContent != null) composable("debug") { debugContent { nav.safeBack() } }

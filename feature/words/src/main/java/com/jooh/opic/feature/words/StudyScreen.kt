@@ -66,7 +66,8 @@ private fun ColumnScope.CardView(state: StudyState, word: WordEntity, mode: Stud
                 StudyMode.KO_EN -> {
                     Text(word.meaningKo.removePrefix("*"), style = MaterialTheme.typography.headlineSmall)
                     Text(word.partOfSpeech, color = Color.Gray)
-                    Text("힌트: ${maskHint(word.word)}", style = MaterialTheme.typography.titleMedium)
+                    if (state.hintShown) Text("힌트: ${maskHint(word.word)}", style = MaterialTheme.typography.titleMedium)
+                    else if (state.checked == null) TextButton(onClick = model::showHint, contentPadding = PaddingValues(0.dp)) { Text("힌트 보기") }
                 }
             }
             state.checked?.let { correct ->

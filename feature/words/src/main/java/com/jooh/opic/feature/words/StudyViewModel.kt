@@ -37,6 +37,7 @@ data class StudyState(
     /** 단어 id → 최종 정답 여부 */
     val results: Map<Long, Boolean> = emptyMap(),
     val saveFailed: Boolean = false,
+    val hintShown: Boolean = false,
 ) {
     val current get() = cards.getOrNull(index)
     val finished get() = !loading && index >= cards.size
@@ -64,7 +65,8 @@ class StudyViewModel(
             val range = if (source.day == 0) 1..Int.MAX_VALUE else seqRange(source.day)
             val cards = if (source.wrongOnly) dao.getWrongWords("en", range.first, range.last).map { it.word }
                 else dao.getDayWords("en", range.first, range.last)
-            mutableState.value = StudyState(loading = false, cards = cards)
+            // 순서로 외우지 않도록 매번 섞는다.
+            mutableState.value = StudyState(loading = false, cards = cards.shuffled())
         }
     }
 
@@ -111,11 +113,13 @@ class StudyViewModel(
         }
     }
 
+    fun showHint() = mutableState.update { it.copy(hintShown = true) }
+
     fun next() = mutableState.update {
-        if (it.checked == null) it else it.copy(index = it.index + 1, input = "", checked = null, corrected = false)
+        if (it.checked == null) it else it.copy(index = it.index + 1, input = "", checked = null, corrected = false, hintShown = false)
     }
 
-    fun restart() = mutableState.update { StudyState(loading = false, cards = it.cards, saveFailed = it.saveFailed) }
+    fun restart() = mutableState.update { StudyState(loading = false, cards = it.cards.shuffled(), saveFailed = it.saveFailed) }
 
     class Factory(
         private val database: OpicDatabase, private val source: StudySource, private val mode: StudyMode, private val onRecorded: () -> Unit,

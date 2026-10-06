@@ -8,6 +8,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -47,12 +49,16 @@ internal fun DayScreen(database: OpicDatabase, day: Int, speaker: Speaker, onBac
     LaunchedEffect(Unit) { model.refresh() }
     DisposableEffect(Unit) { onDispose { speaker.stop() } }
     val list = rows.orEmpty()
+    var showKorean by koreanVisible
     val mastered = list.count { wordStatus(it.correctCount) == WordStatus.MASTERED }
 
     Column(Modifier.fillMaxSize()) {
         TextButton(onClick = onBack) { Text("← Day 목록") }
         Text("Day $day", style = MaterialTheme.typography.headlineSmall)
-        Text("습득 $mastered / ${list.size}", Modifier.padding(vertical = 8.dp))
+        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+            Text("습득 $mastered / ${list.size}", Modifier.weight(1f).padding(vertical = 8.dp))
+            TextButton(onClick = { showKorean = !showKorean }) { Text(if (showKorean) "한국어 숨기기" else "한국어 보기") }
+        }
         LinearProgressIndicator(
             progress = { if (list.isEmpty()) 0f else mastered.toFloat() / list.size },
             modifier = Modifier.fillMaxWidth(), color = Ink, trackColor = New, drawStopIndicator = {},
@@ -62,17 +68,21 @@ internal fun DayScreen(database: OpicDatabase, day: Int, speaker: Speaker, onBac
         } else {
             LazyColumn(Modifier.weight(1f).fillMaxWidth(), contentPadding = PaddingValues(vertical = 12.dp)) {
                 items(list, key = { it.word.id }) { row ->
+                    val masteredWord = wordStatus(row.correctCount) == WordStatus.MASTERED
                     Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                         Column(Modifier.weight(1f)) {
-                            Text(row.word.word, style = MaterialTheme.typography.titleMedium)
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text(row.word.word, style = MaterialTheme.typography.titleMedium)
+                                SpeakButton(speaker, row.word.word)
+                                if ((row.wrongCount ?: 0) > 0 && (row.correctCount ?: 0) < 3) WrongBadge(row.wrongCount ?: 0)
+                            }
                             Text(row.word.phonetic, style = MaterialTheme.typography.bodySmall, color = Color.Gray)
                         }
-                        SpeakButton(speaker, row.word.word)
-                        if ((row.wrongCount ?: 0) > 0 && (row.correctCount ?: 0) < 3) {
-                            WrongBadge(row.wrongCount ?: 0)
-                            Spacer(Modifier.width(4.dp))
-                        }
-                        StatusBadge(wordStatus(row.correctCount))
+                        if (showKorean) Text(
+                            row.word.meaningKo.removePrefix("*"), Modifier.weight(1f).padding(start = 8.dp),
+                            color = if (masteredWord) RightInk else Ink, maxLines = 2, overflow = TextOverflow.Ellipsis,
+                            textAlign = TextAlign.End, style = MaterialTheme.typography.bodyMedium,
+                        )
                     }
                     HorizontalDivider(color = Line)
                 }
@@ -86,3 +96,6 @@ internal fun DayScreen(database: OpicDatabase, day: Int, speaker: Speaker, onBac
         }
     }
 }
+
+/** 한국어 보기 선택은 앱이 살아 있는 동안 화면을 오가도 유지한다. */
+private val koreanVisible = mutableStateOf(true)

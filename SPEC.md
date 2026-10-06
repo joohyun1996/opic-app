@@ -1,8 +1,8 @@
 # OPIc · HSK 학습 앱 기능 명세서
 
-> 마지막 업데이트: 2026-10-05
+> 마지막 업데이트: 2026-10-06
 >
-> ⚠️ 2026-10-04 Kotlin 네이티브 앱 전환 결정 (`docs/decisions/001-native-pivot.md`). 이 문서는 웹앱 기준 최종본이며 `web-final` 태그로 보관된다. 이후 명세는 새 저장소의 SPEC.md에서 이어진다.
+> 2026-10-04 Kotlin 네이티브 앱 전환 (`docs/decisions/001-native-pivot.md`). 이 저장소에서 계속 작성한다. 웹앱 시절 명세(인증, `/api/*`, 웹 단어 탭)는 `web-final` 태그 기준이며 아래 "전환 기록" 이전 섹션에 남아 있다.
 
 ## 변경 이력
 | 날짜 | 버전 | 변경 내용 |
@@ -13,6 +13,7 @@
 | 2026-10-05 | v0.4.0 | 단어 데이터 `exports/words.json` 확정 (영어 5,517개, dataVersion 1), 웹 코드 제거 (TASK 01~03) |
 | 2026-10-05 | v0.5.0 | 안드로이드 골격 + Room 단어 스키마 (TASK 04) |
 | 2026-10-05 | v0.6.0 | 기기 내 LLM 이식 + 문장 교정 채점 실측 (TASK 05) |
+| 2026-10-06 | v0.7.0 | 단어 데이터 적재 + 홈·Day 목록 화면 (TASK 06) |
 
 ## 인증
 ### POST /api/auth/login
@@ -122,7 +123,7 @@
   | POST /api/user-words | `UserWordDao.recordResult(wordId, correct, now)` |
   | POST /api/admin/words/seed | `WordDao.upsertWords(words)` — `(language, word)` 조회 후 UPDATE/INSERT, 기존 id·seq 유지 |
   | GET /api/words/stats | 미구현 (단어 탭 TASK) |
-- 미구현: `words.json` 적재와 dataVersion 비교, 단어 화면
+- ~~미구현: `words.json` 적재와 dataVersion 비교, 단어 화면~~ → TASK 06에서 구현 (아래)
 
 ### 기기 내 LLM + 문장 교정 (2026-10-05, TASK 05)
 - `:core:llm` — 머니로그 `core/llm` 7개 파일 복사 (`4d5adfa`, 원본과 패키지명 외 동일). Gemma 3n E4B, 모델 경로 `com.jooh.opic`의 `no_backup/llm` (머니로그와 별도)
@@ -133,6 +134,21 @@
   - `parseCorrection(raw, original)` → Ok / InvalidJson / Contradiction. 모순: correct=true인데 errors 있음, correct=false인데 errors 없음, corrected가 원문과 같은데 errors 있음
 - S23+ 실측 (20문장): 유효 JSON 20/20, 모순 0, 판정 일치 20/20, 문장당 중앙값 22.0초·최대 25.6초, 첫 로딩 11.0초. 한국어 설명의 문법 용어 오류 2/14 (`docs/tasks/05-llm-port/BENCHMARK.md`)
 - debug 빌드 전용 "LLM 검증" 화면 (사용자 기능 아님)
+
+### 단어 적재 + 홈·Day 목록 (2026-10-06, TASK 06)
+- APK assets에 `exports/words.json`만 포함 (Gradle `Sync` → `build/generated/wordAssets`)
+- `WordImporter.importWords(raw)` → `Imported(version, count)` / `UpToDate(version)` / `Failed(reason)`, 예외를 던지지 않음
+  - 검증: language en|zh, word·meaningKo 공백 아님, seq·level ≥ 1, 파일 내 (language, word)·(language, seq) 중복 없음, 영어는 phonetic·meaningEn·example·exampleKo 필수
+  - `data_meta.words_data_version`보다 클 때만 한 트랜잭션에서 `upsertWords` + 버전 저장. 실패 시 전체 롤백. `user_words`는 건드리지 않음
+- 앱 시작 시 IO 스레드에서 적재 (`OpicApplication.importResult`, 로그 태그 `WordImport`). S23+: 첫 적재 3,283ms, 재실행 637ms
+- DAO 변경
+  | 이전 | 이후 |
+  |------|------|
+  | `WordDao.getDayWords(language, day)` | `getDayWords(language, firstSeq, lastSeq)` — 호출부가 `seqRange(day)` 전달 |
+  | (GET /api/words/stats 대체 미구현) | `WordDao.dayStats(language, wordsPerDay)` → `DayStats(day, total, mastered, wrong)` (deleted 제외) |
+  | — | `DataMetaDao.get / insert(IGNORE) / update` |
+- `:feature:words` — ① 홈 (영어 카드: 습득/전체 + 진행률, 중국어 "준비 중" 비활성), ② Day 목록 (4열, `습득/전체`, 오답 총수 뱃지), Day 칸 → "준비 중" 화면. navigation-compose
+- debug 빌드 전용: LLM 검증 화면과 `llm-bench/sentences.json` (`app/src/debug`)
 
 ## 문법
 (기능 추가 시 여기에 작성)

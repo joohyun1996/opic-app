@@ -1,6 +1,7 @@
 package com.jooh.opic.core.database
 
 import androidx.room.Dao
+import androidx.room.Embedded
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Transaction
@@ -10,6 +11,14 @@ import androidx.room.Update
 interface WordDao {
     @Query("SELECT * FROM words WHERE language = :language AND seq BETWEEN :firstSeq AND :lastSeq AND deleted = 0 ORDER BY seq")
     suspend fun getDayWords(language: String, firstSeq: Int, lastSeq: Int): List<WordEntity>
+
+    @Query("""
+        SELECT w.*, u.correctCount AS correctCount, u.wrongCount AS wrongCount
+        FROM words w LEFT JOIN user_words u ON u.wordId = w.id
+        WHERE w.language = :language AND w.seq BETWEEN :firstSeq AND :lastSeq AND w.deleted = 0
+        ORDER BY w.seq
+    """)
+    suspend fun getDayWordsWithProgress(language: String, firstSeq: Int, lastSeq: Int): List<WordWithProgress>
 
     @Query("""
         SELECT (w.seq - 1) / :wordsPerDay + 1 AS day, COUNT(*) AS total,
@@ -48,3 +57,6 @@ interface WordDao {
 }
 
 data class DayStats(val day: Int, val total: Int, val mastered: Int, val wrong: Int)
+
+/** 학습 기록이 없으면 correctCount·wrongCount가 null (= 신규). */
+data class WordWithProgress(@Embedded val word: WordEntity, val correctCount: Int?, val wrongCount: Int?)

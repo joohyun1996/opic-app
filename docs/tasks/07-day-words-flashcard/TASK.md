@@ -1,6 +1,6 @@
 # TASK: Day 단어 목록 + 플래시카드(영→한, 한→영) + 발음
 
-> 작성: Claude · 승인: [ ] 사용자
+> 작성: Claude · 승인: [x] 사용자 (2026-10-06) · 구현: Claude (GPT 토큰 소진)
 > 경로: docs/tasks/07-day-words-flashcard/TASK.md
 > 근거: `docs/design/words-ui.md` ③④⑤·♪ / `SPEC.md` § 단어 적재 + 홈·Day 목록, § 플래시카드 규칙(웹, 아래에서 변경) / `AGENTS.md` § 데이터 규칙
 > 선행: TASK 06 Approve (`2ed525f`)

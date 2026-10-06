@@ -30,4 +30,13 @@ interface UserWordDao {
             ))
         }
     }
+
+    /** "맞았어요": 방금 오답으로 기록한 것을 정답으로 바꾼다. 기록이 없거나 오답이 0이면 아무것도 하지 않는다. */
+    @Transaction
+    suspend fun correctLastWrong(wordId: Long, now: Long): Boolean {
+        val current = get(wordId) ?: return false
+        if (current.wrongCount <= 0) return false
+        update(current.copy(correctCount = current.correctCount + 1, wrongCount = current.wrongCount - 1, lastStudiedAt = now))
+        return true
+    }
 }

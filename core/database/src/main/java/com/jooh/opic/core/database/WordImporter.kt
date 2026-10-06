@@ -1,6 +1,7 @@
 package com.jooh.opic.core.database
 
 import androidx.room.withTransaction
+import kotlin.coroutines.cancellation.CancellationException
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
@@ -13,6 +14,17 @@ sealed interface ImportResult {
 class WordImporter(private val database: OpicDatabase) {
     private val json = Json { ignoreUnknownKeys = true }
     suspend fun importWords(raw: String): ImportResult = try {
+        // 파일 앞부분의 dataVersion만 먼저 보고, 이미 적재된 버전이면 2MB 넘는 전체 파싱을 건너뛴다.
+        val peeked = VERSION_PATTERN.find(raw.take(256))?.groupValues?.get(1)?.toIntOrNull()
+        val storedBefore = database.dataMetaDao().get(VERSION_KEY)?.toIntOrNull() ?: 0
+        if (peeked != null && peeked >= 1 && storedBefore >= peeked) ImportResult.UpToDate(storedBefore) else load(raw)
+    } catch (error: CancellationException) {
+        throw error
+    } catch (error: Exception) {
+        ImportResult.Failed(error.message ?: "단어 데이터 적재 실패")
+    }
+
+    private suspend fun load(raw: String): ImportResult {
         val input = json.decodeFromString<WordFile>(raw)
         require(input.dataVersion >= 1) { "dataVersion은 1 이상이어야 합니다." }
         val keys = mutableSetOf<Pair<String, String>>()
@@ -28,22 +40,23 @@ class WordImporter(private val database: OpicDatabase) {
                 example = item.example.orEmpty(), exampleKo = item.exampleKo.orEmpty(), level = item.level,
                 category = item.category, partOfSpeech = item.partOfSpeech.orEmpty(), collocations = item.collocations, deleted = item.deleted)
         }
-        database.withTransaction {
+        return database.withTransaction {
             val metadata = database.dataMetaDao()
             val stored = metadata.get(VERSION_KEY)?.toInt() ?: 0
             if (stored >= input.dataVersion) ImportResult.UpToDate(stored)
             else {
                 database.wordDao().upsertWords(words)
+                // 행이 없으면 insert(IGNORE)로 만들고, 있으면 insert는 무시되므로 update로 값을 바꾼다.
                 metadata.insert(DataMetaEntity(VERSION_KEY, input.dataVersion.toString()))
                 metadata.update(VERSION_KEY, input.dataVersion.toString())
                 ImportResult.Imported(input.dataVersion, words.size)
             }
         }
-    } catch (error: Exception) {
-        ImportResult.Failed(error.message ?: "단어 데이터 적재 실패")
     }
 
-    companion object { const val VERSION_KEY = "words_data_version" }
+    companion object { const val VERSION_KEY = "words_data_version"
+        private val VERSION_PATTERN = Regex("\"dataVersion\"\\s*:\\s*(\\d+)")
+    }
 }
 
 @Serializable

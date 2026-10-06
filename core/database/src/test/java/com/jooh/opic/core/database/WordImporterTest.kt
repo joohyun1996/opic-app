@@ -108,4 +108,36 @@ class WordImporterTest {
         assertEquals(DayStats(2, 2, 1, 1), dao.dayStats("en", WORDS_PER_DAY).single { it.day == 2 })
         assertEquals(listOf(DayStats(2, 1, 0, 0)), dao.dayStats("zh", WORDS_PER_DAY))
     }
+
+    @Test fun sameVersionSkipsFullParse() = runBlocking {
+        importer.importWords(file(1, word()))
+        // dataVersion 1이 이미 적재된 상태에서, 단어 목록이 깨진 같은 버전 파일은 파싱 없이 UpToDate다.
+        assertEquals(ImportResult.UpToDate(1), importer.importWords("{\"dataVersion\": 1, \"words\": [ not json"))
+        assertEquals(1, dao.countByLanguage("en"))
+    }
+
+    @Test fun correctionTurnsLastWrongIntoCorrect() = runBlocking {
+        importer.importWords(file(1, word()))
+        val id = dao.find("en", "alpha")!!.id
+        val progress = db.userWordDao()
+        progress.recordResult(id, false, 1)
+        assertTrue(progress.correctLastWrong(id, 2))
+        val row = progress.get(id)!!
+        assertEquals(1, row.correctCount)
+        assertEquals(0, row.wrongCount)
+        assertEquals(false, progress.correctLastWrong(id, 3))
+        assertEquals(row, progress.get(id))
+        assertEquals(false, progress.correctLastWrong(999, 3))
+    }
+
+    @Test fun dayWordsWithProgressSkipsDeletedAndMarksNew() = runBlocking {
+        importer.importWords(file(1, word("first", 1), word("hidden", 2, deleted = true), word("third", 3), word("chinese", 1, "zh")))
+        val first = dao.find("en", "first")!!
+        repeat(3) { db.userWordDao().recordResult(first.id, true, it.toLong()) }
+        val rows = dao.getDayWordsWithProgress("en", 1, 40)
+        assertEquals(listOf("first", "third"), rows.map { it.word.word })
+        assertEquals(3, rows[0].correctCount)
+        assertEquals(null, rows[1].correctCount)
+        assertEquals(DayStats(1, 2, 1, 0), dao.dayStats("en", WORDS_PER_DAY).single())
+    }
 }

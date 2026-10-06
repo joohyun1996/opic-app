@@ -9,6 +9,13 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import android.widget.Toast
+import androidx.lifecycle.Lifecycle
+import androidx.navigation.NavController
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
@@ -17,11 +24,6 @@ import androidx.navigation.compose.rememberNavController
 import com.jooh.opic.core.database.ImportResult
 import com.jooh.opic.core.database.OpicDatabase
 
-private val Ink = Color(0xFF1A1A18)
-private val Paper = Color(0xFFF8F7F4)
-private val New = Color(0xFFF1EFE8)
-private val Learned = Color(0xFFEAF3DE)
-private val Learning = Color(0xFFFAEEDA)
 
 @Composable
 fun WordsApp(database: OpicDatabase, importResult: ImportResult?, debugContent: (@Composable (() -> Unit) -> Unit)? = null) {
@@ -29,6 +31,17 @@ fun WordsApp(database: OpicDatabase, importResult: ImportResult?, debugContent: 
     val state by model.state.collectAsState()
     LaunchedEffect(importResult) { model.refresh() }
     val nav = rememberNavController()
+    val context = LocalContext.current
+    val speaker = remember { Speaker(context) }
+    DisposableEffect(speaker) { onDispose { speaker.shutdown() } }
+    val ttsAvailable by speaker.available.collectAsState()
+    var ttsNoticeShown by rememberSaveable { mutableStateOf(false) }
+    LaunchedEffect(ttsAvailable) {
+        if (ttsAvailable == false && !ttsNoticeShown) {
+            ttsNoticeShown = true
+            Toast.makeText(context, "기기 설정에서 영어 음성을 설치하세요", Toast.LENGTH_LONG).show()
+        }
+    }
     MaterialTheme(colorScheme = lightColorScheme(primary = Ink, onPrimary = Color.White, background = Paper,
         surface = Paper, onSurface = Ink, onBackground = Ink, outline = Color(0xFFE8E6E0))) {
         Scaffold { padding ->
@@ -44,6 +57,7 @@ fun WordsApp(database: OpicDatabase, importResult: ImportResult?, debugContent: 
                     }
                     NavHost(navController = nav, startDestination = "home", modifier = Modifier.weight(1f)) {
                         composable("home") {
+                            LaunchedEffect(Unit) { model.refresh() }
                             Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
                                 Text("나의 언어 학습", style = MaterialTheme.typography.headlineMedium, modifier = Modifier.padding(vertical = 20.dp))
                                 Text("오늘도 한 걸음씩", style = MaterialTheme.typography.bodyLarge)
@@ -51,7 +65,7 @@ fun WordsApp(database: OpicDatabase, importResult: ImportResult?, debugContent: 
                                     Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                                         Text("영어 (OPIc)", style = MaterialTheme.typography.titleLarge)
                                         Text("습득 ${state.mastered} / ${state.total}개")
-                                        LinearProgressIndicator(progress = { if (state.total == 0) 0f else state.mastered.toFloat() / state.total }, modifier = Modifier.fillMaxWidth(), color = Ink, trackColor = New)
+                                        LinearProgressIndicator(progress = { if (state.total == 0) 0f else state.mastered.toFloat() / state.total }, modifier = Modifier.fillMaxWidth(), color = Ink, trackColor = New, drawStopIndicator = {})
                                         Text("Day ${state.days.size}개 · 학습 시작 →")
                                     }
                                 }
@@ -62,8 +76,9 @@ fun WordsApp(database: OpicDatabase, importResult: ImportResult?, debugContent: 
                             }
                         }
                         composable("days") {
+                            LaunchedEffect(Unit) { model.refresh() }
                             Column {
-                                TextButton(onClick = { nav.popBackStack() }) { Text("← 홈") }
+                                TextButton(onClick = { nav.safeBack() }) { Text("← 홈") }
                                 Text("영어 · Day 목록", style = MaterialTheme.typography.headlineSmall)
                                 Text("${state.days.size}일 · ${state.total}개 단어", Modifier.padding(vertical = 8.dp))
                                 if (state.wrong > 0) Surface(color = Color(0xFFFCEBEB), shape = MaterialTheme.shapes.small) {
@@ -83,16 +98,26 @@ fun WordsApp(database: OpicDatabase, importResult: ImportResult?, debugContent: 
                                 }
                             }
                         }
-                        composable("day/{day}") { entry ->
-                            Column {
-                                TextButton(onClick = { nav.popBackStack() }) { Text("← Day 목록") }
-                                Text("Day ${entry.arguments?.getString("day")} — 준비 중", style = MaterialTheme.typography.headlineSmall)
-                            }
+                        composable("day/{day}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
+                            val day = entry.arguments?.getInt("day") ?: 1
+                            DayScreen(database, day, speaker, onBack = { nav.safeBack() },
+                                onStudy = { mode -> nav.navigate("study/$day/${mode.route}") })
                         }
-                        if (debugContent != null) composable("debug") { debugContent { nav.popBackStack() } }
+                        composable("study/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
+                            val day = entry.arguments?.getInt("day") ?: 1
+                            StudyScreen(database, day, StudyMode.of(entry.arguments?.getString("mode")), speaker,
+                                onRecorded = { model.refresh() }, onBack = { nav.safeBack() })
+                        }
+                        if (debugContent != null) composable("debug") { debugContent { nav.safeBack() } }
                     }
                 }
             }
         }
     }
+}
+
+/** 뒤로 가기를 빠르게 여러 번 눌러 시작 화면까지 지워져 빈 화면이 되는 것을 막는다. */
+private fun NavController.safeBack() {
+    val current = currentBackStackEntry ?: return
+    if (previousBackStackEntry != null && current.lifecycle.currentState == Lifecycle.State.RESUMED) popBackStack()
 }

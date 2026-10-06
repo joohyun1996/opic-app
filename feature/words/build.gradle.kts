@@ -17,6 +17,7 @@ android {
 dependencies {
     implementation(project(":core:database"))
     implementation(project(":core:common"))
+    implementation(project(":core:model"))
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     implementation(libs.kotlinx.coroutines.android)

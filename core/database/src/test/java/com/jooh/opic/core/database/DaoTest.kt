@@ -31,8 +31,8 @@ class DaoTest {
 
     @Test fun dayFiltersLanguageDeletionAndOrder() = runBlocking {
         words.upsertWords(listOf(word("en", "second", 2), word("en", "first", 1), word("en", "hidden", 3, true), word("zh", "other", 4), word("en", "next", 41)))
-        assertEquals(listOf("first", "second"), words.getDayWords("en", 1).map { it.word })
-        assertEquals(listOf("other"), words.getDayWords("zh", 1).map { it.word })
+        assertEquals(listOf("first", "second"), words.getDayWords("en", 1, 40).map { it.word })
+        assertEquals(listOf("other"), words.getDayWords("zh", 1, 40).map { it.word })
         assertEquals(41, words.maxSeq("en"))
     }
 

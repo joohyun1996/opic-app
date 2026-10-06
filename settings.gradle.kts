@@ -3,3 +3,5 @@ dependencyResolutionManagement { repositoriesMode.set(RepositoriesMode.FAIL_ON_P
 rootProject.name = "OpicApp"
 include(":app", ":core:common", ":core:model", ":core:database")
 include(":core:llm")
+
+include(":feature:words")

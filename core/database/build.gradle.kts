@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
 }
 android {
@@ -14,8 +15,13 @@ android {
     kotlinOptions { jvmTarget = "17" }
     testOptions { unitTests.isIncludeAndroidResources = true }
 }
+tasks.withType<Test>().configureEach {
+    systemProperty("words.file", rootProject.file("exports/words.json").absolutePath)
+}
 ksp { arg("room.schemaLocation", "$projectDir/schemas") }
 dependencies {
+    implementation(project(":core:common"))
+    implementation(libs.kotlinx.serialization.json)
     implementation(project(":core:model"))
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)

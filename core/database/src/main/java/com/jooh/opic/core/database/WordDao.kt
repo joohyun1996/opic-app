@@ -8,8 +8,18 @@ import androidx.room.Update
 
 @Dao
 interface WordDao {
-    @Query("SELECT * FROM words WHERE language = :language AND seq BETWEEN (:day - 1) * 40 + 1 AND :day * 40 AND deleted = 0 ORDER BY seq")
-    suspend fun getDayWords(language: String, day: Int): List<WordEntity>
+    @Query("SELECT * FROM words WHERE language = :language AND seq BETWEEN :firstSeq AND :lastSeq AND deleted = 0 ORDER BY seq")
+    suspend fun getDayWords(language: String, firstSeq: Int, lastSeq: Int): List<WordEntity>
+
+    @Query("""
+        SELECT (w.seq - 1) / :wordsPerDay + 1 AS day, COUNT(*) AS total,
+               SUM(CASE WHEN u.correctCount >= 3 THEN 1 ELSE 0 END) AS mastered,
+               SUM(CASE WHEN u.wrongCount > 0 THEN 1 ELSE 0 END) AS wrong
+        FROM words w LEFT JOIN user_words u ON u.wordId = w.id
+        WHERE w.language = :language AND w.deleted = 0
+        GROUP BY (w.seq - 1) / :wordsPerDay ORDER BY day
+    """)
+    suspend fun dayStats(language: String, wordsPerDay: Int): List<DayStats>
 
     @Query("SELECT MAX(seq) FROM words WHERE language = :language")
     suspend fun maxSeq(language: String): Int?
@@ -36,3 +46,5 @@ interface WordDao {
         }
     }
 }
+
+data class DayStats(val day: Int, val total: Int, val mastered: Int, val wrong: Int)

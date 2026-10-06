@@ -7,6 +7,7 @@ import androidx.room.TypeConverters
 @Database(entities = [WordEntity::class, UserWordEntity::class, DataMetaEntity::class], version = 1, exportSchema = true)
 @TypeConverters(Converters::class)
 abstract class OpicDatabase : RoomDatabase() {
+    abstract fun dataMetaDao(): DataMetaDao
     abstract fun wordDao(): WordDao
     abstract fun userWordDao(): UserWordDao
 }

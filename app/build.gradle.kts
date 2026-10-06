@@ -22,6 +22,7 @@ android {
     testOptions { unitTests.isIncludeAndroidResources = true }
 }
 dependencies {
+    implementation(project(":feature:words"))
     implementation(project(":core:common"))
     implementation(project(":core:model"))
     implementation(project(":core:database"))
@@ -34,3 +35,10 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.room.runtime)
 }
+
+val bundledWords = tasks.register<Sync>("bundleWords") {
+    from(rootProject.file("exports/words.json"))
+    into(layout.buildDirectory.dir("generated/wordAssets"))
+}
+android.sourceSets["main"].assets.srcDir(layout.buildDirectory.dir("generated/wordAssets").get().asFile)
+tasks.named("preBuild").configure { dependsOn(bundledWords) }

@@ -1,30 +1,24 @@
 package com.jooh.opic
 
 import android.os.Bundle
+import android.graphics.Color
 import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.material3.Button
-import androidx.compose.material3.Text
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import com.jooh.opic.debug.LlmBenchScreen
+import com.jooh.opic.feature.words.WordsApp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge(statusBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT),
+            navigationBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT))
+        val app = application as OpicApplication
         setContent {
-            var showBench by remember { mutableStateOf(false) }
-            if (BuildConfig.DEBUG && showBench) {
-                LlmBenchScreen(application as OpicApplication, onBack = { showBench = false })
-            } else {
-                Column {
-                    Text("OPIc 학습")
-                    if (BuildConfig.DEBUG) Button(onClick = { showBench = true }) { Text("LLM 검증") }
-                }
-            }
+            val result by app.importResult.collectAsState()
+            WordsApp(app.database, result, debugContent(app))
         }
     }
 }

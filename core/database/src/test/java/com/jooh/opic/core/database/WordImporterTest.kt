@@ -1,0 +1,111 @@
+package com.jooh.opic.core.database
+
+import android.content.Context
+import androidx.room.Room
+import androidx.test.core.app.ApplicationProvider
+import com.jooh.opic.core.common.WORDS_PER_DAY
+import com.jooh.opic.core.common.seqRange
+import com.jooh.opic.core.common.totalDays
+import java.io.File
+import kotlinx.coroutines.runBlocking
+import kotlinx.serialization.json.*
+import org.junit.After
+import org.junit.Assert.*
+import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
+
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [35])
+class WordImporterTest {
+    private val db = Room.inMemoryDatabaseBuilder(ApplicationProvider.getApplicationContext<Context>(), OpicDatabase::class.java).allowMainThreadQueries().build()
+    private val importer = WordImporter(db)
+    private val dao = db.wordDao()
+    private val meta = db.dataMetaDao()
+    @After fun close() = db.close()
+
+    private fun word(text: String = "alpha", seq: Int = 1, language: String = "en", deleted: Boolean = false): JsonObject = buildJsonObject {
+        put("language", language); put("word", text); put("seq", seq); put("level", 1)
+        put("phonetic", "/a/"); put("meaningKo", "뜻"); put("meaningEn", "meaning")
+        put("example", "An example."); put("exampleKo", "예문.")
+        put("category", "noun"); put("partOfSpeech", "noun")
+        put("collocations", JsonArray(emptyList())); put("deleted", deleted)
+    }
+    private fun file(version: Int, vararg words: JsonObject) = buildJsonObject {
+        put("dataVersion", version); put("words", JsonArray(words.toList()))
+    }.toString()
+    private fun JsonObject.change(key: String, value: JsonElement) = JsonObject(toMutableMap().apply { put(key, value) })
+
+    @Test fun actualFileAndRepeatAndLastDay() = runBlocking {
+        val raw = File(requireNotNull(System.getProperty("words.file"))).readText()
+        assertEquals(ImportResult.Imported(1, 5517), importer.importWords(raw))
+        assertEquals(5517, dao.countByLanguage("en"))
+        assertEquals("1", meta.get(WordImporter.VERSION_KEY))
+        assertEquals(138, totalDays(dao.maxSeq("en")!!))
+        assertEquals(37, dao.dayStats("en", WORDS_PER_DAY).last().total)
+        val before = dao.getDayWords("en", 1, Int.MAX_VALUE)
+        val sql = db.openHelper.writableDatabase
+        sql.execSQL("CREATE TABLE write_audit (kind TEXT)")
+        for (table in listOf("words", "data_meta")) for (operation in listOf("INSERT", "UPDATE", "DELETE")) {
+            sql.execSQL("CREATE TRIGGER audit_${table}_$operation AFTER $operation ON $table BEGIN INSERT INTO write_audit VALUES ('$operation'); END")
+        }
+        assertEquals(ImportResult.UpToDate(1), importer.importWords(raw))
+        assertEquals(before, dao.getDayWords("en", 1, Int.MAX_VALUE))
+        sql.query("SELECT COUNT(*) FROM write_audit").use { assertTrue(it.moveToFirst()); assertEquals(0, it.getInt(0)) }
+    }
+
+    @Test fun upgradePreservesIdentitySequenceAndProgress() = runBlocking {
+        importer.importWords(file(1, word()))
+        val before = dao.find("en", "alpha")!!
+        db.userWordDao().recordResult(before.id, true, 123)
+        val progress = db.userWordDao().get(before.id)
+        val updated = word(seq = 99).change("meaningKo", JsonPrimitive("바뀐 뜻"))
+        assertEquals(ImportResult.Imported(2, 1), importer.importWords(file(2, updated)))
+        assertEquals(before.copy(meaningKo = "바뀐 뜻"), dao.find("en", "alpha"))
+        assertEquals(progress, db.userWordDao().get(before.id))
+        assertEquals("2", meta.get(WordImporter.VERSION_KEY))
+        assertEquals(ImportResult.UpToDate(2), importer.importWords(file(1, word())))
+        assertEquals("바뀐 뜻", dao.find("en", "alpha")!!.meaningKo)
+    }
+
+    @Test fun collisionRollsBackEarlierUpdatesAndVersion() = runBlocking {
+        importer.importWords(file(1, word()))
+        val before = dao.find("en", "alpha")
+        val update = word(seq = 2).change("meaningKo", JsonPrimitive("롤백될 뜻"))
+        assertTrue(importer.importWords(file(2, update, word("beta", 1))) is ImportResult.Failed)
+        assertEquals(before, dao.find("en", "alpha"))
+        assertEquals(1, dao.countByLanguage("en"))
+        assertEquals("1", meta.get(WordImporter.VERSION_KEY))
+    }
+
+    @Test fun invalidInputsDoNotWrite() = runBlocking {
+        importer.importWords(file(1, word()))
+        val before = dao.find("en", "alpha")
+        val bad = listOf("{", file(2, word(), word(" ALPHA ", 2)), file(2, word(), word("beta")),
+            file(2, word().change("example", JsonPrimitive(" "))), file(2, word().change("language", JsonPrimitive("ko"))),
+            file(2, word().change("word", JsonPrimitive(" "))), file(2, word().change("meaningKo", JsonPrimitive(" "))),
+            file(2, word(seq = 0)), file(2, word().change("level", JsonPrimitive(0))))
+        for (raw in bad) {
+            assertTrue(importer.importWords(raw) is ImportResult.Failed)
+            assertEquals(before, dao.find("en", "alpha"))
+            assertEquals(1, dao.countByLanguage("en"))
+            assertEquals("1", meta.get(WordImporter.VERSION_KEY))
+        }
+    }
+
+    @Test fun dayStatisticsAndExplicitRange() = runBlocking {
+        importer.importWords(file(1, word("later", 80), word("first", 41), word("hidden", 42, deleted = true),
+            word("next", 81), word("previous", 40), word("chinese", 41, "zh")))
+        val first = dao.find("en", "first")!!
+        repeat(3) { db.userWordDao().recordResult(first.id, true, it.toLong()) }
+        db.userWordDao().recordResult(first.id, false, 4)
+        val hidden = dao.find("en", "hidden")!!
+        repeat(3) { db.userWordDao().recordResult(hidden.id, true, it.toLong()) }
+        db.userWordDao().recordResult(hidden.id, false, 4)
+        val range = seqRange(2)
+        assertEquals(listOf(41, 80), dao.getDayWords("en", range.first, range.last).map { it.seq })
+        assertEquals(DayStats(2, 2, 1, 1), dao.dayStats("en", WORDS_PER_DAY).single { it.day == 2 })
+        assertEquals(listOf(DayStats(2, 1, 0, 0)), dao.dayStats("zh", WORDS_PER_DAY))
+    }
+}

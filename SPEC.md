@@ -14,6 +14,7 @@
 | 2026-10-05 | v0.5.0 | 안드로이드 골격 + Room 단어 스키마 (TASK 04) |
 | 2026-10-05 | v0.6.0 | 기기 내 LLM 이식 + 문장 교정 채점 실측 (TASK 05) |
 | 2026-10-06 | v0.7.0 | 단어 데이터 적재 + 홈·Day 목록 화면 (TASK 06) |
+| 2026-10-06 | v0.8.0 | Day 단어 목록 + 영→한·한→영 플래시카드 + 발음 (TASK 07). 영→한 채점 규칙 변경 |
 
 ## 인증
 ### POST /api/auth/login
@@ -149,6 +150,21 @@
   | — | `DataMetaDao.get / insert(IGNORE) / update` |
 - `:feature:words` — ① 홈 (영어 카드: 습득/전체 + 진행률, 중국어 "준비 중" 비활성), ② Day 목록 (4열, `습득/전체`, 오답 총수 뱃지), Day 칸 → "준비 중" 화면. navigation-compose
 - debug 빌드 전용: LLM 검증 화면과 `llm-bench/sentences.json` (`app/src/debug`)
+
+### Day 단어 목록 + 플래시카드 + 발음 (2026-10-06, TASK 07)
+- ③ Day 단어 목록 (`day/{day}`): 단어·발음기호·♪·상태 뱃지·오답 N, 하단 "영→한 학습" / "한→영 학습"
+- ④⑤ 플래시카드 (`study/{day}/{en-ko|ko-en}`): Day 단어를 seq 순서로 한 장씩, 확인 후 정답/오답 + 예문·번역, 결과 화면(정답 수, 틀린 단어, 다시 하기)
+- **채점 규칙 (웹 규칙에서 변경)**
+  | | 이전 (웹) | 이후 |
+  |---|---|---|
+  | 영→한 | 뜻 전체와 소문자 완전 일치 | `*` 제거 → `;`·`,`로 나눔 → 괄호 내용 제거 → 후보 중 하나와 공백·문장부호 무시하고 일치 (`gradeMeaning`) |
+  | 영→한 오답 | — | "맞았어요"로 정답 정정 가능 (한 문제 한 번): `UserWordDao.correctLastWrong` = wrong −1, correct +1 |
+  | 한→영 | 소문자 완전 일치 | 동일 (`gradeWord`) |
+  | 힌트 | `c _ _ _ _ _ t` | 동일 (`maskHint`, 2글자 이하는 첫 글자 + `_`, 하이픈 유지) |
+- 답을 확인할 때마다 `recordResult` 1회. 쓰기는 순서대로 실행
+- DAO 추가: `WordDao.getDayWordsWithProgress(language, firstSeq, lastSeq)` → `WordWithProgress(word, correctCount?, wrongCount?)`
+- 발음: Android `TextToSpeech`(Locale.US) 하나를 공유. 엔진·영어 음성이 없으면 ♪ 비활성 + 1회 안내
+- 적재: 파일 앞 256자에서 dataVersion을 먼저 읽어 같으면 전체 파싱 생략 (S23+ 재실행 260ms)
 
 ## 문법
 (기능 추가 시 여기에 작성)

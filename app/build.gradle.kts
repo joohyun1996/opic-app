@@ -27,6 +27,7 @@ dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:model"))
     implementation(project(":core:database"))
+    debugImplementation(project(":core:stt")) // TASK 14 검증 화면 전용 (release 제외)
     implementation(project(":core:llm"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

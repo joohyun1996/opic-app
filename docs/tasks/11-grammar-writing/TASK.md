@@ -67,12 +67,17 @@ TASK 05의 debug 검증 화면에만 있던 기능을 사용자 화면으로 만
 
 - 모르는 type은 `other`로 처리 (TASK 05의 parse 규칙과 같음)
 
+### 6. TASK 10 Nit (함께 처리)
+- N1: `grammar.json`은 `OpicApplication`에서 백그라운드로 한 번 읽어 파싱하고 결과를 넘긴다 (Compose 안에서 두 번 읽지 않는다)
+- N2: 내비게이션(NavHost)을 `:app`으로 옮겨 `:feature:words`가 `:feature:grammar`에 의존하지 않게 한다. LLM 엔진·토큰 저장소도 `:app`에서 문법 화면으로 넘긴다. 수정 범위에 `app/.../MainActivity.kt`, `feature/words/**`(경로 분리에 필요한 만큼) 추가
+- N3: 선택된 choice 버튼 색을 단어 탭 팔레트(흑백·상태색)에 맞춘다
+
 ## 수용 기준
 - [ ] AC1: `splitSentences`가 약어(`Mr.`, `a.m.`, `U.S.`)에서 나누지 않고, 빈 문장을 버리고, 6문장 입력이면 앞 5문장만 교정 대상이 되게 한다 (테스트)
 - [ ] AC2: `errorTypeGuide`가 7개 type 모두에 비어 있지 않은 문구를 돌려주고, 모르는 type은 other 문구를 돌려준다 (테스트)
 - [ ] AC3: 교정 흐름을 가짜 엔진(`OnDeviceLlmEngine` 테스트 더블)으로 테스트한다: 문장 3개 중 1번 맞음, 2번 틀림, 3번 InvalidJson이면 결과 카드가 각각 맞음/틀림/교정 실패 상태다. 결과는 문장 순서대로 하나씩 나온다
 - [ ] AC4: 교정 도중 취소하면 이후 `generate` 호출이 없다 (가짜 엔진 호출 횟수로 확인)
-- [ ] AC5: `./gradlew test lint` 통과, release APK에 `LlmBenchScreen`이 여전히 없다
+- [ ] AC5: `./gradlew test lint` 통과, release APK에 `LlmBenchScreen`이 여전히 없다, `feature/words/build.gradle.kts`에 `:feature:grammar` 의존이 없다
 - [ ] AC6: S23+ 확인 (모델은 TASK 05에서 받아 둔 상태일 수 있음 — 앱 데이터를 지우지 말 것):
   - AI 교정 준비 화면 상태 표시 (준비됨이면 그 화면 스크린샷 1장)
   - 단원 2에서 2문장(맞는 문장 1, 과거 시제를 틀린 문장 1)으로 교정 받기 → 결과 스크린샷 (고정 설명 + 접힌 AI 설명)

@@ -18,6 +18,7 @@
 | 2026-10-06 | v0.9.0 | 오답 모음 + 오답만 학습 (TASK 08). 오답 정의 변경. 단어 탭 이식 완료 |
 | 2026-10-07 | v0.10.0 | 단어 탭 다듬기: 학습 카드 셔플, 힌트 버튼, Day 목록에 뜻 표시 (TASK 09) |
 | 2026-10-07 | v0.11.0 | 문법 탭 1: 단원 1~3 콘텐츠, 단원 목록·설명·연습(두 번 시도)·결과 (TASK 10) |
+| 2026-10-07 | v0.12.0 | 문법 탭 2: 직접 써 보기 + Gemma 교정, AI 교정 준비 화면, 내비게이션 `:app`으로 이동 (TASK 11) |
 
 ## 인증
 ### POST /api/auth/login
@@ -200,6 +201,16 @@
 - 채점 (`core:common/GrammarGrading.kt`): `normalizeAnswer` = 앞뒤 공백·연속 공백·끝 `.!?` 제거, 소문자, `’`→`'`. `gradeText`는 answers 중 하나와 일치
 - 두 번 시도 (`GrammarAttempt`): 1차 오답 → "다시 생각해 보세요" + 힌트 / 2차 오답 → 정답 + 설명 / 정답 → 1차·2차 구분
 - 화면: 홈 "영어 문법" 카드 → 단원 목록 → 설명(요약·규칙·예문·흔한 실수) → 연습 10문제(섞음) → 결과(1차·2차 정답, 오답 목록, 다시 풀기). 진행 기록 저장 없음 (TASK 13)
+
+### 직접 써 보기 + Gemma 교정 (2026-10-07, TASK 11)
+- 진입: 단원 결과 화면 "직접 써 보기" → `writingTask`(promptKo/promptEn, 최소 N문장) → 여러 줄 타이핑 → "교정 받기"
+- 문장 나누기 (`core:common/Writing.kt` `sentencesToCorrect`): `.!?` 기준, 약어(Mr., a.m., U.S. 등) 보존, 빈 문장 제거, **최대 5문장**
+- 교정: 문장마다 `buildCorrectionPrompt` → `generate(timeout 120s)` → `parseCorrection` (TASK 05). 결과는 문장 순서대로 하나씩 표시, 취소 가능
+  - 틀림: 원문 → 고친 문장, 오류마다 **유형별 고정 설명**(`errorTypeGuide`, 7종) 먼저 + `original → fix` + 접힌 "AI 설명"(모델 explanationKo)
+  - 실패(InvalidJson / Contradiction / 시간 초과 / 엔진 오류): "교정하지 못했습니다" + 그 문장만 "다시 시도"
+  - S23+: 문장당 11.6~17.9초
+- AI 교정 준비 화면: 엔진 상태(모델 없음/다운로드 중/불러오는 중/준비됨/실패), HF 토큰 입력(가림, `HfTokenStore`), 다운로드는 버튼을 눌렀을 때만. 모델 파일이 이미 있으면 자동으로 불러오기만 함
+- 앱 구조: NavHost를 `:app`의 `OpicRoot`로 이동, `:feature:words`와 `:feature:grammar`는 서로 의존하지 않음. `grammar.json`은 `OpicApplication`에서 백그라운드 1회 파싱
 
 ## 섀도잉
 (기능 추가 시 여기에 작성)

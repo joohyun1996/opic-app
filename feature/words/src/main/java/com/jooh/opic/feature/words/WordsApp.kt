@@ -56,25 +56,25 @@ fun WordsApp(
                         Text("오늘도 한 걸음씩", style = MaterialTheme.typography.bodyLarge)
                         Card(onClick = { navigate("days") }, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                             Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                                Text("영어 (OPIc)", style = MaterialTheme.typography.titleLarge)
+                                Text("영단어", style = MaterialTheme.typography.titleLarge)
                                 Text("습득 ${state.mastered} / ${state.total}개")
                                 LinearProgressIndicator(progress = { if (state.total == 0) 0f else state.mastered.toFloat() / state.total },
                                     modifier = Modifier.fillMaxWidth(), color = Ink, trackColor = New, drawStopIndicator = {})
-                                Text("Day ${state.days.size}개 · 학습 시작 →")
+                                Text("Day ${state.days.size}개")
                             }
                         }
-                        if (state.wrong > 0) TextButton(onClick = { navigate("wrong") }) { Text("오답 ${state.wrong}개 다시 보기 →", color = WrongInk) }
+                        if (state.wrong > 0) TextButton(onClick = { navigate("wrong") }) { Text("오답노트 ${state.wrong}개 →", color = WrongInk) }
                         Card(onClick = { navigate("grammar") }, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                             Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                                Text("영어 문법", style = MaterialTheme.typography.titleLarge)
-                                Text(if (grammarCount == null) "문법 데이터를 확인하세요 →" else "단원 ${grammarCount}개 · 학습 시작 →")
+                                Text("영문법", style = MaterialTheme.typography.titleLarge)
+                                Text(if (grammarCount == null) "문법 데이터를 확인하세요 →" else "단원 ${grammarCount}개")
                                 if (grammarDue > 0) Text("오늘의 복습 ${grammarDue}개", color = WrongInk)
                             }
                         }
                         Card(onClick = {}, enabled = false, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(disabledContainerColor = New)) {
                             Text("중국어 (HSK) — 준비 중", Modifier.padding(20.dp))
                         }
-                        if (debugAvailable) TextButton(onClick = { navigate("debug") }) { Text("LLM 검증") }
+                        if (debugAvailable) TextButton(onClick = { navigate("debug") }) { Text("개발자 검증") }
                     }
                     WordsPage.DAYS -> Column {
                         TextButton(onClick = onBack) { Text("← 홈") }

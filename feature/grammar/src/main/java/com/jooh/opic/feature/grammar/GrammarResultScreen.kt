@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun GrammarResultScreen(state: GrammarUiState, onRetry: () -> Unit, onList: () -> Unit) {
+fun GrammarResultScreen(state: GrammarUiState, onRetry: () -> Unit, onList: () -> Unit, onWrite: () -> Unit) {
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Column(Modifier.weight(1f).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(12.dp)) {
             Text("${state.unit?.title} 결과", style = MaterialTheme.typography.headlineSmall)
@@ -25,7 +25,7 @@ fun GrammarResultScreen(state: GrammarUiState, onRetry: () -> Unit, onList: () -
                     }
                 }
             }
-            OutlinedButton(onClick = {}, enabled = false, modifier = Modifier.fillMaxWidth()) { Text("직접 써 보기 — 다음 업데이트") }
+            OutlinedButton(onClick = onWrite, modifier = Modifier.fillMaxWidth()) { Text("직접 써 보기") }
         }
         Button(onClick = onRetry, modifier = Modifier.fillMaxWidth()) { Text("다시 풀기") }
         TextButton(onClick = onList, modifier = Modifier.fillMaxWidth()) { Text("단원 목록") }

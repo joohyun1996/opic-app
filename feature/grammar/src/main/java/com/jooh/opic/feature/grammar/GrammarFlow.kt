@@ -5,30 +5,59 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.jooh.opic.core.llm.HfTokenStore
+import com.jooh.opic.core.llm.LlmEngineState
+import com.jooh.opic.core.llm.OnDeviceLlmEngine
 
 @Composable
-fun GrammarFlow(onBack: () -> Unit) {
-    val context = LocalContext.current
-    val model: GrammarViewModel = viewModel(factory = remember(context) {
-        val result = try {
-            GrammarCatalog.parse(context.assets.open("grammar.json").bufferedReader().use { it.readText() })
-        } catch (_: Exception) { GrammarLoadResult.Failed }
-        GrammarViewModelFactory(result)
+fun GrammarFlow(
+    catalog: GrammarLoadResult?,
+    engine: OnDeviceLlmEngine,
+    tokenStore: HfTokenStore,
+    modelDownloaded: () -> Boolean,
+    modelBytes: Long,
+    onBack: () -> Unit,
+) {
+    if (catalog == null) {
+        Text("문법 데이터를 불러오는 중…")
+        return
+    }
+    val model: GrammarViewModel = viewModel(factory = remember(catalog) { GrammarViewModelFactory(catalog) })
+    val writing: GrammarWritingViewModel = viewModel(factory = remember(engine, tokenStore) {
+        GrammarWritingViewModel.Factory(engine, tokenStore, modelDownloaded)
     })
     val state by model.state.collectAsState()
-    val back = { if (!model.back()) onBack() }
+    val writingState by writing.state.collectAsState()
+    val engineState by engine.state.collectAsState()
+    DisposableEffect(writing) { onDispose { writing.cancel() } }
+    LaunchedEffect(Unit) { writing.prepareExisting() }
+    val back = {
+        if (writingState.active) writing.exit()
+        else if (!model.back()) onBack()
+    }
     BackHandler(onBack = back)
     Column(Modifier.fillMaxSize().padding(vertical = 8.dp)) {
-        when (val catalog = state.catalog) {
+        if (writingState.active) {
+            when (writingState.page) {
+                WritingPage.PREPARATION -> GrammarPreparationScreen(engineState, writingState.hasToken, modelDownloaded(), modelBytes,
+                    writing::saveToken, writing::download, writing::openEditor, back)
+                WritingPage.EDITOR -> GrammarWritingScreen(writingState, back, writing::setInput,
+                    writing::startCorrection, writing::cancel, writing::retry, writing::again,
+                    onList = { writing.exit(); model.list() })
+            }
+            return@Column
+        }
+        when (val loaded = state.catalog) {
             GrammarLoadResult.Failed -> Text("문법 데이터를 불러오지 못했습니다")
             is GrammarLoadResult.Loaded -> when (state.page) {
-                GrammarPage.LIST -> GrammarUnitListScreen(catalog.book.units, onBack, model::openUnit)
+                GrammarPage.LIST -> GrammarUnitListScreen(loaded.book.units,
+                    if (engineState is LlmEngineState.Ready) "준비됨" else "준비 필요", onBack, model::openUnit)
                 GrammarPage.EXPLANATION -> state.unit?.let { GrammarExplanationScreen(it, back, model::start) }
                 GrammarPage.EXERCISE -> GrammarExerciseScreen(state, back, model::setInput, model::select, model::submit, model::next)
-                GrammarPage.RESULT -> GrammarResultScreen(state, model::start, model::list)
+                GrammarPage.RESULT -> GrammarResultScreen(state, model::start, model::list,
+                    onWrite = { state.unit?.let(writing::enter) })
             }
         }
     }

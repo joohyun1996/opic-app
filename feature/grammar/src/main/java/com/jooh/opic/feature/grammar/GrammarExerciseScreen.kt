@@ -30,8 +30,8 @@ fun GrammarExerciseScreen(
                 exercise.choices.orEmpty().forEachIndexed { index, choice ->
                     OutlinedButton(onClick = { onSelect(index) }, enabled = !state.attempt.isFinished(),
                         modifier = Modifier.fillMaxWidth(),
-                        colors = if (state.selected == index) ButtonDefaults.outlinedButtonColors(containerColor = MaterialTheme.colorScheme.primaryContainer)
-                            else ButtonDefaults.outlinedButtonColors()) { Text(choice) }
+                        colors = if (state.selected == index) ButtonDefaults.outlinedButtonColors(containerColor = Color(0xFFF1EFE8), contentColor = Color(0xFF1A1A18))
+                            else ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF1A1A18))) { Text(choice) }
                 }
             } else {
                 OutlinedTextField(value = state.input, onValueChange = onInput, enabled = !state.attempt.isFinished(),

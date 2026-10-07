@@ -23,6 +23,7 @@ android {
 }
 dependencies {
     implementation(project(":feature:words"))
+    implementation(project(":feature:grammar"))
     implementation(project(":core:common"))
     implementation(project(":core:model"))
     implementation(project(":core:database"))
@@ -33,6 +34,7 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.room.runtime)
 }
 

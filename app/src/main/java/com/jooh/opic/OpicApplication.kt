@@ -15,11 +15,15 @@ import com.jooh.opic.core.llm.HttpModelStore
 import com.jooh.opic.core.llm.ModelCatalog
 import com.jooh.opic.core.llm.OnDeviceLlmEngine
 import com.jooh.opic.core.llm.createOnDeviceLlmEngine
+import com.jooh.opic.feature.grammar.GrammarCatalog
+import com.jooh.opic.feature.grammar.GrammarLoadResult
 
 class OpicApplication : Application() {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private val mutableImport = MutableStateFlow<ImportResult?>(null)
     val importResult = mutableImport.asStateFlow()
+    private val mutableGrammar = MutableStateFlow<GrammarLoadResult?>(null)
+    val grammarResult = mutableGrammar.asStateFlow()
 
     override fun onCreate() {
         super.onCreate()
@@ -32,6 +36,11 @@ class OpicApplication : Application() {
             }
             mutableImport.value = result
             Log.i("WordImport", "$result elapsedMs=${SystemClock.elapsedRealtime() - start}")
+        }
+        scope.launch {
+            mutableGrammar.value = try {
+                GrammarCatalog.parse(assets.open("grammar.json").bufferedReader().use { it.readText() })
+            } catch (_: Exception) { GrammarLoadResult.Failed }
         }
     }
 

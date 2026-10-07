@@ -9,10 +9,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun GrammarUnitListScreen(units: List<GrammarUnit>, aiStatus: String, onBack: () -> Unit, onUnit: (GrammarUnit) -> Unit) {
+fun GrammarUnitListScreen(
+    units: List<GrammarUnit>, aiStatus: String, onBack: () -> Unit, onUnit: (GrammarUnit) -> Unit,
+    dueCount: Int = 0, onReview: () -> Unit = {},
+) {
     Column {
         TextButton(onClick = onBack) { Text("← 홈") }
         Text("영어 문법", style = MaterialTheme.typography.headlineSmall)
+        if (dueCount > 0) Button(onClick = onReview, modifier = Modifier.fillMaxWidth().padding(top = 8.dp)) { Text("오늘의 복습 ${dueCount}개 →") }
+        else Text("오늘 복습 끝!", modifier = Modifier.padding(top = 8.dp), style = MaterialTheme.typography.bodyMedium)
         Text("AI 교정: $aiStatus", modifier = Modifier.padding(top = 8.dp))
         Text("${units.size}개 단원", modifier = Modifier.padding(vertical = 8.dp))
         LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp), contentPadding = PaddingValues(vertical = 12.dp)) {

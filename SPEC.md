@@ -20,6 +20,7 @@
 | 2026-10-07 | v0.11.0 | 문법 탭 1: 단원 1~3 콘텐츠, 단원 목록·설명·연습(두 번 시도)·결과 (TASK 10) |
 | 2026-10-07 | v0.12.0 | 문법 탭 2: 직접 써 보기 + Gemma 교정, AI 교정 준비 화면, 내비게이션 `:app`으로 이동 (TASK 11) |
 | 2026-10-07 | v0.13.0 | 문법 단원 4~10 추가 (grammar.json dataVersion 2, 100문제), 다시 시도 취소 경쟁 상태 수정 (TASK 12) |
+| 2026-10-07 | v0.14.0 | 문법 틀린 문제 간격 복습, **Room DB v1 → v2** (`grammar_reviews` 추가) (TASK 13) |
 
 ## 인증
 ### POST /api/auth/login
@@ -217,6 +218,14 @@
 - `exports/grammar.json` dataVersion 1 → 2: 단원 10개, 문제 100개 — 4 현재완료 vs 과거, 5 비교급·최상급, 6 의문문, 7 관사, 8 전치사, 9 수 일치, 10 연결어
 - 단원 4~10 콘텐츠는 Claude 작성·자체 검토 (GPT 교차 검토 대기)
 - 교정 경쟁 상태 수정: 다시 시도 결과는 그 칸이 같은 실패일 때만 교체, 취소 뒤 늦게 끝난 결과는 버림
+
+### 틀린 문제 간격 복습 (2026-10-07, TASK 13)
+- 복습 대상: 단원 연습에서 2차 정답 또는 끝내 오답 (1차 정답 제외)
+- 일정 (`core:common/Review.kt`): 1단계 다음 날 → 2단계 3일 뒤 → 3단계 7일 뒤 → 3단계 1차 정답이면 졸업(삭제). 2차 정답·오답이면 1단계·다음 날
+- 복습 세션: 오늘까지 밀린 문제 중 오래된 순 최대 10개, 섞어서. 홈 문법 카드·단원 목록에 "오늘의 복습 N개" / "오늘 복습 끝!"
+- **DB v2**: `grammar_reviews(exerciseId PK, unitId, stage, dueEpochDay, wrongCount, lastStudiedAt)` 추가. `MIGRATION_1_2`는 CREATE TABLE 한 문장, 기존 테이블 변경 없음
+  - DAO: `GrammarReviewDao.due(today)`, `recordPractice(exerciseId, unitId, today, now)`, `recordReview(exerciseId, firstTryCorrect, today, now)`
+- grammar.json에서 빠진 문제의 기록은 남기고 목록에서만 건너뜀
 
 ## 섀도잉
 (기능 추가 시 여기에 작성)

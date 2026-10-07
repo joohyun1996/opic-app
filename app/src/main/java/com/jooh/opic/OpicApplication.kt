@@ -10,6 +10,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import androidx.room.Room
 import com.jooh.opic.core.database.OpicDatabase
+import com.jooh.opic.core.database.ALL_MIGRATIONS
+import com.jooh.opic.feature.grammar.GrammarReviewStore
+import com.jooh.opic.feature.grammar.RoomGrammarReviewStore
 import com.jooh.opic.core.llm.HfTokenStore
 import com.jooh.opic.core.llm.HttpModelStore
 import com.jooh.opic.core.llm.ModelCatalog
@@ -45,8 +48,9 @@ class OpicApplication : Application() {
     }
 
     val database: OpicDatabase by lazy {
-        Room.databaseBuilder(this, OpicDatabase::class.java, "opic.db").build()
+        Room.databaseBuilder(this, OpicDatabase::class.java, "opic.db").addMigrations(*ALL_MIGRATIONS).build()
     }
+    val grammarReviews: GrammarReviewStore by lazy { RoomGrammarReviewStore(database.grammarReviewDao()) }
     val hfTokenStore: HfTokenStore by lazy { HfTokenStore(this) }
     val llmEngine: OnDeviceLlmEngine by lazy {
         createOnDeviceLlmEngine(

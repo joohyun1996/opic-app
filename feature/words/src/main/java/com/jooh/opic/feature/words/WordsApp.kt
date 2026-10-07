@@ -30,6 +30,7 @@ fun WordsApp(
     page: WordsPage,
     grammarCount: Int?,
     debugAvailable: Boolean,
+    grammarDue: Int = 0,
     day: Int = 0,
     mode: String? = null,
     navigate: (String) -> Unit,
@@ -67,6 +68,7 @@ fun WordsApp(
                             Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                                 Text("영어 문법", style = MaterialTheme.typography.titleLarge)
                                 Text(if (grammarCount == null) "문법 데이터를 확인하세요 →" else "단원 ${grammarCount}개 · 학습 시작 →")
+                                if (grammarDue > 0) Text("오늘의 복습 ${grammarDue}개", color = WrongInk)
                             }
                         }
                         Card(onClick = {}, enabled = false, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(disabledContainerColor = New)) {

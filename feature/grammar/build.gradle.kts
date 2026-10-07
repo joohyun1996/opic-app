@@ -18,6 +18,7 @@ android {
 dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:llm"))
+    implementation(project(":core:database"))
     implementation(libs.kotlinx.coroutines.android)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
@@ -26,4 +27,5 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.kotlinx.serialization.json)
     testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
 }

@@ -17,6 +17,7 @@ android {
 }
 tasks.withType<Test>().configureEach {
     systemProperty("words.file", rootProject.file("exports/words.json").absolutePath)
+    systemProperty("schema.v1", file("schemas/com.jooh.opic.core.database.OpicDatabase/1.json").absolutePath)
 }
 ksp { arg("room.schemaLocation", "$projectDir/schemas") }
 dependencies {

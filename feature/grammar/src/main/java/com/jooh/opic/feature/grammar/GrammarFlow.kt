@@ -19,12 +19,13 @@ fun GrammarFlow(
     modelDownloaded: () -> Boolean,
     modelBytes: Long,
     onBack: () -> Unit,
+    reviews: GrammarReviewStore? = null,
 ) {
     if (catalog == null) {
         Text("문법 데이터를 불러오는 중…")
         return
     }
-    val model: GrammarViewModel = viewModel(factory = remember(catalog) { GrammarViewModelFactory(catalog) })
+    val model: GrammarViewModel = viewModel(factory = remember(catalog) { GrammarViewModelFactory(catalog, reviews) })
     val writing: GrammarWritingViewModel = viewModel(factory = remember(engine, tokenStore) {
         GrammarWritingViewModel.Factory(engine, tokenStore, modelDownloaded)
     })
@@ -32,7 +33,7 @@ fun GrammarFlow(
     val writingState by writing.state.collectAsState()
     val engineState by engine.state.collectAsState()
     DisposableEffect(writing) { onDispose { writing.cancel() } }
-    LaunchedEffect(Unit) { writing.prepareExisting() }
+    LaunchedEffect(Unit) { writing.prepareExisting(); model.refreshDue() }
     val back = {
         if (writingState.active) writing.exit()
         else if (!model.back()) onBack()
@@ -53,17 +54,18 @@ fun GrammarFlow(
             GrammarLoadResult.Failed -> Text("문법 데이터를 불러오지 못했습니다")
             is GrammarLoadResult.Loaded -> when (state.page) {
                 GrammarPage.LIST -> GrammarUnitListScreen(loaded.book.units,
-                    if (engineState is LlmEngineState.Ready) "준비됨" else "준비 필요", onBack, model::openUnit)
+                    if (engineState is LlmEngineState.Ready) "준비됨" else "준비 필요", onBack, model::openUnit,
+                    dueCount = state.dueCount, onReview = model::startReview)
                 GrammarPage.EXPLANATION -> state.unit?.let { GrammarExplanationScreen(it, back, model::start) }
                 GrammarPage.EXERCISE -> GrammarExerciseScreen(state, back, model::setInput, model::select, model::submit, model::next)
-                GrammarPage.RESULT -> GrammarResultScreen(state, model::start, model::list,
+                GrammarPage.RESULT -> GrammarResultScreen(state, if (state.reviewMode) model::startReview else model::start, model::list,
                     onWrite = { state.unit?.let(writing::enter) })
             }
         }
     }
 }
 
-private class GrammarViewModelFactory(private val result: GrammarLoadResult) : androidx.lifecycle.ViewModelProvider.Factory {
+private class GrammarViewModelFactory(private val result: GrammarLoadResult, private val reviews: GrammarReviewStore?) : androidx.lifecycle.ViewModelProvider.Factory {
     @Suppress("UNCHECKED_CAST")
-    override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T = GrammarViewModel(result) as T
+    override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T = GrammarViewModel(result, reviews) as T
 }

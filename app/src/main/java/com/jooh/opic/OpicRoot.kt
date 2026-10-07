@@ -16,6 +16,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.jooh.opic.core.llm.ModelCatalog
 import com.jooh.opic.feature.grammar.GrammarFlow
+import com.jooh.opic.feature.grammar.dueExercises
 import com.jooh.opic.feature.grammar.GrammarLoadResult
 import com.jooh.opic.feature.words.Speaker
 import com.jooh.opic.feature.words.WordsApp
@@ -43,8 +44,16 @@ fun OpicRoot(app: OpicApplication) {
     val back: () -> Unit = { nav.safeBack() }
     WordsTheme {
         NavHost(navController = nav, startDestination = "home") {
-            composable("home") { WordsApp(app.database, importResult, speaker, WordsPage.HOME, grammarCount, debug != null,
-                navigate = navigate, onBack = back) }
+            composable("home") {
+                // 홈에 들어올 때마다 오늘의 복습 수를 다시 센다
+                var grammarDue by remember { mutableStateOf(0) }
+                LaunchedEffect(grammarResult) {
+                    val book = (grammarResult as? GrammarLoadResult.Loaded)?.book ?: return@LaunchedEffect
+                    grammarDue = runCatching { app.grammarReviews.dueExercises(book).size }.getOrDefault(0)
+                }
+                WordsApp(app.database, importResult, speaker, WordsPage.HOME, grammarCount, debug != null,
+                    grammarDue = grammarDue, navigate = navigate, onBack = back)
+            }
             composable("days") { WordsApp(app.database, importResult, speaker, WordsPage.DAYS, grammarCount, debug != null,
                 navigate = navigate, onBack = back) }
             composable("day/{day}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
@@ -65,7 +74,7 @@ fun OpicRoot(app: OpicApplication) {
                 Box(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.TopCenter) {
                     Column(Modifier.widthIn(max = 430.dp).fillMaxSize().padding(horizontal = 16.dp)) {
                         GrammarFlow(grammarResult, app.llmEngine, app.hfTokenStore, { ModelCatalog.isDownloaded(app) },
-                            ModelCatalog.config(app).models.first().expectedBytes, back)
+                            ModelCatalog.config(app).models.first().expectedBytes, back, reviews = app.grammarReviews)
                     }
                 }
             }

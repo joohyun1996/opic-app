@@ -5,3 +5,4 @@ include(":app", ":core:common", ":core:model", ":core:database")
 include(":core:llm")
 
 include(":feature:words")
+include(":feature:grammar")

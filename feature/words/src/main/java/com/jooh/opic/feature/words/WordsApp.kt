@@ -23,6 +23,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.jooh.opic.core.database.ImportResult
 import com.jooh.opic.core.database.OpicDatabase
+import com.jooh.opic.feature.grammar.GrammarCatalog
+import com.jooh.opic.feature.grammar.GrammarFlow
+import com.jooh.opic.feature.grammar.GrammarLoadResult
 
 
 @Composable
@@ -32,6 +35,12 @@ fun WordsApp(database: OpicDatabase, importResult: ImportResult?, debugContent: 
     LaunchedEffect(importResult) { model.refresh() }
     val nav = rememberNavController()
     val context = LocalContext.current
+    val grammarCount = remember(context) {
+        try {
+            val raw = context.assets.open("grammar.json").bufferedReader().use { it.readText() }
+            (GrammarCatalog.parse(raw) as? GrammarLoadResult.Loaded)?.book?.units?.size
+        } catch (_: Exception) { null }
+    }
     val speaker = remember { Speaker(context) }
     DisposableEffect(speaker) { onDispose { speaker.shutdown() } }
     val ttsAvailable by speaker.available.collectAsState()
@@ -70,6 +79,13 @@ fun WordsApp(database: OpicDatabase, importResult: ImportResult?, debugContent: 
                                     }
                                 }
                                 if (state.wrong > 0) TextButton(onClick = { nav.navigate("wrong") }) { Text("오답 ${state.wrong}개 다시 보기 →", color = WrongInk) }
+                                Card(onClick = { nav.navigate("grammar") }, modifier = Modifier.fillMaxWidth(),
+                                    colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                                    Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                                        Text("영어 문법", style = MaterialTheme.typography.titleLarge)
+                                        Text(if (grammarCount == null) "문법 데이터를 확인하세요 →" else "단원 ${grammarCount}개 · 학습 시작 →")
+                                    }
+                                }
                                 Card(onClick = {}, enabled = false, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(disabledContainerColor = New)) {
                                     Text("중국어 (HSK) — 준비 중", Modifier.padding(20.dp))
                                 }
@@ -119,6 +135,7 @@ fun WordsApp(database: OpicDatabase, importResult: ImportResult?, debugContent: 
                                 onRecorded = { model.refresh() }, onBack = { nav.safeBack() })
                         }
                         if (debugContent != null) composable("debug") { debugContent { nav.safeBack() } }
+                        composable("grammar") { GrammarFlow(onBack = { nav.safeBack() }) }
                     }
                 }
             }

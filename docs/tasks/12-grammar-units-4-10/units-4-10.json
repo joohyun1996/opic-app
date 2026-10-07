@@ -1,0 +1,248 @@
+[
+  {
+    "id": "present-perfect", "order": 4, "title": "현재완료 vs 과거", "opicUse": "\"~해 본 적 있어요?\" 경험 질문, 지금까지 계속된 일", "errorType": "tense",
+    "explanation": {
+      "summary": "지금과 연결된 경험·계속·결과는 have/has + 과거분사, 끝난 구체적 시점은 과거형을 쓴다.",
+      "points": [
+        "경험: I have been to Japan. / Have you ever tried kimchi stew? — ever, never, before와 자주 쓴다",
+        "계속: I have lived here for five years. / since 2020 — for + 기간, since + 시작 시점",
+        "구체적 과거 시점(yesterday, last year, ~ ago, in 2019, when ~)이 있으면 현재완료가 아니라 과거형",
+        "When으로 묻는 질문도 과거형: When did you start? (When have you started? ✗)",
+        "OPIc 팁: \"Have you ever ~?\"에 Yes, I have. 로 답한 뒤 자세한 이야기는 과거형으로 이어 간다"
+      ],
+      "examples": [
+        { "en": "I have been to Jeju three times.", "ko": "나는 제주에 세 번 가 봤다." },
+        { "en": "I have worked at this company since 2021.", "ko": "나는 2021년부터 이 회사에서 일하고 있다." },
+        { "en": "I went there last spring with my friends.", "ko": "지난봄에 친구들과 그곳에 갔다." }
+      ],
+      "commonMistakes": [
+        { "wrong": "I have visited Busan last year.", "right": "I visited Busan last year.", "note": "구체적 과거 시점이 있으면 과거형" },
+        { "wrong": "I have lived here since three years.", "right": "I have lived here for three years.", "note": "기간은 for, 시작 시점은 since" }
+      ]
+    },
+    "exercises": [
+      { "id": "u4-01", "kind": "blank", "prompt": "현재완료로 괄호 안 내용을 알맞은 형태로 쓰세요.", "sentence": "I ___ (never / be) to Japan.", "answers": ["have never been"], "hint": "지금까지의 경험이에요. never는 have와 과거분사 사이에 와요.", "explanation": "경험은 have + 과거분사, never는 그 사이: have never been." },
+      { "id": "u4-02", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I have visited Busan last year.", "answers": ["I visited Busan last year."], "hint": "last year는 끝난 구체적 시점이에요.", "explanation": "구체적 과거 시점(last year)과는 현재완료를 쓰지 않고 과거형을 쓴다." },
+      { "id": "u4-03", "kind": "choice", "prompt": "지금도 여기 살고 있습니다. 알맞은 것을 고르세요.", "sentence": "I ___ here since 2020.", "choices": ["live", "lived", "have lived"], "answer": 2, "hint": "과거에 시작해서 지금까지 이어지는 일이에요.", "explanation": "since + 시작 시점으로 지금까지 계속된 일은 현재완료: have lived." },
+      { "id": "u4-04", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I have lived in this apartment since three years.", "answers": ["I have lived in this apartment for three years.", "I've lived in this apartment for three years."], "hint": "three years는 시작 시점일까요, 기간일까요?", "explanation": "기간 앞에는 for, 시작 시점 앞에는 since." },
+      { "id": "u4-05", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "___ you ever tried Indian food?", "choices": ["Did", "Have", "Do"], "answer": 1, "hint": "ever와 과거분사 tried가 함께 있어요.", "explanation": "경험을 묻는 현재완료 의문문: Have + 주어 + 과거분사." },
+      { "id": "u4-06", "kind": "blank", "prompt": "그녀는 지금도 그 은행에서 일합니다. 현재완료로 쓰세요.", "sentence": "She ___ (work) at the bank for ten years.", "answers": ["has worked", "has been working"], "hint": "주어가 3인칭 단수예요.", "explanation": "지금까지 계속된 일, 3인칭 단수: has worked (has been working도 가능)." },
+      { "id": "u4-07", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "When have you started learning English?", "answers": ["When did you start learning English?"], "hint": "when은 구체적인 시점을 묻는 말이에요.", "explanation": "when으로 구체적 시점을 물을 때는 과거형: When did you start ~?" },
+      { "id": "u4-08", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "We ___ the new café two days ago.", "choices": ["have tried", "tried", "have try"], "answer": 1, "hint": "two days ago를 보세요.", "explanation": "~ ago는 구체적 과거 시점이라 과거형: tried." },
+      { "id": "u4-09", "kind": "blank", "prompt": "결과가 지금까지 남아 있습니다. 현재완료로 쓰세요.", "sentence": "I ___ (lose) my phone, so I can't call you now.", "answers": ["have lost"], "hint": "잃어버린 결과로 지금 전화를 못 해요. lose는 불규칙 동사예요.", "explanation": "과거의 일이 지금 결과로 남아 있으면 현재완료: have lost." },
+      { "id": "u4-10", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I have seen that movie two weeks ago.", "answers": ["I saw that movie two weeks ago."], "hint": "two weeks ago를 보세요. see는 불규칙 동사예요.", "explanation": "~ ago와는 과거형: saw." }
+    ],
+    "writingTask": { "promptKo": "가 본 곳 중 기억에 남는 곳을 3문장 이상 써 보세요. 경험(현재완료)으로 시작하고, 언제 무엇을 했는지는 과거형으로 이어 가세요.", "promptEn": "Tell me about a memorable place you have visited. When did you go there and what did you do?", "minSentences": 3 }
+  },
+  {
+    "id": "comparatives", "order": 5, "title": "비교급·최상급", "opicUse": "예전과 지금, 두 장소·계절 비교", "errorType": "word_choice",
+    "explanation": {
+      "summary": "짧은 형용사는 -er/-est, 긴 형용사는 more/most. 비교급 뒤에는 than, 최상급 앞에는 the.",
+      "points": [
+        "1음절·-y로 끝나는 2음절: big-bigger-biggest, busy-busier-busiest / 그 밖의 2음절 이상: more/most convenient",
+        "불규칙: good-better-best, bad-worse-worst, far-farther-farthest, many/much-more-most",
+        "비교급 강조는 much, a lot, far (very better ✗)",
+        "같은 정도: as + 원급 + as (as tall as)",
+        "비교하는 두 대상의 형태를 맞춘다: Living in a city is easier than living in the countryside."
+      ],
+      "examples": [
+        { "en": "My new apartment is bigger than my old one.", "ko": "새 아파트가 예전 집보다 크다." },
+        { "en": "Autumn is the best season in Korea.", "ko": "가을은 한국에서 가장 좋은 계절이다." },
+        { "en": "The subway is much faster than the bus.", "ko": "지하철이 버스보다 훨씬 빠르다." }
+      ],
+      "commonMistakes": [
+        { "wrong": "This is more cheap.", "right": "This is cheaper.", "note": "1음절은 -er" },
+        { "wrong": "It's very better.", "right": "It's much better.", "note": "비교급 강조는 much" }
+      ]
+    },
+    "exercises": [
+      { "id": "u5-01", "kind": "blank", "prompt": "괄호 안 형용사를 알맞은 형태로 쓰세요.", "sentence": "My new apartment is ___ (big) than my old one.", "answers": ["bigger"], "hint": "than이 있어요. 짧은 단어는 철자 변화에 주의하세요.", "explanation": "1음절 big의 비교급은 g를 한 번 더 쓰고 -er: bigger." },
+      { "id": "u5-02", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "This café is more cheap than that one.", "answers": ["This café is cheaper than that one.", "This cafe is cheaper than that one."], "hint": "cheap은 1음절이에요.", "explanation": "1음절 형용사는 more 대신 -er: cheaper." },
+      { "id": "u5-03", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "Seoul is ___ city in Korea.", "choices": ["the biggest", "bigger", "the most big"], "answer": 0, "hint": "여럿 가운데 하나를 고르는 최상급이에요.", "explanation": "최상급은 the + -est: the biggest." },
+      { "id": "u5-04", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "The weather today is very better than yesterday.", "answers": ["The weather today is much better than yesterday.", "The weather today is a lot better than yesterday.", "The weather today is far better than yesterday."], "hint": "very는 비교급 앞에서 강조할 수 없어요.", "explanation": "비교급 강조는 much / a lot / far." },
+      { "id": "u5-05", "kind": "blank", "prompt": "괄호 안 형용사를 알맞은 형태로 쓰세요.", "sentence": "This is the ___ (good) restaurant in my neighborhood.", "answers": ["best"], "hint": "the와 in my neighborhood가 있어요. good은 불규칙이에요.", "explanation": "good의 최상급은 best." },
+      { "id": "u5-06", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "My commute is ___ than it used to be.", "choices": ["more long", "longer", "longest"], "answer": 1, "hint": "than이 있고, long은 1음절이에요.", "explanation": "1음절 비교급: longer." },
+      { "id": "u5-07", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "Living in a city is more convenient than live in the countryside.", "answers": ["Living in a city is more convenient than living in the countryside."], "hint": "비교하는 두 대상의 형태가 같은지 보세요.", "explanation": "주어 Living과 맞춰 than 뒤도 living." },
+      { "id": "u5-08", "kind": "blank", "prompt": "괄호 안 형용사를 알맞은 형태로 쓰세요.", "sentence": "My sister is as ___ (tall) as my mom.", "answers": ["tall"], "hint": "as ~ as는 같은 정도예요.", "explanation": "as + 원급 + as: as tall as." },
+      { "id": "u5-09", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "Which season do you like ___?", "choices": ["the most", "more than", "much"], "answer": 0, "hint": "여러 계절 가운데 하나를 고르는 질문이에요.", "explanation": "여럿 중 가장 좋아하는 것: like ~ the most (best도 가능)." },
+      { "id": "u5-10", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "It was the most bad trip I have ever taken.", "answers": ["It was the worst trip I have ever taken.", "It was the worst trip I've ever taken."], "hint": "bad는 불규칙 변화예요.", "explanation": "bad의 최상급은 worst." }
+    ],
+    "writingTask": { "promptKo": "살았던 두 동네나 두 계절을 비교해 3문장 이상 써 보세요. 비교급과 최상급을 한 번 이상 쓰세요.", "promptEn": "Compare two places you have lived in, or two seasons. Which do you like better, and why?", "minSentences": 3 }
+  },
+  {
+    "id": "questions", "order": 6, "title": "의문문 만들기", "opicUse": "롤플레이에서 질문하기 (예약, 문의, 정보 묻기)", "errorType": "word_order",
+    "explanation": {
+      "summary": "의문문은 조동사(do/does/did, be, have, can)를 주어 앞에 둔다. 간접의문문은 평서문 순서로 돌아간다.",
+      "points": [
+        "be동사: Is the store open? / 일반동사: Do / Does / Did + 주어 + 동사원형",
+        "의문사 + 조동사 + 주어: Where do you live? / How much does it cost?",
+        "주어를 묻는 who / what은 do를 쓰지 않는다: Who called you? (Who did call ✗)",
+        "간접의문문: Can you tell me where the station is? / Do you know what time it starts? — 의문사 + 주어 + 동사",
+        "부정 의문문: Why didn't you call me?"
+      ],
+      "examples": [
+        { "en": "How much does a monthly membership cost?", "ko": "한 달 회원권은 얼마인가요?" },
+        { "en": "Do you have any classes for beginners?", "ko": "초보자 수업이 있나요?" },
+        { "en": "Could you tell me what time you close?", "ko": "몇 시에 문을 닫는지 알려 주시겠어요?" }
+      ],
+      "commonMistakes": [
+        { "wrong": "Where you live?", "right": "Where do you live?", "note": "일반동사 의문문에는 do" },
+        { "wrong": "Can you tell me where is the station?", "right": "Can you tell me where the station is?", "note": "간접의문문은 평서문 순서" }
+      ]
+    },
+    "exercises": [
+      { "id": "u6-01", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "Where you live?", "answers": ["Where do you live?"], "hint": "일반동사 live의 의문문에 빠진 것이 있어요.", "explanation": "일반동사 의문문: 의문사 + do + 주어 + 동사원형." },
+      { "id": "u6-02", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "___ your brother work on weekends?", "choices": ["Do", "Does", "Is"], "answer": 1, "hint": "주어 your brother는 3인칭 단수, work는 일반동사예요.", "explanation": "3인칭 단수 주어 + 일반동사 의문문: Does." },
+      { "id": "u6-03", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "Can you tell me where is the subway station?", "answers": ["Can you tell me where the subway station is?"], "hint": "문장 안에 들어간 질문의 어순을 보세요.", "explanation": "간접의문문은 의문사 + 주어 + 동사: where the subway station is." },
+      { "id": "u6-04", "kind": "blank", "prompt": "빈칸에 알맞은 단어를 쓰세요.", "sentence": "What time ___ the store usually open?", "answers": ["does"], "hint": "usually는 습관, 주어는 the store예요.", "explanation": "3인칭 단수 주어의 현재 의문문: does." },
+      { "id": "u6-05", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "Who ___ you about the party?", "choices": ["told", "did tell", "did told"], "answer": 0, "hint": "누가 말했는지, 주어를 묻고 있어요.", "explanation": "주어를 묻는 who는 do 없이 동사를 바로 쓴다: Who told you?" },
+      { "id": "u6-06", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "How much this jacket costs?", "answers": ["How much does this jacket cost?", "How much is this jacket?"], "hint": "일반동사 cost의 의문문이에요.", "explanation": "How much + does + 주어 + 동사원형 (How much is this jacket?도 가능)." },
+      { "id": "u6-07", "kind": "blank", "prompt": "빈칸에 알맞은 단어를 쓰세요.", "sentence": "___ you go to the concert last weekend?", "answers": ["Did"], "hint": "last weekend는 과거, go는 일반동사예요.", "explanation": "일반동사 과거 의문문: Did + 주어 + 동사원형." },
+      { "id": "u6-08", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "Do you know what time does the movie start?", "answers": ["Do you know what time the movie starts?"], "hint": "Do you know 뒤의 질문은 어순이 바뀌어요.", "explanation": "간접의문문에서는 does가 빠지고 평서문 어순: what time the movie starts." },
+      { "id": "u6-09", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "How long ___ you been learning English?", "choices": ["do", "have", "are"], "answer": 1, "hint": "been이 있어요.", "explanation": "현재완료진행 의문문: How long have you been ~ing?" },
+      { "id": "u6-10", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "Why you didn't call me yesterday?", "answers": ["Why didn't you call me yesterday?", "Why did you not call me yesterday?"], "hint": "의문사 뒤 조동사와 주어의 순서를 보세요.", "explanation": "부정 의문문: Why + didn't + 주어 + 동사원형." }
+    ],
+    "writingTask": { "promptKo": "새로 생긴 헬스장에 전화했다고 생각하고, 궁금한 점을 질문 3개 이상으로 써 보세요. (가격, 운영 시간, 수업 등)", "promptEn": "You are calling a new gym. Ask three or four questions about it.", "minSentences": 3 }
+  },
+  {
+    "id": "articles", "order": 7, "title": "관사 a / the / 없음", "opicUse": "모든 답변 — 물건·장소 묘사에서 특히 자주 틀림", "errorType": "article",
+    "explanation": {
+      "summary": "처음 말하는 셀 수 있는 단수에는 a/an, 서로 아는 특정한 것에는 the, 일반적인 복수·셀 수 없는 명사에는 관사를 쓰지 않는다.",
+      "points": [
+        "a/an: 셀 수 있는 단수를 처음 말할 때. 철자가 아니라 발음 기준 — an hour, a university",
+        "the: 앞에서 말한 것, 서로 아는 것, 하나뿐인 것, 최상급 (the best), 악기 연주 (play the guitar)",
+        "관사 없음: 일반적인 복수(Dogs are loyal.), 셀 수 없는 명사(I like music.), 식사(have lunch), 운동(play soccer)",
+        "셀 수 있는 단수 명사는 관사 없이 혼자 쓰지 않는다 (I have dog. ✗)"
+      ],
+      "examples": [
+        { "en": "I bought a new laptop last week. The laptop is very light.", "ko": "지난주에 새 노트북을 샀다. 그 노트북은 아주 가볍다." },
+        { "en": "I usually have lunch at 12:30.", "ko": "나는 보통 12시 30분에 점심을 먹는다." },
+        { "en": "My brother plays the piano.", "ko": "형은 피아노를 친다." }
+      ],
+      "commonMistakes": [
+        { "wrong": "I have dog.", "right": "I have a dog.", "note": "셀 수 있는 단수에는 관사" },
+        { "wrong": "We play the soccer.", "right": "We play soccer.", "note": "운동 이름에는 관사 없음" }
+      ]
+    },
+    "exercises": [
+      { "id": "u7-01", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I have dog.", "answers": ["I have a dog."], "hint": "dog는 셀 수 있는 단수예요.", "explanation": "셀 수 있는 단수 명사는 관사가 필요하다: a dog." },
+      { "id": "u7-02", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "I usually have ___ breakfast at 8.", "choices": ["a", "the", "(관사 없음)"], "answer": 2, "hint": "식사 이름 앞이에요.", "explanation": "식사 이름(breakfast, lunch, dinner) 앞에는 보통 관사를 쓰지 않는다." },
+      { "id": "u7-03", "kind": "blank", "prompt": "빈칸에 a 또는 an을 쓰세요.", "sentence": "I waited for ___ hour.", "answers": ["an"], "hint": "hour의 첫소리를 소리 내어 읽어 보세요.", "explanation": "hour는 h가 발음되지 않고 모음 소리로 시작해서 an." },
+      { "id": "u7-04", "kind": "fix", "prompt": "두 번째 문장의 관사를 고쳐 두 문장 전체를 다시 쓰세요.", "sentence": "I bought a new laptop. A laptop is really fast.", "answers": ["I bought a new laptop. The laptop is really fast."], "hint": "두 번째로 말할 때는 이미 아는 그 노트북이에요.", "explanation": "앞에서 말한 것을 다시 가리킬 때는 the." },
+      { "id": "u7-05", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "She plays ___ guitar in a band.", "choices": ["a", "the", "(관사 없음)"], "answer": 1, "hint": "악기를 연주한다고 말할 때예요.", "explanation": "play + the + 악기: play the guitar." },
+      { "id": "u7-06", "kind": "fix", "prompt": "개 전체에 대한 일반적인 이야기입니다. 틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "The dogs are loyal animals.", "answers": ["Dogs are loyal animals."], "hint": "특정한 개들이 아니라 개 전체예요.", "explanation": "일반적인 복수 명사에는 관사를 쓰지 않는다: Dogs are ~." },
+      { "id": "u7-07", "kind": "blank", "prompt": "빈칸에 a 또는 an을 쓰세요.", "sentence": "He is ___ university student.", "answers": ["a"], "hint": "university의 첫소리를 소리 내어 읽어 보세요.", "explanation": "university는 '유' 소리(자음 /j/)로 시작해서 a." },
+      { "id": "u7-08", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "I love ___ music, especially jazz.", "choices": ["a", "the", "(관사 없음)"], "answer": 2, "hint": "music은 셀 수 있는 명사일까요?", "explanation": "셀 수 없는 명사를 일반적으로 말할 때는 관사 없음." },
+      { "id": "u7-09", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "She is best student in our class.", "answers": ["She is the best student in our class."], "hint": "가장 ~한 것을 말할 때 필요한 것이 있어요.", "explanation": "최상급 앞에는 the: the best." },
+      { "id": "u7-10", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "We usually play the soccer after school.", "answers": ["We usually play soccer after school."], "hint": "운동 이름 앞이에요.", "explanation": "운동 이름에는 관사를 쓰지 않는다: play soccer." }
+    ],
+    "writingTask": { "promptKo": "내 방이나 집에 있는 물건 3가지 이상을 소개해 보세요. 처음 말할 때(a/an)와 다시 말할 때(the)를 구분해 보세요.", "promptEn": "Describe some things in your room. What are they, and what are they like?", "minSentences": 3 }
+  },
+  {
+    "id": "prepositions", "order": 8, "title": "전치사 (시간·장소·이동)", "opicUse": "모든 답변 — 하루 일과, 장소 묘사", "errorType": "preposition",
+    "explanation": {
+      "summary": "시간은 at(시각)·on(요일·날짜)·in(월·연도·하루의 때), 장소는 at(지점)·in(안)·on(표면).",
+      "points": [
+        "시간: at 7 a.m., at night / on Monday, on May 5 / in May, in 2020, in the morning",
+        "장소: at the station (지점) / in the room, in Seoul (공간 안) / on the wall, on the third floor (표면·층)",
+        "기간: for + 기간 (for three years), during + 명사 (during the vacation)",
+        "교통: by bus, by subway / 걸어서는 on foot",
+        "동사와 짝: listen to, wait for, arrive at(장소)/in(도시), interested in, depend on"
+      ],
+      "examples": [
+        { "en": "I get up at 6:30 on weekdays.", "ko": "평일에는 6시 30분에 일어난다." },
+        { "en": "My office is on the fifth floor.", "ko": "내 사무실은 5층에 있다." },
+        { "en": "I usually go to work by subway.", "ko": "나는 보통 지하철로 출근한다." }
+      ],
+      "commonMistakes": [
+        { "wrong": "I was born on 1995.", "right": "I was born in 1995.", "note": "연도는 in" },
+        { "wrong": "I arrived to the airport.", "right": "I arrived at the airport.", "note": "arrive at + 장소" }
+      ]
+    },
+    "exercises": [
+      { "id": "u8-01", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "I usually wake up ___ 7 a.m.", "choices": ["at", "on", "in"], "answer": 0, "hint": "정확한 시각 앞이에요.", "explanation": "시각 앞에는 at." },
+      { "id": "u8-02", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I was born on 1995.", "answers": ["I was born in 1995."], "hint": "1995는 날짜일까요, 연도일까요?", "explanation": "연도 앞에는 in." },
+      { "id": "u8-03", "kind": "blank", "prompt": "빈칸에 알맞은 전치사를 쓰세요.", "sentence": "We have a meeting ___ Monday morning.", "answers": ["on"], "hint": "특정한 요일이에요.", "explanation": "요일(특정 요일의 아침 포함) 앞에는 on." },
+      { "id": "u8-04", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I arrived to the airport late.", "answers": ["I arrived at the airport late."], "hint": "arrive와 함께 쓰는 전치사를 떠올려 보세요.", "explanation": "arrive at + 장소 (도시·나라는 in). arrive to는 쓰지 않는다." },
+      { "id": "u8-05", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "There is a picture ___ the wall.", "choices": ["in", "on", "at"], "answer": 1, "hint": "벽 표면에 붙어 있어요.", "explanation": "표면에 붙어 있으면 on." },
+      { "id": "u8-06", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I go to work by foot.", "answers": ["I go to work on foot.", "I walk to work."], "hint": "걸어서 갈 때만 다른 전치사를 써요.", "explanation": "교통수단은 by bus처럼 by, 걸어서는 on foot (I walk to work.도 가능)." },
+      { "id": "u8-07", "kind": "blank", "prompt": "빈칸에 알맞은 전치사를 쓰세요.", "sentence": "I usually listen ___ music on the subway.", "answers": ["to"], "hint": "listen과 짝을 이루는 전치사예요.", "explanation": "listen to + 대상." },
+      { "id": "u8-08", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "I lived in Canada ___ three years.", "choices": ["for", "during", "since"], "answer": 0, "hint": "three years는 기간이에요.", "explanation": "숫자로 된 기간 앞에는 for." },
+      { "id": "u8-09", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I'm interested about photography.", "answers": ["I'm interested in photography.", "I am interested in photography."], "hint": "interested와 짝을 이루는 전치사예요.", "explanation": "be interested in + 대상." },
+      { "id": "u8-10", "kind": "blank", "prompt": "빈칸에 알맞은 전치사를 쓰세요.", "sentence": "My office is ___ the third floor.", "answers": ["on"], "hint": "건물의 층을 말할 때예요.", "explanation": "층은 on: on the third floor." }
+    ],
+    "writingTask": { "promptKo": "평일 하루 일과를 3문장 이상 써 보세요. 언제(at/on/in), 어디서(at/in/on), 어떻게(by/on foot)를 넣어 보세요.", "promptEn": "Describe a typical weekday. What do you do, when, and where?", "minSentences": 3 }
+  },
+  {
+    "id": "agreement", "order": 9, "title": "주어-동사 수 일치", "opicUse": "모든 답변 — 가족·동네·사람 묘사", "errorType": "agreement",
+    "explanation": {
+      "summary": "진짜 주어를 찾아 단수면 단수 동사, 복수면 복수 동사를 쓴다.",
+      "points": [
+        "3인칭 단수 현재: He works / She has / It goes — 복수는 -s 없음",
+        "There is + 단수 / There are + 복수 — 뒤에 오는 명사에 맞춘다",
+        "every / each / everyone / someone / nobody는 단수 취급: Everyone loves it.",
+        "one of the + 복수 명사 → 동사는 단수: One of my friends lives in Canada.",
+        "주어가 길면 꾸밈말을 빼고 진짜 주어를 찾는다: The people in my office are kind.",
+        "셀 수 없는 명사(information, advice, furniture)는 단수, -s를 붙이지 않는다"
+      ],
+      "examples": [
+        { "en": "There are two parks near my house.", "ko": "우리 집 근처에 공원이 두 개 있다." },
+        { "en": "Everyone in my family likes hiking.", "ko": "우리 가족은 모두 등산을 좋아한다." },
+        { "en": "One of my coworkers speaks Spanish.", "ko": "동료 중 한 명은 스페인어를 한다." }
+      ],
+      "commonMistakes": [
+        { "wrong": "There is many cafés.", "right": "There are many cafés.", "note": "뒤의 복수 명사에 맞춰 are" },
+        { "wrong": "She give me advices.", "right": "She gives me advice.", "note": "3인칭 단수 -s, advice는 셀 수 없음" }
+      ]
+    },
+    "exercises": [
+      { "id": "u9-01", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "There is many cafés near my house.", "answers": ["There are many cafés near my house.", "There are many cafes near my house."], "hint": "뒤에 오는 명사가 단수인가요, 복수인가요?", "explanation": "There + be는 뒤의 명사에 맞춘다: many cafés → are." },
+      { "id": "u9-02", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "Everyone in my family ___ coffee.", "choices": ["love", "loves", "are loving"], "answer": 1, "hint": "everyone은 몇 명으로 취급할까요?", "explanation": "everyone은 단수 취급: loves." },
+      { "id": "u9-03", "kind": "blank", "prompt": "괄호 안 동사를 알맞은 형태로 쓰세요.", "sentence": "One of my friends ___ (live) in Canada.", "answers": ["lives"], "hint": "진짜 주어는 friends가 아니라 one이에요.", "explanation": "one of + 복수 명사는 단수 취급: lives." },
+      { "id": "u9-04", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "The people in my office is very friendly.", "answers": ["The people in my office are very friendly."], "hint": "in my office를 빼고 진짜 주어를 찾아보세요.", "explanation": "진짜 주어 people은 복수: are." },
+      { "id": "u9-05", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "Each room ___ its own bathroom.", "choices": ["have", "has", "having"], "answer": 1, "hint": "each는 하나하나를 가리켜요.", "explanation": "each + 단수 명사는 단수 동사: has." },
+      { "id": "u9-06", "kind": "fix", "prompt": "틀린 곳이 두 군데입니다. 고쳐서 문장 전체를 다시 쓰세요.", "sentence": "My teacher always give us good advices.", "answers": ["My teacher always gives us good advice."], "hint": "주어와 동사, 그리고 셀 수 없는 명사를 확인하세요.", "explanation": "3인칭 단수 주어라 gives, advice는 셀 수 없어 -s 없음." },
+      { "id": "u9-07", "kind": "blank", "prompt": "괄호 안 동사를 현재형으로 쓰세요.", "sentence": "There ___ (be) a big park near my school.", "answers": ["is"], "hint": "뒤에 오는 명사가 a big park예요.", "explanation": "단수 명사 앞에서 there is." },
+      { "id": "u9-08", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "My parents ___ in Busan.", "choices": ["lives", "live", "is living"], "answer": 1, "hint": "parents는 두 사람이에요.", "explanation": "복수 주어에는 -s 없는 live." },
+      { "id": "u9-09", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "The information you gave me were very helpful.", "answers": ["The information you gave me was very helpful."], "hint": "information은 셀 수 있는 명사일까요?", "explanation": "셀 수 없는 명사 information은 단수 취급: was." },
+      { "id": "u9-10", "kind": "blank", "prompt": "괄호 안 동사를 알맞은 과거형으로 쓰세요.", "sentence": "Math ___ (be) my favorite subject when I was in high school.", "answers": ["was"], "hint": "math는 -s로 끝나지 않아도 과목 하나예요. 이야기는 과거예요.", "explanation": "과목 이름은 단수 취급, 과거라 was." }
+    ],
+    "writingTask": { "promptKo": "가족이나 친한 친구들을 3문장 이상 소개해 보세요. 사람마다 하는 일과 좋아하는 것을 넣어 보세요.", "promptEn": "Tell me about your family members or close friends. What do they do, and what do they like?", "minSentences": 3 }
+  },
+  {
+    "id": "connectors", "order": 10, "title": "연결어로 답변 이어 가기", "opicUse": "답변을 길고 자연스럽게 (이유, 결과, 대조, 순서)", "errorType": "other",
+    "explanation": {
+      "summary": "이유·결과·대조·순서를 잇는 말을 쓰면 답변이 길고 논리적으로 들린다. 뒤에 문장이 오는지 명사가 오는지 구분한다.",
+      "points": [
+        "이유: because + 문장 / because of + 명사 (because of the rain)",
+        "결과: so + 문장 (It was late, so I took a taxi.)",
+        "대조: but / although(though) + 문장 / however는 문장 맨 앞 + 쉼표 / despite + 명사",
+        "although와 but을 한 문장에 같이 쓰지 않는다",
+        "순서: First, ... Then, ... After that, ... Finally, ...",
+        "추가: also, in addition"
+      ],
+      "examples": [
+        { "en": "I stayed home because it was raining.", "ko": "비가 와서 집에 있었다." },
+        { "en": "Although the hotel was small, it was very clean.", "ko": "호텔은 작았지만 아주 깨끗했다." },
+        { "en": "First, I checked in. After that, I went to the beach.", "ko": "먼저 체크인을 했다. 그다음 해변에 갔다." }
+      ],
+      "commonMistakes": [
+        { "wrong": "Although it was cold, but we went out.", "right": "Although it was cold, we went out.", "note": "although와 but은 함께 쓰지 않는다" },
+        { "wrong": "because of I was tired", "right": "because I was tired", "note": "문장 앞에는 because" }
+      ]
+    },
+    "exercises": [
+      { "id": "u10-01", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "I stayed home ___ it was raining.", "choices": ["because", "because of", "so"], "answer": 0, "hint": "빈칸 뒤에 문장(주어 + 동사)이 와요.", "explanation": "문장 앞에서 이유를 말할 때는 because." },
+      { "id": "u10-02", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I couldn't sleep because of I drank too much coffee.", "answers": ["I couldn't sleep because I drank too much coffee.", "I could not sleep because I drank too much coffee."], "hint": "뒤에 주어 + 동사가 있어요.", "explanation": "because of 뒤에는 명사, 문장 앞에는 because." },
+      { "id": "u10-03", "kind": "blank", "prompt": "빈칸에 알맞은 연결어를 쓰세요.", "sentence": "It was too expensive, ___ I didn't buy it.", "answers": ["so"], "hint": "앞 문장 때문에 생긴 결과를 잇고 있어요.", "explanation": "결과를 이을 때는 so." },
+      { "id": "u10-04", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "Although it was cold, but we went hiking.", "answers": ["Although it was cold, we went hiking.", "It was cold, but we went hiking.", "Though it was cold, we went hiking."], "hint": "대조를 나타내는 말이 두 번 들어 있어요.", "explanation": "although와 but은 한 문장에 함께 쓰지 않는다. 둘 중 하나만." },
+      { "id": "u10-05", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "The hotel was nice. ___, the staff weren't very friendly.", "choices": ["However", "Although", "Because"], "answer": 0, "hint": "문장 맨 앞에서 쉼표와 함께 대조를 나타내요.", "explanation": "문장 맨 앞에서 쉼표와 함께 대조를 나타낸다: However, ~" },
+      { "id": "u10-06", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "Despite it rained, the concert continued.", "answers": ["Despite the rain, the concert continued.", "Although it rained, the concert continued.", "Even though it rained, the concert continued.", "In spite of the rain, the concert continued."], "hint": "despite 뒤에 올 수 있는 형태를 생각해 보세요.", "explanation": "despite + 명사(the rain), 문장이 오면 although." },
+      { "id": "u10-07", "kind": "blank", "prompt": "순서를 잇는 말을 쓰세요.", "sentence": "First, I wash my face. ___, I make breakfast.", "answers": ["Then", "Next", "After that", "And then"], "hint": "첫 번째 다음에 하는 일이에요.", "explanation": "순서: First → Then / Next / After that." },
+      { "id": "u10-08", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "I like hiking. I ___ enjoy swimming.", "choices": ["also", "too", "however"], "answer": 0, "hint": "동사 앞에서 '또한'을 말하는 단어예요.", "explanation": "동사 앞에서는 also (too는 문장 끝: I enjoy swimming, too.)." },
+      { "id": "u10-09", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I was tired, so that I went to bed early.", "answers": ["I was tired, so I went to bed early."], "hint": "결과를 잇는 말에 필요 없는 단어가 붙어 있어요.", "explanation": "결과는 so만 쓴다. so that은 '~하도록(목적)'이라 뜻이 다르다." },
+      { "id": "u10-10", "kind": "blank", "prompt": "빈칸에 알맞은 말을 쓰세요.", "sentence": "___ the heavy traffic, we arrived on time.", "answers": ["Despite", "In spite of"], "hint": "빈칸 뒤가 명사구이고, 예상과 반대되는 결과예요.", "explanation": "명사 앞에서 대조: Despite / In spite of." }
+    ],
+    "writingTask": { "promptKo": "지난 주말에 한 일을 처음부터 끝까지 3문장 이상 써 보세요. 연결어(first, then, because, so, however 등)를 3개 이상 써 보세요.", "promptEn": "Tell me what you did last weekend, from beginning to end.", "minSentences": 3 }
+  }
+]

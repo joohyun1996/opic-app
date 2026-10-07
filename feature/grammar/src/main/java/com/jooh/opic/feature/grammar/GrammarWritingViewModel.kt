@@ -14,6 +14,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.currentCoroutineContext
+import kotlinx.coroutines.ensureActive
 
 enum class WritingPage { PREPARATION, EDITOR }
 
@@ -80,7 +82,10 @@ class GrammarWritingViewModel(
         mutableState.value = old.copy(isCorrecting = true, total = sentences.size, results = emptyList())
         job = viewModelScope.launch(Dispatchers.IO) {
             try {
-                coordinator.correct(sentences) { result -> mutableState.update { it.copy(results = it.results + result) } }
+                coordinator.correct(sentences) { result ->
+                    currentCoroutineContext().ensureActive() // 취소 뒤 늦게 끝난 결과는 붙이지 않는다
+                    mutableState.update { it.copy(results = it.results + result) }
+                }
             } catch (error: CancellationException) {
                 throw error
             } finally {
@@ -97,7 +102,11 @@ class GrammarWritingViewModel(
         job = viewModelScope.launch(Dispatchers.IO) {
             try {
                 val replacement = coordinator.correctOne(failed.sentence)
-                mutableState.update { state -> state.copy(results = state.results.toMutableList().also { it[index] = replacement }) }
+                // 취소 후 "다시 쓰기"로 목록이 바뀌었으면 늦게 끝난 결과를 버린다 (TASK 11 REVIEW S1).
+                mutableState.update { state ->
+                    if (state.results.getOrNull(index) != failed) state
+                    else state.copy(results = state.results.toMutableList().also { it[index] = replacement })
+                }
             } catch (error: CancellationException) {
                 throw error
             } finally {

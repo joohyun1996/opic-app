@@ -33,10 +33,10 @@ S23+에서 whisper.cpp로 영어 음성을 받아 적고, 모델별 속도·정�
 - WER: 소문자, 문장부호 제거, 단어 단위 편집 거리 / 대본 단어 수
 
 ## 수용 기준
-- [ ] AC1: `wordErrorRate` 테스트 (같음 0, 한 단어 치환·삽입·삭제, 문장부호·대소문자 무시)
-- [ ] AC2: `./gradlew test lint :app:assembleDebug :app:assembleRelease` 통과, release APK에 STT 검증 화면 없음
-- [ ] AC3: S23+에서 모델 3개 × 대본 3개 측정표 (처리 시간, RTF = 처리 시간 / 음성 길이, WER, 모델 로딩 시간, 최대 메모리)
-- [ ] AC4: 추천 모델과 이유를 HANDOFF에 적는다
+- [x] AC1: `wordErrorRate` 테스트 (같음 0, 한 단어 치환·삽입·삭제, 문장부호·대소문자 무시)
+- [x] AC2: `./gradlew test lint :app:assembleDebug :app:assembleRelease` 통과, release APK에 STT 검증 화면 없음
+- [x] AC3: S23+에서 모델 3개 × 대본 3개 측정표 (처리 시간, RTF = 처리 시간 / 음성 길이, WER, 모델 로딩 시간, 최대 메모리)
+- [x] AC4: 추천 모델과 이유를 HANDOFF에 적는다
 
 ## 성공 기준 (판단용)
 - 30초 음성을 **15초 이내**(RTF ≤ 0.5) + 한국인 억양 영어 **WER ≤ 15%**

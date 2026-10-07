@@ -1,6 +1,6 @@
 # OPIc · HSK 학습 앱 기능 명세서
 
-> 마지막 업데이트: 2026-10-06
+> 마지막 업데이트: 2026-10-07
 >
 > 2026-10-04 Kotlin 네이티브 앱 전환 (`docs/decisions/001-native-pivot.md`). 이 저장소에서 계속 작성한다. 웹앱 시절 명세(인증, `/api/*`, 웹 단어 탭)는 `web-final` 태그 기준이며 아래 "전환 기록" 이전 섹션에 남아 있다.
 
@@ -21,6 +21,7 @@
 | 2026-10-07 | v0.12.0 | 문법 탭 2: 직접 써 보기 + Gemma 교정, AI 교정 준비 화면, 내비게이션 `:app`으로 이동 (TASK 11) |
 | 2026-10-07 | v0.13.0 | 문법 단원 4~10 추가 (grammar.json dataVersion 2, 100문제), 다시 시도 취소 경쟁 상태 수정 (TASK 12) |
 | 2026-10-07 | v0.14.0 | 문법 틀린 문제 간격 복습, **Room DB v1 → v2** (`grammar_reviews` 추가) (TASK 13) |
+| 2026-10-07 | v0.15.0 | Whisper 기기 내 음성 인식 검증 → **small.en 채택** (debug 전용 `:core:stt`), `RECORD_AUDIO` 권한 (TASK 14). 홈 이름 변경(영단어·영문법·오답노트), LLM 검증 화면 삭제 |
 
 ## 인증
 ### POST /api/auth/login
@@ -188,6 +189,7 @@
 - 학습 카드 순서: seq 순 → **매번 섞음** (Day 학습·오답 학습, 시작과 "다시 하기" 때마다). ③·⑥ 목록은 seq 순 유지
 - 한→영 힌트: 항상 표시 → **"힌트 보기" 버튼을 눌러야 표시**, 다음 카드에서 다시 숨김
 - ③ Day 단어 목록: 상태 뱃지(신규/학습중/습득) 제거 → **오른쪽에 한국어 뜻** (습득 단어는 초록). ♪는 단어 바로 오른쪽. "습득 N/40" 줄 오른쪽에 "한국어 숨기기/보기" (앱 실행 중 유지)
+- 홈 이름 변경 (2026-10-07, 사용자 요청): "영어 (OPIc)" → **영단어**, "영어 문법" → **영문법**, "오답 N개 다시 보기" → **오답노트 N개**, 카드의 "· 학습 시작 →" 삭제. debug 홈 버튼 "LLM 검증" → "개발자 검증" (LLM 검증 화면 삭제, 문법 교정이 실제 Gemma 사용)
 
 ## 문법
 
@@ -231,7 +233,15 @@
 (기능 추가 시 여기에 작성)
 
 ## 스피킹
-(기능 추가 시 여기에 작성)
+
+### 음성 인식 검증 (2026-10-07, TASK 14)
+- 엔진: whisper.cpp v1.9.5 (`third_party/whisper.cpp`, CPU, arm64-v8a, fp16·dotprod), 모듈 `:core:stt` — 지금은 `debugImplementation`만 (사용자 기능 TASK에서 `implementation`으로)
+- **채택 모델: `ggml-small.en-q5_1.bin`** (190MB, `no_backup/stt/`, 버튼을 눌렀을 때만 받음)
+  - S23+ 20초 답변 약 8초 (RTF 0.37~0.47), 대본 낭독 WER 0~8.6%, 메모리 약 0.43GB, 로딩 0.3초
+  - large-v3(RTF 약 3.0)·large-v3-turbo(RTF 약 2.3)는 정확도가 같고 속도 기준(RTF ≤ 0.5) 미달
+- 오디오: `AudioRecord` 16kHz mono PCM16 (`VOICE_RECOGNITION`), 앱 내부 저장. 받아 적기 greedy, language "en", 4스레드
+- 채점용 `core:common/Wer.kt` `wordErrorRate(reference, hypothesis)`: 소문자, 문장부호 제거(단어 안 `'` 유지), 단어 단위 편집 거리 / 기준 단어 수
+- 측정표·남은 위험: `docs/tasks/14-whisper-spike/HANDOFF.md`
 
 ## 분석
 (기능 추가 시 여기에 작성)

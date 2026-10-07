@@ -1,0 +1,132 @@
+{
+  "dataVersion": 1,
+  "units": [
+    {
+      "id": "present-simple-continuous",
+      "order": 1,
+      "title": "현재 시제와 현재진행",
+      "opicUse": "집·동네·취미 묘사, 요즘 하는 일",
+      "errorType": "tense",
+      "explanation": {
+        "summary": "늘 하는 일·사실은 현재 시제, 지금(요즘) 진행 중인 일은 be + -ing를 쓴다.",
+        "points": [
+          "습관·반복·사실: I live in Seoul. / She works at a bank. — 주어가 3인칭 단수(he, she, it, 사람 한 명)면 동사에 -s",
+          "지금 이 순간·요즘 잠시 하는 일: I am reading a book now. / These days, I'm taking a yoga class.",
+          "상태동사(know, like, want, have(소유), need, believe)는 보통 진행형으로 쓰지 않는다: I know him. (I am knowing him. ✗)",
+          "부정·의문: don't / doesn't + 동사원형, Do / Does + 주어 + 동사원형"
+        ],
+        "examples": [
+          { "en": "I usually walk my dog in the evening.", "ko": "나는 보통 저녁에 개를 산책시킨다." },
+          { "en": "My neighborhood has a lot of cafés.", "ko": "우리 동네에는 카페가 많다." },
+          { "en": "These days, I'm learning how to cook Italian food.", "ko": "요즘 나는 이탈리아 요리를 배우고 있다." }
+        ],
+        "commonMistakes": [
+          { "wrong": "My brother work at a hospital.", "right": "My brother works at a hospital.", "note": "주어가 3인칭 단수면 -s" },
+          { "wrong": "I am liking coffee.", "right": "I like coffee.", "note": "like는 상태동사" }
+        ]
+      },
+      "exercises": [
+        { "id": "u1-01", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I am knowing a lot about my neighborhood.", "answers": ["I know a lot about my neighborhood."], "hint": "know는 상태를 나타내는 동사예요.", "explanation": "know는 상태동사라 진행형(am knowing)으로 쓰지 않고 현재 시제(know)를 쓴다." },
+        { "id": "u1-02", "kind": "blank", "prompt": "괄호 안 동사를 알맞은 형태로 쓰세요.", "sentence": "My sister usually ___ (go) jogging in the morning.", "answers": ["goes"], "hint": "usually는 습관이고, 주어는 3인칭 단수예요.", "explanation": "습관은 현재 시제, 주어 my sister는 3인칭 단수라 go → goes." },
+        { "id": "u1-03", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "Look outside! It ___ right now.", "choices": ["rains", "is raining", "rain"], "answer": 1, "hint": "right now는 지금 진행 중인 일이에요.", "explanation": "지금 진행 중인 일은 be + -ing: is raining." },
+        { "id": "u1-04", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "He don't like crowded places.", "answers": ["He doesn't like crowded places.", "He does not like crowded places."], "hint": "주어가 he일 때 부정형을 확인하세요.", "explanation": "3인칭 단수 주어의 부정은 doesn't + 동사원형." },
+        { "id": "u1-05", "kind": "blank", "prompt": "괄호 안 동사를 알맞은 형태로 쓰세요.", "sentence": "These days, I ___ (take) a cooking class on weekends.", "answers": ["am taking", "'m taking"], "hint": "these days는 요즘 잠시 하고 있는 일이에요.", "explanation": "요즘 일시적으로 하는 일은 현재진행: am taking." },
+        { "id": "u1-06", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "I ___ a small apartment near the park.", "choices": ["am having", "have", "having"], "answer": 1, "hint": "have가 '가지고 있다(소유)'의 뜻일 때를 생각해 보세요.", "explanation": "소유의 have는 상태동사라 진행형으로 쓰지 않는다: I have." },
+        { "id": "u1-07", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "My house have three bedrooms.", "answers": ["My house has three bedrooms."], "hint": "my house는 3인칭 단수예요.", "explanation": "3인칭 단수 주어에는 have가 아니라 has." },
+        { "id": "u1-08", "kind": "blank", "prompt": "괄호 안 동사를 알맞은 형태로 쓰세요.", "sentence": "The café near my house ___ (open) at 7 a.m. every day.", "answers": ["opens"], "hint": "every day는 반복되는 사실이에요.", "explanation": "매일 반복되는 사실은 현재 시제, 3인칭 단수라 opens." },
+        { "id": "u1-09", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "What ___ you usually do on weekends?", "choices": ["are", "do", "does"], "answer": 1, "hint": "usually + 일반동사 do의 의문문이에요.", "explanation": "일반동사 현재 시제 의문문은 Do + 주어(you) + 동사원형." },
+        { "id": "u1-10", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "Right now I watch a drama on my phone.", "answers": ["Right now I am watching a drama on my phone.", "Right now I'm watching a drama on my phone.", "Right now, I am watching a drama on my phone.", "Right now, I'm watching a drama on my phone."], "hint": "right now는 지금 이 순간이에요.", "explanation": "지금 진행 중인 일은 현재진행: am watching." }
+      ],
+      "writingTask": {
+        "promptKo": "내가 사는 집이나 동네를 영어로 3문장 이상 묘사해 보세요. 평소 하는 일(현재 시제)과 요즘 하는 일(현재진행)을 섞어 보세요.",
+        "promptEn": "Describe your home or neighborhood. What do you usually do there, and what are you doing these days?",
+        "minSentences": 3
+      }
+    },
+    {
+      "id": "past-simple",
+      "order": 2,
+      "title": "과거 시제",
+      "opicUse": "과거 경험 이야기 (여행, 기억에 남는 일)",
+      "errorType": "tense",
+      "explanation": {
+        "summary": "이미 끝난 일은 과거형으로 말하고, 이야기하는 동안 시제를 과거로 유지한다.",
+        "points": [
+          "끝난 일: I went to Busan last year. — yesterday, last ~, ~ ago, when I was ~ 와 함께 자주 쓴다",
+          "자주 쓰는 불규칙 동사: go-went, have-had, meet-met, buy-bought, take-took, eat-ate, see-saw, be-was/were",
+          "부정·의문: didn't + 동사원형, Did + 주어 + 동사원형 (I didn't went ✗ → I didn't go)",
+          "과거 이야기 중간에 현재형으로 바뀌지 않게 주의한다 (OPIc에서 가장 흔한 실수)",
+          "과거에 진행 중이던 배경: was / were + -ing (We were having dinner when ~)"
+        ],
+        "examples": [
+          { "en": "Last summer, I went to Jeju with my family.", "ko": "지난여름 나는 가족과 제주에 갔다." },
+          { "en": "We stayed at a small hotel and ate a lot of seafood.", "ko": "우리는 작은 호텔에 묵으며 해산물을 많이 먹었다." },
+          { "en": "It was raining when we arrived.", "ko": "우리가 도착했을 때 비가 오고 있었다." }
+        ],
+        "commonMistakes": [
+          { "wrong": "Yesterday I go to the gym.", "right": "Yesterday I went to the gym.", "note": "과거 표현과 함께면 과거형" },
+          { "wrong": "I didn't liked it.", "right": "I didn't like it.", "note": "didn't 뒤에는 동사원형" }
+        ]
+      },
+      "exercises": [
+        { "id": "u2-01", "kind": "blank", "prompt": "괄호 안 동사를 알맞은 형태로 쓰세요.", "sentence": "Last summer, I ___ (go) to Jeju with my family.", "answers": ["went"], "hint": "last summer는 끝난 과거예요. go는 불규칙 동사예요.", "explanation": "끝난 과거는 과거형, go의 과거형은 went." },
+        { "id": "u2-02", "kind": "fix", "prompt": "지난여름 이야기입니다. 틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "We stay at a small hotel near the beach.", "answers": ["We stayed at a small hotel near the beach."], "hint": "과거 이야기 중이에요.", "explanation": "과거 이야기에서는 시제를 과거로 유지: stay → stayed." },
+        { "id": "u2-03", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "I didn't ___ the movie.", "choices": ["liked", "like", "likes"], "answer": 1, "hint": "didn't 뒤의 동사 형태를 생각해 보세요.", "explanation": "didn't 뒤에는 동사원형: like." },
+        { "id": "u2-04", "kind": "blank", "prompt": "괄호 안 동사를 알맞은 형태로 쓰세요.", "sentence": "Two years ago, I ___ (buy) my first car.", "answers": ["bought"], "hint": "~ ago는 과거예요. buy는 불규칙 동사예요.", "explanation": "buy의 과거형은 bought." },
+        { "id": "u2-05", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "When I was a child, I always play soccer after school.", "answers": ["When I was a child, I always played soccer after school."], "hint": "When I was a child는 과거예요.", "explanation": "어린 시절은 과거라 play → played." },
+        { "id": "u2-06", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "___ you enjoy the concert last night?", "choices": ["Do", "Did", "Were"], "answer": 1, "hint": "enjoy는 일반동사, last night는 과거예요.", "explanation": "일반동사 과거 의문문은 Did + 주어 + 동사원형." },
+        { "id": "u2-07", "kind": "blank", "prompt": "괄호 안 동사를 알맞은 형태로 쓰세요.", "sentence": "The weather ___ (be) terrible, so we stayed inside.", "answers": ["was"], "hint": "주어 the weather는 단수, 이야기는 과거예요.", "explanation": "be동사의 과거, 단수 주어: was." },
+        { "id": "u2-08", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I meeted my best friend in high school.", "answers": ["I met my best friend in high school."], "hint": "meet는 불규칙 동사예요.", "explanation": "meet의 과거형은 met (meeted ✗)." },
+        { "id": "u2-09", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "We ___ dinner when the power went out.", "choices": ["had", "were having", "have"], "answer": 1, "hint": "정전이 됐을 때 이미 하고 있던 일이에요.", "explanation": "다른 일이 일어날 때 진행 중이던 배경은 과거진행: were having." },
+        { "id": "u2-10", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "Yesterday I go to the gym and work out for an hour.", "answers": ["Yesterday I went to the gym and worked out for an hour.", "Yesterday, I went to the gym and worked out for an hour."], "hint": "동사가 두 개예요. 둘 다 확인하세요.", "explanation": "yesterday라 두 동사 모두 과거: went, worked out." }
+      ],
+      "writingTask": {
+        "promptKo": "최근에 다녀온 여행이나 기억에 남는 휴가에 대해 3문장 이상 써 보세요. 이야기 끝까지 과거 시제를 유지하세요.",
+        "promptEn": "Tell me about a recent trip or a memorable vacation. Where did you go and what did you do?",
+        "minSentences": 3
+      }
+    },
+    {
+      "id": "used-to-would",
+      "order": 3,
+      "title": "used to / would — 예전엔 그랬지",
+      "opicUse": "예전과 지금 비교 (동네, 습관, 기술의 변화)",
+      "errorType": "tense",
+      "explanation": {
+        "summary": "예전엔 그랬지만 지금은 아닌 일은 used to + 동사원형. 과거에 반복한 '행동'은 would도 쓸 수 있다.",
+        "points": [
+          "used to + 동사원형: I used to live in Busan. (지금은 안 산다) — 행동과 상태 모두 가능",
+          "would + 동사원형: 과거에 반복한 행동만. My grandma would tell me stories. — 상태(be, have, live, like)에는 쓰지 않는다",
+          "부정·의문: didn't use to (used ✗), Did you use to ~?",
+          "be used to + -ing는 다른 표현: '~에 익숙하다' (I'm used to getting up early.)"
+        ],
+        "examples": [
+          { "en": "I used to ride my bike to school.", "ko": "예전엔 자전거로 학교에 다녔다." },
+          { "en": "There used to be a small bookstore on this street.", "ko": "이 거리에 예전엔 작은 서점이 있었다." },
+          { "en": "On Sundays, my dad would make pancakes for us.", "ko": "일요일이면 아빠가 우리에게 팬케이크를 만들어 주시곤 했다." }
+        ],
+        "commonMistakes": [
+          { "wrong": "I use to play the piano.", "right": "I used to play the piano.", "note": "긍정문은 used to" },
+          { "wrong": "There would be a park here.", "right": "There used to be a park here.", "note": "상태에는 would를 쓰지 않는다" }
+        ]
+      },
+      "exercises": [
+        { "id": "u3-01", "kind": "blank", "prompt": "괄호 안 동사를 used to를 이용해 쓰세요.", "sentence": "I ___ (live) in Busan, but now I live in Seoul.", "answers": ["used to live"], "hint": "예전엔 그랬지만 지금은 아니에요.", "explanation": "예전엔 그랬지만 지금은 아닌 일: used to + 동사원형." },
+        { "id": "u3-02", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "I use to play the piano when I was young.", "answers": ["I used to play the piano when I was young."], "hint": "긍정문의 형태를 확인하세요.", "explanation": "긍정문은 used to (use to ✗)." },
+        { "id": "u3-03", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "When I was a kid, my grandmother ___ tell me stories every night.", "choices": ["would", "was", "use to"], "answer": 0, "hint": "과거에 반복한 행동이에요.", "explanation": "과거에 반복한 행동은 would + 동사원형 (used to도 가능)." },
+        { "id": "u3-04", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "There would be a big tree in front of my school.", "answers": ["There used to be a big tree in front of my school."], "hint": "나무가 '있었다'는 행동일까요, 상태일까요?", "explanation": "상태(there is/be)에는 would를 쓰지 않고 used to를 쓴다." },
+        { "id": "u3-05", "kind": "blank", "prompt": "괄호 안 내용을 부정형으로 쓰세요.", "sentence": "I ___ (not / like) vegetables, but now I love them.", "answers": ["didn't use to like", "did not use to like", "used not to like"], "hint": "used to의 부정형은 did를 써요.", "explanation": "부정은 didn't use to + 동사원형 (didn't used to ✗)." },
+        { "id": "u3-06", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "I'm used to ___ up early.", "choices": ["get", "getting", "got"], "answer": 1, "hint": "be used to는 '~에 익숙하다'예요.", "explanation": "be used to 뒤에는 -ing: getting." },
+        { "id": "u3-07", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "My dad used to working late every day.", "answers": ["My dad used to work late every day."], "hint": "used to 뒤의 동사 형태를 확인하세요.", "explanation": "used to 뒤에는 동사원형: work." },
+        { "id": "u3-08", "kind": "blank", "prompt": "빈칸에 알맞은 단어를 쓰세요.", "sentence": "___ you use to have a pet?", "answers": ["Did"], "hint": "used to의 의문문이에요.", "explanation": "의문문은 Did + 주어 + use to." },
+        { "id": "u3-09", "kind": "choice", "prompt": "알맞은 것을 고르세요.", "sentence": "Ten years ago, this area ___ quiet, but now it's busy.", "choices": ["would be", "used to be", "is used to be"], "answer": 1, "hint": "'조용했다'는 상태예요.", "explanation": "예전의 상태는 used to be." },
+        { "id": "u3-10", "kind": "fix", "prompt": "틀린 부분을 고쳐 문장 전체를 다시 쓰세요.", "sentence": "In the past, people would have fewer cars.", "answers": ["In the past, people used to have fewer cars."], "hint": "have가 '소유'의 뜻이에요.", "explanation": "소유의 have는 상태라 would 대신 used to." }
+      ],
+      "writingTask": {
+        "promptKo": "어렸을 때와 지금을 비교해 3문장 이상 써 보세요. used to를 한 번 이상 써 보세요.",
+        "promptEn": "How is your life different now compared to when you were a child?",
+        "minSentences": 3
+      }
+    }
+  ]
+}

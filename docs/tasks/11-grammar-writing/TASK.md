@@ -1,6 +1,6 @@
 # TASK: 문법 탭 2 — 직접 써 보기 + Gemma 교정
 
-> 작성: Claude · 승인: [ ] 사용자
+> 작성: Claude · 승인: [x] 사용자 (2026-10-07) — 고정 설명 문구는 GPT가 다듬어도 됨, 5문장 제한 유지
 > 경로: docs/tasks/11-grammar-writing/TASK.md
 > 선행: TASK 10 Approve
 > 근거: `SPEC.md` § 기기 내 LLM + 문장 교정 (TASK 05), `docs/tasks/05-llm-port/REVIEW.md` § 제안, TASK 10 § 설계 근거

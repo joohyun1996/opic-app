@@ -17,6 +17,7 @@
 | 2026-10-06 | v0.8.0 | Day 단어 목록 + 영→한·한→영 플래시카드 + 발음 (TASK 07). 영→한 채점 규칙 변경 |
 | 2026-10-06 | v0.9.0 | 오답 모음 + 오답만 학습 (TASK 08). 오답 정의 변경. 단어 탭 이식 완료 |
 | 2026-10-07 | v0.10.0 | 단어 탭 다듬기: 학습 카드 셔플, 힌트 버튼, Day 목록에 뜻 표시 (TASK 09) |
+| 2026-10-07 | v0.11.0 | 문법 탭 1: 단원 1~3 콘텐츠, 단원 목록·설명·연습(두 번 시도)·결과 (TASK 10) |
 
 ## 인증
 ### POST /api/auth/login
@@ -186,7 +187,19 @@
 - ③ Day 단어 목록: 상태 뱃지(신규/학습중/습득) 제거 → **오른쪽에 한국어 뜻** (습득 단어는 초록). ♪는 단어 바로 오른쪽. "습득 N/40" 줄 오른쪽에 "한국어 숨기기/보기" (앱 실행 중 유지)
 
 ## 문법
-(기능 추가 시 여기에 작성)
+
+### 설계 근거 (2026-10-07 사용자 결정)
+- 명시적 설명(Norris & Ortega 2000), 인출 연습(Roediger & Karpicke 2006), 스스로 고치게 하는 피드백(Lyster & Saito 2010), 쓰기 교정 피드백(Kang & Han 2015), 간격 복습(Cepeda et al. 2006)
+- 단원 10개 계획: 현재/현재진행, 과거, used to/would, 현재완료, 비교급, 의문문, 관사, 전치사, 수 일치, 연결어 (TASK 10: 1~3, TASK 12: 4~10)
+
+### 단원 1~3 + 연습 화면 (2026-10-07, TASK 10)
+- 데이터: `exports/grammar.json` (dataVersion 1, 단원 3, 문제 30) — Claude 초안 → GPT 검토(7문제 수정, `docs/tasks/10-grammar-units/CONTENT-REVIEW.md`). APK assets에 포함
+  - 단원: `id, order, title, opicUse, errorType, explanation{summary, points, examples, commonMistakes}, exercises, writingTask`
+  - 문제 kind: `fix`(문장 전체, answers[]) / `blank`(빈칸, answers[]) / `choice`(choices[], answer 인덱스)
+  - 검증 실패 시 "문법 데이터를 불러오지 못했습니다", 앱은 계속 동작
+- 채점 (`core:common/GrammarGrading.kt`): `normalizeAnswer` = 앞뒤 공백·연속 공백·끝 `.!?` 제거, 소문자, `’`→`'`. `gradeText`는 answers 중 하나와 일치
+- 두 번 시도 (`GrammarAttempt`): 1차 오답 → "다시 생각해 보세요" + 힌트 / 2차 오답 → 정답 + 설명 / 정답 → 1차·2차 구분
+- 화면: 홈 "영어 문법" 카드 → 단원 목록 → 설명(요약·규칙·예문·흔한 실수) → 연습 10문제(섞음) → 결과(1차·2차 정답, 오답 목록, 다시 풀기). 진행 기록 저장 없음 (TASK 13)
 
 ## 섀도잉
 (기능 추가 시 여기에 작성)

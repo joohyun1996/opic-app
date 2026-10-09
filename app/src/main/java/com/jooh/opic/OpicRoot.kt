@@ -16,6 +16,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.jooh.opic.core.llm.ModelCatalog
 import com.jooh.opic.feature.grammar.GrammarFlow
+import com.jooh.opic.feature.shadowing.ShadowingScreen
+import com.jooh.opic.feature.shadowing.ShadowingViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.lifecycle.ViewModelProvider
 import com.jooh.opic.feature.grammar.dueExercises
 import com.jooh.opic.feature.grammar.GrammarLoadResult
 import com.jooh.opic.feature.words.Speaker
@@ -71,12 +75,21 @@ fun OpicRoot(app: OpicApplication) {
                     day = entry.arguments?.getInt("day") ?: 0, mode = entry.arguments?.getString("mode"), navigate = navigate, onBack = back)
             }
             composable("grammar") {
+                LaunchedEffect(Unit) { app.whisper.close() }
                 Box(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.TopCenter) {
                     Column(Modifier.widthIn(max = 430.dp).fillMaxSize().padding(horizontal = 16.dp)) {
                         GrammarFlow(grammarResult, app.llmEngine, app.hfTokenStore, { ModelCatalog.isDownloaded(app) },
                             ModelCatalog.config(app).models.first().expectedBytes, back, reviews = app.grammarReviews)
                     }
                 }
+            }
+            composable("shadowing") {
+                val model: ShadowingViewModel = viewModel(factory = remember(app) { object : ViewModelProvider.Factory {
+                    @Suppress("UNCHECKED_CAST")
+                    override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
+                        ShadowingViewModel(app, app.whisper, app::releaseGemmaBeforeWhisper) as T
+                } })
+                ShadowingScreen(model, back)
             }
             if (debug != null) composable("debug") { debug { back() } }
         }

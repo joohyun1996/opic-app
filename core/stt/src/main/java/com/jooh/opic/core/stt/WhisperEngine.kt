@@ -7,12 +7,16 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import java.io.File
+import java.util.concurrent.atomic.AtomicBoolean
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.currentCoroutineContext
+import kotlinx.coroutines.ensureActive
 
 internal object WhisperNative {
     init { System.loadLibrary("opic_whisper") }
     external fun initContext(modelPath: String): Long
     external fun freeContext(context: Long)
-    external fun transcribe(context: Long, threads: Int, audio: FloatArray): ByteArray?
+    external fun transcribe(context: Long, threads: Int, audio: FloatArray, cancelled: AtomicBoolean?): ByteArray?
     external fun systemInfo(): String
 }
 
@@ -28,6 +32,7 @@ object SttModels {
             spec("small.en", "ggml-small.en-q5_1.bin", 190_098_681, "bfdff4894dcb76bbf647d56263ea2a96645423f1669176f4844a1bf8e478ad30"),
         )
     }
+    fun userModel(context: Context): ModelSpec = all(context).first { it.id == "small.en" }
     fun isDownloaded(spec: ModelSpec) = spec.file.isFile && spec.file.length() == spec.expectedBytes
 }
 
@@ -40,14 +45,17 @@ class WhisperEngine private constructor(private var context: Long, val modelId: 
     private val lock = Mutex()
 
     /** 16kHz mono float(-1..1) 오디오를 영어로 받아 적는다. */
-    suspend fun transcribe(audio: FloatArray, threads: Int = DEFAULT_THREADS): Transcription = lock.withLock {
+    suspend fun transcribe(audio: FloatArray, threads: Int = DEFAULT_THREADS, cancelled: AtomicBoolean? = null): Transcription = lock.withLock {
         withContext(Dispatchers.Default) {
             check(context != 0L) { "닫힌 엔진" }
             val start = System.nanoTime()
-            val bytes = WhisperNative.transcribe(context, threads, audio) ?: error("받아 적기 실패")
+            val bytes = WhisperNative.transcribe(context, threads, audio, cancelled) ?: if (cancelled?.get() == true) throw CancellationException("받아 적기 취소") else error("받아 적기 실패")
+            currentCoroutineContext().ensureActive()
             Transcription(bytes.toString(Charsets.UTF_8).trim(), (System.nanoTime() - start) / 1_000_000, audio.size * 1000L / SAMPLE_RATE)
         }
     }
+
+    suspend fun closeWhenIdle() = lock.withLock { close() }
 
     override fun close() {
         if (context != 0L) WhisperNative.freeContext(context)

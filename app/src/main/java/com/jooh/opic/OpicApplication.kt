@@ -20,6 +20,8 @@ import com.jooh.opic.core.llm.OnDeviceLlmEngine
 import com.jooh.opic.core.llm.createOnDeviceLlmEngine
 import com.jooh.opic.feature.grammar.GrammarCatalog
 import com.jooh.opic.feature.grammar.GrammarLoadResult
+import com.jooh.opic.feature.shadowing.ShadowingViewModel
+import com.jooh.opic.core.stt.UserWhisper
 
 class OpicApplication : Application() {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
@@ -47,16 +49,21 @@ class OpicApplication : Application() {
         }
     }
 
+    val whisper by lazy { UserWhisper(this) }
+    fun releaseGemmaBeforeWhisper() {
+        synchronized(this) { currentLlmEngine?.close(); currentLlmEngine = null }
+    }
+
     val database: OpicDatabase by lazy {
         Room.databaseBuilder(this, OpicDatabase::class.java, "opic.db").addMigrations(*ALL_MIGRATIONS).build()
     }
     val grammarReviews: GrammarReviewStore by lazy { RoomGrammarReviewStore(database.grammarReviewDao()) }
     val hfTokenStore: HfTokenStore by lazy { HfTokenStore(this) }
-    val llmEngine: OnDeviceLlmEngine by lazy {
-        createOnDeviceLlmEngine(
+    private var currentLlmEngine: OnDeviceLlmEngine? = null
+    val llmEngine: OnDeviceLlmEngine
+        get() = synchronized(this) { currentLlmEngine ?: createOnDeviceLlmEngine(
             context = this,
             config = ModelCatalog.config(this),
             store = HttpModelStore(headers = { hfTokenStore.authHeader() }),
-        )
-    }
+        ).also { currentLlmEngine = it } }
 }

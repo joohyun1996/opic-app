@@ -23,6 +23,7 @@
 | 2026-10-07 | v0.14.0 | 문법 틀린 문제 간격 복습, **Room DB v1 → v2** (`grammar_reviews` 추가) (TASK 13) |
 | 2026-10-07 | v0.15.0 | Whisper 기기 내 음성 인식 검증 → **small.en 채택** (debug 전용 `:core:stt`), `RECORD_AUDIO` 권한 (TASK 14). 홈 이름 변경(영단어·영문법·오답노트), LLM 검증 화면 삭제 |
 | 2026-10-09 | v0.16.0 | 섀도잉: YouTube IFrame 재생·A-B 반복·속도·따라 말하기(Whisper small.en) 단어 비교, `:core:stt` release 포함 (TASK 15, 실기기 확인 보류) |
+| 2026-10-09 | v0.17.0 | 섀도잉 비공식 자막: 영어 자막 목록·현재 문장 강조·문장 누르면 A-B 반복+원문 채우기, 실패 시 붙여 넣기 (TASK 16, 실기기 확인 보류) |
 
 ## 인증
 ### POST /api/auth/login
@@ -240,6 +241,13 @@
 - 따라 말하기: 녹음(최대 30초, 영상 자동 일시정지) → Whisper small.en 받아 적기(취소 가능) → `compareWords` 단어 비교: 맞음 / 틀림 빨강 `원문 → 들린 말` / 빠뜨림 회색 취소선 / 더 말함 주황, 일치율 = 1 − WER. 마지막 녹음 1개만 `filesDir/shadowing-last.pcm`, "내 목소리 듣기"
 - Whisper: `UserWhisper`(앱 1개, Mutex), 모델은 버튼을 눌렀을 때만 받음(190MB). 불러오기 전 Gemma 해제, 문법 진입 때 Whisper 해제
 - 실기기 확인(AC4) 보류 — 사용자가 다음에 한꺼번에 확인
+
+### 비공식 자막 (2026-10-09, TASK 16)
+- 영상을 열면 자동 1회: watch 페이지 HTML의 `captionTracks` → `pickTrack`(사람 en > en-* > 자동 생성 en) → `baseUrl&fmt=json3`. 쿠키·계정·API 키 없음, https YouTube 호스트·`/watch`·`/api/timedtext`만, 시간 제한 10초, 응답 5MiB 상한
+- `core:common/Captions.kt`: `extractCaptionTracks`, `parseJson3`(빈 이벤트 제거, 엔티티 풀기), `mergeSentences`(`.?!`까지 합침, 12초 상한), `cueAt`(시작 포함·끝 제외)
+- 화면: 자막 목록(`m:ss` + 문장, 최대 높이 240dp 스크롤, 현재 문장 강조), 문장 누르기 → A = 시작 − 0.3초, B = 끝 + 0.3초, 원문 채우기, 이동, 반복 켬. 이전/다음 문장
+- 실패: "자막 없음 / 자막 요청 실패 — 문장을 붙여 넣으세요" + 다시 시도. 자막은 앱 실행 중 영상별 메모리에만
+- 실기기 확인(AC7) 보류
 
 ## 스피킹
 

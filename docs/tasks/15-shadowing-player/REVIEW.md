@@ -31,3 +31,13 @@
 
 ### 재리뷰 요청 시
 - M1 + S1~S3 반영 커밋 범위를 HANDOFF "리뷰 반영 (1차)"에 적는다
+
+## 2차 리뷰 — 2026-10-09
+- 범위: `e9e9d96..0991c45`
+- 판정: **Approve** (Must-fix 0)
+- M1 ✅ `OpicRoot.kt` 섀도잉 경로에 `statusBarsPadding().navigationBarsPadding()` + `widthIn(max = 430.dp)`
+- S1 ✅ `AudioRecord`를 IO 작업의 지역 변수로 옮기고 `finally`에서만 stop(녹음 중일 때만)·release. `onCleared`는 신호만 보냄
+- S2 ✅ `recordingJob?.isActive` 확인 + `recording = true`를 launch 전에 켬
+- S3 ✅ `UserWhisper`에 Mutex — prepare·transcribe·close 직렬화, 교체는 `closeWhenIdle()`
+- Nit N1~N4 미반영 (선택) — N2·N3은 실기기 확인(AC4) 때 메모리를 같이 본다
+- **남은 일: AC4 실기기 확인** (사용자, 와이파이 될 때). IFrame 재생(오류 152/153 여부), 0.75배, A-B 반복, 녹음 → 비교 표시

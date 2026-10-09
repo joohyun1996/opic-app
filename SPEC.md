@@ -1,6 +1,6 @@
 # OPIc · HSK 학습 앱 기능 명세서
 
-> 마지막 업데이트: 2026-10-07
+> 마지막 업데이트: 2026-10-09
 >
 > 2026-10-04 Kotlin 네이티브 앱 전환 (`docs/decisions/001-native-pivot.md`). 이 저장소에서 계속 작성한다. 웹앱 시절 명세(인증, `/api/*`, 웹 단어 탭)는 `web-final` 태그 기준이며 아래 "전환 기록" 이전 섹션에 남아 있다.
 
@@ -22,6 +22,7 @@
 | 2026-10-07 | v0.13.0 | 문법 단원 4~10 추가 (grammar.json dataVersion 2, 100문제), 다시 시도 취소 경쟁 상태 수정 (TASK 12) |
 | 2026-10-07 | v0.14.0 | 문법 틀린 문제 간격 복습, **Room DB v1 → v2** (`grammar_reviews` 추가) (TASK 13) |
 | 2026-10-07 | v0.15.0 | Whisper 기기 내 음성 인식 검증 → **small.en 채택** (debug 전용 `:core:stt`), `RECORD_AUDIO` 권한 (TASK 14). 홈 이름 변경(영단어·영문법·오답노트), LLM 검증 화면 삭제 |
+| 2026-10-09 | v0.16.0 | 섀도잉: YouTube IFrame 재생·A-B 반복·속도·따라 말하기(Whisper small.en) 단어 비교, `:core:stt` release 포함 (TASK 15, 실기기 확인 보류) |
 
 ## 인증
 ### POST /api/auth/login
@@ -230,7 +231,15 @@
 - grammar.json에서 빠진 문제의 기록은 남기고 목록에서만 건너뜀
 
 ## 섀도잉
-(기능 추가 시 여기에 작성)
+
+### 재생 + 구간 반복 + 따라 말하기 (2026-10-09, TASK 15)
+- 진입: 홈 "섀도잉" 카드 → YouTube 링크 붙여 넣기 → "열기". `youtubeVideoId`(`core:common/Shadowing.kt`): youtu.be, watch(일반·m.), shorts, embed, 뒤 매개변수 무시, ID 11자
+- 플레이어: WebView + YouTube IFrame Player API (영상 내려받지 않음). base URL·origin `https://appassets.androidplatform.net`. JS 브리지는 시각·오류 수신 2개 + nonce 확인, 파일·콘텐츠 접근 끔, 메인 프레임 이동 차단
+- 조작: 재생/일시정지, 속도 0.5·0.75·1.0, A/B 지정(현재 시각) ±0.5초, 반복 켬/끔 (150ms마다 B 넘으면 A로)
+- 원문 문장: 직접 붙여 넣기, 앱 실행 중 영상별 기억 (저장 안 함)
+- 따라 말하기: 녹음(최대 30초, 영상 자동 일시정지) → Whisper small.en 받아 적기(취소 가능) → `compareWords` 단어 비교: 맞음 / 틀림 빨강 `원문 → 들린 말` / 빠뜨림 회색 취소선 / 더 말함 주황, 일치율 = 1 − WER. 마지막 녹음 1개만 `filesDir/shadowing-last.pcm`, "내 목소리 듣기"
+- Whisper: `UserWhisper`(앱 1개, Mutex), 모델은 버튼을 눌렀을 때만 받음(190MB). 불러오기 전 Gemma 해제, 문법 진입 때 Whisper 해제
+- 실기기 확인(AC4) 보류 — 사용자가 다음에 한꺼번에 확인
 
 ## 스피킹
 

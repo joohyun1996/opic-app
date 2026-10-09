@@ -15,7 +15,7 @@ fun GrammarUnitListScreen(
 ) {
     Column {
         TextButton(onClick = onBack) { Text("← 홈") }
-        Text("영어 문법", style = MaterialTheme.typography.headlineSmall)
+        Text("영문법", style = MaterialTheme.typography.headlineSmall)
         if (dueCount > 0) Button(onClick = onReview, modifier = Modifier.fillMaxWidth().padding(top = 8.dp)) { Text("오늘의 복습 ${dueCount}개 →") }
         else Text("오늘 복습 끝!", modifier = Modifier.padding(top = 8.dp), style = MaterialTheme.typography.bodyMedium)
         Text("AI 교정: $aiStatus", modifier = Modifier.padding(top = 8.dp))

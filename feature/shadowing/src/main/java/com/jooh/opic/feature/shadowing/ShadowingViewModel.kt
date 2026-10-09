@@ -38,7 +38,6 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
     private val spec = whisper.model
     private var recordingJob: Job? = null
     private var transcriptionJob: Job? = null
-    private var recorder: AudioRecord? = null
     private val abort = AtomicBoolean(false)
     val recordingFile = File(app.filesDir, "shadowing-last.pcm")
     init { stateValue.value = stateValue.value.copy(model = if (whisper.ready) "준비됨" else if (SttModels.isDownloaded(spec)) "불러오기 전" else "없음") }
@@ -68,13 +67,17 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
     }
     @SuppressLint("MissingPermission")
     fun startRecording() {
+        if (recordingJob?.isActive == true) return
         val app = getApplication<Application>()
         if (ContextCompat.checkSelfPermission(app, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             message("마이크 권한이 필요합니다"); return
         }
         if (!whisper.ready || state.value.busy || state.value.recording) return
+        update { it.copy(recording = true, result = null, diff = emptyList(), message = null) }
         recordingJob = viewModelScope.launch(Dispatchers.IO) {
+            var recorder: AudioRecord? = null
             try {
+                ensureActive()
                 val min = AudioRecord.getMinBufferSize(16_000, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT)
                 require(min > 0)
                 val record = AudioRecord(MediaRecorder.AudioSource.VOICE_RECOGNITION, 16_000,
@@ -82,7 +85,6 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
                 recorder = record
                 require(record.state == AudioRecord.STATE_INITIALIZED)
                 record.startRecording()
-                update { it.copy(recording = true, result = null, diff = emptyList(), message = null) }
                 val deadline = System.nanoTime() + 30_000_000_000L
                 val buffer = ByteArray(min)
                 recordingFile.outputStream().use { out ->
@@ -91,13 +93,21 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
                         if (n > 0) out.write(buffer, 0, n)
                     }
                 }
-                record.stop()
+                ensureActive()
                 update { it.copy(recording = false) }
                 if (recordingFile.length() > 0) transcribe()
             } catch (e: Exception) {
                 if (e !is CancellationException) message("녹음 실패: ${e.message}")
                 update { it.copy(recording = false) }
-            } finally { recorder?.release(); recorder = null }
+            } finally {
+                // AudioRecord는 생성한 IO 작업만 정리한다. 화면 이탈은 취소 신호만 보낸다.
+                recorder?.let { record ->
+                    try {
+                        if (record.recordingState == AudioRecord.RECORDSTATE_RECORDING) record.stop()
+                    } finally { record.release() }
+                }
+                update { it.copy(recording = false) }
+            }
         }
     }
     fun stopRecording() = update { it.copy(recording = false) }
@@ -119,5 +129,5 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
         }
     }
     fun cancel() { abort.set(true); transcriptionJob?.cancel(); update { it.copy(busy = false, message = "취소됨") } }
-    override fun onCleared() { abort.set(true); recordingJob?.cancel(); recorder?.stop(); super.onCleared() }
+    override fun onCleared() { abort.set(true); stopRecording(); recordingJob?.cancel(); super.onCleared() }
 }

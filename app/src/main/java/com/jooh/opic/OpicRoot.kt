@@ -89,7 +89,11 @@ fun OpicRoot(app: OpicApplication) {
                     override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
                         ShadowingViewModel(app, app.whisper, app::releaseGemmaBeforeWhisper) as T
                 } })
-                ShadowingScreen(model, back)
+                Box(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.TopCenter) {
+                    Box(Modifier.widthIn(max = 430.dp).fillMaxSize()) {
+                        ShadowingScreen(model, back)
+                    }
+                }
             }
             if (debug != null) composable("debug") { debug { back() } }
         }

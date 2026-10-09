@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.jooh.opic.core.common.WordDiff
+import com.jooh.opic.core.common.Cue
 import com.jooh.opic.core.common.compareWords
 import com.jooh.opic.core.common.wordErrorRate
 import com.jooh.opic.core.stt.SttModels
@@ -20,6 +21,8 @@ import com.jooh.opic.core.stt.WhisperEngine
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
+import java.util.concurrent.ConcurrentHashMap
 import java.io.File
 import java.util.concurrent.atomic.AtomicBoolean
 
@@ -29,7 +32,10 @@ data class ShadowState(
     val model: String = "없음", val progress: Int = 0, val busy: Boolean = false,
     val recording: Boolean = false, val result: String? = null, val diff: List<WordDiff> = emptyList(),
     val wer: Double? = null, val message: String? = null,
+    val captions: List<Cue> = emptyList(), val captionStatus: CaptionStatus = CaptionStatus.NONE,
 )
+enum class CaptionStatus { LOADING, READY, NONE, FAILED }
+private object CaptionCache { val byVideo = ConcurrentHashMap<String, List<Cue>>() }
 private object ShadowingSentences { val byVideo = mutableMapOf<String, String>() }
 
 class ShadowingViewModel(app: Application, private val whisper: UserWhisper, private val beforeLoad: () -> Unit) : AndroidViewModel(app) {
@@ -39,11 +45,47 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
     private var recordingJob: Job? = null
     private var transcriptionJob: Job? = null
     private val abort = AtomicBoolean(false)
+    private val captionClient = CaptionClient()
+    private var captionJob: Job? = null
+    private var captionRequest = 0L
     val recordingFile = File(app.filesDir, "shadowing-last.pcm")
     init { stateValue.value = stateValue.value.copy(model = if (whisper.ready) "준비됨" else if (SttModels.isDownloaded(spec)) "불러오기 전" else "없음") }
-    private fun update(block: (ShadowState) -> ShadowState) { stateValue.value = block(stateValue.value) }
+    private fun update(block: (ShadowState) -> ShadowState) { stateValue.update(block) }
     fun link(value: String) = update { it.copy(link = value) }
-    fun open(id: String) = update { it.copy(videoId = id, sentence = ShadowingSentences.byVideo[id].orEmpty(), result = null, diff = emptyList(), message = null) }
+    fun open(id: String) {
+        cancelCaptions()
+        update { it.copy(videoId = id, sentence = ShadowingSentences.byVideo[id].orEmpty(), result = null,
+            diff = emptyList(), message = null, captions = emptyList(), captionStatus = CaptionStatus.NONE) }
+        loadCaptions()
+    }
+    fun loadCaptions(retry: Boolean = false) {
+        val id = state.value.videoId ?: return
+        if (!retry && (captionJob?.isActive == true || state.value.captionStatus == CaptionStatus.FAILED)) return
+        cancelCaptions()
+        val request = captionRequest
+        val cached = if (retry) null else CaptionCache.byVideo[id]
+        if (cached != null) {
+            update { it.copy(captions = cached, captionStatus = if (cached.isEmpty()) CaptionStatus.NONE else CaptionStatus.READY) }
+            return
+        }
+        update { it.copy(captionStatus = CaptionStatus.LOADING) }
+        captionJob = viewModelScope.launch {
+            try {
+                val cues = captionClient.fetch(id)
+                ensureActive()
+                if (request != captionRequest || state.value.videoId != id) return@launch
+                CaptionCache.byVideo[id] = cues
+                update { it.copy(captions = cues, captionStatus = if (cues.isEmpty()) CaptionStatus.NONE else CaptionStatus.READY) }
+            } catch (e: CancellationException) { throw e
+            } catch (_: Exception) {
+                if (request == captionRequest && state.value.videoId == id) {
+                    update { it.copy(captions = emptyList(), captionStatus = CaptionStatus.FAILED) }
+                }
+            }
+        }
+    }
+    fun cancelCaptions() { captionRequest++; captionJob?.cancel(); captionJob = null }
+
     fun sentence(value: String) {
         state.value.videoId?.let { ShadowingSentences.byVideo[it] = value }
         update { it.copy(sentence = value) }
@@ -129,5 +171,5 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
         }
     }
     fun cancel() { abort.set(true); transcriptionJob?.cancel(); update { it.copy(busy = false, message = "취소됨") } }
-    override fun onCleared() { abort.set(true); stopRecording(); recordingJob?.cancel(); super.onCleared() }
+    override fun onCleared() { cancelCaptions(); abort.set(true); stopRecording(); recordingJob?.cancel(); super.onCleared() }
 }

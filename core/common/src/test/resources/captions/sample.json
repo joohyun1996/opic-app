@@ -1,0 +1,1 @@
+{"events":[{"tStartMs":1000,"dDurationMs":1000,"segs":[{"utf8":"Hello "},{"utf8":"&amp; welcome"}]},{"tStartMs":2000,"dDurationMs":1000,"segs":[{"utf8":"to  our\n"}]},{"tStartMs":3000,"dDurationMs":1000,"segs":[{"utf8":"&#39;home&#39; &quot;today&quot;."}]},{"tStartMs":4000,"dDurationMs":1000,"segs":[{"utf8":"\n"}]},{"tStartMs":5000,"dDurationMs":500,"segs":[]}]}

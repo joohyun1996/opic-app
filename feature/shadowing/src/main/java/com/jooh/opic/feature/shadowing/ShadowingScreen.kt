@@ -17,6 +17,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jooh.opic.core.common.WordDiff
+import com.jooh.opic.core.common.cueAt
 import com.jooh.opic.core.common.youtubeVideoId
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -30,6 +31,9 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit)
     var a by remember { mutableStateOf<Double?>(null) }
     var b by remember { mutableStateOf<Double?>(null) }
     var repeat by remember { mutableStateOf(false) }
+    var selectedCaption by remember(state.videoId, state.captions) { mutableStateOf<Int?>(null) }
+    LaunchedEffect(state.videoId) { if (state.videoId != null) model.loadCaptions() }
+    DisposableEffect(model) { onDispose { model.cancelCaptions() } }
     val permission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
         if (granted) { player?.pause(); model.startRecording() } else model.message("마이크 권한이 필요합니다")
     }
@@ -73,6 +77,17 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 listOf(0.5, 0.75, 1.0).forEach { speed -> OutlinedButton(onClick = { player?.speed(speed) }) { Text("${speed}×") } }
             }
+            CaptionList(state.captions, state.captionStatus, cueAt(state.captions, (current * 1000).toLong()), selectedCaption,
+                onSelect = { index ->
+                    state.captions.getOrNull(index)?.let { cue ->
+                        selectedCaption = index
+                        a = (cue.startMs / 1000.0 - 0.3).coerceAtLeast(0.0)
+                        b = cue.endMs / 1000.0 + 0.3
+                        model.sentence(cue.text)
+                        player?.seek(a!!)
+                        repeat = true
+                    }
+                }, onRetry = { model.loadCaptions(retry = true) })
             OutlinedTextField(state.sentence, model::sentence, label = { Text("지금 구간의 원문 문장") }, minLines = 3, modifier = Modifier.fillMaxWidth())
             Text("음성 인식: ${state.model}" + if (state.model == "받는 중") " ${state.progress}%" else "")
             if (state.model != "준비됨") Button(enabled = !state.busy, onClick = { model.prepare(true) }) {

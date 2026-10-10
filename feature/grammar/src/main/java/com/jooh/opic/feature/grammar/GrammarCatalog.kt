@@ -28,7 +28,10 @@ import kotlinx.serialization.json.Json
     val table: List<List<String>>? = null,
     val koreanNote: String? = null,
     val breakdowns: List<GrammarBreakdown> = emptyList(),
+    /** 자세히 보기 — 소주제별 깊은 설명 (TASK 27, 사용자 요청 "설명이 더 자세했으면"). */
+    val details: List<GrammarDetail> = emptyList(),
 )
+@Serializable data class GrammarDetail(val title: String, val body: String, val examples: List<GrammarExample> = emptyList())
 /** 문장 구조 분해. role: S(주어) V(동사) O(목적어) C(보어) M(수식어) 등. */
 @Serializable data class GrammarBreakdown(val sentence: String, val parts: List<GrammarPart>, val note: String? = null)
 @Serializable data class GrammarPart(val text: String, val role: String)

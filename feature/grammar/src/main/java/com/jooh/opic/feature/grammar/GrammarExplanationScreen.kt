@@ -91,6 +91,12 @@ fun GrammarExplanationScreen(unit: GrammarUnit, onBack: () -> Unit, onStart: () 
             Text(unit.explanation.summary, style = MaterialTheme.typography.bodyLarge)
             // 실전 영문법 항목 (TASK 26) — 있을 때만
             unit.explanation.concept?.let { Section("왜 이렇게 쓸까") { Text(it, style = MaterialTheme.typography.bodyLarge) } }
+            unit.explanation.details.forEach { d ->
+                Section(d.title) {
+                    Text(d.body)
+                    d.examples.forEach { e -> Column { Text(e.en, color = Opic.colors.accent); Text(e.ko, style = MaterialTheme.typography.bodySmall) } }
+                }
+            }
             unit.explanation.table?.takeIf { it.isNotEmpty() }?.let { Section("한눈에 보기") { FormTable(it) } }
             unit.explanation.koreanNote?.let { Section("한국어와 다른 점") { Text(it) } }
             if (unit.explanation.breakdowns.isNotEmpty()) Section("문장 구조 분해") {

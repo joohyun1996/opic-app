@@ -2,6 +2,166 @@
  "dataVersion": 1,
  "units": [
   {
+   "id": "c0",
+   "order": 0,
+   "track": "core",
+   "part": "0부 시작하기 전에",
+   "title": "문법 용어 풀이",
+   "opicUse": "주어·목적어·보어·자동사·수동태… 설명에 나오는 말부터 정리",
+   "errorType": "other",
+   "explanation": {
+    "summary": "문법 설명이 어려운 건 대부분 용어 때문이다. 이 장의 용어를 먼저 익혀 두면 뒤의 모든 장이 쉽게 읽힌다. 모르는 말이 나오면 언제든 여기로 돌아오자.",
+    "concept": "용어는 외우는 게 아니라 '이 말이 문장에서 무슨 일을 하는가'로 이해하면 된다. 예를 들어 '목적어'는 이름 그대로 동작의 목적(대상)이 되는 말, '보어'는 모자란 설명을 보충하는(補) 말이다. 한자 뜻을 함께 보면 훨씬 덜 낯설다.",
+    "points": [],
+    "examples": [],
+    "commonMistakes": [],
+    "details": [
+     {
+      "title": "문장 성분 — 문장 속 역할",
+      "body": "• 주어 (S, Subject) — 主語\n  문장의 주인공. '누가/무엇이'에 해당하고, 동작이나 상태의 주인이다. 보통 동사 바로 앞에 온다.\n  예) The dog barks. → The dog (개가)\n\n• 동사 (V, Verb) — 動詞\n  주어가 하는 일이나 상태. 영어 문장에는 반드시 동사가 있다. 시제·수 일치는 동사 모양으로 표시한다.\n  예) The dog barks. → barks (짖는다)\n\n• 목적어 (O, Object) — 目的語\n  동작의 대상. '무엇을/누구를'. 동사 바로 뒤에 온다.\n  예) I love music. → music (음악을)\n\n• 보어 (C, Complement) — 補語\n  주어나 목적어가 '무엇인지/어떤 상태인지' 모자란 설명을 보충하는 말. 명사나 형용사가 온다.\n  예) She is a nurse. / The news made me happy. → a nurse, happy\n\n• 간접목적어 · 직접목적어 (IO · DO)\n  '~에게'(사람)와 '~을'(물건)이 둘 다 있을 때. 간접목적어가 먼저 온다.\n  예) He gave me a book. → me(나에게), a book(책을)\n\n• 수식어 (M, Modifier) — 修飾語\n  빼도 문장이 성립하는 꾸밈말. 부사, 전치사구(in the park 등)가 대표적이다.\n  예) I run in the park every day. → in the park, every day"
+     },
+     {
+      "title": "품사 — 단어의 종류",
+      "body": "• 명사 — 名詞\n  사람·사물·장소·개념의 이름. 주어·목적어·보어 자리에 온다.\n  예) teacher, Seoul, happiness\n\n• 대명사 — 代名詞\n  명사를 대신하는 말.\n  예) I, you, it, they, this\n\n• 형용사 — 形容詞\n  명사를 꾸미거나(a tall man) 보어가 되어(He is tall) 상태를 설명한다.\n  예) tall, happy, interesting\n\n• 부사 — 副詞\n  동사·형용사·다른 부사·문장 전체를 꾸민다. 보어는 될 수 없다.\n  예) quickly, very, often, yesterday\n\n• 전치사 — 前置詞\n  명사 앞에 붙어 장소·시간·관계를 나타낸다. 전치사 + 명사 = 전치사구(수식어).\n  예) in, on, at, with, for\n\n• 접속사 — 接續詞\n  단어·구·문장을 잇는다.\n  예) and, but, because, when, if\n\n• 관사 — 冠詞\n  명사 앞에 붙는 a/an(정해지지 않은 하나), the(서로 아는 그것).\n  예) a cat, an apple, the sun"
+     },
+     {
+      "title": "동사의 종류",
+      "body": "• 자동사 (vi) — 自動詞\n  목적어 없이 문장이 끝나는 동사. 뒤에 바로 명사를 못 붙이고, 붙이려면 전치사가 필요하다.\n  예) arrive, sleep, happen — I arrived at the station.\n\n• 타동사 (vt) — 他動詞\n  목적어가 꼭 있어야 하는 동사. 전치사 없이 바로 목적어가 온다.\n  예) discuss, marry, need — We discussed the plan.\n\n• be동사\n  '~이다/~있다'. am, is, are, was, were. 주어와 보어를 잇는다.\n  예) She is busy.\n\n• 일반동사\n  be동사·조동사가 아닌 보통 동사. 부정·의문에 do/does/did가 필요하다.\n  예) I don't like it. / Do you like it?\n\n• 조동사 — 助動詞\n  동사 앞에서 가능·의무·추측·허락 같은 뜻을 더한다. 뒤에는 항상 동사원형.\n  예) can, must, should, will, may — You should rest.\n\n• 동사원형\n  아무 변화 없는 동사의 기본형. 조동사·명령문·to 뒤에 쓴다.\n  예) go, be, have\n\n• 과거분사 (p.p.)\n  동사의 세 번째 모양(go-went-gone). 완료형(have + p.p.)과 수동태(be + p.p.)에 쓰인다.\n  예) written, broken, done"
+     },
+     {
+      "title": "시제와 태",
+      "body": "• 시제 — 時制\n  동작이 일어난 때를 동사 모양으로 나타내는 것. 현재·과거·미래 × 단순·진행·완료·완료진행 = 12가지.\n  예) I work / worked / will work\n\n• 진행형\n  be + -ing. '~하는 중'. 잠깐 진행되는 일을 말한다.\n  예) I am working now.\n\n• 완료형\n  have + 과거분사. 과거에 시작된 일이 지금(또는 기준 시점)까지 이어지거나 영향을 남길 때.\n  예) I have worked here for three years.\n\n• 능동태 — 能動態\n  주어가 동작을 '하는' 문장. 영어 문장의 기본.\n  예) The chef cooked the meal.\n\n• 수동태 — 受動態\n  주어가 동작을 '당하는(받는)' 문장. be + 과거분사. 행위자가 중요하지 않거나 모를 때 쓴다.\n  예) The meal was cooked (by the chef).\n\n• 가정법 — 假定法\n  사실과 반대이거나 가능성이 낮은 일을 가정. 시제를 한 단계 과거로 내려 '현실과 거리'를 표시한다.\n  예) If I were rich, I would travel."
+     },
+     {
+      "title": "준동사 — 동사가 다른 품사처럼",
+      "body": "• 준동사 — 準動詞\n  동사에서 나왔지만 문장의 동사 역할은 못 하고 명사·형용사·부사처럼 쓰이는 것: to부정사, 동명사, 분사.\n  예) to travel, traveling, traveled\n\n• to부정사 — 不定詞\n  to + 동사원형. 명사(~하는 것), 형용사(~할), 부사(~하려고)처럼 쓰인다.\n  예) I want to travel. / I went there to study.\n\n• 동명사 — 動名詞\n  동사 + -ing가 명사(~하는 것)로 쓰인다. 주어·목적어 자리에 온다.\n  예) Swimming is fun. / I enjoy cooking.\n\n• 분사 — 分詞\n  -ing(능동·진행: ~하는)와 과거분사(수동·완료: ~된)가 형용사처럼 명사를 꾸민다.\n  예) a sleeping baby / a broken window"
+     },
+     {
+      "title": "구와 절 — 덩어리",
+      "body": "• 구 — 句\n  주어 + 동사 없이 두 단어 이상이 한 덩어리로 쓰이는 것.\n  예) in the morning, to learn English\n\n• 절 — 節\n  주어 + 동사가 있는 덩어리. 문장 안의 작은 문장.\n  예) because I was tired\n\n• 주절 · 종속절\n  문장의 중심 절(주절)과 접속사로 딸려 붙은 절(종속절).\n  예) I stayed home (주절) because it rained (종속절).\n\n• 관계대명사 — 關係代名詞\n  앞의 명사를 뒤에서 꾸미는 절을 이끄는 who, which, that.\n  예) the man who lives next door\n\n• 가주어 It\n  길거나 무거운 진짜 주어(to부정사·that절)를 뒤로 보내고 앞자리를 채우는 It. 뜻은 없다.\n  예) It is hard to wake up early."
+     },
+     {
+      "title": "그 밖에 자주 나오는 말",
+      "body": "• 수 일치\n  주어가 단수면 동사도 단수 모양, 복수면 복수 모양으로 맞추는 것.\n  예) He works. / They work.\n\n• 가산명사 · 불가산명사\n  셀 수 있는 명사(a book, two books)와 셀 수 없는 명사(water, information — a·복수형 불가).\n  예) many books / much information\n\n• 비교급 · 최상급\n  둘을 비교(-er, more ~ than)와 셋 이상 중 최고(the -est, the most).\n  예) taller than / the tallest\n\n• 3인칭 단수\n  나(I)·너(you)가 아닌 한 사람·하나(he, she, it, my mom). 현재 시제 동사에 -s를 붙인다.\n  예) My mom works at a bank."
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c0-01",
+     "kind": "choice",
+     "prompt": "'목적어'는 무엇을 뜻할까요?",
+     "sentence": "",
+     "hint": "目的 — 동작이 향하는 곳",
+     "explanation": "목적어 = 동작의 대상. I love music.의 music",
+     "choices": [
+      "동작의 대상 (무엇을/누구를)",
+      "주어를 보충 설명하는 말",
+      "빼도 되는 꾸밈말"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c0-02",
+     "kind": "choice",
+     "prompt": "'보어'가 있는 문장은?",
+     "sentence": "",
+     "hint": "주어가 '무엇인지' 보충하는 말",
+     "explanation": "a doctor가 주어 She를 보충 설명 — 보어. 두 번째의 a doctor는 목적어",
+     "choices": [
+      "She is a doctor.",
+      "I met a doctor.",
+      "He runs fast."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c0-03",
+     "kind": "choice",
+     "prompt": "자동사를 고르세요",
+     "sentence": "",
+     "hint": "목적어 없이 문장이 끝나는 동사",
+     "explanation": "arrive는 자동사 — arrive at the station처럼 전치사가 필요",
+     "choices": [
+      "discuss",
+      "arrive",
+      "need"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c0-04",
+     "kind": "choice",
+     "prompt": "수동태 문장은?",
+     "sentence": "",
+     "hint": "be + 과거분사",
+     "explanation": "was broken = be + p.p. → 수동태 (창문이 깨졌다)",
+     "choices": [
+      "The window was broken.",
+      "He broke the window.",
+      "He is breaking the window."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c0-05",
+     "kind": "choice",
+     "prompt": "'구'와 '절'의 차이는?",
+     "sentence": "",
+     "hint": "덩어리 안에 주어와 동사가 있는지",
+     "explanation": "in the morning(구) vs because I was tired(절)",
+     "choices": [
+      "절에는 주어 + 동사가 있다",
+      "구가 더 길다",
+      "절은 항상 문장 끝에 온다"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c0-06",
+     "kind": "choice",
+     "prompt": "동명사는?",
+     "sentence": "",
+     "hint": "-ing가 '~하는 것'(명사)으로 쓰인 것",
+     "explanation": "주어 자리의 Cooking = 동명사. 두 번째는 진행형, 세 번째는 명사를 꾸미는 분사",
+     "choices": [
+      "Cooking is my hobby.의 Cooking",
+      "I am cooking now.의 cooking",
+      "a cooking class의 cooking"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c0-07",
+     "kind": "choice",
+     "prompt": "조동사 뒤에는 어떤 모양이 올까요?",
+     "sentence": "",
+     "hint": "You should ___ .",
+     "explanation": "조동사(can, must, should…) + 동사원형: You should rest.",
+     "choices": [
+      "동사원형",
+      "과거분사",
+      "to + 동사원형"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c0-08",
+     "kind": "choice",
+     "prompt": "'3인칭 단수' 주어는?",
+     "sentence": "",
+     "hint": "나·너가 아닌 한 사람",
+     "explanation": "My sister = she → 현재 동사에 -s: My sister works.",
+     "choices": [
+      "My sister",
+      "You",
+      "We"
+     ],
+     "answer": 0
+    }
+   ]
+  },
+  {
    "id": "c1",
    "order": 1,
    "track": "core",

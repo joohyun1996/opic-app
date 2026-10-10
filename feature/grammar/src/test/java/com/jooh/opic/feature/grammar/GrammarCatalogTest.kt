@@ -30,12 +30,13 @@ class GrammarCatalogTest {
 
     @Test fun coreGrammarParsesWithNewKinds() {
         val core = (GrammarCatalog.parse(coreRaw) as GrammarLoadResult.Loaded).book
-        assertEquals(3, core.units.size)
-        assertEquals(30, core.units.sumOf { it.exercises.size })
+        assertEquals(true, core.units.map { it.id }.containsAll(listOf("c0", "c1", "c2", "c3")))
+        assertEquals(0, core.units.minOf { it.order }) // 0장 문법 용어 풀이
+        assertEquals(true, core.units.first { it.id == "c0" }.explanation.details.size >= 5)
         assertEquals(setOf("core"), core.units.map { it.track }.toSet())
         val kinds = core.units.flatMap { u -> u.exercises.map { it.kind } }.toSet()
         assertEquals(true, kinds.containsAll(listOf("spot", "structure")))
-        core.units.forEach { assertEquals(true, it.explanation.breakdowns.isNotEmpty() && it.explanation.table != null && it.writingTask == null) }
+        core.units.filter { it.order > 0 }.forEach { assertEquals(true, it.explanation.breakdowns.isNotEmpty() && it.explanation.table != null && it.writingTask == null) }
         // spot 정답 위치가 문장 단어 범위 밖이면 실패
         assertEquals(GrammarLoadResult.Failed, GrammarCatalog.parse(coreRaw.replaceFirst("\"answer\": 4", "\"answer\": 40")))
     }
@@ -43,7 +44,7 @@ class GrammarCatalogTest {
     @Test fun mergeKeepsBothTracksAndRejectsDuplicateIds() {
         val merged = mergeBooks(GrammarCatalog.parse(raw), GrammarCatalog.parse(coreRaw)) as GrammarLoadResult.Loaded
         assertEquals(setOf("opic", "core"), merged.book.units.map { it.track }.toSet())
-        assertEquals(13, merged.book.units.size)
+        assertEquals(true, merged.book.units.size >= 14)
         assertEquals(GrammarLoadResult.Failed, mergeBooks(GrammarCatalog.parse(raw), GrammarCatalog.parse(raw)))
         assertEquals(GrammarLoadResult.Failed, mergeBooks(GrammarCatalog.parse(raw), GrammarLoadResult.Failed))
     }

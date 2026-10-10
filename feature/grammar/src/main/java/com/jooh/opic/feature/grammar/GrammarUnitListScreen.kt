@@ -13,16 +13,16 @@ import androidx.compose.ui.unit.dp
 fun GrammarUnitListScreen(
     units: List<GrammarUnit>, aiStatus: String, onBack: () -> Unit, onUnit: (GrammarUnit) -> Unit,
     dueCount: Int = 0, onReview: () -> Unit = {},
+    // OPIc 문법 | 실전 영문법 (TASK 26) — 선택은 GrammarFlow가 들고 있어 장에 들어갔다 나와도 유지
+    track: String = "opic", onTrack: (String) -> Unit = {},
 ) {
-    // OPIc 문법 | 실전 영문법 (TASK 26)
-    var track by rememberSaveable { mutableStateOf("opic") }
     val shown = units.filter { it.track == track }
     Column {
         Spacer(Modifier.height(8.dp)) // 탭 첫 화면: 오른쪽 위 ≡와 같은 줄 (TASK 25)
         Text("영문법", style = MaterialTheme.typography.headlineSmall)
         SingleChoiceSegmentedButtonRow(Modifier.fillMaxWidth().padding(top = 12.dp)) {
             listOf("opic" to "OPIc 문법", "core" to "실전 영문법").forEachIndexed { i, (id, label) ->
-                SegmentedButton(selected = track == id, onClick = { track = id }, shape = SegmentedButtonDefaults.itemShape(i, 2)) { Text(label) }
+                SegmentedButton(selected = track == id, onClick = { onTrack(id) }, shape = SegmentedButtonDefaults.itemShape(i, 2)) { Text(label) }
             }
         }
         if (dueCount > 0) Button(onClick = onReview, modifier = Modifier.fillMaxWidth().padding(top = 8.dp)) { Text("오늘의 복습 ${dueCount}개 →") }

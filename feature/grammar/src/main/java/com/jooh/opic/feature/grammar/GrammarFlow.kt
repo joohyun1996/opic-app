@@ -6,6 +6,7 @@ import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -32,6 +33,7 @@ fun GrammarFlow(
         GrammarWritingViewModel.Factory(engine, tokenStore, modelDownloaded)
     })
     val state by model.state.collectAsState()
+    var track by rememberSaveable { mutableStateOf("opic") }
     val writingState by writing.state.collectAsState()
     val engineState by engine.state.collectAsState()
     DisposableEffect(writing) { onDispose { writing.cancel() } }
@@ -57,7 +59,7 @@ fun GrammarFlow(
             is GrammarLoadResult.Loaded -> when (state.page) {
                 GrammarPage.LIST -> GrammarUnitListScreen(loaded.book.units,
                     if (engineState is LlmEngineState.Ready) "준비됨" else "준비 필요", onBack, model::openUnit,
-                    dueCount = state.dueCount, onReview = model::startReview)
+                    dueCount = state.dueCount, onReview = model::startReview, track = track, onTrack = { track = it })
                 GrammarPage.EXPLANATION -> state.unit?.let { GrammarExplanationScreen(it, back, model::start) }
                 GrammarPage.EXERCISE -> GrammarExerciseScreen(state, back, model::setInput, model::select, model::submit, model::next)
                 GrammarPage.RESULT -> GrammarResultScreen(state, if (state.reviewMode) model::startReview else model::start, model::list,

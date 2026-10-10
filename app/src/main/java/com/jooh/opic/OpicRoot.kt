@@ -159,7 +159,7 @@ fun OpicRoot(app: OpicApplication) {
                             }
                             val next = wordState.days.firstOrNull { it.total > 0 && it.mastered < it.total }
                             HomeScreen(HomeData(grammarDue, next?.day, next?.mastered ?: 0, next?.total ?: 0, wordState.mastered, wordState.total, recentVideo),
-                                onMenu = openMenu, onGrammarReview = { openTab(Tab.GRAMMAR) }, onWords = { openTab(Tab.WORDS) },
+                                onMenu = openMenu, onGrammarReview = { pendingGrammarReview.value = true; openTab(Tab.GRAMMAR) }, onWords = { openTab(Tab.WORDS) },
                                 onDay = { day -> openTab(Tab.WORDS); nav.navigate("day/$day") }, onMock = { openTab(Tab.SPEAKING) },
                                 onShadowing = { openTab(Tab.SHADOWING) })
                         }
@@ -183,13 +183,15 @@ fun OpicRoot(app: OpicApplication) {
                     navigation(startDestination = "grammar", route = Tab.GRAMMAR.route) {
                         composable("grammar") {
                             val pendingGrammar by pendingGrammarUnit.collectAsState()
+                            val pendingReview by pendingGrammarReview.collectAsState()
                             LaunchedEffect(Unit) { app.whisper.close() }
                             TabRoot(openMenu) {
                                 Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
                                     Column(Modifier.widthIn(max = 430.dp).fillMaxSize().padding(horizontal = 16.dp)) {
                                         GrammarFlow(grammarResult, app.llmEngine, app.hfTokenStore, { ModelCatalog.isDownloaded(app) },
                                             ModelCatalog.config(app).models.first().expectedBytes, back, reviews = app.grammarReviews,
-                                            openUnitId = pendingGrammar, onOpened = { pendingGrammarUnit.value = null })
+                                            openUnitId = pendingGrammar, openReview = pendingReview == true,
+                                            onOpened = { pendingGrammarUnit.value = null; pendingGrammarReview.value = null })
                                     }
                                 }
                             }
@@ -256,6 +258,7 @@ fun OpicRoot(app: OpicApplication) {
 }
 
 /** 메뉴 "스피킹 기록" → 스피킹 탭을 열면서 기록 화면으로. */
+private val pendingGrammarReview = kotlinx.coroutines.flow.MutableStateFlow<Boolean?>(null)
 private val pendingGrammarUnit = kotlinx.coroutines.flow.MutableStateFlow<String?>(null)
 private val pendingSpeakingHistory = kotlinx.coroutines.flow.MutableStateFlow<Boolean?>(null)
 

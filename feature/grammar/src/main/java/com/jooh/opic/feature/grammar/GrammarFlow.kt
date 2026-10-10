@@ -25,6 +25,7 @@ fun GrammarFlow(
     reviews: GrammarReviewStore? = null,
     openUnitId: String? = null,
     onOpened: () -> Unit = {},
+    openReview: Boolean = false,
 ) {
     if (catalog == null) {
         Text("문법 데이터를 불러오는 중…")
@@ -47,6 +48,9 @@ fun GrammarFlow(
         track = unit.track; LastGrammarTrack.value = unit.track
         model.openUnit(unit); model.start(); onOpened()
     }
+    // 홈 "복습 시작" → 바로 오늘의 복습 (TASK 31)
+    LaunchedEffect(openReview) { if (openReview) { model.startReview(); onOpened() } }
+    val sources = remember(catalog) { (catalog as? GrammarLoadResult.Loaded)?.book?.sourceLabels().orEmpty() }
     val back = {
         if (writingState.active) writing.exit()
         else if (!model.back()) onBack()
@@ -70,7 +74,8 @@ fun GrammarFlow(
                     if (engineState is LlmEngineState.Ready) "준비됨" else "준비 필요", onBack, model::openUnit,
                     dueCount = state.dueCount, onReview = model::startReview, track = track, onTrack = { track = it; LastGrammarTrack.value = it })
                 GrammarPage.EXPLANATION -> state.unit?.let { GrammarExplanationScreen(it, back, model::start) }
-                GrammarPage.EXERCISE -> GrammarExerciseScreen(state, back, model::setInput, model::select, model::submit, model::next)
+                GrammarPage.EXERCISE -> GrammarExerciseScreen(state, back, model::setInput, model::select, model::submit, model::next,
+                    source = state.current?.let { sources[it.id] })
                 GrammarPage.RESULT -> GrammarResultScreen(state, if (state.reviewMode) model::startReview else model::start, model::list,
                     onWrite = { state.unit?.let(writing::enter) })
             }

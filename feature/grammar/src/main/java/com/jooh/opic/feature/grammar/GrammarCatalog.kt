@@ -96,3 +96,9 @@ object GrammarCatalog {
         GrammarLoadResult.Failed
     }
 }
+
+/** 문제 id → 출처 ("실전 4장 시제 12개 한눈에", "OPIc 3단원 …") — 복습 화면에 표시 (TASK 31). */
+fun GrammarBook.sourceLabels(): Map<String, String> = units.flatMap { unit ->
+    val label = if (unit.track == "core") "실전 ${unit.order}장 ${unit.title.substringBefore(" — ")}" else "OPIc ${unit.order}단원 ${unit.title}"
+    unit.exercises.map { it.id to label }
+}.toMap()

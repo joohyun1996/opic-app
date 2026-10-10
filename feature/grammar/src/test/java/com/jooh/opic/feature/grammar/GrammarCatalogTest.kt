@@ -53,4 +53,12 @@ class GrammarCatalogTest {
         val ids = (GrammarCatalog.parse(coreRaw) as GrammarLoadResult.Loaded).book.units.map { it.id }.toSet()
         assertEquals(emptySet<String>(), com.jooh.opic.core.common.errorChapterIds() - ids)
     }
+
+    @Test fun sourceLabelsCoverBothTracks() {
+        val book = mergeBooks(GrammarCatalog.parse(raw), GrammarCatalog.parse(coreRaw)).let { (it as GrammarLoadResult.Loaded).book }
+        val labels = book.sourceLabels()
+        assertEquals(book.units.sumOf { it.exercises.size }, labels.size)
+        assertEquals(true, labels.getValue("c4-01").startsWith("실전 4장"))
+        assertEquals(true, labels.getValue("u1-01").startsWith("OPIc 1단원"))
+    }
 }

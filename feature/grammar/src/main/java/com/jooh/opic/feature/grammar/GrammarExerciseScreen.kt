@@ -23,12 +23,14 @@ fun GrammarExerciseScreen(
     onSelect: (Int) -> Unit,
     onSubmit: () -> Unit,
     onNext: () -> Unit,
+    source: String? = null,
 ) {
     val exercise = state.current ?: return
     Column {
         TextButton(onClick = onBack) { Text("← 설명") }
         Column(Modifier.weight(1f).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(14.dp)) {
             Text("${state.index + 1} / ${state.exercises.size}", style = MaterialTheme.typography.labelLarge)
+            if (state.reviewMode && source != null) Text(source, style = MaterialTheme.typography.labelMedium, color = Opic.colors.accent)
             Text(exercise.prompt, style = MaterialTheme.typography.titleMedium)
             if (exercise.kind !in setOf("spot", "structure")) Text(exercise.sentence, style = MaterialTheme.typography.bodyLarge)
             if (exercise.kind in setOf("spot", "structure")) {

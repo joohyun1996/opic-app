@@ -44,18 +44,27 @@ fun PlayerView(id: String, modifier: Modifier = Modifier, onPlayer: (YouTubePlay
     val captionClient = remember(id) { CaptionClient() }
     val html = remember(id) { """
         <!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-        <body style="margin:0;background:black"><style>html,body,#player{width:100%;height:100%}</style><div id="player"></div>
-        <script src="https://www.youtube.com/iframe_api"></script><script>
+        <body style="margin:0;background:black"><div id="player"></div>
+        <script>
         var player;
+        function sizePlayer() {
+          var width = Math.max(1, window.innerWidth);
+          var height = Math.max(1, window.innerHeight);
+          var frame = document.getElementById('player');
+          if (frame) { frame.style.width = width + 'px'; frame.style.height = height + 'px'; }
+          if (player && player.setSize) player.setSize(width, height);
+        }
+        window.addEventListener('resize', sizePlayer);
+        sizePlayer();
         function onYouTubeIframeAPIReady() {
-          player = new YT.Player('player', {height:'100%',width:'100%',videoId:${JSONObject.quote(id)},
+          player = new YT.Player('player', {height:Math.max(1,window.innerHeight),width:Math.max(1,window.innerWidth),videoId:${JSONObject.quote(id)},
             playerVars:{playsinline:1,origin:'https://appassets.androidplatform.net',cc_load_policy:1,cc_lang_pref:'en'},
-            events:{onReady:function(){OpicPlayer.ready(${JSONObject.quote(nonce)})},
+            events:{onReady:function(){sizePlayer();OpicPlayer.ready(${JSONObject.quote(nonce)})},
               onStateChange:function(e){OpicPlayer.state(${JSONObject.quote(nonce)},e.data)},
               onError:function(e){OpicPlayer.error(${JSONObject.quote(nonce)},e.data)}}});
           setInterval(function(){if(player && player.getCurrentTime) OpicPlayer.time(${JSONObject.quote(nonce)},player.getCurrentTime())}, 150);
         }
-        </script></body></html>
+        </script><script src="https://www.youtube.com/iframe_api"></script></body></html>
     """.trimIndent() }
     AndroidView(factory = { context ->
         WebView(context).apply {

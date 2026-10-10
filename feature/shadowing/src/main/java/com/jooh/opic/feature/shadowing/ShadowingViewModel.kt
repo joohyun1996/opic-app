@@ -13,7 +13,8 @@ import androidx.lifecycle.viewModelScope
 import com.jooh.opic.core.common.WordDiff
 import com.jooh.opic.core.common.Cue
 import com.jooh.opic.core.common.compareWords
-import com.jooh.opic.core.common.wordErrorRate
+import com.jooh.opic.core.common.matchRate
+import com.jooh.opic.core.common.werWords
 import com.jooh.opic.core.stt.SttModels
 import com.jooh.opic.core.stt.UserWhisper
 import com.jooh.opic.core.stt.WavDecoder
@@ -32,7 +33,7 @@ data class ShadowState(
     val model: String = "없음", val progress: Int = 0, val busy: Boolean = false,
     val recording: Boolean = false, val recordingLevel: Float = 0f,
     val result: String? = null, val diff: List<WordDiff> = emptyList(),
-    val wer: Double? = null, val message: String? = null,
+    val matchRate: Double? = null, val message: String? = null,
     val captions: List<Cue> = emptyList(), val captionStatus: CaptionStatus = CaptionStatus.NONE,
 )
 enum class CaptionStatus { LOADING, READY, NONE, FAILED }
@@ -129,7 +130,7 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
             message("마이크 권한이 필요합니다"); return
         }
         if (!whisper.ready || state.value.busy || state.value.recording) return
-        update { it.copy(recording = true, recordingLevel = 0f, result = null, diff = emptyList(), wer = null, message = null) }
+        update { it.copy(recording = true, recordingLevel = 0f, result = null, diff = emptyList(), matchRate = null, message = null) }
         recordingJob = viewModelScope.launch(Dispatchers.IO) {
             var recorder: AudioRecord? = null
             try {
@@ -193,13 +194,13 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
                 val audio = withContext(Dispatchers.IO) { WavDecoder.pcm16ToFloat(recordingFile.readBytes()) }
                 val answer = cleanWhisperText(whisper.transcribe(audio, abort).text)
                 if (answer.isBlank()) {
-                    update { it.copy(result = null, diff = emptyList(), wer = null,
+                    update { it.copy(result = null, diff = emptyList(), matchRate = null,
                         message = "말소리가 잘 들리지 않았어요 — 폰을 입에 가까이") }
                     return@launch
                 }
                 val diff = if (reference.isBlank()) emptyList() else compareWords(reference, answer)
-                val wer = if (reference.isBlank()) null else wordErrorRate(reference, answer)
-                update { it.copy(result = answer, diff = diff, wer = wer, message = null) }
+                val rate = if (reference.isBlank()) null else matchRate(diff, werWords(reference).size)
+                update { it.copy(result = answer, diff = diff, matchRate = rate, message = null) }
             } catch (e: Exception) {
                 if (e !is CancellationException) message("받아 적기 실패: ${e.message}")
             } finally { update { it.copy(busy = false) } }

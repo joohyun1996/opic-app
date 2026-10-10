@@ -24,4 +24,11 @@ class ShadowingTest {
         assertTrue(compareWords("", "").isEmpty())
         assertEquals(listOf(WordDiff.Insert("hi")), compareWords("", "hi"))
     }
+
+    @Test fun matchRateStaysInRangeWithExtraWords() {
+        val diff = compareWords("I walk", "I walk with my dog today")
+        assertEquals(1.0, matchRate(diff, 2), 0.0)
+        assertEquals(0.0, matchRate(compareWords("I walk", "you run more words"), 2), 0.0)
+        assertEquals(0.0, matchRate(compareWords("", "extra words"), 0), 0.0)
+    }
 }

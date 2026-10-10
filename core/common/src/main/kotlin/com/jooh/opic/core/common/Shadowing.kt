@@ -26,6 +26,12 @@ sealed interface WordDiff {
     data class Insert(val hyp: String) : WordDiff
 }
 
+/** 원문 단어 중 정확히 일치한 비율. 추가 발화가 많아도 0~1 범위를 유지한다. */
+fun matchRate(diff: List<WordDiff>, referenceWords: Int): Double {
+    if (referenceWords <= 0) return 0.0
+    return (diff.count { it is WordDiff.Match }.toDouble() / referenceWords).coerceIn(0.0, 1.0)
+}
+
 fun compareWords(reference: String, hypothesis: String): List<WordDiff> {
     val a = werWords(reference)
     val b = werWords(hypothesis)

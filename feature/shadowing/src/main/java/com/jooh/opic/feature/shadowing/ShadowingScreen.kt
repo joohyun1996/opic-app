@@ -120,7 +120,12 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit)
             }) { Text("내 목소리 듣기") }
             state.result?.let { result ->
                 Text("받아 적은 말: $result")
-                state.wer?.let { Text("일치율 ${"%.1f".format((1 - it) * 100)}%") }
+                state.matchRate?.let { Text("일치율 ${"%.1f".format(it * 100)}%") }
+                if (state.matchRate != null) Text(
+                    "더 말한 단어 ${state.diff.count { it is WordDiff.Insert }}개 · " +
+                        "빠뜨린 단어 ${state.diff.count { it is WordDiff.Delete }}개 · " +
+                        "틀린 단어 ${state.diff.count { it is WordDiff.Substitute }}개"
+                )
                 state.diff.forEach { item -> when (item) {
                     is WordDiff.Match -> Text(item.word)
                     is WordDiff.Substitute -> Text("${item.ref} → ${item.hyp}", color = Color.Red)

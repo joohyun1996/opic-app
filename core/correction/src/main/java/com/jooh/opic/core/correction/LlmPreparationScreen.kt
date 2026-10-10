@@ -90,3 +90,6 @@ fun LlmPreparationScreen(
         }
     }
 }
+
+/** 토큰 저장 (문법 영작·스피킹 공용, TASK 38). 빈 값이거나 저장소를 열 수 없으면 false. */
+fun saveHfToken(store: com.jooh.opic.core.llm.HfTokenStore, token: String): Boolean = token.isNotBlank() && store.setToken(token)

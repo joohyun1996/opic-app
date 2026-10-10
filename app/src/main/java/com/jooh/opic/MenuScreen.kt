@@ -8,7 +8,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import android.widget.Toast
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.jooh.opic.core.stt.SttModels
 import com.jooh.opic.core.ui.ThemeMode
+import com.jooh.opic.core.ui.UiSettings
+import com.jooh.opic.feature.words.WordsViewModel
 
 /** 전체 메뉴 (TASK 24): 학습 · 설정 · 데이터 · 앱 정보. */
 @Composable
@@ -86,4 +91,36 @@ private fun <T> ChoiceDialog(title: String, options: List<Pair<String, T>>, curr
             }
         }
     }, confirmButton = { TextButton(onClick = onDismiss) { Text("닫기") } })
+}
+
+/** 메뉴 화면 연결 (TASK 38: OpicRoot에서 분리). 학습 알림은 켤 때 권한을 묻고, 거부하면 꺼짐으로 둔다 (TASK 34). */
+@Composable
+internal fun MenuRoute(app: OpicApplication, themeMode: ThemeMode, speechRate: Float, onClose: () -> Unit, navigate: (String) -> Unit,
+    onSpeakingHistory: () -> Unit, onModels: () -> Unit, onBackup: () -> Unit) {
+                    var reminderHour by remember { mutableStateOf(ReminderSettings.hour(app)) }
+            var pendingHour by remember { mutableStateOf<Int?>(null) }
+            val permission = androidx.activity.compose.rememberLauncherForActivityResult(
+                androidx.activity.result.contract.ActivityResultContracts.RequestPermission()) { granted ->
+                val hour = pendingHour.takeIf { granted }
+                ReminderSettings.set(app, hour); reminderHour = hour
+                if (!granted) Toast.makeText(app, "알림 권한이 없어 알림을 켜지 않았어요", Toast.LENGTH_LONG).show()
+            }
+            val onReminder: (Int?) -> Unit = { hour ->
+                if (hour == null || ReminderSettings.canNotify(app)) { ReminderSettings.set(app, hour); reminderHour = hour }
+                else { pendingHour = hour; permission.launch(android.Manifest.permission.POST_NOTIFICATIONS) }
+            }
+            val words: WordsViewModel = viewModel(factory = remember(app) { WordsViewModel.Factory(app.database, app.currentLanguage) })
+            val wordState by words.state.collectAsState()
+            LaunchedEffect(Unit) { words.refresh() }
+            MenuScreen(
+                wrongCount = wordState.wrong,
+                gemmaStatus = gemmaStatus(app), whisperStatus = if (SttModels.isDownloaded(app.whisper.model)) "받음" else "없음",
+                themeMode = themeMode, speechRate = speechRate, version = BuildConfig.VERSION_NAME,
+                onClose = onClose, onWrong = { navigate("wrong") }, onStats = { navigate("stats") },
+                reminderHour = reminderHour, onReminder = onReminder,
+                onSpeakingHistory = onSpeakingHistory,
+                onModels = onModels,
+                onTheme = { UiSettings.setTheme(app, it) }, onSpeechRate = { UiSettings.setSpeechRate(app, it) },
+                onBackup = onBackup,
+            )
 }

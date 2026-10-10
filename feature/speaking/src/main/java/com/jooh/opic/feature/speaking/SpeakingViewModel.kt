@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.jooh.opic.core.common.AnswerTemplates
+import com.jooh.opic.core.correction.saveHfToken
 import com.jooh.opic.core.common.EditableWord
 import com.jooh.opic.core.common.SpeakingCatalog
 import com.jooh.opic.core.database.MockSummaryRow
@@ -124,6 +125,12 @@ class SpeakingViewModel(
     private val history: SpeakingDao? = null,
     val templates: AnswerTemplates? = null,
 ) : AndroidViewModel(app) {
+    /** 생성자 인자가 많아 앱이 만드는 방법만 넘긴다 (TASK 38). */
+    class Factory(private val create: () -> SpeakingViewModel) : androidx.lifecycle.ViewModelProvider.Factory {
+        @Suppress("UNCHECKED_CAST")
+        override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T = create() as T
+    }
+
     private val mutableLlm = MutableStateFlow<OnDeviceLlmEngine?>(null)
     /** 교정을 열었을 때만 만든다 (Whisper와 동시 적재 금지). */
     val llm: StateFlow<OnDeviceLlmEngine?> = mutableLlm.asStateFlow()
@@ -403,7 +410,7 @@ class SpeakingViewModel(
     }
     fun closeCorrection() { cancelCorrection(); mutable.update { it.copy(correctionOpen = false) } }
     fun saveToken(token: String): Boolean {
-        if (token.isBlank() || !tokenStore.setToken(token)) return false
+        if (!saveHfToken(tokenStore, token)) return false
         mutable.update { it.copy(hasToken = true) }
         return true
     }

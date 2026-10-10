@@ -55,6 +55,12 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
     private var transcriptionJob: Job? = null
     private val abort = AtomicBoolean(false)
     private val captionClient = CaptionClient(language.code)
+
+    class Factory(private val app: Application, private val whisper: UserWhisper, private val beforeLoad: () -> Unit,
+        private val language: StudyLanguage, private val history: ShadowingAttemptDao?) : androidx.lifecycle.ViewModelProvider.Factory {
+        @Suppress("UNCHECKED_CAST")
+        override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T = ShadowingViewModel(app, whisper, beforeLoad, language, history) as T
+    }
     private var captionJob: Job? = null
     private var captionRequest = 0L
     private var playerCaptionKind: String? = null

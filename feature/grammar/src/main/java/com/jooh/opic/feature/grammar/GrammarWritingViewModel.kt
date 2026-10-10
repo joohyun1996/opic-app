@@ -64,7 +64,7 @@ class GrammarWritingViewModel(
     }
 
     fun saveToken(token: String): Boolean {
-        if (token.isBlank() || !tokenStore.setToken(token)) return false
+        if (!saveHfToken(tokenStore, token)) return false
         mutableState.update { it.copy(hasToken = true) }
         return true
     }

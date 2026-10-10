@@ -43,3 +43,20 @@
 - 다음에 이어서 할 첫 단계: `docs/tasks/38-structure-cleanup/TASK.md`와 이 HANDOFF를 확인한 뒤 `OpicRoot.kt` 및 관련 ViewModel 팩토리 구조를 정리.
 - 확인 안 된 것: AC1~AC5 완료 여부, 실기기 동작, 전체 테스트·린트·release 빌드.
 - 중단 이유: 5시간 사용량이 18%로 떨어져 AGENTS.md의 20% 중단 규칙 적용. 오후 9:31 초기화 예정.
+
+## 이어서 완료 (2026-10-10, Claude — GPT 사용량 부족으로 대신 구현)
+- base: `5b3c286` → 이 커밋
+- OpicRoot.kt 372 → 240줄 (AC3)
+  - `AppDialogs.kt`(모델·백업 다이얼로그, gemmaStatus), `Navigation.kt`(Tab·TabRoot·safeBack), `MenuScreen.kt`의 `MenuRoute`(메뉴 연결·알림 권한)로 분리
+- `pending*` 전역 3개 → `TabRequest`(sealed) + `tabRequest` 하나
+- `ShadowingViewModel.Factory`, `SpeakingViewModel.Factory` (스피킹은 인자가 13개라 생성 람다를 받는 형태)
+- 토큰 저장 공용 함수 `saveHfToken` (core/correction/LlmPreparationScreen.kt), 문법 영작·스피킹 ViewModel이 사용
+- AC2: main 코드의 트랙 문자열은 `GrammarTracks` 정의에만 있음 (grep 확인)
+- 검증: `./gradlew test lint :app:assembleRelease` 통과. 실기기에서 메뉴 → 스피킹 기록(`menu-to-speaking-history.png`), 메뉴 → 학습 알림 선택 창, 메뉴 → 학습 통계 확인
+- 미확인: 교정 카드 → 장 이동(Gemma 필요), 홈 "복습 시작"(복습 대기 0)
+
+## ⚠️ 발견: 기기의 앱 데이터가 초기화되어 있음 (이 TASK와 무관)
+- `dumpsys package`: 사용자 0의 `firstInstallTime=2026-10-10 16:52:03` → 16:29 이후 앱이 **삭제 후 새로 설치**되었다 (`install -r`이면 firstInstallTime이 바뀌지 않음)
+- 16:24 통계 화면에는 스피킹 4개·문법 오답 3회가 있었으나, 지금은 모두 0이다. 이 시각은 TASK 34 커밋(16:41~16:42) 직후다
+- 04192d4의 "토큰 복호화 오류로 앱 종료"도 같은 원인으로 보인다: 앱을 다시 설치하면 Android 자동 백업이 shared_prefs(암호화 토큰 파일)를 복원하지만, Keystore 키는 복원되지 않아 복호화에 실패한다
+- 후속 제안: 매니페스트에 `android:allowBackup="false"` 또는 암호화 prefs를 백업에서 제외하는 규칙을 넣는다 (별도 TASK, 사용자 결정)

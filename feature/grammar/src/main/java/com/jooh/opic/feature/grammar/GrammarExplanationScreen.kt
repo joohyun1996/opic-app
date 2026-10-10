@@ -83,9 +83,9 @@ private fun Breakdown(item: GrammarBreakdown) {
 }
 
 @Composable
-fun GrammarExplanationScreen(unit: GrammarUnit, onBack: () -> Unit, onStart: () -> Unit) {
+fun GrammarExplanationScreen(unit: GrammarUnit, onBack: () -> Unit, onStart: () -> Unit, backLabel: String = "← 단원 목록") {
     Column {
-        TextButton(onClick = onBack) { Text("← 단원 목록") }
+        TextButton(onClick = onBack) { Text(backLabel) }
         Column(Modifier.weight(1f).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(16.dp)) {
             Text(unit.title, style = MaterialTheme.typography.headlineSmall)
             Text(unit.explanation.summary, style = MaterialTheme.typography.bodyLarge)

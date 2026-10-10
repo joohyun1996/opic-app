@@ -23,6 +23,8 @@ fun GrammarFlow(
     modelBytes: Long,
     onBack: () -> Unit,
     reviews: GrammarReviewStore? = null,
+    openUnitId: String? = null,
+    onOpened: () -> Unit = {},
 ) {
     if (catalog == null) {
         Text("문법 데이터를 불러오는 중…")
@@ -39,6 +41,12 @@ fun GrammarFlow(
     val engineState by engine.state.collectAsState()
     DisposableEffect(writing) { onDispose { writing.cancel() } }
     LaunchedEffect(Unit) { writing.prepareExisting(); model.refreshDue() }
+    // 다른 화면(교정 카드)에서 "문제 풀기"로 들어오면 그 장 문제를 바로 연다 (TASK 29)
+    LaunchedEffect(openUnitId, catalog) {
+        val unit = (catalog as? GrammarLoadResult.Loaded)?.book?.units?.firstOrNull { it.id == openUnitId } ?: return@LaunchedEffect
+        track = unit.track; LastGrammarTrack.value = unit.track
+        model.openUnit(unit); model.start(); onOpened()
+    }
     val back = {
         if (writingState.active) writing.exit()
         else if (!model.back()) onBack()

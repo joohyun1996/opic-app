@@ -1,6 +1,6 @@
 # TASK: 교정 결과에서 해당 문법 장으로 바로 가기
 
-> 작성: Claude · 승인: [ ] 사용자
+> 작성·구현: Claude · 승인: [x] 사용자 (2026-10-10, "29~34 ㄱㄱㄱ")
 > 경로: docs/tasks/29-correction-grammar-link/TASK.md
 
 ## 목표
@@ -32,12 +32,12 @@
 - 이동하면 문법 탭의 실전 영문법 트랙과 그 장 설명을 연다. 뒤로 가면 원래 스피킹 화면으로 돌아온다
 
 ## 수용 기준
-- [ ] AC1: `errorTypeChapters("tense")`는 `["c4","c5"]`를 반환한다
-- [ ] AC2: `errorTypeChapters("word_choice")`와 모르는 값은 빈 목록을 반환한다
-- [ ] AC3: 매핑된 모든 id가 grammar-core.json에 존재한다 (테스트)
-- [ ] AC4: 콜백이 null이면 버튼이 보이지 않는다 (기존 호출처 동작 유지)
+- [x] AC1: `errorTypeChapters("tense")`는 `["c4","c5"]`를 반환한다
+- [x] AC2: `errorTypeChapters("word_choice")`와 모르는 값은 빈 목록을 반환한다
+- [x] AC3: 매핑된 모든 id가 grammar-core.json에 존재한다 (테스트)
+- [x] AC4: 콜백이 null이면 버튼이 보이지 않는다 (기존 호출처 동작 유지)
 - [ ] AC5: 실기기에서 교정 카드의 버튼을 누르면 장 설명이 열리고, 뒤로 가기로 스피킹에 돌아온다
-- [ ] AC6: `./gradlew test lint :app:assembleRelease` 통과
+- [x] AC6: `./gradlew test lint :app:assembleRelease` 통과
 
 ## 제약 / 주의
 - DB·엔티티 변경 없음
@@ -45,3 +45,9 @@
 
 ## 범위 밖
 - 오류 기록 저장·통계 (TASK 30)
+
+## 구현 메모
+- 매핑 `errorTypeChapters(type, language)` (core/common/Writing.kt) — 언어별 표, 새 언어는 표만 추가
+- 교정 카드는 `LocalGrammarLink`(CompositionLocal)가 있을 때만 버튼 표시 → 스피킹·영작 호출처 수정 없음
+- 앱: 최상위 경로 `grammarUnit/{id}`에서 장 설명만 띄움, 뒤로 가면 원래 화면. "문제 풀기"는 문법 탭으로 가서 그 장 문제를 바로 시작
+- AC5(실기기, Gemma 교정 필요)는 미확인

@@ -27,6 +27,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.jooh.opic.core.llm.ModelCatalog
 import com.jooh.opic.feature.grammar.GrammarFlow
+import com.jooh.opic.feature.grammar.GrammarExplanationScreen
+import com.jooh.opic.core.correction.GrammarLink
+import com.jooh.opic.core.correction.LocalGrammarLink
 import com.jooh.opic.feature.shadowing.ShadowingScreen
 import com.jooh.opic.feature.shadowing.ShadowingViewModel
 import com.jooh.opic.feature.speaking.SpeakingScreen
@@ -122,7 +125,22 @@ fun OpicRoot(app: OpicApplication) {
             }
         }) { padding ->
             Box(Modifier.fillMaxSize().padding(padding).consumeWindowInsets(padding)) {
+                // 교정 카드 → 실전 영문법 장 설명 (TASK 29). 뒤로 가면 원래 화면으로 돌아온다
+                val coreUnits = (grammarResult as? GrammarLoadResult.Loaded)?.book?.units.orEmpty().filter { it.track == "core" }.associateBy { it.id }
+                val grammarLink = remember(coreUnits) { GrammarLink(title = { id -> coreUnits[id]?.let { "${it.order}장 ${it.title.substringBefore(" — ")}" } },
+                    open = { id -> nav.navigate("grammarUnit/$id") }) }
+                CompositionLocalProvider(LocalGrammarLink provides grammarLink) {
                 NavHost(navController = nav, startDestination = Tab.HOME.route) {
+                    composable("grammarUnit/{id}") { entry ->
+                        val id = entry.arguments?.getString("id")
+                        coreUnits[id]?.let { unit ->
+                            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
+                                Column(Modifier.widthIn(max = 430.dp).fillMaxSize().padding(horizontal = 16.dp, vertical = 8.dp)) {
+                                    GrammarExplanationScreen(unit, back, onStart = { pendingGrammarUnit.value = unit.id; openTab(Tab.GRAMMAR) }, backLabel = "← 돌아가기")
+                                }
+                            }
+                        } ?: Text("문법 장을 찾지 못했습니다")
+                    }
                     navigation(startDestination = "home", route = Tab.HOME.route) {
                         composable("home") {
                             // 홈에 들어올 때마다 실제 데이터를 다시 센다
@@ -164,12 +182,14 @@ fun OpicRoot(app: OpicApplication) {
                     }
                     navigation(startDestination = "grammar", route = Tab.GRAMMAR.route) {
                         composable("grammar") {
+                            val pendingGrammar by pendingGrammarUnit.collectAsState()
                             LaunchedEffect(Unit) { app.whisper.close() }
                             TabRoot(openMenu) {
                                 Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
                                     Column(Modifier.widthIn(max = 430.dp).fillMaxSize().padding(horizontal = 16.dp)) {
                                         GrammarFlow(grammarResult, app.llmEngine, app.hfTokenStore, { ModelCatalog.isDownloaded(app) },
-                                            ModelCatalog.config(app).models.first().expectedBytes, back, reviews = app.grammarReviews)
+                                            ModelCatalog.config(app).models.first().expectedBytes, back, reviews = app.grammarReviews,
+                                            openUnitId = pendingGrammar, onOpened = { pendingGrammarUnit.value = null })
                                     }
                                 }
                             }
@@ -227,6 +247,7 @@ fun OpicRoot(app: OpicApplication) {
                         )
                     }
                 }
+                }
             }
         }
         if (backupOpen) BackupDialog(app) { backupOpen = false }
@@ -235,6 +256,7 @@ fun OpicRoot(app: OpicApplication) {
 }
 
 /** 메뉴 "스피킹 기록" → 스피킹 탭을 열면서 기록 화면으로. */
+private val pendingGrammarUnit = kotlinx.coroutines.flow.MutableStateFlow<String?>(null)
 private val pendingSpeakingHistory = kotlinx.coroutines.flow.MutableStateFlow<Boolean?>(null)
 
 /** 탭 첫 화면 오른쪽 위에 ≡ 전체 메뉴 버튼을 얹는다. */

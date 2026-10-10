@@ -48,4 +48,9 @@ class GrammarCatalogTest {
         assertEquals(GrammarLoadResult.Failed, mergeBooks(GrammarCatalog.parse(raw), GrammarCatalog.parse(raw)))
         assertEquals(GrammarLoadResult.Failed, mergeBooks(GrammarCatalog.parse(raw), GrammarLoadResult.Failed))
     }
+
+    @Test fun errorChapterLinksExistInCoreGrammar() {
+        val ids = (GrammarCatalog.parse(coreRaw) as GrammarLoadResult.Loaded).book.units.map { it.id }.toSet()
+        assertEquals(emptySet<String>(), com.jooh.opic.core.common.errorChapterIds() - ids)
+    }
 }

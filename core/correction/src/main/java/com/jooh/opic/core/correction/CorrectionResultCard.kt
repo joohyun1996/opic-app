@@ -12,7 +12,12 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.jooh.opic.core.common.CorrectionError
+import com.jooh.opic.core.common.errorTypeChapters
 import com.jooh.opic.core.common.errorTypeGuide
+
+/** 교정 카드 → 문법 장 이동 (TASK 29). 앱이 제공하지 않으면(null) 버튼을 숨긴다. title은 장 id → "4장 시제", 없는 장은 null. */
+class GrammarLink(val title: (String) -> String?, val open: (String) -> Unit)
+val LocalGrammarLink = staticCompositionLocalOf<GrammarLink?> { null }
 
 @Composable
 fun CorrectionResultCard(outcome: CorrectionOutcome, onRetry: () -> Unit, retryEnabled: Boolean) {
@@ -32,6 +37,11 @@ fun CorrectionResultCard(outcome: CorrectionOutcome, onRetry: () -> Unit, retryE
                         Text(guide.name, style = MaterialTheme.typography.titleMedium)
                         Text(guide.explanation, style = MaterialTheme.typography.bodyLarge)
                         Text("${error.original} → ${error.fix}")
+                        LocalGrammarLink.current?.let { link ->
+                            errorTypeChapters(error.type).forEach { id ->
+                                link.title(id)?.let { title -> OutlinedButton(onClick = { link.open(id) }) { Text("관련 문법: $title") } }
+                            }
+                        }
                         var expanded by remember { mutableStateOf(false) }
                         TextButton(onClick = { expanded = !expanded }) { Text(if (expanded) "AI 설명 접기" else "AI 설명 보기") }
                         if (expanded) {

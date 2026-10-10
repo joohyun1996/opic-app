@@ -30,4 +30,11 @@ class WritingTest {
         assertEquals(5, sentencesToCorrect(input).size)
         assertEquals(15, sentencesToCorrect(input, 15).size)
     }
+
+    @Test fun errorTypesMapToGrammarChapters() {
+        assertEquals(listOf("c4", "c5"), errorTypeChapters("tense"))
+        assertEquals(emptyList<String>(), errorTypeChapters("word_choice"))
+        assertEquals(emptyList<String>(), errorTypeChapters("unknown"))
+        assertEquals(emptyList<String>(), errorTypeChapters("tense", language = "xx"))
+    }
 }

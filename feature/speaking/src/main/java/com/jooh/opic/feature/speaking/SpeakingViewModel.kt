@@ -8,6 +8,9 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.jooh.opic.core.common.AnswerTemplates
+import com.jooh.opic.core.common.AnswerFeedback
+import com.jooh.opic.core.common.buildAnswerFeedbackPrompt
+import com.jooh.opic.core.common.parseAnswerFeedback
 import com.jooh.opic.core.correction.saveHfToken
 import com.jooh.opic.core.common.EditableWord
 import com.jooh.opic.core.common.SpeakingCatalog
@@ -74,6 +77,10 @@ enum class ModelState { MISSING, DOWNLOADING, NOT_LOADED, LOADING, READY, FAILED
 
 data class SpeakingState(
     val page: SpeakingPage = SpeakingPage.TOPICS,
+    /** 답변 내용·구조 피드백 (Gemma, 답변 전체 1회) */
+    val feedbackLoading: Boolean = false,
+    val feedback: AnswerFeedback? = null,
+    val feedbackFailed: Boolean = false,
     /** 답변 템플릿 상세에서 보는 유형 (TASK 33) */
     val templateType: String? = null,
     val topicId: String? = null,
@@ -447,7 +454,25 @@ class SpeakingViewModel(
             } finally { mutable.update { it.copy(correcting = false) } }
         }
     }
-    fun cancelCorrection() { correctionJob?.cancel(); mutable.update { it.copy(correcting = false) } }
+    /** 답변 전체를 유형별 템플릿 단계 기준으로 평가한다. 문법 교정과 같은 엔진·준비 상태를 쓴다. */
+    fun startFeedback() {
+        val engine = mutableLlm.value ?: return
+        val old = state.value
+        val question = old.question ?: return
+        val answer = editedText(old.words)
+        if (old.correcting || old.feedbackLoading || answer.isBlank() || engine.state.value !is LlmEngineState.Ready) return
+        val steps = templates?.templates?.firstOrNull { it.type == question.type }?.steps.orEmpty().map { it.name }
+        mutable.update { it.copy(feedbackLoading = true, feedback = null, feedbackFailed = false) }
+        correctionJob = viewModelScope.launch(Dispatchers.IO) {
+            try {
+                val raw = engine.generate(buildAnswerFeedbackPrompt(question.en, steps, answer), timeoutMs = 180_000).getOrNull()
+                val parsed = raw?.let { parseAnswerFeedback(it, steps) }
+                mutable.update { it.copy(feedback = parsed, feedbackFailed = parsed == null) }
+            } finally { mutable.update { it.copy(feedbackLoading = false) } }
+        }
+    }
+
+    fun cancelCorrection() { correctionJob?.cancel(); mutable.update { it.copy(correcting = false, feedbackLoading = false) } }
 
     fun cancelTranscribe() { abort.set(true); transcribeJob?.cancel(); mutable.update { it.copy(transcribing = false, message = "취소됨") } }
 

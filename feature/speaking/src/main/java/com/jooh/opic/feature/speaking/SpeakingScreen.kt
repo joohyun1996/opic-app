@@ -310,8 +310,9 @@ private fun CorrectionSection(model: SpeakingViewModel, state: SpeakingState) {
         Text("문법 교정", Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
         TextButton(onClick = model::closeCorrection) { Text("닫기") }
     }
+    FeedbackSection(model, state)
     if (state.correctionTotal == 0 && !state.correcting) {
-        Button(onClick = model::startCorrection, modifier = Modifier.fillMaxWidth()) { Text("교정 시작 (최대 ${MAX_CORRECTION_SENTENCES}문장)") }
+        Button(onClick = model::startCorrection, enabled = !state.feedbackLoading, modifier = Modifier.fillMaxWidth()) { Text("문장별 문법 교정 (최대 ${MAX_CORRECTION_SENTENCES}문장)") }
     }
     if (state.correcting) {
         Text("${state.corrections.size} / ${state.correctionTotal} 문장 · 문장당 15초 안팎")
@@ -427,5 +428,34 @@ private fun TemplatePage(model: SpeakingViewModel, state: SpeakingState) {
         val titles = t.chapters.mapNotNull { id -> link.title(id)?.let { id to it } }
         if (titles.isNotEmpty()) Text("관련 문법", style = MaterialTheme.typography.titleMedium)
         titles.forEach { (id, title) -> OutlinedButton(onClick = { link.open(id) }, modifier = Modifier.fillMaxWidth()) { Text(title) } }
+    }
+}
+
+/** 답변 전체 내용·구조 피드백 (2026-10-10). */
+@Composable
+private fun FeedbackSection(model: SpeakingViewModel, state: SpeakingState) {
+    val f = state.feedback
+    if (f == null && !state.feedbackLoading) {
+        OutlinedButton(onClick = model::startFeedback, enabled = !state.correcting, modifier = Modifier.fillMaxWidth()) { Text("답변 구조·내용 피드백 (1분 안팎)") }
+        if (state.feedbackFailed) Text("피드백을 만들지 못했어요. 다시 시도해 보세요", color = MaterialTheme.colorScheme.error)
+        return
+    }
+    if (state.feedbackLoading) {
+        Text("답변 전체를 살펴보는 중…")
+        LinearProgressIndicator(Modifier.fillMaxWidth())
+        TextButton(onClick = model::cancelCorrection) { Text("취소") }
+        return
+    }
+    f ?: return
+    Card(Modifier.fillMaxWidth()) {
+        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            Text("답변 피드백 · ${"★".repeat(f.score)}${"☆".repeat(5 - f.score)}", style = MaterialTheme.typography.titleMedium)
+            if (!f.onTopic) Text("질문과 다른 이야기를 한 부분이 있어요", color = Opic.colors.warning)
+            if (f.missingSteps.isNotEmpty()) Text("빠진 단계: ${f.missingSteps.joinToString(", ")}", color = Opic.colors.warning)
+            f.strengths.forEach { Text("👍 $it") }
+            f.improvements.forEach { Text("→ $it") }
+            f.betterOpening?.let { Text("이렇게 시작해 보세요: $it", color = Opic.colors.success) }
+            Text("AI가 쓴 평가라 틀릴 수 있어요", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
     }
 }

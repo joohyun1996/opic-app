@@ -45,4 +45,14 @@ interface UserWordDao {
         update(current.copy(correctCount = current.correctCount + 1, wrongCount = current.wrongCount - 1, lastStudiedAt = now))
         return true
     }
+
+    // ---- 통계 (TASK 39): 필요한 열만 읽는다 ----
+    @Query("SELECT u.lastStudiedAt FROM user_words u JOIN words w ON w.id = u.wordId WHERE w.language = :language AND u.lastStudiedAt IS NOT NULL")
+    suspend fun studiedAt(language: String): List<Long>
+
+    @Query("SELECT COUNT(*) FROM user_words u JOIN words w ON w.id = u.wordId WHERE w.language = :language AND u.correctCount >= 3")
+    suspend fun masteredCount(language: String): Int
+
+    @Query("SELECT w.word AS name, u.wrongCount AS count FROM user_words u JOIN words w ON w.id = u.wordId WHERE w.language = :language AND u.wrongCount > 0 ORDER BY u.wrongCount DESC, w.word LIMIT :limit")
+    suspend fun mostWrong(language: String, limit: Int = 5): List<KeyCount>
 }

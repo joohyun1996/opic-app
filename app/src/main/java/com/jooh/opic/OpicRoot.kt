@@ -127,7 +127,6 @@ fun OpicRoot(app: OpicApplication) {
                             val wordState by words.state.collectAsState()
                             var grammarDue by remember { mutableStateOf(0) }
                             var recentVideo by remember { mutableStateOf<String?>(null) }
-                            LaunchedEffect(importResult) { words.refresh() }
                             LaunchedEffect(grammarResult) {
                                 val book = (grammarResult as? GrammarLoadResult.Loaded)?.book ?: return@LaunchedEffect
                                 grammarDue = runCatching { app.grammarReviews.dueExercises(book).size }.getOrDefault(0)

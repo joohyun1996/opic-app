@@ -111,7 +111,6 @@ internal fun MenuRoute(app: OpicApplication, themeMode: ThemeMode, speechRate: F
             }
             val words: WordsViewModel = viewModel(factory = remember(app) { WordsViewModel.Factory(app.database, app.currentLanguage) })
             val wordState by words.state.collectAsState()
-            LaunchedEffect(Unit) { words.refresh() }
             MenuScreen(
                 wrongCount = wordState.wrong,
                 gemmaStatus = gemmaStatus(app), whisperStatus = if (SttModels.isDownloaded(app.whisper.model)) "받음" else "없음",

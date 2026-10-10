@@ -15,11 +15,11 @@
 | `core/database/src/test/...`, `feature/analysis/src/test/...` | 생성 | 쿼리 결과가 기존 loadStats 결과와 같은지 |
 
 ## 수용 기준
-- [ ] AC1: 같은 테스트 데이터에서 새 loadStats와 기존 계산 결과(연속일·7일 막대·상위 5개·평균)가 같다
-- [ ] AC2: 통계 계산이 speaking_answers의 transcript·editedText 열을 읽지 않는다
-- [ ] AC3: 모든 새 쿼리에 language 조건이 있다
-- [ ] AC4: 스키마 변경·Migration 없음 (인덱스가 필요하면 멈추고 묻기)
-- [ ] AC5: `./gradlew test lint :app:assembleRelease` 통과, 통계 화면 실기기 스크린샷
+- [x] AC1: 같은 테스트 데이터에서 새 loadStats와 기존 계산 결과(연속일·7일 막대·상위 5개·평균)가 같다
+- [x] AC2: 통계 계산이 speaking_answers의 transcript·editedText 열을 읽지 않는다
+- [x] AC3: 모든 새 쿼리에 language 조건이 있다
+- [x] AC4: 스키마 변경·Migration 없음 (인덱스가 필요하면 멈추고 묻기)
+- [x] AC5: `./gradlew test lint :app:assembleRelease` 통과, 통계 화면 실기기 스크린샷
 
 ## 범위 밖
 - 통계 화면 디자인

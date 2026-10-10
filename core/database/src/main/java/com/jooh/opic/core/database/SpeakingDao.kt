@@ -29,4 +29,11 @@ interface SpeakingDao {
 
     @Query("SELECT COUNT(*) FROM speaking_answers WHERE language = :language AND createdAt = :createdAt AND questionId = :questionId")
     suspend fun countSame(language: String, createdAt: Long, questionId: String): Int
+
+    // ---- 통계 (TASK 39): transcript·editedText는 읽지 않는다 ----
+    @Query("SELECT createdAt FROM speaking_answers WHERE language = :language")
+    suspend fun createdAt(language: String): List<Long>
+
+    @Query("SELECT wordsPerMinute, fillerCount FROM speaking_answers WHERE language = :language ORDER BY createdAt DESC LIMIT :limit")
+    suspend fun recentPace(language: String, limit: Int = 10): List<PaceRow>
 }

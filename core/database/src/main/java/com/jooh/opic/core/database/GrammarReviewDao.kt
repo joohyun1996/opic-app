@@ -48,4 +48,14 @@ interface GrammarReviewDao {
         else update(existing.copy(stage = schedule.stage, dueEpochDay = schedule.dueEpochDay,
             wrongCount = existing.wrongCount + if (firstTryCorrect) 0 else 1, lastStudiedAt = now))
     }
+
+    // ---- 통계 (TASK 39) ----
+    @Query("SELECT lastStudiedAt FROM grammar_reviews WHERE language = :language")
+    suspend fun studiedAt(language: String): List<Long>
+
+    @Query("SELECT unitId AS name, SUM(wrongCount) AS count FROM grammar_reviews WHERE language = :language GROUP BY unitId HAVING SUM(wrongCount) > 0 ORDER BY count DESC, unitId LIMIT :limit")
+    suspend fun mostWrongUnits(language: String, limit: Int = 5): List<KeyCount>
+
+    @Query("SELECT COUNT(*) FROM grammar_reviews WHERE language = :language AND dueEpochDay <= :today")
+    suspend fun dueCount(language: String, today: Long): Int
 }

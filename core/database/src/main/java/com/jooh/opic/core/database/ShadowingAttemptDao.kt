@@ -19,4 +19,11 @@ interface ShadowingAttemptDao {
 
     @Query("SELECT COUNT(*) FROM shadowing_attempts WHERE language = :language AND createdAt = :createdAt AND videoId = :videoId")
     suspend fun countSame(language: String, createdAt: Long, videoId: String): Int
+
+    // ---- 통계 (TASK 39) ----
+    @Query("SELECT createdAt FROM shadowing_attempts WHERE language = :language")
+    suspend fun createdAt(language: String): List<Long>
+
+    @Query("SELECT AVG(matchRate) FROM shadowing_attempts WHERE language = :language")
+    suspend fun averageMatch(language: String): Double?
 }

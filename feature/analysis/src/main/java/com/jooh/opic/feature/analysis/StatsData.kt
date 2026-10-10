@@ -1,10 +1,8 @@
 package com.jooh.opic.feature.analysis
 
 import com.jooh.opic.core.common.DailyCount
-import com.jooh.opic.core.common.WORDS_PER_DAY
 import com.jooh.opic.core.common.recentDailyCounts
 import com.jooh.opic.core.common.studyStreak
-import com.jooh.opic.core.common.topByCount
 import com.jooh.opic.core.database.OpicDatabase
 import java.time.Instant
 import java.time.ZoneId
@@ -21,25 +19,26 @@ data class StatsData(
     val empty: Boolean get() = week.all { it.count == 0 } && wordsMastered == 0 && speakingCount == 0 && shadowingCount == 0 && grammarWrong.isEmpty()
 }
 
-/** 기존 읽기 쿼리만 써서 집계한다 (스키마 변경 없음). user_words는 마지막 학습 시각만 있어 "그날 공부한 단어 수"로 센다. */
+/**
+ * 집계는 SQL로, 날짜 변환(기기 시간대)만 Kotlin에서 한다 (TASK 39). 큰 열(답변 원문 등)은 읽지 않는다.
+ * user_words는 마지막 학습 시각만 있어 "마지막으로 그날 공부한 단어 수"로 센다.
+ */
 suspend fun loadStats(db: OpicDatabase, language: String, today: Long, zone: ZoneId = ZoneId.systemDefault()): StatsData {
     fun day(ms: Long) = Instant.ofEpochMilli(ms).atZone(zone).toLocalDate().toEpochDay()
-    val words = db.userWordDao().backupRows(language)
-    val reviews = db.grammarReviewDao().all(language)
-    val speaking = db.speakingDao().all(language)
-    val shadowing = db.shadowingAttemptDao().all(language)
-    val activity = words.mapNotNull { it.lastStudiedAt?.let(::day) } + reviews.map { day(it.lastStudiedAt) } +
-        speaking.map { day(it.createdAt) } + shadowing.map { day(it.createdAt) }
-    val wordsTotal = db.wordDao().dayStats(language, WORDS_PER_DAY).sumOf { it.total }
-    val recent = speaking.sortedByDescending { it.createdAt }.take(10).reversed()
+    val activity = (db.userWordDao().studiedAt(language) + db.grammarReviewDao().studiedAt(language) +
+        db.speakingDao().createdAt(language) + db.shadowingAttemptDao().createdAt(language)).map(::day)
+    val pace = db.speakingDao().recentPace(language).reversed()
+    val shadowingCount = db.shadowingAttemptDao().createdAt(language).size
     return StatsData(
         streak = studyStreak(activity.toSet(), today),
         week = recentDailyCounts(activity, today),
-        wordsMastered = words.count { it.correctCount >= 3 }, wordsTotal = wordsTotal,
-        hardWords = topByCount(words.map { it.word to it.wrongCount }),
-        grammarWrong = topByCount(reviews.map { it.unitId to it.wrongCount }),
-        grammarDue = reviews.count { it.dueEpochDay <= today },
-        speakingCount = speaking.size, recentWpm = recent.map { it.wordsPerMinute }, recentFillers = recent.map { it.fillerCount },
-        shadowingCount = shadowing.size, shadowingAvg = shadowing.takeIf { it.isNotEmpty() }?.map { it.matchRate }?.average(),
+        wordsMastered = db.userWordDao().masteredCount(language), wordsTotal = db.wordDao().activeCount(language),
+        hardWords = db.userWordDao().mostWrong(language).map { it.name to it.count },
+        grammarWrong = db.grammarReviewDao().mostWrongUnits(language).map { it.name to it.count },
+        grammarDue = db.grammarReviewDao().dueCount(language, today),
+        speakingCount = db.speakingDao().createdAt(language).size,
+        recentWpm = pace.map { it.wordsPerMinute }, recentFillers = pace.map { it.fillerCount },
+        shadowingCount = shadowingCount, shadowingAvg = if (shadowingCount == 0) null else db.shadowingAttemptDao().averageMatch(language),
     )
 }
+

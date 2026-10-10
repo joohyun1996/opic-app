@@ -30,6 +30,20 @@ interface WordDao {
     """)
     suspend fun dayStats(language: String, wordsPerDay: Int): List<DayStats>
 
+    /** 같은 집계를 기록이 바뀔 때만 다시 계산해 흘려보낸다 (TASK 39, Room 무효화 추적). */
+    @Query("""
+        SELECT (w.seq - 1) / :wordsPerDay + 1 AS day, COUNT(*) AS total,
+               SUM(CASE WHEN u.correctCount >= 3 THEN 1 ELSE 0 END) AS mastered,
+               SUM(CASE WHEN u.wrongCount > 0 AND u.correctCount < 3 THEN 1 ELSE 0 END) AS wrong
+        FROM words w LEFT JOIN user_words u ON u.wordId = w.id
+        WHERE w.language = :language AND w.deleted = 0
+        GROUP BY (w.seq - 1) / :wordsPerDay ORDER BY day
+    """)
+    fun observeDayStats(language: String, wordsPerDay: Int): kotlinx.coroutines.flow.Flow<List<DayStats>>
+
+    @Query("SELECT COUNT(*) FROM words WHERE language = :language AND deleted = 0")
+    suspend fun activeCount(language: String): Int
+
     /** 오답 단어: 틀린 적이 있고 아직 습득(정답 3회) 전. 전체는 firstSeq = 1, lastSeq = Int.MAX_VALUE. */
     @Query("""
         SELECT w.*, u.correctCount AS correctCount, u.wrongCount AS wrongCount
@@ -65,6 +79,10 @@ interface WordDao {
         }
     }
 }
+
+/** 통계용 (키, 합계) 한 줄 (TASK 39). */
+data class KeyCount(val name: String, val count: Int)
+data class PaceRow(val wordsPerMinute: Int, val fillerCount: Int)
 
 data class DayStats(val day: Int, val total: Int, val mastered: Int, val wrong: Int)
 

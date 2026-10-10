@@ -33,7 +33,6 @@ fun WordsApp(
 ) {
     val model: WordsViewModel = viewModel(key = "words-${language.code}", factory = remember(database, language) { WordsViewModel.Factory(database, language) })
     val state by model.state.collectAsState()
-    LaunchedEffect(importResult, page) { model.refresh() }
     Scaffold { padding ->
         Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.TopCenter) {
             Column(Modifier.widthIn(max = 430.dp).fillMaxSize().padding(horizontal = 16.dp)) {
@@ -69,11 +68,11 @@ fun WordsApp(
                     WordsPage.DAY -> DayScreen(database, language, day, speaker, onBack = onBack,
                         onStudy = { navigate("study/$day/${it.route}") })
                     WordsPage.STUDY -> StudyScreen(database, language, StudySource(day, wrongOnly = false), StudyMode.of(mode), speaker,
-                        onRecorded = model::refresh, onBack = onBack)
+                        onRecorded = {}, onBack = onBack) // Day 통계는 Room이 기록 변경 시 다시 계산 (TASK 39)
                     WordsPage.WRONG -> WrongScreen(database, language, speaker, onBack = onBack,
                         onStudy = { selectedDay, selectedMode -> navigate("study/wrong/$selectedDay/${selectedMode.route}") })
                     WordsPage.WRONG_STUDY -> StudyScreen(database, language, StudySource(day, wrongOnly = true), StudyMode.of(mode), speaker,
-                        onRecorded = model::refresh, onBack = onBack)
+                        onRecorded = {}, onBack = onBack) // Day 통계는 Room이 기록 변경 시 다시 계산 (TASK 39)
                 }
             }
         }

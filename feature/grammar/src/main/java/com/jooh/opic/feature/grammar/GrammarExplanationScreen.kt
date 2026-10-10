@@ -109,7 +109,7 @@ fun GrammarExplanationScreen(unit: GrammarUnit, onBack: () -> Unit, onStart: () 
             unit.explanation.examples.forEach { example ->
                 Column { Text(example.en); Text(example.ko, style = MaterialTheme.typography.bodySmall) }
             }
-            Text("흔한 실수", style = MaterialTheme.typography.titleMedium)
+            if (unit.explanation.commonMistakes.isNotEmpty()) Text("흔한 실수", style = MaterialTheme.typography.titleMedium)
             unit.explanation.commonMistakes.forEach { mistake ->
                 Column {
                     Text("✗ ${mistake.wrong}", color = Opic.colors.error)

@@ -2983,6 +2983,1321 @@
      ]
     }
    ]
+  },
+  {
+   "id": "c8",
+   "order": 8,
+   "track": "core",
+   "part": "3부 동사가 변한 것 (준동사)",
+   "title": "to부정사 — 앞으로 할 일",
+   "opicUse": "계획·목적·희망(want to, plan to, to buy …) 말하기",
+   "errorType": "other",
+   "explanation": {
+    "summary": "to + 동사원형은 동사를 명사(~하는 것)·형용사(~할)·부사(~하려고·~해서)처럼 쓰는 장치다. 같은 모양이라도 놓인 자리가 역할을 정한다.",
+    "concept": "영어는 한 절에 문장의 동사(정동사)가 하나다. 동사를 하나 더 쓰고 싶을 때 앞에 to를 붙여 '동사 자격을 내려놓은' 준동사로 만든다. to는 원래 '~쪽으로'라는 방향의 말이라, to부정사에는 '아직 하지 않은 일·앞으로 향하는 일(목적·계획·희망)' 느낌이 있다. 그래서 want, plan, decide, hope처럼 미래를 향한 동사 뒤에 to부정사가 온다.",
+    "details": [
+     {
+      "title": "명사 역할 — ~하는 것",
+      "body": "주어(보통 가주어 It으로 뒤로 보냄), 목적어(want to, decide to), 보어(~하는 것이다) 자리에 온다.",
+      "examples": [
+       {
+        "en": "I want to travel abroad.",
+        "ko": "해외여행 가고 싶다. (목적어)"
+       },
+       {
+        "en": "My goal is to get IH on OPIc.",
+        "ko": "내 목표는 OPIc IH 받는 것이다. (보어)"
+       },
+       {
+        "en": "It is fun to learn new words.",
+        "ko": "새 단어를 배우는 건 재미있다. (가주어)"
+       }
+      ]
+     },
+     {
+      "title": "형용사 역할 — ~할",
+      "body": "명사 바로 뒤에서 꾸민다. 동사가 전치사를 필요로 하면 전치사까지 붙인다.",
+      "examples": [
+       {
+        "en": "I need something to drink.",
+        "ko": "마실 게 필요해."
+       },
+       {
+        "en": "We're looking for a place to stay.",
+        "ko": "묵을 곳을 찾고 있어."
+       },
+       {
+        "en": "I need someone to talk to.",
+        "ko": "이야기할 사람이 필요해. (talk to someone)"
+       }
+      ]
+     },
+     {
+      "title": "부사 역할 — ~하려고, ~해서",
+      "body": "목적(~하려고 = in order to), 감정의 원인(~해서), 형용사 꾸밈(~하기에)으로 쓴다. 목적을 for + 동사로 쓰면 틀린다.",
+      "examples": [
+       {
+        "en": "I went to the store to buy milk.",
+        "ko": "우유를 사려고 가게에 갔다. (목적)"
+       },
+       {
+        "en": "I'm glad to hear that.",
+        "ko": "그 말을 들으니 기쁘다. (감정의 원인)"
+       },
+       {
+        "en": "This book is easy to read.",
+        "ko": "이 책은 읽기 쉽다. (형용사 꾸밈)"
+       }
+      ]
+     },
+     {
+      "title": "to부정사를 목적어로 쓰는 동사",
+      "body": "want, hope, wish, plan, decide, expect, agree, refuse, promise, learn, manage, afford, prepare — 대부분 '앞으로 할 일'을 다룬다. 부정은 not to V.",
+      "examples": [
+       {
+        "en": "I decided not to buy a car.",
+        "ko": "차를 사지 않기로 했다."
+       },
+       {
+        "en": "I can't afford to travel this year.",
+        "ko": "올해는 여행 갈 여유가 없다."
+       }
+      ]
+     },
+     {
+      "title": "사람 + to부정사 (5형식)",
+      "body": "want, ask, tell, allow, expect, advise, encourage + 사람 + to V: '사람이 ~하기를'. 사역동사 make, let, have는 to 없이 동사원형.",
+      "examples": [
+       {
+        "en": "My mom wants me to study harder.",
+        "ko": "엄마는 내가 더 열심히 공부하길 원한다. (want that I … X)"
+       },
+       {
+        "en": "My boss let me leave early.",
+        "ko": "상사가 일찍 가게 해 줬다."
+       },
+       {
+        "en": "She made me clean my room.",
+        "ko": "그녀가 나에게 방을 치우게 했다. (to clean X)"
+       }
+      ]
+     },
+     {
+      "title": "의문사 + to — ~할지",
+      "body": "how to(어떻게 ~할지), what to, where to, when to, who to. 길 묻기·고민 말하기에 자주 쓴다.",
+      "examples": [
+       {
+        "en": "I don't know what to say.",
+        "ko": "뭐라고 말해야 할지 모르겠다."
+       },
+       {
+        "en": "Could you tell me how to get to the station?",
+        "ko": "역에 어떻게 가는지 알려 주실래요?"
+       }
+      ]
+     }
+    ],
+    "table": [
+     [
+      "역할",
+      "뜻",
+      "예문"
+     ],
+     [
+      "명사 (주어)",
+      "~하는 것은",
+      "It is fun to travel."
+     ],
+     [
+      "명사 (목적어)",
+      "~하는 것을",
+      "I want to travel."
+     ],
+     [
+      "명사 (보어)",
+      "~하는 것이다",
+      "My plan is to travel."
+     ],
+     [
+      "형용사",
+      "~할",
+      "I need time to rest."
+     ],
+     [
+      "부사 (목적)",
+      "~하려고",
+      "I saved money to travel."
+     ],
+     [
+      "부사 (감정 원인)",
+      "~해서",
+      "I was glad to hear that."
+     ],
+     [
+      "의문사 + to",
+      "~할지",
+      "I don't know where to go."
+     ]
+    ],
+    "koreanNote": "한국어는 '여행하는 것 / 여행할 / 여행하려고'가 모양이 다 다르지만 영어는 to travel 하나로 쓰고, 문장 속 자리가 역할을 정한다. 그래서 to부정사를 만나면 '어디에 붙어 있나'로 역할을 판단하자. 또 '엄마는 내가 공부하길 원한다'를 My mom wants that I study.로 옮기기 쉬운데 want + 사람 + to V가 맞고, '~하기 위해'를 for + 동사(for buy)로 쓰는 실수도 잦다 — for 뒤에는 명사(for milk).",
+    "points": [
+     "to + 동사원형, 부정은 not to V",
+     "명사(~하는 것) · 형용사(~할) · 부사(~하려고 / ~해서) — 자리가 역할을 정한다",
+     "want / hope / plan / decide / expect / agree / promise / learn + to V",
+     "want / ask / tell / allow + 사람 + to V, make / let / have + 사람 + 동사원형",
+     "목적 '~하려고'는 to V (for + 동사 X)",
+     "의문사 + to: how to, what to, where to"
+    ],
+    "examples": [
+     {
+      "en": "I decided to learn Chinese this year.",
+      "ko": "올해 중국어를 배우기로 했다."
+     },
+     {
+      "en": "I'm looking for a place to stay.",
+      "ko": "묵을 곳을 찾고 있다."
+     },
+     {
+      "en": "I called my friend to ask about the trip.",
+      "ko": "여행에 대해 물어보려고 친구에게 전화했다."
+     },
+     {
+      "en": "Could you tell me how to get to the station?",
+      "ko": "역에 어떻게 가는지 알려 주실래요?"
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "I want to travel abroad next year.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "want",
+        "role": "V"
+       },
+       {
+        "text": "to travel abroad",
+        "role": "O"
+       },
+       {
+        "text": "next year.",
+        "role": "M"
+       }
+      ],
+      "note": "to travel abroad 덩어리 = 목적어(~하는 것을)"
+     },
+     {
+      "sentence": "I need time to rest.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "need",
+        "role": "V"
+       },
+       {
+        "text": "time",
+        "role": "O"
+       },
+       {
+        "text": "to rest.",
+        "role": "M"
+       }
+      ],
+      "note": "to rest가 time을 뒤에서 꾸밈(쉴 시간) — 형용사 역할"
+     },
+     {
+      "sentence": "I went to the store to buy milk.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "went",
+        "role": "V"
+       },
+       {
+        "text": "to the store",
+        "role": "M"
+       },
+       {
+        "text": "to buy milk.",
+        "role": "M"
+       }
+      ],
+      "note": "to the store(전치사 to + 명사) vs to buy(to + 동사원형, 목적)"
+     },
+     {
+      "sentence": "My mom wants me to study harder.",
+      "parts": [
+       {
+        "text": "My mom",
+        "role": "S"
+       },
+       {
+        "text": "wants",
+        "role": "V"
+       },
+       {
+        "text": "me",
+        "role": "O"
+       },
+       {
+        "text": "to study harder.",
+        "role": "OC"
+       }
+      ],
+      "note": "want + 사람 + to V (5형식)"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "I went to the store for buy some milk.",
+      "right": "I went to the store to buy some milk.",
+      "note": "목적은 to V"
+     },
+     {
+      "wrong": "My boss wants that I work overtime.",
+      "right": "My boss wants me to work overtime.",
+      "note": "want + 사람 + to V"
+     },
+     {
+      "wrong": "She made me to clean the room.",
+      "right": "She made me clean the room.",
+      "note": "사역동사 make + 동사원형"
+     },
+     {
+      "wrong": "I decided to not go.",
+      "right": "I decided not to go.",
+      "note": "not은 to 앞"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c8-01",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I want ___ abroad next year.",
+     "hint": "want 뒤에는?",
+     "explanation": "want + to V",
+     "choices": [
+      "travel",
+      "to travel",
+      "traveling"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c8-02",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "I went to the gym for lose weight.",
+     "hint": "'~하려고'를 나타내는 말",
+     "explanation": "목적 → to: I went to the gym to lose weight.",
+     "choices": [
+      "I",
+      "went",
+      "to",
+      "the",
+      "gym",
+      "for",
+      "lose",
+      "weight."
+     ],
+     "answer": 5
+    },
+    {
+     "id": "c8-03",
+     "kind": "choice",
+     "prompt": "to read의 역할은?",
+     "sentence": "I need something to read.",
+     "hint": "something을 꾸미나요?",
+     "explanation": "읽을 것 — something을 꾸미는 형용사 역할",
+     "choices": [
+      "~하는 것 (명사)",
+      "~할 (형용사)",
+      "~하려고 (부사)"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c8-04",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "My parents want that I become a doctor.",
+     "hint": "want 뒤의 구조",
+     "explanation": "want + 사람 + to V: My parents want me to become a doctor.",
+     "choices": [
+      "My",
+      "parents",
+      "want",
+      "that",
+      "I",
+      "become",
+      "a",
+      "doctor."
+     ],
+     "answer": 3
+    },
+    {
+     "id": "c8-05",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "She made me ___ the dishes.",
+     "hint": "사역동사 make",
+     "explanation": "make + 사람 + 동사원형",
+     "choices": [
+      "wash",
+      "to wash",
+      "washing"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c8-06",
+     "kind": "fix",
+     "prompt": "가주어 It으로 바꿔 쓰세요",
+     "sentence": "To learn Chinese is not easy.",
+     "hint": "It is + 형용사 + to V",
+     "explanation": "It is not easy to learn Chinese.",
+     "answers": [
+      "It is not easy to learn Chinese."
+     ]
+    },
+    {
+     "id": "c8-07",
+     "kind": "blank",
+     "prompt": "빈칸에 알맞은 한 단어를 쓰세요 (~할지)",
+     "sentence": "I don't know what ___ say.",
+     "hint": "의문사 + ___ + 동사원형",
+     "explanation": "what to say = 뭐라고 말할지",
+     "answers": [
+      "to"
+     ]
+    },
+    {
+     "id": "c8-08",
+     "kind": "structure",
+     "prompt": "목적(~하려고)을 나타내는 to를 고르세요",
+     "sentence": "I saved money for months to buy a new laptop.",
+     "hint": "뒤에 동사원형이 오는 to",
+     "explanation": "to buy = 사려고 (목적)",
+     "choices": [
+      "I",
+      "saved",
+      "money",
+      "for",
+      "months",
+      "to",
+      "buy",
+      "a",
+      "new",
+      "laptop."
+     ],
+     "answer": 5
+    },
+    {
+     "id": "c8-09",
+     "kind": "spot",
+     "prompt": "위치가 틀린 단어를 고르세요",
+     "sentence": "I decided to not eat fast food.",
+     "hint": "부정어 not의 자리",
+     "explanation": "not to V: I decided not to eat fast food.",
+     "choices": [
+      "I",
+      "decided",
+      "to",
+      "not",
+      "eat",
+      "fast",
+      "food."
+     ],
+     "answer": 3
+    },
+    {
+     "id": "c8-10",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I'm happy ___ you again.",
+     "hint": "감정의 원인 '~해서'",
+     "explanation": "happy to see = 만나서 기쁘다",
+     "choices": [
+      "seeing",
+      "to see",
+      "see"
+     ],
+     "answer": 1
+    }
+   ]
+  },
+  {
+   "id": "c9",
+   "order": 9,
+   "track": "core",
+   "part": "3부 동사가 변한 것 (준동사)",
+   "title": "동명사 — 하는 일을 이름으로",
+   "opicUse": "취미·루틴 묘사(enjoy -ing, spend time -ing, be into -ing)",
+   "errorType": "other",
+   "explanation": {
+    "summary": "동사 + -ing가 명사(~하는 것)로 쓰이는 것이 동명사다. 주어·목적어·보어, 그리고 전치사 뒤에 온다.",
+    "concept": "동명사는 동작을 '하나의 활동'으로 이름 붙인 것이다: swimming(수영하기), cooking(요리하기). to부정사가 '앞으로 할 일'을 가리킨다면 동명사는 '실제로 하는 일·해 본 일·일반적인 활동'을 가리킨다. 그래서 enjoy, finish, stop, mind처럼 '하고 있거나 한 일'을 다루는 동사 뒤에는 동명사가 온다. 또 전치사 뒤에는 동사가 올 수 없으니 반드시 동명사로 바꾼다.",
+    "details": [
+     {
+      "title": "동명사의 자리",
+      "body": "주어(단수 취급), 목적어, 보어, 전치사 뒤.",
+      "examples": [
+       {
+        "en": "Walking is good for your health.",
+        "ko": "걷기는 건강에 좋다. (주어 — is)"
+       },
+       {
+        "en": "My hobby is reading mystery novels.",
+        "ko": "내 취미는 추리 소설 읽기다. (보어)"
+       },
+       {
+        "en": "Thank you for helping me.",
+        "ko": "도와줘서 고마워. (전치사 for 뒤)"
+       }
+      ]
+     },
+     {
+      "title": "동명사만 목적어로 쓰는 동사",
+      "body": "enjoy, finish, mind, avoid, keep, give up, practice, consider, suggest, quit, imagine, deny — '하고 있는/해 본 일'.",
+      "examples": [
+       {
+        "en": "I finished writing the report.",
+        "ko": "보고서를 다 썼다. (to write X)"
+       },
+       {
+        "en": "Would you mind closing the window?",
+        "ko": "창문 좀 닫아 주시겠어요?"
+       }
+      ]
+     },
+     {
+      "title": "둘 다 되고 뜻도 같은 동사",
+      "body": "like, love, hate, prefer, start, begin, continue — 동명사와 to부정사 둘 다 쓴다.",
+      "examples": [
+       {
+        "en": "I like cooking. / I like to cook.",
+        "ko": "요리하는 걸 좋아한다."
+       },
+       {
+        "en": "It started raining. / It started to rain.",
+        "ko": "비가 오기 시작했다."
+       }
+      ]
+     },
+     {
+      "title": "둘 다 되지만 뜻이 달라지는 동사",
+      "body": "remember·forget + -ing(과거에 한 일) vs + to V(앞으로 할 일) / stop + -ing(하던 것을 멈추다) vs + to V(~하려고 멈추다) / try + -ing(시험 삼아 해 보다) vs + to V(애써 ~하려 하다).",
+      "examples": [
+       {
+        "en": "I remember locking the door.",
+        "ko": "문 잠근 거 기억나. (이미 잠갔다)"
+       },
+       {
+        "en": "Remember to lock the door.",
+        "ko": "문 잠그는 거 잊지 마. (앞으로)"
+       },
+       {
+        "en": "I stopped smoking.",
+        "ko": "담배를 끊었다."
+       },
+       {
+        "en": "I stopped to smoke.",
+        "ko": "담배 피우려고 멈췄다."
+       }
+      ]
+     },
+     {
+      "title": "전치사 to + -ing",
+      "body": "look forward to, be used to(~에 익숙하다), get used to(~에 익숙해지다), when it comes to(~에 관해서라면) — 이 to는 전치사라 동명사가 온다. used to + 동사원형(예전에 ~했다)과 구분.",
+      "examples": [
+       {
+        "en": "I'm looking forward to seeing you.",
+        "ko": "만나기를 기대하고 있어. (to see X)"
+       },
+       {
+        "en": "I'm used to getting up early.",
+        "ko": "일찍 일어나는 데 익숙하다."
+       },
+       {
+        "en": "I used to get up early.",
+        "ko": "예전엔 일찍 일어났다. (과거 습관)"
+       }
+      ]
+     },
+     {
+      "title": "OPIc에서 바로 쓰는 표현",
+      "body": "spend + 시간 + -ing, have trouble/difficulty + -ing, be worth -ing, How about -ing?, be into -ing(~에 빠져 있다).",
+      "examples": [
+       {
+        "en": "I spend a lot of time watching YouTube.",
+        "ko": "유튜브 보는 데 시간을 많이 쓴다."
+       },
+       {
+        "en": "I have trouble waking up early.",
+        "ko": "일찍 일어나는 게 힘들다."
+       },
+       {
+        "en": "The museum is worth visiting.",
+        "ko": "그 박물관은 가 볼 만하다."
+       }
+      ]
+     }
+    ],
+    "table": [
+     [
+      "구분",
+      "동사",
+      "예문"
+     ],
+     [
+      "동명사만",
+      "enjoy, finish, mind, avoid, keep, give up, practice",
+      "I enjoy cooking."
+     ],
+     [
+      "to부정사만",
+      "want, hope, plan, decide, expect",
+      "I want to cook."
+     ],
+     [
+      "둘 다 (같은 뜻)",
+      "like, love, start, begin, continue",
+      "I started learning / to learn."
+     ],
+     [
+      "둘 다 (다른 뜻)",
+      "remember, forget, stop, try",
+      "I stopped smoking. / I stopped to smoke."
+     ],
+     [
+      "전치사 to + -ing",
+      "look forward to, be used to, get used to",
+      "I'm used to getting up early."
+     ]
+    ],
+    "koreanNote": "한국어 '~하는 것'은 to부정사와 동명사 둘 다 되지만, 영어는 앞의 동사가 둘 중 하나를 정해 둔다. 그래서 동사와 짝으로 익혀야 한다(enjoy -ing, want to). 또 look forward to의 to를 '앞으로' 느낌 때문에 to see로 쓰기 쉬운데, 이 to는 전치사라 seeing이다. '공부하는 데 시간을 쓴다'도 spend time to study가 아니라 spend time studying.",
+    "points": [
+     "동사 + -ing = 명사(~하는 것). 주어로 쓰면 단수",
+     "전치사 뒤에는 반드시 동명사 (interested in learning)",
+     "enjoy / finish / mind / avoid / keep / give up / practice / consider + -ing",
+     "remember / forget / stop / try는 -ing와 to V의 뜻이 다르다",
+     "look forward to / be used to / get used to + -ing",
+     "spend 시간 -ing, have trouble -ing, be worth -ing, How about -ing?"
+    ],
+    "examples": [
+     {
+      "en": "I enjoy watching movies on weekends.",
+      "ko": "주말에 영화 보는 걸 즐긴다."
+     },
+     {
+      "en": "I'm not used to driving in the city.",
+      "ko": "도시에서 운전하는 게 익숙하지 않다."
+     },
+     {
+      "en": "Remember to lock the door.",
+      "ko": "문 잠그는 거 잊지 마."
+     },
+     {
+      "en": "This restaurant is worth visiting.",
+      "ko": "이 식당은 가 볼 만하다."
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "Taking a walk after dinner helps me relax.",
+      "parts": [
+       {
+        "text": "Taking a walk after dinner",
+        "role": "S"
+       },
+       {
+        "text": "helps",
+        "role": "V"
+       },
+       {
+        "text": "me",
+        "role": "O"
+       },
+       {
+        "text": "relax.",
+        "role": "OC"
+       }
+      ],
+      "note": "동명사 덩어리 주어 = 단수(helps). relax는 help + 목적어 + 동사원형"
+     },
+     {
+      "sentence": "I enjoy cooking for my friends.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "enjoy",
+        "role": "V"
+       },
+       {
+        "text": "cooking for my friends.",
+        "role": "O"
+       }
+      ],
+      "note": "enjoy 뒤는 동명사"
+     },
+     {
+      "sentence": "I am looking forward to seeing you.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "am looking forward to",
+        "role": "V"
+       },
+       {
+        "text": "seeing you.",
+        "role": "O"
+       }
+      ],
+      "note": "이 to는 전치사 → 동명사 seeing"
+     },
+     {
+      "sentence": "I spent three hours studying for the test.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "spent",
+        "role": "V"
+       },
+       {
+        "text": "three hours",
+        "role": "O"
+       },
+       {
+        "text": "studying for the test.",
+        "role": "M"
+       }
+      ],
+      "note": "spend + 시간 + -ing"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "I enjoy to swim.",
+      "right": "I enjoy swimming.",
+      "note": "enjoy + -ing"
+     },
+     {
+      "wrong": "I'm looking forward to see you.",
+      "right": "I'm looking forward to seeing you.",
+      "note": "전치사 to + -ing"
+     },
+     {
+      "wrong": "I'm interested in learn Japanese.",
+      "right": "I'm interested in learning Japanese.",
+      "note": "전치사 뒤 동명사"
+     },
+     {
+      "wrong": "I spend a lot of time to watch YouTube.",
+      "right": "I spend a lot of time watching YouTube.",
+      "note": "spend 시간 -ing"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c9-01",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I finished ___ the report.",
+     "hint": "finish 뒤에는?",
+     "explanation": "finish + -ing",
+     "choices": [
+      "write",
+      "to write",
+      "writing"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c9-02",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "I'm looking forward to see my family.",
+     "hint": "look forward to의 to는 전치사",
+     "explanation": "seeing my family",
+     "choices": [
+      "I'm",
+      "looking",
+      "forward",
+      "to",
+      "see",
+      "my",
+      "family."
+     ],
+     "answer": 4
+    },
+    {
+     "id": "c9-03",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I stopped ___ coffee. It was bad for my sleep.",
+     "hint": "하던 것을 멈췄다",
+     "explanation": "stop + -ing = ~하던 것을 그만두다",
+     "choices": [
+      "drinking",
+      "to drink",
+      "drink"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c9-04",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "She is good at play the piano.",
+     "hint": "전치사 at 뒤",
+     "explanation": "at + -ing: She is good at playing the piano.",
+     "choices": [
+      "She",
+      "is",
+      "good",
+      "at",
+      "play",
+      "the",
+      "piano."
+     ],
+     "answer": 4
+    },
+    {
+     "id": "c9-05",
+     "kind": "choice",
+     "prompt": "'(앞으로) ~할 것을 잊지 마'에 맞는 문장은?",
+     "sentence": "",
+     "hint": "아직 하지 않은 일",
+     "explanation": "forget + to V = (앞으로) ~할 것을 잊다",
+     "choices": [
+      "Don't forget to call me.",
+      "Don't forget calling me."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c9-06",
+     "kind": "fix",
+     "prompt": "문장을 바르게 고치세요",
+     "sentence": "I spend two hours to study English every day.",
+     "hint": "spend + 시간 + ___",
+     "explanation": "spend + 시간 + -ing",
+     "answers": [
+      "I spend two hours studying English every day."
+     ]
+    },
+    {
+     "id": "c9-07",
+     "kind": "structure",
+     "prompt": "동명사 주어를 고르세요",
+     "sentence": "Reading books before bed helps me sleep.",
+     "hint": "동사 helps 앞의 덩어리",
+     "explanation": "Reading books before bed = 주어 (단수 → helps)",
+     "choices": [
+      "Reading",
+      "books",
+      "before",
+      "bed",
+      "helps",
+      "me",
+      "sleep."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c9-08",
+     "kind": "blank",
+     "prompt": "빈칸에 wait를 알맞은 형태로 쓰세요",
+     "sentence": "Do you mind ___ for a few minutes?",
+     "hint": "mind 뒤에는?",
+     "explanation": "mind + -ing",
+     "answers": [
+      "waiting"
+     ]
+    },
+    {
+     "id": "c9-09",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I'm used to ___ up early.",
+     "hint": "be used to = ~에 익숙하다",
+     "explanation": "be used to + -ing",
+     "choices": [
+      "get",
+      "getting",
+      "got"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c9-10",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "Learning new languages are fun.",
+     "hint": "주어는 languages일까 Learning 덩어리일까?",
+     "explanation": "동명사 주어는 단수 → is",
+     "choices": [
+      "Learning",
+      "new",
+      "languages",
+      "are",
+      "fun."
+     ],
+     "answer": 3
+    }
+   ]
+  },
+  {
+   "id": "c10",
+   "order": 10,
+   "track": "core",
+   "part": "3부 동사가 변한 것 (준동사)",
+   "title": "분사와 분사구문 — ~하는, ~된",
+   "opicUse": "사람·장소 묘사(the man standing …), 동시 동작(~하면서) 말하기",
+   "errorType": "other",
+   "explanation": {
+    "summary": "분사는 동사를 형용사처럼 쓰는 것이다. -ing(현재분사)는 '~하는'(능동·진행), 과거분사(p.p.)는 '~된'(수동·완료). 분사구문은 접속사와 같은 주어를 줄여 두 문장을 짧게 잇는다.",
+    "concept": "고를 때 질문은 하나 — '꾸밈을 받는 명사가 그 동작을 하는가, 당하는가?' 하면 -ing, 당하면 p.p. a crying baby(아기가 운다) vs a broken window(창문이 깨졌다). 7장의 감정 동사(bored/boring)도 같은 원리다. 자리는 분사가 혼자면 명사 앞(a running man), 다른 말과 덩어리가 되면 명사 뒤(a man running in the park).",
+    "details": [
+     {
+      "title": "현재분사 vs 과거분사",
+      "body": "-ing = 능동·진행(~하는, ~하고 있는), p.p. = 수동·완료(~된, ~해 버린).",
+      "examples": [
+       {
+        "en": "a sleeping cat / falling leaves",
+        "ko": "자고 있는 고양이 / 떨어지고 있는 잎"
+       },
+       {
+        "en": "a used car / fallen leaves / a locked door",
+        "ko": "중고차 / 떨어진 잎 / 잠긴 문"
+       }
+      ]
+     },
+     {
+      "title": "자리: 한 단어면 앞, 덩어리면 뒤",
+      "body": "한 단어 분사는 명사 앞, 다른 말이 붙은 덩어리는 명사 뒤에서 꾸민다. 명사 뒤 분사는 '관계대명사 + be'가 생략된 것과 같다.",
+      "examples": [
+       {
+        "en": "the girl smiling at me",
+        "ko": "나에게 웃고 있는 그 여자 (= who is smiling)"
+       },
+       {
+        "en": "a book written in English",
+        "ko": "영어로 쓰인 책 (= which was written)"
+       }
+      ]
+     },
+     {
+      "title": "감정 분사 다시 보기",
+      "body": "원인·사물은 -ing(감정을 준다), 감정을 느끼는 사람은 -ed: interesting/interested, exciting/excited, confusing/confused, disappointing/disappointed.",
+      "examples": [
+       {
+        "en": "The instructions were confusing, so I was confused.",
+        "ko": "설명서가 헷갈려서 나는 혼란스러웠다."
+       }
+      ]
+     },
+     {
+      "title": "분사구문 만들기 3단계",
+      "body": "① 접속사(when, because, while…)를 지운다 ② 주절과 같은 주어를 지운다 ③ 동사를 -ing로 (수동이면 p.p.만 남긴다).",
+      "examples": [
+       {
+        "en": "When I walked home, I saw an accident. → Walking home, I saw an accident.",
+        "ko": "집에 걸어가다가 사고를 봤다."
+       },
+       {
+        "en": "Because it was written in English, the book was hard. → Written in English, the book was hard.",
+        "ko": "영어로 쓰여서 그 책은 어려웠다."
+       }
+      ]
+     },
+     {
+      "title": "분사구문의 뜻",
+      "body": "시간(~할 때), 이유(~해서), 동시 동작(~하면서). 말할 때는 접속사를 살린 문장이 더 자연스러운 경우가 많고, OPIc에서는 '~하면서'(동시 동작)가 가장 쓸모 있다.",
+      "examples": [
+       {
+        "en": "I usually cook dinner listening to podcasts.",
+        "ko": "보통 팟캐스트를 들으면서 저녁을 한다."
+       },
+       {
+        "en": "Feeling tired, I went to bed early.",
+        "ko": "피곤해서 일찍 잤다."
+       }
+      ]
+     },
+     {
+      "title": "with + 명사 + 분사 — ~한 채로",
+      "body": "명사가 동작을 하면 -ing, 당하면 p.p. 묘사를 풍부하게 만든다.",
+      "examples": [
+       {
+        "en": "He fell asleep with the TV on.",
+        "ko": "TV를 켜 둔 채 잠들었다."
+       },
+       {
+        "en": "She listened with her eyes closed.",
+        "ko": "눈을 감은 채 들었다."
+       }
+      ]
+     }
+    ],
+    "table": [
+     [
+      "형태",
+      "뜻",
+      "예문"
+     ],
+     [
+      "현재분사 (-ing)",
+      "~하는 (능동·진행)",
+      "a sleeping baby"
+     ],
+     [
+      "과거분사 (p.p.)",
+      "~된 (수동·완료)",
+      "a broken phone"
+     ],
+     [
+      "명사 + 분사 덩어리",
+      "뒤에서 꾸밈",
+      "the man standing by the door"
+     ],
+     [
+      "감정 -ing",
+      "감정을 주는",
+      "a boring movie"
+     ],
+     [
+      "감정 -ed",
+      "감정을 느끼는",
+      "bored students"
+     ],
+     [
+      "분사구문",
+      "접속사·주어 생략",
+      "Walking home, I met Tom."
+     ],
+     [
+      "with + 명사 + 분사",
+      "~한 채로",
+      "with my eyes closed"
+     ]
+    ],
+    "koreanNote": "한국어 '-는/-ㄴ'(우는 아기, 깨진 창문)은 동사에 능동·수동이 이미 들어 있어 따로 고민하지 않는다. 영어는 꾸밈 받는 명사 입장에서 '하는지/당하는지'를 골라 -ing나 p.p.를 정해야 해서 a breaking window, a using car 같은 실수가 나온다. 또 한국어는 꾸밈말이 길어도 명사 앞에 오지만, 영어는 덩어리가 되면 명사 뒤로 간다.",
+    "points": [
+     "-ing = 능동·진행(~하는), p.p. = 수동·완료(~된)",
+     "한 단어면 명사 앞, 덩어리면 명사 뒤",
+     "감정: 원인 -ing, 느끼는 사람 -ed",
+     "분사구문: 접속사·같은 주어 생략 + -ing (수동이면 p.p.)",
+     "분사구문 뜻: 시간·이유·동시 동작 — 말할 때는 '~하면서'가 가장 유용",
+     "with + 명사 + 분사: ~한 채로"
+    ],
+    "examples": [
+     {
+      "en": "Look at that cat sleeping on the sofa.",
+      "ko": "소파에서 자고 있는 저 고양이 좀 봐."
+     },
+     {
+      "en": "I got a message written in Japanese.",
+      "ko": "일본어로 쓰인 메시지를 받았다."
+     },
+     {
+      "en": "Feeling tired, I went to bed early.",
+      "ko": "피곤해서 일찍 잤다."
+     },
+     {
+      "en": "I usually cook dinner listening to podcasts.",
+      "ko": "보통 팟캐스트를 들으며 저녁을 한다."
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "The man standing by the door is my uncle.",
+      "parts": [
+       {
+        "text": "The man",
+        "role": "S"
+       },
+       {
+        "text": "standing by the door",
+        "role": "M"
+       },
+       {
+        "text": "is",
+        "role": "V"
+       },
+       {
+        "text": "my uncle.",
+        "role": "C"
+       }
+      ],
+      "note": "standing by the door가 뒤에서 man을 꾸밈 (who is 생략)"
+     },
+     {
+      "sentence": "I bought a used car last year.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "bought",
+        "role": "V"
+       },
+       {
+        "text": "a used car",
+        "role": "O"
+       },
+       {
+        "text": "last year.",
+        "role": "M"
+       }
+      ],
+      "note": "used car = 사용된(중고) 차 — 수동 p.p."
+     },
+     {
+      "sentence": "Walking home, I saw an accident.",
+      "parts": [
+       {
+        "text": "Walking home,",
+        "role": "M"
+       },
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "saw",
+        "role": "V"
+       },
+       {
+        "text": "an accident.",
+        "role": "O"
+       }
+      ],
+      "note": "분사구문 = When I walked home"
+     },
+     {
+      "sentence": "I listened to music, drinking coffee.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "listened",
+        "role": "V"
+       },
+       {
+        "text": "to music,",
+        "role": "M"
+       },
+       {
+        "text": "drinking coffee.",
+        "role": "M"
+       }
+      ],
+      "note": "~하면서 (동시 동작)"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "There was a breaking window in my room.",
+      "right": "There was a broken window in my room.",
+      "note": "창문은 깨진 것(수동)"
+     },
+     {
+      "wrong": "I want to buy a using car.",
+      "right": "I want to buy a used car.",
+      "note": "사용된 차 = used"
+     },
+     {
+      "wrong": "The boy played soccer is my brother.",
+      "right": "The boy playing soccer is my brother.",
+      "note": "동사가 둘 — 꾸밈은 분사"
+     },
+     {
+      "wrong": "The movie was very excited.",
+      "right": "The movie was very exciting.",
+      "note": "영화는 감정을 주는 쪽"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c10-01",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "Be careful of the ___ glass.",
+     "hint": "유리는 깨진 것일까 깨는 것일까?",
+     "explanation": "수동 → broken glass",
+     "choices": [
+      "breaking",
+      "broken",
+      "break"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c10-02",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "The girl sat next to me is my cousin.",
+     "hint": "문장의 동사는 is — 앞은 꾸밈",
+     "explanation": "sitting next to me: The girl sitting next to me is my cousin.",
+     "choices": [
+      "The",
+      "girl",
+      "sat",
+      "next",
+      "to",
+      "me",
+      "is",
+      "my",
+      "cousin."
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c10-03",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "Who is the man ___ to your mom?",
+     "hint": "남자가 이야기하고 있다 (능동)",
+     "explanation": "the man talking to your mom",
+     "choices": [
+      "talking",
+      "talked",
+      "talks"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c10-04",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "I read a book wrote by a famous chef.",
+     "hint": "책은 쓰인 것(수동)",
+     "explanation": "written by: I read a book written by a famous chef.",
+     "choices": [
+      "I",
+      "read",
+      "a",
+      "book",
+      "wrote",
+      "by",
+      "a",
+      "famous",
+      "chef."
+     ],
+     "answer": 4
+    },
+    {
+     "id": "c10-05",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I was ___ because the instructions were ___.",
+     "hint": "사람은 느끼고, 설명서는 원인",
+     "explanation": "사람 confused, 원인 confusing",
+     "choices": [
+      "confused / confusing",
+      "confusing / confused",
+      "confused / confused"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c10-06",
+     "kind": "fix",
+     "prompt": "분사구문으로 바꿔 쓰세요",
+     "sentence": "When I walked to work, I met my old friend.",
+     "hint": "접속사·같은 주어 지우고 -ing",
+     "explanation": "Walking to work, I met my old friend.",
+     "answers": [
+      "Walking to work, I met my old friend."
+     ]
+    },
+    {
+     "id": "c10-07",
+     "kind": "structure",
+     "prompt": "명사를 뒤에서 꾸미는 분사를 고르세요",
+     "sentence": "The bus leaving at 7 is usually crowded.",
+     "hint": "bus를 꾸미는 말",
+     "explanation": "leaving at 7 = 7시에 떠나는 (bus를 꾸밈)",
+     "choices": [
+      "The",
+      "bus",
+      "leaving",
+      "at",
+      "7",
+      "is",
+      "usually",
+      "crowded."
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c10-08",
+     "kind": "blank",
+     "prompt": "빈칸에 close를 알맞은 형태로 쓰세요 (~한 채로)",
+     "sentence": "He was listening with his eyes ___.",
+     "hint": "눈은 감긴 것(수동)",
+     "explanation": "with + 명사 + p.p.: with his eyes closed",
+     "answers": [
+      "closed"
+     ]
+    },
+    {
+     "id": "c10-09",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "There are many ___ leaves on the ground.",
+     "hint": "이미 땅에 떨어져 있는 잎",
+     "explanation": "fallen = 떨어진(완료). falling은 떨어지고 있는",
+     "choices": [
+      "fallen",
+      "falling",
+      "fall"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c10-10",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "The news was really surprised.",
+     "hint": "소식은 놀라게 하는 쪽",
+     "explanation": "원인 → surprising: The news was really surprising.",
+     "choices": [
+      "The",
+      "news",
+      "was",
+      "really",
+      "surprised."
+     ],
+     "answer": 4
+    }
+   ]
   }
  ]
 }

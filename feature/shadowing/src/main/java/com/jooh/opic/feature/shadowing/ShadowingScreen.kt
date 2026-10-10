@@ -18,6 +18,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jooh.opic.core.common.WordDiff
 import com.jooh.opic.core.common.SHADOWING_CATEGORIES
 import com.jooh.opic.core.common.ShadowingVideo
+import com.jooh.opic.core.database.VideoPracticeRow
 import com.jooh.opic.core.common.flapWords
 import com.jooh.opic.core.common.linkingPairs
 import com.jooh.opic.core.common.pronunciationTips
@@ -65,9 +66,12 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit,
             if (id == null) model.message("YouTube 링크를 확인하세요") else { model.open(id); a = null; b = null; repeat = false }
         }) { Text("열기") }
         state.message?.let { Text(it, color = MaterialTheme.colorScheme.error) }
-        if (state.videoId == null) RecommendedVideos(library) { video ->
+        if (state.videoId == null) RecommendedVideos(library, state.practice) { video ->
             model.link("https://youtu.be/${video.id}"); model.open(video.id); a = null; b = null; repeat = false
-        } else if (library.isNotEmpty()) TextButton(onClick = { model.close(); repeat = false }) { Text("← 추천 영상 목록") }
+        } else {
+            if (library.isNotEmpty()) TextButton(onClick = { model.close(); repeat = false }) { Text("← 추천 영상 목록") }
+            state.practice[state.videoId]?.let { Text("이 영상 연습 ${it.attempts}회 · 최고 일치율 ${"%.0f".format(it.bestMatchRate * 100)}%", color = Color.Gray) }
+        }
         state.videoId?.let { id ->
             key(id) { PlayerView(id, Modifier.fillMaxWidth().height(220.dp), { player = it }, { current = it },
                 { playerStatus = "플레이어 오류 $it"; model.message("영상 오류 코드 $it") },
@@ -157,7 +161,7 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit,
 /** 추천 영상 100개 (TASK 21): 분류 칩으로 거르고, 누르면 바로 연다. */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun RecommendedVideos(library: List<ShadowingVideo>, onOpen: (ShadowingVideo) -> Unit) {
+private fun RecommendedVideos(library: List<ShadowingVideo>, practice: Map<String, VideoPracticeRow>, onOpen: (ShadowingVideo) -> Unit) {
     if (library.isEmpty()) return
     var category by remember { mutableStateOf<String?>(null) }
     Text("추천 영상 ${library.size}개", style = MaterialTheme.typography.titleMedium)
@@ -169,12 +173,24 @@ private fun RecommendedVideos(library: List<ShadowingVideo>, onOpen: (ShadowingV
         }
     }
     val names = SHADOWING_CATEGORIES.toMap()
-    library.filter { category == null || it.category == category }.forEach { video ->
-        Card(onClick = { onOpen(video) }, modifier = Modifier.fillMaxWidth()) {
-            Column(Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                Text(video.title, style = MaterialTheme.typography.bodyMedium, maxLines = 2)
-                Text("${video.channel} · ${video.minutes}분 · ${names[video.category]} · ${video.level}", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
-            }
+    val byId = library.associateBy { it.id }
+    val recent = practice.values.sortedByDescending { it.lastAt }.mapNotNull { byId[it.videoId] }.take(5)
+    if (category == null && recent.isNotEmpty()) {
+        Text("최근 연습한 영상", style = MaterialTheme.typography.titleSmall)
+        recent.forEach { video -> VideoCard(video, names, practice[video.id], onOpen) }
+        Text("전체", style = MaterialTheme.typography.titleSmall)
+    }
+    library.filter { category == null || it.category == category }.forEach { video -> VideoCard(video, names, practice[video.id], onOpen) }
+}
+
+@Composable
+private fun VideoCard(video: ShadowingVideo, names: Map<String, String>, practice: VideoPracticeRow?, onOpen: (ShadowingVideo) -> Unit) {
+    Card(onClick = { onOpen(video) }, modifier = Modifier.fillMaxWidth()) {
+        Column(Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+            Text(video.title, style = MaterialTheme.typography.bodyMedium, maxLines = 2)
+            Text("${video.channel} · ${video.minutes}분 · ${names[video.category]} · ${video.level}" +
+                (practice?.let { " · 연습 ${it.attempts}회 · 최고 ${"%.0f".format(it.bestMatchRate * 100)}%" } ?: ""),
+                style = MaterialTheme.typography.bodySmall, color = Color.Gray)
         }
     }
 }

@@ -13,6 +13,9 @@ import com.jooh.opic.core.common.compareWords
 import com.jooh.opic.core.common.matchRate
 import com.jooh.opic.core.common.werWords
 import com.jooh.opic.core.stt.SttModels
+import com.jooh.opic.core.database.ShadowingAttemptDao
+import com.jooh.opic.core.database.ShadowingAttemptEntity
+import com.jooh.opic.core.database.VideoPracticeRow
 import com.jooh.opic.core.stt.PcmRecorder
 import com.jooh.opic.core.common.cleanWhisperText
 import com.jooh.opic.core.common.recordingTooShort
@@ -35,12 +38,15 @@ data class ShadowState(
     val result: String? = null, val diff: List<WordDiff> = emptyList(),
     val matchRate: Double? = null, val message: String? = null,
     val captions: List<Cue> = emptyList(), val captionStatus: CaptionStatus = CaptionStatus.NONE,
+    /** 영상별 연습 기록 (TASK 22). */
+    val practice: Map<String, VideoPracticeRow> = emptyMap(),
 )
 enum class CaptionStatus { LOADING, READY, NONE, FAILED }
 private object CaptionCache { val byVideo = ConcurrentHashMap<String, List<Cue>>() }
 private object ShadowingSentences { val byVideo = mutableMapOf<String, String>() }
 
-class ShadowingViewModel(app: Application, private val whisper: UserWhisper, private val beforeLoad: () -> Unit) : AndroidViewModel(app) {
+class ShadowingViewModel(app: Application, private val whisper: UserWhisper, private val beforeLoad: () -> Unit,
+                         private val history: ShadowingAttemptDao? = null) : AndroidViewModel(app) {
     private val stateValue = MutableStateFlow(ShadowState())
     val state = stateValue.asStateFlow()
     private val spec = whisper.model
@@ -52,7 +58,18 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
     private var captionRequest = 0L
     private var playerCaptionKind: String? = null
     val recordingFile = File(app.filesDir, "shadowing-last.pcm")
-    init { stateValue.value = stateValue.value.copy(model = if (whisper.ready) "준비됨" else if (SttModels.isDownloaded(spec)) "불러오기 전" else "없음") }
+    init {
+        stateValue.value = stateValue.value.copy(model = if (whisper.ready) "준비됨" else if (SttModels.isDownloaded(spec)) "불러오기 전" else "없음")
+        refreshPractice()
+    }
+
+    private fun refreshPractice() {
+        val dao = history ?: return
+        viewModelScope.launch {
+            val rows = runCatching { dao.recentVideos("en") }.getOrDefault(emptyList())
+            update { it.copy(practice = rows.associateBy { r -> r.videoId }) }
+        }
+    }
     private fun update(block: (ShadowState) -> ShadowState) { stateValue.update(block) }
     fun link(value: String) = update { it.copy(link = value) }
     /** 영상을 닫고 추천 목록으로 (TASK 21). */
@@ -171,6 +188,11 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
                 val diff = if (reference.isBlank()) emptyList() else compareWords(reference, answer)
                 val rate = if (reference.isBlank()) null else matchRate(diff, werWords(reference).size)
                 update { it.copy(result = answer, diff = diff, matchRate = rate, message = null) }
+                val videoId = state.value.videoId
+                if (rate != null && videoId != null) {
+                    runCatching { history?.insert(ShadowingAttemptEntity(videoId = videoId, sentence = reference, heard = answer, matchRate = rate, createdAt = System.currentTimeMillis())) }
+                    refreshPractice()
+                }
             } catch (e: Exception) {
                 if (e !is CancellationException) message("받아 적기 실패: ${e.message}")
             } finally { update { it.copy(busy = false) } }

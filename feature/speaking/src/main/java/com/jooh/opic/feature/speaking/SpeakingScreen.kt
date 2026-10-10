@@ -27,6 +27,7 @@ import com.jooh.opic.core.common.unclearWords
 import com.jooh.opic.core.ui.PronunciationHintsCard
 import com.jooh.opic.core.ui.UnclearHint
 import com.jooh.opic.core.correction.CorrectionResultCard
+import com.jooh.opic.core.database.SpeakingAnswerEntity
 import com.jooh.opic.core.correction.LlmPreparationScreen
 import com.jooh.opic.core.llm.LlmEngineState
 import com.jooh.opic.core.common.fillerMask
@@ -55,6 +56,7 @@ fun SpeakingScreen(model: SpeakingViewModel, onBack: () -> Unit) {
             SpeakingPage.RESULT -> ResultPage(model, state)
             SpeakingPage.MOCK_TRANSCRIBE -> MockTranscribePage(model, state)
             SpeakingPage.MOCK_SUMMARY -> MockSummaryPage(model, state)
+            SpeakingPage.HISTORY -> HistoryPage(model, state)
         }
     }
 }
@@ -69,7 +71,10 @@ private fun TopicsPage(model: SpeakingViewModel, onBack: () -> Unit) {
     Text("스피킹", style = MaterialTheme.typography.headlineSmall)
     Text("질문을 듣고 바로 영어로 답해 보세요. 답변은 최대 2분입니다. ${catalog.topics.size}주제 ${catalog.topics.sumOf { it.questions.size }}문항")
     Button(onClick = model::startMock, modifier = Modifier.fillMaxWidth()) { Text("모의고사 (실제 시험 순서 15문항)") }
-    OutlinedButton(onClick = model::randomQuestion, modifier = Modifier.fillMaxWidth()) { Text("무작위 질문") }
+    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        OutlinedButton(onClick = model::randomQuestion, modifier = Modifier.weight(1f)) { Text("무작위 질문") }
+        OutlinedButton(onClick = model::openHistory, modifier = Modifier.weight(1f)) { Text("내 기록") }
+    }
     CATEGORY_KO.forEach { (category, title) ->
         val topics = catalog.topics.filter { it.category == category }
         if (topics.isEmpty()) return@forEach
@@ -136,6 +141,10 @@ private fun QuestionPage(model: SpeakingViewModel, state: SpeakingState) {
     } else {
         TextButton(onClick = model::backToTopics) { Text("← 주제") }
         Text("${topic?.titleKo.orEmpty()} · ${QUESTION_TYPE_KO[question.type].orEmpty()} · ${question.level}", style = MaterialTheme.typography.titleMedium)
+    }
+    state.lastPast?.let { last ->
+        Text("지난 답변 ${state.pastCount}개 · 마지막 ${dateTime(last.createdAt)} · ${clock(last.durationMs)} · 분당 ${last.wordsPerMinute}단어 · 머뭇거림 ${last.fillerCount}번",
+            style = MaterialTheme.typography.bodySmall, color = Color.Gray)
     }
     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         OutlinedButton(enabled = state.replaysLeft > 0 && !state.recording, onClick = model::replay) {
@@ -239,6 +248,17 @@ private fun ResultPage(model: SpeakingViewModel, state: SpeakingState) {
             if (metrics.repeatedWords.isNotEmpty()) Text("자주 쓴 단어: " + metrics.repeatedWords.joinToString { "${it.first} ${it.second}번" })
         }
     }
+    state.lastPast?.let { last ->
+        Card(Modifier.fillMaxWidth()) {
+            Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text("지난번(${dateTime(last.createdAt)})과 비교", style = MaterialTheme.typography.titleSmall)
+                Text("말한 시간 ${clock(last.durationMs)} → ${clock(metrics.durationMs)}")
+                Text("분당 단어 ${last.wordsPerMinute} → ${metrics.wordsPerMinute} (${signed(metrics.wordsPerMinute - last.wordsPerMinute)})")
+                Text("머뭇거림 ${last.fillerCount} → ${metrics.fillerCount}번 (${signed(metrics.fillerCount - last.fillerCount)})")
+                Text("지난 답변: ${last.editedText}", style = MaterialTheme.typography.bodySmall, color = Color.Gray, maxLines = 4)
+            }
+        }
+    }
     val edited = remember(state.words) { editedText(state.words) }
     val unclear = remember(state.words) {
         val kept = state.words.withIndex().filter { it.value.original != null && it.value.state == EditState.KEPT }
@@ -308,5 +328,45 @@ private fun EditWordDialog(word: EditableWord, onDismiss: () -> Unit, onReplace:
 }
 
 private val EditBlue = Color(0xFF1E5BD8)
+
+@Composable
+private fun HistoryPage(model: SpeakingViewModel, state: SpeakingState) {
+    var open by remember { mutableStateOf<SpeakingAnswerEntity?>(null) }
+    val questions = remember(model.catalog) { model.catalog?.topics.orEmpty().flatMap { it.questions }.associateBy { it.id } }
+    TextButton(onClick = model::backToTopics) { Text("← 주제") }
+    Text("내 기록", style = MaterialTheme.typography.headlineSmall)
+    if (state.historyMocks.isNotEmpty()) {
+        Text("모의고사", style = MaterialTheme.typography.titleMedium)
+        state.historyMocks.forEach { m ->
+            Text("${dateTime(m.createdAt)} · ${m.answered}문항 답함 · 평균 분당 ${m.avgWpm.toInt()}단어 · 머뭇거림 ${m.totalFillers}번")
+        }
+        HorizontalDivider()
+    }
+    Text("최근 답변 ${state.historyAnswers.size}개", style = MaterialTheme.typography.titleMedium)
+    if (state.historyAnswers.isEmpty()) Text("아직 저장된 답변이 없어요", color = Color.Gray)
+    state.historyAnswers.forEach { a ->
+        Card(onClick = { open = a }, modifier = Modifier.fillMaxWidth()) {
+            Column(Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                Text(questions[a.questionId]?.en ?: a.questionId, style = MaterialTheme.typography.bodyMedium, maxLines = 2)
+                Text("${dateTime(a.createdAt)} · ${clock(a.durationMs)} · 분당 ${a.wordsPerMinute}단어 · 머뭇거림 ${a.fillerCount}번" +
+                    if (a.mockId != null) " · 모의고사" else "", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+            }
+        }
+    }
+    open?.let { a ->
+        AlertDialog(onDismissRequest = { open = null }, title = { Text(dateTime(a.createdAt)) }, text = {
+            Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(questions[a.questionId]?.en.orEmpty(), color = Color.Gray)
+                Text(a.editedText)
+                if (a.editedText != a.transcript) Text("Whisper: ${a.transcript}", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+            }
+        }, confirmButton = { TextButton(onClick = { open = null }) { Text("닫기") } })
+    }
+}
+
+private fun signed(n: Int) = if (n > 0) "+$n" else "$n"
+private val DATE_FORMAT = java.time.format.DateTimeFormatter.ofPattern("M/d HH:mm")
+private fun dateTime(epochMs: Long): String =
+    java.time.Instant.ofEpochMilli(epochMs).atZone(java.time.ZoneId.systemDefault()).format(DATE_FORMAT)
 
 private fun clock(ms: Long): String { val s = ms / 1000; return "${s / 60}:${(s % 60).toString().padStart(2, '0')}" }

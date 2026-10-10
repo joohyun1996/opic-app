@@ -14,6 +14,7 @@ android {
 dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:ui"))
+    implementation(project(":core:database"))
     implementation(project(":core:stt"))
     implementation(project(":core:llm"))
     implementation(platform(libs.androidx.compose.bom))

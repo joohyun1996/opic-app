@@ -9,6 +9,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.jooh.opic.core.common.EditableWord
 import com.jooh.opic.core.common.SpeakingCatalog
+import com.jooh.opic.core.database.MockSummaryRow
+import com.jooh.opic.core.database.SpeakingAnswerEntity
+import com.jooh.opic.core.database.SpeakingDao
 import com.jooh.opic.core.common.MockItem
 import com.jooh.opic.core.common.buildMockExam
 import com.jooh.opic.core.common.editable
@@ -57,12 +60,12 @@ internal const val FILLER_PROMPT = "Um, uh, so, like, you know, I mean."
 internal const val MAX_ANSWER_MS = 120_000L
 internal const val MAX_CORRECTION_SENTENCES = 15
 
-enum class SpeakingPage { TOPICS, QUESTION, RESULT, MOCK_TRANSCRIBE, MOCK_SUMMARY }
+enum class SpeakingPage { TOPICS, QUESTION, RESULT, MOCK_TRANSCRIBE, MOCK_SUMMARY, HISTORY }
 
 /** 모의고사 답변 하나 (TASK 20). 받아 적기는 15문항이 끝난 뒤 한꺼번에. */
 data class MockAnswer(
     val item: MockItem, val file: File? = null, val durationMs: Long = 0, val transcript: String? = null,
-    val words: List<EditableWord> = emptyList(), val metrics: SpeakingMetrics? = null, val failed: String? = null,
+    val words: List<EditableWord> = emptyList(), val metrics: SpeakingMetrics? = null, val failed: String? = null, val savedId: Long? = null,
 )
 enum class ModelState { MISSING, DOWNLOADING, NOT_LOADED, LOADING, READY, FAILED }
 
@@ -94,6 +97,11 @@ data class SpeakingState(
     val mockIndex: Int = 0,
     val mockDone: Int = 0,
     val fromMock: Boolean = false,
+    val savedId: Long? = null,
+    val pastCount: Int = 0,
+    val lastPast: SpeakingAnswerEntity? = null,
+    val historyAnswers: List<SpeakingAnswerEntity> = emptyList(),
+    val historyMocks: List<MockSummaryRow> = emptyList(),
     val message: String? = null,
 )
 
@@ -108,6 +116,7 @@ class SpeakingViewModel(
     private val tokenStore: HfTokenStore,
     val llmModelDownloaded: () -> Boolean,
     val llmModelBytes: Long,
+    private val history: SpeakingDao? = null,
 ) : AndroidViewModel(app) {
     private val mutableLlm = MutableStateFlow<OnDeviceLlmEngine?>(null)
     /** 교정을 열었을 때만 만든다 (Whisper와 동시 적재 금지). */
@@ -115,6 +124,7 @@ class SpeakingViewModel(
     private var correctionJob: Job? = null
     private var preparation: Job? = null
     private val mutable = MutableStateFlow(SpeakingState())
+    private companion object { const val LANGUAGE = "en" }
     val state = mutable.asStateFlow()
     private val defaultFile = File(app.filesDir, "speaking-last.pcm")
     /** 지금 결과 화면의 녹음 (모의고사 답변이면 mock-NN.pcm). */
@@ -154,6 +164,33 @@ class SpeakingViewModel(
         cancelWork()
         mutable.update { SpeakingState(page = SpeakingPage.QUESTION, topicId = topicId, question = question, model = it.model, progress = it.progress, hasToken = it.hasToken) }
         speak(question.en)
+        loadPast(question.id, exclude = null)
+    }
+
+    // ---- 기록 (TASK 22) ----
+    private fun loadPast(questionId: String, exclude: Long?) {
+        val dao = history ?: return
+        viewModelScope.launch {
+            val past = runCatching { dao.byQuestion(LANGUAGE, questionId) }.getOrDefault(emptyList()).filter { it.id != exclude }
+            mutable.update { if (it.question?.id != questionId) it else it.copy(pastCount = past.size, lastPast = past.firstOrNull()) }
+        }
+    }
+
+    private suspend fun save(questionId: String, topicId: String, durationMs: Long, transcript: String, words: List<EditableWord>, metrics: SpeakingMetrics, mockId: Long?): Long? =
+        history?.let { dao -> runCatching { dao.insert(SpeakingAnswerEntity(language = LANGUAGE, questionId = questionId, topicId = topicId,
+            createdAt = System.currentTimeMillis(), durationMs = durationMs, transcript = transcript, editedText = editedText(words),
+            wordCount = metrics.wordCount, wordsPerMinute = metrics.wordsPerMinute, fillerCount = metrics.fillerCount,
+            sentenceCount = metrics.sentenceCount, mockId = mockId)) }.getOrNull() }
+
+    fun openHistory() {
+        cancelWork(); stopSpeaking()
+        mutable.update { SpeakingState(page = SpeakingPage.HISTORY, model = it.model, hasToken = it.hasToken) }
+        val dao = history ?: return
+        viewModelScope.launch {
+            val answers = runCatching { dao.recent(LANGUAGE) }.getOrDefault(emptyList())
+            val mocks = runCatching { dao.mockSummaries(LANGUAGE) }.getOrDefault(emptyList())
+            mutable.update { it.copy(historyAnswers = answers, historyMocks = mocks) }
+        }
     }
 
     fun replay() {
@@ -236,8 +273,13 @@ class SpeakingViewModel(
             try {
                 val answer = transcribeFile(defaultFile, durationMs)
                 if (answer == null) mutable.update { it.copy(message = "말소리가 잘 들리지 않았어요 — 폰을 입에 가까이 대 주세요") }
-                else mutable.update { it.copy(page = SpeakingPage.RESULT, transcript = answer.text, durationMs = durationMs,
-                    words = answer.words, metrics = answer.metrics, audioFile = null) }
+                else {
+                    val q = state.value.question
+                    val id = q?.let { save(it.id, state.value.topicId.orEmpty(), durationMs, answer.text, answer.words, answer.metrics, null) }
+                    mutable.update { it.copy(page = SpeakingPage.RESULT, transcript = answer.text, durationMs = durationMs,
+                        words = answer.words, metrics = answer.metrics, audioFile = null, savedId = id) }
+                    q?.let { loadPast(it.id, exclude = id) }
+                }
             } catch (e: CancellationException) { throw e
             } catch (e: Exception) { mutable.update { it.copy(message = "받아 적기 실패: ${e.message}") }
             } finally { mutable.update { it.copy(transcribing = false) } }
@@ -275,10 +317,14 @@ class SpeakingViewModel(
         transcribeJob = viewModelScope.launch {
             try {
                 if (!whisper.ready) runCatching { prepareModelNow() }
+                val mockId = System.currentTimeMillis()
                 for ((i, answer) in state.value.mock.withIndex()) {
                     val file = answer.file
                     val updated = if (file == null) answer else try {
-                        transcribeFile(file, answer.durationMs)?.let { answer.copy(transcript = it.text, words = it.words, metrics = it.metrics) }
+                        transcribeFile(file, answer.durationMs)?.let {
+                            val id = save(answer.item.question.id, answer.item.topicId, answer.durationMs, it.text, it.words, it.metrics, mockId)
+                            answer.copy(transcript = it.text, words = it.words, metrics = it.metrics, savedId = id)
+                        }
                             ?: answer.copy(failed = "말소리가 들리지 않음")
                     } catch (e: CancellationException) { throw e } catch (e: Exception) { answer.copy(failed = "받아 적기 실패") }
                     mutable.update { s -> s.copy(mockDone = i + 1, mock = s.mock.toMutableList().also { it[i] = updated }) }
@@ -297,7 +343,7 @@ class SpeakingViewModel(
         val metrics = answer.metrics ?: return
         mutable.update { it.copy(page = SpeakingPage.RESULT, fromMock = true, mockIndex = index, topicId = answer.item.topicId,
             question = answer.item.question, transcript = answer.transcript, words = answer.words, metrics = metrics,
-            durationMs = answer.durationMs, audioFile = answer.file, correctionOpen = false, corrections = emptyList(), correctionTotal = 0, showOriginal = false) }
+            durationMs = answer.durationMs, audioFile = answer.file, savedId = answer.savedId, lastPast = null, pastCount = 0, correctionOpen = false, corrections = emptyList(), correctionTotal = 0, showOriginal = false) }
     }
 
     /** 결과 화면에서 고친 글을 모의고사 목록에 되돌려 놓고 요약으로. */
@@ -308,9 +354,15 @@ class SpeakingViewModel(
     }
 
     // ---- 받아 적은 글 직접 고치기 (TASK 18) ----
-    private fun edit(block: (List<EditableWord>) -> List<EditableWord>) = mutable.update {
-        val words = block(it.words)
-        it.copy(words = words, metrics = speakingMetrics(editedText(words), it.durationMs))
+    private fun edit(block: (List<EditableWord>) -> List<EditableWord>) {
+        mutable.update {
+            val words = block(it.words)
+            it.copy(words = words, metrics = speakingMetrics(editedText(words), it.durationMs))
+        }
+        val s = state.value
+        val id = s.savedId ?: return
+        val m = s.metrics ?: return
+        viewModelScope.launch { runCatching { history?.updateEdit(LANGUAGE, id, editedText(s.words), m.wordCount, m.wordsPerMinute, m.fillerCount, m.sentenceCount) } }
     }
     fun replaceWord(index: Int, text: String) = edit { it.replaceAt(index, text) }
     fun deleteWord(index: Int) = edit { it.deleteAt(index) }

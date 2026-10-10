@@ -14,6 +14,10 @@ interface GrammarReviewDao {
     @Query("SELECT * FROM grammar_reviews WHERE exerciseId = :exerciseId LIMIT 1")
     suspend fun get(exerciseId: String): GrammarReviewEntity?
 
+    /** 백업용 (문법은 영어만이라 language 열이 없다). */
+    @Query("SELECT * FROM grammar_reviews ORDER BY exerciseId")
+    suspend fun all(): List<GrammarReviewEntity>
+
     @Query("SELECT * FROM grammar_reviews WHERE dueEpochDay <= :today ORDER BY dueEpochDay, exerciseId")
     suspend fun due(today: Long): List<GrammarReviewEntity>
 

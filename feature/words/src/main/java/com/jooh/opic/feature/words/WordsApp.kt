@@ -34,6 +34,7 @@ fun WordsApp(
     mode: String? = null,
     navigate: (String) -> Unit,
     onBack: () -> Unit,
+    onBackup: (() -> Unit)? = null,
 ) {
     val model: WordsViewModel = viewModel(factory = remember(database) { WordsViewModel.Factory(database) })
     val state by model.state.collectAsState()
@@ -79,6 +80,7 @@ fun WordsApp(
                         Card(onClick = {}, enabled = false, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(disabledContainerColor = New)) {
                             Text("중국어 (HSK) — 준비 중", Modifier.padding(20.dp))
                         }
+                        onBackup?.let { TextButton(onClick = it) { Text("학습 기록 백업·복원") } }
                     }
                     WordsPage.DAYS -> Column {
                         TextButton(onClick = onBack) { Text("← 홈") }

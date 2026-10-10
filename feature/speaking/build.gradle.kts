@@ -17,6 +17,7 @@ dependencies {
     implementation(project(":core:stt"))
     implementation(project(":core:llm"))
     implementation(project(":core:correction"))
+    implementation(project(":core:database"))
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.material3)

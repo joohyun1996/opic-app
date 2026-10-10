@@ -1,6 +1,17 @@
 package com.jooh.opic
 
 import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import com.jooh.opic.core.database.BackupManager
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -56,8 +67,10 @@ fun OpicRoot(app: OpicApplication) {
                     val book = (grammarResult as? GrammarLoadResult.Loaded)?.book ?: return@LaunchedEffect
                     grammarDue = runCatching { app.grammarReviews.dueExercises(book).size }.getOrDefault(0)
                 }
+                var backupOpen by remember { mutableStateOf(false) }
                 WordsApp(app.database, importResult, speaker, WordsPage.HOME, grammarCount,
-                    grammarDue = grammarDue, navigate = navigate, onBack = back)
+                    grammarDue = grammarDue, navigate = navigate, onBack = back, onBackup = { backupOpen = true })
+                if (backupOpen) BackupDialog(app) { backupOpen = false }
             }
             composable("days") { WordsApp(app.database, importResult, speaker, WordsPage.DAYS, grammarCount,
                 navigate = navigate, onBack = back) }
@@ -88,7 +101,7 @@ fun OpicRoot(app: OpicApplication) {
                 val model: ShadowingViewModel = viewModel(factory = remember(app) { object : ViewModelProvider.Factory {
                     @Suppress("UNCHECKED_CAST")
                     override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
-                        ShadowingViewModel(app, app.whisper, app::releaseGemmaBeforeWhisper) as T
+                        ShadowingViewModel(app, app.whisper, app::releaseGemmaBeforeWhisper, app.database.shadowingAttemptDao()) as T
                 } })
                 Box(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.TopCenter) {
                     Box(Modifier.widthIn(max = 430.dp).fillMaxSize()) {
@@ -106,7 +119,7 @@ fun OpicRoot(app: OpicApplication) {
                         override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
                             SpeakingViewModel(app, catalog, app.whisper, app::releaseGemmaBeforeWhisper, speaker::speak, speaker::stop,
                                 { app.llmEngine }, app.hfTokenStore, { ModelCatalog.isDownloaded(app) },
-                                ModelCatalog.config(app).models.first().expectedBytes) as T
+                                ModelCatalog.config(app).models.first().expectedBytes, app.database.speakingDao()) as T
                     } })
                     Box(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.TopCenter) {
                         Box(Modifier.widthIn(max = 430.dp).fillMaxSize()) { SpeakingScreen(model, back) }
@@ -115,6 +128,44 @@ fun OpicRoot(app: OpicApplication) {
             }
         }
     }
+}
+
+/** 학습 기록 백업·복원 (TASK 22). 파일 위치는 시스템 선택 창으로 사용자가 고른다 (새 권한 없음). */
+@Composable
+private fun BackupDialog(app: OpicApplication, onDismiss: () -> Unit) {
+    val scope = rememberCoroutineScope()
+    var status by remember { mutableStateOf<String?>(null) }
+    val manager = remember(app) { BackupManager(app.database) }
+    val create = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
+        uri ?: return@rememberLauncherForActivityResult
+        scope.launch {
+            status = runCatching {
+                val raw = manager.export(System.currentTimeMillis())
+                withContext(Dispatchers.IO) { app.contentResolver.openOutputStream(uri, "wt")!!.use { it.write(raw.toByteArray()) } }
+                "백업 파일을 만들었어요 (${raw.length / 1024}KB)"
+            }.getOrElse { "백업 실패: ${it.message}" }
+        }
+    }
+    val open = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        uri ?: return@rememberLauncherForActivityResult
+        scope.launch {
+            status = runCatching {
+                val raw = withContext(Dispatchers.IO) { app.contentResolver.openInputStream(uri)!!.use { it.readBytes().decodeToString() } }
+                val r = manager.restore(raw) ?: return@runCatching "백업 파일 형식이 아니에요. 아무것도 바꾸지 않았어요"
+                "복원했어요 — 단어 ${r.userWords}개, 문법 복습 ${r.grammarReviews}개, 스피킹 답변 ${r.speakingAnswers}개, 섀도잉 ${r.shadowingAttempts}개" +
+                    if (r.skippedWords > 0) " (없는 단어 ${r.skippedWords}개 건너뜀)" else ""
+            }.getOrElse { "복원 실패: ${it.message}" }
+        }
+    }
+    AlertDialog(onDismissRequest = onDismiss, title = { Text("학습 기록 백업·복원") }, text = {
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text("단어 학습 기록, 문법 복습, 스피킹 답변, 섀도잉 연습을 파일 하나로 저장해요. 녹음 파일은 포함하지 않아요.")
+            Text("복원은 기존 기록과 합쳐요: 더 최근 기록을 남기고, 같은 답변은 두 번 들어가지 않아요.")
+            Button(onClick = { create.launch("opic-backup-${java.time.LocalDate.now()}.json") }, modifier = Modifier.fillMaxWidth()) { Text("백업 파일 만들기") }
+            OutlinedButton(onClick = { open.launch(arrayOf("application/json", "application/octet-stream", "*/*")) }, modifier = Modifier.fillMaxWidth()) { Text("백업에서 복원") }
+            status?.let { Text(it) }
+        }
+    }, confirmButton = { TextButton(onClick = onDismiss) { Text("닫기") } })
 }
 
 private fun NavController.safeBack() {

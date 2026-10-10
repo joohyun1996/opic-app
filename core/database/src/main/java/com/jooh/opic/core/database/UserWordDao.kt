@@ -6,8 +6,14 @@ import androidx.room.Query
 import androidx.room.Transaction
 import androidx.room.Update
 
+/** 백업용: id 대신 (language, word)로. */
+data class UserWordBackupRow(val language: String, val word: String, val correctCount: Int, val wrongCount: Int, val lastStudiedAt: Long?)
+
 @Dao
 interface UserWordDao {
+    @Query("SELECT w.language AS language, w.word AS word, u.correctCount AS correctCount, u.wrongCount AS wrongCount, u.lastStudiedAt AS lastStudiedAt FROM user_words u JOIN words w ON w.id = u.wordId WHERE w.language = :language")
+    suspend fun backupRows(language: String): List<UserWordBackupRow>
+
     @Query("SELECT * FROM user_words WHERE wordId = :wordId LIMIT 1")
     suspend fun get(wordId: Long): UserWordEntity?
 

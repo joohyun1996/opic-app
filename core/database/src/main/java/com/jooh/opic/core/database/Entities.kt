@@ -44,3 +44,33 @@ data class GrammarReviewEntity(
     val wrongCount: Int,
     val lastStudiedAt: Long,
 )
+
+/** 스피킹 답변 기록 (DB v3, TASK 22). 녹음 파일은 저장하지 않는다. mockId는 같은 모의고사의 답변끼리 같은 값. */
+@Entity(tableName = "speaking_answers", indices = [Index(value = ["language", "questionId"]), Index(value = ["language", "mockId"])])
+data class SpeakingAnswerEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val language: String = "en",
+    val questionId: String,
+    val topicId: String,
+    val createdAt: Long,
+    val durationMs: Long,
+    val transcript: String,
+    val editedText: String,
+    val wordCount: Int,
+    val wordsPerMinute: Int,
+    val fillerCount: Int,
+    val sentenceCount: Int,
+    val mockId: Long? = null,
+)
+
+/** 섀도잉 한 번 따라 말한 기록 (DB v3, TASK 22). */
+@Entity(tableName = "shadowing_attempts", indices = [Index(value = ["language", "videoId"])])
+data class ShadowingAttemptEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val language: String = "en",
+    val videoId: String,
+    val sentence: String,
+    val heard: String,
+    val matchRate: Double,
+    val createdAt: Long,
+)

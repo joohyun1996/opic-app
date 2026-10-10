@@ -1,6 +1,6 @@
 # TASK: 스피킹 2 — 받아 적은 답변 직접 고치기 + Gemma 문법 교정
 
-> 작성: Claude · 승인: [x] 사용자 (2026-10-10) · 구현: 미정
+> 작성: Claude · 승인: [x] 사용자 (2026-10-10) · 구현: Claude
 > 경로: docs/tasks/18-speaking-edit-correct/TASK.md
 > 근거: 사용자 제안 (2026-10-10) — "AI 분석 전에 내가 말한 걸 들으면서 틀린 단어를 꾹 눌러 고치고(Whisper가 옳게 고쳐 적은 실수는 다시 틀리게), 그걸로 문법 체크"
 
@@ -45,11 +45,11 @@ Whisper는 작은 문법 실수를 저절로 고쳐 받아 적는다("he go" →
 - 교정 중 다시 녹음하려면 Gemma를 내리고 Whisper를 다시 올린다 (동시 적재 금지, 기존 `releaseGemmaBeforeWhisper` 사용)
 
 ## 수용 기준
-- [ ] AC1: `mergeTokens` — `" I"," li","ke"," it","."` → `I`, `like`, `it.` (시각·최소 p 확인), 특수 토큰 제외, 빈 목록 (테스트)
-- [ ] AC2: 편집 함수 — 바꾸기·지우기·뒤에 넣기·되돌리기 후 `editedText`, 넣은 단어 되돌리기 = 제거, 범위 밖 index는 그대로 (테스트)
-- [ ] AC3: `sentencesToCorrect(text)`는 기존처럼 5문장, `sentencesToCorrect(text, 15)`는 15문장 (테스트). 문법 탭 동작 변경 없음
-- [ ] AC4: `core/correction`으로 옮긴 뒤 문법 탭 기존 테스트 전부 통과
-- [ ] AC5: `./gradlew test lint :app:assembleDebug :app:assembleRelease` 통과, Manifest·Room 변경 없음
+- [x] AC1: `mergeTokens` — `" I"," li","ke"," it","."` → `I`, `like`, `it.` (시각·최소 p 확인), 특수 토큰 제외, 빈 목록 (테스트)
+- [x] AC2: 편집 함수 — 바꾸기·지우기·뒤에 넣기·되돌리기 후 `editedText`, 넣은 단어 되돌리기 = 제거, 범위 밖 index는 그대로 (테스트)
+- [x] AC3: `sentencesToCorrect(text)`는 기존처럼 5문장, `sentencesToCorrect(text, 15)`는 15문장 (테스트). 문법 탭 동작 변경 없음
+- [x] AC4: `core/correction`으로 옮긴 뒤 문법 탭 기존 테스트 전부 통과
+- [x] AC5: `./gradlew test lint :app:assembleDebug :app:assembleRelease` 통과, Manifest·Room 변경 없음
 - [ ] AC6: 실기기 — 1분 답변으로: 단어 눌러 구간 재생, 단어 하나 고치기·지우기·넣기·되돌리기, 고친 글로 교정 2문장 이상 표시, 교정 뒤 다시 녹음 (스크린샷: 편집 화면, 교정 결과)
 
 ## 제약 / 주의

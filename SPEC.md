@@ -26,6 +26,7 @@
 | 2026-10-09 | v0.17.0 | 섀도잉 비공식 자막: 영어 자막 목록·현재 문장 강조·문장 누르면 A-B 반복+원문 채우기, 실패 시 붙여 넣기 (TASK 16, 실기기 확인 보류) |
 | 2026-10-10 | v0.18.0 | 섀도잉 실기기 수정: WebView 즉시 파괴·iframe 높이 0 수정, 자막은 플레이어 요청 가로채기, 일치율 = 맞은 단어/원문, 짧은 녹음·무음 안내, 비교 결과 가로 표시. 개발자 검증 화면 삭제, Whisper 모델 small.en만 |
 | 2026-10-10 | v0.19.0 | 스피킹 탭: 질문 은행(15주제 43문항), TTS 질문·다시 듣기 1회, 2분 답변 녹음, Whisper 받아 적기(머뭇거림 유지 prompt), 즉시 지표 (TASK 17) |
+| 2026-10-10 | v0.20.0 | 스피킹 결과: 단어 눌러 구간 듣기·꾹 눌러 고치기, 고친 글로 Gemma 문법 교정(최대 15문장). 교정 코드 `core:correction`으로 이동 (TASK 18) |
 
 ## 인증
 ### POST /api/auth/login
@@ -266,7 +267,13 @@
 - Whisper: `UserWhisper` 공유, `prompt = "Um, uh, so, like, you know, I mean."` (머뭇거림 유지). 1.5초 미만·무음은 안내만
 - 결과: 답변 전문(머뭇거림 회색), 말한 시간(< 60초 "1분 이상 말해 보세요"), 분당 단어(< 90 "조금 더 빠르게" / 90~150 "적당한 속도" / > 150 "조금 천천히"), 단어·문장 수, 머뭇거림 횟수(um, uh, er, erm, hmm, mm, you know, i mean — like 제외), 자주 쓴 단어(기능어 제외 3회 이상 상위 3개). 다시 답하기 / 다음 질문 / 내 답변 듣기
 - 녹음·재생 공용: `core:stt/PcmRecorder`, `PcmPlayer` (섀도잉·스피킹), `core:common/Recording.kt`
-- 저장 없음 (TASK 19), AI 피드백 없음 (TASK 18)
+- 저장 없음 (TASK 21)
+
+### 답변 직접 고치기 + 문법 교정 (2026-10-10, TASK 18)
+- Whisper 단어별 시각·확신도: `transcribe(withWords = true)` → `SpokenWord(text, startMs, endMs, confidence)` (`token_timestamps`, 토큰을 앞 공백 기준으로 합침, confidence = 조각 확률 최솟값)
+- 결과 화면 단어 칩: 짧게 누르기 → 그 단어 구간(앞뒤 0.2초) 재생, 꾹 누르기 → 바꾸기 / 지우기 / 뒤에 넣기 / 원래대로. 표시: 바꿈 파란 밑줄, 지움 회색 취소선, 넣음 파란 글자, 머뭇거림 회색. "Whisper 원문 보기" 전환, 전체 되돌리기. 지표는 고친 글로 다시 계산
+- "문법 교정 받기 (AI)": Whisper 해제 → Gemma 준비(문법 탭과 같은 준비 화면) → 고친 글을 최대 15문장으로 나눠 문장마다 결과 카드(문법 탭과 같음), 취소·실패 문장 다시 시도
+- 공용 모듈 `core:correction`: `CorrectionCoordinator.correct(sentences, max)`, `CorrectionResultCard`, `LlmPreparationScreen`
 
 ### 음성 인식 검증 (2026-10-07, TASK 14)
 - 엔진: whisper.cpp v1.9.5 (`third_party/whisper.cpp`, CPU, arm64-v8a, fp16·dotprod), 모듈 `:core:stt` — 지금은 `debugImplementation`만 (사용자 기능 TASK에서 `implementation`으로)

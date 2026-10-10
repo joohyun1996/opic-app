@@ -16,6 +16,8 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jooh.opic.core.common.WordDiff
+import com.jooh.opic.core.common.SHADOWING_CATEGORIES
+import com.jooh.opic.core.common.ShadowingVideo
 import com.jooh.opic.core.common.flapWords
 import com.jooh.opic.core.common.linkingPairs
 import com.jooh.opic.core.common.pronunciationTips
@@ -32,7 +34,7 @@ import kotlinx.coroutines.withContext
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit, speak: (String) -> Unit = {}) {
+fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit, speak: (String) -> Unit = {}, library: List<ShadowingVideo> = emptyList()) {
     val state by model.state.collectAsState()
     var player by remember { mutableStateOf<YouTubePlayer?>(null) }
     var current by remember { mutableDoubleStateOf(0.0) }
@@ -63,6 +65,9 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit,
             if (id == null) model.message("YouTube 링크를 확인하세요") else { model.open(id); a = null; b = null; repeat = false }
         }) { Text("열기") }
         state.message?.let { Text(it, color = MaterialTheme.colorScheme.error) }
+        if (state.videoId == null) RecommendedVideos(library) { video ->
+            model.link("https://youtu.be/${video.id}"); model.open(video.id); a = null; b = null; repeat = false
+        } else if (library.isNotEmpty()) TextButton(onClick = { model.close(); repeat = false }) { Text("← 추천 영상 목록") }
         state.videoId?.let { id ->
             key(id) { PlayerView(id, Modifier.fillMaxWidth().height(220.dp), { player = it }, { current = it },
                 { playerStatus = "플레이어 오류 $it"; model.message("영상 오류 코드 $it") },
@@ -144,6 +149,31 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit,
                     PronunciationHintsCard(unclear, "다르게 들린 단어", pronunciationTips(werWords(state.sentence)),
                         linkingPairs(state.sentence), reductions(state.sentence), flapWords(state.sentence), speak)
                 }
+            }
+        }
+    }
+}
+
+/** 추천 영상 100개 (TASK 21): 분류 칩으로 거르고, 누르면 바로 연다. */
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun RecommendedVideos(library: List<ShadowingVideo>, onOpen: (ShadowingVideo) -> Unit) {
+    if (library.isEmpty()) return
+    var category by remember { mutableStateOf<String?>(null) }
+    Text("추천 영상 ${library.size}개", style = MaterialTheme.typography.titleMedium)
+    Text("모두 영어 자막이 있고 앱 안에서 재생되는 영상이에요. 처음엔 학습자용부터 추천해요", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+    FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        FilterChip(selected = category == null, onClick = { category = null }, label = { Text("전체") })
+        SHADOWING_CATEGORIES.forEach { (id, name) ->
+            FilterChip(selected = category == id, onClick = { category = id }, label = { Text("$name ${library.count { it.category == id }}") })
+        }
+    }
+    val names = SHADOWING_CATEGORIES.toMap()
+    library.filter { category == null || it.category == category }.forEach { video ->
+        Card(onClick = { onOpen(video) }, modifier = Modifier.fillMaxWidth()) {
+            Column(Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                Text(video.title, style = MaterialTheme.typography.bodyMedium, maxLines = 2)
+                Text("${video.channel} · ${video.minutes}분 · ${names[video.category]} · ${video.level}", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
             }
         }
     }

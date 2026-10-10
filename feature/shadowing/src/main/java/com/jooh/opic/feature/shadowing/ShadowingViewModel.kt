@@ -55,6 +55,12 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
     init { stateValue.value = stateValue.value.copy(model = if (whisper.ready) "준비됨" else if (SttModels.isDownloaded(spec)) "불러오기 전" else "없음") }
     private fun update(block: (ShadowState) -> ShadowState) { stateValue.update(block) }
     fun link(value: String) = update { it.copy(link = value) }
+    /** 영상을 닫고 추천 목록으로 (TASK 21). */
+    fun close() {
+        cancelCaptions()
+        update { it.copy(videoId = null, result = null, diff = emptyList(), message = null, captions = emptyList(), captionStatus = CaptionStatus.NONE) }
+    }
+
     fun open(id: String) {
         cancelCaptions()
         playerCaptionKind = null

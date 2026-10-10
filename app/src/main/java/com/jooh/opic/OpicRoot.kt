@@ -92,7 +92,7 @@ fun OpicRoot(app: OpicApplication) {
                 } })
                 Box(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.TopCenter) {
                     Box(Modifier.widthIn(max = 430.dp).fillMaxSize()) {
-                        ShadowingScreen(model, back, speaker::speak)
+                        ShadowingScreen(model, back, speaker::speak, app.shadowingVideos)
                     }
                 }
             }

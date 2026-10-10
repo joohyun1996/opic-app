@@ -23,6 +23,8 @@ import com.jooh.opic.feature.grammar.GrammarLoadResult
 import com.jooh.opic.feature.shadowing.ShadowingViewModel
 import com.jooh.opic.core.stt.UserWhisper
 import com.jooh.opic.core.common.SpeakingCatalog
+import com.jooh.opic.core.common.ShadowingVideo
+import com.jooh.opic.core.common.parseShadowingLibrary
 import com.jooh.opic.core.common.parseSpeakingCatalog
 
 class OpicApplication : Application() {
@@ -35,6 +37,10 @@ class OpicApplication : Application() {
     data class SpeakingLoad(val catalog: SpeakingCatalog?)
     private val mutableSpeaking = MutableStateFlow<SpeakingLoad?>(null)
     val speakingCatalog = mutableSpeaking.asStateFlow()
+    /** 섀도잉 추천 영상 (TASK 21). 실패하면 빈 목록 — 링크 붙여 넣기는 그대로. */
+    val shadowingVideos: List<ShadowingVideo> by lazy {
+        runCatching { assets.open("shadowing.json").bufferedReader().use { parseShadowingLibrary(it.readText()) } }.getOrNull()?.videos.orEmpty()
+    }
 
     override fun onCreate() {
         super.onCreate()

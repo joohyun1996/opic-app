@@ -61,3 +61,10 @@ val bundledSpeaking = tasks.register<Sync>("bundleSpeaking") {
 }
 android.sourceSets["main"].assets.srcDir(layout.buildDirectory.dir("generated/speakingAssets").get().asFile)
 tasks.named("preBuild").configure { dependsOn(bundledSpeaking) }
+
+val bundledShadowing = tasks.register<Sync>("bundleShadowing") {
+    from(rootProject.file("exports/shadowing.json"))
+    into(layout.buildDirectory.dir("generated/shadowingAssets"))
+}
+android.sourceSets["main"].assets.srcDir(layout.buildDirectory.dir("generated/shadowingAssets").get().asFile)
+tasks.named("preBuild").configure { dependsOn(bundledShadowing) }

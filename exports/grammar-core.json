@@ -2112,7 +2112,7 @@
      "choices": [
       "has been",
       "has gone",
-      "went"
+      "have gone"
      ],
      "answer": 1
     },
@@ -7265,7 +7265,7 @@
     {
      "id": "c17-08",
      "kind": "blank",
-     "prompt": "빈칸에 알맞은 두 단어를 쓰세요",
+     "prompt": "빈칸에 알맞은 한 단어를 쓰세요",
      "sentence": "If I had left earlier, I would ___ caught the bus.",
      "hint": "과거 반대 주절: would have p.p.",
      "explanation": "would have caught",

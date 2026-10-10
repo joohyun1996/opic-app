@@ -15,7 +15,7 @@ import com.jooh.opic.core.database.ImportResult
 import com.jooh.opic.core.database.OpicDatabase
 import com.jooh.opic.core.common.StudyLanguage
 
-enum class WordsPage { DAYS, DAY, STUDY, WRONG, WRONG_STUDY }
+enum class WordsPage { DAYS, DAY, STUDY, WRONG, WRONG_STUDY, REVIEW_STUDY }
 
 @Composable
 fun WordsApp(
@@ -71,6 +71,8 @@ fun WordsApp(
                         onRecorded = {}, onBack = onBack) // Day 통계는 Room이 기록 변경 시 다시 계산 (TASK 39)
                     WordsPage.WRONG -> WrongScreen(database, language, speaker, onBack = onBack,
                         onStudy = { selectedDay, selectedMode -> navigate("study/wrong/$selectedDay/${selectedMode.route}") })
+                    WordsPage.REVIEW_STUDY -> StudyScreen(database, language, StudySource(0, wrongOnly = true, review = true), StudyMode.of(mode), speaker,
+                        onRecorded = {}, onBack = onBack)
                     WordsPage.WRONG_STUDY -> StudyScreen(database, language, StudySource(day, wrongOnly = true), StudyMode.of(mode), speaker,
                         onRecorded = {}, onBack = onBack) // Day 통계는 Room이 기록 변경 시 다시 계산 (TASK 39)
                 }

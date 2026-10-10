@@ -32,6 +32,7 @@ import com.jooh.opic.feature.grammar.GrammarTracks
 import com.jooh.opic.feature.grammar.displayTitle
 import com.jooh.opic.feature.words.Speaker
 import com.jooh.opic.feature.words.WordsApp
+import com.jooh.opic.feature.words.dueReviewWords
 import com.jooh.opic.feature.words.WordsPage
 import android.app.Activity
 import androidx.compose.material3.Icon
@@ -127,6 +128,9 @@ fun OpicRoot(app: OpicApplication) {
                             val wordState by words.state.collectAsState()
                             var grammarDue by remember { mutableStateOf(0) }
                             var recentVideo by remember { mutableStateOf<String?>(null) }
+                            var wordDue by remember { mutableStateOf(0) }
+                            // 단어 복습 수: 학습 기록이 바뀌면(Day 통계 갱신) 다시 센다
+                            LaunchedEffect(wordState) { wordDue = runCatching { dueReviewWords(app.database, app.currentLanguage).size }.getOrDefault(0) }
                             LaunchedEffect(grammarResult) {
                                 val book = (grammarResult as? GrammarLoadResult.Loaded)?.book ?: return@LaunchedEffect
                                 grammarDue = runCatching { app.grammarReviews.dueExercises(book).size }.getOrDefault(0)
@@ -136,9 +140,10 @@ fun OpicRoot(app: OpicApplication) {
                                 recentVideo = app.shadowingVideos.firstOrNull { it.id == id }?.title
                             }
                             val next = wordState.days.firstOrNull { it.total > 0 && it.mastered < it.total }
-                            HomeScreen(HomeData(grammarDue, next?.day, next?.mastered ?: 0, next?.total ?: 0, wordState.mastered, wordState.total, recentVideo),
+                            HomeScreen(HomeData(grammarDue, wordDue, next?.day, next?.mastered ?: 0, next?.total ?: 0, wordState.mastered, wordState.total, recentVideo),
                                 onMenu = openMenu, onGrammarReview = { tabRequest.value = TabRequest.GrammarReview; openTab(Tab.GRAMMAR) }, onWords = { openTab(Tab.WORDS) },
-                                onDay = { day -> openTab(Tab.WORDS); nav.navigate("day/$day") }, onMock = { openTab(Tab.SPEAKING) },
+                                onDay = { day -> openTab(Tab.WORDS); nav.navigate("day/$day") },
+                                onWordReview = { openTab(Tab.WORDS); nav.navigate("study/review/en-ko") }, onMock = { openTab(Tab.SPEAKING) },
                                 onShadowing = { openTab(Tab.SHADOWING) })
                         }
                     }
@@ -151,6 +156,10 @@ fun OpicRoot(app: OpicApplication) {
                         composable("study/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
                             WordsApp(app.database, app.currentLanguage, importResult, speaker, WordsPage.STUDY, grammarCount,
                                 day = entry.arguments?.getInt("day") ?: 1, mode = entry.arguments?.getString("mode"), navigate = navigate, onBack = back)
+                        }
+                        composable("study/review/{mode}") { entry ->
+                            WordsApp(app.database, app.currentLanguage, importResult, speaker, WordsPage.REVIEW_STUDY, grammarCount,
+                                mode = entry.arguments?.getString("mode"), navigate = navigate, onBack = back)
                         }
                         composable("wrong") { WordsApp(app.database, app.currentLanguage, importResult, speaker, WordsPage.WRONG, grammarCount, navigate = navigate, onBack = back) }
                         composable("study/wrong/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->

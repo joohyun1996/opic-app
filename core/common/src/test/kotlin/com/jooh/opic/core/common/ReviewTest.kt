@@ -20,4 +20,14 @@ class ReviewTest {
     @Test fun anyMissGoesBackToStageOneTomorrow() {
         for (stage in 1..3) assertEquals(ReviewSchedule(1, today + 1), scheduleAfterReview(stage, false, today))
     }
+
+    @Test fun wordReviewFollowsCorrectCountIntervals() {
+        assertEquals(false, isWordReviewDue(correctCount = 0, lastStudiedDay = 100, today = 100))
+        assertEquals(true, isWordReviewDue(0, 100, 101))
+        assertEquals(false, isWordReviewDue(1, 100, 102))
+        assertEquals(true, isWordReviewDue(1, 100, 103))
+        assertEquals(false, isWordReviewDue(2, 100, 106))
+        assertEquals(true, isWordReviewDue(2, 100, 107))
+        assertEquals(false, isWordReviewDue(3, 100, 999)) // 습득
+    }
 }

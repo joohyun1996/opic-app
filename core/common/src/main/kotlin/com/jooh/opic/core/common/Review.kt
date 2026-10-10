@@ -22,3 +22,13 @@ fun scheduleAfterReview(stage: Int, firstTryCorrect: Boolean, today: Long): Revi
     if (stage == REVIEW_LAST_STAGE) return null
     return ReviewSchedule(stage + 1, today + REVIEW_INTERVAL_DAYS[stage])
 }
+
+/**
+ * 단어 간격 복습 (2026-10-10). 스키마를 바꾸지 않고 기존 기록(맞은 횟수·마지막 학습일)으로 정한다.
+ * 틀린 적이 있고 아직 습득(정답 3회) 전인 단어가, 맞은 횟수에 따라 1·3·7일이 지나면 복습 대상이 된다.
+ * 복습에서 맞히면 맞은 횟수가 늘어 다음 간격이 길어지고, 3회가 되면 습득으로 빠진다. 틀리면 같은 간격으로 다시 나온다.
+ */
+fun isWordReviewDue(correctCount: Int, lastStudiedDay: Long, today: Long): Boolean =
+    correctCount in 0 until REVIEW_LAST_STAGE && today - lastStudiedDay >= REVIEW_INTERVAL_DAYS[correctCount]
+
+const val WORD_REVIEW_SESSION_SIZE = 20

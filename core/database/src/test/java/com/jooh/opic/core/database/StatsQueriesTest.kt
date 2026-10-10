@@ -66,4 +66,22 @@ class StatsQueriesTest {
             db.close()
         }
     }
+
+    @Test fun reviewCandidatesAreUnmasteredWrongWordsOfLanguage() = runBlocking {
+        val db = Room.inMemoryDatabaseBuilder(context, OpicDatabase::class.java).allowMainThreadQueries().build()
+        try {
+            val ids = listOf("apple", "brave", "cider", "delta").mapIndexed { i, w -> db.wordDao().insert(word("en", w, i + 1)) }
+            val es = db.wordDao().insert(word("es", "hola", 1))
+            db.userWordDao().insert(UserWordEntity(ids[0], correctCount = 1, wrongCount = 1, lastStudiedAt = 200)) // 후보
+            db.userWordDao().insert(UserWordEntity(ids[1], correctCount = 3, wrongCount = 2, lastStudiedAt = 100)) // 습득 — 제외
+            db.userWordDao().insert(UserWordEntity(ids[2], correctCount = 2, wrongCount = 0, lastStudiedAt = 100)) // 틀린 적 없음 — 제외
+            db.userWordDao().insert(UserWordEntity(ids[3], correctCount = 0, wrongCount = 1, lastStudiedAt = 50))  // 후보 (더 오래됨)
+            db.userWordDao().insert(UserWordEntity(es, correctCount = 0, wrongCount = 1, lastStudiedAt = 10))      // 다른 언어 — 제외
+            val rows = db.wordDao().reviewCandidates("en")
+            assertEquals(listOf("delta", "apple"), rows.map { it.word.word })
+            assertEquals(listOf(0, 1), rows.map { it.correctCount })
+        } finally {
+            db.close()
+        }
+    }
 }

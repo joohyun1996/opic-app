@@ -19,6 +19,8 @@ import java.util.Locale
 /** 홈에 보여 줄 실제 데이터 (TASK 24). */
 data class HomeData(
     val grammarDue: Int = 0,
+    /** 오늘 복습할 단어 수 (간격 복습) */
+    val wordDue: Int = 0,
     val nextDay: Int? = null,
     val dayMastered: Int = 0,
     val dayTotal: Int = 0,
@@ -31,7 +33,7 @@ private val DATE_FORMAT = DateTimeFormatter.ofPattern("M월 d일 EEEE", Locale.K
 
 @Composable
 fun HomeScreen(data: HomeData, onMenu: () -> Unit, onGrammarReview: () -> Unit, onWords: () -> Unit,
-               onDay: (Int) -> Unit, onMock: () -> Unit, onShadowing: () -> Unit) {
+               onDay: (Int) -> Unit, onMock: () -> Unit, onShadowing: () -> Unit, onWordReview: () -> Unit = {}) {
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 20.dp, vertical = 12.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp)) {
         TopBar(LocalDate.now().format(DATE_FORMAT), "오늘의 학습", onMenu)
@@ -39,10 +41,12 @@ fun HomeScreen(data: HomeData, onMenu: () -> Unit, onGrammarReview: () -> Unit, 
         Card(shape = MaterialTheme.shapes.large, colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
             Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text("오늘 할 일", style = MaterialTheme.typography.labelLarge, color = Opic.colors.accent)
-                if (data.grammarDue > 0) {
-                    Text("영문법 복습 ${data.grammarDue}문제", style = MaterialTheme.typography.titleLarge)
-                    Text("전에 틀린 문제를 다시 풀어요", color = MaterialTheme.colorScheme.onSurfaceVariant)
-                    Button(onClick = onGrammarReview, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) { Text("복습 시작") }
+                if (data.grammarDue > 0 || data.wordDue > 0) {
+                    Text(listOfNotNull(data.wordDue.takeIf { it > 0 }?.let { "단어 ${it}개" }, data.grammarDue.takeIf { it > 0 }?.let { "문법 ${it}문제" })
+                        .joinToString(" · ") + " 복습", style = MaterialTheme.typography.titleLarge)
+                    Text("전에 틀린 것을 잊기 전에 다시 봐요", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    if (data.wordDue > 0) Button(onClick = onWordReview, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) { Text("단어 복습 시작") }
+                    if (data.grammarDue > 0) Button(onClick = onGrammarReview, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) { Text("문법 복습 시작") }
                 } else {
                     Text("오늘 복습 끝!", style = MaterialTheme.typography.titleLarge)
                     Text(data.nextDay?.let { "영단어 Day $it 을 이어서 해 볼까요?" } ?: "영단어를 이어서 해 볼까요?", color = MaterialTheme.colorScheme.onSurfaceVariant)

@@ -54,6 +54,15 @@ interface WordDao {
     """)
     suspend fun getWrongWords(language: String, firstSeq: Int, lastSeq: Int): List<WordWithProgress>
 
+    /** 단어 복습 후보: 오답 단어와 맞은 횟수·마지막 학습 시각 (날짜 판단은 core/common isWordReviewDue). */
+    @Query("""
+        SELECT w.*, u.correctCount AS correctCount, u.lastStudiedAt AS lastStudiedAt
+        FROM words w JOIN user_words u ON u.wordId = w.id
+        WHERE w.language = :language AND w.deleted = 0 AND u.wrongCount > 0 AND u.correctCount < 3 AND u.lastStudiedAt IS NOT NULL
+        ORDER BY u.lastStudiedAt
+    """)
+    suspend fun reviewCandidates(language: String): List<ReviewCandidate>
+
     @Query("SELECT MAX(seq) FROM words WHERE language = :language")
     suspend fun maxSeq(language: String): Int?
 
@@ -87,4 +96,5 @@ data class PaceRow(val wordsPerMinute: Int, val fillerCount: Int)
 data class DayStats(val day: Int, val total: Int, val mastered: Int, val wrong: Int)
 
 /** 학습 기록이 없으면 correctCount·wrongCount가 null (= 신규). */
+data class ReviewCandidate(@Embedded val word: WordEntity, val correctCount: Int, val lastStudiedAt: Long)
 data class WordWithProgress(@Embedded val word: WordEntity, val correctCount: Int?, val wrongCount: Int?)

@@ -1,9 +1,6 @@
 package com.jooh.opic.feature.shadowing
 
 import android.Manifest
-import android.media.AudioAttributes
-import android.media.AudioFormat
-import android.media.AudioTrack
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
@@ -19,6 +16,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jooh.opic.core.common.WordDiff
+import com.jooh.opic.core.stt.PcmPlayer
 import com.jooh.opic.core.common.cueAt
 import com.jooh.opic.core.common.youtubeVideoId
 import kotlinx.coroutines.Dispatchers
@@ -112,14 +110,7 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit)
             }
             if (state.busy && state.model == "준비됨") TextButton(onClick = model::cancel) { Text("받아 적기 취소") }
             if (model.recordingFile.isFile) OutlinedButton(onClick = {
-                scope.launch(Dispatchers.IO) {
-                    val audio = model.recordingFile.readBytes()
-                    val track = AudioTrack.Builder().setAudioAttributes(AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_MEDIA).build())
-                        .setAudioFormat(AudioFormat.Builder().setSampleRate(16_000).setEncoding(AudioFormat.ENCODING_PCM_16BIT)
-                            .setChannelMask(AudioFormat.CHANNEL_OUT_MONO).build())
-                        .setBufferSizeInBytes(audio.size.coerceAtLeast(4096)).setTransferMode(AudioTrack.MODE_STATIC).build()
-                    try { track.write(audio, 0, audio.size); track.play(); kotlinx.coroutines.delay(audio.size / 32L + 200) } finally { track.release() }
-                }
+                scope.launch { PcmPlayer.play(model.recordingFile) }
             }) { Text("내 목소리 듣기") }
             state.result?.let { result ->
                 Text("받아 적은 말: $result")

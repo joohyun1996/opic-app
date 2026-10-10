@@ -73,6 +73,9 @@ fun WordsApp(
                         Card(onClick = { navigate("shadowing") }, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                             Text("섀도잉", Modifier.padding(20.dp), style = MaterialTheme.typography.titleLarge)
                         }
+                        Card(onClick = { navigate("speaking") }, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                            Text("스피킹", Modifier.padding(20.dp), style = MaterialTheme.typography.titleLarge)
+                        }
                         Card(onClick = {}, enabled = false, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(disabledContainerColor = New)) {
                             Text("중국어 (HSK) — 준비 중", Modifier.padding(20.dp))
                         }

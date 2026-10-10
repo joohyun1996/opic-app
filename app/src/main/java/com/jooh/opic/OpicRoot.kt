@@ -18,6 +18,8 @@ import com.jooh.opic.core.llm.ModelCatalog
 import com.jooh.opic.feature.grammar.GrammarFlow
 import com.jooh.opic.feature.shadowing.ShadowingScreen
 import com.jooh.opic.feature.shadowing.ShadowingViewModel
+import com.jooh.opic.feature.speaking.SpeakingScreen
+import com.jooh.opic.feature.speaking.SpeakingViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.ViewModelProvider
 import com.jooh.opic.feature.grammar.dueExercises
@@ -91,6 +93,21 @@ fun OpicRoot(app: OpicApplication) {
                 Box(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.TopCenter) {
                     Box(Modifier.widthIn(max = 430.dp).fillMaxSize()) {
                         ShadowingScreen(model, back)
+                    }
+                }
+            }
+            composable("speaking") {
+                val load by app.speakingCatalog.collectAsState()
+                // 파싱이 끝나기 전에 들어오면 ViewModel을 만들지 않고 기다린다
+                load?.let { loaded ->
+                    val catalog = loaded.catalog
+                    val model: SpeakingViewModel = viewModel(factory = remember(app, loaded) { object : ViewModelProvider.Factory {
+                        @Suppress("UNCHECKED_CAST")
+                        override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
+                            SpeakingViewModel(app, catalog, app.whisper, app::releaseGemmaBeforeWhisper, speaker::speak, speaker::stop) as T
+                    } })
+                    Box(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.TopCenter) {
+                        Box(Modifier.widthIn(max = 430.dp).fillMaxSize()) { SpeakingScreen(model, back) }
                     }
                 }
             }

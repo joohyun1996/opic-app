@@ -4,9 +4,6 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.pm.PackageManager
-import android.media.AudioFormat
-import android.media.AudioRecord
-import android.media.MediaRecorder
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,6 +13,9 @@ import com.jooh.opic.core.common.compareWords
 import com.jooh.opic.core.common.matchRate
 import com.jooh.opic.core.common.werWords
 import com.jooh.opic.core.stt.SttModels
+import com.jooh.opic.core.stt.PcmRecorder
+import com.jooh.opic.core.common.cleanWhisperText
+import com.jooh.opic.core.common.recordingTooShort
 import com.jooh.opic.core.stt.UserWhisper
 import com.jooh.opic.core.stt.WavDecoder
 import com.jooh.opic.core.stt.WhisperEngine
@@ -131,54 +131,18 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
         }
         if (!whisper.ready || state.value.busy || state.value.recording) return
         update { it.copy(recording = true, recordingLevel = 0f, result = null, diff = emptyList(), matchRate = null, message = null) }
-        recordingJob = viewModelScope.launch(Dispatchers.IO) {
-            var recorder: AudioRecord? = null
+        recordingJob = viewModelScope.launch {
             try {
-                ensureActive()
-                val min = AudioRecord.getMinBufferSize(16_000, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT)
-                require(min > 0)
-                val record = AudioRecord(MediaRecorder.AudioSource.VOICE_RECOGNITION, 16_000,
-                    AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, min * 4)
-                recorder = record
-                require(record.state == AudioRecord.STATE_INITIALIZED)
-                record.startRecording()
-                val deadline = System.nanoTime() + 30_000_000_000L
-                val buffer = ByteArray(min)
-                var levelEnergy = 0.0
-                var levelSamples = 0
-                recordingFile.outputStream().use { out ->
-                    while (isActive && state.value.recording && System.nanoTime() < deadline) {
-                        val n = record.read(buffer, 0, buffer.size)
-                        if (n > 0) {
-                            out.write(buffer, 0, n)
-                            for (index in 0 until n - 1 step 2) {
-                                val sample = ((buffer[index + 1].toInt() shl 8) or (buffer[index].toInt() and 0xff)).toShort().toInt()
-                                levelEnergy += sample.toDouble() * sample
-                                levelSamples++
-                                if (levelSamples >= 1_600) {
-                                    val rms = kotlin.math.sqrt(levelEnergy / levelSamples)
-                                    update { it.copy(recordingLevel = (rms / 6_000).toFloat().coerceIn(0f, 1f)) }
-                                    levelEnergy = 0.0
-                                    levelSamples = 0
-                                }
-                            }
-                        }
-                    }
+                val bytes = PcmRecorder.record(recordingFile, 30_000, { state.value.recording }) { level ->
+                    update { it.copy(recordingLevel = level) }
                 }
                 ensureActive()
                 update { it.copy(recording = false, recordingLevel = 0f) }
-                if (recordingTooShort(recordingFile.length())) message("너무 짧아요 — 문장 전체를 말해 보세요")
+                if (recordingTooShort(bytes)) message("너무 짧아요 — 문장 전체를 말해 보세요")
                 else transcribe()
             } catch (e: Exception) {
                 if (e !is CancellationException) message("녹음 실패: ${e.message}")
-                update { it.copy(recording = false, recordingLevel = 0f) }
             } finally {
-                // AudioRecord는 생성한 IO 작업만 정리한다. 화면 이탈은 취소 신호만 보낸다.
-                recorder?.let { record ->
-                    try {
-                        if (record.recordingState == AudioRecord.RECORDSTATE_RECORDING) record.stop()
-                    } finally { record.release() }
-                }
                 update { it.copy(recording = false, recordingLevel = 0f) }
             }
         }

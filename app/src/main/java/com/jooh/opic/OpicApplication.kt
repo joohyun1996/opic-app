@@ -22,6 +22,8 @@ import com.jooh.opic.feature.grammar.GrammarCatalog
 import com.jooh.opic.feature.grammar.GrammarLoadResult
 import com.jooh.opic.feature.shadowing.ShadowingViewModel
 import com.jooh.opic.core.stt.UserWhisper
+import com.jooh.opic.core.common.SpeakingCatalog
+import com.jooh.opic.core.common.parseSpeakingCatalog
 
 class OpicApplication : Application() {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
@@ -29,6 +31,10 @@ class OpicApplication : Application() {
     val importResult = mutableImport.asStateFlow()
     private val mutableGrammar = MutableStateFlow<GrammarLoadResult?>(null)
     val grammarResult = mutableGrammar.asStateFlow()
+    /** speaking.json 파싱 결과. 바깥 null = 읽는 중, 안쪽 catalog null = 실패. */
+    data class SpeakingLoad(val catalog: SpeakingCatalog?)
+    private val mutableSpeaking = MutableStateFlow<SpeakingLoad?>(null)
+    val speakingCatalog = mutableSpeaking.asStateFlow()
 
     override fun onCreate() {
         super.onCreate()
@@ -46,6 +52,9 @@ class OpicApplication : Application() {
             mutableGrammar.value = try {
                 GrammarCatalog.parse(assets.open("grammar.json").bufferedReader().use { it.readText() })
             } catch (_: Exception) { GrammarLoadResult.Failed }
+        }
+        scope.launch {
+            mutableSpeaking.value = SpeakingLoad(runCatching { assets.open("speaking.json").bufferedReader().use { parseSpeakingCatalog(it.readText()) } }.getOrNull())
         }
     }
 

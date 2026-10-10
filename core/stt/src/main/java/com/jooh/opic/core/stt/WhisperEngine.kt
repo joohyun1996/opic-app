@@ -16,7 +16,7 @@ internal object WhisperNative {
     init { System.loadLibrary("opic_whisper") }
     external fun initContext(modelPath: String): Long
     external fun freeContext(context: Long)
-    external fun transcribe(context: Long, threads: Int, audio: FloatArray, cancelled: AtomicBoolean?): ByteArray?
+    external fun transcribe(context: Long, threads: Int, audio: FloatArray, cancelled: AtomicBoolean?, prompt: String?): ByteArray?
     external fun systemInfo(): String
 }
 
@@ -43,11 +43,11 @@ class WhisperEngine private constructor(private var context: Long, val modelId: 
     private val lock = Mutex()
 
     /** 16kHz mono float(-1..1) 오디오를 영어로 받아 적는다. */
-    suspend fun transcribe(audio: FloatArray, threads: Int = DEFAULT_THREADS, cancelled: AtomicBoolean? = null): Transcription = lock.withLock {
+    suspend fun transcribe(audio: FloatArray, threads: Int = DEFAULT_THREADS, cancelled: AtomicBoolean? = null, prompt: String? = null): Transcription = lock.withLock {
         withContext(Dispatchers.Default) {
             check(context != 0L) { "닫힌 엔진" }
             val start = System.nanoTime()
-            val bytes = WhisperNative.transcribe(context, threads, audio, cancelled) ?: if (cancelled?.get() == true) throw CancellationException("받아 적기 취소") else error("받아 적기 실패")
+            val bytes = WhisperNative.transcribe(context, threads, audio, cancelled, prompt) ?: if (cancelled?.get() == true) throw CancellationException("받아 적기 취소") else error("받아 적기 실패")
             currentCoroutineContext().ensureActive()
             Transcription(bytes.toString(Charsets.UTF_8).trim(), (System.nanoTime() - start) / 1_000_000, audio.size * 1000L / SAMPLE_RATE)
         }

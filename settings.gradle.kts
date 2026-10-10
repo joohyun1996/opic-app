@@ -9,3 +9,4 @@ include(":feature:grammar")
 include(":core:stt")
 
 include(":feature:shadowing")
+include(":feature:speaking")

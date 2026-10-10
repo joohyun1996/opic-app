@@ -1,11 +1,11 @@
-package com.jooh.opic.feature.shadowing
+package com.jooh.opic.core.common
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
-class RecordingFeedbackTest {
+class RecordingTest {
     @Test fun shortRecordingBoundary() {
         assertTrue(recordingTooShort(47_999))
         assertFalse(recordingTooShort(48_000))

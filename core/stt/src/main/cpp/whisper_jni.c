@@ -39,7 +39,7 @@ static bool should_abort(void *user_data) {
 
 // 결과는 UTF-8 바이트로 넘긴다 (NewStringUTF는 4바이트 문자에서 실패할 수 있음)
 JNIEXPORT jbyteArray JNICALL
-Java_com_jooh_opic_core_stt_WhisperNative_transcribe(JNIEnv *env, jobject thiz, jlong ctx_ptr, jint threads, jfloatArray audio, jobject cancelled) {
+Java_com_jooh_opic_core_stt_WhisperNative_transcribe(JNIEnv *env, jobject thiz, jlong ctx_ptr, jint threads, jfloatArray audio, jobject cancelled, jstring prompt) {
     struct whisper_context *ctx = (struct whisper_context *) ctx_ptr;
     jfloat *data = (*env)->GetFloatArrayElements(env, audio, NULL);
     const jsize n = (*env)->GetArrayLength(env, audio);
@@ -54,6 +54,9 @@ Java_com_jooh_opic_core_stt_WhisperNative_transcribe(JNIEnv *env, jobject thiz, 
     params.print_timestamps = false;
     params.print_special = false;
     params.single_segment = false;
+    // 선택: 앞 문맥 힌트 (예: 머뭇거림을 지우지 않게 "Um, uh, ..."). null이면 기본 동작
+    const char *prompt_chars = prompt != NULL ? (*env)->GetStringUTFChars(env, prompt, NULL) : NULL;
+    if (prompt_chars != NULL) params.initial_prompt = prompt_chars;
 
     abort_state abort = {0};
     if (cancelled != NULL) {
@@ -68,6 +71,7 @@ Java_com_jooh_opic_core_stt_WhisperNative_transcribe(JNIEnv *env, jobject thiz, 
     whisper_reset_timings(ctx);
     const int rc = whisper_full(ctx, params, data, n);
     if (abort.flag != NULL) (*env)->DeleteGlobalRef(env, abort.flag);
+    if (prompt_chars != NULL) (*env)->ReleaseStringUTFChars(env, prompt, prompt_chars);
     (*env)->ReleaseFloatArrayElements(env, audio, data, JNI_ABORT);
     if (rc != 0) return NULL;
     whisper_print_timings(ctx);

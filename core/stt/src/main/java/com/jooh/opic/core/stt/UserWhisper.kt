@@ -23,8 +23,8 @@ class UserWhisper(context: Context) {
         engine = null
         engine = WhisperEngine.load(model)
     }
-    suspend fun transcribe(audio: FloatArray, cancelled: AtomicBoolean): Transcription = lock.withLock {
-        checkNotNull(engine) { "모델을 먼저 불러오세요" }.transcribe(audio, cancelled = cancelled)
+    suspend fun transcribe(audio: FloatArray, cancelled: AtomicBoolean, prompt: String? = null): Transcription = lock.withLock {
+        checkNotNull(engine) { "모델을 먼저 불러오세요" }.transcribe(audio, cancelled = cancelled, prompt = prompt)
     }
     suspend fun close() = lock.withLock { engine?.closeWhenIdle(); engine = null }
 }

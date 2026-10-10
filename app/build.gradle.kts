@@ -29,6 +29,7 @@ dependencies {
     implementation(project(":core:database"))
     implementation(project(":core:stt"))
     implementation(project(":feature:shadowing"))
+    implementation(project(":feature:speaking"))
     implementation(project(":core:llm"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -53,3 +54,10 @@ val bundledGrammar = tasks.register<Sync>("bundleGrammar") {
 }
 android.sourceSets["main"].assets.srcDir(layout.buildDirectory.dir("generated/grammarAssets").get().asFile)
 tasks.named("preBuild").configure { dependsOn(bundledGrammar) }
+
+val bundledSpeaking = tasks.register<Sync>("bundleSpeaking") {
+    from(rootProject.file("exports/speaking.json"))
+    into(layout.buildDirectory.dir("generated/speakingAssets"))
+}
+android.sourceSets["main"].assets.srcDir(layout.buildDirectory.dir("generated/speakingAssets").get().asFile)
+tasks.named("preBuild").configure { dependsOn(bundledSpeaking) }

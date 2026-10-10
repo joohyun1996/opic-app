@@ -31,7 +31,6 @@ class YouTubePlayer(private val web: WebView) {
     fun play() = command("player?.playVideo()")
     fun seek(seconds: Double) = command("player?.seekTo(${seconds.coerceAtLeast(0.0)}, true)")
     fun speed(value: Double) = command("player?.setPlaybackRate($value)")
-    fun dispose() { web.removeJavascriptInterface("OpicPlayer"); web.destroy() }
 }
 
 @SuppressLint("SetJavaScriptEnabled")
@@ -78,5 +77,8 @@ fun PlayerView(id: String, modifier: Modifier = Modifier, onPlayer: (YouTubePlay
             loadDataWithBaseURL("https://appassets.androidplatform.net/", html, "text/html", "UTF-8", null)
             onPlayer(YouTubePlayer(this))
         }
-    }, modifier = modifier)
+    }, modifier = modifier, onRelease = { web ->
+        web.removeJavascriptInterface("OpicPlayer")
+        web.destroy()
+    })
 }

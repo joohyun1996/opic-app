@@ -34,7 +34,7 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit)
     var repeat by remember { mutableStateOf(false) }
     var selectedCaption by remember(state.videoId, state.captions) { mutableStateOf<Int?>(null) }
     LaunchedEffect(state.videoId) { if (state.videoId != null) model.loadCaptions() }
-    DisposableEffect(model) { onDispose { model.cancelCaptions() } }
+    DisposableEffect(model) { onDispose { model.cancelCaptions(); player = null } }
     val permission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
         if (granted) { player?.pause(); model.startRecording() } else model.message("마이크 권한이 필요합니다")
     }
@@ -46,7 +46,6 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit)
             kotlinx.coroutines.delay(150)
         }
     }
-    DisposableEffect(state.videoId) { onDispose { player?.dispose(); player = null } }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
         TextButton(onClick = onBack) { Text("← 홈") }
         Text("섀도잉", style = MaterialTheme.typography.headlineSmall)

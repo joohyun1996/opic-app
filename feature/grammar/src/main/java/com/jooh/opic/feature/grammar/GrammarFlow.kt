@@ -88,4 +88,4 @@ private class GrammarViewModelFactory(private val result: GrammarLoadResult, pri
     override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T = GrammarViewModel(result, reviews) as T
 }
 
-private object LastGrammarTrack { var value = "opic" }
+private object LastGrammarTrack { var value = GrammarTracks.OPIC }

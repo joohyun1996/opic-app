@@ -3,6 +3,11 @@ package com.jooh.opic.feature.grammar
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
+object GrammarTracks {
+    const val OPIC = "opic"
+    const val CORE = "core"
+}
+
 @Serializable data class GrammarBook(val dataVersion: Int, val units: List<GrammarUnit>)
 @Serializable data class GrammarUnit(
     val id: String,
@@ -14,7 +19,7 @@ import kotlinx.serialization.json.Json
     val exercises: List<GrammarExercise>,
     val writingTask: GrammarWritingTask? = null,
     /** "opic" = OPIc 문법, "core" = 실전 영문법 (TASK 26). */
-    val track: String = "opic",
+    val track: String = GrammarTracks.OPIC,
     /** 실전 영문법의 부 이름 (예: "1부 문장의 뼈대"). */
     val part: String? = null,
 )
@@ -98,7 +103,9 @@ object GrammarCatalog {
 }
 
 /** 문제 id → 출처 ("실전 4장 시제 12개 한눈에", "OPIc 3단원 …") — 복습 화면에 표시 (TASK 31). */
+fun GrammarUnit.displayTitle(): String = if (track == GrammarTracks.CORE)
+    "실전 ${order}장 ${title.substringBefore(" — ")}" else "OPIc ${order}단원 $title"
+
 fun GrammarBook.sourceLabels(): Map<String, String> = units.flatMap { unit ->
-    val label = if (unit.track == "core") "실전 ${unit.order}장 ${unit.title.substringBefore(" — ")}" else "OPIc ${unit.order}단원 ${unit.title}"
-    unit.exercises.map { it.id to label }
+    unit.exercises.map { it.id to unit.displayTitle() }
 }.toMap()

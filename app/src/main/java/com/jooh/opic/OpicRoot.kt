@@ -41,6 +41,8 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.ViewModelProvider
 import com.jooh.opic.feature.grammar.dueExercises
 import com.jooh.opic.feature.grammar.GrammarLoadResult
+import com.jooh.opic.feature.grammar.GrammarTracks
+import com.jooh.opic.feature.grammar.displayTitle
 import com.jooh.opic.feature.words.Speaker
 import com.jooh.opic.feature.words.WordsApp
 import com.jooh.opic.feature.words.WordsPage
@@ -129,8 +131,8 @@ fun OpicRoot(app: OpicApplication) {
         }) { padding ->
             Box(Modifier.fillMaxSize().padding(padding).consumeWindowInsets(padding)) {
                 // 교정 카드 → 실전 영문법 장 설명 (TASK 29). 뒤로 가면 원래 화면으로 돌아온다
-                val coreUnits = remember(grammarResult) { (grammarResult as? GrammarLoadResult.Loaded)?.book?.units.orEmpty().filter { it.track == "core" }.associateBy { it.id } }
-                val grammarLink = remember(grammarResult) { GrammarLink(title = { id -> coreUnits[id]?.let { "${it.order}장 ${it.title.substringBefore(" — ")}" } },
+                val coreUnits = remember(grammarResult) { (grammarResult as? GrammarLoadResult.Loaded)?.book?.units.orEmpty().filter { it.track == GrammarTracks.CORE }.associateBy { it.id } }
+                val grammarLink = remember(grammarResult) { GrammarLink(title = { id -> coreUnits[id]?.displayTitle()?.removePrefix("실전 ") },
                     open = { id -> nav.navigate("grammarUnit/$id") }) }
                 CompositionLocalProvider(LocalGrammarLink provides grammarLink) {
                 NavHost(navController = nav, startDestination = Tab.HOME.route) {
@@ -241,7 +243,7 @@ fun OpicRoot(app: OpicApplication) {
                             value = runCatching { loadStats(app.database, app.currentLanguage.code, java.time.LocalDate.now().toEpochDay()) }.getOrNull()
                         }
                         val titles = remember(grammarResult) { (grammarResult as? GrammarLoadResult.Loaded)?.book?.units.orEmpty().associate { u ->
-                            u.id to if (u.track == "core") "실전 ${u.order}장 ${u.title.substringBefore(" — ")}" else "OPIc ${u.order}단원 ${u.title}" }
+                            u.id to u.displayTitle() }
                         }
                         Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
                             Box(Modifier.widthIn(max = 430.dp)) { StatsScreen(stats, { titles[it] ?: it }, back) }

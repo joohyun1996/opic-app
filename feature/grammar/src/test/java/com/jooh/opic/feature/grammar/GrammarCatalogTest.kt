@@ -61,5 +61,7 @@ class GrammarCatalogTest {
         assertEquals(book.units.sumOf { it.exercises.size }, labels.size)
         assertEquals(true, labels.getValue("c4-01").startsWith("실전 4장"))
         assertEquals(true, labels.getValue("u1-01").startsWith("OPIc 1단원"))
+        assertEquals(book.units.first { it.id == "c4" }.displayTitle(), labels.getValue("c4-01"))
+        assertEquals(book.units.first { it.track == GrammarTracks.OPIC && it.order == 1 }.displayTitle(), labels.getValue("u1-01"))
     }
 }

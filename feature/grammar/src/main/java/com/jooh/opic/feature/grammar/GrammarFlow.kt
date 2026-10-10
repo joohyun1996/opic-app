@@ -33,7 +33,8 @@ fun GrammarFlow(
         GrammarWritingViewModel.Factory(engine, tokenStore, modelDownloaded)
     })
     val state by model.state.collectAsState()
-    var track by rememberSaveable { mutableStateOf("opic") }
+    // 마지막으로 고른 탭(OPIc 문법/실전 영문법)을 앱이 켜져 있는 동안 기억 — 장에서 뒤로 가거나 다른 탭에 다녀와도 유지
+    var track by rememberSaveable { mutableStateOf(LastGrammarTrack.value) }
     val writingState by writing.state.collectAsState()
     val engineState by engine.state.collectAsState()
     DisposableEffect(writing) { onDispose { writing.cancel() } }
@@ -59,7 +60,7 @@ fun GrammarFlow(
             is GrammarLoadResult.Loaded -> when (state.page) {
                 GrammarPage.LIST -> GrammarUnitListScreen(loaded.book.units,
                     if (engineState is LlmEngineState.Ready) "준비됨" else "준비 필요", onBack, model::openUnit,
-                    dueCount = state.dueCount, onReview = model::startReview, track = track, onTrack = { track = it })
+                    dueCount = state.dueCount, onReview = model::startReview, track = track, onTrack = { track = it; LastGrammarTrack.value = it })
                 GrammarPage.EXPLANATION -> state.unit?.let { GrammarExplanationScreen(it, back, model::start) }
                 GrammarPage.EXERCISE -> GrammarExerciseScreen(state, back, model::setInput, model::select, model::submit, model::next)
                 GrammarPage.RESULT -> GrammarResultScreen(state, if (state.reviewMode) model::startReview else model::start, model::list,
@@ -73,3 +74,5 @@ private class GrammarViewModelFactory(private val result: GrammarLoadResult, pri
     @Suppress("UNCHECKED_CAST")
     override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T = GrammarViewModel(result, reviews) as T
 }
+
+private object LastGrammarTrack { var value = "opic" }

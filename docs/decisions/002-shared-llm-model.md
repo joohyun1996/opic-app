@@ -7,8 +7,8 @@ OPIc와 머니로그가 같은 Gemma 3n E4B(`gemma-3n-e4b-it.task`, 4,405,655,03
 
 ## 결정
 - 모델 파일 하나를 `내장 저장공간/Develop/Core/llm/gemma-3n-e4b-it.task`에 둔다 (사용자가 만든 `Develop/` 아래, 백업은 `Develop/Opic-app/`, `Develop/Moneylog/`)
-- 각 앱은 **시스템 파일 선택(ACTION_OPEN_DOCUMENT)으로 한 번 고르고** `takePersistableUriPermission(READ)`로 권한을 유지한다 → **새 권한 없음**
-- MediaPipe `setModelPath`는 경로만 받으므로 `ParcelFileDescriptor`를 열어 둔 채 `/proc/self/fd/<fd>`를 넘긴다 (프로세스에 하나만 열어 둠)
+- ~~시스템 파일 선택(SAF) + `/proc/self/fd/<fd>`~~ → **실기기 실패 (2026-10-10)**: MediaPipe(LiteRT-LM)가 그 경로를 다시 열 때 MediaProvider가 저장공간 권한을 검사해 거부 (`Permission to access file ... is denied`, `scoped_file_posix.cc:32 open() failed: /proc/self/fd/131`)
+- **개정 (2026-10-10, 사용자 승인)**: 각 앱에 `MANAGE_EXTERNAL_STORAGE`("모든 파일 접근") 추가, 사용자가 설정에서 한 번 허용 → `setModelPath("/storage/emulated/0/Develop/Core/llm/gemma-3n-e4b-it.task")`로 직접 연다. 모델 파일 읽기에만 사용
 - 공용 파일을 안 골랐으면 기존처럼 앱 전용 파일·다운로드를 쓴다
 
 ## 버린 대안
@@ -17,8 +17,8 @@ OPIc와 머니로그가 같은 Gemma 3n E4B(`gemma-3n-e4b-it.task`, 4,405,655,03
 - 모든 파일 접근 권한(MANAGE_EXTERNAL_STORAGE): 권한이 너무 넓음
 
 ## 머니로그에 적용할 것 (머니로그 세션용)
-1. OPIc의 `core/llm/src/main/java/com/jooh/opic/core/llm/SharedModel.kt`(SharedModel + SharedFirstModelStore)를 머니로그 `core/llm`에 같은 내용으로 추가 (패키지명만 맞춤)
-2. 엔진을 만드는 곳에서 `store = SharedFirstModelStore(context, 기존 store)`
-3. `ModelCatalog.isDownloaded`에 `|| SharedModel.isValid(context, spec.expectedBytes)`
-4. 모델 다운로드/동의 화면에 "공용 모델 파일 선택 (Develop/Core/llm)" 버튼 → `OpenDocument` → `SharedModel.save(context, uri, expectedBytes)` 성공 시 `ensureModelReady()`
+1. Manifest에 `<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />`
+2. OPIc의 `core/llm/.../SharedModel.kt`(SharedModel + SharedFirstModelStore)를 머니로그 `core/llm`에 같은 내용으로 (패키지명만)
+3. 엔진을 만드는 곳에서 `store = SharedFirstModelStore(기존 store)`, `ModelCatalog.isDownloaded`에 `|| SharedModel.isValid(spec.expectedBytes)`
+4. 모델 준비 화면: 권한이 없으면 "공용 모델 쓰기 — 모든 파일 접근 허용" 버튼(`SharedModel.accessSettingsIntent`) → 돌아오면(ON_RESUME) 권한·파일 확인 후 `ensureModelReady()` (OPIc `core/correction/.../LlmPreparationScreen.kt` 참고)
 5. 실기기: 공용 파일을 골라 AI 기능이 돌아가는 걸 확인한 **뒤에** 머니로그 전용 복사본(`no_backup/llm/gemma-3n-e4b-it.task`) 삭제

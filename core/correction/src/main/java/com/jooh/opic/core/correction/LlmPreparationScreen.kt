@@ -6,9 +6,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.jooh.opic.core.llm.LlmEngineState
 import com.jooh.opic.core.llm.SharedModel
 import com.jooh.opic.core.llm.llmFailureLabel
@@ -28,12 +29,19 @@ fun LlmPreparationScreen(
 ) {
     var token by remember { mutableStateOf("") }
     val context = LocalContext.current
-    var pickMessage by remember { mutableStateOf<String?>(null) }
-    // 공용 폴더(Develop/Core/llm)의 모델을 여러 앱이 같이 쓴다 — 한 번 고르면 계속 사용
-    val pick = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-        if (uri == null) return@rememberLauncherForActivityResult
-        if (SharedModel.save(context, uri, modelBytes)) { pickMessage = "공용 모델 파일을 쓰도록 설정했어요"; onDownload() }
-        else pickMessage = "모델 파일이 아니에요 (크기가 달라요). ${SharedModel.FOLDER_HINT}의 gemma-3n-e4b-it.task를 고르세요"
+    // 공용 폴더(Develop/Core/llm)의 모델을 여러 앱이 같이 쓴다 (ADR 002) — "모든 파일 접근"을 허용하고 돌아오면 바로 불러온다
+    var hasAccess by remember { mutableStateOf(SharedModel.hasAccess()) }
+    val lifecycle = LocalLifecycleOwner.current.lifecycle
+    DisposableEffect(lifecycle) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                val now = SharedModel.hasAccess()
+                if (now && !hasAccess && SharedModel.isValid(modelBytes)) onDownload()
+                hasAccess = now
+            }
+        }
+        lifecycle.addObserver(observer)
+        onDispose { lifecycle.removeObserver(observer) }
     }
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         TextButton(onClick = onBack) { Text(backLabel) }
@@ -54,10 +62,16 @@ fun LlmPreparationScreen(
             Button(onClick = onContinue, modifier = Modifier.fillMaxWidth()) { Text(continueLabel) }
         }
         if (engineState is LlmEngineState.NotDownloaded || engineState is LlmEngineState.Failed) {
-            OutlinedButton(onClick = { pick.launch(arrayOf("*/*")) }, modifier = Modifier.fillMaxWidth()) {
-                Text("공용 모델 파일 선택 (${SharedModel.FOLDER_HINT})")
+            when {
+                !hasAccess -> {
+                    Text("다른 앱(머니로그)과 같은 모델을 쓰려면 ${SharedModel.FOLDER_HINT}의 파일을 읽어야 해요. 설정에서 '모든 파일 접근 허용'을 켜 주세요 (모델 파일 읽기에만 써요)")
+                    OutlinedButton(onClick = { context.startActivity(SharedModel.accessSettingsIntent(context)) }, modifier = Modifier.fillMaxWidth()) {
+                        Text("공용 모델 쓰기 — 모든 파일 접근 허용")
+                    }
+                }
+                !SharedModel.isValid(modelBytes) -> Text("${SharedModel.FOLDER_HINT}에 gemma-3n-e4b-it.task가 없거나 크기가 달라요")
+                else -> OutlinedButton(onClick = onDownload, modifier = Modifier.fillMaxWidth()) { Text("공용 모델 불러오기") }
             }
-            pickMessage?.let { Text(it) }
             if (modelDownloaded) Text("저장된 모델을 다시 불러올 수 있습니다.")
             else Text("AI 교정을 쓰려면 모델(약 ${"%.1f".format(modelBytes / 1_000_000_000.0)} GB)을 한 번 받아야 합니다. Wi-Fi에서 받으세요.")
             if (!modelDownloaded) {

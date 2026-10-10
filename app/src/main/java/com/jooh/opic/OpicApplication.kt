@@ -80,6 +80,6 @@ class OpicApplication : Application() {
         get() = synchronized(this) { currentLlmEngine ?: createOnDeviceLlmEngine(
             context = this,
             config = ModelCatalog.config(this),
-            store = SharedFirstModelStore(this, HttpModelStore(headers = { hfTokenStore.authHeader() })),
+            store = SharedFirstModelStore(HttpModelStore(headers = { hfTokenStore.authHeader() })),
         ).also { currentLlmEngine = it } }
 }

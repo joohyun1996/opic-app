@@ -50,7 +50,7 @@ object ModelCatalog {
      */
     fun isDownloaded(context: Context): Boolean {
         val spec = config(context).models.first()
-        return (spec.file.isFile && spec.file.length() == spec.expectedBytes) || SharedModel.isValid(context, spec.expectedBytes)
+        return (spec.file.isFile && spec.file.length() == spec.expectedBytes) || SharedModel.isValid(spec.expectedBytes)
     }
 
     /** 앱 안(noBackup)에 받아 둔 복사본. 공용 파일을 쓰게 되면 지워서 용량을 아낀다. */

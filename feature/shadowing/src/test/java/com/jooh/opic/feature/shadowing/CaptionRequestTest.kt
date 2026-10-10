@@ -13,6 +13,15 @@ class CaptionRequestTest {
         assertEquals("asr", asr?.kind)
     }
 
+    @Test fun englishVariants() {
+        listOf("en", "en-GB", "en-US").forEach { assertEquals(it, null, captionRequest("https://www.youtube.com/api/timedtext?v=a&lang=$it&fmt=json3")?.kind) }
+        listOf("en-GB", "en-US").forEach { assertEquals("https://www.youtube.com/api/timedtext?v=a&lang=$it&fmt=json3", captionRequest("https://www.youtube.com/api/timedtext?v=a&lang=$it")?.jsonUrl) }
+        assertEquals("asr", captionRequest("https://www.youtube.com/api/timedtext?lang=en-GB&kind=asr")?.kind)
+        assertNull(captionRequest("https://www.youtube.com/api/timedtext?lang=es"))
+        assertNull(captionRequest("https://www.youtube.com/api/timedtext?lang=english"))
+        assertNull(captionRequest("https://www.youtube.com/api/timedtext?v=a"))
+    }
+
     @Test fun rejectsOtherLanguageKindAndHost() {
         assertNull(captionRequest("https://www.youtube.com/api/timedtext?lang=ko"))
         assertNull(captionRequest("https://www.youtube.com/api/timedtext?lang=en&kind=forced"))

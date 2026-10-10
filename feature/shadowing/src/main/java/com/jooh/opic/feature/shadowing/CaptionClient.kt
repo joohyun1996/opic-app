@@ -24,7 +24,9 @@ internal fun captionRequest(address: String): CaptionRequest? = runCatching {
         val pieces = part.split('=', limit = 2)
         URLDecoder.decode(pieces[0], "UTF-8") to URLDecoder.decode(pieces.getOrElse(1) { "" }, "UTF-8")
     }.orEmpty()
-    if (query.firstOrNull { it.first == "lang" }?.second != "en") return null
+    // en·en-GB·en-US 등 영어 변형 모두 (BBC는 en-GB — TASK 23)
+    val lang = query.firstOrNull { it.first == "lang" }?.second ?: return null
+    if (lang != "en" && !lang.startsWith("en-")) return null
     val kind = query.firstOrNull { it.first == "kind" }?.second
     if (kind != null && kind != "asr") return null
     val withoutFmt = uri.rawQuery?.split('&')?.filterNot { it.substringBefore('=') == "fmt" }.orEmpty()

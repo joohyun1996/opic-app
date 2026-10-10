@@ -98,7 +98,8 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
         update { it.copy(captionStatus = CaptionStatus.LOADING) }
         captionJob = viewModelScope.launch {
             try {
-                if (!retry) delay(8_000)
+                // 플레이어가 자막을 요청할 시간 (열 때 잠깐 재생시켜 요청을 일으킨다, TASK 23)
+                if (!retry) delay(10_000)
                 if (state.value.captionStatus == CaptionStatus.READY) return@launch
                 val cues = captionClient.fetch(id)
                 ensureActive()

@@ -56,11 +56,16 @@ fun PlayerView(id: String, modifier: Modifier = Modifier, onPlayer: (YouTubePlay
         }
         window.addEventListener('resize', sizePlayer);
         sizePlayer();
+        var primed=false, priming=false;
         function onYouTubeIframeAPIReady() {
           player = new YT.Player('player', {height:Math.max(1,window.innerHeight),width:Math.max(1,window.innerWidth),videoId:${JSONObject.quote(id)},
             playerVars:{playsinline:1,origin:'https://appassets.androidplatform.net',cc_load_policy:1,cc_lang_pref:'en'},
-            events:{onReady:function(){sizePlayer();OpicPlayer.ready(${JSONObject.quote(nonce)})},
-              onStateChange:function(e){OpicPlayer.state(${JSONObject.quote(nonce)},e.data)},
+            events:{onReady:function(){sizePlayer();OpicPlayer.ready(${JSONObject.quote(nonce)});
+                // 플레이어는 재생을 시작해야 자막을 요청한다 → 소리 끄고 잠깐 재생했다가 첫 재생 신호에 0초로 멈춘다 (TASK 23, 한 번만)
+                if(!primed){primed=true;priming=true;player.mute();player.playVideo();setTimeout(function(){if(priming){priming=false;player.pauseVideo();player.seekTo(0,true);player.unMute();}},5000);}},
+              onStateChange:function(e){
+                if(priming && e.data==1){priming=false;player.pauseVideo();player.seekTo(0,true);player.unMute();}
+                OpicPlayer.state(${JSONObject.quote(nonce)},e.data)},
               onError:function(e){OpicPlayer.error(${JSONObject.quote(nonce)},e.data)}}});
           setInterval(function(){if(player && player.getCurrentTime) OpicPlayer.time(${JSONObject.quote(nonce)},player.getCurrentTime())}, 150);
         }

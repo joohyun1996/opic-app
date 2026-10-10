@@ -7,6 +7,8 @@ import android.media.AudioTrack
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
@@ -23,6 +25,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit) {
     val state by model.state.collectAsState()
@@ -126,12 +129,14 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit)
                         "빠뜨린 단어 ${state.diff.count { it is WordDiff.Delete }}개 · " +
                         "틀린 단어 ${state.diff.count { it is WordDiff.Substitute }}개"
                 )
-                state.diff.forEach { item -> when (item) {
-                    is WordDiff.Match -> Text(item.word)
-                    is WordDiff.Substitute -> Text("${item.ref} → ${item.hyp}", color = Color.Red)
-                    is WordDiff.Delete -> Text(item.ref, color = Color.Gray, textDecoration = TextDecoration.LineThrough)
-                    is WordDiff.Insert -> Text(item.hyp, color = Color(0xFFBA6500))
-                } }
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(5.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    state.diff.forEach { item -> when (item) {
+                        is WordDiff.Match -> Text(item.word)
+                        is WordDiff.Substitute -> Text("${item.ref} → ${item.hyp}", color = Color.Red)
+                        is WordDiff.Delete -> Text(item.ref, color = Color.Gray, textDecoration = TextDecoration.LineThrough)
+                        is WordDiff.Insert -> Text(item.hyp, color = Color(0xFFBA6500))
+                    } }
+                }
             }
         }
     }

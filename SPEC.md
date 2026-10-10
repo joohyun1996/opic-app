@@ -31,6 +31,7 @@
 | 2026-10-10 | v0.22.0 | 스피킹 문항 50주제 164문항(설문·돌발·롤플레이·IM/IH/AL), 모의고사 15문항 (TASK 20) |
 | 2026-10-10 | v0.23.0 | 섀도잉 추천 영상 100개 (분류 6종, 누르면 바로 열기) (TASK 21) |
 | 2026-10-10 | v0.24.0 | **Room DB v2 → v3** (`speaking_answers`, `shadowing_attempts`), 스피킹·모의고사·섀도잉 기록과 지난번 비교, 학습 기록 백업·복원 (TASK 22) |
+| 2026-10-10 | v0.25.0 | Gemma 모델 공용 폴더(`Develop/Core/llm`) 사용 — 파일 선택 한 번, 새 권한 없음 (ADR 002) |
 
 ## 인증
 ### POST /api/auth/login
@@ -143,6 +144,7 @@
 - ~~미구현: `words.json` 적재와 dataVersion 비교, 단어 화면~~ → TASK 06에서 구현 (아래)
 
 ### 기기 내 LLM + 문장 교정 (2026-10-05, TASK 05)
+- (2026-10-10, ADR 002) 모델 위치: 공용 파일 `Develop/Core/llm/gemma-3n-e4b-it.task`를 AI 교정 준비 화면의 "공용 모델 파일 선택"으로 한 번 고르면 그 파일을 쓴다(읽기 권한 유지, `/proc/self/fd`). 안 골랐으면 앱 전용 `no_backup/llm/` 파일·다운로드
 - `:core:llm` — 머니로그 `core/llm` 7개 파일 복사 (`4d5adfa`, 원본과 패키지명 외 동일). Gemma 3n E4B, 모델 경로 `com.jooh.opic`의 `no_backup/llm` (머니로그와 별도)
 - 권한: `INTERNET` 1개 (모델 다운로드 전용, `HttpModelStore`만 사용). HF 토큰은 `HfTokenStore`(암호화, `opic_hf_token_store`)
 - 교정 (`core:common`)

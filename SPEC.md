@@ -30,6 +30,7 @@
 | 2026-10-10 | v0.21.0 | 발음 힌트 (스피킹·섀도잉): 불명확·다르게 들린 단어, 한국인 발음 팁 8종, 연음·약화·t 약화, 리듬 팁 (TASK 19) |
 | 2026-10-10 | v0.22.0 | 스피킹 문항 50주제 164문항(설문·돌발·롤플레이·IM/IH/AL), 모의고사 15문항 (TASK 20) |
 | 2026-10-10 | v0.23.0 | 섀도잉 추천 영상 100개 (분류 6종, 누르면 바로 열기) (TASK 21) |
+| 2026-10-10 | v0.24.0 | **Room DB v2 → v3** (`speaking_answers`, `shadowing_attempts`), 스피킹·모의고사·섀도잉 기록과 지난번 비교, 학습 기록 백업·복원 (TASK 22) |
 
 ## 인증
 ### POST /api/auth/login
@@ -275,7 +276,7 @@
 - Whisper: `UserWhisper` 공유, `prompt = "Um, uh, so, like, you know, I mean."` (머뭇거림 유지). 1.5초 미만·무음은 안내만
 - 결과: 답변 전문(머뭇거림 회색), 말한 시간(< 60초 "1분 이상 말해 보세요"), 분당 단어(< 90 "조금 더 빠르게" / 90~150 "적당한 속도" / > 150 "조금 천천히"), 단어·문장 수, 머뭇거림 횟수(um, uh, er, erm, hmm, mm, you know, i mean — like 제외), 자주 쓴 단어(기능어 제외 3회 이상 상위 3개). 다시 답하기 / 다음 질문 / 내 답변 듣기
 - 녹음·재생 공용: `core:stt/PcmRecorder`, `PcmPlayer` (섀도잉·스피킹), `core:common/Recording.kt`
-- 저장 없음 (TASK 21)
+- 저장: TASK 22 참고
 
 ### 답변 직접 고치기 + 문법 교정 (2026-10-10, TASK 18)
 - Whisper 단어별 시각·확신도: `transcribe(withWords = true)` → `SpokenWord(text, startMs, endMs, confidence)` (`token_timestamps`, 토큰을 앞 공백 기준으로 합침, confidence = 조각 확률 최솟값)
@@ -294,7 +295,7 @@
 - `speaking.json` dataVersion 2: 50주제 164문항 — 자기소개 1, 설문 25, 돌발 16, 롤플레이 8 (세트 6: 질문하기 → 문제 해결 → 관련 경험). 주제 `category`(intro/survey/unexpected/roleplay), 문항 `level`(IM/IH/AL), type `issue` 추가
 - 주제 목록: 분류별 구역, "N문항 · IM~AL", 질문 화면에 등급
 - 모의고사(`buildMockExam`): 1 자기소개 → 2~4·5~7 서로 다른 설문 주제 앞 3문항 → 8~10 돌발 → 11~13 롤플레이 세트 → 14 비교(compare) → 15 이슈(issue). 문항마다 TTS·다시 듣기 1회·2분 녹음, 건너뛰기·끝내기 → 한꺼번에 받아 적기 → 요약(문항별 시간·분당 단어·머뭇거림, 평균) → 문항을 누르면 결과 화면
-- 저장 없음 (TASK 21)
+- 저장: TASK 22 참고
 
 ### 음성 인식 검증 (2026-10-07, TASK 14)
 - 엔진: whisper.cpp v1.9.5 (`third_party/whisper.cpp`, CPU, arm64-v8a, fp16·dotprod), 모듈 `:core:stt` — 지금은 `debugImplementation`만 (사용자 기능 TASK에서 `implementation`으로)
@@ -304,6 +305,12 @@
 - 오디오: `AudioRecord` 16kHz mono PCM16 (`VOICE_RECOGNITION`), 앱 내부 저장. 받아 적기 greedy, language "en", 4스레드
 - 채점용 `core:common/Wer.kt` `wordErrorRate(reference, hypothesis)`: 소문자, 문장부호 제거(단어 안 `'` 유지), 단어 단위 편집 거리 / 기준 단어 수
 - 측정표·남은 위험: `docs/tasks/14-whisper-spike/HANDOFF.md`
+
+## 기록·백업 (2026-10-10, TASK 22)
+- **DB v3**: `speaking_answers(id, language, questionId, topicId, createdAt, durationMs, transcript, editedText, wordCount, wordsPerMinute, fillerCount, sentenceCount, mockId?)`, `shadowing_attempts(id, language, videoId, sentence, heard, matchRate, createdAt)`. `MIGRATION_2_3` = CREATE TABLE 2 + INDEX 3
+- 스피킹: 받아 적기 성공 때 저장, 고칠 때마다 갱신. 질문 화면 "지난 답변 N개 · 마지막 …", 결과 화면 "지난번과 비교"(시간·분당 단어·머뭇거림, 지난 답변 글), 주제 목록 "내 기록"(모의고사 요약 + 최근 답변 50개, 누르면 전문). 모의고사 답변은 같은 mockId
+- 섀도잉: 따라 말하기(원문 있을 때)마다 저장. 추천 목록 "최근 연습한 영상" 5개, 카드·영상 화면에 "연습 N회 · 최고 일치율 N%"
+- 백업·복원: 홈 "학습 기록 백업·복원" → `opic-backup-YYYY-MM-DD.json` (시스템 파일 선택). 내용: 단어 기록(`language, word`로), 문법 복습, 스피킹 답변, 섀도잉 연습 (녹음 제외). 복원은 한 트랜잭션 병합 — 더 최근 기록 우선, 같은 답변 중복 없음, 없는 단어 건너뜀, 형식이 틀리면 변경 없음
 
 ## 분석
 (기능 추가 시 여기에 작성)

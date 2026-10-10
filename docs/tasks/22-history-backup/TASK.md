@@ -29,7 +29,7 @@
 - 복원 규칙 (한 트랜잭션): 단어·문법 복습은 `lastStudiedAt`이 더 최근인 쪽을 남김(있으면 UPDATE, 없으면 INSERT), 없는 단어는 건너뜀. 스피킹·섀도잉은 같은 `(createdAt, questionId/videoId)`가 없을 때만 INSERT. 형식이 틀리면 아무것도 바꾸지 않는다
 
 ## 수용 기준
-- [ ] AC1: v2 DB(단어 기록·문법 복습 있음) → v3 열기 → 기록 유지, 새 테이블 사용 가능 (MigrationTest)
-- [ ] AC2: 백업 → 새 DB(단어만 있음)에 복원 → 단어 기록·복습·답변·섀도잉 같음, 두 번 복원해도 중복 없음, 더 최근 기록은 덮어쓰지 않음, 잘못된 JSON은 변경 없음 (테스트)
-- [ ] AC3: `./gradlew test lint :app:assembleDebug :app:assembleRelease` 통과, Manifest 변경 없음, REPLACE 없음
+- [x] AC1: v2 DB(단어 기록·문법 복습 있음) → v3 열기 → 기록 유지, 새 테이블 사용 가능 (MigrationTest)
+- [x] AC2: 백업 → 새 DB(단어만 있음)에 복원 → 단어 기록·복습·답변·섀도잉 같음, 두 번 복원해도 중복 없음, 더 최근 기록은 덮어쓰지 않음, 잘못된 JSON은 변경 없음 (테스트)
+- [x] AC3: `./gradlew test lint :app:assembleDebug :app:assembleRelease` 통과, Manifest 변경 없음, REPLACE 없음
 - [ ] AC4: 실기기 — v2 앱 위에 덮어 설치해 기존 기록 유지, 백업 파일 만들기, 스피킹 답변이 기록 화면에 남음

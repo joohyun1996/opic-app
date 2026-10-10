@@ -1,6 +1,6 @@
 # TASK: 실전 영문법 장마다 영작 연습 (Gemma 교정)
 
-> 작성: Claude · 승인: [ ] 사용자
+> 작성·구현: Claude · 승인: [x] 사용자 (2026-10-10)
 > 경로: docs/tasks/32-core-writing/TASK.md
 
 ## 목표
@@ -23,10 +23,16 @@
 - OPIc 주제(집, 취미, 여행, 일상)와 연결한다
 
 ## 수용 기준
-- [ ] AC1: c1~c18의 writingTask가 파싱되고 비어 있지 않다 (테스트)
-- [ ] AC2: c0에는 writingTask가 없고 "직접 써 보기"가 숨겨진다
+- [x] AC1: c1~c18의 writingTask가 파싱되고 비어 있지 않다 (테스트)
+- [x] AC2: c0에는 writingTask가 없고 "직접 써 보기"가 숨겨진다
 - [ ] AC3: 실기기에서 2개 장의 영작 → Gemma 교정 결과 표시를 확인한다
-- [ ] AC4: `./gradlew test lint :app:assembleRelease` 통과
+- [x] AC4: `./gradlew test lint :app:assembleRelease` 통과
 
 ## 범위 밖
 - 교정 프롬프트 변경
+
+## 구현 메모
+- c1~c18 writingTask(한국어 과제·영어 질문·최소 문장 수)와 예시 답안 `sample`(선택 필드, 기존 grammar.json은 영향 없음)
+- 쓰기 화면에 "예시 답안 보기" 토글
+- 범위 추가: `GrammarCatalog.kt`(sample 필드), `GrammarWritingScreen.kt`(토글)
+- AC3(Gemma 교정 실기기) 미확인

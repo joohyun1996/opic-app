@@ -37,7 +37,7 @@ import kotlinx.serialization.json.Json
 @Serializable data class GrammarPart(val text: String, val role: String)
 @Serializable data class GrammarExample(val en: String, val ko: String)
 @Serializable data class GrammarMistake(val wrong: String, val right: String, val note: String)
-@Serializable data class GrammarWritingTask(val promptKo: String, val promptEn: String, val minSentences: Int)
+@Serializable data class GrammarWritingTask(val promptKo: String, val promptEn: String, val minSentences: Int, val sample: String? = null)
 @Serializable data class GrammarExercise(
     val id: String,
     val kind: String,

@@ -501,7 +501,13 @@
       "My friend with long hair lives in Busan."
      ]
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "내 방에 있는 물건 3가지를 묘사하세요. 문장마다 명사·동사·형용사가 하나 이상 들어가게 써 보세요.",
+    "promptEn": "Describe three things in your room.",
+    "minSentences": 3,
+    "sample": "I have a small desk by the window. My old laptop sits on the desk. A soft gray blanket covers my bed."
+   }
   },
   {
    "id": "c2",
@@ -856,7 +862,13 @@
      ],
      "answer": 5
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "평범한 하루를 3문장 이상 써 보세요. 1형식(I wake up), 3형식(I drink coffee), 4형식(My mom gives me …)을 하나씩 넣어 보세요.",
+    "promptEn": "Describe a typical day for you.",
+    "minSentences": 3,
+    "sample": "I wake up at seven. I drink a cup of coffee every morning. My mom sometimes makes me breakfast."
+   }
   },
   {
    "id": "c3",
@@ -1226,7 +1238,13 @@
      ],
      "answer": 4
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "우리 동네에 무엇이 있는지 There is/are로 2문장, 긴 주어(The café near my house …)로 1문장 써 보세요.",
+    "promptEn": "Tell me about your neighborhood. What is there?",
+    "minSentences": 3,
+    "sample": "There is a big park near my apartment. There are many small restaurants on my street. The café across from the station is always crowded."
+   }
   },
   {
    "id": "c4",
@@ -1719,7 +1737,13 @@
       "is studying"
      ]
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "지난 주말에 한 일을 과거 시제로 쓰고, 이번 주말 계획을 미래 표현(be going to)으로 이어 쓰세요.",
+    "promptEn": "What did you do last weekend, and what are you going to do this weekend?",
+    "minSentences": 4,
+    "sample": "Last weekend I visited my parents. We had dinner at a Korean restaurant. This weekend I'm going to stay home. I'm going to clean my room and watch a movie."
+   }
   },
   {
    "id": "c5",
@@ -2151,7 +2175,13 @@
      ],
      "answer": 1
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "오래 해 온 취미나 습관을 현재완료(have p.p., for/since)로 소개하세요. 처음 시작한 때는 과거 시제로 쓰세요.",
+    "promptEn": "Tell me about a hobby you have had for a long time.",
+    "minSentences": 3,
+    "sample": "I have played the guitar for ten years. I started when I was in middle school. I have never stopped since then."
+   }
   },
   {
    "id": "c6",
@@ -2572,7 +2602,13 @@
      ],
      "answer": 1
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "친구가 영어 공부법을 물어봅니다. should, have to, can을 써서 조언 3문장 이상을 써 보세요.",
+    "promptEn": "Your friend asks how to study English. Give some advice.",
+    "minSentences": 3,
+    "sample": "You should listen to English every day. You don't have to study for hours. You can start with short videos."
+   }
   },
   {
    "id": "c7",
@@ -2982,7 +3018,13 @@
       "My mom made this cake."
      ]
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "우리나라나 우리 도시에서 유명한 것을 수동태로 소개하세요 (is known for, was built in, is made from).",
+    "promptEn": "Tell me about something your city or country is famous for.",
+    "minSentences": 3,
+    "sample": "Seoul is known for its night views. Gyeongbokgung was built in 1395. Kimchi is made from cabbage and red pepper."
+   }
   },
   {
    "id": "c8",
@@ -3435,7 +3477,13 @@
      ],
      "answer": 1
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "올해 목표를 to부정사로 쓰세요 (want to, plan to, decide to, It's hard to …).",
+    "promptEn": "What are your goals for this year?",
+    "minSentences": 3,
+    "sample": "I want to get a high score on the OPIc. I plan to practice speaking every day. It's not easy to find time, but I decided to try."
+   }
   },
   {
    "id": "c9",
@@ -3866,7 +3914,13 @@
      ],
      "answer": 3
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "주말에 즐겨 하는 일과 싫어하는 일을 동명사로 쓰세요 (enjoy, be into, hate, look forward to).",
+    "promptEn": "What do you enjoy doing on weekends?",
+    "minSentences": 3,
+    "sample": "I enjoy hiking with my friends. I'm really into baking these days. I hate waking up early on Sundays."
+   }
   },
   {
    "id": "c10",
@@ -4297,7 +4351,13 @@
      ],
      "answer": 4
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "최근 본 영화나 공연의 느낌을 분사로 쓰세요 (exciting/excited, the actor playing …).",
+    "promptEn": "Tell me about a movie or show you saw recently.",
+    "minSentences": 3,
+    "sample": "The movie I saw last week was really touching. The actor playing the father was amazing. I was so moved that I cried at the end."
+   }
   },
   {
    "id": "c11",
@@ -4725,7 +4785,13 @@
      ],
      "answer": 1
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "최근 힘들었던 일과 그때 한 일을 접속사로 이어 쓰세요 (because, although, so, when).",
+    "promptEn": "Tell me about a difficult situation you had recently.",
+    "minSentences": 3,
+    "sample": "Last month I was very busy because I had a big project. Although I was tired, I kept working. When it was over, I took a long vacation."
+   }
   },
   {
    "id": "c12",
@@ -5150,7 +5216,13 @@
      ],
      "answer": 5
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "가장 친한 친구나 좋아하는 장소를 관계대명사로 묘사하세요 (who, that, whose).",
+    "promptEn": "Describe your best friend or a place you like.",
+    "minSentences": 3,
+    "sample": "My best friend is a person who always listens to me. She works at a company that makes games. I have another friend whose sister is a famous singer."
+   }
   },
   {
    "id": "c13",
@@ -5577,7 +5649,13 @@
      ],
      "answer": 0
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "내가 자란 동네를 관계부사와 what으로 묘사하세요 (where, when, What I liked most was …).",
+    "promptEn": "Describe the town where you grew up.",
+    "minSentences": 3,
+    "sample": "I grew up in a small town where everyone knew each other. I remember the summers when we swam in the river. What I miss most is the quiet nights."
+   }
   },
   {
    "id": "c14",
@@ -5982,7 +6060,13 @@
      ],
      "answer": 0
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "여행 가서 길을 묻거나 정보를 묻는 상황입니다. 간접 의문문으로 질문 3개를 써 보세요 (Do you know where …?, Could you tell me …?).",
+    "promptEn": "You are traveling. Ask three polite questions.",
+    "minSentences": 3,
+    "sample": "Do you know where the nearest subway station is? Could you tell me what time the museum closes? I wonder if there is a good restaurant near here."
+   }
   },
   {
    "id": "c15",
@@ -6390,7 +6474,13 @@
       "This bag isn't big enough for my laptop."
      ]
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "요즘 기분과 생활을 형용사·부사로 묘사하세요 (-ed/-ing 감정, usually, really, enough).",
+    "promptEn": "How have you been feeling these days?",
+    "minSentences": 3,
+    "sample": "I've been really tired lately. My job is interesting, but it's exhausting. I usually sleep only six hours, which isn't enough."
+   }
   },
   {
    "id": "c16",
@@ -6799,7 +6889,13 @@
      ],
      "answer": 3
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "10년 전과 지금의 휴대폰(또는 우리 동네)을 비교하세요 (-er than, more … than, not as … as, much).",
+    "promptEn": "Compare phones today with phones ten years ago.",
+    "minSentences": 3,
+    "sample": "Phones today are much faster than ten years ago. They are also more expensive. My old phone wasn't as convenient as my new one."
+   }
   },
   {
    "id": "c17",
@@ -7202,7 +7298,13 @@
       "I wish I had studied harder in high school."
      ]
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "복권에 당첨된다면, 또는 다시 고등학생이 된다면 무엇을 할지 가정법으로 쓰세요.",
+    "promptEn": "What would you do if you won the lottery?",
+    "minSentences": 3,
+    "sample": "If I won the lottery, I would quit my job. I would travel around the world. If I had more time, I'd learn to play the piano."
+   }
   },
   {
    "id": "c18",
@@ -7613,7 +7715,13 @@
      ],
      "answer": 4
     }
-   ]
+   ],
+   "writingTask": {
+    "promptKo": "평일 일정을 시간·장소 전치사와 관사를 신경 써서 쓰세요 (at 7, on Mondays, in the morning, at work, a/the).",
+    "promptEn": "Describe your schedule on weekdays.",
+    "minSentences": 4,
+    "sample": "I get up at seven in the morning. I take a bus to work. On Mondays I have a meeting at nine. I usually have lunch at a small restaurant near the office."
+   }
   }
  ]
 }

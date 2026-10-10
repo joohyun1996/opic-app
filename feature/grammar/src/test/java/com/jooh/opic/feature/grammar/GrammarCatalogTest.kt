@@ -36,7 +36,8 @@ class GrammarCatalogTest {
         assertEquals(setOf("core"), core.units.map { it.track }.toSet())
         val kinds = core.units.flatMap { u -> u.exercises.map { it.kind } }.toSet()
         assertEquals(true, kinds.containsAll(listOf("spot", "structure")))
-        core.units.filter { it.order > 0 }.forEach { assertEquals(true, it.explanation.breakdowns.isNotEmpty() && it.explanation.table != null && it.writingTask == null) }
+        core.units.filter { it.order > 0 }.forEach { assertEquals(true, it.explanation.breakdowns.isNotEmpty() && it.explanation.table != null && it.writingTask?.sample?.isNotBlank() == true) }
+        assertNull(core.units.first { it.id == "c0" }.writingTask)
         // spot 정답 위치가 문장 단어 범위 밖이면 실패
         assertEquals(GrammarLoadResult.Failed, GrammarCatalog.parse(coreRaw.replaceFirst("\"answer\": 4", "\"answer\": 40")))
     }

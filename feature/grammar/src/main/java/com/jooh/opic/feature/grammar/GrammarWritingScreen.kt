@@ -8,6 +8,10 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
@@ -26,13 +30,18 @@ fun GrammarWritingScreen(
     onList: () -> Unit,
 ) {
     val unit = state.unit ?: return
-    val task = unit.writingTask ?: return // 실전 영문법 장에는 쓰기 과제가 없다
+    val task = unit.writingTask ?: return // 0장처럼 쓰기 과제가 없는 장
     val count = splitSentences(state.input).size
     Column {
         TextButton(onClick = onBack) { Text("← 결과") }
         Column(Modifier.weight(1f).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(14.dp)) {
             Text(task.promptKo, style = MaterialTheme.typography.headlineSmall)
             Text(task.promptEn, style = MaterialTheme.typography.bodySmall)
+            task.sample?.let { sample ->
+                var shown by rememberSaveable { mutableStateOf(false) }
+                TextButton(onClick = { shown = !shown }) { Text(if (shown) "예시 답안 접기" else "예시 답안 보기") }
+                if (shown) Text(sample, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
             Text("최소 ${task.minSentences}문장 · 현재 ${count}문장")
             if (count > 5) Text("앞의 5문장만 교정합니다", color = MaterialTheme.colorScheme.error)
             OutlinedTextField(value = state.input, onValueChange = onInput, enabled = !state.isCorrecting,

@@ -16,6 +16,7 @@ fun MenuScreen(
     wrongCount: Int, gemmaStatus: String, whisperStatus: String, themeMode: ThemeMode, speechRate: Float, version: String,
     onClose: () -> Unit, onWrong: () -> Unit, onStats: () -> Unit, onSpeakingHistory: () -> Unit, onModels: () -> Unit,
     onTheme: (ThemeMode) -> Unit, onSpeechRate: (Float) -> Unit, onBackup: () -> Unit,
+    reminderHour: Int? = null, onReminder: (Int?) -> Unit = {},
 ) {
     var picker by remember { mutableStateOf<String?>(null) }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
@@ -33,6 +34,7 @@ fun MenuScreen(
             MenuRow("AI 모델", "Gemma $gemmaStatus · Whisper $whisperStatus", onModels, divider = false)
             MenuRow("발음 듣기 (TTS) 속도", SPEECH_RATES.first { it.second == speechRate }.first, onClick = { picker = "rate" })
             MenuRow("화면 테마", themeMode.label, onClick = { picker = "theme" })
+            MenuRow("학습 알림", reminderHour?.let { "매일 %02d:00".format(it) } ?: "끔", onClick = { picker = "reminder" })
         }
         MenuSection("데이터") {
             MenuRow("학습 기록 백업·복원", "단어·문법·스피킹·섀도잉", onBackup, divider = false)
@@ -42,6 +44,8 @@ fun MenuScreen(
     }
     when (picker) {
         "theme" -> ChoiceDialog("화면 테마", ThemeMode.entries.map { it.label to it }, themeMode, { onTheme(it); picker = null }) { picker = null }
+        "reminder" -> ChoiceDialog("학습 알림 (오늘 공부했으면 안 울려요)", listOf<Pair<String, Int?>>("끔" to null) + ReminderSettings.HOURS.map { "매일 %02d:00".format(it) to it },
+            reminderHour, { onReminder(it); picker = null }) { picker = null }
         "rate" -> ChoiceDialog("발음 듣기 속도", SPEECH_RATES, speechRate, { onSpeechRate(it); picker = null }) { picker = null }
     }
 }

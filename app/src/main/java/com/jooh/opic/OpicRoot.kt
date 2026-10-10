@@ -248,6 +248,19 @@ fun OpicRoot(app: OpicApplication) {
                         }
                     }
                     composable("menu") {
+                        // 학습 알림 (TASK 34): 켤 때 권한을 묻고, 거부하면 꺼짐으로 둔다
+                        var reminderHour by remember { mutableStateOf(ReminderSettings.hour(app)) }
+                        var pendingHour by remember { mutableStateOf<Int?>(null) }
+                        val permission = androidx.activity.compose.rememberLauncherForActivityResult(
+                            androidx.activity.result.contract.ActivityResultContracts.RequestPermission()) { granted ->
+                            val hour = pendingHour.takeIf { granted }
+                            ReminderSettings.set(app, hour); reminderHour = hour
+                            if (!granted) Toast.makeText(app, "알림 권한이 없어 알림을 켜지 않았어요", Toast.LENGTH_LONG).show()
+                        }
+                        val onReminder: (Int?) -> Unit = { hour ->
+                            if (hour == null || ReminderSettings.canNotify(app)) { ReminderSettings.set(app, hour); reminderHour = hour }
+                            else { pendingHour = hour; permission.launch(android.Manifest.permission.POST_NOTIFICATIONS) }
+                        }
                         val words: WordsViewModel = viewModel(factory = remember(app) { WordsViewModel.Factory(app.database) })
                         val wordState by words.state.collectAsState()
                         LaunchedEffect(Unit) { words.refresh() }
@@ -256,6 +269,7 @@ fun OpicRoot(app: OpicApplication) {
                             gemmaStatus = gemmaStatus(app), whisperStatus = if (SttModels.isDownloaded(app.whisper.model)) "받음" else "없음",
                             themeMode = themeMode, speechRate = speechRate, version = BuildConfig.VERSION_NAME,
                             onClose = back, onWrong = { nav.navigate("wrong") }, onStats = { nav.navigate("stats") },
+                            reminderHour = reminderHour, onReminder = onReminder,
                             onSpeakingHistory = { pendingSpeakingHistory.value = true; openTab(Tab.SPEAKING) },
                             onModels = { modelsOpen = true },
                             onTheme = { UiSettings.setTheme(app, it) }, onSpeechRate = { UiSettings.setSpeechRate(app, it) },

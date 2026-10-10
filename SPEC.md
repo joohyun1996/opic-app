@@ -27,6 +27,7 @@
 | 2026-10-10 | v0.18.0 | 섀도잉 실기기 수정: WebView 즉시 파괴·iframe 높이 0 수정, 자막은 플레이어 요청 가로채기, 일치율 = 맞은 단어/원문, 짧은 녹음·무음 안내, 비교 결과 가로 표시. 개발자 검증 화면 삭제, Whisper 모델 small.en만 |
 | 2026-10-10 | v0.19.0 | 스피킹 탭: 질문 은행(15주제 43문항), TTS 질문·다시 듣기 1회, 2분 답변 녹음, Whisper 받아 적기(머뭇거림 유지 prompt), 즉시 지표 (TASK 17) |
 | 2026-10-10 | v0.20.0 | 스피킹 결과: 단어 눌러 구간 듣기·꾹 눌러 고치기, 고친 글로 Gemma 문법 교정(최대 15문장). 교정 코드 `core:correction`으로 이동 (TASK 18) |
+| 2026-10-10 | v0.21.0 | 발음 힌트 (스피킹·섀도잉): 불명확·다르게 들린 단어, 한국인 발음 팁 8종, 연음·약화·t 약화, 리듬 팁 (TASK 19) |
 
 ## 인증
 ### POST /api/auth/login
@@ -274,6 +275,13 @@
 - 결과 화면 단어 칩: 짧게 누르기 → 그 단어 구간(앞뒤 0.2초) 재생, 꾹 누르기 → 바꾸기 / 지우기 / 뒤에 넣기 / 원래대로. 표시: 바꿈 파란 밑줄, 지움 회색 취소선, 넣음 파란 글자, 머뭇거림 회색. "Whisper 원문 보기" 전환, 전체 되돌리기. 지표는 고친 글로 다시 계산
 - "문법 교정 받기 (AI)": Whisper 해제 → Gemma 준비(문법 탭과 같은 준비 화면) → 고친 글을 최대 15문장으로 나눠 문장마다 결과 카드(문법 탭과 같음), 취소·실패 문장 다시 시도
 - 공용 모듈 `core:correction`: `CorrectionCoordinator.correct(sentences, max)`, `CorrectionResultCard`, `LlmPreparationScreen`
+
+### 발음 힌트 (2026-10-10, TASK 19 — 섀도잉 비교 결과에도 표시)
+- 채점이 아닌 힌트. 카드 "발음 힌트"(접기 가능), 단어 칩을 누르면 TTS 원어민 발음
+- A. 스피킹: 고치지 않은 Whisper 단어 중 확신도 < 0.5 (머뭇거림·숫자·1글자 제외, 낮은 순 5개) + "내 발음"(그 구간 재생). 섀도잉: 원문 대비 다르게 들린·빠뜨린 단어 5개
+- B. 한국인 발음 팁 8종 (`core:common/Pronunciation.kt`): R/L, F≠P, V≠B, TH, Z≠J, 끝소리 '으' 금지, W 입술, 긴·짧은 '이' — 답변(스피킹은 고친 글, 섀도잉은 원문)에 나온 단어만, 많이 걸린 순 4개, 예시 4개
+- C. 연음(자음 끝 + 모음 시작, 4쌍), 약화(want to→wanna, going to→gonna, got to→gotta, kind of→kinda, a lot of→a lotta, have to→hafta), t 약화(모음 사이 t, 4개), 리듬 팁 고정 문구
+- 공용 화면 부품 모듈 `core:ui` (`PronunciationHintsCard`)
 
 ### 음성 인식 검증 (2026-10-07, TASK 14)
 - 엔진: whisper.cpp v1.9.5 (`third_party/whisper.cpp`, CPU, arm64-v8a, fp16·dotprod), 모듈 `:core:stt` — 지금은 `debugImplementation`만 (사용자 기능 TASK에서 `implementation`으로)

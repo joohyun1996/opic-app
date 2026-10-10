@@ -42,10 +42,10 @@
 - 리듬 팁 1줄 고정: "내용어(명사·동사·형용사)는 세고 길게, 기능어(a, the, to, of)는 약하고 짧게"
 
 ## 수용 기준
-- [ ] AC1: `unclearWords` — 임계값·머뭇거림·1글자 제외·최대 5개·낮은 순 (테스트)
-- [ ] AC2: `pronunciationTips` — 규칙별 매칭(really→r_l, coffee→f_p, very→v_b, think→th, zoo→z_j, milk→final, work→w, sheep→ee_i), 많이 걸린 순, 예시 중복 제거·최대 4개 (테스트)
-- [ ] AC3: `linkingPairs`("pick it up" → pick it, it up), `reductions`("I want to go" → want to→wanna), `flapWords`(water, city / 제외: time, top) (테스트)
-- [ ] AC4: `./gradlew test lint :app:assembleDebug :app:assembleRelease` 통과, 권한·Room 변경 없음
+- [x] AC1: `unclearWords` — 임계값·머뭇거림·1글자 제외·최대 5개·낮은 순 (테스트)
+- [x] AC2: `pronunciationTips` — 규칙별 매칭(really→r_l, coffee→f_p, very→v_b, think→th, zoo→z_j, milk→final, work→w, sheep→ee_i), 많이 걸린 순, 예시 중복 제거·최대 4개 (테스트)
+- [x] AC3: `linkingPairs`("pick it up" → pick it, it up), `reductions`("I want to go" → want to→wanna), `flapWords`(water, city / 제외: time, top) (테스트)
+- [x] AC4: `./gradlew test lint :app:assembleDebug :app:assembleRelease` 통과, 권한·Room 변경 없음
 - [ ] AC5: 실기기 — 스피킹·섀도잉 결과에 발음 힌트가 보이고 칩을 누르면 TTS (사용자 확인)
 
 ## 범위 밖

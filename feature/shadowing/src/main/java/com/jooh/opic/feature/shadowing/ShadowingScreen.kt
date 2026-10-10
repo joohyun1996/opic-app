@@ -59,7 +59,8 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit)
             key(id) { PlayerView(id, Modifier.fillMaxWidth().height(220.dp), { player = it }, { current = it },
                 { playerStatus = "플레이어 오류 $it"; model.message("영상 오류 코드 $it") },
                 { playerStatus = "플레이어 준비됨" },
-                { if (it == 1) playerStatus = "플레이어 준비됨" }) }
+                { if (it == 1) playerStatus = "플레이어 준비됨" },
+                { cues, kind -> model.playerCaptions(id, cues, kind) }) }
             Text(playerStatus)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(onClick = { player?.play() }) { Text("재생") }
@@ -99,6 +100,13 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit)
             }
             if (state.recording) Button(onClick = model::stopRecording) { Text("■ 정지") }
             else Button(enabled = state.model == "준비됨" && !state.busy, onClick = { player?.pause(); permission.launch(Manifest.permission.RECORD_AUDIO) }) { Text("● 녹음") }
+            if (state.recording) {
+                Text("입력 소리 크기")
+                LinearProgressIndicator(progress = { state.recordingLevel }, modifier = Modifier.fillMaxWidth())
+            }
+            if (state.message?.startsWith("너무 짧아요") == true || state.message?.startsWith("말소리가 잘") == true) {
+                Text(state.message.orEmpty(), color = MaterialTheme.colorScheme.error)
+            }
             if (state.busy && state.model == "준비됨") TextButton(onClick = model::cancel) { Text("받아 적기 취소") }
             if (model.recordingFile.isFile) OutlinedButton(onClick = {
                 scope.launch(Dispatchers.IO) {

@@ -9,12 +9,14 @@ import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.webkit.WebResourceResponse
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import java.util.UUID
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
 import org.json.JSONObject
+import java.io.ByteArrayInputStream
 
 /** 이 화면이 생성한 HTML만 로드한다. 브리지에는 값 전달만 허용하고 Kotlin 명령 실행 API는 노출하지 않는다. */
 class PlayerBridge(private val nonce: String, private val onTime: (Double) -> Unit, private val onError: (Int) -> Unit,
@@ -37,8 +39,9 @@ class YouTubePlayer(private val web: WebView) {
 @Composable
 fun PlayerView(id: String, modifier: Modifier = Modifier, onPlayer: (YouTubePlayer) -> Unit,
                onTime: (Double) -> Unit, onError: (Int) -> Unit, onReady: () -> Unit,
-               onState: (Int) -> Unit) {
+               onState: (Int) -> Unit, onCaptions: (List<com.jooh.opic.core.common.Cue>, String?) -> Unit) {
     val nonce = remember(id) { UUID.randomUUID().toString() }
+    val captionClient = remember(id) { CaptionClient() }
     val html = remember(id) { """
         <!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head>
         <body style="margin:0;background:black"><style>html,body,#player{width:100%;height:100%}</style><div id="player"></div>
@@ -46,7 +49,7 @@ fun PlayerView(id: String, modifier: Modifier = Modifier, onPlayer: (YouTubePlay
         var player;
         function onYouTubeIframeAPIReady() {
           player = new YT.Player('player', {height:'100%',width:'100%',videoId:${JSONObject.quote(id)},
-            playerVars:{playsinline:1,origin:'https://appassets.androidplatform.net'},
+            playerVars:{playsinline:1,origin:'https://appassets.androidplatform.net',cc_load_policy:1,cc_lang_pref:'en'},
             events:{onReady:function(){OpicPlayer.ready(${JSONObject.quote(nonce)})},
               onStateChange:function(e){OpicPlayer.state(${JSONObject.quote(nonce)},e.data)},
               onError:function(e){OpicPlayer.error(${JSONObject.quote(nonce)},e.data)}}});
@@ -72,6 +75,12 @@ fun PlayerView(id: String, modifier: Modifier = Modifier, onPlayer: (YouTubePlay
             }
             webViewClient = object : WebViewClient() {
                 override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean = request.isForMainFrame
+                override fun shouldInterceptRequest(view: WebView, request: WebResourceRequest): WebResourceResponse? {
+                    if (request.method != "GET") return null
+                    val captions = captionClient.intercept(request.url.toString()) ?: return null
+                    onCaptions(captions.cues, captions.kind)
+                    return WebResourceResponse("application/json", "UTF-8", ByteArrayInputStream(captions.body))
+                }
             }
             addJavascriptInterface(PlayerBridge(nonce, onTime, onError, onReady, onState), "OpicPlayer")
             loadDataWithBaseURL("https://appassets.androidplatform.net/", html, "text/html", "UTF-8", null)

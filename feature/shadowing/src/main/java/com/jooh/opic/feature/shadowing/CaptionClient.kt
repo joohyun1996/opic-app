@@ -11,9 +11,41 @@ import java.net.HttpURLConnection
 import java.net.URI
 import java.net.URL
 import java.io.ByteArrayOutputStream
+import java.net.URLDecoder
+
+internal data class CaptionRequest(val jsonUrl: String, val kind: String?)
+
+/** 플레이어가 실제로 요청한 영어 자막 주소만 허용한다. */
+internal fun captionRequest(address: String): CaptionRequest? = runCatching {
+    val uri = URI(address)
+    if (uri.scheme != "https" || uri.host !in setOf("www.youtube.com", "youtube.com") ||
+        uri.userInfo != null || uri.port !in listOf(-1, 443) || uri.path != "/api/timedtext") return null
+    val query = uri.rawQuery?.split('&')?.map { part ->
+        val pieces = part.split('=', limit = 2)
+        URLDecoder.decode(pieces[0], "UTF-8") to URLDecoder.decode(pieces.getOrElse(1) { "" }, "UTF-8")
+    }.orEmpty()
+    if (query.firstOrNull { it.first == "lang" }?.second != "en") return null
+    val kind = query.firstOrNull { it.first == "kind" }?.second
+    if (kind != null && kind != "asr") return null
+    val withoutFmt = uri.rawQuery?.split('&')?.filterNot { it.substringBefore('=') == "fmt" }.orEmpty()
+    val next = uri.scheme + "://" + uri.host + uri.path + "?" + (withoutFmt + "fmt=json3").joinToString("&")
+    CaptionRequest(next, kind)
+}.getOrNull()
+
+internal data class InterceptedCaption(val body: ByteArray, val cues: List<Cue>, val kind: String?)
 
 /** 쿠키·계정·학습 정보 없이 공개 페이지와 선택한 자막만 요청한다. */
 class CaptionClient {
+    internal fun intercept(address: String): InterceptedCaption? {
+        val request = captionRequest(address) ?: return null
+        return runCatching {
+            val body = runBlocking(Dispatchers.IO) { get(request.jsonUrl, captionsOnly = true) }
+            if (!JSONObject(body).has("events")) return null
+            val cues = mergeSentences(parseJson3(body))
+            if (cues.isEmpty()) return null
+            InterceptedCaption(body.toByteArray(Charsets.UTF_8), cues, request.kind)
+        }.getOrNull()
+    }
     suspend fun fetch(videoId: String): List<Cue> = withContext(Dispatchers.IO) {
         require(videoId.matches(Regex("[A-Za-z0-9_-]{11}")))
         val html = get("https://www.youtube.com/watch?v=$videoId", captionsOnly = false)

@@ -94,3 +94,19 @@ gradle/gradle-daemon-jvm.properties                 → 없음
 영상 링크: `https://www.youtube.com/watch?v=aircAruvnKk`, `https://www.youtube.com/watch?v=jNQXAC9IVRw`.
 
 재현: 홈 → 섀도잉 → 첫 링크 입력·열기 → 자막 없음 및 빈 플레이어 확인 → 재생 → 5초 뒤에도 현재 0.0초. 두 번째 링크에서도 동일. [플레이어 화면](device-player-2026-10-10.png), [비교 결과](device-compare-2026-10-10.png), [관련 logcat](device-logcat-2026-10-10.txt). 로그에는 WebView 시작 무렵 `Failed to read DnsConfig`가 있으나 재생 실패의 원인으로 확정할 수 없음. 코드 변경 없음.
+
+## 리뷰 반영 (3차)
+
+- 시작 커밋: `f2cc47c`
+- 코드 반영 커밋 범위: `f2cc47c..ee4916f`
+- 판정: M1 수정 후 실기기에서 재생 실패. 3차 리뷰 지시에 따라 여기서 중단.
+
+| 리뷰 ID | 조치 | 커밋 | 결과 |
+|---------|------|------|------|
+| M1 | 일부 반영 | `ee4916f` | DOM storage와 사용자 동작 없는 미디어 재생 설정을 켜고, 콘솔 로그·IFrame 준비/상태/오류 표시·디버그 검사 기능을 추가했다. 빌드·설치는 성공했으나 플레이어는 여전히 흰 화면, `플레이어 준비 중`, `현재 0.0초`에 머묾. |
+| M2 | 보류 | - | M1 재생 확인 전 단계이므로 자막 경로는 수정하지 않음. |
+| M3 | 보류 | - | M1 재생 확인 전 단계이므로 녹음 처리는 수정하지 않음. |
+
+실기기: S23+에 `adb install -r --no-streaming` 성공, 앱 데이터 삭제 없음. `https://www.youtube.com/watch?v=aircAruvnKk`를 열고 12초 대기한 뒤 재생을 눌러 8초 더 확인했지만 시각은 0.0초였다. `onReady`·`onStateChange`·`onError` 콜백이 화면 상태를 바꾸지 않았고 `ShadowingWeb` 콘솔 메시지는 출력되지 않았다. [실패 화면](device-m1-failed-2026-10-10.png), [WebView 관련 logcat](device-m1-logcat-2026-10-10.txt). 해당 로그에는 `Failed to read DnsConfig`와 `WebView.destroy() called while WebView is still attached to window.` 경고가 있으나 원인은 확정하지 않았다. 두 번째 영상, 0.75×, A-B 반복, 자막 목록, 문장 선택, 새 녹음은 M1 실패로 재시험하지 않았다.
+
+검증: `./gradlew test lint :app:assembleDebug :app:assembleRelease --quiet` 종료 코드 0. `git diff --check` 출력 없음. 재리뷰 전 플레이어 생명주기와 로딩 실패 지점을 확인할 필요가 있다.

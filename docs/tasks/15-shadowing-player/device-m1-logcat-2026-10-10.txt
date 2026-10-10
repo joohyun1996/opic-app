@@ -1,0 +1,12 @@
+10-10 09:31:12.099 I/WebViewFactory(  781): Loading com.google.android.webview version 154.0.8037.49 (code 803704903)
+10-10 09:31:12.159 D/nativeloader(  781): Load /data/app/~~2yfT0Jd4SgtLU2HKO094Pw==/com.google.android.webview-uaCYDvd5KzVwLmWH7aqdKQ==/base.apk!/lib/arm64-v8a/libwebviewchromium.so using class loader ns clns-10 (caller=/data/app/~~2yfT0Jd4SgtLU2HKO094Pw==/com.google.android.webview-uaCYDvd5KzVwLmWH7aqdKQ==/base.apk): ok
+10-10 09:31:12.162 D/nativeloader(  781): Load /system/lib64/libwebviewchromium_plat_support.so using class loader ns clns-10 (caller=/data/app/~~2yfT0Jd4SgtLU2HKO094Pw==/com.google.android.webview-uaCYDvd5KzVwLmWH7aqdKQ==/base.apk): ok
+10-10 09:31:12.219 I/ActivityManager( 2617): Start proc 1018:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0/u0i709 for  {com.jooh.opic/org.chromium.content.app.SandboxedProcessService0:0}
+10-10 09:31:12.219 I/DynamicHiddenApp_BGProtectManager( 2617): check webview name : com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0check hostingname webview : {com.jooh.opic/org.chromium.content.app.SandboxedProcessService0:0}
+10-10 09:31:12.246 I/Zygote  ( 1018): Process 1018 created for com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0
+10-10 09:31:12.246 W/chromium(  781): [WARNING:net/dns/dns_config_service_android.cc:69] Failed to read DnsConfig.
+10-10 09:31:12.279 I/cr_WebViewApkApp( 1018): version=154.0.8037.49 (803704903) minSdkVersion=29 processName=com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0 splits=<none>
+10-10 09:31:12.331 W/chromium( 1018): [WARNING:content/app/android/content_main_android.cc:82] android_setCpu already initialized
+10-10 09:31:12.362 W/cr_AwContents(  781): WebView.destroy() called while WebView is still attached to window.
+10-10 09:31:12.370 W/chromium( 1018): [WARNING:content/child/runtime_features.cc:499] Fenced frames cannot be enabled in this configuration. Use --enable-features=FencedFrames instead.
+10-10 09:31:12.373 I/chromium( 1018): [INFO:third_party/skia/src/ports/SkFontMgr_android_parser.cpp:724] [SkFontMgr Android Parser] '/product/etc/fonts_customization.xml' could not be opened

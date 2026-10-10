@@ -96,3 +96,11 @@
   - 실험: iframe `style.height = innerHeight + 'px'`로 넣자 썸네일·재생 버튼·제목이 정상 표시됨 (스크린샷 확인)
   - 수정 방향: CSS 퍼센트 대신 JS에서 `innerWidth`·`innerHeight`를 px로 iframe에 넣고, `resize` 이벤트 때 다시 맞춘다. `YT.Player`의 width/height도 px 숫자로
   - 실기기 확인 기준에 **"화면에 영상 썸네일·재생 버튼이 보이고 손가락으로 누를 수 있다"**를 넣는다 (상태값만으로 판단 금지)
+
+## 6차 리뷰 — 5차 반영 확인 (2026-10-10, `1736e03..de4af0b`)
+- 판정: **Approve** — 섀도잉 TASK 15·16 완료
+- M1 ✅ `matchRate` = Match / 원문 단어 수, 0~1로 제한 + 테스트. 더 말한·빠뜨린·틀린 개수 따로 표시
+- M2 ✅ iframe을 `innerWidth`·`innerHeight` px로, `resize`·`onReady` 때 다시 맞춤. **Claude 실기기 확인(덮어 설치)**: 썸네일·재생 버튼 표시, 눌러서 재생(현재 시각 증가), 자막 2문장 표시
+- 사용자 요청 ✅ 단어 비교 FlowRow 가로 배치, 개발자 검증 화면·자료·홈 버튼 삭제(홈 확인), `SttModels`는 small.en만
+- 남은 확인 (Nit, 사용자가 다음에 쓸 때): 녹음 → 가로 비교 결과·일치율 0~100% 표시, 1.5초 미만 안내
+- GPT는 5시간 한도 28%에서 규칙대로 실기기·TASK 17을 보류함 — 실기기는 Claude가 대신 확인

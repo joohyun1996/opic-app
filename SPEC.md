@@ -1,6 +1,6 @@
 # OPIc · HSK 학습 앱 기능 명세서
 
-> 마지막 업데이트: 2026-10-09
+> 마지막 업데이트: 2026-10-10
 >
 > 2026-10-04 Kotlin 네이티브 앱 전환 (`docs/decisions/001-native-pivot.md`). 이 저장소에서 계속 작성한다. 웹앱 시절 명세(인증, `/api/*`, 웹 단어 탭)는 `web-final` 태그 기준이며 아래 "전환 기록" 이전 섹션에 남아 있다.
 
@@ -24,6 +24,7 @@
 | 2026-10-07 | v0.15.0 | Whisper 기기 내 음성 인식 검증 → **small.en 채택** (debug 전용 `:core:stt`), `RECORD_AUDIO` 권한 (TASK 14). 홈 이름 변경(영단어·영문법·오답노트), LLM 검증 화면 삭제 |
 | 2026-10-09 | v0.16.0 | 섀도잉: YouTube IFrame 재생·A-B 반복·속도·따라 말하기(Whisper small.en) 단어 비교, `:core:stt` release 포함 (TASK 15, 실기기 확인 보류) |
 | 2026-10-09 | v0.17.0 | 섀도잉 비공식 자막: 영어 자막 목록·현재 문장 강조·문장 누르면 A-B 반복+원문 채우기, 실패 시 붙여 넣기 (TASK 16, 실기기 확인 보류) |
+| 2026-10-10 | v0.18.0 | 섀도잉 실기기 수정: WebView 즉시 파괴·iframe 높이 0 수정, 자막은 플레이어 요청 가로채기, 일치율 = 맞은 단어/원문, 짧은 녹음·무음 안내, 비교 결과 가로 표시. 개발자 검증 화면 삭제, Whisper 모델 small.en만 |
 
 ## 인증
 ### POST /api/auth/login
@@ -247,7 +248,14 @@
 - `core:common/Captions.kt`: `extractCaptionTracks`, `parseJson3`(빈 이벤트 제거, 엔티티 풀기), `mergeSentences`(`.?!`까지 합침, 12초 상한), `cueAt`(시작 포함·끝 제외)
 - 화면: 자막 목록(`m:ss` + 문장, 최대 높이 240dp 스크롤, 현재 문장 강조), 문장 누르기 → A = 시작 − 0.3초, B = 끝 + 0.3초, 원문 채우기, 이동, 반복 켬. 이전/다음 문장
 - 실패: "자막 없음 / 자막 요청 실패 — 문장을 붙여 넣으세요" + 다시 시도. 자막은 앱 실행 중 영상별 메모리에만
-- 실기기 확인(AC7) 보류
+- ~~실기기 확인(AC7) 보류~~ → 2026-10-10 확인
+
+### 실기기 수정 (2026-10-10, TASK 15 리뷰 3~6차)
+- 플레이어: WebView 정리는 `AndroidView(onRelease)`만 (이전 `DisposableEffect`가 새 WebView를 파괴했음). iframe 크기는 JS가 `innerWidth`·`innerHeight` px로 넣음 (CSS 100%·100vh가 0으로 계산됐음). DOM storage 켬
+- 자막: watch 페이지 직접 요청은 빈 응답(`exp=xpe`, PO 토큰 필요) → **플레이어가 보내는 `/api/timedtext` 요청을 `shouldInterceptRequest`로 가로채** 같은 본문을 파싱. 실패하면 직접 요청 → 붙여 넣기
+- 녹음: 1.5초 미만은 받아 적지 않고 안내, `[silence]`·`[BLANK_AUDIO]` 태그 제거 후 비면 "잘 들리지 않았어요", 입력 크기 막대
+- 일치율 = `matchRate` (맞은 단어 / 원문 단어, 0~100%) + 더 말한·빠뜨린·틀린 단어 수. 비교 결과는 가로로 이어 표시
+- 개발자 검증 화면(STT·LLM 측정)과 측정 자료 삭제. `SttModels`는 small.en만
 
 ## 스피킹
 

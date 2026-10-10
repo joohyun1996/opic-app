@@ -28,6 +28,7 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit)
     val state by model.state.collectAsState()
     var player by remember { mutableStateOf<YouTubePlayer?>(null) }
     var current by remember { mutableDoubleStateOf(0.0) }
+    var playerStatus by remember(state.videoId) { mutableStateOf("플레이어 준비 중") }
     var a by remember { mutableStateOf<Double?>(null) }
     var b by remember { mutableStateOf<Double?>(null) }
     var repeat by remember { mutableStateOf(false) }
@@ -56,7 +57,11 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit)
         }) { Text("열기") }
         state.message?.let { Text(it, color = MaterialTheme.colorScheme.error) }
         state.videoId?.let { id ->
-            key(id) { PlayerView(id, Modifier.fillMaxWidth().height(220.dp), { player = it }, { current = it }, { model.message("영상 오류 코드 $it") }) }
+            key(id) { PlayerView(id, Modifier.fillMaxWidth().height(220.dp), { player = it }, { current = it },
+                { playerStatus = "플레이어 오류 $it"; model.message("영상 오류 코드 $it") },
+                { playerStatus = "플레이어 준비됨" },
+                { if (it == 1) playerStatus = "플레이어 준비됨" }) }
+            Text(playerStatus)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(onClick = { player?.play() }) { Text("재생") }
                 OutlinedButton(onClick = { player?.pause() }) { Text("일시정지") }

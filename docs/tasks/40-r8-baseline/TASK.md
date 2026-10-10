@@ -15,9 +15,9 @@
 
 ## 수용 기준
 - [ ] AC1: 릴리스 APK에서 다섯 탭, 단어 학습 5장(5장 제한 규칙), 문법 문제·설명, 스피킹 녹음·Whisper 받아쓰기, Gemma 교정 1문장, 섀도잉 영상 재생, 백업·복원, 학습 알림 켜기가 모두 동작한다 (실기기, 하나라도 깨지면 keep 규칙 추가)
-- [ ] AC2: APK 크기 전/후를 HANDOFF에 적는다
-- [ ] AC3: 앱 첫 실행(콜드 스타트) 시간 전/후를 `adb shell am start -W`로 3회씩 재서 HANDOFF에 적는다
-- [ ] AC4: `./gradlew test lint :app:assembleRelease` 통과
+- [x] AC2: APK 크기 전/후를 HANDOFF에 적는다
+- [x] AC3: 앱 첫 실행(콜드 스타트) 시간 전/후를 `adb shell am start -W`로 3회씩 재서 HANDOFF에 적는다
+- [x] AC4: `./gradlew test lint :app:assembleRelease` 통과
 
 ## 제약
 - 앱 데이터 삭제 금지, `adb install -r`만

@@ -17,8 +17,10 @@ okhttp = "4.12.0"
 securityCrypto = "1.1.0"
 kotlinxSerialization = "1.7.3"
 work = "2.10.0"
+profileinstaller = "1.4.1"
 
 [libraries]
+androidx-profileinstaller = { module = "androidx.profileinstaller:profileinstaller", version.ref = "profileinstaller" }
 androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "work" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }

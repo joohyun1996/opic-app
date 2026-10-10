@@ -21,7 +21,13 @@ android {
     buildTypes {
         // 개인 기기용: release도 이 Mac의 debug 키로 서명 → debug 빌드 위에 덮어 설치 가능(데이터 유지).
         // debug 빌드는 Compose 최적화가 꺼져 스크롤이 버벅인다 (Day 목록 늦은 프레임 13% → release 3%, 2026-10-10 측정)
-        release { signingConfig = signingConfigs.getByName("debug") }
+        release {
+            signingConfig = signingConfigs.getByName("debug")
+            // TASK 40: R8 코드 축소·최적화 + 리소스 축소. keep 규칙은 proguard-rules.pro
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
     }
     buildFeatures { compose = true; buildConfig = true }
     testOptions { unitTests.isIncludeAndroidResources = true }
@@ -33,6 +39,8 @@ dependencies {
     implementation(project(":core:correction"))
     implementation(project(":feature:analysis"))
     implementation(libs.androidx.work.runtime.ktx)
+    // TASK 40: Compose 등 라이브러리에 들어 있는 Baseline Profile을 설치 시 적용
+    implementation(libs.androidx.profileinstaller)
     implementation(project(":core:model"))
     implementation(project(":core:database"))
     implementation(project(":core:stt"))

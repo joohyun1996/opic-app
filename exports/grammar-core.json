@@ -4298,6 +4298,1691 @@
      "answer": 4
     }
    ]
+  },
+  {
+   "id": "c11",
+   "order": 11,
+   "track": "core",
+   "part": "4부 문장 잇기",
+   "title": "접속사 — 문장과 문장 잇기",
+   "opicUse": "답변을 길게 이어 가기(because, although, so, while, when)",
+   "errorType": "other",
+   "explanation": {
+    "summary": "접속사는 단어·구·절을 잇는다. 대등하게 잇는 것(and, but, or, so)과, 한쪽을 다른 쪽에 딸려 붙이는 것(because, when, although, if)이 있다. 접속사 하나에는 절(주어 + 동사)이 하나 따라온다.",
+    "concept": "영어 문장의 기본 규칙: 절(주어 + 동사) 두 개를 이으려면 접속사가 하나 필요하다. 접속사 없이 쉼표만으로 두 문장을 붙이면 틀린다(I was tired, I went to bed. X). 또 because·although·when 같은 종속접속사가 붙은 절은 혼자 서지 못하는 '딸린 절'이라 그것만으로는 문장이 안 된다(Because I was tired. X). 반대로 because of·despite·during은 전치사라 뒤에 명사만 온다 — 같은 뜻이라도 뒤에 절이 오면 접속사, 명사가 오면 전치사.",
+    "details": [
+     {
+      "title": "등위접속사 — 대등하게",
+      "body": "and(그리고), but(그러나), or(또는), so(그래서), yet(그런데도). 앞뒤가 같은 급(단어-단어, 절-절)이어야 한다.",
+      "examples": [
+       {
+        "en": "I was tired, so I went to bed early.",
+        "ko": "피곤해서 일찍 잤다."
+       },
+       {
+        "en": "I like coffee, but my wife prefers tea.",
+        "ko": "나는 커피를 좋아하지만 아내는 차를 더 좋아한다."
+       }
+      ]
+     },
+     {
+      "title": "종속접속사 — 이유·조건·양보",
+      "body": "because(~때문에), since·as(~니까), if(~하면), unless(~하지 않으면), although·though·even though(비록 ~지만). 딸린 절이 앞에 오면 쉼표를 찍는다.",
+      "examples": [
+       {
+        "en": "Although it was raining, we went hiking.",
+        "ko": "비가 왔지만 등산을 갔다."
+       },
+       {
+        "en": "Unless you hurry, you'll miss the bus.",
+        "ko": "서두르지 않으면 버스를 놓칠 거야."
+       }
+      ]
+     },
+     {
+      "title": "시간 접속사",
+      "body": "when(~할 때), while(~하는 동안), before, after, until(~할 때까지), as soon as(~하자마자), since(~한 이후로). 4장에서 본 것처럼 시간·조건 절은 미래라도 현재 시제.",
+      "examples": [
+       {
+        "en": "While I was cooking, my phone rang.",
+        "ko": "요리하는 동안 전화가 울렸다."
+       },
+       {
+        "en": "I'll call you as soon as I arrive.",
+        "ko": "도착하자마자 전화할게."
+       }
+      ]
+     },
+     {
+      "title": "접속사 vs 전치사 — 뒤에 무엇이 오나",
+      "body": "뜻이 같아도 뒤에 절이면 접속사, 명사면 전치사: because(절) / because of(명사), although(절) / despite·in spite of(명사), while(절) / during(명사).",
+      "examples": [
+       {
+        "en": "I stayed home because it rained.",
+        "ko": "비가 와서 집에 있었다. (절)"
+       },
+       {
+        "en": "I stayed home because of the rain.",
+        "ko": "비 때문에 집에 있었다. (명사)"
+       },
+       {
+        "en": "Despite the rain, we went out.",
+        "ko": "비에도 불구하고 나갔다."
+       }
+      ]
+     },
+     {
+      "title": "짝을 이루는 접속사",
+      "body": "both A and B(둘 다), either A or B(둘 중 하나), neither A nor B(둘 다 아닌), not only A but also B(A뿐 아니라 B도). A와 B는 같은 형태로 맞춘다.",
+      "examples": [
+       {
+        "en": "I can speak both English and Chinese.",
+        "ko": "영어와 중국어 둘 다 할 수 있다."
+       },
+       {
+        "en": "She is not only smart but also kind.",
+        "ko": "그녀는 똑똑할 뿐 아니라 친절하다."
+       }
+      ]
+     },
+     {
+      "title": "OPIc 답변을 잇는 말",
+      "body": "접속사 외에 문장을 이어 주는 부사(접속부사): however(하지만), therefore(그래서), also, besides, on the other hand. 이것들은 접속사가 아니라서 쉼표만으로 두 절을 못 잇는다 — 마침표나 세미콜론 뒤에 쓴다.",
+      "examples": [
+       {
+        "en": "The hotel was nice. However, it was too far from the beach.",
+        "ko": "호텔은 좋았다. 하지만 해변에서 너무 멀었다."
+       }
+      ]
+     }
+    ],
+    "table": [
+     [
+      "종류",
+      "접속사",
+      "예문"
+     ],
+     [
+      "대등",
+      "and, but, or, so",
+      "It was cold, so I wore a coat."
+     ],
+     [
+      "이유",
+      "because, since, as",
+      "I left early because I was sick."
+     ],
+     [
+      "조건",
+      "if, unless",
+      "If it rains, we'll stay home."
+     ],
+     [
+      "양보",
+      "although, though, even though",
+      "Although I was tired, I kept working."
+     ],
+     [
+      "시간",
+      "when, while, before, after, until, as soon as",
+      "Call me when you get home."
+     ],
+     [
+      "짝",
+      "both A and B, either A or B, not only A but also B",
+      "Either you or I have to go."
+     ]
+    ],
+    "koreanNote": "한국어는 '-고, -는데, -니까, -지만'처럼 동사 끝을 바꿔 문장을 계속 이어 갈 수 있지만, 영어는 절마다 접속사를 하나씩 붙여야 한다. 그래서 말을 길게 하다 보면 접속사 없이 쉼표로 이어 붙이는 실수(I went to the café, it was crowded X)가 나온다. 또 '비 때문에'를 because the rain처럼 접속사에 명사를 붙이기 쉬운데, 명사면 because of.",
+    "points": [
+     "절(주어 + 동사) 두 개를 이으려면 접속사가 하나 필요하다 — 쉼표만으로는 안 된다",
+     "because / although / when 절은 혼자 문장이 될 수 없다 (딸린 절)",
+     "딸린 절이 앞에 오면 쉼표: When I got home, I took a shower.",
+     "because·although·while + 절 / because of·despite·during + 명사",
+     "시간·조건 절은 미래라도 현재 시제",
+     "however, therefore는 접속사가 아니다 — 마침표 뒤에"
+    ],
+    "examples": [
+     {
+      "en": "I stayed home because I had a cold.",
+      "ko": "감기에 걸려서 집에 있었다."
+     },
+     {
+      "en": "Although the food was expensive, it was worth it.",
+      "ko": "음식이 비쌌지만 그럴 만한 가치가 있었다."
+     },
+     {
+      "en": "I usually listen to music while I'm working out.",
+      "ko": "운동하는 동안 보통 음악을 듣는다."
+     },
+     {
+      "en": "Despite the traffic, we arrived on time.",
+      "ko": "차가 막혔는데도 제시간에 도착했다."
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "I stayed home because I had a cold.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "stayed",
+        "role": "V"
+       },
+       {
+        "text": "home",
+        "role": "M"
+       },
+       {
+        "text": "because I had a cold.",
+        "role": "M"
+       }
+      ],
+      "note": "because + 절(주어 I + 동사 had) = 이유를 나타내는 딸린 절"
+     },
+     {
+      "sentence": "Although it was raining, we went hiking.",
+      "parts": [
+       {
+        "text": "Although it was raining,",
+        "role": "M"
+       },
+       {
+        "text": "we",
+        "role": "S"
+       },
+       {
+        "text": "went",
+        "role": "V"
+       },
+       {
+        "text": "hiking.",
+        "role": "M"
+       }
+      ],
+      "note": "딸린 절이 앞 → 쉼표, 뒤에 주절(we went)"
+     },
+     {
+      "sentence": "I was tired, so I went to bed.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "was",
+        "role": "V"
+       },
+       {
+        "text": "tired,",
+        "role": "C"
+       },
+       {
+        "text": "so I went to bed.",
+        "role": "M"
+       }
+      ],
+      "note": "so가 두 절을 대등하게 이음 (so 없이 쉼표만은 X)"
+     },
+     {
+      "sentence": "Despite the rain, we went out.",
+      "parts": [
+       {
+        "text": "Despite the rain,",
+        "role": "M"
+       },
+       {
+        "text": "we",
+        "role": "S"
+       },
+       {
+        "text": "went",
+        "role": "V"
+       },
+       {
+        "text": "out.",
+        "role": "M"
+       }
+      ],
+      "note": "despite + 명사(the rain) — 전치사라 절이 못 온다"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "I was tired, I went to bed early.",
+      "right": "I was tired, so I went to bed early.",
+      "note": "쉼표만으로 두 절을 못 잇는다"
+     },
+     {
+      "wrong": "I stayed home because the rain.",
+      "right": "I stayed home because of the rain.",
+      "note": "명사 앞은 because of"
+     },
+     {
+      "wrong": "Although it was cold, but we went out.",
+      "right": "Although it was cold, we went out.",
+      "note": "although와 but을 같이 쓰지 않는다"
+     },
+     {
+      "wrong": "Despite it was raining, we went out.",
+      "right": "Although it was raining, we went out.",
+      "note": "절 앞은 although"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c11-01",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "Although the movie was long, but it was interesting.",
+     "hint": "although와 but을 함께?",
+     "explanation": "although만: Although the movie was long, it was interesting.",
+     "choices": [
+      "Although",
+      "the",
+      "movie",
+      "was",
+      "long,",
+      "but",
+      "it",
+      "was",
+      "interesting."
+     ],
+     "answer": 5
+    },
+    {
+     "id": "c11-02",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "We canceled the trip ___ the storm.",
+     "hint": "뒤에 오는 것은 명사(the storm)",
+     "explanation": "명사 앞 → because of",
+     "choices": [
+      "because",
+      "because of",
+      "although"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c11-03",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I'll text you as soon as I ___ home.",
+     "hint": "as soon as는 시간 접속사",
+     "explanation": "시간 절은 미래라도 현재: get",
+     "choices": [
+      "will get",
+      "get",
+      "got"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c11-04",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "___ she was tired, she finished her homework.",
+     "hint": "뒤에 절(she was tired)",
+     "explanation": "절 앞 → Although",
+     "choices": [
+      "Although",
+      "Despite",
+      "Because of"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c11-05",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "Despite it was expensive, I bought the bag.",
+     "hint": "뒤에 절(주어 + 동사)이 와요",
+     "explanation": "Although it was expensive, I bought the bag.",
+     "choices": [
+      "Despite",
+      "it",
+      "was",
+      "expensive,",
+      "I",
+      "bought",
+      "the",
+      "bag."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c11-06",
+     "kind": "fix",
+     "prompt": "접속사 so를 넣어 바르게 고치세요",
+     "sentence": "It was very hot, I turned on the air conditioner.",
+     "hint": "쉼표만으로는 두 절을 못 이어요",
+     "explanation": "…, so I turned on the air conditioner.",
+     "answers": [
+      "It was very hot, so I turned on the air conditioner."
+     ]
+    },
+    {
+     "id": "c11-07",
+     "kind": "structure",
+     "prompt": "두 절을 잇는 접속사를 고르세요",
+     "sentence": "I couldn't sleep because my neighbor was so loud.",
+     "hint": "주어 + 동사 덩어리를 이끄는 말",
+     "explanation": "because + 절(my neighbor was so loud)",
+     "choices": [
+      "I",
+      "couldn't",
+      "sleep",
+      "because",
+      "my",
+      "neighbor",
+      "was",
+      "so",
+      "loud."
+     ],
+     "answer": 3
+    },
+    {
+     "id": "c11-08",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I was sleeping ___ the movie.",
+     "hint": "뒤에 명사(the movie)",
+     "explanation": "명사 앞 → during",
+     "choices": [
+      "while",
+      "during",
+      "when"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c11-09",
+     "kind": "blank",
+     "prompt": "빈칸에 알맞은 한 단어를 쓰세요 (~하지 않으면)",
+     "sentence": "___ you leave now, you'll be late.",
+     "hint": "if … not",
+     "explanation": "Unless = If … not",
+     "answers": [
+      "Unless"
+     ]
+    },
+    {
+     "id": "c11-10",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "She speaks not only English ___ French.",
+     "hint": "not only A ___ B",
+     "explanation": "not only A but also B",
+     "choices": [
+      "and",
+      "but also",
+      "or"
+     ],
+     "answer": 1
+    }
+   ]
+  },
+  {
+   "id": "c12",
+   "order": 12,
+   "track": "core",
+   "part": "4부 문장 잇기",
+   "title": "관계대명사 — 명사를 뒤에서 꾸미는 절",
+   "opicUse": "사람·장소·물건을 자세히 묘사(the friend who …, the café that …)",
+   "errorType": "other",
+   "explanation": {
+    "summary": "관계대명사(who, which, that, whose)는 앞의 명사를 뒤에서 꾸미는 절을 이끈다. 두 문장을 하나로 합치면서, 겹치는 명사를 관계대명사로 바꾼 것이다.",
+    "concept": "I have a friend. + She lives in Canada. 에서 겹치는 a friend = She를 who로 바꿔 붙이면 I have a friend who lives in Canada. 가 된다. 핵심은 관계대명사가 절 안에서 '주어나 목적어 역할을 대신한다'는 것 — 그래서 관계대명사 뒤에는 주어나 목적어 하나가 빠진 불완전한 절이 온다. 이 '빈자리'를 보는 눈이 생기면 긴 문장이 순식간에 읽힌다. 한국어는 꾸미는 말이 앞(캐나다에 사는 친구)이지만 영어는 명사 뒤에 붙는다.",
+    "details": [
+     {
+      "title": "who / which / that — 무엇을 꾸미나",
+      "body": "사람은 who, 사물·동물은 which, that은 둘 다 된다. 말할 때는 that이 가장 흔하다.",
+      "examples": [
+       {
+        "en": "I have a friend who lives in Canada.",
+        "ko": "캐나다에 사는 친구가 있다."
+       },
+       {
+        "en": "This is the café that I told you about.",
+        "ko": "이게 내가 말했던 카페야."
+       }
+      ]
+     },
+     {
+      "title": "주격 vs 목적격 — 빈자리 보기",
+      "body": "관계대명사 바로 뒤에 동사가 오면 주격(절의 주어 자리가 비었다), 주어 + 동사가 오면 목적격(목적어 자리가 비었다). 목적격 관계대명사는 생략할 수 있다.",
+      "examples": [
+       {
+        "en": "the man who called you",
+        "ko": "너에게 전화한 남자 (who = 주어)"
+       },
+       {
+        "en": "the man (who) I met yesterday",
+        "ko": "내가 어제 만난 남자 (목적어 — 생략 가능)"
+       }
+      ]
+     },
+     {
+      "title": "whose — 소유",
+      "body": "'그 명사의'라는 뜻. whose + 명사로 쓴다.",
+      "examples": [
+       {
+        "en": "I have a friend whose father is a pilot.",
+        "ko": "아버지가 조종사인 친구가 있다."
+       }
+      ]
+     },
+     {
+      "title": "관계대명사 절 안의 동사는 앞 명사에 맞춘다",
+      "body": "주격 관계대명사 뒤 동사의 수는 꾸밈 받는 명사(선행사)에 맞춘다.",
+      "examples": [
+       {
+        "en": "I have friends who live abroad.",
+        "ko": "해외에 사는 친구들이 있다. (friends → live)"
+       },
+       {
+        "en": "She is the only one who knows the answer.",
+        "ko": "답을 아는 사람은 그녀뿐이다. (one → knows)"
+       }
+      ]
+     },
+     {
+      "title": "쉼표 + which — 덧붙이는 설명",
+      "body": "쉼표 뒤 관계절은 앞 명사를 '골라내지' 않고 정보를 덧붙인다. 이때는 that을 못 쓰고, 앞 문장 전체를 받는 , which도 있다.",
+      "examples": [
+       {
+        "en": "My brother, who lives in Busan, is a teacher.",
+        "ko": "내 형은 — 부산에 사는데 — 선생님이다."
+       },
+       {
+        "en": "He passed the test, which surprised everyone.",
+        "ko": "그가 시험에 붙었는데, 그게 모두를 놀라게 했다."
+       }
+      ]
+     },
+     {
+      "title": "전치사 + 관계대명사",
+      "body": "절 끝의 전치사를 앞으로 보낼 수 있다(격식). 말할 때는 전치사를 끝에 두는 게 자연스럽다. 전치사 바로 뒤에는 that을 못 쓴다.",
+      "examples": [
+       {
+        "en": "the house that I grew up in",
+        "ko": "내가 자란 집 (말할 때)"
+       },
+       {
+        "en": "the house in which I grew up",
+        "ko": "(격식) — in that X"
+       }
+      ]
+     }
+    ],
+    "table": [
+     [
+      "선행사",
+      "주격",
+      "목적격",
+      "소유격"
+     ],
+     [
+      "사람",
+      "who / that",
+      "who(m) / that / 생략",
+      "whose"
+     ],
+     [
+      "사물·동물",
+      "which / that",
+      "which / that / 생략",
+      "whose"
+     ],
+     [
+      "예",
+      "the man who called",
+      "the book (that) I read",
+      "a friend whose dad is a pilot"
+     ]
+    ],
+    "koreanNote": "한국어는 '내가 어제 만난 그 남자'처럼 꾸미는 말이 명사 앞에 오지만, 영어는 the man (who) I met yesterday처럼 명사 뒤에 붙는다. 그래서 영어 문장을 읽다가 명사 뒤에 who·that·주어+동사가 나오면 '앞 명사 설명이 시작됐구나' 하고 괄호를 쳐야 한다. 또 관계절 안에 빠진 자리를 다시 채우는 실수(the book that I read it X)가 잦다 — 관계대명사가 이미 그 자리를 대신했다.",
+    "points": [
+     "사람 who, 사물 which, 둘 다 that",
+     "관계대명사 뒤 동사 → 주격 / 주어 + 동사 → 목적격(생략 가능)",
+     "관계절에는 빠진 자리가 하나 있다 — 다시 채우지 않는다",
+     "주격 관계절의 동사는 앞 명사(선행사)에 수를 맞춘다",
+     "whose + 명사 = 그 명사의",
+     "쉼표 + who/which = 덧붙이는 설명 (that 불가)"
+    ],
+    "examples": [
+     {
+      "en": "The people who live next door are very friendly.",
+      "ko": "옆집 사는 사람들은 아주 친절하다."
+     },
+     {
+      "en": "The restaurant we went to last night was amazing.",
+      "ko": "어젯밤 간 식당은 끝내줬다."
+     },
+     {
+      "en": "I have a friend whose sister is a famous singer.",
+      "ko": "언니가 유명 가수인 친구가 있다."
+     },
+     {
+      "en": "I visited Gyeongju, which is famous for its history.",
+      "ko": "경주에 갔는데, 그곳은 역사로 유명하다."
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "The people who live next door are very friendly.",
+      "parts": [
+       {
+        "text": "The people",
+        "role": "S"
+       },
+       {
+        "text": "who live next door",
+        "role": "M"
+       },
+       {
+        "text": "are",
+        "role": "V"
+       },
+       {
+        "text": "very friendly.",
+        "role": "C"
+       }
+      ],
+      "note": "who live next door = people을 꾸미는 관계절 (who가 절의 주어)"
+     },
+     {
+      "sentence": "The restaurant (that) we went to last night was amazing.",
+      "parts": [
+       {
+        "text": "The restaurant",
+        "role": "S"
+       },
+       {
+        "text": "(that) we went to last night",
+        "role": "M"
+       },
+       {
+        "text": "was",
+        "role": "V"
+       },
+       {
+        "text": "amazing.",
+        "role": "C"
+       }
+      ],
+      "note": "목적격 관계대명사 생략 — we went to 뒤에 빈자리(the restaurant)"
+     },
+     {
+      "sentence": "I have a friend whose sister is a singer.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "have",
+        "role": "V"
+       },
+       {
+        "text": "a friend",
+        "role": "O"
+       },
+       {
+        "text": "whose sister is a singer.",
+        "role": "M"
+       }
+      ],
+      "note": "whose + 명사 = 그 친구의 언니"
+     },
+     {
+      "sentence": "I visited Gyeongju, which is famous for its history.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "visited",
+        "role": "V"
+       },
+       {
+        "text": "Gyeongju,",
+        "role": "O"
+       },
+       {
+        "text": "which is famous for its history.",
+        "role": "M"
+       }
+      ],
+      "note": "쉼표 + which = 덧붙이는 설명"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "This is the book that I read it last week.",
+      "right": "This is the book that I read last week.",
+      "note": "that이 이미 목적어 — it 빼기"
+     },
+     {
+      "wrong": "I have a friend who live in Canada.",
+      "right": "I have a friend who lives in Canada.",
+      "note": "a friend(단수) → lives"
+     },
+     {
+      "wrong": "The man which I met was kind.",
+      "right": "The man who I met was kind.",
+      "note": "사람은 who/that"
+     },
+     {
+      "wrong": "My mom, that is a nurse, works at night.",
+      "right": "My mom, who is a nurse, works at night.",
+      "note": "쉼표 뒤는 that 불가"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c12-01",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I have a coworker ___ speaks four languages.",
+     "hint": "사람, 바로 뒤에 동사",
+     "explanation": "사람 + 주격 → who",
+     "choices": [
+      "who",
+      "which",
+      "whose"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c12-02",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "This is the phone that I bought it yesterday.",
+     "hint": "that이 이미 무엇의 자리를 대신하나요?",
+     "explanation": "that = 목적어 → it 빼기: This is the phone that I bought yesterday.",
+     "choices": [
+      "This",
+      "is",
+      "the",
+      "phone",
+      "that",
+      "I",
+      "bought",
+      "it",
+      "yesterday."
+     ],
+     "answer": 7
+    },
+    {
+     "id": "c12-03",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "I have two friends who lives in Japan.",
+     "hint": "who가 가리키는 명사는 단수? 복수?",
+     "explanation": "friends(복수) → live",
+     "choices": [
+      "I",
+      "have",
+      "two",
+      "friends",
+      "who",
+      "lives",
+      "in",
+      "Japan."
+     ],
+     "answer": 5
+    },
+    {
+     "id": "c12-04",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I met a girl ___ father works with my dad.",
+     "hint": "'그 여자아이의' 아버지",
+     "explanation": "소유 → whose",
+     "choices": [
+      "who",
+      "whose",
+      "which"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c12-05",
+     "kind": "structure",
+     "prompt": "관계절이 꾸미는 명사를 고르세요",
+     "sentence": "The café that opened near my house is always busy.",
+     "hint": "that 바로 앞의 명사",
+     "explanation": "café를 that opened near my house가 꾸밈",
+     "choices": [
+      "The",
+      "café",
+      "that",
+      "opened",
+      "near",
+      "my",
+      "house",
+      "is",
+      "always",
+      "busy."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c12-06",
+     "kind": "fix",
+     "prompt": "관계대명사 who로 한 문장으로 만드세요",
+     "sentence": "I have a cousin. He works at Samsung.",
+     "hint": "겹치는 a cousin = He",
+     "explanation": "I have a cousin who works at Samsung.",
+     "answers": [
+      "I have a cousin who works at Samsung."
+     ]
+    },
+    {
+     "id": "c12-07",
+     "kind": "choice",
+     "prompt": "생략할 수 있는 관계대명사가 있는 문장은?",
+     "sentence": "",
+     "hint": "관계대명사 뒤에 주어 + 동사가 오는 쪽",
+     "explanation": "목적격(that we watched)은 생략 가능: The movie we watched was boring.",
+     "choices": [
+      "The man who called me was my boss.",
+      "The movie that we watched was boring."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c12-08",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "My father, that is a doctor, works long hours.",
+     "hint": "쉼표 뒤 덧붙이는 설명",
+     "explanation": "쉼표 뒤는 who: My father, who is a doctor, works long hours.",
+     "choices": [
+      "My",
+      "father,",
+      "that",
+      "is",
+      "a",
+      "doctor,",
+      "works",
+      "long",
+      "hours."
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c12-09",
+     "kind": "blank",
+     "prompt": "빈칸에 알맞은 관계대명사를 쓰세요 (사물, 주격)",
+     "sentence": "I bought a bag ___ was on sale.",
+     "hint": "사물 + 바로 뒤에 동사",
+     "explanation": "that 또는 which",
+     "answers": [
+      "that",
+      "which"
+     ]
+    },
+    {
+     "id": "c12-10",
+     "kind": "structure",
+     "prompt": "문장 전체의 동사를 고르세요 (관계절 안의 동사 말고)",
+     "sentence": "The people who work here are very kind.",
+     "hint": "who work here를 괄호로 묶으면?",
+     "explanation": "(who work here)를 빼면 The people are very kind. → 동사 are",
+     "choices": [
+      "The",
+      "people",
+      "who",
+      "work",
+      "here",
+      "are",
+      "very",
+      "kind."
+     ],
+     "answer": 5
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "order": 13,
+   "track": "core",
+   "part": "4부 문장 잇기",
+   "title": "관계부사와 what",
+   "opicUse": "장소·시간·이유 묘사(the place where …, the day when …), what I like",
+   "errorType": "other",
+   "explanation": {
+    "summary": "관계부사(where, when, why, how)는 장소·시간·이유·방법 명사를 꾸미는 완전한 절을 이끈다. what은 '~하는 것'이라는 뜻으로 앞에 꾸밀 명사 없이 스스로 명사절이 된다.",
+    "concept": "12장의 관계대명사 뒤에는 주어나 목적어가 빠진 불완전한 절이 왔다. 관계부사 뒤에는 빠진 것이 없는 완전한 절이 온다 — 관계부사가 대신하는 건 '장소·시간 부사(there, then)'이기 때문이다: the town where I grew up (= I grew up there). 판단법: 뒤 절에 빈자리가 있으면 which/that, 없으면 where/when. what은 the thing which를 합친 말이라 앞에 명사가 없다: What I need is rest.(내가 필요한 것은 휴식이다)",
+    "details": [
+     {
+      "title": "where — 장소",
+      "body": "the place / town / room / restaurant + where + 완전한 절. = in which / at which.",
+      "examples": [
+       {
+        "en": "This is the town where I grew up.",
+        "ko": "여기가 내가 자란 동네다."
+       },
+       {
+        "en": "I know a café where you can study quietly.",
+        "ko": "조용히 공부할 수 있는 카페를 안다."
+       }
+      ]
+     },
+     {
+      "title": "when — 시간",
+      "body": "the day / time / year / moment + when + 완전한 절.",
+      "examples": [
+       {
+        "en": "I remember the day when we first met.",
+        "ko": "우리가 처음 만난 날을 기억한다."
+       },
+       {
+        "en": "Summer is the season when I travel the most.",
+        "ko": "여름은 내가 여행을 가장 많이 하는 계절이다."
+       }
+      ]
+     },
+     {
+      "title": "why·how — 이유와 방법",
+      "body": "the reason why …(~한 이유), how …(~하는 방법). the way how는 쓰지 않는다 — the way 또는 how 하나만.",
+      "examples": [
+       {
+        "en": "That's the reason why I quit my job.",
+        "ko": "그게 내가 일을 그만둔 이유야."
+       },
+       {
+        "en": "This is how I learned English.",
+        "ko": "이게 내가 영어를 배운 방법이다. (the way how X)"
+       }
+      ]
+     },
+     {
+      "title": "관계부사 vs 관계대명사 — 빈자리로 판단",
+      "body": "뒤 절이 완전하면 관계부사, 주어·목적어가 빠졌으면 관계대명사. 같은 the place라도 달라진다.",
+      "examples": [
+       {
+        "en": "This is the place where I work.",
+        "ko": "내가 일하는 곳 (I work there — 완전)"
+       },
+       {
+        "en": "This is the place that I visited last year.",
+        "ko": "작년에 방문한 곳 (visited ___ — 목적어 빈자리)"
+       }
+      ]
+     },
+     {
+      "title": "what — ~하는 것",
+      "body": "what = the thing(s) which. 앞에 꾸밀 명사가 없고, what 절 전체가 주어·목적어·보어가 된다. that과 헷갈리지 말 것 — that은 앞에 명사가 있거나 뒤가 완전한 절.",
+      "examples": [
+       {
+        "en": "What I like about my job is the people.",
+        "ko": "내 일에서 좋아하는 건 사람들이다. (주어)"
+       },
+       {
+        "en": "I can't believe what he said.",
+        "ko": "그가 한 말을 믿을 수 없다. (목적어)"
+       },
+       {
+        "en": "This is exactly what I wanted.",
+        "ko": "이게 바로 내가 원하던 거야. (보어)"
+       }
+      ]
+     },
+     {
+      "title": "OPIc에서 바로 쓰는 표현",
+      "body": "장소 묘사(The best thing about my neighborhood is that …), what 강조(What I love most is …), 이유(That's why …).",
+      "examples": [
+       {
+        "en": "What I love most about Seoul is the night view.",
+        "ko": "서울에서 가장 좋아하는 건 야경이다."
+       },
+       {
+        "en": "It was raining. That's why we stayed home.",
+        "ko": "비가 왔어. 그래서 집에 있었던 거야."
+       }
+      ]
+     }
+    ],
+    "table": [
+     [
+      "말",
+      "꾸미는 명사",
+      "뒤의 절",
+      "예문"
+     ],
+     [
+      "where",
+      "장소",
+      "완전",
+      "the café where we met"
+     ],
+     [
+      "when",
+      "시간",
+      "완전",
+      "the day when I moved"
+     ],
+     [
+      "why",
+      "이유(the reason)",
+      "완전",
+      "the reason why I left"
+     ],
+     [
+      "how",
+      "방법 (the way와 함께 X)",
+      "완전",
+      "This is how I did it."
+     ],
+     [
+      "which / that",
+      "무엇이든",
+      "불완전 (빈자리)",
+      "the café that I like"
+     ],
+     [
+      "what",
+      "없음 (스스로 명사)",
+      "불완전",
+      "What I need is rest."
+     ]
+    ],
+    "koreanNote": "한국어는 '내가 자란 동네', '우리가 만난 날'처럼 장소·시간도 모두 '-ㄴ' 하나로 꾸미지만, 영어는 꾸밈 받는 명사와 뒤 절의 빈자리에 따라 where / when / which / that을 골라야 한다. 또 '내가 원하는 것'을 the thing what I want나 that I want로 말하기 쉬운데, 앞에 명사가 없으면 what, 있으면 the thing (that) I want.",
+    "points": [
+     "where(장소) · when(시간) · why(이유) · how(방법) + 완전한 절",
+     "the way how는 쓰지 않는다 — the way 또는 how",
+     "뒤 절이 완전하면 관계부사, 빈자리가 있으면 which/that",
+     "what = the thing which — 앞에 명사가 없다",
+     "What I like is … / That's why … / This is how …"
+    ],
+    "examples": [
+     {
+      "en": "This is the town where I grew up.",
+      "ko": "여기가 내가 자란 동네다."
+     },
+     {
+      "en": "I'll never forget the day when I got my first job.",
+      "ko": "첫 직장을 얻은 날을 잊지 못할 거다."
+     },
+     {
+      "en": "That's the reason why I moved to Seoul.",
+      "ko": "그게 내가 서울로 이사 온 이유다."
+     },
+     {
+      "en": "What I need right now is a long vacation.",
+      "ko": "지금 내게 필요한 건 긴 휴가다."
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "This is the town where I grew up.",
+      "parts": [
+       {
+        "text": "This",
+        "role": "S"
+       },
+       {
+        "text": "is",
+        "role": "V"
+       },
+       {
+        "text": "the town",
+        "role": "C"
+       },
+       {
+        "text": "where I grew up.",
+        "role": "M"
+       }
+      ],
+      "note": "where + 완전한 절(I grew up) — the town을 꾸밈"
+     },
+     {
+      "sentence": "This is the town that I visited last year.",
+      "parts": [
+       {
+        "text": "This",
+        "role": "S"
+       },
+       {
+        "text": "is",
+        "role": "V"
+       },
+       {
+        "text": "the town",
+        "role": "C"
+       },
+       {
+        "text": "that I visited last year.",
+        "role": "M"
+       }
+      ],
+      "note": "that + 빈자리 절(visited ___) — 관계대명사"
+     },
+     {
+      "sentence": "What I like about my job is the people.",
+      "parts": [
+       {
+        "text": "What I like about my job",
+        "role": "S"
+       },
+       {
+        "text": "is",
+        "role": "V"
+       },
+       {
+        "text": "the people.",
+        "role": "C"
+       }
+      ],
+      "note": "What 절 전체가 주어 (단수 → is)"
+     },
+     {
+      "sentence": "That is how I learned English.",
+      "parts": [
+       {
+        "text": "That",
+        "role": "S"
+       },
+       {
+        "text": "is",
+        "role": "V"
+       },
+       {
+        "text": "how I learned English.",
+        "role": "C"
+       }
+      ],
+      "note": "how + 완전한 절 = ~한 방법 (the way how X)"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "This is the way how I solved it.",
+      "right": "This is how I solved it.",
+      "note": "the way how X — 하나만"
+     },
+     {
+      "wrong": "The thing what I want is a car.",
+      "right": "What I want is a car.",
+      "note": "what 앞에 명사 X"
+     },
+     {
+      "wrong": "This is the house which I was born.",
+      "right": "This is the house where I was born.",
+      "note": "뒤 절이 완전 → where"
+     },
+     {
+      "wrong": "That I need is some sleep.",
+      "right": "What I need is some sleep.",
+      "note": "앞에 명사가 없으면 what"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c13-01",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "This is the hospital ___ I was born.",
+     "hint": "I was born — 빠진 자리가 있나요?",
+     "explanation": "완전한 절 + 장소 → where",
+     "choices": [
+      "which",
+      "where",
+      "what"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c13-02",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "This is the hospital ___ I visited last week.",
+     "hint": "visited ___ — 목적어가 비어 있어요",
+     "explanation": "빈자리 → 관계대명사 that",
+     "choices": [
+      "where",
+      "that",
+      "what"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c13-03",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "That's the way how I learned to cook.",
+     "hint": "the way와 how를 같이?",
+     "explanation": "the way 또는 how 하나만: That's how I learned to cook.",
+     "choices": [
+      "That's",
+      "the",
+      "way",
+      "how",
+      "I",
+      "learned",
+      "to",
+      "cook."
+     ],
+     "answer": 3
+    },
+    {
+     "id": "c13-04",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "___ I want for my birthday is a new phone.",
+     "hint": "앞에 꾸밀 명사가 없어요",
+     "explanation": "'~하는 것' = What",
+     "choices": [
+      "That",
+      "What",
+      "Which"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c13-05",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "The thing what I like most is the food.",
+     "hint": "앞에 명사(The thing)가 있어요",
+     "explanation": "The thing (that) I like most… 또는 What I like most…",
+     "choices": [
+      "The",
+      "thing",
+      "what",
+      "I",
+      "like",
+      "most",
+      "is",
+      "the",
+      "food."
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c13-06",
+     "kind": "fix",
+     "prompt": "where를 써서 한 문장으로 만드세요",
+     "sentence": "I visited the village. My grandma lived there.",
+     "hint": "there = 장소 → where",
+     "explanation": "I visited the village where my grandma lived.",
+     "answers": [
+      "I visited the village where my grandma lived."
+     ]
+    },
+    {
+     "id": "c13-07",
+     "kind": "blank",
+     "prompt": "빈칸에 알맞은 한 단어를 쓰세요 (이유)",
+     "sentence": "I don't know the reason ___ she left early.",
+     "hint": "the reason 뒤",
+     "explanation": "the reason why",
+     "answers": [
+      "why"
+     ]
+    },
+    {
+     "id": "c13-08",
+     "kind": "structure",
+     "prompt": "문장의 주어가 되는 덩어리의 첫 단어를 고르세요",
+     "sentence": "What surprised me was the price.",
+     "hint": "동사 was 앞의 덩어리",
+     "explanation": "What surprised me = 주어",
+     "choices": [
+      "What",
+      "surprised",
+      "me",
+      "was",
+      "the",
+      "price."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c13-09",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I still remember the summer ___ we went to Jeju together.",
+     "hint": "시간 명사 + 완전한 절",
+     "explanation": "시간 → when",
+     "choices": [
+      "when",
+      "which",
+      "what"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c13-10",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "It started snowing. That's ___ the flight was delayed.",
+     "hint": "그래서 ~한 거야",
+     "explanation": "That's why = 그래서 ~하다",
+     "choices": [
+      "why",
+      "because",
+      "what"
+     ],
+     "answer": 0
+    }
+   ]
+  },
+  {
+   "id": "c14",
+   "order": 14,
+   "track": "core",
+   "part": "4부 문장 잇기",
+   "title": "명사절 — 문장 속의 문장 (that, whether, 의문사)",
+   "opicUse": "생각·의견 말하기(I think that …), 간접 질문(Do you know where …?)",
+   "errorType": "word_order",
+   "explanation": {
+    "summary": "명사절은 절 전체가 명사처럼 주어·목적어·보어가 되는 것이다. that(~라는 것), whether/if(~인지 아닌지), 의문사(who, what, where, when, why, how)가 이끈다. 의문사 명사절은 평서문 어순(주어 + 동사)이다.",
+    "concept": "I know + He is honest. 를 하나로 합치면 I know that he is honest. — 절 하나가 통째로 know의 목적어가 된다. 이렇게 '문장을 명사처럼 넣는' 틀이 명사절이다. OPIc에서 생각·의견을 말할 때(I think that …, I believe that …)와 공손하게 물을 때(Do you know where the station is?) 계속 쓴다. 가장 흔한 실수는 의문사 명사절에 의문문 어순을 쓰는 것이다: Do you know where is the station? (X)",
+    "details": [
+     {
+      "title": "that 명사절 — ~라는 것",
+      "body": "주로 think, believe, know, hope, say, feel 같은 동사의 목적어. 목적어 자리의 that은 말할 때 자주 생략한다. 주어로 쓰면 보통 가주어 It.",
+      "examples": [
+       {
+        "en": "I think (that) Seoul is a great city.",
+        "ko": "서울은 멋진 도시라고 생각한다."
+       },
+       {
+        "en": "It's surprising that he quit his job.",
+        "ko": "그가 일을 그만뒀다니 놀랍다."
+       }
+      ]
+     },
+     {
+      "title": "whether / if — ~인지 (아닌지)",
+      "body": "Yes/No로 답할 수 있는 질문을 문장 안에 넣을 때. 목적어 자리에서는 if도 되지만, 주어 자리·전치사 뒤·or not 바로 앞에는 whether만.",
+      "examples": [
+       {
+        "en": "I'm not sure if he will come.",
+        "ko": "그가 올지 모르겠다."
+       },
+       {
+        "en": "It depends on whether it rains.",
+        "ko": "비가 오느냐에 달렸다."
+       }
+      ]
+     },
+     {
+      "title": "의문사 명사절 — 간접 의문문",
+      "body": "의문사 + 주어 + 동사(평서문 어순). 질문을 공손하게 하거나 '~인지 모르겠다'고 말할 때.",
+      "examples": [
+       {
+        "en": "Do you know where the station is?",
+        "ko": "역이 어디 있는지 아세요? (where is the station X)"
+       },
+       {
+        "en": "I don't remember what time the meeting starts.",
+        "ko": "회의가 몇 시에 시작하는지 기억이 안 난다."
+       }
+      ]
+     },
+     {
+      "title": "의문사가 주어인 경우",
+      "body": "who, what이 절의 주어면 의문사 바로 뒤에 동사가 온다 — 원래 의문문과 어순이 같다.",
+      "examples": [
+       {
+        "en": "Do you know who broke the window?",
+        "ko": "누가 창문을 깼는지 알아?"
+       },
+       {
+        "en": "I wonder what happened.",
+        "ko": "무슨 일이 있었는지 궁금하다."
+       }
+      ]
+     },
+     {
+      "title": "think류 동사는 의문사를 앞으로",
+      "body": "Do you think …? 질문에 의문사가 들어가면 의문사를 맨 앞으로: Where do you think he went? (Do you think where he went X)",
+      "examples": [
+       {
+        "en": "What do you think I should do?",
+        "ko": "내가 뭘 해야 한다고 생각해?"
+       },
+       {
+        "en": "How long do you think it will take?",
+        "ko": "얼마나 걸릴 것 같아?"
+       }
+      ]
+     },
+     {
+      "title": "명사절 안의 시제 맞추기",
+      "body": "주절이 과거면 명사절 시제도 보통 과거로 맞춘다(시제 일치). 말하는 지금도 사실인 것은 현재 그대로 둘 수 있다.",
+      "examples": [
+       {
+        "en": "I thought that you were busy.",
+        "ko": "네가 바쁜 줄 알았어."
+       },
+       {
+        "en": "He said that he lives in Busan.",
+        "ko": "그는 부산에 산다고 했다. (지금도 사실)"
+       }
+      ]
+     }
+    ],
+    "table": [
+     [
+      "이끄는 말",
+      "뜻",
+      "어순·주의",
+      "예문"
+     ],
+     [
+      "that",
+      "~라는 것",
+      "목적어일 땐 생략 가능",
+      "I think (that) it's true."
+     ],
+     [
+      "whether / if",
+      "~인지 (아닌지)",
+      "주어·전치사 뒤는 whether",
+      "I wonder if it'll rain."
+     ],
+     [
+      "의문사",
+      "누가/무엇을/어디서…",
+      "의문사 + 주어 + 동사",
+      "Tell me where you live."
+     ],
+     [
+      "의문사(주어)",
+      "누가/무엇이",
+      "의문사 + 동사",
+      "I know who called."
+     ]
+    ],
+    "koreanNote": "한국어 '역이 어디 있는지 아세요?'는 의문문을 문장 속에 넣어도 어순이 바뀌지 않지만, 영어는 Where is the station? 을 문장 속에 넣으면 where the station is로 평서문 어순으로 돌아간다. 이 규칙을 모르면 Do you know where is it? 같은 말을 계속하게 된다. 또 한국어 '~라고 생각해'는 영어로 I think (that) … 이 기본이고, 부정은 I don't think … 로 앞에서 부정한다(I think it's not good보다 I don't think it's good이 자연스럽다).",
+    "points": [
+     "명사절 = 절 전체가 주어·목적어·보어",
+     "that(~라는 것) — 목적어 자리에선 생략 가능",
+     "whether / if(~인지) — 주어·전치사 뒤·or not 앞은 whether",
+     "의문사 명사절은 평서문 어순: where the station is",
+     "think류 질문은 의문사를 맨 앞으로: Where do you think …?",
+     "I don't think … 로 앞에서 부정하는 게 자연스럽다"
+    ],
+    "examples": [
+     {
+      "en": "I think that learning a language takes patience.",
+      "ko": "언어를 배우는 데는 인내가 필요하다고 생각한다."
+     },
+     {
+      "en": "Do you know what time the store closes?",
+      "ko": "가게가 몇 시에 닫는지 아세요?"
+     },
+     {
+      "en": "I'm not sure whether I can make it.",
+      "ko": "갈 수 있을지 모르겠어."
+     },
+     {
+      "en": "What do you think I should bring?",
+      "ko": "내가 뭘 가져가야 할 것 같아?"
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "I think that Seoul is a great city.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "think",
+        "role": "V"
+       },
+       {
+        "text": "that Seoul is a great city.",
+        "role": "O"
+       }
+      ],
+      "note": "that 절 통째로 think의 목적어"
+     },
+     {
+      "sentence": "Do you know where the station is?",
+      "parts": [
+       {
+        "text": "Do",
+        "role": "V"
+       },
+       {
+        "text": "you",
+        "role": "S"
+       },
+       {
+        "text": "know",
+        "role": "V"
+       },
+       {
+        "text": "where the station is?",
+        "role": "O"
+       }
+      ],
+      "note": "의문사 + 주어 + 동사 (평서문 어순)"
+     },
+     {
+      "sentence": "Whether we go depends on the weather.",
+      "parts": [
+       {
+        "text": "Whether we go",
+        "role": "S"
+       },
+       {
+        "text": "depends",
+        "role": "V"
+       },
+       {
+        "text": "on the weather.",
+        "role": "M"
+       }
+      ],
+      "note": "whether 절이 주어 — 주어 자리는 if 불가"
+     },
+     {
+      "sentence": "I don't remember what time the meeting starts.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "don't remember",
+        "role": "V"
+       },
+       {
+        "text": "what time the meeting starts.",
+        "role": "O"
+       }
+      ],
+      "note": "what time + 주어 + 동사"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "Do you know where is the bathroom?",
+      "right": "Do you know where the bathroom is?",
+      "note": "간접 의문문은 평서문 어순"
+     },
+     {
+      "wrong": "Can you tell me what time does it start?",
+      "right": "Can you tell me what time it starts?",
+      "note": "do/does 빼고 평서문 어순"
+     },
+     {
+      "wrong": "Do you think where he went?",
+      "right": "Where do you think he went?",
+      "note": "think류 질문은 의문사를 앞으로"
+     },
+     {
+      "wrong": "I think it is not a good idea.",
+      "right": "I don't think it is a good idea.",
+      "note": "앞에서 부정하는 게 자연스럽다"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c14-01",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요 (어순)",
+     "sentence": "Do you know where is the nearest bank?",
+     "hint": "문장 속 의문사 절의 어순",
+     "explanation": "평서문 어순: Do you know where the nearest bank is?",
+     "choices": [
+      "Do",
+      "you",
+      "know",
+      "where",
+      "is",
+      "the",
+      "nearest",
+      "bank?"
+     ],
+     "answer": 4
+    },
+    {
+     "id": "c14-02",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "Can you tell me ___?",
+     "hint": "의문사 + 주어 + 동사",
+     "explanation": "what time it starts",
+     "choices": [
+      "what time it starts",
+      "what time does it start",
+      "what time starts it"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c14-03",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I'm not sure ___ he will come or not.",
+     "hint": "'올지 안 올지'",
+     "explanation": "~인지 (아닌지) = whether",
+     "choices": [
+      "that",
+      "whether",
+      "what"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c14-04",
+     "kind": "choice",
+     "prompt": "올바른 질문은?",
+     "sentence": "",
+     "hint": "think 질문 + 의문사",
+     "explanation": "의문사를 맨 앞으로: Where do you think she lives?",
+     "choices": [
+      "Do you think where she lives?",
+      "Where do you think she lives?"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c14-05",
+     "kind": "fix",
+     "prompt": "간접 의문문으로 바꿔 쓰세요",
+     "sentence": "Where is the post office? → Could you tell me ...",
+     "hint": "where + 주어 + 동사",
+     "explanation": "Could you tell me where the post office is?",
+     "answers": [
+      "Could you tell me where the post office is?"
+     ]
+    },
+    {
+     "id": "c14-06",
+     "kind": "structure",
+     "prompt": "think의 목적어가 되는 절의 첫 단어를 고르세요",
+     "sentence": "I think that this plan will work well.",
+     "hint": "think 바로 뒤",
+     "explanation": "that this plan will work well = 목적어 (명사절)",
+     "choices": [
+      "I",
+      "think",
+      "that",
+      "this",
+      "plan",
+      "will",
+      "work",
+      "well."
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c14-07",
+     "kind": "blank",
+     "prompt": "빈칸에 알맞은 한 단어를 쓰세요",
+     "sentence": "I don't know ___ to believe him or not.",
+     "hint": "to부정사 앞, or not",
+     "explanation": "whether to ~ or not",
+     "answers": [
+      "whether"
+     ]
+    },
+    {
+     "id": "c14-08",
+     "kind": "choice",
+     "prompt": "더 자연스러운 문장은?",
+     "sentence": "",
+     "hint": "영어는 부정을 앞에서",
+     "explanation": "I don't think … 가 자연스럽다",
+     "choices": [
+      "I think it's not expensive.",
+      "I don't think it's expensive."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c14-09",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "I wonder what did she mean.",
+     "hint": "간접 의문문 안에 do/did?",
+     "explanation": "I wonder what she meant.",
+     "choices": [
+      "I",
+      "wonder",
+      "what",
+      "did",
+      "she",
+      "mean."
+     ],
+     "answer": 3
+    },
+    {
+     "id": "c14-10",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "Do you know who ___ this cake?",
+     "hint": "who가 절의 주어",
+     "explanation": "의문사가 주어 → 바로 동사: who made this cake",
+     "choices": [
+      "made",
+      "did make",
+      "does make"
+     ],
+     "answer": 0
+    }
+   ]
   }
  ]
 }

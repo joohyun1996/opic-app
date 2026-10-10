@@ -3,6 +3,7 @@ package com.jooh.opic.core.common
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import java.io.File
 
@@ -16,8 +17,14 @@ class SpeakingTest {
     @Test fun parsesBundledFile() {
         val parsed = parseSpeakingCatalog(File("../../exports/speaking.json").readText())
         assertNotNull(parsed)
-        assertEquals(15, parsed!!.topics.size)
-        assertEquals(43, parsed.topics.sumOf { it.questions.size })
+        val questions = parsed!!.topics.flatMap { it.questions }
+        assertTrue(questions.size >= 140)
+        val ids = questions.map { it.id }.toSet()
+        // TASK 17의 43문항 id 유지
+        listOf("intro-1", "home-1", "home-3", "music-2", "travel_abroad-3", "weather-3", "restaurant-3", "roleplay_ask-3", "roleplay_solve-3")
+            .forEach { assertTrue(it, it in ids) }
+        assertEquals(SPEAKING_CATEGORIES, parsed.topics.map { it.category }.toSet())
+        assertEquals(SPEAKING_LEVELS, questions.map { it.level }.toSet())
     }
 
     @Test fun rejectsInvalidCatalogs() {
@@ -26,6 +33,8 @@ class SpeakingTest {
         assertNull(parseSpeakingCatalog(catalog(type = "monologue")))
         assertNull(parseSpeakingCatalog(catalog(en = " ")))
         assertNull(parseSpeakingCatalog("{}"))
+        assertNull(parseSpeakingCatalog(catalog().replace("\"titleKo\":\"주제\"", "\"titleKo\":\"주제\",\"category\":\"exam\"")))
+        assertNull(parseSpeakingCatalog(catalog().replace("\"tip\":\"팁\"}", "\"tip\":\"팁\",\"level\":\"AH\"}")))
     }
 
     @Test fun countsWordsAndFillers() {
@@ -56,5 +65,24 @@ class SpeakingTest {
     @Test fun advice() {
         assertEquals("조금 더 빠르게", paceAdvice(89)); assertEquals("적당한 속도", paceAdvice(150)); assertEquals("조금 천천히", paceAdvice(151))
         assertEquals("1분 이상 말해 보세요", durationAdvice(59_999)); assertNull(durationAdvice(60_000))
+    }
+
+    @Test fun mockExamFollowsOpicOrder() {
+        val catalog = parseSpeakingCatalog(File("../../exports/speaking.json").readText())!!
+        val exam = buildMockExam(catalog, kotlin.random.Random(7))!!
+        assertEquals(15, exam.size)
+        assertEquals((1..15).toList(), exam.map { it.number })
+        val topic = catalog.topics.associateBy { it.id }
+        assertEquals("intro", topic[exam[0].topicId]!!.category)
+        val a = exam.subList(1, 4).map { it.topicId }.toSet(); val b = exam.subList(4, 7).map { it.topicId }.toSet()
+        assertEquals(1, a.size); assertEquals(1, b.size); assertTrue(a != b)
+        assertEquals("survey", topic[a.first()]!!.category); assertEquals("survey", topic[b.first()]!!.category)
+        assertTrue(exam.subList(7, 10).all { topic[it.topicId]!!.category == "unexpected" })
+        assertEquals(listOf("roleplay_ask", "roleplay_solve", "experience"), exam.subList(10, 13).map { it.question.type })
+        assertEquals(1, exam.subList(10, 13).map { it.topicId }.toSet().size)
+        assertEquals("compare", exam[13].question.type); assertEquals("issue", exam[14].question.type)
+        assertEquals(15, exam.map { it.question.id }.toSet().size)
+        assertEquals(exam, buildMockExam(catalog, kotlin.random.Random(7)))
+        assertNull(buildMockExam(SpeakingCatalog(1, catalog.topics.filter { it.category != "roleplay" }), kotlin.random.Random(1)))
     }
 }

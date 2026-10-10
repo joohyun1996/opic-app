@@ -4,10 +4,12 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
 @Serializable data class SpeakingCatalog(val dataVersion: Int, val topics: List<SpeakingTopic>)
-@Serializable data class SpeakingTopic(val id: String, val titleKo: String, val questions: List<SpeakingQuestion>)
-@Serializable data class SpeakingQuestion(val id: String, val type: String, val en: String, val ko: String, val tip: String)
+@Serializable data class SpeakingTopic(val id: String, val titleKo: String, val questions: List<SpeakingQuestion>, val category: String = "survey")
+@Serializable data class SpeakingQuestion(val id: String, val type: String, val en: String, val ko: String, val tip: String, val level: String = "IM")
 
-val SPEAKING_TYPES = setOf("describe", "routine", "experience", "compare", "roleplay_ask", "roleplay_solve")
+val SPEAKING_TYPES = setOf("describe", "routine", "experience", "compare", "roleplay_ask", "roleplay_solve", "issue")
+val SPEAKING_CATEGORIES = setOf("intro", "survey", "unexpected", "roleplay")
+val SPEAKING_LEVELS = setOf("IM", "IH", "AL")
 private val catalogJson = Json { ignoreUnknownKeys = false }
 
 /** 형식이 틀리거나 id가 겹치거나 type이 목록 밖이면 null. */
@@ -16,9 +18,9 @@ fun parseSpeakingCatalog(json: String): SpeakingCatalog? = runCatching {
     require(catalog.dataVersion > 0 && catalog.topics.isNotEmpty())
     val ids = mutableSetOf<String>()
     catalog.topics.forEach { topic ->
-        require(topic.id.isNotBlank() && topic.titleKo.isNotBlank() && ids.add(topic.id) && topic.questions.isNotEmpty())
+        require(topic.id.isNotBlank() && topic.titleKo.isNotBlank() && ids.add(topic.id) && topic.questions.isNotEmpty() && topic.category in SPEAKING_CATEGORIES)
         topic.questions.forEach { q ->
-            require(q.id.isNotBlank() && ids.add(q.id) && q.type in SPEAKING_TYPES && q.en.isNotBlank() && q.ko.isNotBlank())
+            require(q.id.isNotBlank() && ids.add(q.id) && q.type in SPEAKING_TYPES && q.level in SPEAKING_LEVELS && q.en.isNotBlank() && q.ko.isNotBlank())
         }
     }
     catalog
@@ -71,3 +73,32 @@ fun paceAdvice(wpm: Int): String = when {
     else -> "조금 천천히"
 }
 fun durationAdvice(durationMs: Long): String? = if (durationMs < 60_000) "1분 이상 말해 보세요" else null
+
+/** 모의고사 한 문항. [part]는 화면 표시용 ("설문 주제 1" 등). */
+data class MockItem(val number: Int, val part: String, val topicId: String, val question: SpeakingQuestion)
+
+private val ROLEPLAY_SET = listOf("roleplay_ask", "roleplay_solve", "experience")
+
+/** 실제 OPIc 순서 15문항 (TASK 20). 조건에 맞는 주제가 모자라면 null. */
+fun buildMockExam(catalog: SpeakingCatalog, random: kotlin.random.Random): List<MockItem>? {
+    val topics = catalog.topics
+    val intro = topics.filter { it.category == "intro" }.flatMap { t -> t.questions.map { t to it } }.randomOrNull(random) ?: return null
+    val surveys = topics.filter { it.category == "survey" && it.questions.size >= 3 }.shuffled(random).take(2)
+    if (surveys.size < 2) return null
+    val unexpected = topics.filter { it.category == "unexpected" && it.questions.size >= 3 }.randomOrNull(random) ?: return null
+    val roleplay = topics.filter { t -> t.category == "roleplay" && t.questions.map { it.type }.take(3) == ROLEPLAY_SET }.randomOrNull(random) ?: return null
+    val used = (surveys + unexpected + roleplay).map { it.id }.toMutableSet()
+    fun pick(type: String) = topics.filter { it.id !in used && it.category in setOf("survey", "unexpected") }
+        .flatMap { t -> t.questions.filter { it.type == type }.map { t to it } }.randomOrNull(random)?.also { used += it.first.id }
+    val compare = pick("compare") ?: return null
+    val issue = pick("issue") ?: return null
+    val items = mutableListOf<MockItem>()
+    fun add(part: String, topic: SpeakingTopic, q: SpeakingQuestion) { items += MockItem(items.size + 1, part, topic.id, q) }
+    add("자기소개", intro.first, intro.second)
+    surveys.forEachIndexed { i, t -> t.questions.take(3).forEach { add("설문 주제 ${i + 1} · ${t.titleKo}", t, it) } }
+    unexpected.questions.take(3).forEach { add("돌발 · ${unexpected.titleKo}", unexpected, it) }
+    roleplay.questions.take(3).forEach { add("롤플레이 · ${roleplay.titleKo.removePrefix("롤플레이 — ")}", roleplay, it) }
+    add("고난도 · 비교", compare.first, compare.second)
+    add("고난도 · 이슈", issue.first, issue.second)
+    return items
+}

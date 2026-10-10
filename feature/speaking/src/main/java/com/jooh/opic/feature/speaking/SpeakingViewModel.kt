@@ -9,6 +9,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.jooh.opic.core.common.EditableWord
 import com.jooh.opic.core.common.SpeakingCatalog
+import com.jooh.opic.core.common.MockItem
+import com.jooh.opic.core.common.buildMockExam
 import com.jooh.opic.core.common.editable
 import com.jooh.opic.core.common.editedText
 import com.jooh.opic.core.common.deleteAt
@@ -55,7 +57,13 @@ internal const val FILLER_PROMPT = "Um, uh, so, like, you know, I mean."
 internal const val MAX_ANSWER_MS = 120_000L
 internal const val MAX_CORRECTION_SENTENCES = 15
 
-enum class SpeakingPage { TOPICS, QUESTION, RESULT }
+enum class SpeakingPage { TOPICS, QUESTION, RESULT, MOCK_TRANSCRIBE, MOCK_SUMMARY }
+
+/** 모의고사 답변 하나 (TASK 20). 받아 적기는 15문항이 끝난 뒤 한꺼번에. */
+data class MockAnswer(
+    val item: MockItem, val file: File? = null, val durationMs: Long = 0, val transcript: String? = null,
+    val words: List<EditableWord> = emptyList(), val metrics: SpeakingMetrics? = null, val failed: String? = null,
+)
 enum class ModelState { MISSING, DOWNLOADING, NOT_LOADED, LOADING, READY, FAILED }
 
 data class SpeakingState(
@@ -80,6 +88,12 @@ data class SpeakingState(
     val correctionTotal: Int = 0,
     val corrections: List<CorrectionOutcome> = emptyList(),
     val hasToken: Boolean = false,
+    val audioFile: File? = null,
+    val mockMode: Boolean = false,
+    val mock: List<MockAnswer> = emptyList(),
+    val mockIndex: Int = 0,
+    val mockDone: Int = 0,
+    val fromMock: Boolean = false,
     val message: String? = null,
 )
 
@@ -102,7 +116,10 @@ class SpeakingViewModel(
     private var preparation: Job? = null
     private val mutable = MutableStateFlow(SpeakingState())
     val state = mutable.asStateFlow()
-    val recordingFile = File(app.filesDir, "speaking-last.pcm")
+    private val defaultFile = File(app.filesDir, "speaking-last.pcm")
+    /** 지금 결과 화면의 녹음 (모의고사 답변이면 mock-NN.pcm). */
+    val recordingFile: File get() = state.value.audioFile ?: defaultFile
+    private fun mockFile(index: Int) = File(getApplication<Application>().filesDir, "mock-%02d.pcm".format(index + 1))
     private val abort = AtomicBoolean(false)
     private var recordingJob: Job? = null
     private var transcribeJob: Job? = null
@@ -181,11 +198,16 @@ class SpeakingViewModel(
             val started = System.currentTimeMillis()
             val ticker = launch { while (true) { mutable.update { it.copy(elapsedMs = System.currentTimeMillis() - started) }; delay(200) } }
             try {
-                val bytes = PcmRecorder.record(recordingFile, MAX_ANSWER_MS, { state.value.recording }) { level -> mutable.update { it.copy(level = level) } }
+                val target = if (state.value.mockMode) mockFile(state.value.mockIndex) else defaultFile
+                val bytes = PcmRecorder.record(target, MAX_ANSWER_MS, { state.value.recording }) { level -> mutable.update { it.copy(level = level) } }
                 ticker.cancel()
                 mutable.update { it.copy(recording = false, level = 0f) }
+                val durationMs = bytes * 1000 / (WhisperEngine.SAMPLE_RATE * 2)
                 if (recordingTooShort(bytes)) mutable.update { it.copy(message = "너무 짧아요 — 질문에 답해 보세요") }
-                else transcribe(bytes * 1000 / (WhisperEngine.SAMPLE_RATE * 2))
+                else if (state.value.mockMode) {
+                    mutable.update { s -> s.copy(mock = s.mock.toMutableList().also { it[s.mockIndex] = it[s.mockIndex].copy(file = target, durationMs = durationMs) }) }
+                    mockAdvance()
+                } else transcribe(durationMs)
             } catch (e: CancellationException) { throw e
             } catch (e: Exception) { mutable.update { it.copy(message = "녹음 실패: ${e.message}") }
             } finally { ticker.cancel(); mutable.update { it.copy(recording = false, level = 0f) } }
@@ -194,23 +216,95 @@ class SpeakingViewModel(
 
     fun stopRecording() = mutable.update { it.copy(recording = false) }
 
+    private data class Answer(val text: String, val words: List<EditableWord>, val metrics: SpeakingMetrics)
+
+    /** 녹음 파일 하나를 받아 적는다. 말소리가 없으면 null. */
+    private suspend fun transcribeFile(file: File, durationMs: Long): Answer? {
+        val audio = withContext(Dispatchers.IO) { WavDecoder.pcm16ToFloat(file.readBytes()) }
+        val result = whisper.transcribe(audio, abort, FILLER_PROMPT, withWords = true)
+        val text = cleanWhisperText(result.text)
+        if (text.isBlank()) return null
+        val spoken = result.words.filter { cleanWhisperText(it.text).isNotEmpty() }
+            .ifEmpty { text.split(Regex("\\s+")).filter { it.isNotEmpty() }.map { SpokenWord(it, 0, durationMs, 1f) } }
+        return Answer(text, editable(spoken), speakingMetrics(text, durationMs))
+    }
+
     private fun transcribe(durationMs: Long) {
         abort.set(false)
         mutable.update { it.copy(transcribing = true) }
         transcribeJob = viewModelScope.launch {
             try {
-                val audio = withContext(Dispatchers.IO) { WavDecoder.pcm16ToFloat(recordingFile.readBytes()) }
-                val result = whisper.transcribe(audio, abort, FILLER_PROMPT, withWords = true)
-                val text = cleanWhisperText(result.text)
-                val spoken = result.words.filter { cleanWhisperText(it.text).isNotEmpty() }
-                    .ifEmpty { text.split(Regex("\\s+")).filter { it.isNotEmpty() }.map { SpokenWord(it, 0, durationMs, 1f) } }
-                if (text.isBlank()) mutable.update { it.copy(message = "말소리가 잘 들리지 않았어요 — 폰을 입에 가까이 대 주세요") }
-                else mutable.update { it.copy(page = SpeakingPage.RESULT, transcript = text, durationMs = durationMs,
-                    words = editable(spoken), metrics = speakingMetrics(text, durationMs)) }
+                val answer = transcribeFile(defaultFile, durationMs)
+                if (answer == null) mutable.update { it.copy(message = "말소리가 잘 들리지 않았어요 — 폰을 입에 가까이 대 주세요") }
+                else mutable.update { it.copy(page = SpeakingPage.RESULT, transcript = answer.text, durationMs = durationMs,
+                    words = answer.words, metrics = answer.metrics, audioFile = null) }
             } catch (e: CancellationException) { throw e
             } catch (e: Exception) { mutable.update { it.copy(message = "받아 적기 실패: ${e.message}") }
             } finally { mutable.update { it.copy(transcribing = false) } }
         }
+    }
+
+    // ---- 모의고사 (TASK 20) ----
+    fun startMock() {
+        val exam = catalog?.let { buildMockExam(it, kotlin.random.Random.Default) }
+        if (exam == null) { mutable.update { it.copy(message = "모의고사를 만들 문항이 부족합니다") }; return }
+        cancelWork()
+        exam.indices.forEach { mockFile(it).delete() }
+        val first = exam.first()
+        mutable.update { SpeakingState(page = SpeakingPage.QUESTION, topicId = first.topicId, question = first.question, model = it.model,
+            hasToken = it.hasToken, mockMode = true, mock = exam.map { item -> MockAnswer(item) }) }
+        speak(first.question.en)
+    }
+
+    /** 다음 문항 (마지막이면 받아 적기로). 건너뛰기도 같다. */
+    fun mockAdvance() {
+        val s = state.value
+        if (!s.mockMode || s.recording) return
+        val next = s.mockIndex + 1
+        if (next >= s.mock.size) { finishMock(); return }
+        val item = s.mock[next].item
+        mutable.update { it.copy(mockIndex = next, topicId = item.topicId, question = item.question, replaysLeft = 1, showText = false, message = null) }
+        speak(item.question.en)
+    }
+
+    fun finishMock() {
+        if (state.value.recording) return
+        stopSpeaking()
+        abort.set(false)
+        mutable.update { it.copy(page = SpeakingPage.MOCK_TRANSCRIBE, mockDone = 0, transcribing = true) }
+        transcribeJob = viewModelScope.launch {
+            try {
+                if (!whisper.ready) runCatching { prepareModelNow() }
+                for ((i, answer) in state.value.mock.withIndex()) {
+                    val file = answer.file
+                    val updated = if (file == null) answer else try {
+                        transcribeFile(file, answer.durationMs)?.let { answer.copy(transcript = it.text, words = it.words, metrics = it.metrics) }
+                            ?: answer.copy(failed = "말소리가 들리지 않음")
+                    } catch (e: CancellationException) { throw e } catch (e: Exception) { answer.copy(failed = "받아 적기 실패") }
+                    mutable.update { s -> s.copy(mockDone = i + 1, mock = s.mock.toMutableList().also { it[i] = updated }) }
+                }
+            } finally { mutable.update { it.copy(transcribing = false, page = SpeakingPage.MOCK_SUMMARY) } }
+        }
+    }
+
+    private suspend fun prepareModelNow() {
+        whisper.prepare(false, { beforeLoad() }) { _, _ -> }
+        refreshModel()
+    }
+
+    fun openMockAnswer(index: Int) {
+        val answer = state.value.mock.getOrNull(index) ?: return
+        val metrics = answer.metrics ?: return
+        mutable.update { it.copy(page = SpeakingPage.RESULT, fromMock = true, mockIndex = index, topicId = answer.item.topicId,
+            question = answer.item.question, transcript = answer.transcript, words = answer.words, metrics = metrics,
+            durationMs = answer.durationMs, audioFile = answer.file, correctionOpen = false, corrections = emptyList(), correctionTotal = 0, showOriginal = false) }
+    }
+
+    /** 결과 화면에서 고친 글을 모의고사 목록에 되돌려 놓고 요약으로. */
+    fun backToMockSummary() {
+        cancelCorrection()
+        mutable.update { s -> s.copy(page = SpeakingPage.MOCK_SUMMARY, fromMock = false, correctionOpen = false,
+            mock = s.mock.toMutableList().also { it[s.mockIndex] = it[s.mockIndex].copy(words = s.words, metrics = s.metrics) }) }
     }
 
     // ---- 받아 적은 글 직접 고치기 (TASK 18) ----

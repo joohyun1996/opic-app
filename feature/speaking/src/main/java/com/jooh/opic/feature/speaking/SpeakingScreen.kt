@@ -37,7 +37,7 @@ import kotlinx.coroutines.launch
 
 private val QUESTION_TYPE_KO = mapOf(
     "describe" to "묘사", "routine" to "습관·루틴", "experience" to "경험", "compare" to "비교",
-    "roleplay_ask" to "롤플레이 · 질문하기", "roleplay_solve" to "롤플레이 · 문제 해결",
+    "roleplay_ask" to "롤플레이 · 질문하기", "roleplay_solve" to "롤플레이 · 문제 해결", "issue" to "사회 이슈·의견",
 )
 
 @Composable
@@ -53,24 +53,71 @@ fun SpeakingScreen(model: SpeakingViewModel, onBack: () -> Unit) {
             SpeakingPage.TOPICS -> TopicsPage(model, onBack)
             SpeakingPage.QUESTION -> QuestionPage(model, state)
             SpeakingPage.RESULT -> ResultPage(model, state)
+            SpeakingPage.MOCK_TRANSCRIBE -> MockTranscribePage(model, state)
+            SpeakingPage.MOCK_SUMMARY -> MockSummaryPage(model, state)
+        }
+    }
+}
+
+private val CATEGORY_KO = listOf("intro" to "자기소개", "survey" to "설문 주제", "unexpected" to "돌발 주제", "roleplay" to "롤플레이")
+private val LEVEL_ORDER = listOf("IM", "IH", "AL")
+
+@Composable
+private fun TopicsPage(model: SpeakingViewModel, onBack: () -> Unit) {
+    val catalog = model.catalog!!
+    TextButton(onClick = onBack) { Text("← 홈") }
+    Text("스피킹", style = MaterialTheme.typography.headlineSmall)
+    Text("질문을 듣고 바로 영어로 답해 보세요. 답변은 최대 2분입니다. ${catalog.topics.size}주제 ${catalog.topics.sumOf { it.questions.size }}문항")
+    Button(onClick = model::startMock, modifier = Modifier.fillMaxWidth()) { Text("모의고사 (실제 시험 순서 15문항)") }
+    OutlinedButton(onClick = model::randomQuestion, modifier = Modifier.fillMaxWidth()) { Text("무작위 질문") }
+    CATEGORY_KO.forEach { (category, title) ->
+        val topics = catalog.topics.filter { it.category == category }
+        if (topics.isEmpty()) return@forEach
+        Text(title, style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(top = 8.dp))
+        topics.forEach { topic ->
+            val levels = topic.questions.map { it.level }.toSet().sortedBy(LEVEL_ORDER::indexOf)
+            Card(onClick = { model.openTopic(topic.id) }, modifier = Modifier.fillMaxWidth()) {
+                Row(Modifier.fillMaxWidth().padding(16.dp)) {
+                    Text(topic.titleKo, Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
+                    Text("${topic.questions.size}문항 · ${levels.first()}" + if (levels.size > 1) "~${levels.last()}" else "", color = Color.Gray)
+                }
+            }
         }
     }
 }
 
 @Composable
-private fun TopicsPage(model: SpeakingViewModel, onBack: () -> Unit) {
-    TextButton(onClick = onBack) { Text("← 홈") }
-    Text("스피킹", style = MaterialTheme.typography.headlineSmall)
-    Text("질문을 듣고 바로 영어로 답해 보세요. 답변은 최대 2분입니다.")
-    Button(onClick = model::randomQuestion, modifier = Modifier.fillMaxWidth()) { Text("무작위 질문") }
-    model.catalog!!.topics.forEach { topic ->
-        Card(onClick = { model.openTopic(topic.id) }, modifier = Modifier.fillMaxWidth()) {
-            Row(Modifier.fillMaxWidth().padding(16.dp)) {
-                Text(topic.titleKo, Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
-                Text("${topic.questions.size}문항", color = Color.Gray)
+private fun MockTranscribePage(model: SpeakingViewModel, state: SpeakingState) {
+    val answered = state.mock.count { it.file != null }
+    Text("모의고사 받아 적는 중", style = MaterialTheme.typography.headlineSmall)
+    Text("${state.mockDone} / ${state.mock.size} 문항 (답한 문항 ${answered}개, 2분 답변 하나에 30~40초)")
+    LinearProgressIndicator(progress = { if (state.mock.isEmpty()) 0f else state.mockDone.toFloat() / state.mock.size }, modifier = Modifier.fillMaxWidth())
+    TextButton(onClick = model::cancelTranscribe) { Text("멈추고 지금까지 결과 보기") }
+}
+
+@Composable
+private fun MockSummaryPage(model: SpeakingViewModel, state: SpeakingState) {
+    TextButton(onClick = model::backToTopics) { Text("← 주제") }
+    Text("모의고사 결과", style = MaterialTheme.typography.headlineSmall)
+    val done = state.mock.mapNotNull { it.metrics }
+    if (done.isNotEmpty()) Text("답한 문항 ${done.size}개 · 평균 ${done.sumOf { it.durationMs } / done.size / 1000}초 · 분당 ${done.sumOf { it.wordsPerMinute } / done.size}단어 · 머뭇거림 합계 ${done.sumOf { it.fillerCount }}번")
+    Text("문항을 누르면 답변 고치기·문법 교정·발음 힌트를 볼 수 있어요", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+    state.mock.forEachIndexed { index, answer ->
+        Card(onClick = { model.openMockAnswer(index) }, enabled = answer.metrics != null, modifier = Modifier.fillMaxWidth()) {
+            Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text("${answer.item.number}. ${answer.item.part} · ${answer.item.question.level}", style = MaterialTheme.typography.titleSmall)
+                Text(answer.item.question.en, style = MaterialTheme.typography.bodySmall, maxLines = 2)
+                val m = answer.metrics
+                Text(when {
+                    m != null -> "${clock(m.durationMs)} · 분당 ${m.wordsPerMinute}단어 · 머뭇거림 ${m.fillerCount}번"
+                    answer.failed != null -> answer.failed
+                    answer.file == null -> "답하지 않음"
+                    else -> "받아 적지 않음"
+                }, color = if (m != null) Color.Unspecified else Color.Gray)
             }
         }
     }
+    Button(onClick = model::startMock, modifier = Modifier.fillMaxWidth()) { Text("새 모의고사") }
 }
 
 @Composable
@@ -78,8 +125,18 @@ private fun QuestionPage(model: SpeakingViewModel, state: SpeakingState) {
     val question = state.question ?: return
     val permission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { if (it) model.startRecording() }
     val topic = model.catalog?.topics?.firstOrNull { it.id == state.topicId }
-    TextButton(onClick = model::backToTopics) { Text("← 주제") }
-    Text("${topic?.titleKo.orEmpty()} · ${QUESTION_TYPE_KO[question.type].orEmpty()}", style = MaterialTheme.typography.titleMedium)
+    if (state.mockMode) {
+        val item = state.mock.getOrNull(state.mockIndex)?.item
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text("모의고사 ${state.mockIndex + 1} / ${state.mock.size}", Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
+            TextButton(enabled = !state.recording, onClick = model::finishMock) { Text("끝내기") }
+        }
+        LinearProgressIndicator(progress = { (state.mockIndex + 1f) / state.mock.size.coerceAtLeast(1) }, modifier = Modifier.fillMaxWidth())
+        Text("${item?.part.orEmpty()} · ${QUESTION_TYPE_KO[question.type].orEmpty()} · ${question.level}", color = Color.Gray)
+    } else {
+        TextButton(onClick = model::backToTopics) { Text("← 주제") }
+        Text("${topic?.titleKo.orEmpty()} · ${QUESTION_TYPE_KO[question.type].orEmpty()} · ${question.level}", style = MaterialTheme.typography.titleMedium)
+    }
     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         OutlinedButton(enabled = state.replaysLeft > 0 && !state.recording, onClick = model::replay) {
             Text(if (state.replaysLeft > 0) "다시 듣기 (1회)" else "다시 듣기 끝")
@@ -106,6 +163,9 @@ private fun QuestionPage(model: SpeakingViewModel, state: SpeakingState) {
             TextButton(onClick = model::cancelTranscribe) { Text("취소") }
         } else {
             Button(onClick = { permission.launch(Manifest.permission.RECORD_AUDIO) }, modifier = Modifier.fillMaxWidth()) { Text("● 답변 시작") }
+            if (state.mockMode) OutlinedButton(onClick = model::mockAdvance, modifier = Modifier.fillMaxWidth()) {
+                Text(if (state.mockIndex + 1 < state.mock.size) "건너뛰기" else "건너뛰고 끝내기")
+            }
         }
     }
     state.message?.let { Text(it, color = MaterialTheme.colorScheme.error) }
@@ -130,7 +190,9 @@ private fun ResultPage(model: SpeakingViewModel, state: SpeakingState) {
     val metrics = state.metrics ?: return
     val scope = rememberCoroutineScope()
     var editing by remember { mutableStateOf<Int?>(null) }
-    TextButton(onClick = model::backToTopics) { Text("← 주제") }
+    if (state.fromMock) TextButton(onClick = model::backToMockSummary) { Text("← 모의고사 결과") }
+    else TextButton(onClick = model::backToTopics) { Text("← 주제") }
+    state.question?.let { Text(it.en, style = MaterialTheme.typography.bodySmall, color = Color.Gray) }
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(if (state.showOriginal) "Whisper 받아 적기" else "내 답변", Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
         TextButton(onClick = model::toggleOriginal) { Text(if (state.showOriginal) "내가 고친 글 보기" else "Whisper 원문 보기") }
@@ -188,8 +250,10 @@ private fun ResultPage(model: SpeakingViewModel, state: SpeakingState) {
         linkingPairs(edited), reductions(edited), flapWords(edited), model::say)
     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         OutlinedButton(enabled = model.recordingFile.isFile, onClick = { scope.launch { PcmPlayer.play(model.recordingFile) } }) { Text("내 답변 듣기") }
-        Button(onClick = model::retry) { Text("다시 답하기") }
-        OutlinedButton(onClick = model::nextQuestion) { Text("다음 질문") }
+        if (!state.fromMock) {
+            Button(onClick = model::retry) { Text("다시 답하기") }
+            OutlinedButton(onClick = model::nextQuestion) { Text("다음 질문") }
+        }
     }
     HorizontalDivider()
     if (!state.correctionOpen) Button(onClick = model::openCorrection, modifier = Modifier.fillMaxWidth()) { Text("문법 교정 받기 (AI)") }

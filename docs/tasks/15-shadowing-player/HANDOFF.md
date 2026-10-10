@@ -110,3 +110,25 @@ gradle/gradle-daemon-jvm.properties                 → 없음
 실기기: S23+에 `adb install -r --no-streaming` 성공, 앱 데이터 삭제 없음. `https://www.youtube.com/watch?v=aircAruvnKk`를 열고 12초 대기한 뒤 재생을 눌러 8초 더 확인했지만 시각은 0.0초였다. `onReady`·`onStateChange`·`onError` 콜백이 화면 상태를 바꾸지 않았고 `ShadowingWeb` 콘솔 메시지는 출력되지 않았다. [실패 화면](device-m1-failed-2026-10-10.png), [WebView 관련 logcat](device-m1-logcat-2026-10-10.txt). 해당 로그에는 `Failed to read DnsConfig`와 `WebView.destroy() called while WebView is still attached to window.` 경고가 있으나 원인은 확정하지 않았다. 두 번째 영상, 0.75×, A-B 반복, 자막 목록, 문장 선택, 새 녹음은 M1 실패로 재시험하지 않았다.
 
 검증: `./gradlew test lint :app:assembleDebug :app:assembleRelease --quiet` 종료 코드 0. `git diff --check` 출력 없음. 재리뷰 전 플레이어 생명주기와 로딩 실패 지점을 확인할 필요가 있다.
+
+## 리뷰 반영 (4차)
+
+- 시작 커밋: `e4c5764`
+- 코드 반영 커밋 범위: `e4c5764..b557d0b` (`e8cad9e`, `b557d0b`)
+- 대상: 4차 리뷰 M1을 확인한 뒤 3차 리뷰 M2·M3를 반영했다.
+
+| 리뷰 ID | 조치 | 커밋 | 실기기 결과 |
+|---------|------|------|-------------|
+| M1 | `DisposableEffect(state.videoId)`를 제거하고 `AndroidView.onRelease`에서 WebView를 정리했다. 기존 DOM storage·콘솔 로그·상태 표시는 유지했다. | `e8cad9e` | 첫 영상에서 `플레이어 준비됨`, 재생 시각 0.0→7.2초. `adb forward`와 DevTools `/json` 확인 결과 페이지 1개. |
+| M2 | 플레이어가 요청한 영어 자막만 가로채 JSON3 문장으로 해석하고, 직접 요청은 지연 후 대체 경로로 사용했다. 자막 주소 선택 단위 테스트를 추가했다. | `b557d0b` | 첫 영상 149문장, 두 번째 영상 2문장 표시. 목록에서 문장 선택 시 원문과 A/B 구간이 설정됨. |
+| M3 | 1.5초 미만 녹음의 받아 적기를 막고, 무음 결과 안내와 녹음 중 입력 소리 크기 막대를 추가했다. 관련 단위 테스트를 추가했다. | `b557d0b` | 사용자 발화로 받아 적기·단어 비교·일치율 표시 확인. 너무 짧은 녹음과 무음 안내는 실기기에서 따로 재현하지 않았다. |
+
+S23+에 디버그 APK를 `adb install -r --no-streaming`으로 덮어 설치했다. 서명 오류는 없었으며 앱 삭제·데이터 초기화는 하지 않았다. 사용한 영상은 `https://www.youtube.com/watch?v=aircAruvnKk`, `https://www.youtube.com/watch?v=jNQXAC9IVRw`이다. 두 영상 모두 플레이어가 준비되고 재생 시각이 진행됐다. 첫 영상에서 0.75×, 자막 문장 선택, A-B 반복을 확인했다. 시각 표본에서 A 구간으로 다섯 번 되돌아가 3회 이상 반복됐다.
+
+첫 영상의 긴 문장을 원문으로 선택한 뒤 사용자가 S23+에 직접 말했고, 녹음 중 입력 소리 크기 표시와 받아 적기 결과를 확인했다. 원문은 `It's sloppily written and rendered at an extremely low resolution of 28x28 pixels, but your brain has no trouble recognizing it as a 3.`이다. 받아 적기에는 문장 뒤의 영상 내용까지 포함됐고 일치율은 -33.3%로 표시됐다. 이는 현재 `1 - WER` 계산에서 추가 인식 단어가 많으면 음수가 될 수 있기 때문이다. 이번 리뷰의 수정 범위 밖인 채점식은 변경하지 않았다.
+
+두 번째 영상에도 영어 자막 2문장이 실제로 표시되어, 자막 없는 영상의 안내 화면은 이번 두 영상으로 재확인할 수 없었다. 플레이어 스크린샷의 영상 영역은 검게 캡처됐으나 화면의 준비 상태와 시각 진행으로 재생을 확인했다.
+
+스크린샷: [플레이어](device-m1-fixed-2026-10-10.png), [녹음·비교 결과](device-m3-compare-2026-10-10.png), [첫 영상 자막 목록](../16-shadowing-captions/device-caption-list-2026-10-10.png), [두 번째 영상 자막 목록](../16-shadowing-captions/device-second-caption-list-2026-10-10.png).
+
+검증: `./gradlew test lint :app:assembleDebug :app:assembleRelease --quiet` 종료 코드 0. 자막 요청과 짧은 녹음 관련 단위 테스트 각 2개 통과. `git diff --check` 출력 없음. `testImplementation(libs.junit)` 추가는 사용자 허락을 받았다.

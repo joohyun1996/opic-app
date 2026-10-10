@@ -1,6 +1,5 @@
 package com.jooh.opic.core.model
 
-enum class Language(val code: String) { EN("en"), ZH("zh") }
 enum class WordStatus { NEW, LEARNING, MASTERED }
 
 fun wordStatus(correctCount: Int?): WordStatus = when {

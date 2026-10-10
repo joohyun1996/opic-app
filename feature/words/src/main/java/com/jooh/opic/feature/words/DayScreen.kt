@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jooh.opic.core.common.seqRange
+import com.jooh.opic.core.common.StudyLanguage
 import com.jooh.opic.core.database.OpicDatabase
 import com.jooh.opic.core.database.WordWithProgress
 import com.jooh.opic.core.model.WordStatus
@@ -25,27 +26,27 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class DayViewModel(private val database: OpicDatabase, private val day: Int) : ViewModel() {
+class DayViewModel(private val database: OpicDatabase, private val language: StudyLanguage, private val day: Int) : ViewModel() {
     private val mutableRows = MutableStateFlow<List<WordWithProgress>?>(null)
     val rows = mutableRows.asStateFlow()
 
     fun refresh() {
         viewModelScope.launch {
             val range = seqRange(day)
-            mutableRows.value = database.wordDao().getDayWordsWithProgress("en", range.first, range.last)
+            mutableRows.value = database.wordDao().getDayWordsWithProgress(language.code, range.first, range.last)
         }
     }
 
-    class Factory(private val database: OpicDatabase, private val day: Int) : ViewModelProvider.Factory {
+    class Factory(private val database: OpicDatabase, private val language: StudyLanguage, private val day: Int) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel> create(modelClass: Class<T>): T = DayViewModel(database, day) as T
+        override fun <T : ViewModel> create(modelClass: Class<T>): T = DayViewModel(database, language, day) as T
     }
 }
 
 /** ③ Day 단어 목록 */
 @Composable
-internal fun DayScreen(database: OpicDatabase, day: Int, speaker: Speaker, onBack: () -> Unit, onStudy: (StudyMode) -> Unit) {
-    val model: DayViewModel = viewModel(key = "day-$day", factory = DayViewModel.Factory(database, day))
+internal fun DayScreen(database: OpicDatabase, language: StudyLanguage, day: Int, speaker: Speaker, onBack: () -> Unit, onStudy: (StudyMode) -> Unit) {
+    val model: DayViewModel = viewModel(key = "day-${language.code}-$day", factory = DayViewModel.Factory(database, language, day))
     val rows by model.rows.collectAsState()
     LaunchedEffect(Unit) { model.refresh() }
     DisposableEffect(Unit) { onDispose { speaker.stop() } }

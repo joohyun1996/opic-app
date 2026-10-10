@@ -1,6 +1,7 @@
 package com.jooh.opic.feature.analysis
 
 import com.jooh.opic.core.common.DailyCount
+import com.jooh.opic.core.common.WORDS_PER_DAY
 import com.jooh.opic.core.common.recentDailyCounts
 import com.jooh.opic.core.common.studyStreak
 import com.jooh.opic.core.common.topByCount
@@ -29,7 +30,7 @@ suspend fun loadStats(db: OpicDatabase, language: String, today: Long, zone: Zon
     val shadowing = db.shadowingAttemptDao().all(language)
     val activity = words.mapNotNull { it.lastStudiedAt?.let(::day) } + reviews.map { day(it.lastStudiedAt) } +
         speaking.map { day(it.createdAt) } + shadowing.map { day(it.createdAt) }
-    val wordsTotal = db.wordDao().dayStats(language, 40).sumOf { it.total }
+    val wordsTotal = db.wordDao().dayStats(language, WORDS_PER_DAY).sumOf { it.total }
     val recent = speaking.sortedByDescending { it.createdAt }.take(10).reversed()
     return StatsData(
         streak = studyStreak(activity.toSet(), today),

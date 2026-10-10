@@ -1,6 +1,8 @@
 package com.jooh.opic.core.database
 
 import androidx.room.withTransaction
+import com.jooh.opic.core.common.StudyLanguage
+import com.jooh.opic.core.common.StudyLanguages
 import java.io.InputStream
 import kotlin.coroutines.cancellation.CancellationException
 import kotlinx.serialization.Serializable
@@ -12,7 +14,7 @@ sealed interface ImportResult {
     data class Failed(val reason: String) : ImportResult
 }
 
-class WordImporter(private val database: OpicDatabase) {
+class WordImporter(private val database: OpicDatabase, private val enabledLanguages: List<StudyLanguage> = StudyLanguages.all) {
     private val json = Json { ignoreUnknownKeys = true }
     suspend fun importWords(source: InputStream): ImportResult = try {
         val input = source.buffered()
@@ -49,10 +51,11 @@ class WordImporter(private val database: OpicDatabase) {
         val sequences = mutableSetOf<Pair<String, Int>>()
         val words = input.words.map { item ->
             val word = item.word.trim().lowercase()
-            require(item.language in setOf("en", "zh") && word.isNotBlank() && item.meaningKo.isNotBlank() && item.seq >= 1 && item.level >= 1) { "단어 기본 필드 오류: $word" }
+            val language = (enabledLanguages + StudyLanguages.ZH).firstOrNull { it.code == item.language }
+            require(language != null && word.isNotBlank() && item.meaningKo.isNotBlank() && item.seq >= 1 && item.level >= 1) { "단어 기본 필드 오류: $word" }
             require(keys.add(item.language to word)) { "중복 단어: $word" }
             require(sequences.add(item.language to item.seq)) { "중복 seq: ${item.seq}" }
-            if (item.language == "en") require(listOf(item.phonetic, item.meaningEn, item.example, item.exampleKo).all { !it.isNullOrBlank() }) { "영어 필드 누락: $word" }
+            if (language.requiresRichWordFields) require(listOf(item.phonetic, item.meaningEn, item.example, item.exampleKo).all { !it.isNullOrBlank() }) { "필수 언어 필드 누락: $word" }
             WordEntity(language = item.language, word = word, seq = item.seq,
                 phonetic = item.phonetic.orEmpty(), meaningKo = item.meaningKo, meaningEn = item.meaningEn.orEmpty(),
                 example = item.example.orEmpty(), exampleKo = item.exampleKo.orEmpty(), level = item.level,

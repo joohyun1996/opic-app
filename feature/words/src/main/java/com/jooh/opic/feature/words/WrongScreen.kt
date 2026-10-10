@@ -18,30 +18,31 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jooh.opic.core.common.dayOf
+import com.jooh.opic.core.common.StudyLanguage
 import com.jooh.opic.core.database.OpicDatabase
 import com.jooh.opic.core.database.WordWithProgress
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class WrongViewModel(private val database: OpicDatabase) : ViewModel() {
+class WrongViewModel(private val database: OpicDatabase, private val language: StudyLanguage) : ViewModel() {
     private val mutableRows = MutableStateFlow<List<WordWithProgress>?>(null)
     val rows = mutableRows.asStateFlow()
 
     fun refresh() {
-        viewModelScope.launch { mutableRows.value = database.wordDao().getWrongWords("en", 1, Int.MAX_VALUE) }
+        viewModelScope.launch { mutableRows.value = database.wordDao().getWrongWords(language.code, 1, Int.MAX_VALUE) }
     }
 
-    class Factory(private val database: OpicDatabase) : ViewModelProvider.Factory {
+    class Factory(private val database: OpicDatabase, private val language: StudyLanguage) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel> create(modelClass: Class<T>): T = WrongViewModel(database) as T
+        override fun <T : ViewModel> create(modelClass: Class<T>): T = WrongViewModel(database, language) as T
     }
 }
 
 /** ⑥ 오답 모음. day = 0은 전체. */
 @Composable
-internal fun WrongScreen(database: OpicDatabase, speaker: Speaker, onBack: () -> Unit, onStudy: (day: Int, StudyMode) -> Unit) {
-    val model: WrongViewModel = viewModel(key = "wrong", factory = WrongViewModel.Factory(database))
+internal fun WrongScreen(database: OpicDatabase, language: StudyLanguage, speaker: Speaker, onBack: () -> Unit, onStudy: (day: Int, StudyMode) -> Unit) {
+    val model: WrongViewModel = viewModel(key = "wrong-${language.code}", factory = WrongViewModel.Factory(database, language))
     val rows by model.rows.collectAsState()
     LaunchedEffect(Unit) { model.refresh() }
     DisposableEffect(Unit) { onDispose { speaker.stop() } }

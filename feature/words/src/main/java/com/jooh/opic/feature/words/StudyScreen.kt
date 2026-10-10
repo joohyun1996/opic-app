@@ -20,16 +20,17 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jooh.opic.core.common.maskHint
+import com.jooh.opic.core.common.StudyLanguage
 import com.jooh.opic.core.database.OpicDatabase
 import com.jooh.opic.core.database.WordEntity
 
 /** ④ 영→한 / ⑤ 한→영 플래시카드와 결과 화면 */
 @Composable
 internal fun StudyScreen(
-    database: OpicDatabase, source: StudySource, mode: StudyMode, speaker: Speaker,
+    database: OpicDatabase, language: StudyLanguage, source: StudySource, mode: StudyMode, speaker: Speaker,
     onRecorded: () -> Unit, onBack: () -> Unit,
 ) {
-    val model: StudyViewModel = viewModel(key = "study-${source.key}-${mode.route}", factory = StudyViewModel.Factory(database, source, mode, onRecorded))
+    val model: StudyViewModel = viewModel(key = "study-${language.code}-${source.key}-${mode.route}", factory = StudyViewModel.Factory(database, language, source, mode, onRecorded))
     val state by model.state.collectAsState()
     DisposableEffect(Unit) { onDispose { speaker.stop() } }
 

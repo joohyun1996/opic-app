@@ -86,7 +86,7 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit,
         if (library.isNotEmpty()) TextButton(onClick = { model.close(); repeat = false }) { Text("← 추천 영상 목록") }
         state.practice[state.videoId]?.let { Text("이 영상 연습 ${it.attempts}회 · 최고 일치율 ${"%.0f".format(it.bestMatchRate * 100)}%", color = MaterialTheme.colorScheme.onSurfaceVariant) }
         state.videoId?.let { id ->
-            key(id) { PlayerView(id, Modifier.fillMaxWidth().height(220.dp), { player = it }, { current = it },
+            key(id) { PlayerView(id, model.language.code, Modifier.fillMaxWidth().height(220.dp), { player = it }, { current = it },
                 { playerStatus = "플레이어 오류 $it"; model.message("영상 오류 코드 $it") },
                 { playerStatus = "플레이어 준비됨" },
                 { if (it == 1) playerStatus = "플레이어 준비됨" },

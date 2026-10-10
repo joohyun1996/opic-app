@@ -75,12 +75,12 @@ class MigrationTest {
         try {
             assertEquals(2, db.userWordDao().get(7)!!.correctCount)
             assertEquals(2, db.grammarReviewDao().get("en", "u1-04")!!.stage)
-            val id = db.speakingDao().insert(SpeakingAnswerEntity(questionId = "home-1", topicId = "home", createdAt = 10, durationMs = 60_000,
+            val id = db.speakingDao().insert(SpeakingAnswerEntity(language = "en", questionId = "home-1", topicId = "home", createdAt = 10, durationMs = 60_000,
                 transcript = "I live here.", editedText = "I live here.", wordCount = 3, wordsPerMinute = 3, fillerCount = 0, sentenceCount = 1))
             db.speakingDao().updateEdit("en", id, "I lived here.", 3, 3, 0, 1)
             assertEquals("I lived here.", db.speakingDao().byQuestion("en", "home-1").single().editedText)
             assertEquals(emptyList<SpeakingAnswerEntity>(), db.speakingDao().byQuestion("zh", "home-1"))
-            db.shadowingAttemptDao().insert(ShadowingAttemptEntity(videoId = "aircAruvnKk", sentence = "a", heard = "a", matchRate = 0.8, createdAt = 5))
+            db.shadowingAttemptDao().insert(ShadowingAttemptEntity(language = "en", videoId = "aircAruvnKk", sentence = "a", heard = "a", matchRate = 0.8, createdAt = 5))
             assertEquals(1, db.shadowingAttemptDao().recentVideos("en").single().attempts)
         } finally {
             db.close()

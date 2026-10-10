@@ -31,8 +31,10 @@ import com.jooh.opic.core.common.parseAnswerTemplates
 import com.jooh.opic.core.common.ShadowingVideo
 import com.jooh.opic.core.common.parseShadowingLibrary
 import com.jooh.opic.core.common.parseSpeakingCatalog
+import com.jooh.opic.core.common.StudyLanguages
 
 class OpicApplication : Application() {
+    val currentLanguage = StudyLanguages.EN
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private val mutableImport = MutableStateFlow<ImportResult?>(null)
     val importResult = mutableImport.asStateFlow()

@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.jooh.opic.core.common.gradeMeaning
 import com.jooh.opic.core.common.gradeWord
 import com.jooh.opic.core.common.seqRange
+import com.jooh.opic.core.common.StudyLanguage
 import com.jooh.opic.core.database.OpicDatabase
 import com.jooh.opic.core.database.WordEntity
 import kotlinx.coroutines.Job
@@ -47,6 +48,7 @@ data class StudyState(
 
 class StudyViewModel(
     private val database: OpicDatabase,
+    private val language: StudyLanguage,
     private val source: StudySource,
     val mode: StudyMode,
     private val onRecorded: () -> Unit,
@@ -63,8 +65,8 @@ class StudyViewModel(
             // 카드 목록은 시작할 때 한 번만 읽는다. 세션 중 습득해도 카드가 빠지지 않는다.
             val dao = database.wordDao()
             val range = if (source.day == 0) 1..Int.MAX_VALUE else seqRange(source.day)
-            val cards = if (source.wrongOnly) dao.getWrongWords("en", range.first, range.last).map { it.word }
-                else dao.getDayWords("en", range.first, range.last)
+            val cards = if (source.wrongOnly) dao.getWrongWords(language.code, range.first, range.last).map { it.word }
+                else dao.getDayWords(language.code, range.first, range.last)
             // 순서로 외우지 않도록 매번 섞는다.
             mutableState.value = StudyState(loading = false, cards = cards.shuffled())
         }
@@ -122,9 +124,9 @@ class StudyViewModel(
     fun restart() = mutableState.update { StudyState(loading = false, cards = it.cards.shuffled(), saveFailed = it.saveFailed) }
 
     class Factory(
-        private val database: OpicDatabase, private val source: StudySource, private val mode: StudyMode, private val onRecorded: () -> Unit,
+        private val database: OpicDatabase, private val language: StudyLanguage, private val source: StudySource, private val mode: StudyMode, private val onRecorded: () -> Unit,
     ) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel> create(modelClass: Class<T>): T = StudyViewModel(database, source, mode, onRecorded) as T
+        override fun <T : ViewModel> create(modelClass: Class<T>): T = StudyViewModel(database, language, source, mode, onRecorded) as T
     }
 }

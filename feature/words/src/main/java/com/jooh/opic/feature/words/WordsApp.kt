@@ -13,12 +13,14 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jooh.opic.core.database.ImportResult
 import com.jooh.opic.core.database.OpicDatabase
+import com.jooh.opic.core.common.StudyLanguage
 
 enum class WordsPage { DAYS, DAY, STUDY, WRONG, WRONG_STUDY }
 
 @Composable
 fun WordsApp(
     database: OpicDatabase,
+    language: StudyLanguage,
     importResult: ImportResult?,
     speaker: Speaker,
     page: WordsPage,
@@ -29,7 +31,7 @@ fun WordsApp(
     navigate: (String) -> Unit,
     onBack: () -> Unit,
 ) {
-    val model: WordsViewModel = viewModel(factory = remember(database) { WordsViewModel.Factory(database) })
+    val model: WordsViewModel = viewModel(key = "words-${language.code}", factory = remember(database, language) { WordsViewModel.Factory(database, language) })
     val state by model.state.collectAsState()
     LaunchedEffect(importResult, page) { model.refresh() }
     Scaffold { padding ->
@@ -64,13 +66,13 @@ fun WordsApp(
                             }
                         }
                     }
-                    WordsPage.DAY -> DayScreen(database, day, speaker, onBack = onBack,
+                    WordsPage.DAY -> DayScreen(database, language, day, speaker, onBack = onBack,
                         onStudy = { navigate("study/$day/${it.route}") })
-                    WordsPage.STUDY -> StudyScreen(database, StudySource(day, wrongOnly = false), StudyMode.of(mode), speaker,
+                    WordsPage.STUDY -> StudyScreen(database, language, StudySource(day, wrongOnly = false), StudyMode.of(mode), speaker,
                         onRecorded = model::refresh, onBack = onBack)
-                    WordsPage.WRONG -> WrongScreen(database, speaker, onBack = onBack,
+                    WordsPage.WRONG -> WrongScreen(database, language, speaker, onBack = onBack,
                         onStudy = { selectedDay, selectedMode -> navigate("study/wrong/$selectedDay/${selectedMode.route}") })
-                    WordsPage.WRONG_STUDY -> StudyScreen(database, StudySource(day, wrongOnly = true), StudyMode.of(mode), speaker,
+                    WordsPage.WRONG_STUDY -> StudyScreen(database, language, StudySource(day, wrongOnly = true), StudyMode.of(mode), speaker,
                         onRecorded = model::refresh, onBack = onBack)
                 }
             }

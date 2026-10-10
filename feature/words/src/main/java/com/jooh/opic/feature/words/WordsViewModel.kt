@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.room.withTransaction
 import com.jooh.opic.core.common.WORDS_PER_DAY
+import com.jooh.opic.core.common.StudyLanguage
 import com.jooh.opic.core.common.totalDays
 import com.jooh.opic.core.database.DayStats
 import com.jooh.opic.core.database.OpicDatabase
@@ -18,7 +19,7 @@ data class WordsState(val days: List<DayStats> = emptyList(), val failed: Boolea
     val wrong get() = days.sumOf { it.wrong }
 }
 
-class WordsViewModel(private val database: OpicDatabase) : ViewModel() {
+class WordsViewModel(private val database: OpicDatabase, private val language: StudyLanguage) : ViewModel() {
     private val mutableState = MutableStateFlow(WordsState())
     val state = mutableState.asStateFlow()
     fun refresh() {
@@ -26,8 +27,8 @@ class WordsViewModel(private val database: OpicDatabase) : ViewModel() {
             try {
                 mutableState.value = database.withTransaction {
                     val dao = database.wordDao()
-                    val count = totalDays(dao.maxSeq("en") ?: 0)
-                    val stats = dao.dayStats("en", WORDS_PER_DAY).associateBy { it.day }
+                    val count = totalDays(dao.maxSeq(language.code) ?: 0)
+                    val stats = dao.dayStats(language.code, WORDS_PER_DAY).associateBy { it.day }
                     WordsState((1..count).map { stats[it] ?: DayStats(it, 0, 0, 0) })
                 }
             } catch (_: Exception) {
@@ -35,8 +36,8 @@ class WordsViewModel(private val database: OpicDatabase) : ViewModel() {
             }
         }
     }
-    class Factory(private val database: OpicDatabase) : ViewModelProvider.Factory {
+    class Factory(private val database: OpicDatabase, private val language: StudyLanguage) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel> create(modelClass: Class<T>): T = WordsViewModel(database) as T
+        override fun <T : ViewModel> create(modelClass: Class<T>): T = WordsViewModel(database, language) as T
     }
 }

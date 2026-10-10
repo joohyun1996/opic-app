@@ -2,9 +2,14 @@ package com.jooh.opic.feature.shadowing
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertNotNull
 import org.junit.Test
 
 class CaptionRequestTest {
+    @Test fun acceptsConfiguredLanguage() {
+        assertNull(captionRequest("https://www.youtube.com/api/timedtext?lang=es"))
+        assertNotNull(captionRequest("https://www.youtube.com/api/timedtext?lang=es", "es"))
+    }
     @Test fun englishHumanAndAsr() {
         val human = captionRequest("https://www.youtube.com/api/timedtext?v=abc&lang=en&fmt=srv3")
         assertEquals(null, human?.kind)

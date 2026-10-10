@@ -15,6 +15,11 @@ class CaptionsTest {
         assertNull(pickTrack(listOf(CaptionTrack("d", "ko"), CaptionTrack("e", "en-GB", "asr"))))
         assertNull(pickTrack(emptyList()))
     }
+    @Test fun trackSelectionUsesRequestedLanguage() {
+        val english = CaptionTrack("en", "en")
+        val spanish = CaptionTrack("es", "es")
+        assertEquals(spanish, pickTrack(listOf(english, spanish), "es"))
+    }
     @Test fun tracksFromHtml() {
         val tracks = extractCaptionTracks(fixture("watch.html"))
         assertEquals(2, tracks.size)

@@ -50,7 +50,7 @@ data class GrammarReviewEntity(
 @Entity(tableName = "speaking_answers", indices = [Index(value = ["language", "questionId"]), Index(value = ["language", "mockId"])])
 data class SpeakingAnswerEntity(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val language: String = "en",
+    val language: String,
     val questionId: String,
     val topicId: String,
     val createdAt: Long,
@@ -68,7 +68,7 @@ data class SpeakingAnswerEntity(
 @Entity(tableName = "shadowing_attempts", indices = [Index(value = ["language", "videoId"])])
 data class ShadowingAttemptEntity(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val language: String = "en",
+    val language: String,
     val videoId: String,
     val sentence: String,
     val heard: String,

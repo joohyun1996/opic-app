@@ -9,6 +9,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.jooh.opic.core.common.WordDiff
 import com.jooh.opic.core.common.Cue
+import com.jooh.opic.core.common.StudyLanguage
 import com.jooh.opic.core.common.compareWords
 import com.jooh.opic.core.common.matchRate
 import com.jooh.opic.core.common.werWords
@@ -46,14 +47,14 @@ private object CaptionCache { val byVideo = ConcurrentHashMap<String, List<Cue>>
 private object ShadowingSentences { val byVideo = mutableMapOf<String, String>() }
 
 class ShadowingViewModel(app: Application, private val whisper: UserWhisper, private val beforeLoad: () -> Unit,
-                         private val history: ShadowingAttemptDao? = null) : AndroidViewModel(app) {
+                         val language: StudyLanguage, private val history: ShadowingAttemptDao? = null) : AndroidViewModel(app) {
     private val stateValue = MutableStateFlow(ShadowState())
     val state = stateValue.asStateFlow()
     private val spec = whisper.model
     private var recordingJob: Job? = null
     private var transcriptionJob: Job? = null
     private val abort = AtomicBoolean(false)
-    private val captionClient = CaptionClient()
+    private val captionClient = CaptionClient(language.code)
     private var captionJob: Job? = null
     private var captionRequest = 0L
     private var playerCaptionKind: String? = null
@@ -66,7 +67,7 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
     private fun refreshPractice() {
         val dao = history ?: return
         viewModelScope.launch {
-            val rows = runCatching { dao.recentVideos("en") }.getOrDefault(emptyList())
+            val rows = runCatching { dao.recentVideos(language.code) }.getOrDefault(emptyList())
             update { it.copy(practice = rows.associateBy { r -> r.videoId }) }
         }
     }
@@ -81,7 +82,7 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
     fun open(id: String) {
         cancelCaptions()
         playerCaptionKind = null
-        update { it.copy(videoId = id, sentence = ShadowingSentences.byVideo[id].orEmpty(), result = null,
+        update { it.copy(videoId = id, sentence = ShadowingSentences.byVideo["${language.code}:$id"].orEmpty(), result = null,
             diff = emptyList(), message = null, captions = emptyList(), captionStatus = CaptionStatus.NONE) }
         loadCaptions()
     }
@@ -90,7 +91,8 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
         if (!retry && (captionJob?.isActive == true || state.value.captionStatus == CaptionStatus.FAILED)) return
         cancelCaptions()
         val request = captionRequest
-        val cached = if (retry) null else CaptionCache.byVideo[id]
+        val cacheKey = "${language.code}:$id"
+        val cached = if (retry) null else CaptionCache.byVideo[cacheKey]
         if (cached != null) {
             update { it.copy(captions = cached, captionStatus = if (cached.isEmpty()) CaptionStatus.NONE else CaptionStatus.READY) }
             return
@@ -105,7 +107,7 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
                 ensureActive()
                 if (request != captionRequest || state.value.videoId != id) return@launch
                 if (state.value.captionStatus == CaptionStatus.READY) return@launch
-                CaptionCache.byVideo[id] = cues
+                CaptionCache.byVideo[cacheKey] = cues
                 update { it.copy(captions = cues, captionStatus = if (cues.isEmpty()) CaptionStatus.NONE else CaptionStatus.READY) }
             } catch (e: CancellationException) { throw e
             } catch (_: Exception) {
@@ -119,14 +121,14 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
         if (state.value.videoId != id || cues.isEmpty()) return
         if (playerCaptionKind == null || playerCaptionKind == "asr" || kind != "asr") {
             playerCaptionKind = kind ?: "human"
-            CaptionCache.byVideo[id] = cues
+            CaptionCache.byVideo["${language.code}:$id"] = cues
             update { it.copy(captions = cues, captionStatus = CaptionStatus.READY) }
         }
     }
     fun cancelCaptions() { captionRequest++; captionJob?.cancel(); captionJob = null }
 
     fun sentence(value: String) {
-        state.value.videoId?.let { ShadowingSentences.byVideo[it] = value }
+        state.value.videoId?.let { ShadowingSentences.byVideo["${language.code}:$it"] = value }
         update { it.copy(sentence = value) }
     }
     fun message(value: String) = update { it.copy(message = value) }
@@ -191,7 +193,7 @@ class ShadowingViewModel(app: Application, private val whisper: UserWhisper, pri
                 update { it.copy(result = answer, diff = diff, matchRate = rate, message = null) }
                 val videoId = state.value.videoId
                 if (rate != null && videoId != null) {
-                    runCatching { history?.insert(ShadowingAttemptEntity(videoId = videoId, sentence = reference, heard = answer, matchRate = rate, createdAt = System.currentTimeMillis())) }
+                    runCatching { history?.insert(ShadowingAttemptEntity(language = language.code, videoId = videoId, sentence = reference, heard = answer, matchRate = rate, createdAt = System.currentTimeMillis())) }
                     refreshPractice()
                 }
             } catch (e: Exception) {

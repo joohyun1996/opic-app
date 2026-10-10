@@ -5,10 +5,10 @@ import kotlinx.serialization.json.*
 data class CaptionTrack(val baseUrl: String, val languageCode: String, val kind: String? = null)
 data class Cue(val startMs: Long, val endMs: Long, val text: String)
 
-fun pickTrack(tracks: List<CaptionTrack>): CaptionTrack? =
-    tracks.firstOrNull { it.kind != "asr" && it.languageCode == "en" }
-        ?: tracks.firstOrNull { it.kind != "asr" && it.languageCode.startsWith("en-") }
-        ?: tracks.firstOrNull { it.kind == "asr" && it.languageCode == "en" }
+fun pickTrack(tracks: List<CaptionTrack>, language: String = StudyLanguages.EN.code): CaptionTrack? =
+    tracks.firstOrNull { it.kind != "asr" && it.languageCode == language }
+        ?: tracks.firstOrNull { it.kind != "asr" && it.languageCode.startsWith("$language-") }
+        ?: tracks.firstOrNull { it.kind == "asr" && it.languageCode == language }
 
 /** 문자열 안의 괄호·이스케이프를 건너뛰고 JSON 배열의 끝을 찾는다. */
 fun extractCaptionTracks(html: String): List<CaptionTrack> = runCatching {

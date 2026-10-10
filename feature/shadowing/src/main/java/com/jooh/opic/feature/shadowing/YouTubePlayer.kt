@@ -37,12 +37,12 @@ class YouTubePlayer(private val web: WebView) {
 
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
-fun PlayerView(id: String, modifier: Modifier = Modifier, onPlayer: (YouTubePlayer) -> Unit,
+fun PlayerView(id: String, language: String, modifier: Modifier = Modifier, onPlayer: (YouTubePlayer) -> Unit,
                onTime: (Double) -> Unit, onError: (Int) -> Unit, onReady: () -> Unit,
                onState: (Int) -> Unit, onCaptions: (List<com.jooh.opic.core.common.Cue>, String?) -> Unit) {
     val nonce = remember(id) { UUID.randomUUID().toString() }
-    val captionClient = remember(id) { CaptionClient() }
-    val html = remember(id) { """
+    val captionClient = remember(id, language) { CaptionClient(language) }
+    val html = remember(id, language) { """
         <!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head>
         <body style="margin:0;background:black"><div id="player"></div>
         <script>
@@ -59,7 +59,7 @@ fun PlayerView(id: String, modifier: Modifier = Modifier, onPlayer: (YouTubePlay
         var primed=false, priming=false;
         function onYouTubeIframeAPIReady() {
           player = new YT.Player('player', {height:Math.max(1,window.innerHeight),width:Math.max(1,window.innerWidth),videoId:${JSONObject.quote(id)},
-            playerVars:{playsinline:1,origin:'https://appassets.androidplatform.net',cc_load_policy:1,cc_lang_pref:'en'},
+            playerVars:{playsinline:1,origin:'https://appassets.androidplatform.net',cc_load_policy:1,cc_lang_pref:${JSONObject.quote(language)}},
             events:{onReady:function(){sizePlayer();OpicPlayer.ready(${JSONObject.quote(nonce)});
                 // 플레이어는 재생을 시작해야 자막을 요청한다 → 소리 끄고 잠깐 재생했다가 첫 재생 신호에 0초로 멈춘다 (TASK 23, 한 번만)
                 if(!primed){primed=true;priming=true;player.mute();player.playVideo();setTimeout(function(){if(priming){priming=false;player.pauseVideo();player.seekTo(0,true);player.unMute();}},5000);}},

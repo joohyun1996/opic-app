@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import com.jooh.opic.core.common.WORDS_PER_DAY
+import com.jooh.opic.core.common.StudyLanguage
+import com.jooh.opic.core.common.StudyLanguages
 import com.jooh.opic.core.common.seqRange
 import com.jooh.opic.core.common.totalDays
 import java.io.File
@@ -131,6 +133,13 @@ class WordImporterTest {
         assertTrue(stream.consumed < bytes.size)
         assertEquals(before, dao.find("en", "alpha"))
         assertEquals(progress, db.userWordDao().get(before.id))
+    }
+
+    @Test fun addedLanguageCanBeImportedFromConfiguredList() = runBlocking {
+        val extra = StudyLanguage("xx", "시험 언어", "시험")
+        val configured = WordImporter(db, StudyLanguages.all + extra)
+        assertEquals(ImportResult.Imported(1, 1), configured.importWords(file(1, word("sample", language = extra.code))))
+        assertEquals(1, dao.countByLanguage(extra.code))
     }
 
     @Test fun correctionTurnsLastWrongIntoCorrect() = runBlocking {

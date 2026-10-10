@@ -5,6 +5,7 @@ import com.jooh.opic.core.common.extractCaptionTracks
 import com.jooh.opic.core.common.mergeSentences
 import com.jooh.opic.core.common.parseJson3
 import com.jooh.opic.core.common.pickTrack
+import com.jooh.opic.core.common.StudyLanguages
 import kotlinx.coroutines.*
 import org.json.JSONObject
 import java.net.HttpURLConnection
@@ -16,7 +17,7 @@ import java.net.URLDecoder
 internal data class CaptionRequest(val jsonUrl: String, val kind: String?)
 
 /** 플레이어가 실제로 요청한 영어 자막 주소만 허용한다. */
-internal fun captionRequest(address: String): CaptionRequest? = runCatching {
+internal fun captionRequest(address: String, language: String = StudyLanguages.EN.code): CaptionRequest? = runCatching {
     val uri = URI(address)
     if (uri.scheme != "https" || uri.host !in setOf("www.youtube.com", "youtube.com") ||
         uri.userInfo != null || uri.port !in listOf(-1, 443) || uri.path != "/api/timedtext") return null
@@ -26,7 +27,7 @@ internal fun captionRequest(address: String): CaptionRequest? = runCatching {
     }.orEmpty()
     // en·en-GB·en-US 등 영어 변형 모두 (BBC는 en-GB — TASK 23)
     val lang = query.firstOrNull { it.first == "lang" }?.second ?: return null
-    if (lang != "en" && !lang.startsWith("en-")) return null
+    if (lang != language && !lang.startsWith("$language-")) return null
     val kind = query.firstOrNull { it.first == "kind" }?.second
     if (kind != null && kind != "asr") return null
     val withoutFmt = uri.rawQuery?.split('&')?.filterNot { it.substringBefore('=') == "fmt" }.orEmpty()
@@ -37,9 +38,9 @@ internal fun captionRequest(address: String): CaptionRequest? = runCatching {
 internal data class InterceptedCaption(val body: ByteArray, val cues: List<Cue>, val kind: String?)
 
 /** 쿠키·계정·학습 정보 없이 공개 페이지와 선택한 자막만 요청한다. */
-class CaptionClient {
+class CaptionClient(private val language: String) {
     internal fun intercept(address: String): InterceptedCaption? {
-        val request = captionRequest(address) ?: return null
+        val request = captionRequest(address, language) ?: return null
         return runCatching {
             val body = runBlocking(Dispatchers.IO) { get(request.jsonUrl, captionsOnly = true) }
             if (!JSONObject(body).has("events")) return null
@@ -51,7 +52,7 @@ class CaptionClient {
     suspend fun fetch(videoId: String): List<Cue> = withContext(Dispatchers.IO) {
         require(videoId.matches(Regex("[A-Za-z0-9_-]{11}")))
         val html = get("https://www.youtube.com/watch?v=$videoId", captionsOnly = false)
-        val track = pickTrack(extractCaptionTracks(html)) ?: return@withContext emptyList()
+        val track = pickTrack(extractCaptionTracks(html), language) ?: return@withContext emptyList()
         val uri = URI(track.baseUrl)
         require(uri.path == "/api/timedtext") { "자막 주소가 아닙니다" }
         val url = track.baseUrl.substringBefore('#') + if (uri.rawQuery == null) "?fmt=json3" else "&fmt=json3"
@@ -75,7 +76,7 @@ class CaptionClient {
             connection.readTimeout = 10_000
             connection.useCaches = false
             connection.setRequestProperty("User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36")
-            connection.setRequestProperty("Accept-Language", "en-US,en;q=0.9")
+            connection.setRequestProperty("Accept-Language", if (language == StudyLanguages.EN.code) "en-US,en;q=0.9" else language)
             connection.setRequestProperty("Accept", if (captionsOnly) "application/json" else "text/html")
             val watcher = CoroutineScope(currentCoroutineContext()).launch(Dispatchers.IO, start = CoroutineStart.UNDISPATCHED) {
                 try { awaitCancellation() } finally { connection.disconnect() }

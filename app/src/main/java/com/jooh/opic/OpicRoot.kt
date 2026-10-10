@@ -30,7 +30,6 @@ import com.jooh.opic.feature.grammar.GrammarFlow
 import com.jooh.opic.feature.analysis.StatsData
 import com.jooh.opic.feature.analysis.StatsScreen
 import com.jooh.opic.feature.analysis.loadStats
-import com.jooh.opic.core.common.StudyLanguages
 import com.jooh.opic.feature.grammar.GrammarExplanationScreen
 import com.jooh.opic.core.correction.GrammarLink
 import com.jooh.opic.core.correction.LocalGrammarLink
@@ -148,7 +147,7 @@ fun OpicRoot(app: OpicApplication) {
                     navigation(startDestination = "home", route = Tab.HOME.route) {
                         composable("home") {
                             // 홈에 들어올 때마다 실제 데이터를 다시 센다
-                            val words: WordsViewModel = viewModel(factory = remember(app) { WordsViewModel.Factory(app.database) })
+                            val words: WordsViewModel = viewModel(factory = remember(app) { WordsViewModel.Factory(app.database, app.currentLanguage) })
                             val wordState by words.state.collectAsState()
                             var grammarDue by remember { mutableStateOf(0) }
                             var recentVideo by remember { mutableStateOf<String?>(null) }
@@ -158,7 +157,7 @@ fun OpicRoot(app: OpicApplication) {
                                 grammarDue = runCatching { app.grammarReviews.dueExercises(book).size }.getOrDefault(0)
                             }
                             LaunchedEffect(Unit) {
-                                val id = runCatching { app.database.shadowingAttemptDao().recentVideos("en", 1).firstOrNull()?.videoId }.getOrNull()
+                                val id = runCatching { app.database.shadowingAttemptDao().recentVideos(app.currentLanguage.code, 1).firstOrNull()?.videoId }.getOrNull()
                                 recentVideo = app.shadowingVideos.firstOrNull { it.id == id }?.title
                             }
                             val next = wordState.days.firstOrNull { it.total > 0 && it.mastered < it.total }
@@ -169,18 +168,18 @@ fun OpicRoot(app: OpicApplication) {
                         }
                     }
                     navigation(startDestination = "days", route = Tab.WORDS.route) {
-                        composable("days") { TabRoot(openMenu) { WordsApp(app.database, importResult, speaker, WordsPage.DAYS, grammarCount, navigate = navigate, onBack = back) } }
+                        composable("days") { TabRoot(openMenu) { WordsApp(app.database, app.currentLanguage, importResult, speaker, WordsPage.DAYS, grammarCount, navigate = navigate, onBack = back) } }
                         composable("day/{day}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
-                            WordsApp(app.database, importResult, speaker, WordsPage.DAY, grammarCount,
+                            WordsApp(app.database, app.currentLanguage, importResult, speaker, WordsPage.DAY, grammarCount,
                                 day = entry.arguments?.getInt("day") ?: 1, navigate = navigate, onBack = back)
                         }
                         composable("study/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
-                            WordsApp(app.database, importResult, speaker, WordsPage.STUDY, grammarCount,
+                            WordsApp(app.database, app.currentLanguage, importResult, speaker, WordsPage.STUDY, grammarCount,
                                 day = entry.arguments?.getInt("day") ?: 1, mode = entry.arguments?.getString("mode"), navigate = navigate, onBack = back)
                         }
-                        composable("wrong") { WordsApp(app.database, importResult, speaker, WordsPage.WRONG, grammarCount, navigate = navigate, onBack = back) }
+                        composable("wrong") { WordsApp(app.database, app.currentLanguage, importResult, speaker, WordsPage.WRONG, grammarCount, navigate = navigate, onBack = back) }
                         composable("study/wrong/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
-                            WordsApp(app.database, importResult, speaker, WordsPage.WRONG_STUDY, grammarCount,
+                            WordsApp(app.database, app.currentLanguage, importResult, speaker, WordsPage.WRONG_STUDY, grammarCount,
                                 day = entry.arguments?.getInt("day") ?: 0, mode = entry.arguments?.getString("mode"), navigate = navigate, onBack = back)
                         }
                     }
@@ -206,7 +205,7 @@ fun OpicRoot(app: OpicApplication) {
                             val model: ShadowingViewModel = viewModel(factory = remember(app) { object : ViewModelProvider.Factory {
                                 @Suppress("UNCHECKED_CAST")
                                 override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
-                                    ShadowingViewModel(app, app.whisper, app::releaseGemmaBeforeWhisper, app.database.shadowingAttemptDao()) as T
+                                    ShadowingViewModel(app, app.whisper, app::releaseGemmaBeforeWhisper, app.currentLanguage, app.database.shadowingAttemptDao()) as T
                             } })
                             TabRoot(openMenu) {
                                 Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
@@ -224,7 +223,7 @@ fun OpicRoot(app: OpicApplication) {
                                 val model: SpeakingViewModel = viewModel(factory = remember(app, loaded) { object : ViewModelProvider.Factory {
                                     @Suppress("UNCHECKED_CAST")
                                     override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
-                                        SpeakingViewModel(app, catalog, app.whisper, app::releaseGemmaBeforeWhisper, speaker::speak, speaker::stop,
+                                        SpeakingViewModel(app, app.currentLanguage, catalog, app.whisper, app::releaseGemmaBeforeWhisper, speaker::speak, speaker::stop,
                                             { app.llmEngine }, app.hfTokenStore, { ModelCatalog.isDownloaded(app) },
                                             ModelCatalog.config(app).models.first().expectedBytes, app.database.speakingDao(), loaded.templates) as T
                                 } })
@@ -239,7 +238,7 @@ fun OpicRoot(app: OpicApplication) {
                     }
                     composable("stats") {
                         val stats by produceState<StatsData?>(null) {
-                            value = runCatching { loadStats(app.database, StudyLanguages.EN.code, java.time.LocalDate.now().toEpochDay()) }.getOrNull()
+                            value = runCatching { loadStats(app.database, app.currentLanguage.code, java.time.LocalDate.now().toEpochDay()) }.getOrNull()
                         }
                         val titles = remember(grammarResult) { (grammarResult as? GrammarLoadResult.Loaded)?.book?.units.orEmpty().associate { u ->
                             u.id to if (u.track == "core") "실전 ${u.order}장 ${u.title.substringBefore(" — ")}" else "OPIc ${u.order}단원 ${u.title}" }
@@ -262,7 +261,7 @@ fun OpicRoot(app: OpicApplication) {
                             if (hour == null || ReminderSettings.canNotify(app)) { ReminderSettings.set(app, hour); reminderHour = hour }
                             else { pendingHour = hour; permission.launch(android.Manifest.permission.POST_NOTIFICATIONS) }
                         }
-                        val words: WordsViewModel = viewModel(factory = remember(app) { WordsViewModel.Factory(app.database) })
+                        val words: WordsViewModel = viewModel(factory = remember(app) { WordsViewModel.Factory(app.database, app.currentLanguage) })
                         val wordState by words.state.collectAsState()
                         LaunchedEffect(Unit) { words.refresh() }
                         MenuScreen(

@@ -33,6 +33,7 @@ import com.jooh.opic.core.llm.OnDeviceLlmEngine
 import com.jooh.opic.core.stt.PcmPlayer
 import com.jooh.opic.core.common.SpeakingMetrics
 import com.jooh.opic.core.common.SpeakingQuestion
+import com.jooh.opic.core.common.StudyLanguage
 import com.jooh.opic.core.common.cleanWhisperText
 import com.jooh.opic.core.common.recordingTooShort
 import com.jooh.opic.core.common.speakingMetrics
@@ -110,6 +111,7 @@ data class SpeakingState(
 
 class SpeakingViewModel(
     app: Application,
+    private val language: StudyLanguage,
     val catalog: SpeakingCatalog?,
     private val whisper: UserWhisper,
     private val beforeLoad: () -> Unit,
@@ -128,7 +130,6 @@ class SpeakingViewModel(
     private var correctionJob: Job? = null
     private var preparation: Job? = null
     private val mutable = MutableStateFlow(SpeakingState())
-    private companion object { const val LANGUAGE = "en" }
     val state = mutable.asStateFlow()
     private val defaultFile = File(app.filesDir, "speaking-last.pcm")
     /** 지금 결과 화면의 녹음 (모의고사 답변이면 mock-NN.pcm). */
@@ -185,13 +186,13 @@ class SpeakingViewModel(
     private fun loadPast(questionId: String, exclude: Long?) {
         val dao = history ?: return
         viewModelScope.launch {
-            val past = runCatching { dao.byQuestion(LANGUAGE, questionId) }.getOrDefault(emptyList()).filter { it.id != exclude }
+            val past = runCatching { dao.byQuestion(language.code, questionId) }.getOrDefault(emptyList()).filter { it.id != exclude }
             mutable.update { if (it.question?.id != questionId) it else it.copy(pastCount = past.size, lastPast = past.firstOrNull()) }
         }
     }
 
     private suspend fun save(questionId: String, topicId: String, durationMs: Long, transcript: String, words: List<EditableWord>, metrics: SpeakingMetrics, mockId: Long?): Long? =
-        history?.let { dao -> runCatching { dao.insert(SpeakingAnswerEntity(language = LANGUAGE, questionId = questionId, topicId = topicId,
+        history?.let { dao -> runCatching { dao.insert(SpeakingAnswerEntity(language = language.code, questionId = questionId, topicId = topicId,
             createdAt = System.currentTimeMillis(), durationMs = durationMs, transcript = transcript, editedText = editedText(words),
             wordCount = metrics.wordCount, wordsPerMinute = metrics.wordsPerMinute, fillerCount = metrics.fillerCount,
             sentenceCount = metrics.sentenceCount, mockId = mockId)) }.getOrNull() }
@@ -201,8 +202,8 @@ class SpeakingViewModel(
         mutable.update { SpeakingState(page = SpeakingPage.HISTORY, model = it.model, hasToken = it.hasToken) }
         val dao = history ?: return
         viewModelScope.launch {
-            val answers = runCatching { dao.recent(LANGUAGE) }.getOrDefault(emptyList())
-            val mocks = runCatching { dao.mockSummaries(LANGUAGE) }.getOrDefault(emptyList())
+            val answers = runCatching { dao.recent(language.code) }.getOrDefault(emptyList())
+            val mocks = runCatching { dao.mockSummaries(language.code) }.getOrDefault(emptyList())
             mutable.update { it.copy(historyAnswers = answers, historyMocks = mocks) }
         }
     }
@@ -376,7 +377,7 @@ class SpeakingViewModel(
         val s = state.value
         val id = s.savedId ?: return
         val m = s.metrics ?: return
-        viewModelScope.launch { runCatching { history?.updateEdit(LANGUAGE, id, editedText(s.words), m.wordCount, m.wordsPerMinute, m.fillerCount, m.sentenceCount) } }
+        viewModelScope.launch { runCatching { history?.updateEdit(language.code, id, editedText(s.words), m.wordCount, m.wordsPerMinute, m.fillerCount, m.sentenceCount) } }
     }
     fun replaceWord(index: Int, text: String) = edit { it.replaceAt(index, text) }
     fun deleteWord(index: Int) = edit { it.deleteAt(index) }

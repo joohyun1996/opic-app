@@ -32,9 +32,9 @@ class BackupTest {
             val apple = source.wordDao().find("en", "apple")!!
             source.userWordDao().insert(UserWordEntity(apple.id, 3, 1, 500))
             source.grammarReviewDao().recordPractice("en", "u1-04", "present", today = 100, now = 50)
-            source.speakingDao().insert(SpeakingAnswerEntity(questionId = "home-1", topicId = "home", createdAt = 10, durationMs = 60_000,
+            source.speakingDao().insert(SpeakingAnswerEntity(language = "en", questionId = "home-1", topicId = "home", createdAt = 10, durationMs = 60_000,
                 transcript = "t", editedText = "e", wordCount = 1, wordsPerMinute = 1, fillerCount = 0, sentenceCount = 1, mockId = 9))
-            source.shadowingAttemptDao().insert(ShadowingAttemptEntity(videoId = "aircAruvnKk", sentence = "s", heard = "h", matchRate = 0.5, createdAt = 5))
+            source.shadowingAttemptDao().insert(ShadowingAttemptEntity(language = "en", videoId = "aircAruvnKk", sentence = "s", heard = "h", matchRate = 0.5, createdAt = 5))
             val raw = BackupManager(source).export(now = 1)
 
             val first = BackupManager(target).restore(raw)!!

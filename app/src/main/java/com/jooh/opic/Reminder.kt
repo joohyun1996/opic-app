@@ -14,7 +14,7 @@ import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
-import com.jooh.opic.core.common.StudyLanguages
+import com.jooh.opic.core.common.WORDS_PER_DAY
 import com.jooh.opic.core.common.nextReminderAt
 import com.jooh.opic.core.common.reminderText
 import com.jooh.opic.feature.analysis.loadStats
@@ -57,8 +57,8 @@ class ReminderWorker(context: Context, params: WorkerParameters) : CoroutineWork
         val hour = ReminderSettings.hour(app) ?: return Result.success()
         runCatching {
             val today = LocalDate.now().toEpochDay()
-            val stats = loadStats(app.database, StudyLanguages.EN.code, today)
-            val nextDay = app.database.wordDao().dayStats(StudyLanguages.EN.code, 40).firstOrNull { it.mastered < it.total }?.day
+            val stats = loadStats(app.database, app.currentLanguage.code, today)
+            val nextDay = app.database.wordDao().dayStats(app.currentLanguage.code, WORDS_PER_DAY).firstOrNull { it.mastered < it.total }?.day
             reminderText(stats.week.last().count > 0, nextDay, stats.grammarDue)?.let { notify(app, it) }
         }
         ReminderSettings.schedule(app, hour, afterCurrent = true)

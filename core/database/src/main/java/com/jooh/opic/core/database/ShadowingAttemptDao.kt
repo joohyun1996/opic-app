@@ -26,4 +26,7 @@ interface ShadowingAttemptDao {
 
     @Query("SELECT AVG(matchRate) FROM shadowing_attempts WHERE language = :language")
     suspend fun averageMatch(language: String): Double?
+
+    @Query("DELETE FROM shadowing_attempts WHERE language = :language AND id IN (:ids)")
+    suspend fun deleteRecords(language: String, ids: List<Long>): Int
 }

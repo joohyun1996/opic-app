@@ -17,6 +17,8 @@ import com.jooh.opic.core.llm.ModelCatalog
 import com.jooh.opic.feature.grammar.GrammarFlow
 import com.jooh.opic.feature.analysis.StatsData
 import com.jooh.opic.feature.analysis.StatsScreen
+import com.jooh.opic.feature.analysis.RecordLabels
+import com.jooh.opic.feature.analysis.RecordsScreen
 import com.jooh.opic.feature.analysis.loadStats
 import com.jooh.opic.feature.grammar.GrammarExplanationScreen
 import com.jooh.opic.core.correction.GrammarLink
@@ -94,7 +96,7 @@ fun OpicRoot(app: OpicApplication) {
         val entry by nav.currentBackStackEntryAsState()
         val destination = entry?.destination
         Scaffold(containerColor = MaterialTheme.colorScheme.background, bottomBar = {
-            if (destination?.route != "menu" && destination?.route != "stats") NavigationBar(containerColor = MaterialTheme.colorScheme.surfaceContainerLowest, tonalElevation = 0.dp) {
+            if (destination?.route != "menu" && destination?.route != "stats" && destination?.route != "records") NavigationBar(containerColor = MaterialTheme.colorScheme.surfaceContainerLowest, tonalElevation = 0.dp) {
                 Tab.entries.forEach { tab ->
                     val selected = destination?.hierarchy?.any { it.route == tab.route } == true
                     NavigationBarItem(selected = selected, onClick = { openTab(tab) }, icon = { Icon(tab.icon, contentDescription = null) },
@@ -223,6 +225,18 @@ fun OpicRoot(app: OpicApplication) {
                         }
                         Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
                             Box(Modifier.widthIn(max = 430.dp)) { StatsScreen(stats, { titles[it] ?: it }, back) }
+                        }
+                    }
+                    composable("records") {
+                        val speakingLoad by app.speakingCatalog.collectAsState()
+                        val labels = remember(grammarResult, speakingLoad) {
+                            val units = (grammarResult as? GrammarLoadResult.Loaded)?.book?.units.orEmpty().associateBy { it.id }
+                            val questions = speakingLoad?.catalog?.topics.orEmpty().flatMap { it.questions }.associate { it.id to it.en }
+                            val videos = app.shadowingVideos.associate { it.id to it.title }
+                            RecordLabels({ units[it]?.displayTitle() ?: it }, { questions[it] ?: it }, { videos[it] ?: it })
+                        }
+                        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
+                            Box(Modifier.widthIn(max = 430.dp)) { RecordsScreen(app.database, app.currentLanguage.code, labels, back) }
                         }
                     }
                     composable("menu") {

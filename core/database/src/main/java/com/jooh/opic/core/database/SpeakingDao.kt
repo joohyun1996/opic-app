@@ -36,4 +36,7 @@ interface SpeakingDao {
 
     @Query("SELECT wordsPerMinute, fillerCount FROM speaking_answers WHERE language = :language ORDER BY createdAt DESC LIMIT :limit")
     suspend fun recentPace(language: String, limit: Int = 10): List<PaceRow>
+
+    @Query("DELETE FROM speaking_answers WHERE language = :language AND id IN (:ids)")
+    suspend fun deleteRecords(language: String, ids: List<Long>): Int
 }

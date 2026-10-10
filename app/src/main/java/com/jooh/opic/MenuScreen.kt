@@ -19,7 +19,7 @@ import com.jooh.opic.feature.words.WordsViewModel
 @Composable
 fun MenuScreen(
     wrongCount: Int, gemmaStatus: String, whisperStatus: String, themeMode: ThemeMode, speechRate: Float, version: String,
-    onClose: () -> Unit, onWrong: () -> Unit, onStats: () -> Unit, onSpeakingHistory: () -> Unit, onModels: () -> Unit,
+    onClose: () -> Unit, onWrong: () -> Unit, onStats: () -> Unit, onRecords: () -> Unit, onSpeakingHistory: () -> Unit, onModels: () -> Unit,
     onTheme: (ThemeMode) -> Unit, onSpeechRate: (Float) -> Unit, onBackup: () -> Unit,
     reminderHour: Int? = null, onReminder: (Int?) -> Unit = {},
 ) {
@@ -43,6 +43,7 @@ fun MenuScreen(
         }
         MenuSection("데이터") {
             MenuRow("학습 기록 백업·복원", "단어·문법·스피킹·섀도잉", onBackup, divider = false)
+            MenuRow("학습 기록 관리", "골라서 지우기", onRecords)
         }
         Text("앱 정보 · v$version", Modifier.fillMaxWidth().padding(12.dp), style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant)
@@ -115,7 +116,7 @@ internal fun MenuRoute(app: OpicApplication, themeMode: ThemeMode, speechRate: F
                 wrongCount = wordState.wrong,
                 gemmaStatus = gemmaStatus(app), whisperStatus = if (SttModels.isDownloaded(app.whisper.model)) "받음" else "없음",
                 themeMode = themeMode, speechRate = speechRate, version = BuildConfig.VERSION_NAME,
-                onClose = onClose, onWrong = { navigate("wrong") }, onStats = { navigate("stats") },
+                onClose = onClose, onWrong = { navigate("wrong") }, onStats = { navigate("stats") }, onRecords = { navigate("records") },
                 reminderHour = reminderHour, onReminder = onReminder,
                 onSpeakingHistory = onSpeakingHistory,
                 onModels = onModels,

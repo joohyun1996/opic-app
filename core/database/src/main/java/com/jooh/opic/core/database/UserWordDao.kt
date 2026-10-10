@@ -55,4 +55,11 @@ interface UserWordDao {
 
     @Query("SELECT w.word AS name, u.wrongCount AS count FROM user_words u JOIN words w ON w.id = u.wordId WHERE w.language = :language AND u.wrongCount > 0 ORDER BY u.wrongCount DESC, w.word LIMIT :limit")
     suspend fun mostWrong(language: String, limit: Int = 5): List<KeyCount>
+
+    // ---- 학습 기록 관리 (사용자가 골라서 삭제, 2026-10-10). 단어 자체(words)는 건드리지 않는다 ----
+    @Query("SELECT u.wordId AS id, w.word AS word, w.meaningKo AS meaningKo, u.correctCount AS correctCount, u.wrongCount AS wrongCount, u.lastStudiedAt AS lastStudiedAt FROM user_words u JOIN words w ON w.id = u.wordId WHERE w.language = :language ORDER BY u.lastStudiedAt DESC, w.seq")
+    suspend fun records(language: String): List<WordRecordRow>
+
+    @Query("DELETE FROM user_words WHERE wordId IN (:wordIds) AND wordId IN (SELECT id FROM words WHERE language = :language)")
+    suspend fun deleteRecords(language: String, wordIds: List<Long>): Int
 }

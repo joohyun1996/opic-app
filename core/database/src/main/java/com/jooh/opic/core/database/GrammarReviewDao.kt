@@ -58,4 +58,7 @@ interface GrammarReviewDao {
 
     @Query("SELECT COUNT(*) FROM grammar_reviews WHERE language = :language AND dueEpochDay <= :today")
     suspend fun dueCount(language: String, today: Long): Int
+
+    @Query("DELETE FROM grammar_reviews WHERE language = :language AND exerciseId IN (:exerciseIds)")
+    suspend fun deleteRecords(language: String, exerciseIds: List<String>): Int
 }

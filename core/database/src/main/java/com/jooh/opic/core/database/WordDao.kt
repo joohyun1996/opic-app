@@ -96,5 +96,6 @@ data class PaceRow(val wordsPerMinute: Int, val fillerCount: Int)
 data class DayStats(val day: Int, val total: Int, val mastered: Int, val wrong: Int)
 
 /** 학습 기록이 없으면 correctCount·wrongCount가 null (= 신규). */
+data class WordRecordRow(val id: Long, val word: String, val meaningKo: String, val correctCount: Int, val wrongCount: Int, val lastStudiedAt: Long?)
 data class ReviewCandidate(@Embedded val word: WordEntity, val correctCount: Int, val lastStudiedAt: Long)
 data class WordWithProgress(@Embedded val word: WordEntity, val correctCount: Int?, val wrongCount: Int?)

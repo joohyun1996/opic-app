@@ -63,10 +63,10 @@ class GrammarWritingViewModel(
             mutableState.update { it.copy(page = WritingPage.EDITOR) }
     }
 
-    fun saveToken(token: String) {
-        if (token.isBlank()) return
-        tokenStore.setToken(token)
+    fun saveToken(token: String): Boolean {
+        if (token.isBlank() || !tokenStore.setToken(token)) return false
         mutableState.update { it.copy(hasToken = true) }
+        return true
     }
 
     fun download() {

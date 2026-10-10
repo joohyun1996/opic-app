@@ -20,7 +20,7 @@ fun LlmPreparationScreen(
     hasToken: Boolean,
     modelDownloaded: Boolean,
     modelBytes: Long,
-    onSaveToken: (String) -> Unit,
+    onSaveToken: (String) -> Boolean,
     onDownload: () -> Unit,
     onContinue: () -> Unit,
     onBack: () -> Unit,
@@ -28,6 +28,7 @@ fun LlmPreparationScreen(
     continueLabel: String = "쓰기 시작",
 ) {
     var token by remember { mutableStateOf("") }
+    var tokenSaveFailed by remember { mutableStateOf(false) }
     val context = LocalContext.current
     // 공용 폴더(Develop/Core/llm)의 모델을 여러 앱이 같이 쓴다 (ADR 002) — "모든 파일 접근"을 허용하고 돌아오면 바로 불러온다
     var hasAccess by remember { mutableStateOf(SharedModel.hasAccess()) }
@@ -78,7 +79,11 @@ fun LlmPreparationScreen(
                 Text(if (hasToken) "Hugging Face 토큰 저장됨" else "Hugging Face 토큰을 입력하세요")
                 OutlinedTextField(value = token, onValueChange = { token = it }, visualTransformation = PasswordVisualTransformation(),
                     label = { Text("Hugging Face 토큰") }, modifier = Modifier.fillMaxWidth(), singleLine = true)
-                if (token.isNotBlank()) Button(onClick = { onSaveToken(token); token = "" }) { Text("토큰 저장") }
+                if (token.isNotBlank()) Button(onClick = {
+                    tokenSaveFailed = !onSaveToken(token)
+                    if (!tokenSaveFailed) token = ""
+                }) { Text("토큰 저장") }
+                if (tokenSaveFailed) Text("토큰 저장소를 열 수 없습니다. 앱을 다시 실행한 뒤 재시도해 주세요.")
             }
             Button(onClick = onDownload, enabled = modelDownloaded || hasToken,
                 modifier = Modifier.fillMaxWidth()) { Text(if (modelDownloaded) "다시 불러오기" else "다운로드") }

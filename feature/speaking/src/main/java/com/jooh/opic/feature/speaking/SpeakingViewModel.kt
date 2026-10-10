@@ -401,7 +401,11 @@ class SpeakingViewModel(
         }
     }
     fun closeCorrection() { cancelCorrection(); mutable.update { it.copy(correctionOpen = false) } }
-    fun saveToken(token: String) { tokenStore.setToken(token); mutable.update { it.copy(hasToken = true) } }
+    fun saveToken(token: String): Boolean {
+        if (token.isBlank() || !tokenStore.setToken(token)) return false
+        mutable.update { it.copy(hasToken = true) }
+        return true
+    }
     fun prepareLlm() {
         val engine = mutableLlm.value ?: return
         if (preparation?.isActive == true) return

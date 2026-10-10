@@ -6065,6 +6065,20 @@
         "ko": "방이 충분히 크지 않다."
        }
       ]
+     },
+     {
+      "title": "형용사 여러 개의 순서",
+      "body": "의견 → 크기 → 나이 → 모양 → 색 → 출신 → 재료 → 명사. 보통 두세 개까지만 쓴다.",
+      "examples": [
+       {
+        "en": "a nice little café",
+        "ko": "작고 멋진 카페"
+       },
+       {
+        "en": "a beautiful old wooden house",
+        "ko": "아름답고 오래된 목조 주택"
+       }
+      ]
      }
     ],
     "table": [
@@ -6188,6 +6202,24 @@
        }
       ],
       "note": "빈도부사는 일반동사 앞"
+     },
+     {
+      "sentence": "It was such a relaxing weekend.",
+      "parts": [
+       {
+        "text": "It",
+        "role": "S"
+       },
+       {
+        "text": "was",
+        "role": "V"
+       },
+       {
+        "text": "such a relaxing weekend.",
+        "role": "C"
+       }
+      ],
+      "note": "such a + 형용사 + 명사 = 보어"
      }
     ],
     "commonMistakes": [
@@ -6333,6 +6365,30 @@
       "night."
      ],
      "answer": 4
+    },
+    {
+     "id": "c15-09",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I can ___ hear you. Can you speak up?",
+     "hint": "'거의 ~않다'",
+     "explanation": "hardly = 거의 ~않다 (hard = 열심히)",
+     "choices": [
+      "hard",
+      "hardly"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c15-10",
+     "kind": "fix",
+     "prompt": "enough의 자리를 바르게 고치세요",
+     "sentence": "This bag isn't enough big for my laptop.",
+     "hint": "형용사 + enough",
+     "explanation": "big enough",
+     "answers": [
+      "This bag isn't big enough for my laptop."
+     ]
     }
    ]
   },
@@ -6399,6 +6455,24 @@
        {
         "en": "It was the most beautiful place I've ever visited.",
         "ko": "내가 가 본 곳 중 가장 아름다웠다."
+       }
+      ]
+     },
+     {
+      "title": "배수와 비교급 관용 표현",
+      "body": "twice as ~ as(두 배), three times bigger than, getting + 비교급 and 비교급(점점 더), less + 원급(덜).",
+      "examples": [
+       {
+        "en": "Rent is twice as expensive as it was five years ago.",
+        "ko": "월세가 5년 전의 두 배다."
+       },
+       {
+        "en": "It's getting colder and colder.",
+        "ko": "점점 추워지고 있다."
+       },
+       {
+        "en": "I eat less meat than before.",
+        "ko": "예전보다 고기를 덜 먹는다."
        }
       ]
      }
@@ -6528,6 +6602,28 @@
        }
       ],
       "note": "the + 최상급 + in 범위"
+     },
+     {
+      "sentence": "The more I practice, the better I get.",
+      "parts": [
+       {
+        "text": "The more I practice,",
+        "role": "M"
+       },
+       {
+        "text": "the better",
+        "role": "C"
+       },
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "get.",
+        "role": "V"
+       }
+      ],
+      "note": "the 비교급 + 주어 + 동사, the 비교급 + 주어 + 동사"
      }
     ],
     "commonMistakes": [
@@ -6668,6 +6764,40 @@
       "worst"
      ],
      "answer": 1
+    },
+    {
+     "id": "c16-09",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "Prices are getting ___.",
+     "hint": "점점 더",
+     "explanation": "비교급 and 비교급",
+     "choices": [
+      "high and high",
+      "higher and higher",
+      "more high"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c16-10",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "She is the most smartest student in our class.",
+     "hint": "smartest가 이미 최상급",
+     "explanation": "most 빼기: the smartest",
+     "choices": [
+      "She",
+      "is",
+      "the",
+      "most",
+      "smartest",
+      "student",
+      "in",
+      "our",
+      "class."
+     ],
+     "answer": 3
     }
    ]
   },
@@ -6738,6 +6868,20 @@
        {
         "en": "If I won the lottery, I'd buy a house near the beach.",
         "ko": "복권에 당첨되면 바닷가 집을 사겠다."
+       }
+      ]
+     },
+     {
+      "title": "If를 쓰지 않는 가정",
+      "body": "Without ~ / If it weren't for ~(~이 없다면), What if ~?(~라면 어떡하지?), suppose. 말할 때 자주 쓴다.",
+      "examples": [
+       {
+        "en": "Without my phone, I'd be lost.",
+        "ko": "휴대폰이 없으면 난 길을 잃을 거야."
+       },
+       {
+        "en": "What if it rains on the wedding day?",
+        "ko": "결혼식 날 비가 오면 어떡하지?"
        }
       ]
      }
@@ -6867,6 +7011,24 @@
        }
       ],
       "note": "had p.p. → would have p.p. (과거 후회)"
+     },
+     {
+      "sentence": "I wish I could speak Chinese.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "wish",
+        "role": "V"
+       },
+       {
+        "text": "I could speak Chinese.",
+        "role": "O"
+       }
+      ],
+      "note": "I wish + 과거(could) = 지금 못 해서 아쉬움"
      }
     ],
     "commonMistakes": [
@@ -7014,6 +7176,31 @@
      "answers": [
       "have"
      ]
+    },
+    {
+     "id": "c17-09",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "What would you do if you ___ a million dollars?",
+     "hint": "주절이 would",
+     "explanation": "가정법 과거 → won",
+     "choices": [
+      "win",
+      "won",
+      "will win"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c17-10",
+     "kind": "fix",
+     "prompt": "과거 후회로 바르게 고치세요",
+     "sentence": "I wish I studied harder in high school.",
+     "hint": "이미 지난 일",
+     "explanation": "I wish + had p.p.",
+     "answers": [
+      "I wish I had studied harder in high school."
+     ]
     }
    ]
   },
@@ -7092,6 +7279,24 @@
        {
         "en": "I'm at home now.",
         "ko": "지금 집이야."
+       }
+      ]
+     },
+     {
+      "title": "관사 없이 쓰는 표현",
+      "body": "go to school / bed / work, by bus / car, have breakfast / lunch, play soccer(운동). 악기는 the: play the piano.",
+      "examples": [
+       {
+        "en": "I go to work by subway.",
+        "ko": "지하철로 출근한다."
+       },
+       {
+        "en": "I had lunch with my coworkers.",
+        "ko": "동료들과 점심을 먹었다."
+       },
+       {
+        "en": "I play the guitar on weekends.",
+        "ko": "주말에 기타를 친다."
        }
       ]
      }
@@ -7203,6 +7408,28 @@
        }
       ],
       "note": "at 지점, in 도시, 3인칭 -s"
+     },
+     {
+      "sentence": "There are a lot of cafés in my neighborhood.",
+      "parts": [
+       {
+        "text": "There",
+        "role": "M"
+       },
+       {
+        "text": "are",
+        "role": "V"
+       },
+       {
+        "text": "a lot of cafés",
+        "role": "S"
+       },
+       {
+        "text": "in my neighborhood.",
+        "role": "M"
+       }
+      ],
+      "note": "There + be는 뒤 명사(cafés, 복수)에 맞춤"
      }
     ],
     "commonMistakes": [
@@ -7352,6 +7579,39 @@
       "brother."
      ],
      "answer": 5
+    },
+    {
+     "id": "c18-09",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "There ___ many people at the beach.",
+     "hint": "뒤 명사가 복수",
+     "explanation": "were",
+     "choices": [
+      "was",
+      "were",
+      "is"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c18-10",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "I usually go to the bed at 11.",
+     "hint": "go to ___ bed",
+     "explanation": "관사 없이: go to bed",
+     "choices": [
+      "I",
+      "usually",
+      "go",
+      "to",
+      "the",
+      "bed",
+      "at",
+      "11."
+     ],
+     "answer": 4
     }
    ]
   }

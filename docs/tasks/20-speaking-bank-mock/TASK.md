@@ -35,10 +35,10 @@
 - `buildMockExam(catalog, random)`: 위 규칙. 조건에 맞는 주제가 없으면 null
 
 ## 수용 기준
-- [ ] AC1: 새 speaking.json 통과 — 140문항 이상, 기존 43개 id 모두 유지, category 4종·level 3종 모두 사용 (테스트)
-- [ ] AC2: 잘못된 category·level·type은 null (테스트)
-- [ ] AC3: `buildMockExam` — 15문항, 1번 intro, 2~4·5~7 서로 다른 survey 주제, 8~10 unexpected, 11~13 roleplay 한 주제 순서(ask, solve, experience), 14 compare, 15 issue, 같은 문항 중복 없음, 고정 seed로 결정적 (테스트)
-- [ ] AC4: `./gradlew test lint :app:assembleDebug :app:assembleRelease` 통과, 권한·Room 변경 없음
+- [x] AC1: 새 speaking.json 통과 — 140문항 이상, 기존 43개 id 모두 유지, category 4종·level 3종 모두 사용 (테스트)
+- [x] AC2: 잘못된 category·level·type은 null (테스트)
+- [x] AC3: `buildMockExam` — 15문항, 1번 intro, 2~4·5~7 서로 다른 survey 주제, 8~10 unexpected, 11~13 roleplay 한 주제 순서(ask, solve, experience), 14 compare, 15 issue, 같은 문항 중복 없음, 고정 seed로 결정적 (테스트)
+- [x] AC4: `./gradlew test lint :app:assembleDebug :app:assembleRelease` 통과, 권한·Room 변경 없음
 - [ ] AC5: 실기기 — 주제 목록 구역·등급 표시, 모의고사 2문항 녹음 후 "끝내기"로 요약까지 (사용자 확인)
 
 ## 범위 밖

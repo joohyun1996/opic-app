@@ -28,6 +28,7 @@
 | 2026-10-10 | v0.19.0 | 스피킹 탭: 질문 은행(15주제 43문항), TTS 질문·다시 듣기 1회, 2분 답변 녹음, Whisper 받아 적기(머뭇거림 유지 prompt), 즉시 지표 (TASK 17) |
 | 2026-10-10 | v0.20.0 | 스피킹 결과: 단어 눌러 구간 듣기·꾹 눌러 고치기, 고친 글로 Gemma 문법 교정(최대 15문장). 교정 코드 `core:correction`으로 이동 (TASK 18) |
 | 2026-10-10 | v0.21.0 | 발음 힌트 (스피킹·섀도잉): 불명확·다르게 들린 단어, 한국인 발음 팁 8종, 연음·약화·t 약화, 리듬 팁 (TASK 19) |
+| 2026-10-10 | v0.22.0 | 스피킹 문항 50주제 164문항(설문·돌발·롤플레이·IM/IH/AL), 모의고사 15문항 (TASK 20) |
 
 ## 인증
 ### POST /api/auth/login
@@ -282,6 +283,12 @@
 - B. 한국인 발음 팁 8종 (`core:common/Pronunciation.kt`): R/L, F≠P, V≠B, TH, Z≠J, 끝소리 '으' 금지, W 입술, 긴·짧은 '이' — 답변(스피킹은 고친 글, 섀도잉은 원문)에 나온 단어만, 많이 걸린 순 4개, 예시 4개
 - C. 연음(자음 끝 + 모음 시작, 4쌍), 약화(want to→wanna, going to→gonna, got to→gotta, kind of→kinda, a lot of→a lotta, have to→hafta), t 약화(모음 사이 t, 4개), 리듬 팁 고정 문구
 - 공용 화면 부품 모듈 `core:ui` (`PronunciationHintsCard`)
+
+### 문항 확대 + 모의고사 (2026-10-10, TASK 20)
+- `speaking.json` dataVersion 2: 50주제 164문항 — 자기소개 1, 설문 25, 돌발 16, 롤플레이 8 (세트 6: 질문하기 → 문제 해결 → 관련 경험). 주제 `category`(intro/survey/unexpected/roleplay), 문항 `level`(IM/IH/AL), type `issue` 추가
+- 주제 목록: 분류별 구역, "N문항 · IM~AL", 질문 화면에 등급
+- 모의고사(`buildMockExam`): 1 자기소개 → 2~4·5~7 서로 다른 설문 주제 앞 3문항 → 8~10 돌발 → 11~13 롤플레이 세트 → 14 비교(compare) → 15 이슈(issue). 문항마다 TTS·다시 듣기 1회·2분 녹음, 건너뛰기·끝내기 → 한꺼번에 받아 적기 → 요약(문항별 시간·분당 단어·머뭇거림, 평균) → 문항을 누르면 결과 화면
+- 저장 없음 (TASK 21)
 
 ### 음성 인식 검증 (2026-10-07, TASK 14)
 - 엔진: whisper.cpp v1.9.5 (`third_party/whisper.cpp`, CPU, arm64-v8a, fp16·dotprod), 모듈 `:core:stt` — 지금은 `debugImplementation`만 (사용자 기능 TASK에서 `implementation`으로)

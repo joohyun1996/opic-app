@@ -30,3 +30,12 @@
 
 ## 범위 밖
 - 홈 화면 위젯
+
+## 넘김 메모 (2026-10-10, Claude → GPT)
+- 사용자가 TASK 34 승인(권한·WorkManager 포함). Claude는 사용량 부족으로 구현 전 중단, 파일 변경 없음
+- 설계 제안:
+  - `core/common/Reminder.kt`: `nextReminderAt(now, at)`, `reminderText(studiedToday, nextDay, grammarDue)` (+ ReminderTest)
+  - `app/.../Reminder.kt`: ReminderSettings(SharedPreferences, 시각 null=꺼짐, 08·12·19·21·22시 선택) + ReminderWorker(OneTimeWork, 보낸 뒤 다음 날 재예약)
+  - 오늘 학습 여부는 `feature.analysis.loadStats(...).week.last().count > 0`, 다음 Day는 `wordDao().dayStats("en",40)`에서 mastered < total인 첫 Day
+  - 메뉴 설정 "학습 알림" → 선택 창, 켤 때 POST_NOTIFICATIONS 요청, 거부하면 꺼짐
+  - 의존성: `androidx.work:work-runtime-ktx:2.10.0` (libs.versions.toml)

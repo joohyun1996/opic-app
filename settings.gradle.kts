@@ -12,3 +12,4 @@ include(":core:ui")
 
 include(":feature:shadowing")
 include(":feature:speaking")
+include(":feature:analysis")

@@ -1,6 +1,6 @@
 # TASK: 학습 통계 화면
 
-> 작성: Claude · 승인: [ ] 사용자
+> 작성·구현: Claude · 승인: [x] 사용자 (2026-10-10)
 > 경로: docs/tasks/30-study-stats/TASK.md
 
 ## 목표
@@ -25,11 +25,11 @@
 - 차트는 Compose Canvas로 직접 그린다 (라이브러리 추가 금지)
 
 ## 수용 기준
-- [ ] AC1: 날짜별 기록 목록을 주면 최근 7일 일별 합계를 오늘 기준으로 반환한다 (빈 날은 0)
-- [ ] AC2: 오늘·어제·그제 기록이 있고 그 전날이 비면 연속 학습일 3을 반환한다. 오늘 기록이 없으면 어제까지로 센다
-- [ ] AC3: 모든 새 쿼리는 `language`로 필터링한다. 단, `grammar_reviews`·`user_words`는 language 컬럼이 없으므로 join이나 id 규칙으로 처리하고 HANDOFF에 적는다
-- [ ] AC4: 기록이 하나도 없으면 각 칸에 "아직 기록이 없어요"를 보여 주고 죽지 않는다
-- [ ] AC5: `./gradlew test lint :app:assembleRelease` 통과, 실기기 스크린샷
+- [x] AC1: 날짜별 기록 목록을 주면 최근 7일 일별 합계를 오늘 기준으로 반환한다 (빈 날은 0)
+- [x] AC2: 오늘·어제·그제 기록이 있고 그 전날이 비면 연속 학습일 3을 반환한다. 오늘 기록이 없으면 어제까지로 센다
+- [x] AC3: 모든 새 쿼리는 `language`로 필터링한다. 단, `grammar_reviews`·`user_words`는 language 컬럼이 없으므로 join이나 id 규칙으로 처리하고 HANDOFF에 적는다
+- [x] AC4: 기록이 하나도 없으면 각 칸에 "아직 기록이 없어요"를 보여 주고 죽지 않는다
+- [x] AC5: `./gradlew test lint :app:assembleRelease` 통과, 실기기 스크린샷
 
 ## 제약 / 주의
 - 스키마 변경·Migration 금지 (읽기 쿼리만). 필요하면 멈추고 묻는다
@@ -37,3 +37,10 @@
 
 ## 범위 밖
 - 기록 내보내기, 목표 설정
+
+## 구현 메모
+- 순수 함수 `core/common/Stats.kt`: recentDailyCounts, studyStreak, topByCount (+ StatsTest)
+- 새 모듈 `feature/analysis`: `loadStats(db, language, today)` + `StatsScreen` (Canvas 막대·선 그래프)
+- 새 쿼리 없이 기존 언어 필터 쿼리(backupRows, all, dayStats)만 사용 → DAO 수정 없음. grammar_reviews는 v4(TASK 35)부터 language 컬럼 있음
+- 한계: user_words는 마지막 학습 시각만 있어 "그날 공부한 단어 수"가 아니라 "마지막으로 그날 공부한 단어 수"로 센다
+- 메뉴 "학습 통계" → 경로 `stats` (하단 바 숨김). 실기기 `stats.png`

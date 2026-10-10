@@ -31,6 +31,7 @@ dependencies {
     implementation(project(":feature:grammar"))
     implementation(project(":core:common"))
     implementation(project(":core:correction"))
+    implementation(project(":feature:analysis"))
     implementation(project(":core:model"))
     implementation(project(":core:database"))
     implementation(project(":core:stt"))

@@ -14,7 +14,7 @@ import com.jooh.opic.core.ui.ThemeMode
 @Composable
 fun MenuScreen(
     wrongCount: Int, gemmaStatus: String, whisperStatus: String, themeMode: ThemeMode, speechRate: Float, version: String,
-    onClose: () -> Unit, onWrong: () -> Unit, onSpeakingHistory: () -> Unit, onModels: () -> Unit,
+    onClose: () -> Unit, onWrong: () -> Unit, onStats: () -> Unit, onSpeakingHistory: () -> Unit, onModels: () -> Unit,
     onTheme: (ThemeMode) -> Unit, onSpeechRate: (Float) -> Unit, onBackup: () -> Unit,
 ) {
     var picker by remember { mutableStateOf<String?>(null) }
@@ -24,7 +24,8 @@ fun MenuScreen(
             Text("전체 메뉴", style = MaterialTheme.typography.titleLarge)
         }
         MenuSection("학습") {
-            MenuRow("오답노트", "단어 ${wrongCount}개", onWrong, divider = false)
+            MenuRow("학습 통계", "연속 학습·추이", onStats, divider = false)
+            MenuRow("오답노트", "단어 ${wrongCount}개", onWrong)
             MenuRow("스피킹 기록", "답변·모의고사", onSpeakingHistory)
             MenuRow("중국어 (HSK)", "준비 중", null)
         }

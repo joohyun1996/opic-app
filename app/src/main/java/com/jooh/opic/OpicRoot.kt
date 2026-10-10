@@ -27,6 +27,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.jooh.opic.core.llm.ModelCatalog
 import com.jooh.opic.feature.grammar.GrammarFlow
+import com.jooh.opic.feature.analysis.StatsData
+import com.jooh.opic.feature.analysis.StatsScreen
+import com.jooh.opic.feature.analysis.loadStats
+import com.jooh.opic.core.common.StudyLanguages
 import com.jooh.opic.feature.grammar.GrammarExplanationScreen
 import com.jooh.opic.core.correction.GrammarLink
 import com.jooh.opic.core.correction.LocalGrammarLink
@@ -114,7 +118,7 @@ fun OpicRoot(app: OpicApplication) {
         val entry by nav.currentBackStackEntryAsState()
         val destination = entry?.destination
         Scaffold(containerColor = MaterialTheme.colorScheme.background, bottomBar = {
-            if (destination?.route != "menu") NavigationBar(containerColor = MaterialTheme.colorScheme.surfaceContainerLowest, tonalElevation = 0.dp) {
+            if (destination?.route != "menu" && destination?.route != "stats") NavigationBar(containerColor = MaterialTheme.colorScheme.surfaceContainerLowest, tonalElevation = 0.dp) {
                 Tab.entries.forEach { tab ->
                     val selected = destination?.hierarchy?.any { it.route == tab.route } == true
                     NavigationBarItem(selected = selected, onClick = { openTab(tab) }, icon = { Icon(tab.icon, contentDescription = null) },
@@ -233,6 +237,16 @@ fun OpicRoot(app: OpicApplication) {
                             }
                         }
                     }
+                    composable("stats") {
+                        val stats by produceState<StatsData?>(null) {
+                            value = runCatching { loadStats(app.database, StudyLanguages.EN.code, java.time.LocalDate.now().toEpochDay()) }.getOrNull()
+                        }
+                        val titles = (grammarResult as? GrammarLoadResult.Loaded)?.book?.units.orEmpty().associate { u ->
+                            u.id to if (u.track == "core") "실전 ${u.order}장 ${u.title.substringBefore(" — ")}" else "OPIc ${u.order}단원 ${u.title}" }
+                        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
+                            Box(Modifier.widthIn(max = 430.dp)) { StatsScreen(stats, { titles[it] ?: it }, back) }
+                        }
+                    }
                     composable("menu") {
                         val words: WordsViewModel = viewModel(factory = remember(app) { WordsViewModel.Factory(app.database) })
                         val wordState by words.state.collectAsState()
@@ -241,7 +255,7 @@ fun OpicRoot(app: OpicApplication) {
                             wrongCount = wordState.wrong,
                             gemmaStatus = gemmaStatus(app), whisperStatus = if (SttModels.isDownloaded(app.whisper.model)) "받음" else "없음",
                             themeMode = themeMode, speechRate = speechRate, version = BuildConfig.VERSION_NAME,
-                            onClose = back, onWrong = { nav.navigate("wrong") },
+                            onClose = back, onWrong = { nav.navigate("wrong") }, onStats = { nav.navigate("stats") },
                             onSpeakingHistory = { pendingSpeakingHistory.value = true; openTab(Tab.SPEAKING) },
                             onModels = { modelsOpen = true },
                             onTheme = { UiSettings.setTheme(app, it) }, onSpeechRate = { UiSettings.setSpeechRate(app, it) },

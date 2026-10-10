@@ -3,7 +3,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <!-- ADR 002: 여러 앱이 같이 쓰는 Gemma 모델(Develop/Core/llm) 읽기 전용. 직접 배포 APK -->
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
-    <application android:name=".OpicApplication" android:label="@string/app_name" android:theme="@style/Theme.Opic">
+    <application android:name=".OpicApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:theme="@style/Theme.Opic">
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

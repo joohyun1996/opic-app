@@ -1,1 +1,8 @@
-<resources><style name="Theme.Opic" parent="android:style/Theme.Material.Light.NoActionBar" /></resources>
+<resources>
+    <!-- 앱이 켜질 때 잠깐 보이는 창 배경도 밝게·어둡게 따라간다 (TASK 24) -->
+    <style name="Theme.Opic" parent="android:style/Theme.DeviceDefault.DayNight">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
+</resources>

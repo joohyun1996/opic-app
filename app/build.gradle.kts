@@ -10,14 +10,19 @@ android {
         applicationId = "com.jooh.opic"
         minSdk = 34
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1"
+        versionCode = 27
+        versionName = "0.27"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions { jvmTarget = "17" }
+    buildTypes {
+        // 개인 기기용: release도 이 Mac의 debug 키로 서명 → debug 빌드 위에 덮어 설치 가능(데이터 유지).
+        // debug 빌드는 Compose 최적화가 꺼져 스크롤이 버벅인다 (Day 목록 늦은 프레임 13% → release 3%, 2026-10-10 측정)
+        release { signingConfig = signingConfigs.getByName("debug") }
+    }
     buildFeatures { compose = true; buildConfig = true }
     testOptions { unitTests.isIncludeAndroidResources = true }
 }

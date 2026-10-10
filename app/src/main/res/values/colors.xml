@@ -1,0 +1,5 @@
+<resources>
+    <!-- 로고 배경 = 밝은 테마 강조색 -->
+    <color name="ic_launcher_background">#C8460F</color>
+    <color name="window_background">#FFFFFF</color>
+</resources>

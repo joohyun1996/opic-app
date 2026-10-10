@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 앱 로고 (TASK 24): 말풍선 + 소리 막대 3개 = 말하기 연습. 108dp 캔버스, 안전 영역(지름 66dp) 안. 막대는 구멍(evenOdd)이라 배경색이 보인다 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#FFFFFF" android:fillType="evenOdd"
+        android:pathData="M40,32H68A10,10 0 0 1 78,42V60A10,10 0 0 1 68,70H52L40,80V70A10,10 0 0 1 30,60V42A10,10 0 0 1 40,32Z M43,47h4v8h-4Z M52,41h4v20h-4Z M61,45h4v12h-4Z" />
+</vector>

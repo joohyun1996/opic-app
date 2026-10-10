@@ -1,0 +1,29 @@
+10-10 08:12:14.851 W/ActivityManager( 2617): pid 24456 app.morphe.android.youtube sent binder code 27 with flags 2 and got error -74
+10-10 08:14:04.694 W/ActivityManager( 2617): pid 24456 app.morphe.android.youtube sent binder code 27 with flags 2 and got error -74
+10-10 08:35:42.546 V/WindowManager( 2617):     startWCT=WindowContainerTransaction { changes= {RemoteToken{2c7f8e4 Task{31fc41c #7945 type=standard A=10527:app.morphe.android.youtube}}={configAtTransitionEnd,}} hops= [{movePipActivityToPinnedTask: container=RemoteToken{2c7f8e4 Task{31fc41c #7945 type=standard A=10527:app.morphe.android.youtube}} reparent=null mToTop=false mWindowingMode=null mActivityType=null}] errorCallbackToken=null taskFragmentOrganizer=null }
+10-10 08:35:44.567 W/ActivityManager( 2617): pid 24456 app.morphe.android.youtube sent binder code 27 with flags 2 and got error -74
+10-10 08:35:48.251 V/WindowManager( 2617):     startWCT=WindowContainerTransaction { changes= {RemoteToken{2c7f8e4 Task{31fc41c #7945 type=standard A=10527:app.morphe.android.youtube}}={bounds:Rect(702, 707 - 1038, 1304),configAtTransitionEnd,}} hops= [] errorCallbackToken=null taskFragmentOrganizer=null }
+10-10 08:35:51.221 V/WindowManager( 2617):     startWCT=WindowContainerTransaction { changes= {RemoteToken{2c7f8e4 Task{31fc41c #7945 type=standard A=10527:app.morphe.android.youtube}}={bounds:Rect(702, 1662 - 1038, 2259),configAtTransitionEnd,}} hops= [] errorCallbackToken=null taskFragmentOrganizer=null }
+10-10 08:36:11.294 V/WindowManager( 2617):     startWCT=WindowContainerTransaction { changes= {RemoteToken{2c7f8e4 Task{31fc41c #7945 type=standard A=10527:app.morphe.android.youtube}}={bounds:Rect(576, 1437 - 1038, 2259),configAtTransitionEnd,}} hops= [] errorCallbackToken=null taskFragmentOrganizer=null }
+10-10 08:36:12.794 V/WindowManager( 2617):     startWCT=WindowContainerTransaction { changes= {RemoteToken{2c7f8e4 Task{31fc41c #7945 type=standard A=10527:app.morphe.android.youtube}}={bounds:Rect(0, 0 - 0, 0),windowingMode:undefined,}} hops= [] errorCallbackToken=null taskFragmentOrganizer=null }
+10-10 08:51:42.608 W/ActivityManager( 2617): pid 24456 app.morphe.android.youtube sent binder code 27 with flags 2 and got error -74
+10-10 08:52:29.733 D/NetdEventListenerService( 2617): DNS Requested by 214, 10527(app.morphe.android.youtube), 4(FAIL), isBlocked=true, 0ms
+10-10 08:52:30.047 D/NetdEventListenerService( 2617): DNS Requested by 214, 10527(app.morphe.android.youtube), 4(FAIL), isBlocked=true, 0ms
+10-10 08:55:51.350 D/NetdEventListenerService( 2617): DNS Requested by 214, 10527(app.morphe.android.youtube), 4(FAIL), isBlocked=true, 0ms
+10-10 08:55:51.360 D/NetdEventListenerService( 2617): DNS Requested by 214, 10527(app.morphe.android.youtube), 4(FAIL), isBlocked=true, 0ms
+10-10 08:55:51.612 D/NetdEventListenerService( 2617): DNS Requested by 214, 10527(app.morphe.android.youtube), 4(FAIL), isBlocked=true, 0ms
+10-10 09:08:50.912 E/com.jooh.opic(27404): Unable to open libpenguin.so: dlopen failed: library "libpenguin.so" not found.
+10-10 09:09:49.206 I/ImeTracker( 2617): com.jooh.opic:cc60d487: onFailed at PHASE_WM_NOTIFY_HIDE_ANIMATION_FINISHED
+10-10 09:10:13.151 I/ImeTracker( 2617): com.jooh.opic:f9732a03: onFailed at PHASE_WM_NOTIFY_HIDE_ANIMATION_FINISHED
+10-10 09:10:43.932 I/ImeTracker( 2617): com.jooh.opic:2d8b6e27: onFailed at PHASE_WM_NOTIFY_HIDE_ANIMATION_FINISHED
+10-10 09:11:24.346 I/ImeTracker( 2617): com.jooh.opic:bb19c668: onFailed at PHASE_WM_NOTIFY_HIDE_ANIMATION_FINISHED
+10-10 09:12:01.875 W/com.jooh.opic(27404): Loading /data/app/~~2yfT0Jd4SgtLU2HKO094Pw==/com.google.android.webview-uaCYDvd5KzVwLmWH7aqdKQ==/oat/arm64/base.odex non-executable as it requires an image which we failed to load
+10-10 09:12:01.950 I/chromium(27404): [1010/091201.945838:INFO:android_webview/browser/variations/variations_seed_loader.cc:63] Failed to open file for reading.: No such file or directory (2)
+10-10 09:12:01.950 I/chromium(27404): [1010/091201.950462:INFO:android_webview/browser/variations/variations_seed_loader.cc:63] Failed to open file for reading.: No such file or directory (2)
+10-10 09:12:02.047 W/chromium(27404): [WARNING:net/dns/dns_config_service_android.cc:69] Failed to read DnsConfig.
+10-10 09:12:02.251 I/ImeTracker( 2617): com.jooh.opic:1e4a91ca: onFailed at PHASE_WM_NOTIFY_HIDE_ANIMATION_FINISHED
+10-10 09:15:48.454 I/ImeTracker( 2617): com.jooh.opic:893269ae: onFailed at PHASE_WM_NOTIFY_HIDE_ANIMATION_FINISHED
+10-10 09:17:02.408 I/ImeTracker(27404): com.jooh.opic:2d90e9d6: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-10 09:17:11.200 E/com.jooh.opic(27404): Failed to query component interface for required system resources: 6
+10-10 09:17:19.754 I/AccessibilityNodeInfoDumper(30181): Null child 21/22, parent: android.view.accessibility.AccessibilityNodeInfo@152fd; boundsInParent: Rect(0, 0 - 0, 0); boundsInScreen: Rect(0, 94 - 1080, 2301); boundsInWindow: Rect(0, 94 - 1080, 2301); packageName: com.jooh.opic; className: android.widget.ScrollView; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; containerTitle: null; viewIdResName: null; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: true; granularScrollingSupported: false; importantForAccessibility: true; visible: true; actions: [AccessibilityAction: ACTION_SCROLL_UP - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SCROLL_BACKWARD - null]; isTextSelectable: false
+10-10 09:19:15.303 I/ImeTracker( 2617): com.jooh.opic:942d54d2: onFailed at PHASE_WM_NOTIFY_HIDE_ANIMATION_FINISHED

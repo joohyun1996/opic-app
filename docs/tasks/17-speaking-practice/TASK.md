@@ -55,11 +55,11 @@ OPIc 질문을 귀로 듣고 바로 영어로 답하면, Whisper(small.en)로 �
 `parseSpeakingCatalog(json: String): SpeakingCatalog?` — 형식이 틀리거나, id가 중복되거나, type이 목록 밖이면 null → 화면에 "스피킹 데이터를 불러오지 못했습니다" (앱은 계속 동작)
 
 ## 수용 기준
-- [ ] AC1: `parseSpeakingCatalog` — `exports/speaking.json` 통과, id 중복·잘못된 type·빈 en은 null (테스트, 실제 파일을 읽는 테스트 1개 포함)
-- [ ] AC2: `speakingMetrics` — 머뭇거림 포함 문장에서 wordCount·fillerCount, `like` 미집계, 60초에 120단어 → 120 wpm, durationMs 0 → 0, 반복 단어 순서·기능어 제외, 빈 문자열 (테스트)
-- [ ] AC3: `transcribe(prompt = null)`이 기존과 같게 동작 (섀도잉·검증 화면 호출 변경 없음), 빌드 통과
-- [ ] AC4: `./gradlew test lint :app:assembleDebug :app:assembleRelease` 통과
-- [ ] AC5: AndroidManifest 권한·Room 스키마 변경 없음
+- [x] AC1: `parseSpeakingCatalog` — `exports/speaking.json` 통과, id 중복·잘못된 type·빈 en은 null (테스트, 실제 파일을 읽는 테스트 1개 포함)
+- [x] AC2: `speakingMetrics` — 머뭇거림 포함 문장에서 wordCount·fillerCount, `like` 미집계, 60초에 120단어 → 120 wpm, durationMs 0 → 0, 반복 단어 순서·기능어 제외, 빈 문자열 (테스트)
+- [x] AC3: `transcribe(prompt = null)`이 기존과 같게 동작 (섀도잉·검증 화면 호출 변경 없음), 빌드 통과
+- [x] AC4: `./gradlew test lint :app:assembleDebug :app:assembleRelease` 통과
+- [x] AC5: AndroidManifest 권한·Room 스키마 변경 없음
 - [ ] AC6: 실기기 확인 — **보류 (사용자가 나중에 한꺼번에)**. HANDOFF에 확인 순서만: 질문 TTS·다시 듣기 1회 제한, 2분 자동 정지, 1분 이상 답변의 받아 적기 시간, 머뭇거림이 받아 적히는지
 
 ## 제약 / 주의

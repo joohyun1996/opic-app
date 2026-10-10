@@ -25,6 +25,7 @@
 | 2026-10-09 | v0.16.0 | 섀도잉: YouTube IFrame 재생·A-B 반복·속도·따라 말하기(Whisper small.en) 단어 비교, `:core:stt` release 포함 (TASK 15, 실기기 확인 보류) |
 | 2026-10-09 | v0.17.0 | 섀도잉 비공식 자막: 영어 자막 목록·현재 문장 강조·문장 누르면 A-B 반복+원문 채우기, 실패 시 붙여 넣기 (TASK 16, 실기기 확인 보류) |
 | 2026-10-10 | v0.18.0 | 섀도잉 실기기 수정: WebView 즉시 파괴·iframe 높이 0 수정, 자막은 플레이어 요청 가로채기, 일치율 = 맞은 단어/원문, 짧은 녹음·무음 안내, 비교 결과 가로 표시. 개발자 검증 화면 삭제, Whisper 모델 small.en만 |
+| 2026-10-10 | v0.19.0 | 스피킹 탭: 질문 은행(15주제 43문항), TTS 질문·다시 듣기 1회, 2분 답변 녹음, Whisper 받아 적기(머뭇거림 유지 prompt), 즉시 지표 (TASK 17) |
 
 ## 인증
 ### POST /api/auth/login
@@ -258,6 +259,14 @@
 - 개발자 검증 화면(STT·LLM 측정)과 측정 자료 삭제. `SttModels`는 small.en만
 
 ## 스피킹
+
+### 질문·답변·즉시 지표 (2026-10-10, TASK 17)
+- 데이터: `exports/speaking.json` (dataVersion 1, 15주제 43문항) — `{dataVersion, topics:[{id, titleKo, questions:[{id, type, en, ko, tip}]}]}`, type = describe / routine / experience / compare / roleplay_ask / roleplay_solve. `parseSpeakingCatalog` 실패 시 "스피킹 데이터를 불러오지 못했습니다"
+- 흐름: 홈 "스피킹" → 주제 목록 + 무작위 질문 → 질문 화면(TTS 자동 재생, 글 숨김, 다시 듣기 1회, "질문 글 보기" = 영어·한국어·팁) → "● 답변 시작" (경과 `m:ss / 2:00`, 입력 크기 막대, 2:00 자동 정지) → 받아 적기(취소 가능) → 결과
+- Whisper: `UserWhisper` 공유, `prompt = "Um, uh, so, like, you know, I mean."` (머뭇거림 유지). 1.5초 미만·무음은 안내만
+- 결과: 답변 전문(머뭇거림 회색), 말한 시간(< 60초 "1분 이상 말해 보세요"), 분당 단어(< 90 "조금 더 빠르게" / 90~150 "적당한 속도" / > 150 "조금 천천히"), 단어·문장 수, 머뭇거림 횟수(um, uh, er, erm, hmm, mm, you know, i mean — like 제외), 자주 쓴 단어(기능어 제외 3회 이상 상위 3개). 다시 답하기 / 다음 질문 / 내 답변 듣기
+- 녹음·재생 공용: `core:stt/PcmRecorder`, `PcmPlayer` (섀도잉·스피킹), `core:common/Recording.kt`
+- 저장 없음 (TASK 19), AI 피드백 없음 (TASK 18)
 
 ### 음성 인식 검증 (2026-10-07, TASK 14)
 - 엔진: whisper.cpp v1.9.5 (`third_party/whisper.cpp`, CPU, arm64-v8a, fp16·dotprod), 모듈 `:core:stt` — 지금은 `debugImplementation`만 (사용자 기능 TASK에서 `implementation`으로)

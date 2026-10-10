@@ -91,3 +91,8 @@
 - **M1 일치율이 음수(-33.3%)** (`ShadowingScreen.kt` 일치율 표시) — `1 − WER`는 더 말한 단어(Insert)가 많으면 0 아래로 내려간다. 사용자가 원문보다 길게 말하는 건 흔한 상황
   - 일치율 = **Match 개수 / 원문 단어 수** (0~100%)로 바꾸고, 그 아래에 "더 말한 단어 N개 · 빠뜨린 단어 N개 · 틀린 단어 N개"를 따로 표시
   - `core:common/Shadowing.kt`에 `matchRate(diff: List<WordDiff>, referenceWords: Int): Double` 추가 + 테스트 (Insert만 많아도 0 이상, 원문 0단어면 0)
+- **M2 플레이어가 검은 화면 (사용자 확인, Claude 재현)** (`YouTubePlayer.kt` HTML)
+  - DevTools로 확인: 상태는 "준비됨"(getPlayerState 5)인데 iframe 높이가 **0px**. `innerHeight`는 220인데 CSS의 `100%`·`100vh`가 0으로 계산됨 — WebView가 크기를 받기 전에 페이지가 불러와져 CSS 뷰포트 높이가 0으로 고정된 것으로 보임
+  - 실험: iframe `style.height = innerHeight + 'px'`로 넣자 썸네일·재생 버튼·제목이 정상 표시됨 (스크린샷 확인)
+  - 수정 방향: CSS 퍼센트 대신 JS에서 `innerWidth`·`innerHeight`를 px로 iframe에 넣고, `resize` 이벤트 때 다시 맞춘다. `YT.Player`의 width/height도 px 숫자로
+  - 실기기 확인 기준에 **"화면에 영상 썸네일·재생 버튼이 보이고 손가락으로 누를 수 있다"**를 넣는다 (상태값만으로 판단 금지)

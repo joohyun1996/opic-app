@@ -1,5 +1,5 @@
 {
-  "dataVersion": 1,
+  "dataVersion": 2,
   "topics": [
     {
       "id": "intro",
@@ -10,9 +10,11 @@
           "type": "describe",
           "en": "Let's start the interview. Please tell me a little bit about yourself.",
           "ko": "인터뷰를 시작하겠습니다. 자기소개를 해 주세요.",
-          "tip": "이름보다 하는 일·사는 곳·좋아하는 것 위주로. 30~40초면 충분"
+          "tip": "이름보다 하는 일·사는 곳·좋아하는 것 위주로. 30~40초면 충분",
+          "level": "IM"
         }
-      ]
+      ],
+      "category": "intro"
     },
     {
       "id": "home",
@@ -23,23 +25,35 @@
           "type": "describe",
           "en": "You indicated that you live in an apartment. Can you describe your home? What does it look like, and how many rooms does it have?",
           "ko": "아파트에 산다고 하셨습니다. 집을 묘사해 주세요. 어떻게 생겼고 방은 몇 개인가요?",
-          "tip": "위치 → 구조 → 가장 좋아하는 공간 순서로"
+          "tip": "위치 → 구조 → 가장 좋아하는 공간 순서로",
+          "level": "IM"
         },
         {
           "id": "home-2",
           "type": "routine",
           "en": "What do you usually do at home on weekdays and on weekends? Tell me about your typical day at home.",
           "ko": "평일과 주말에 집에서 보통 무엇을 하나요? 집에서의 하루를 말해 주세요.",
-          "tip": "현재 시제 + usually, on weekends 같은 빈도 표현"
+          "tip": "현재 시제 + usually, on weekends 같은 빈도 표현",
+          "level": "IM"
         },
         {
           "id": "home-3",
           "type": "experience",
           "en": "Have you ever changed something in your home, like moving furniture or redecorating? Tell me what you did and why.",
           "ko": "가구를 옮기거나 꾸미는 등 집에서 무언가를 바꾼 적이 있나요? 무엇을 왜 했는지 말해 주세요.",
-          "tip": "과거 시제. 계기 → 한 일 → 결과·느낌"
+          "tip": "과거 시제. 계기 → 한 일 → 결과·느낌",
+          "level": "IH"
+        },
+        {
+          "id": "home-4",
+          "type": "issue",
+          "en": "These days, many young people in your country find it hard to buy or rent a home. Why do you think this is happening, and what could be done about it?",
+          "ko": "요즘 당신 나라의 젊은이들은 집을 사거나 빌리기 어렵다고 합니다. 왜 그렇다고 생각하고, 어떻게 하면 좋을까요?",
+          "tip": "원인 2개(집값·소득) → 해결책 1~2개 → 내 의견으로 마무리",
+          "level": "AL"
         }
-      ]
+      ],
+      "category": "survey"
     },
     {
       "id": "neighborhood",
@@ -50,23 +64,35 @@
           "type": "describe",
           "en": "Tell me about your neighborhood. What is it like, and what places are there?",
           "ko": "사는 동네에 대해 말해 주세요. 어떤 곳이고 무엇이 있나요?",
-          "tip": "There is / There are로 장소 나열 후 하나를 자세히"
+          "tip": "There is / There are로 장소 나열 후 하나를 자세히",
+          "level": "IM"
         },
         {
           "id": "neighborhood-2",
           "type": "compare",
           "en": "How has your neighborhood changed since you first moved there?",
           "ko": "처음 이사 왔을 때와 비교해 동네가 어떻게 바뀌었나요?",
-          "tip": "used to + 현재완료(has changed)로 전후 비교"
+          "tip": "used to + 현재완료(has changed)로 전후 비교",
+          "level": "IH"
         },
         {
           "id": "neighborhood-3",
           "type": "experience",
           "en": "Tell me about a memorable thing that happened in your neighborhood.",
           "ko": "동네에서 있었던 기억에 남는 일을 말해 주세요.",
-          "tip": "언제·어디서 → 무슨 일 → 왜 기억에 남는지"
+          "tip": "언제·어디서 → 무슨 일 → 왜 기억에 남는지",
+          "level": "IH"
+        },
+        {
+          "id": "neighborhood-4",
+          "type": "issue",
+          "en": "What are some problems or concerns that people in your neighborhood have? How do people deal with them?",
+          "ko": "동네 사람들이 가진 문제나 걱정거리는 무엇인가요? 사람들은 어떻게 대처하나요?",
+          "tip": "문제 하나를 구체적으로(주차·소음 등) → 사람들의 반응 → 해결 방향",
+          "level": "AL"
         }
-      ]
+      ],
+      "category": "survey"
     },
     {
       "id": "music",
@@ -77,23 +103,35 @@
           "type": "describe",
           "en": "You indicated that you like listening to music. What kind of music do you like, and who are your favorite singers?",
           "ko": "음악 듣기를 좋아한다고 하셨습니다. 어떤 음악과 가수를 좋아하나요?",
-          "tip": "장르 → 가수 → 좋아하는 이유"
+          "tip": "장르 → 가수 → 좋아하는 이유",
+          "level": "IM"
         },
         {
           "id": "music-2",
           "type": "routine",
           "en": "When and where do you usually listen to music? What devices do you use?",
           "ko": "보통 언제 어디서 음악을 듣나요? 어떤 기기를 쓰나요?",
-          "tip": "출퇴근길, 운동할 때 등 상황별로"
+          "tip": "출퇴근길, 운동할 때 등 상황별로",
+          "level": "IM"
         },
         {
           "id": "music-3",
           "type": "experience",
           "en": "Tell me about a concert or live performance you went to. What was it like?",
           "ko": "가 본 콘서트나 공연에 대해 말해 주세요. 어땠나요?",
-          "tip": "과거 시제, 분위기 묘사 형용사 2~3개"
+          "tip": "과거 시제, 분위기 묘사 형용사 2~3개",
+          "level": "IH"
+        },
+        {
+          "id": "music-4",
+          "type": "compare",
+          "en": "How has the way people listen to music changed over the years? What do you think caused these changes?",
+          "ko": "사람들이 음악을 듣는 방식은 몇 년 동안 어떻게 바뀌었나요? 무엇이 그 변화를 만들었다고 생각하나요?",
+          "tip": "CD·MP3 → 스트리밍, 원인(기술·가격), 좋은 점·아쉬운 점",
+          "level": "AL"
         }
-      ]
+      ],
+      "category": "survey"
     },
     {
       "id": "movies",
@@ -104,23 +142,35 @@
           "type": "describe",
           "en": "What kinds of movies do you like? Why do you like them?",
           "ko": "어떤 영화를 좋아하나요? 왜 좋아하나요?",
-          "tip": "장르 하나를 골라 이유 두 가지"
+          "tip": "장르 하나를 골라 이유 두 가지",
+          "level": "IM"
         },
         {
           "id": "movies-2",
           "type": "routine",
           "en": "Describe what you usually do when you go to the movies, from beginning to end.",
           "ko": "영화 보러 갈 때 보통 처음부터 끝까지 무엇을 하는지 말해 주세요.",
-          "tip": "first, then, after that 순서 연결어"
+          "tip": "first, then, after that 순서 연결어",
+          "level": "IM"
         },
         {
           "id": "movies-3",
           "type": "experience",
           "en": "Tell me about the most memorable movie you have seen. What was it about, and why was it memorable?",
           "ko": "가장 기억에 남는 영화는 무엇인가요? 내용과 기억에 남는 이유를 말해 주세요.",
-          "tip": "줄거리는 짧게, 느낀 점을 길게"
+          "tip": "줄거리는 짧게, 느낀 점을 길게",
+          "level": "IH"
+        },
+        {
+          "id": "movies-4",
+          "type": "issue",
+          "en": "Some people say that movie theaters will disappear because of streaming services. What is your opinion?",
+          "ko": "스트리밍 서비스 때문에 영화관이 사라질 거라고 말하는 사람들이 있습니다. 당신의 의견은?",
+          "tip": "찬반 한쪽을 먼저 밝히고 이유 2개 + 예시",
+          "level": "AL"
         }
-      ]
+      ],
+      "category": "survey"
     },
     {
       "id": "parks",
@@ -131,23 +181,27 @@
           "type": "describe",
           "en": "Tell me about a park you often go to. What does it look like?",
           "ko": "자주 가는 공원에 대해 말해 주세요. 어떻게 생겼나요?",
-          "tip": "위치 → 보이는 것 → 사람들이 하는 일"
+          "tip": "위치 → 보이는 것 → 사람들이 하는 일",
+          "level": "IM"
         },
         {
           "id": "parks-2",
           "type": "routine",
           "en": "What do you usually do when you go to the park? Who do you go with?",
           "ko": "공원에 가면 보통 무엇을 하나요? 누구와 가나요?",
-          "tip": "현재 시제 + 함께 하는 사람"
+          "tip": "현재 시제 + 함께 하는 사람",
+          "level": "IM"
         },
         {
           "id": "parks-3",
           "type": "experience",
           "en": "Tell me about a special day you had at a park.",
           "ko": "공원에서 보낸 특별한 하루를 말해 주세요.",
-          "tip": "과거 시제, 날씨·감정 표현"
+          "tip": "과거 시제, 날씨·감정 표현",
+          "level": "IH"
         }
-      ]
+      ],
+      "category": "survey"
     },
     {
       "id": "cooking",
@@ -158,23 +212,27 @@
           "type": "describe",
           "en": "You indicated that you like cooking. What dishes do you usually cook?",
           "ko": "요리를 좋아한다고 하셨습니다. 보통 어떤 요리를 하나요?",
-          "tip": "요리 하나를 골라 재료와 맛 묘사"
+          "tip": "요리 하나를 골라 재료와 맛 묘사",
+          "level": "IM"
         },
         {
           "id": "cooking-2",
           "type": "routine",
           "en": "Explain how you make one of your favorite dishes, step by step.",
           "ko": "좋아하는 요리 하나를 만드는 방법을 단계별로 설명해 주세요.",
-          "tip": "명령문이나 I first ~, then ~ 순서"
+          "tip": "명령문이나 I first ~, then ~ 순서",
+          "level": "IM"
         },
         {
           "id": "cooking-3",
           "type": "experience",
           "en": "Tell me about a time when your cooking went wrong. What happened?",
           "ko": "요리를 망친 적이 있나요? 무슨 일이 있었나요?",
-          "tip": "과거 시제 + 문제 → 해결"
+          "tip": "과거 시제 + 문제 → 해결",
+          "level": "IH"
         }
-      ]
+      ],
+      "category": "survey"
     },
     {
       "id": "exercise",
@@ -185,23 +243,27 @@
           "type": "describe",
           "en": "You indicated that you walk or jog. Where do you usually do it, and why do you like it?",
           "ko": "걷기나 조깅을 한다고 하셨습니다. 보통 어디서 하고 왜 좋아하나요?",
-          "tip": "장소 묘사 + 좋은 점 두 가지"
+          "tip": "장소 묘사 + 좋은 점 두 가지",
+          "level": "IM"
         },
         {
           "id": "exercise-2",
           "type": "routine",
           "en": "How often do you exercise, and what do you do before and after exercising?",
           "ko": "얼마나 자주 운동하고, 운동 전후에 무엇을 하나요?",
-          "tip": "빈도 표현(twice a week) + 순서"
+          "tip": "빈도 표현(twice a week) + 순서",
+          "level": "IM"
         },
         {
           "id": "exercise-3",
           "type": "compare",
           "en": "How has the way you exercise changed compared to a few years ago?",
           "ko": "몇 년 전과 비교해 운동 방식이 어떻게 바뀌었나요?",
-          "tip": "used to + now 비교"
+          "tip": "used to + now 비교",
+          "level": "IH"
         }
-      ]
+      ],
+      "category": "survey"
     },
     {
       "id": "travel_domestic",
@@ -212,23 +274,27 @@
           "type": "describe",
           "en": "Tell me about a place in your country that you like to visit. What is special about it?",
           "ko": "국내에서 즐겨 가는 곳을 말해 주세요. 무엇이 특별한가요?",
-          "tip": "장소 → 볼거리·먹거리 → 이유"
+          "tip": "장소 → 볼거리·먹거리 → 이유",
+          "level": "IM"
         },
         {
           "id": "travel_domestic-2",
           "type": "routine",
           "en": "How do you usually prepare for a trip? What do you pack?",
           "ko": "여행 준비는 보통 어떻게 하나요? 무엇을 챙기나요?",
-          "tip": "현재 시제 + 준비 순서"
+          "tip": "현재 시제 + 준비 순서",
+          "level": "IM"
         },
         {
           "id": "travel_domestic-3",
           "type": "experience",
           "en": "Tell me about a memorable trip you took in your country. Where did you go, and what happened?",
           "ko": "기억에 남는 국내 여행을 말해 주세요. 어디에 갔고 무슨 일이 있었나요?",
-          "tip": "과거 시제, 육하원칙"
+          "tip": "과거 시제, 육하원칙",
+          "level": "IH"
         }
-      ]
+      ],
+      "category": "survey"
     },
     {
       "id": "travel_abroad",
@@ -239,21 +305,593 @@
           "type": "describe",
           "en": "Tell me about a country you have visited. What was it like?",
           "ko": "가 본 나라에 대해 말해 주세요. 어땠나요?",
-          "tip": "현재완료(I have been to ~)로 시작 → 그때 일은 과거 시제로 묘사"
+          "tip": "현재완료(I have been to ~)로 시작 → 그때 일은 과거 시제로 묘사",
+          "level": "IM"
         },
         {
           "id": "travel_abroad-2",
           "type": "compare",
           "en": "What are the differences between traveling in your country and traveling abroad?",
           "ko": "국내 여행과 해외 여행은 어떤 점이 다른가요?",
-          "tip": "비교급, while / on the other hand"
+          "tip": "비교급, while / on the other hand",
+          "level": "IH"
         },
         {
           "id": "travel_abroad-3",
           "type": "experience",
           "en": "Tell me about an unexpected problem you had while traveling abroad and how you dealt with it.",
           "ko": "해외 여행 중 예상치 못한 문제가 있었나요? 어떻게 해결했나요?",
-          "tip": "문제 → 해결 → 배운 점"
+          "tip": "문제 → 해결 → 배운 점",
+          "level": "IH"
+        },
+        {
+          "id": "travel_abroad-4",
+          "type": "issue",
+          "en": "What are some of the positive and negative effects of tourism on local communities?",
+          "ko": "관광이 지역 사회에 미치는 좋은 영향과 나쁜 영향은 무엇인가요?",
+          "tip": "좋은 점(경제) ↔ 나쁜 점(물가·환경), On the other hand로 연결",
+          "level": "AL"
+        }
+      ],
+      "category": "survey"
+    },
+    {
+      "id": "concerts",
+      "titleKo": "공연·콘서트 보기",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "concerts-1",
+          "type": "describe",
+          "en": "You indicated that you go to concerts. What kinds of concerts do you like to go to, and why?",
+          "ko": "콘서트에 간다고 하셨습니다. 어떤 공연을 좋아하고 왜 좋아하나요?",
+          "tip": "장르 → 좋아하는 이유 2개 → 마지막에 느낌",
+          "level": "IM"
+        },
+        {
+          "id": "concerts-2",
+          "type": "routine",
+          "en": "What do you usually do before and after a concert? Who do you go with?",
+          "ko": "공연 전후로 보통 무엇을 하나요? 누구와 가나요?",
+          "tip": "before, after, then 같은 순서 표현",
+          "level": "IM"
+        },
+        {
+          "id": "concerts-3",
+          "type": "experience",
+          "en": "Tell me about the first concert you ever went to. What was it like?",
+          "ko": "처음 가 본 공연에 대해 말해 주세요. 어땠나요?",
+          "tip": "과거 시제, 그때의 설렘·분위기 묘사",
+          "level": "IH"
+        },
+        {
+          "id": "concerts-4",
+          "type": "compare",
+          "en": "How are concerts today different from concerts in the past?",
+          "ko": "요즘 공연은 예전 공연과 어떻게 다른가요?",
+          "tip": "티켓 예매·무대 기술·관객 문화 비교",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "cafe",
+      "titleKo": "카페 가기",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "cafe-1",
+          "type": "describe",
+          "en": "Tell me about a café you often go to. Where is it, and what does it look like?",
+          "ko": "자주 가는 카페를 말해 주세요. 어디에 있고 어떻게 생겼나요?",
+          "tip": "위치 → 인테리어 → 자주 가는 이유",
+          "level": "IM"
+        },
+        {
+          "id": "cafe-2",
+          "type": "routine",
+          "en": "What do you usually do at a café? What do you order?",
+          "ko": "카페에서 보통 무엇을 하나요? 무엇을 주문하나요?",
+          "tip": "usually, sometimes + 메뉴 이름",
+          "level": "IM"
+        },
+        {
+          "id": "cafe-3",
+          "type": "experience",
+          "en": "Tell me about a memorable experience you had at a café.",
+          "ko": "카페에서 있었던 기억에 남는 일을 말해 주세요.",
+          "tip": "언제·누구와 → 무슨 일 → 왜 기억나는지",
+          "level": "IH"
+        },
+        {
+          "id": "cafe-4",
+          "type": "issue",
+          "en": "There are so many cafés in Korea these days. Why do you think cafés are so popular, and is this a good thing?",
+          "ko": "요즘 한국에는 카페가 정말 많습니다. 왜 인기가 많다고 생각하고, 좋은 현상일까요?",
+          "tip": "이유(공부·만남 공간) → 좋은 점·문제점 → 의견",
+          "level": "AL"
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "titleKo": "쇼핑하기",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "shopping-1",
+          "type": "describe",
+          "en": "You indicated that you like shopping. Where do you usually go shopping, and what do you buy?",
+          "ko": "쇼핑을 좋아한다고 하셨습니다. 보통 어디서 무엇을 사나요?",
+          "tip": "장소 2곳 비교, 자주 사는 물건",
+          "level": "IM"
+        },
+        {
+          "id": "shopping-2",
+          "type": "routine",
+          "en": "Describe how you usually shop, from deciding what to buy to paying.",
+          "ko": "무엇을 살지 정하는 것부터 계산까지, 보통 어떻게 쇼핑하는지 말해 주세요.",
+          "tip": "first → then → finally",
+          "level": "IM"
+        },
+        {
+          "id": "shopping-3",
+          "type": "experience",
+          "en": "Tell me about a time when you bought something and then regretted it.",
+          "ko": "무언가를 샀다가 후회한 적을 말해 주세요.",
+          "tip": "산 이유 → 후회한 이유 → 그 뒤 어떻게 했는지",
+          "level": "IH"
+        },
+        {
+          "id": "shopping-4",
+          "type": "compare",
+          "en": "How is online shopping different from shopping in stores? Which do you prefer?",
+          "ko": "온라인 쇼핑은 매장 쇼핑과 어떻게 다른가요? 어느 쪽이 더 좋나요?",
+          "tip": "장단점 비교 → 선호 + 이유",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "tv",
+      "titleKo": "TV·리얼리티 쇼 보기",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "tv-1",
+          "type": "describe",
+          "en": "What kinds of TV shows do you like to watch? Tell me about your favorite one.",
+          "ko": "어떤 TV 프로그램을 좋아하나요? 가장 좋아하는 것을 말해 주세요.",
+          "tip": "프로그램 소개 → 좋아하는 이유",
+          "level": "IM"
+        },
+        {
+          "id": "tv-2",
+          "type": "routine",
+          "en": "When and where do you usually watch TV or videos? Do you watch alone or with others?",
+          "ko": "보통 언제 어디서 TV나 영상을 보나요? 혼자 보나요, 누구와 보나요?",
+          "tip": "시간대·기기·같이 보는 사람",
+          "level": "IM"
+        },
+        {
+          "id": "tv-3",
+          "type": "experience",
+          "en": "Tell me about a TV show or episode that left a strong impression on you.",
+          "ko": "인상 깊었던 TV 프로그램이나 회차를 말해 주세요.",
+          "tip": "줄거리는 짧게, 느낀 점은 길게",
+          "level": "IH"
+        },
+        {
+          "id": "tv-4",
+          "type": "issue",
+          "en": "Some people think reality shows have a bad influence on viewers. What do you think?",
+          "ko": "리얼리티 쇼가 시청자에게 나쁜 영향을 준다고 생각하는 사람들이 있습니다. 어떻게 생각하나요?",
+          "tip": "입장 → 이유 2개 → 예시",
+          "level": "AL"
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "titleKo": "독서",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "reading-1",
+          "type": "describe",
+          "en": "You indicated that you like reading. What kinds of books do you like, and why?",
+          "ko": "독서를 좋아한다고 하셨습니다. 어떤 책을 좋아하고 왜 좋아하나요?",
+          "tip": "장르 → 좋아하는 작가·책 → 이유",
+          "level": "IM"
+        },
+        {
+          "id": "reading-2",
+          "type": "routine",
+          "en": "When and where do you usually read? How do you choose books?",
+          "ko": "보통 언제 어디서 읽나요? 책은 어떻게 고르나요?",
+          "tip": "시간·장소 + 고르는 방법",
+          "level": "IM"
+        },
+        {
+          "id": "reading-3",
+          "type": "experience",
+          "en": "Tell me about a book that changed the way you think.",
+          "ko": "생각을 바꿔 놓은 책을 말해 주세요.",
+          "tip": "책 소개 → 바뀐 생각 → 지금 내 삶",
+          "level": "IH"
+        },
+        {
+          "id": "reading-4",
+          "type": "compare",
+          "en": "How have people's reading habits changed compared to the past?",
+          "ko": "예전과 비교해 사람들의 독서 습관은 어떻게 바뀌었나요?",
+          "tip": "종이책 → 전자책·웹소설, 독서량 변화",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "pets",
+      "titleKo": "반려동물 기르기",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "pets-1",
+          "type": "describe",
+          "en": "Tell me about your pet. What does it look like, and what is its personality like?",
+          "ko": "반려동물에 대해 말해 주세요. 어떻게 생겼고 성격은 어떤가요?",
+          "tip": "외모 → 성격 → 귀여운 습관",
+          "level": "IM"
+        },
+        {
+          "id": "pets-2",
+          "type": "routine",
+          "en": "How do you take care of your pet every day?",
+          "ko": "매일 반려동물을 어떻게 돌보나요?",
+          "tip": "아침·저녁 순서로 하는 일",
+          "level": "IM"
+        },
+        {
+          "id": "pets-3",
+          "type": "experience",
+          "en": "Tell me about a time when your pet was sick or got into trouble. What happened?",
+          "ko": "반려동물이 아프거나 사고를 친 적이 있나요? 무슨 일이 있었나요?",
+          "tip": "문제 → 대처 → 결과",
+          "level": "IH"
+        },
+        {
+          "id": "pets-4",
+          "type": "issue",
+          "en": "More and more people are raising pets these days. What problems can this cause in society?",
+          "ko": "반려동물을 기르는 사람이 점점 늘고 있습니다. 사회적으로 어떤 문제가 생길 수 있나요?",
+          "tip": "문제(유기·소음) → 해결책 → 의견",
+          "level": "AL"
+        }
+      ]
+    },
+    {
+      "id": "instrument",
+      "titleKo": "악기 연주하기",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "instrument-1",
+          "type": "describe",
+          "en": "You indicated that you play a musical instrument. What instrument do you play, and how did you start?",
+          "ko": "악기를 연주한다고 하셨습니다. 어떤 악기이고 어떻게 시작했나요?",
+          "tip": "악기 → 시작한 계기(과거) → 지금 실력",
+          "level": "IM"
+        },
+        {
+          "id": "instrument-2",
+          "type": "routine",
+          "en": "How do you usually practice? How often do you play?",
+          "ko": "보통 어떻게 연습하나요? 얼마나 자주 연주하나요?",
+          "tip": "빈도 + 연습 순서",
+          "level": "IM"
+        },
+        {
+          "id": "instrument-3",
+          "type": "experience",
+          "en": "Tell me about a time you performed in front of other people.",
+          "ko": "다른 사람들 앞에서 연주한 적을 말해 주세요.",
+          "tip": "준비 → 그날 → 느낌",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "swimming",
+      "titleKo": "수영",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "swimming-1",
+          "type": "describe",
+          "en": "Where do you usually go swimming? Describe the place.",
+          "ko": "보통 어디서 수영하나요? 그곳을 묘사해 주세요.",
+          "tip": "장소 묘사 → 좋은 점",
+          "level": "IM"
+        },
+        {
+          "id": "swimming-2",
+          "type": "routine",
+          "en": "What do you do before, during, and after swimming?",
+          "ko": "수영 전, 중간, 후에 무엇을 하나요?",
+          "tip": "before / while / after",
+          "level": "IM"
+        },
+        {
+          "id": "swimming-3",
+          "type": "experience",
+          "en": "Tell me about a memorable experience you had while swimming.",
+          "ko": "수영하다 겪은 기억에 남는 일을 말해 주세요.",
+          "tip": "과거 시제, 위험했거나 즐거웠던 일",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "cycling",
+      "titleKo": "자전거 타기",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "cycling-1",
+          "type": "describe",
+          "en": "Where do you like to ride your bike? Tell me about that place.",
+          "ko": "어디서 자전거 타는 걸 좋아하나요? 그곳을 말해 주세요.",
+          "tip": "길·풍경 묘사",
+          "level": "IM"
+        },
+        {
+          "id": "cycling-2",
+          "type": "routine",
+          "en": "How often do you ride a bike, and what do you need to prepare?",
+          "ko": "얼마나 자주 자전거를 타고, 무엇을 준비하나요?",
+          "tip": "빈도 + 준비물(헬멧·물)",
+          "level": "IM"
+        },
+        {
+          "id": "cycling-3",
+          "type": "experience",
+          "en": "Tell me about a time when something unexpected happened while you were riding your bike.",
+          "ko": "자전거를 타다가 예상치 못한 일이 생긴 적을 말해 주세요.",
+          "tip": "while + 과거진행 → 사건 → 해결",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "hiking",
+      "titleKo": "등산",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "hiking-1",
+          "type": "describe",
+          "en": "Tell me about a mountain you like to hike. What is it like?",
+          "ko": "즐겨 오르는 산을 말해 주세요. 어떤 곳인가요?",
+          "tip": "위치·높이·경치",
+          "level": "IM"
+        },
+        {
+          "id": "hiking-2",
+          "type": "routine",
+          "en": "What do you usually bring and do when you go hiking?",
+          "ko": "등산 갈 때 보통 무엇을 챙기고 무엇을 하나요?",
+          "tip": "준비물 → 오르는 과정 → 내려와서",
+          "level": "IM"
+        },
+        {
+          "id": "hiking-3",
+          "type": "experience",
+          "en": "Tell me about a difficult or memorable hiking trip.",
+          "ko": "힘들었거나 기억에 남는 등산을 말해 주세요.",
+          "tip": "문제(날씨·부상) → 극복 → 배운 점",
+          "level": "IH"
+        },
+        {
+          "id": "hiking-4",
+          "type": "compare",
+          "en": "Why do you think hiking has become popular among young people recently?",
+          "ko": "최근 젊은이들 사이에서 등산이 인기를 얻은 이유는 무엇이라고 생각하나요?",
+          "tip": "예전(중장년 취미) ↔ 요즘(SNS·건강)",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "gym",
+      "titleKo": "헬스·요가",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "gym-1",
+          "type": "describe",
+          "en": "Tell me about the gym or studio where you work out.",
+          "ko": "운동하는 헬스장이나 스튜디오를 말해 주세요.",
+          "tip": "위치 → 시설 → 분위기",
+          "level": "IM"
+        },
+        {
+          "id": "gym-2",
+          "type": "routine",
+          "en": "Describe your usual workout routine.",
+          "ko": "평소 운동 루틴을 말해 주세요.",
+          "tip": "warm up → main → cool down",
+          "level": "IM"
+        },
+        {
+          "id": "gym-3",
+          "type": "experience",
+          "en": "Tell me about how you first started working out and how it changed you.",
+          "ko": "운동을 처음 시작한 계기와 그 뒤 달라진 점을 말해 주세요.",
+          "tip": "계기(과거) → 변화(현재완료)",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "beach",
+      "titleKo": "해변 가기",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "beach-1",
+          "type": "describe",
+          "en": "Tell me about a beach you like to go to.",
+          "ko": "즐겨 가는 해변을 말해 주세요.",
+          "tip": "위치 → 풍경 → 할 수 있는 것",
+          "level": "IM"
+        },
+        {
+          "id": "beach-2",
+          "type": "routine",
+          "en": "What do you usually do when you go to the beach?",
+          "ko": "해변에 가면 보통 무엇을 하나요?",
+          "tip": "활동 3개 나열 + 먹는 것",
+          "level": "IM"
+        },
+        {
+          "id": "beach-3",
+          "type": "experience",
+          "en": "Tell me about a memorable day you spent at the beach.",
+          "ko": "해변에서 보낸 기억에 남는 하루를 말해 주세요.",
+          "tip": "날씨·사람·사건",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "camping",
+      "titleKo": "캠핑",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "camping-1",
+          "type": "describe",
+          "en": "You indicated that you go camping. Where do you usually go, and what is it like?",
+          "ko": "캠핑을 간다고 하셨습니다. 보통 어디로 가고 어떤 곳인가요?",
+          "tip": "캠핑장 묘사",
+          "level": "IM"
+        },
+        {
+          "id": "camping-2",
+          "type": "routine",
+          "en": "How do you prepare for a camping trip?",
+          "ko": "캠핑 준비는 어떻게 하나요?",
+          "tip": "장비·음식·예약 순서",
+          "level": "IM"
+        },
+        {
+          "id": "camping-3",
+          "type": "experience",
+          "en": "Tell me about a camping trip where something went wrong.",
+          "ko": "캠핑에서 일이 꼬였던 적을 말해 주세요.",
+          "tip": "문제(비·장비) → 해결 → 지금 생각",
+          "level": "IH"
+        },
+        {
+          "id": "camping-4",
+          "type": "compare",
+          "en": "How has camping changed in your country over the past few years?",
+          "ko": "지난 몇 년 동안 당신 나라의 캠핑은 어떻게 바뀌었나요?",
+          "tip": "장비·글램핑·인기 변화",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "stay_home",
+      "titleKo": "집에서 보내는 휴가",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "stay_home-1",
+          "type": "describe",
+          "en": "You indicated that you like to spend your vacations at home. What do you usually do at home during your vacations?",
+          "ko": "휴가를 집에서 보내는 걸 좋아한다고 하셨습니다. 휴가 때 집에서 보통 무엇을 하나요?",
+          "tip": "활동 2~3개 + 이유",
+          "level": "IM"
+        },
+        {
+          "id": "stay_home-2",
+          "type": "routine",
+          "en": "Who do you usually spend time with when you stay home on vacation? What do you do together?",
+          "ko": "집에서 휴가를 보낼 때 보통 누구와 시간을 보내고 함께 무엇을 하나요?",
+          "tip": "사람 → 같이 하는 일",
+          "level": "IM"
+        },
+        {
+          "id": "stay_home-3",
+          "type": "experience",
+          "en": "Tell me about your last vacation at home. What did you do each day?",
+          "ko": "마지막으로 집에서 보낸 휴가를 말해 주세요. 날마다 무엇을 했나요?",
+          "tip": "On the first day ~ 날짜 순서",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "business_trip",
+      "titleKo": "국내 출장",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "business_trip-1",
+          "type": "describe",
+          "en": "You indicated that you go on business trips. Where do you usually go, and what do you do there?",
+          "ko": "출장을 간다고 하셨습니다. 보통 어디로 가고 거기서 무엇을 하나요?",
+          "tip": "목적지 → 업무 → 남는 시간",
+          "level": "IM"
+        },
+        {
+          "id": "business_trip-2",
+          "type": "routine",
+          "en": "How do you prepare for a business trip?",
+          "ko": "출장 준비는 어떻게 하나요?",
+          "tip": "서류·교통·숙소",
+          "level": "IM"
+        },
+        {
+          "id": "business_trip-3",
+          "type": "experience",
+          "en": "Tell me about a business trip where you had a problem. How did you solve it?",
+          "ko": "출장 중 문제가 생긴 적을 말해 주세요. 어떻게 해결했나요?",
+          "tip": "문제 → 해결 → 결과",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "games",
+      "titleKo": "게임하기",
+      "category": "survey",
+      "questions": [
+        {
+          "id": "games-1",
+          "type": "describe",
+          "en": "What kinds of games do you like to play? Tell me about your favorite game.",
+          "ko": "어떤 게임을 좋아하나요? 가장 좋아하는 게임을 말해 주세요.",
+          "tip": "장르 → 게임 소개 → 재미있는 이유",
+          "level": "IM"
+        },
+        {
+          "id": "games-2",
+          "type": "routine",
+          "en": "When and with whom do you usually play games?",
+          "ko": "보통 언제 누구와 게임을 하나요?",
+          "tip": "시간·기기·친구",
+          "level": "IM"
+        },
+        {
+          "id": "games-3",
+          "type": "compare",
+          "en": "How are games today different from the games you played as a child?",
+          "ko": "요즘 게임은 어렸을 때 했던 게임과 어떻게 다른가요?",
+          "tip": "used to + 지금, 그래픽·온라인",
+          "level": "IH"
         }
       ]
     },
@@ -266,23 +904,35 @@
           "type": "describe",
           "en": "What do you usually use your phone for? Which apps do you use the most?",
           "ko": "휴대폰을 주로 어디에 쓰나요? 가장 많이 쓰는 앱은?",
-          "tip": "앱 2~3개와 쓰는 이유"
+          "tip": "앱 2~3개와 쓰는 이유",
+          "level": "IM"
         },
         {
           "id": "phone-2",
           "type": "compare",
           "en": "How has technology changed the way people communicate compared to the past?",
           "ko": "예전과 비교해 기술이 사람들의 소통 방식을 어떻게 바꿨나요?",
-          "tip": "in the past / these days, 의견 표현"
+          "tip": "in the past / these days, 의견 표현",
+          "level": "IH"
         },
         {
           "id": "phone-3",
           "type": "experience",
           "en": "Tell me about a time when you had a problem with your phone or computer.",
           "ko": "휴대폰이나 컴퓨터에 문제가 생긴 적을 말해 주세요.",
-          "tip": "과거 시제 + 해결 과정"
+          "tip": "과거 시제 + 해결 과정",
+          "level": "IH"
+        },
+        {
+          "id": "phone-4",
+          "type": "issue",
+          "en": "Many people worry that young people spend too much time on their smartphones. What problems can this cause, and what should be done?",
+          "ko": "젊은이들이 스마트폰에 너무 많은 시간을 쓴다는 걱정이 많습니다. 어떤 문제가 생길 수 있고 어떻게 해야 할까요?",
+          "tip": "문제 2개(집중력·관계) → 해결책 → 내 경험 한 줄",
+          "level": "AL"
         }
-      ]
+      ],
+      "category": "unexpected"
     },
     {
       "id": "weather",
@@ -293,23 +943,35 @@
           "type": "describe",
           "en": "What is the weather like in your country? Describe the seasons.",
           "ko": "당신 나라의 날씨는 어떤가요? 계절을 묘사해 주세요.",
-          "tip": "네 계절을 짧게, 좋아하는 계절은 길게"
+          "tip": "네 계절을 짧게, 좋아하는 계절은 길게",
+          "level": "IM"
         },
         {
           "id": "weather-2",
           "type": "compare",
           "en": "How is the weather these days different from when you were a child?",
           "ko": "요즘 날씨는 어렸을 때와 어떻게 다른가요?",
-          "tip": "used to, 비교급"
+          "tip": "used to, 비교급",
+          "level": "IH"
         },
         {
           "id": "weather-3",
           "type": "experience",
           "en": "Tell me about a time when the weather affected your plans.",
           "ko": "날씨 때문에 계획이 바뀐 적을 말해 주세요.",
-          "tip": "원래 계획 → 날씨 → 바뀐 결과"
+          "tip": "원래 계획 → 날씨 → 바뀐 결과",
+          "level": "IH"
+        },
+        {
+          "id": "weather-4",
+          "type": "issue",
+          "en": "Climate change has become a serious issue. How has it affected your country, and what are people doing about it?",
+          "ko": "기후 변화가 심각한 문제가 됐습니다. 당신 나라에 어떤 영향을 줬고 사람들은 무엇을 하고 있나요?",
+          "tip": "영향(폭염·폭우) → 개인·정부의 노력 → 내 생각",
+          "level": "AL"
         }
-      ]
+      ],
+      "category": "unexpected"
     },
     {
       "id": "restaurant",
@@ -320,75 +982,684 @@
           "type": "describe",
           "en": "Tell me about a restaurant you like. What kind of food do they serve?",
           "ko": "좋아하는 식당을 말해 주세요. 어떤 음식을 파나요?",
-          "tip": "위치·분위기·메뉴"
+          "tip": "위치·분위기·메뉴",
+          "level": "IM"
         },
         {
           "id": "restaurant-2",
           "type": "routine",
           "en": "What do you usually do when you eat out with friends or family?",
           "ko": "친구나 가족과 외식할 때 보통 무엇을 하나요?",
-          "tip": "현재 시제 + 순서"
+          "tip": "현재 시제 + 순서",
+          "level": "IM"
         },
         {
           "id": "restaurant-3",
           "type": "experience",
           "en": "Tell me about a memorable meal you had at a restaurant.",
           "ko": "식당에서 먹은 기억에 남는 식사를 말해 주세요.",
-          "tip": "누구와·무엇을·왜 기억나는지"
+          "tip": "누구와·무엇을·왜 기억나는지",
+          "level": "IH"
+        }
+      ],
+      "category": "unexpected"
+    },
+    {
+      "id": "bank",
+      "titleKo": "은행",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "bank-1",
+          "type": "describe",
+          "en": "Tell me about a bank in your country. What does it look like inside?",
+          "ko": "당신 나라의 은행을 말해 주세요. 안은 어떻게 생겼나요?",
+          "tip": "입구 → 창구·대기표 → ATM",
+          "level": "IM"
+        },
+        {
+          "id": "bank-2",
+          "type": "routine",
+          "en": "What do people usually do at a bank? What do you do when you go to a bank?",
+          "ko": "사람들은 보통 은행에서 무엇을 하나요? 당신은 은행에 가면 무엇을 하나요?",
+          "tip": "번호표 → 대기 → 업무",
+          "level": "IM"
+        },
+        {
+          "id": "bank-3",
+          "type": "compare",
+          "en": "How has banking changed because of technology?",
+          "ko": "기술 때문에 은행 업무는 어떻게 바뀌었나요?",
+          "tip": "예전(창구) ↔ 지금(앱·인터넷 뱅킹)",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "recycling",
+      "titleKo": "재활용",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "recycling-1",
+          "type": "describe",
+          "en": "How do people recycle in your country? Describe the system.",
+          "ko": "당신 나라에서는 어떻게 재활용하나요? 방식을 설명해 주세요.",
+          "tip": "분리 종류 → 버리는 날·장소",
+          "level": "IM"
+        },
+        {
+          "id": "recycling-2",
+          "type": "routine",
+          "en": "How do you recycle at home?",
+          "ko": "집에서는 어떻게 재활용하나요?",
+          "tip": "순서: 씻기 → 분리 → 버리기",
+          "level": "IM"
+        },
+        {
+          "id": "recycling-3",
+          "type": "experience",
+          "en": "Tell me about a time when you had trouble with recycling.",
+          "ko": "재활용하다 곤란했던 적을 말해 주세요.",
+          "tip": "실수 → 결과 → 배운 점",
+          "level": "IH"
+        },
+        {
+          "id": "recycling-4",
+          "type": "issue",
+          "en": "Do you think recycling is enough to solve environmental problems? What else should be done?",
+          "ko": "재활용만으로 환경 문제를 해결할 수 있다고 생각하나요? 그 밖에 무엇을 해야 할까요?",
+          "tip": "한계 → 대안 2개(일회용품 줄이기·기업 책임)",
+          "level": "AL"
+        }
+      ]
+    },
+    {
+      "id": "holidays",
+      "titleKo": "명절·휴일",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "holidays-1",
+          "type": "describe",
+          "en": "What is a big holiday in your country? How do people celebrate it?",
+          "ko": "당신 나라의 큰 명절은 무엇인가요? 사람들은 어떻게 보내나요?",
+          "tip": "명절 이름 → 음식·활동",
+          "level": "IM"
+        },
+        {
+          "id": "holidays-2",
+          "type": "experience",
+          "en": "Tell me about a memorable holiday you spent with your family.",
+          "ko": "가족과 보낸 기억에 남는 명절을 말해 주세요.",
+          "tip": "언제 → 무엇을 → 왜 기억나는지",
+          "level": "IH"
+        },
+        {
+          "id": "holidays-3",
+          "type": "compare",
+          "en": "How have holidays changed compared to when you were young?",
+          "ko": "어렸을 때와 비교해 명절은 어떻게 바뀌었나요?",
+          "tip": "used to + these days",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "transportation",
+      "titleKo": "교통",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "transportation-1",
+          "type": "describe",
+          "en": "What kinds of public transportation are there in your city? Which one do you use most?",
+          "ko": "당신 도시에는 어떤 대중교통이 있나요? 무엇을 가장 많이 타나요?",
+          "tip": "종류 나열 → 자주 타는 것과 이유",
+          "level": "IM"
+        },
+        {
+          "id": "transportation-2",
+          "type": "experience",
+          "en": "Tell me about a problem you had while using public transportation.",
+          "ko": "대중교통을 이용하다 겪은 문제를 말해 주세요.",
+          "tip": "지연·분실 → 대처",
+          "level": "IH"
+        },
+        {
+          "id": "transportation-3",
+          "type": "compare",
+          "en": "How has transportation in your country changed over the years?",
+          "ko": "당신 나라의 교통은 몇 년 동안 어떻게 바뀌었나요?",
+          "tip": "지하철 노선·앱·전기차",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "titleKo": "건강",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "health-1",
+          "type": "describe",
+          "en": "Who is the healthiest person you know? What does he or she do to stay healthy?",
+          "ko": "아는 사람 중 가장 건강한 사람은 누구인가요? 건강을 위해 무엇을 하나요?",
+          "tip": "사람 소개 → 습관 2~3개",
+          "level": "IM"
+        },
+        {
+          "id": "health-2",
+          "type": "routine",
+          "en": "What do you do to stay healthy?",
+          "ko": "건강을 위해 무엇을 하나요?",
+          "tip": "식습관 + 운동 + 잠",
+          "level": "IM"
+        },
+        {
+          "id": "health-3",
+          "type": "issue",
+          "en": "Many people today feel stressed. What causes stress in modern life, and how can people manage it?",
+          "ko": "요즘 많은 사람들이 스트레스를 받습니다. 현대 생활에서 스트레스의 원인은 무엇이고 어떻게 관리할 수 있을까요?",
+          "tip": "원인 2개 → 방법 2개 → 내 방법",
+          "level": "AL"
+        }
+      ]
+    },
+    {
+      "id": "hotel",
+      "titleKo": "호텔",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "hotel-1",
+          "type": "describe",
+          "en": "Tell me about a hotel you stayed at. What was it like?",
+          "ko": "묵었던 호텔을 말해 주세요. 어땠나요?",
+          "tip": "위치 → 방 → 서비스",
+          "level": "IM"
+        },
+        {
+          "id": "hotel-2",
+          "type": "routine",
+          "en": "What do you usually do when you check in to a hotel?",
+          "ko": "호텔에 체크인하면 보통 무엇을 하나요?",
+          "tip": "체크인 → 방 확인 → 짐 풀기",
+          "level": "IM"
+        },
+        {
+          "id": "hotel-3",
+          "type": "experience",
+          "en": "Tell me about a problem you had at a hotel and how it was solved.",
+          "ko": "호텔에서 겪은 문제와 해결 과정을 말해 주세요.",
+          "tip": "문제 → 직원 대응 → 결과",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "fashion",
+      "titleKo": "패션",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "fashion-1",
+          "type": "describe",
+          "en": "What kind of clothes do people in your country like to wear these days?",
+          "ko": "요즘 당신 나라 사람들은 어떤 옷을 즐겨 입나요?",
+          "tip": "유행 스타일 2개 묘사",
+          "level": "IM"
+        },
+        {
+          "id": "fashion-2",
+          "type": "routine",
+          "en": "How do you usually decide what to wear?",
+          "ko": "보통 무엇을 입을지 어떻게 정하나요?",
+          "tip": "날씨·약속·기분",
+          "level": "IM"
+        },
+        {
+          "id": "fashion-3",
+          "type": "compare",
+          "en": "How has fashion changed compared to ten years ago?",
+          "ko": "10년 전과 비교해 패션은 어떻게 바뀌었나요?",
+          "tip": "예전 유행 ↔ 지금",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "furniture",
+      "titleKo": "가구",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "furniture-1",
+          "type": "describe",
+          "en": "What is your favorite piece of furniture at home? Why do you like it?",
+          "ko": "집에서 가장 좋아하는 가구는 무엇인가요? 왜 좋아하나요?",
+          "tip": "가구 묘사 → 쓰는 방법 → 이유",
+          "level": "IM"
+        },
+        {
+          "id": "furniture-2",
+          "type": "experience",
+          "en": "Tell me about the last time you bought furniture.",
+          "ko": "마지막으로 가구를 산 때를 말해 주세요.",
+          "tip": "어디서 → 고른 과정 → 배송·조립",
+          "level": "IH"
+        },
+        {
+          "id": "furniture-3",
+          "type": "compare",
+          "en": "How is the furniture in your home now different from the furniture in your childhood home?",
+          "ko": "지금 집의 가구는 어린 시절 집의 가구와 어떻게 다른가요?",
+          "tip": "재료·크기·스타일 비교",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "internet",
+      "titleKo": "인터넷",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "internet-1",
+          "type": "describe",
+          "en": "What do you usually do on the internet?",
+          "ko": "인터넷으로 보통 무엇을 하나요?",
+          "tip": "활동 3개 + 자주 가는 사이트",
+          "level": "IM"
+        },
+        {
+          "id": "internet-2",
+          "type": "experience",
+          "en": "Tell me about a time when the internet was very helpful to you.",
+          "ko": "인터넷이 크게 도움이 됐던 적을 말해 주세요.",
+          "tip": "상황 → 찾은 정보 → 결과",
+          "level": "IH"
+        },
+        {
+          "id": "internet-3",
+          "type": "issue",
+          "en": "What are some problems caused by the internet, such as fake news or privacy issues? How can we deal with them?",
+          "ko": "가짜 뉴스나 개인정보 같은 인터넷 문제에는 무엇이 있나요? 어떻게 대처할 수 있을까요?",
+          "tip": "문제 하나 깊게 → 개인·사회 대처",
+          "level": "AL"
+        }
+      ]
+    },
+    {
+      "id": "geography",
+      "titleKo": "지형·자연",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "geography-1",
+          "type": "describe",
+          "en": "Describe the geography of your country. Are there many mountains, rivers, or beaches?",
+          "ko": "당신 나라의 지형을 묘사해 주세요. 산·강·해변이 많나요?",
+          "tip": "There are ~ + 대표 장소",
+          "level": "IM"
+        },
+        {
+          "id": "geography-2",
+          "type": "routine",
+          "en": "What outdoor activities do people in your country enjoy because of its geography?",
+          "ko": "지형 덕분에 당신 나라 사람들이 즐기는 야외 활동은 무엇인가요?",
+          "tip": "산 → 등산, 바다 → 수영 식으로 연결",
+          "level": "IM"
+        },
+        {
+          "id": "geography-3",
+          "type": "experience",
+          "en": "Tell me about a beautiful natural place you visited in your country.",
+          "ko": "국내에서 가 본 아름다운 자연 명소를 말해 주세요.",
+          "tip": "가는 길 → 풍경 → 느낌",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "appointments",
+      "titleKo": "약속",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "appointments-1",
+          "type": "routine",
+          "en": "How do you usually make plans or appointments with your friends?",
+          "ko": "친구들과 보통 어떻게 약속을 잡나요?",
+          "tip": "연락 방법 → 시간·장소 정하기",
+          "level": "IM"
+        },
+        {
+          "id": "appointments-2",
+          "type": "experience",
+          "en": "Tell me about a time when you were late for an appointment or missed it.",
+          "ko": "약속에 늦거나 못 간 적을 말해 주세요.",
+          "tip": "이유 → 상대 반응 → 이후",
+          "level": "IH"
+        },
+        {
+          "id": "appointments-3",
+          "type": "describe",
+          "en": "What kinds of appointments do you usually have, such as with a doctor or a hair salon?",
+          "ko": "병원이나 미용실처럼 보통 어떤 예약이 있나요?",
+          "tip": "종류 2~3개 + 예약 방법",
+          "level": "IM"
+        }
+      ]
+    },
+    {
+      "id": "housework",
+      "titleKo": "집안일",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "housework-1",
+          "type": "describe",
+          "en": "What kinds of housework do you do at home? Which do you like or dislike?",
+          "ko": "집에서 어떤 집안일을 하나요? 좋아하는 것과 싫어하는 것은?",
+          "tip": "나열 → 호불호 + 이유",
+          "level": "IM"
+        },
+        {
+          "id": "housework-2",
+          "type": "routine",
+          "en": "How do family members share the housework in your home?",
+          "ko": "집에서 가족끼리 집안일을 어떻게 나누나요?",
+          "tip": "누가 무엇을 하는지",
+          "level": "IM"
+        },
+        {
+          "id": "housework-3",
+          "type": "compare",
+          "en": "How has the way people do housework changed compared to the past?",
+          "ko": "예전과 비교해 사람들이 집안일을 하는 방식은 어떻게 바뀌었나요?",
+          "tip": "가전제품(로봇청소기) + 역할 분담 변화",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "titleKo": "산업·기업",
+      "category": "unexpected",
+      "questions": [
+        {
+          "id": "industry-1",
+          "type": "describe",
+          "en": "What is a well-known company or industry in your country? Tell me about it.",
+          "ko": "당신 나라의 잘 알려진 회사나 산업은 무엇인가요? 말해 주세요.",
+          "tip": "회사·산업 소개 → 유명한 이유",
+          "level": "IM"
+        },
+        {
+          "id": "industry-2",
+          "type": "compare",
+          "en": "How has that industry changed over the past several years?",
+          "ko": "그 산업은 지난 몇 년 동안 어떻게 바뀌었나요?",
+          "tip": "예전 ↔ 지금, 현재완료",
+          "level": "IH"
+        },
+        {
+          "id": "industry-3",
+          "type": "issue",
+          "en": "What challenges does that industry face, and what do you think about its future?",
+          "ko": "그 산업이 겪는 어려움은 무엇이고, 미래는 어떻게 될 거라고 생각하나요?",
+          "tip": "어려움 2개 → 전망 → 의견",
+          "level": "AL"
         }
       ]
     },
     {
       "id": "roleplay_ask",
-      "titleKo": "롤플레이 — 질문하기",
+      "titleKo": "롤플레이 — 질문하기 (연습)",
       "questions": [
         {
           "id": "roleplay_ask-1",
           "type": "roleplay_ask",
           "en": "I'd like to give you a situation and ask you to act it out. You want to join a new gym. Call the gym and ask three or four questions about it.",
           "ko": "상황을 드리겠습니다. 새 헬스장에 등록하려 합니다. 헬스장에 전화해 질문 3~4개를 하세요.",
-          "tip": "인사 → 용건 → 질문 3~4개(가격·시간·시설) → 마무리"
+          "tip": "인사 → 용건 → 질문 3~4개(가격·시간·시설) → 마무리",
+          "level": "IH"
         },
         {
           "id": "roleplay_ask-2",
           "type": "roleplay_ask",
           "en": "You are planning to see a movie with a friend. Call your friend and ask three or four questions to make plans.",
           "ko": "친구와 영화를 보려 합니다. 친구에게 전화해 약속을 정하는 질문 3~4개를 하세요.",
-          "tip": "Would you ~? / What time ~? / Where should we ~?"
+          "tip": "Would you ~? / What time ~? / Where should we ~?",
+          "level": "IH"
         },
         {
           "id": "roleplay_ask-3",
           "type": "roleplay_ask",
           "en": "You want to rent an apartment. Call the real estate agent and ask three or four questions about the apartment.",
           "ko": "아파트를 구하려 합니다. 부동산에 전화해 질문 3~4개를 하세요.",
-          "tip": "위치·월세·교통·입주 날짜"
+          "tip": "위치·월세·교통·입주 날짜",
+          "level": "IH"
         }
-      ]
+      ],
+      "category": "roleplay"
     },
     {
       "id": "roleplay_solve",
-      "titleKo": "롤플레이 — 문제 해결",
+      "titleKo": "롤플레이 — 문제 해결 (연습)",
       "questions": [
         {
           "id": "roleplay_solve-1",
           "type": "roleplay_solve",
           "en": "You bought a new phone, but it doesn't work properly. Call the store, explain the problem, and suggest two or three ways to solve it.",
           "ko": "새 휴대폰을 샀는데 제대로 작동하지 않습니다. 매장에 전화해 문제를 설명하고 해결책 2~3개를 제안하세요.",
-          "tip": "상황 설명 → 문제 → 대안 2~3개(교환·환불·수리)"
+          "tip": "상황 설명 → 문제 → 대안 2~3개(교환·환불·수리)",
+          "level": "IH"
         },
         {
           "id": "roleplay_solve-2",
           "type": "roleplay_solve",
           "en": "You can't go to the movie with your friend because something came up. Call your friend, explain the situation, and suggest two or three alternatives.",
           "ko": "일이 생겨 친구와 영화를 못 보게 됐습니다. 친구에게 전화해 상황을 설명하고 대안 2~3개를 제안하세요.",
-          "tip": "사과 → 이유 → 대안(다른 날·다른 영화·환불)"
+          "tip": "사과 → 이유 → 대안(다른 날·다른 영화·환불)",
+          "level": "IH"
         },
         {
           "id": "roleplay_solve-3",
           "type": "experience",
           "en": "That's the end of the situation. Have you ever had a similar problem with a product you bought? Tell me what happened and how you solved it.",
           "ko": "상황은 끝났습니다. 산 물건에 비슷한 문제가 있었던 적이 있나요? 무슨 일이 있었고 어떻게 해결했나요?",
-          "tip": "롤플레이 후속 질문 — 과거 시제 경험담"
+          "tip": "롤플레이 후속 질문 — 과거 시제 경험담",
+          "level": "IH"
+        }
+      ],
+      "category": "roleplay"
+    },
+    {
+      "id": "rp_trip",
+      "titleKo": "롤플레이 — 친구와 여행 계획",
+      "category": "roleplay",
+      "questions": [
+        {
+          "id": "rp_trip-1",
+          "type": "roleplay_ask",
+          "en": "I'd like to give you a situation and ask you to act it out. Your friend has invited you on a trip. Call your friend and ask three or four questions about the trip.",
+          "ko": "상황을 드리겠습니다. 친구가 여행에 초대했습니다. 친구에게 전화해 여행에 대해 질문 3~4개를 하세요.",
+          "tip": "인사 → 언제·어디·교통·비용 질문 → 마무리",
+          "level": "IH"
+        },
+        {
+          "id": "rp_trip-2",
+          "type": "roleplay_solve",
+          "en": "I'm sorry, but there is a problem. You can't go on the trip because of a work emergency. Call your friend, explain the situation, and suggest two or three alternatives.",
+          "ko": "문제가 생겼습니다. 급한 일 때문에 여행을 못 가게 됐습니다. 친구에게 전화해 상황을 설명하고 대안 2~3개를 제안하세요.",
+          "tip": "사과 → 이유 → 대안(날짜 변경·다음 여행·대신 할 일)",
+          "level": "IH"
+        },
+        {
+          "id": "rp_trip-3",
+          "type": "experience",
+          "en": "That's the end of the situation. Have you ever had to cancel plans at the last minute? Tell me what happened.",
+          "ko": "상황은 끝났습니다. 마지막 순간에 계획을 취소한 적이 있나요? 무슨 일이 있었는지 말해 주세요.",
+          "tip": "과거 시제 경험담",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "rp_restaurant",
+      "titleKo": "롤플레이 — 식당 예약",
+      "category": "roleplay",
+      "questions": [
+        {
+          "id": "rp_restaurant-1",
+          "type": "roleplay_ask",
+          "en": "You want to make a reservation at a restaurant for a family dinner. Call the restaurant and ask three or four questions.",
+          "ko": "가족 저녁 식사를 위해 식당을 예약하려 합니다. 식당에 전화해 질문 3~4개를 하세요.",
+          "tip": "인원·시간·메뉴·주차",
+          "level": "IH"
+        },
+        {
+          "id": "rp_restaurant-2",
+          "type": "roleplay_solve",
+          "en": "When you arrive at the restaurant, they say there is no record of your reservation. Explain the situation to the staff and suggest two or three ways to solve it.",
+          "ko": "식당에 도착했더니 예약 기록이 없다고 합니다. 직원에게 상황을 설명하고 해결 방법 2~3개를 제안하세요.",
+          "tip": "상황 설명 → 대안(대기·다른 자리·다른 지점)",
+          "level": "IH"
+        },
+        {
+          "id": "rp_restaurant-3",
+          "type": "experience",
+          "en": "Have you ever had a problem at a restaurant? Tell me what happened and how it was resolved.",
+          "ko": "식당에서 문제가 생긴 적이 있나요? 무슨 일이 있었고 어떻게 해결됐는지 말해 주세요.",
+          "tip": "문제 → 해결 → 느낌",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "rp_class",
+      "titleKo": "롤플레이 — 수업 등록",
+      "category": "roleplay",
+      "questions": [
+        {
+          "id": "rp_class-1",
+          "type": "roleplay_ask",
+          "en": "You want to sign up for a cooking class. Call the cooking school and ask three or four questions about the class.",
+          "ko": "요리 수업에 등록하려 합니다. 요리 학원에 전화해 수업에 대해 질문 3~4개를 하세요.",
+          "tip": "시간·비용·준비물·수준",
+          "level": "IH"
+        },
+        {
+          "id": "rp_class-2",
+          "type": "roleplay_solve",
+          "en": "After signing up, you find out that you can't attend the first class. Call the school, explain the problem, and suggest some alternatives.",
+          "ko": "등록하고 보니 첫 수업에 갈 수 없게 됐습니다. 학원에 전화해 문제를 설명하고 대안을 제안하세요.",
+          "tip": "사과 → 이유 → 보강·환불·다른 반",
+          "level": "IH"
+        },
+        {
+          "id": "rp_class-3",
+          "type": "experience",
+          "en": "Have you ever taken a class to learn something new? Tell me about it.",
+          "ko": "새로운 것을 배우려고 수업을 들어 본 적이 있나요? 말해 주세요.",
+          "tip": "무엇을 → 왜 → 어땠는지",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "rp_delivery",
+      "titleKo": "롤플레이 — 택배·온라인 주문",
+      "category": "roleplay",
+      "questions": [
+        {
+          "id": "rp_delivery-1",
+          "type": "roleplay_ask",
+          "en": "You want to buy something online but have some questions. Call the customer service center and ask three or four questions.",
+          "ko": "온라인으로 물건을 사려는데 궁금한 점이 있습니다. 고객센터에 전화해 질문 3~4개를 하세요.",
+          "tip": "배송 기간·교환·결제",
+          "level": "IH"
+        },
+        {
+          "id": "rp_delivery-2",
+          "type": "roleplay_solve",
+          "en": "The item you ordered arrived broken. Call the customer service center, explain the problem, and suggest two or three solutions.",
+          "ko": "주문한 물건이 깨져서 왔습니다. 고객센터에 전화해 문제를 설명하고 해결책 2~3개를 제안하세요.",
+          "tip": "상태 설명 → 교환·환불·부분 환불",
+          "level": "IH"
+        },
+        {
+          "id": "rp_delivery-3",
+          "type": "experience",
+          "en": "Tell me about a time when an order you placed went wrong.",
+          "ko": "주문이 잘못된 적을 말해 주세요.",
+          "tip": "무엇을 주문 → 무슨 문제 → 해결",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "rp_neighbor",
+      "titleKo": "롤플레이 — 이웃과의 문제",
+      "category": "roleplay",
+      "questions": [
+        {
+          "id": "rp_neighbor-1",
+          "type": "roleplay_ask",
+          "en": "A new neighbor has moved in next door. Visit your neighbor, introduce yourself, and ask three or four questions.",
+          "ko": "옆집에 새 이웃이 이사 왔습니다. 찾아가 인사하고 질문 3~4개를 하세요.",
+          "tip": "인사 → 어디서 왔는지·가족·도움 필요한지",
+          "level": "IH"
+        },
+        {
+          "id": "rp_neighbor-2",
+          "type": "roleplay_solve",
+          "en": "Your neighbor has been making a lot of noise late at night. Talk to your neighbor, explain the problem politely, and suggest some solutions.",
+          "ko": "이웃이 밤늦게 시끄럽게 합니다. 이웃에게 정중하게 문제를 말하고 해결책을 제안하세요.",
+          "tip": "정중한 시작 → 문제 → 시간 정하기·매트 등",
+          "level": "IH"
+        },
+        {
+          "id": "rp_neighbor-3",
+          "type": "experience",
+          "en": "Have you ever had a problem with a neighbor? Tell me what happened.",
+          "ko": "이웃과 문제가 있었던 적이 있나요? 무슨 일이 있었는지 말해 주세요.",
+          "tip": "상황 → 대화 → 결과",
+          "level": "IH"
+        }
+      ]
+    },
+    {
+      "id": "rp_hotel",
+      "titleKo": "롤플레이 — 호텔 예약",
+      "category": "roleplay",
+      "questions": [
+        {
+          "id": "rp_hotel-1",
+          "type": "roleplay_ask",
+          "en": "You are planning a trip and want to book a hotel. Call the hotel and ask three or four questions about the rooms and services.",
+          "ko": "여행을 계획 중이라 호텔을 예약하려 합니다. 호텔에 전화해 객실과 서비스에 대해 질문 3~4개를 하세요.",
+          "tip": "가격·조식·위치·체크인 시간",
+          "level": "IH"
+        },
+        {
+          "id": "rp_hotel-2",
+          "type": "roleplay_solve",
+          "en": "When you check in, the room is not the one you reserved. Explain the problem to the front desk and suggest two or three solutions.",
+          "ko": "체크인했는데 예약한 방이 아닙니다. 프런트에 문제를 설명하고 해결책 2~3개를 제안하세요.",
+          "tip": "예약 내용 → 차이 → 방 변경·할인·업그레이드",
+          "level": "IH"
+        },
+        {
+          "id": "rp_hotel-3",
+          "type": "experience",
+          "en": "Tell me about a time when something didn't go as planned during a trip.",
+          "ko": "여행 중 계획대로 되지 않은 일을 말해 주세요.",
+          "tip": "계획 → 문제 → 대처",
+          "level": "IH"
         }
       ]
     }

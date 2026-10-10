@@ -31,7 +31,7 @@ class BackupTest {
         try {
             val apple = source.wordDao().find("en", "apple")!!
             source.userWordDao().insert(UserWordEntity(apple.id, 3, 1, 500))
-            source.grammarReviewDao().recordPractice("u1-04", "present", today = 100, now = 50)
+            source.grammarReviewDao().recordPractice("en", "u1-04", "present", today = 100, now = 50)
             source.speakingDao().insert(SpeakingAnswerEntity(questionId = "home-1", topicId = "home", createdAt = 10, durationMs = 60_000,
                 transcript = "t", editedText = "e", wordCount = 1, wordsPerMinute = 1, fillerCount = 0, sentenceCount = 1, mockId = 9))
             source.shadowingAttemptDao().insert(ShadowingAttemptEntity(videoId = "aircAruvnKk", sentence = "s", heard = "h", matchRate = 0.5, createdAt = 5))
@@ -41,7 +41,7 @@ class BackupTest {
             assertEquals(RestoreResult(1, 0, 1, 1, 1), first)
             val targetApple = target.wordDao().find("en", "apple")!!
             assertEquals(3, target.userWordDao().get(targetApple.id)!!.correctCount)
-            assertEquals(1, target.grammarReviewDao().get("u1-04")!!.stage)
+            assertEquals(1, target.grammarReviewDao().get("en", "u1-04")!!.stage)
             assertEquals(9L, target.speakingDao().all("en").single().mockId)
             assertEquals(1, target.shadowingAttemptDao().all("en").size)
 

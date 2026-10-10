@@ -1,5 +1,6 @@
 package com.jooh.opic.feature.grammar
 
+import com.jooh.opic.core.common.StudyLanguages
 import com.jooh.opic.core.database.GrammarReviewDao
 import java.time.LocalDate
 
@@ -13,13 +14,14 @@ interface GrammarReviewStore {
 
 class RoomGrammarReviewStore(
     private val dao: GrammarReviewDao,
+    private val language: String = StudyLanguages.EN.code,
     private val today: () -> Long = { LocalDate.now().toEpochDay() },
 ) : GrammarReviewStore {
-    override suspend fun dueIds() = dao.due(today()).map { it.exerciseId }
+    override suspend fun dueIds() = dao.due(language, today()).map { it.exerciseId }
     override suspend fun recordPractice(exerciseId: String, unitId: String) =
-        dao.recordPractice(exerciseId, unitId, today(), System.currentTimeMillis())
+        dao.recordPractice(language, exerciseId, unitId, today(), System.currentTimeMillis())
     override suspend fun recordReview(exerciseId: String, firstTryCorrect: Boolean) =
-        dao.recordReview(exerciseId, firstTryCorrect, today(), System.currentTimeMillis())
+        dao.recordReview(language, exerciseId, firstTryCorrect, today(), System.currentTimeMillis())
 }
 
 /** grammar.json에서 빠진 문제는 복습 목록에서 건너뛴다 (기록은 지우지 않는다). */

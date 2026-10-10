@@ -58,9 +58,9 @@ class MigrationTest {
             assertEquals(2, progress.correctCount)
             assertEquals(1, progress.wrongCount)
             assertEquals("1", db.dataMetaDao().get(WordImporter.VERSION_KEY))
-            assertNull(db.grammarReviewDao().get("u1-01"))
-            db.grammarReviewDao().recordPractice("u1-01", "present-simple-continuous", today = 100, now = 1)
-            assertEquals(1, db.grammarReviewDao().due(101).size)
+            assertNull(db.grammarReviewDao().get("en", "u1-01"))
+            db.grammarReviewDao().recordPractice("en", "u1-01", "present-simple-continuous", today = 100, now = 1)
+            assertEquals(1, db.grammarReviewDao().due("en", 101).size)
         } finally {
             db.close()
         }
@@ -74,7 +74,7 @@ class MigrationTest {
         val db = Room.databaseBuilder(context, OpicDatabase::class.java, file.absolutePath).addMigrations(*ALL_MIGRATIONS).build()
         try {
             assertEquals(2, db.userWordDao().get(7)!!.correctCount)
-            assertEquals(2, db.grammarReviewDao().get("u1-04")!!.stage)
+            assertEquals(2, db.grammarReviewDao().get("en", "u1-04")!!.stage)
             val id = db.speakingDao().insert(SpeakingAnswerEntity(questionId = "home-1", topicId = "home", createdAt = 10, durationMs = 60_000,
                 transcript = "I live here.", editedText = "I live here.", wordCount = 3, wordsPerMinute = 3, fillerCount = 0, sentenceCount = 1))
             db.speakingDao().updateEdit("en", id, "I lived here.", 3, 3, 0, 1)
@@ -87,25 +87,44 @@ class MigrationTest {
         }
     }
 
+    @Test fun v3ToV4MovesReviewsToEnglishAndSeparatesLanguages() = runBlocking {
+        val file = context.getDatabasePath("migration-v3-test.db").also { it.parentFile?.mkdirs(); it.delete() }
+        create(file, "schema.v3", 3) { db ->
+            db.execSQL("INSERT INTO grammar_reviews (exerciseId, unitId, stage, dueEpochDay, wrongCount, lastStudiedAt) VALUES ('c4-01', 'c4', 2, 300, 3, 99)")
+        }
+        val db = Room.databaseBuilder(context, OpicDatabase::class.java, file.absolutePath).addMigrations(*ALL_MIGRATIONS).build()
+        try {
+            assertEquals(2, db.userWordDao().get(7)!!.correctCount)
+            val moved = db.grammarReviewDao().get("en", "c4-01")!!
+            assertEquals(3, moved.wrongCount); assertEquals("c4", moved.unitId)
+            assertNull(db.grammarReviewDao().get("es", "c4-01"))
+            db.grammarReviewDao().recordPractice("es", "c4-01", "c4", today = 100, now = 1)
+            assertEquals(1, db.grammarReviewDao().all("es").size)
+            assertEquals(3, db.grammarReviewDao().get("en", "c4-01")!!.wrongCount)
+        } finally {
+            db.close()
+        }
+    }
+
     @Test fun reviewLifecycle() = runBlocking {
         val db = Room.inMemoryDatabaseBuilder(context, OpicDatabase::class.java).build()
         val dao = db.grammarReviewDao()
         try {
-            dao.recordPractice("u2-01", "past-simple", today = 100, now = 1)
-            assertEquals(0, dao.due(100).size)
-            assertEquals(1, dao.due(101).size)
-            dao.recordReview("u2-01", firstTryCorrect = true, today = 101, now = 2)
-            assertEquals(2, dao.get("u2-01")!!.stage)
-            assertEquals(104L, dao.get("u2-01")!!.dueEpochDay)
-            dao.recordReview("u2-01", firstTryCorrect = false, today = 104, now = 3)
-            assertEquals(1, dao.get("u2-01")!!.stage)
-            assertEquals(2, dao.get("u2-01")!!.wrongCount)
-            dao.recordReview("u2-01", true, 105, 4); dao.recordReview("u2-01", true, 108, 5)
-            assertEquals(3, dao.get("u2-01")!!.stage)
-            dao.recordReview("u2-01", true, 115, 6)
-            assertNull(dao.get("u2-01"))
-            dao.recordReview("unknown", true, 115, 7)
-            assertNull(dao.get("unknown"))
+            dao.recordPractice("en", "u2-01", "past-simple", today = 100, now = 1)
+            assertEquals(0, dao.due("en", 100).size)
+            assertEquals(1, dao.due("en", 101).size)
+            dao.recordReview("en", "u2-01", firstTryCorrect = true, today = 101, now = 2)
+            assertEquals(2, dao.get("en", "u2-01")!!.stage)
+            assertEquals(104L, dao.get("en", "u2-01")!!.dueEpochDay)
+            dao.recordReview("en", "u2-01", firstTryCorrect = false, today = 104, now = 3)
+            assertEquals(1, dao.get("en", "u2-01")!!.stage)
+            assertEquals(2, dao.get("en", "u2-01")!!.wrongCount)
+            dao.recordReview("en", "u2-01", true, 105, 4); dao.recordReview("en", "u2-01", true, 108, 5)
+            assertEquals(3, dao.get("en", "u2-01")!!.stage)
+            dao.recordReview("en", "u2-01", true, 115, 6)
+            assertNull(dao.get("en", "u2-01"))
+            dao.recordReview("en", "unknown", true, 115, 7)
+            assertNull(dao.get("en", "unknown"))
         } finally {
             db.close()
         }

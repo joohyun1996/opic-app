@@ -34,10 +34,11 @@ data class UserWordEntity(
 @Entity(tableName = "data_meta")
 data class DataMetaEntity(@PrimaryKey val key: String, val value: String)
 
-/** 문법 문제 간격 복습 (DB v2). exerciseId는 grammar.json의 문제 id. 단어 테이블과 관계 없음. */
-@Entity(tableName = "grammar_reviews")
+/** 문법 문제 간격 복습 (DB v2, v4에서 language 추가). 키는 (language, exerciseId). 단어 테이블과 관계 없음. */
+@Entity(tableName = "grammar_reviews", primaryKeys = ["language", "exerciseId"])
 data class GrammarReviewEntity(
-    @PrimaryKey val exerciseId: String,
+    val language: String,
+    val exerciseId: String,
     val unitId: String,
     val stage: Int,
     val dueEpochDay: Long,

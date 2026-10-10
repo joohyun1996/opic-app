@@ -33,4 +33,19 @@ val MIGRATION_2_3 = object : Migration(2, 3) {
     }
 }
 
-val ALL_MIGRATIONS = arrayOf(MIGRATION_1_2, MIGRATION_2_3)
+/**
+ * v3 → v4 (TASK 35): grammar_reviews에 language를 넣고 키를 (language, exerciseId)로 바꾼다.
+ * SQLite는 기본 키를 못 바꾸므로 새 테이블에 복사 → 기존 삭제 → 이름 변경. 기존 행은 모두 'en'.
+ */
+val MIGRATION_3_4 = object : Migration(3, 4) {
+    override fun migrate(db: SupportSQLiteDatabase) {
+        listOf(
+            "CREATE TABLE IF NOT EXISTS `grammar_reviews_new` (`language` TEXT NOT NULL, `exerciseId` TEXT NOT NULL, `unitId` TEXT NOT NULL, `stage` INTEGER NOT NULL, `dueEpochDay` INTEGER NOT NULL, `wrongCount` INTEGER NOT NULL, `lastStudiedAt` INTEGER NOT NULL, PRIMARY KEY(`language`, `exerciseId`))",
+            "INSERT INTO `grammar_reviews_new` (`language`, `exerciseId`, `unitId`, `stage`, `dueEpochDay`, `wrongCount`, `lastStudiedAt`) SELECT 'en', `exerciseId`, `unitId`, `stage`, `dueEpochDay`, `wrongCount`, `lastStudiedAt` FROM `grammar_reviews`",
+            "DROP TABLE `grammar_reviews`",
+            "ALTER TABLE `grammar_reviews_new` RENAME TO `grammar_reviews`",
+        ).forEach(db::execSQL)
+    }
+}
+
+val ALL_MIGRATIONS = arrayOf(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4)

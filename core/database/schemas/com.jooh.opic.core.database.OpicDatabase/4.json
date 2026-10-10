@@ -1,0 +1,435 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 4,
+    "identityHash": "aa969164f50d8474c7bf2aea836dbc1e",
+    "entities": [
+      {
+        "tableName": "words",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `language` TEXT NOT NULL, `word` TEXT NOT NULL, `seq` INTEGER NOT NULL, `phonetic` TEXT NOT NULL, `meaningKo` TEXT NOT NULL, `meaningEn` TEXT NOT NULL, `example` TEXT NOT NULL, `exampleKo` TEXT NOT NULL, `level` INTEGER NOT NULL, `category` TEXT NOT NULL, `partOfSpeech` TEXT NOT NULL, `collocations` TEXT NOT NULL, `deleted` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "language",
+            "columnName": "language",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "word",
+            "columnName": "word",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "seq",
+            "columnName": "seq",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "phonetic",
+            "columnName": "phonetic",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "meaningKo",
+            "columnName": "meaningKo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "meaningEn",
+            "columnName": "meaningEn",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "example",
+            "columnName": "example",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "exampleKo",
+            "columnName": "exampleKo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "partOfSpeech",
+            "columnName": "partOfSpeech",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "collocations",
+            "columnName": "collocations",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deleted",
+            "columnName": "deleted",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_words_language_word",
+            "unique": true,
+            "columnNames": [
+              "language",
+              "word"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_words_language_word` ON `${TABLE_NAME}` (`language`, `word`)"
+          },
+          {
+            "name": "index_words_language_seq",
+            "unique": true,
+            "columnNames": [
+              "language",
+              "seq"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_words_language_seq` ON `${TABLE_NAME}` (`language`, `seq`)"
+          }
+        ]
+      },
+      {
+        "tableName": "user_words",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wordId` INTEGER NOT NULL, `correctCount` INTEGER NOT NULL, `wrongCount` INTEGER NOT NULL, `lastStudiedAt` INTEGER, PRIMARY KEY(`wordId`), FOREIGN KEY(`wordId`) REFERENCES `words`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "wordId",
+            "columnName": "wordId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correctCount",
+            "columnName": "correctCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wrongCount",
+            "columnName": "wrongCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastStudiedAt",
+            "columnName": "lastStudiedAt",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "wordId"
+          ]
+        },
+        "foreignKeys": [
+          {
+            "table": "words",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "wordId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "data_meta",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`key` TEXT NOT NULL, `value` TEXT NOT NULL, PRIMARY KEY(`key`))",
+        "fields": [
+          {
+            "fieldPath": "key",
+            "columnName": "key",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "value",
+            "columnName": "value",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "key"
+          ]
+        }
+      },
+      {
+        "tableName": "grammar_reviews",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`language` TEXT NOT NULL, `exerciseId` TEXT NOT NULL, `unitId` TEXT NOT NULL, `stage` INTEGER NOT NULL, `dueEpochDay` INTEGER NOT NULL, `wrongCount` INTEGER NOT NULL, `lastStudiedAt` INTEGER NOT NULL, PRIMARY KEY(`language`, `exerciseId`))",
+        "fields": [
+          {
+            "fieldPath": "language",
+            "columnName": "language",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "exerciseId",
+            "columnName": "exerciseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unitId",
+            "columnName": "unitId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stage",
+            "columnName": "stage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dueEpochDay",
+            "columnName": "dueEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wrongCount",
+            "columnName": "wrongCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastStudiedAt",
+            "columnName": "lastStudiedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "language",
+            "exerciseId"
+          ]
+        }
+      },
+      {
+        "tableName": "speaking_answers",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `language` TEXT NOT NULL, `questionId` TEXT NOT NULL, `topicId` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `durationMs` INTEGER NOT NULL, `transcript` TEXT NOT NULL, `editedText` TEXT NOT NULL, `wordCount` INTEGER NOT NULL, `wordsPerMinute` INTEGER NOT NULL, `fillerCount` INTEGER NOT NULL, `sentenceCount` INTEGER NOT NULL, `mockId` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "language",
+            "columnName": "language",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionId",
+            "columnName": "questionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "topicId",
+            "columnName": "topicId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "durationMs",
+            "columnName": "durationMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "transcript",
+            "columnName": "transcript",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "editedText",
+            "columnName": "editedText",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wordCount",
+            "columnName": "wordCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wordsPerMinute",
+            "columnName": "wordsPerMinute",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fillerCount",
+            "columnName": "fillerCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sentenceCount",
+            "columnName": "sentenceCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mockId",
+            "columnName": "mockId",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_speaking_answers_language_questionId",
+            "unique": false,
+            "columnNames": [
+              "language",
+              "questionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_speaking_answers_language_questionId` ON `${TABLE_NAME}` (`language`, `questionId`)"
+          },
+          {
+            "name": "index_speaking_answers_language_mockId",
+            "unique": false,
+            "columnNames": [
+              "language",
+              "mockId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_speaking_answers_language_mockId` ON `${TABLE_NAME}` (`language`, `mockId`)"
+          }
+        ]
+      },
+      {
+        "tableName": "shadowing_attempts",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `language` TEXT NOT NULL, `videoId` TEXT NOT NULL, `sentence` TEXT NOT NULL, `heard` TEXT NOT NULL, `matchRate` REAL NOT NULL, `createdAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "language",
+            "columnName": "language",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "videoId",
+            "columnName": "videoId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sentence",
+            "columnName": "sentence",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "heard",
+            "columnName": "heard",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "matchRate",
+            "columnName": "matchRate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_shadowing_attempts_language_videoId",
+            "unique": false,
+            "columnNames": [
+              "language",
+              "videoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_shadowing_attempts_language_videoId` ON `${TABLE_NAME}` (`language`, `videoId`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'aa969164f50d8474c7bf2aea836dbc1e')"
+    ]
+  }
+}

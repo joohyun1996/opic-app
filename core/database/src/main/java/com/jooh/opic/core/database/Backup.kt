@@ -1,6 +1,7 @@
 package com.jooh.opic.core.database
 
 import androidx.room.withTransaction
+import com.jooh.opic.core.common.StudyLanguages
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
@@ -15,7 +16,7 @@ data class BackupFile(
     val shadowingAttempts: List<BackupShadowingAttempt> = emptyList(),
 )
 @Serializable data class BackupUserWord(val language: String, val word: String, val correctCount: Int, val wrongCount: Int, val lastStudiedAt: Long? = null)
-@Serializable data class BackupGrammarReview(val exerciseId: String, val unitId: String, val stage: Int, val dueEpochDay: Long, val wrongCount: Int, val lastStudiedAt: Long)
+@Serializable data class BackupGrammarReview(val language: String = "en", val exerciseId: String, val unitId: String, val stage: Int, val dueEpochDay: Long, val wrongCount: Int, val lastStudiedAt: Long)
 @Serializable data class BackupSpeakingAnswer(
     val language: String, val questionId: String, val topicId: String, val createdAt: Long, val durationMs: Long, val transcript: String,
     val editedText: String, val wordCount: Int, val wordsPerMinute: Int, val fillerCount: Int, val sentenceCount: Int, val mockId: Long? = null,
@@ -24,13 +25,13 @@ data class BackupFile(
 
 data class RestoreResult(val userWords: Int, val skippedWords: Int, val grammarReviews: Int, val speakingAnswers: Int, val shadowingAttempts: Int)
 
-class BackupManager(private val db: OpicDatabase, private val languages: List<String> = listOf("en")) {
+class BackupManager(private val db: OpicDatabase, private val languages: List<String> = StudyLanguages.codes) {
     private val json = Json { ignoreUnknownKeys = true; prettyPrint = false }
 
     suspend fun export(now: Long): String = json.encodeToString(BackupFile.serializer(), BackupFile(
         exportedAt = now,
         userWords = languages.flatMap { lang -> db.userWordDao().backupRows(lang).map { BackupUserWord(it.language, it.word, it.correctCount, it.wrongCount, it.lastStudiedAt) } },
-        grammarReviews = db.grammarReviewDao().all().map { BackupGrammarReview(it.exerciseId, it.unitId, it.stage, it.dueEpochDay, it.wrongCount, it.lastStudiedAt) },
+        grammarReviews = languages.flatMap { lang -> db.grammarReviewDao().all(lang).map { BackupGrammarReview(it.language, it.exerciseId, it.unitId, it.stage, it.dueEpochDay, it.wrongCount, it.lastStudiedAt) } },
         speakingAnswers = languages.flatMap { lang -> db.speakingDao().all(lang).map {
             BackupSpeakingAnswer(it.language, it.questionId, it.topicId, it.createdAt, it.durationMs, it.transcript, it.editedText,
                 it.wordCount, it.wordsPerMinute, it.fillerCount, it.sentenceCount, it.mockId)
@@ -57,8 +58,8 @@ class BackupManager(private val db: OpicDatabase, private val languages: List<St
                 }
             }
             for (r in file.grammarReviews) {
-                val current = db.grammarReviewDao().get(r.exerciseId)
-                val incoming = GrammarReviewEntity(r.exerciseId, r.unitId, r.stage, r.dueEpochDay, r.wrongCount, r.lastStudiedAt)
+                val current = db.grammarReviewDao().get(r.language, r.exerciseId)
+                val incoming = GrammarReviewEntity(r.language, r.exerciseId, r.unitId, r.stage, r.dueEpochDay, r.wrongCount, r.lastStudiedAt)
                 when {
                     current == null -> { db.grammarReviewDao().insert(incoming); reviews++ }
                     r.lastStudiedAt > current.lastStudiedAt -> { db.grammarReviewDao().update(incoming); reviews++ }

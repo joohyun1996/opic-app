@@ -81,3 +81,13 @@
 - `player` 상태는 새 factory에서만 바꾸고, 화면을 떠날 때 null로
 - 수정 후 DevTools `/json`에 페이지 1개가 보이고 플레이어가 그려지는지 확인 (`adb forward tcp:9222 localabstract:webview_devtools_remote_$(adb shell pidof com.jooh.opic)` → `curl localhost:9222/json`)
 - 3차에서 추가한 domStorage·콘솔 로그·상태 표시는 유지
+
+## 5차 리뷰 — 실기기 재확인 (2026-10-10, `e4c5764..4f98850`)
+- 판정: **Request changes** (Must-fix 1, 작음)
+- 확인: WebView 정리를 `AndroidView(onRelease)`로 옮김 → 재생·DevTools 페이지 1개 ✅. 자막 가로채기(`shouldInterceptRequest` → `CaptionClient.intercept`)는 https·YouTube 호스트·`/api/timedtext`만 처리하고 나머지는 `null` ✅ — 실기기 149문장·2문장 표시. 0.75×, A-B 반복 ✅. 무음 태그 제거·입력 크기 막대 ✅
+- 짧은 녹음(1.5초 미만)·"자막 없음" 안내는 실기기 재현 안 됨 — 단위 테스트(`RecordingFeedbackTest`)로 대신, 다음 실기기 때 한 번 본다 (Nit)
+
+### Must-fix
+- **M1 일치율이 음수(-33.3%)** (`ShadowingScreen.kt` 일치율 표시) — `1 − WER`는 더 말한 단어(Insert)가 많으면 0 아래로 내려간다. 사용자가 원문보다 길게 말하는 건 흔한 상황
+  - 일치율 = **Match 개수 / 원문 단어 수** (0~100%)로 바꾸고, 그 아래에 "더 말한 단어 N개 · 빠뜨린 단어 N개 · 틀린 단어 N개"를 따로 표시
+  - `core:common/Shadowing.kt`에 `matchRate(diff: List<WordDiff>, referenceWords: Int): Double` 추가 + 테스트 (Insert만 많아도 0 이상, 원문 0단어면 0)

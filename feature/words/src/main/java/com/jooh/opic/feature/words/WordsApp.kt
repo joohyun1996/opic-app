@@ -29,7 +29,6 @@ fun WordsApp(
     speaker: Speaker,
     page: WordsPage,
     grammarCount: Int?,
-    debugAvailable: Boolean,
     grammarDue: Int = 0,
     day: Int = 0,
     mode: String? = null,
@@ -77,7 +76,6 @@ fun WordsApp(
                         Card(onClick = {}, enabled = false, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(disabledContainerColor = New)) {
                             Text("중국어 (HSK) — 준비 중", Modifier.padding(20.dp))
                         }
-                        if (debugAvailable) TextButton(onClick = { navigate("debug") }) { Text("개발자 검증") }
                     }
                     WordsPage.DAYS -> Column {
                         TextButton(onClick = onBack) { Text("← 홈") }

@@ -43,7 +43,6 @@ fun OpicRoot(app: OpicApplication) {
             Toast.makeText(app, "기기 설정에서 영어 음성을 설치하세요", Toast.LENGTH_LONG).show()
         }
     }
-    val debug = debugContent(app)
     val navigate: (String) -> Unit = { nav.navigate(it) }
     val back: () -> Unit = { nav.safeBack() }
     WordsTheme {
@@ -55,23 +54,23 @@ fun OpicRoot(app: OpicApplication) {
                     val book = (grammarResult as? GrammarLoadResult.Loaded)?.book ?: return@LaunchedEffect
                     grammarDue = runCatching { app.grammarReviews.dueExercises(book).size }.getOrDefault(0)
                 }
-                WordsApp(app.database, importResult, speaker, WordsPage.HOME, grammarCount, debug != null,
+                WordsApp(app.database, importResult, speaker, WordsPage.HOME, grammarCount,
                     grammarDue = grammarDue, navigate = navigate, onBack = back)
             }
-            composable("days") { WordsApp(app.database, importResult, speaker, WordsPage.DAYS, grammarCount, debug != null,
+            composable("days") { WordsApp(app.database, importResult, speaker, WordsPage.DAYS, grammarCount,
                 navigate = navigate, onBack = back) }
             composable("day/{day}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
-                WordsApp(app.database, importResult, speaker, WordsPage.DAY, grammarCount, debug != null,
+                WordsApp(app.database, importResult, speaker, WordsPage.DAY, grammarCount,
                     day = entry.arguments?.getInt("day") ?: 1, navigate = navigate, onBack = back)
             }
             composable("study/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
-                WordsApp(app.database, importResult, speaker, WordsPage.STUDY, grammarCount, debug != null,
+                WordsApp(app.database, importResult, speaker, WordsPage.STUDY, grammarCount,
                     day = entry.arguments?.getInt("day") ?: 1, mode = entry.arguments?.getString("mode"), navigate = navigate, onBack = back)
             }
-            composable("wrong") { WordsApp(app.database, importResult, speaker, WordsPage.WRONG, grammarCount, debug != null,
+            composable("wrong") { WordsApp(app.database, importResult, speaker, WordsPage.WRONG, grammarCount,
                 navigate = navigate, onBack = back) }
             composable("study/wrong/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
-                WordsApp(app.database, importResult, speaker, WordsPage.WRONG_STUDY, grammarCount, debug != null,
+                WordsApp(app.database, importResult, speaker, WordsPage.WRONG_STUDY, grammarCount,
                     day = entry.arguments?.getInt("day") ?: 0, mode = entry.arguments?.getString("mode"), navigate = navigate, onBack = back)
             }
             composable("grammar") {
@@ -95,7 +94,6 @@ fun OpicRoot(app: OpicApplication) {
                     }
                 }
             }
-            if (debug != null) composable("debug") { debug { back() } }
         }
     }
 }

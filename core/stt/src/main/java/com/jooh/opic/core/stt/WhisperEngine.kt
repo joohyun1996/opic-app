@@ -20,15 +20,13 @@ internal object WhisperNative {
     external fun systemInfo(): String
 }
 
-/** TASK 14 측정 대상. 크기·SHA-256은 Hugging Face ggerganov/whisper.cpp 기준 (2026-10-07). */
+/** 사용자용 영어 음성 인식 모델. 크기·SHA-256은 Hugging Face ggerganov/whisper.cpp 기준 (2026-10-07). */
 object SttModels {
     private const val BASE = "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/"
     fun all(context: Context): List<ModelSpec> {
         val dir = File(context.noBackupFilesDir, "stt")
         fun spec(id: String, name: String, bytes: Long, sha: String) = ModelSpec(id, File(dir, name), BASE + name, bytes, sha)
         return listOf(
-            spec("large-v3", "ggml-large-v3-q5_0.bin", 1_081_140_203, "d75795ecff3f83b5faa89d1900604ad8c780abd5739fae406de19f23ecd98ad1"),
-            spec("large-v3-turbo", "ggml-large-v3-turbo-q5_0.bin", 574_041_195, "394221709cd5ad1f40c46e6031ca61bce88931e6e088c188294c6d5a55ffa7e2"),
             spec("small.en", "ggml-small.en-q5_1.bin", 190_098_681, "bfdff4894dcb76bbf647d56263ea2a96645423f1669176f4844a1bf8e478ad30"),
         )
     }

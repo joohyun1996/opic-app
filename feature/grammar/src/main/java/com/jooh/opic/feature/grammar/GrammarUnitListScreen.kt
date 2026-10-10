@@ -14,7 +14,7 @@ fun GrammarUnitListScreen(
     dueCount: Int = 0, onReview: () -> Unit = {},
 ) {
     Column {
-        TextButton(onClick = onBack) { Text("← 홈") }
+        Spacer(Modifier.height(8.dp)) // 탭 첫 화면: 오른쪽 위 ≡와 같은 줄 (TASK 25)
         Text("영문법", style = MaterialTheme.typography.headlineSmall)
         if (dueCount > 0) Button(onClick = onReview, modifier = Modifier.fillMaxWidth().padding(top = 8.dp)) { Text("오늘의 복습 ${dueCount}개 →") }
         else Text("오늘 복습 끝!", modifier = Modifier.padding(top = 8.dp), style = MaterialTheme.typography.bodyMedium)

@@ -45,8 +45,8 @@ fun WordsApp(
                 }
                 when (page) {
                     WordsPage.DAYS -> Column {
-                        TextButton(onClick = onBack) { Text("← 홈") }
-                        Text("영어 · Day 목록", style = MaterialTheme.typography.headlineSmall)
+                        Spacer(Modifier.height(8.dp)) // 탭 첫 화면: 오른쪽 위 ≡와 같은 줄 (TASK 25)
+                        Text("영단어", style = MaterialTheme.typography.headlineSmall)
                         Text("${state.days.size}일 · ${state.total}개 단어", Modifier.padding(vertical = 8.dp))
                         if (state.wrong > 0) Surface(onClick = { navigate("wrong") }, color = WrongBg, shape = MaterialTheme.shapes.small) {
                             Text("오답 ${state.wrong}개 →", Modifier.padding(8.dp), color = WrongInk)

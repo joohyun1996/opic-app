@@ -86,8 +86,7 @@ internal fun WrongScreen(database: OpicDatabase, speaker: Speaker, onBack: () ->
         }
         Row(Modifier.fillMaxWidth().padding(vertical = 12.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             for (mode in StudyMode.entries) {
-                Button(onClick = { onStudy(filter, mode) }, enabled = shown.isNotEmpty(), modifier = Modifier.weight(1f),
-                    colors = ButtonDefaults.buttonColors(containerColor = Ink)) { Text("${mode.title} 학습") }
+                Button(onClick = { onStudy(filter, mode) }, enabled = shown.isNotEmpty(), modifier = Modifier.weight(1f)) { Text("${mode.title} 학습") }
             }
         }
     }

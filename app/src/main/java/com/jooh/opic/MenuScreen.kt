@@ -24,17 +24,17 @@ fun MenuScreen(
             Text("전체 메뉴", style = MaterialTheme.typography.titleLarge)
         }
         MenuSection("학습") {
-            MenuRow("오답노트", "단어 ${wrongCount}개", onWrong)
+            MenuRow("오답노트", "단어 ${wrongCount}개", onWrong, divider = false)
             MenuRow("스피킹 기록", "답변·모의고사", onSpeakingHistory)
             MenuRow("중국어 (HSK)", "준비 중", null)
         }
         MenuSection("설정") {
-            MenuRow("AI 모델", "Gemma $gemmaStatus · Whisper $whisperStatus", onModels)
-            MenuRow("발음 듣기 (TTS) 속도", SPEECH_RATES.first { it.second == speechRate }.first) { picker = "rate" }
-            MenuRow("화면 테마", themeMode.label) { picker = "theme" }
+            MenuRow("AI 모델", "Gemma $gemmaStatus · Whisper $whisperStatus", onModels, divider = false)
+            MenuRow("발음 듣기 (TTS) 속도", SPEECH_RATES.first { it.second == speechRate }.first, onClick = { picker = "rate" })
+            MenuRow("화면 테마", themeMode.label, onClick = { picker = "theme" })
         }
         MenuSection("데이터") {
-            MenuRow("학습 기록 백업·복원", "단어·문법·스피킹·섀도잉", onBackup)
+            MenuRow("학습 기록 백업·복원", "단어·문법·스피킹·섀도잉", onBackup, divider = false)
         }
         Text("앱 정보 · v$version", Modifier.fillMaxWidth().padding(12.dp), style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant)
@@ -52,14 +52,15 @@ private fun MenuSection(title: String, content: @Composable ColumnScope.() -> Un
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Text(title, Modifier.padding(horizontal = 4.dp), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.onSurfaceVariant)
         Card(shape = MaterialTheme.shapes.medium, colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
-            Column(content = content)
+            Column { content() }
         }
     }
 }
 
 @Composable
-private fun MenuRow(title: String, value: String, onClick: (() -> Unit)?) {
+private fun MenuRow(title: String, value: String, onClick: (() -> Unit)?, divider: Boolean = true) {
     val modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)
+    if (divider) HorizontalDivider(Modifier.padding(horizontal = 16.dp), color = MaterialTheme.colorScheme.outlineVariant)
     Surface(onClick = { onClick?.invoke() }, enabled = onClick != null, color = MaterialTheme.colorScheme.surfaceVariant, modifier = modifier) {
         Row(Modifier.padding(horizontal = 16.dp, vertical = 14.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(title, Modifier.weight(1f), style = MaterialTheme.typography.bodyLarge)

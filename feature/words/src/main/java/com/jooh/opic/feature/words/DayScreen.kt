@@ -1,5 +1,6 @@
 package com.jooh.opic.feature.words
 
+import com.jooh.opic.core.ui.Opic
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -61,7 +62,7 @@ internal fun DayScreen(database: OpicDatabase, day: Int, speaker: Speaker, onBac
         }
         LinearProgressIndicator(
             progress = { if (list.isEmpty()) 0f else mastered.toFloat() / list.size },
-            modifier = Modifier.fillMaxWidth(), color = Ink, trackColor = New, drawStopIndicator = {},
+            modifier = Modifier.fillMaxWidth(), color = Opic.colors.accent, trackColor = Opic.colors.surfaceHigh, drawStopIndicator = {},
         )
         if (rows == null) {
             Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) { CircularProgressIndicator(color = Ink) }
@@ -90,8 +91,7 @@ internal fun DayScreen(database: OpicDatabase, day: Int, speaker: Speaker, onBac
         }
         Row(Modifier.fillMaxWidth().padding(vertical = 12.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             for (mode in StudyMode.entries) {
-                Button(onClick = { onStudy(mode) }, enabled = list.isNotEmpty(), modifier = Modifier.weight(1f),
-                    colors = ButtonDefaults.buttonColors(containerColor = Ink)) { Text("${mode.title} 학습") }
+                Button(onClick = { onStudy(mode) }, enabled = list.isNotEmpty(), modifier = Modifier.weight(1f)) { Text("${mode.title} 학습") }
             }
         }
     }

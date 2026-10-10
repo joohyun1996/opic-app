@@ -1,5 +1,6 @@
 package com.jooh.opic.feature.words
 
+import com.jooh.opic.core.ui.Opic
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -49,7 +50,7 @@ private fun ColumnScope.CardView(state: StudyState, word: WordEntity, mode: Stud
     Text("${mode.title} · ${state.index + 1} / ${state.cards.size}", style = MaterialTheme.typography.labelLarge)
     LinearProgressIndicator(
         progress = { (state.index + 1).toFloat() / state.cards.size },
-        modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp), color = Ink, trackColor = New, drawStopIndicator = {},
+        modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp), color = Opic.colors.accent, trackColor = Opic.colors.surfaceHigh, drawStopIndicator = {},
     )
     val border = when (state.checked) { true -> BorderStroke(2.dp, RightInk); false -> BorderStroke(2.dp, WrongInk); null -> BorderStroke(1.dp, Line) }
     // 카드는 내용 높이만 차지한다. 키보드가 올라와 공간이 줄면 카드 안에서 스크롤되고, 문제는 항상 보인다.
@@ -104,10 +105,9 @@ private fun ColumnScope.CardView(state: StudyState, word: WordEntity, mode: Stud
             OutlinedButton(onClick = model::markCorrect, modifier = Modifier.weight(1f)) { Text("맞았어요") }
         }
         if (state.checked == null) {
-            Button(onClick = model::check, enabled = state.input.isNotBlank(), modifier = Modifier.weight(1f),
-                colors = ButtonDefaults.buttonColors(containerColor = Ink)) { Text("확인") }
+            Button(onClick = model::check, enabled = state.input.isNotBlank(), modifier = Modifier.weight(1f)) { Text("확인") }
         } else {
-            Button(onClick = model::next, modifier = Modifier.weight(1f), colors = ButtonDefaults.buttonColors(containerColor = Ink)) { Text("다음") }
+            Button(onClick = model::next, modifier = Modifier.weight(1f)) { Text("다음") }
         }
     }
 }
@@ -129,7 +129,7 @@ private fun ResultView(state: StudyState, onRestart: () -> Unit, onBack: () -> U
         }
         Row(Modifier.fillMaxWidth().padding(vertical = 12.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             OutlinedButton(onClick = onRestart, modifier = Modifier.weight(1f)) { Text("다시 하기") }
-            Button(onClick = onBack, modifier = Modifier.weight(1f), colors = ButtonDefaults.buttonColors(containerColor = Ink)) { Text("목록으로") }
+            Button(onClick = onBack, modifier = Modifier.weight(1f)) { Text("목록으로") }
         }
     }
 }

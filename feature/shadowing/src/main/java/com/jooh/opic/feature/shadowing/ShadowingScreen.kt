@@ -59,7 +59,7 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit,
         }
     }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        TextButton(onClick = onBack) { Text("← 홈") }
+        // 탭 첫 화면: 제목이 오른쪽 위 ≡와 같은 줄 (TASK 25 — 화면 안쪽 여백만 사용)
         Text("섀도잉", style = MaterialTheme.typography.headlineSmall)
         OutlinedTextField(state.link, model::link, label = { Text("YouTube 링크") }, modifier = Modifier.fillMaxWidth())
         Button(onClick = {

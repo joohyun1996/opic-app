@@ -47,7 +47,6 @@ fun SpeakingScreen(model: SpeakingViewModel, onBack: () -> Unit) {
     val state by model.state.collectAsState()
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         if (model.catalog == null) {
-            TextButton(onClick = onBack) { Text("← 홈") }
             Text("스피킹 데이터를 불러오지 못했습니다", color = MaterialTheme.colorScheme.error)
             return@Column
         }
@@ -68,7 +67,7 @@ private val LEVEL_ORDER = listOf("IM", "IH", "AL")
 @Composable
 private fun TopicsPage(model: SpeakingViewModel, onBack: () -> Unit) {
     val catalog = model.catalog!!
-    TextButton(onClick = onBack) { Text("← 홈") }
+    // 탭 첫 화면: 제목이 오른쪽 위 ≡와 같은 줄 (TASK 25 — 화면 안쪽 여백만 사용)
     Text("스피킹", style = MaterialTheme.typography.headlineSmall)
     Text("질문을 듣고 바로 영어로 답해 보세요. 답변은 최대 2분입니다. ${catalog.topics.size}주제 ${catalog.topics.sumOf { it.questions.size }}문항")
     Button(onClick = model::startMock, modifier = Modifier.fillMaxWidth()) { Text("모의고사 (실제 시험 순서 15문항)") }

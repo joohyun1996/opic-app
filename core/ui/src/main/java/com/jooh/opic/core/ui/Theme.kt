@@ -58,7 +58,7 @@ private val LightScheme = lightColorScheme(
     background = Color.White, onBackground = Color(0xFF1C1C1E), surface = Color.White, onSurface = Color(0xFF1C1C1E),
     surfaceVariant = Color(0xFFF7F5F1), onSurfaceVariant = Color(0xFF5B5B60),
     surfaceContainerLowest = Color.White, surfaceContainerLow = Color(0xFFFAF9F6), surfaceContainer = Color(0xFFF7F5F1),
-    surfaceContainerHigh = Color(0xFFF2EFEA), surfaceContainerHighest = Color(0xFFECE9E4),
+    surfaceContainerHigh = Color(0xFFF2EFEA), surfaceContainerHighest = Color(0xFFF7F5F1), // Card 기본색 = 시안 카드색
     outline = Color(0xFFD9D4CC), outlineVariant = Color(0xFFECE9E4), error = Color(0xFFB3261E), onError = Color.White,
 )
 private val DarkScheme = darkColorScheme(
@@ -67,7 +67,7 @@ private val DarkScheme = darkColorScheme(
     background = Color(0xFF0E1430), onBackground = Color(0xFFF3F5FF), surface = Color(0xFF0E1430), onSurface = Color(0xFFF3F5FF),
     surfaceVariant = Color(0xFF151D40), onSurfaceVariant = Color(0xFFA3ACD3),
     surfaceContainerLowest = Color(0xFF0B1028), surfaceContainerLow = Color(0xFF121A3A), surfaceContainer = Color(0xFF151D40),
-    surfaceContainerHigh = Color(0xFF1B2550), surfaceContainerHighest = Color(0xFF24306A),
+    surfaceContainerHigh = Color(0xFF1B2550), surfaceContainerHighest = Color(0xFF151D40), // Card 기본색 = 시안 카드색
     outline = Color(0xFF3A4580), outlineVariant = Color(0xFF1F2853), error = Color(0xFFFF8A80), onError = Color(0xFF0E1430),
 )
 

@@ -69,3 +69,15 @@
 
 ### 실기기 재확인 (GPT, M1~M3 반영 후)
 - 같은 두 영상으로 재생·0.75×·A-B 3회 → 자막 목록·문장 선택 → 녹음(사용자가 문장 전체를 말함) → 비교. 스크린샷을 HANDOFF에 추가
+
+## 4차 리뷰 — 흰 화면 원인 확정 (2026-10-10, `1dc87f6`)
+- 판정: **Request changes** (M1 원인 확정, M2·M3는 3차 그대로)
+- Claude 실기기 재현: "열기" 탭 시각 `09:36:37.558`에 `cr_AwContents: WebView.destroy() called while WebView is still attached to window.` → 그 뒤 DevTools(`webview_devtools_remote_<pid>`) `/json`이 `[]`(페이지 0개), 화면 전체 흰색
+- 원인: `ShadowingScreen.kt`의 `DisposableEffect(state.videoId) { onDispose { player?.dispose() } }`. videoId가 바뀌는 같은 적용 단계에서 새 `AndroidView` factory가 `player`에 새 WebView를 넣은 뒤, 이전 키의 `onDispose`가 실행되어 **새 WebView를 destroy**한다. DOM storage·YouTube 문제가 아니었음 (1차 실기기부터 같은 원인)
+
+### M1 수정 방향
+- 위 `DisposableEffect` 삭제
+- `PlayerView`의 `AndroidView`에 `onRelease = { it.removeJavascriptInterface("OpicPlayer"); it.destroy() }` — `key(id)` 안이라 영상이 바뀔 때 그 WebView만 정리된다
+- `player` 상태는 새 factory에서만 바꾸고, 화면을 떠날 때 null로
+- 수정 후 DevTools `/json`에 페이지 1개가 보이고 플레이어가 그려지는지 확인 (`adb forward tcp:9222 localabstract:webview_devtools_remote_$(adb shell pidof com.jooh.opic)` → `curl localhost:9222/json`)
+- 3차에서 추가한 domStorage·콘솔 로그·상태 표시는 유지

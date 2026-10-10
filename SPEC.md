@@ -35,6 +35,7 @@
 | 2026-10-10 | v0.26.0 | 섀도잉 자막: 열면 소리 없이 잠깐 재생해 자막 요청을 일으키고 0초로 멈춤, en-GB·en-US 자막도 받음 — 표본 15/15 (TASK 23) |
 | 2026-10-10 | v0.27.0 | 디자인 개편 1: 공용 테마(밝게 = 흰·주황 / 어둡게 = 남색·파랑, IBM Plex Sans KR), 하단 바 5개, 전체 메뉴, 새 홈 (TASK 24) |
 | 2026-10-10 | v0.28.0 | 앱 로고, release 빌드 사용(스크롤), 탭 첫 화면 머리글 통일·메뉴 구분선·어두운 모드 버튼 색 수정 (TASK 24 추가·TASK 25) |
+| 2026-10-10 | v0.29.0 | 실전 영문법 탭 + 1부 문장의 뼈대 3장(30문제), 새 문제 유형 틀린 곳 찾기·구조 찾기 (TASK 26) |
 
 ## 인증
 ### POST /api/auth/login
@@ -250,6 +251,12 @@
 - **DB v2**: `grammar_reviews(exerciseId PK, unitId, stage, dueEpochDay, wrongCount, lastStudiedAt)` 추가. `MIGRATION_1_2`는 CREATE TABLE 한 문장, 기존 테이블 변경 없음
   - DAO: `GrammarReviewDao.due(today)`, `recordPractice(exerciseId, unitId, today, now)`, `recordReview(exerciseId, firstTryCorrect, today, now)`
 - grammar.json에서 빠진 문제의 기록은 남기고 목록에서만 건너뜀
+
+### 실전 영문법 (2026-10-10, TASK 26~)
+- 영문법 탭 위 "OPIc 문법 | 실전 영문법" 전환. 데이터 `exports/grammar-core.json`(grammar.json과 같은 형식 + 선택 필드), 앱이 두 파일을 합쳐 읽음(`mergeBooks`, id 중복 시 실패 → core 없이 OPIc만)
+- 장 필드: `track:"core"`, `part`(부), 설명 `concept`(왜 이렇게 쓸까) · `table`(한눈에 보기) · `koreanNote`(한국어와 다른 점) · `breakdowns`(문장 구조 분해: S 주어·V 동사·O 목적어·IO/DO·C 보어·OC·M 수식어, 역할별 색). `writingTask` 없으면 "직접 써 보기" 숨김
+- 새 문제 유형: `spot`(틀린 곳 찾기), `structure`(구조 찾기) — 문장의 단어 칩을 눌러 고름, 채점은 선택형과 같음(`TAP_KINDS`), 간격 복습 공유
+- 1부 문장의 뼈대: 1장 품사와 문장 성분, 2장 문장의 5형식, 3장 주어 찾기(긴 주어·It·There) — 장마다 10문제
 
 ## 섀도잉
 

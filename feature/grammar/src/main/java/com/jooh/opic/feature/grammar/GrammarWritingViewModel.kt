@@ -80,7 +80,7 @@ class GrammarWritingViewModel(
         val old = state.value
         val unit = old.unit ?: return
         val sentences = sentencesToCorrect(old.input)
-        if (!old.active || old.page != WritingPage.EDITOR || old.isCorrecting || sentences.size < unit.writingTask.minSentences) return
+        if (!old.active || old.page != WritingPage.EDITOR || old.isCorrecting || sentences.size < (unit.writingTask?.minSentences ?: Int.MAX_VALUE)) return
         mutableState.value = old.copy(isCorrecting = true, total = sentences.size, results = emptyList())
         job = viewModelScope.launch(Dispatchers.IO) {
             try {

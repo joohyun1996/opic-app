@@ -1,0 +1,1072 @@
+{
+ "dataVersion": 1,
+ "units": [
+  {
+   "id": "c1",
+   "order": 1,
+   "track": "core",
+   "part": "1부 문장의 뼈대",
+   "title": "품사와 문장 성분",
+   "opicUse": "모든 문장의 기본 — 긴 문장을 끊어 읽고 실수 줄이기",
+   "errorType": "word_order",
+   "explanation": {
+    "summary": "영어는 단어의 자리(순서)가 역할을 정한다. 동사를 먼저 찾고, 앞은 주어·뒤는 목적어나 보어, 나머지는 수식어로 묶어 읽는다.",
+    "concept": "품사는 단어가 원래 어떤 종류인지(사전에 적힌 성격), 문장 성분은 그 단어가 이 문장에서 맡은 역할이다. 같은 단어도 자리에 따라 역할이 바뀐다 — I watch TV.의 watch는 동사, My watch is new.의 watch는 명사다. 그래서 영어 문장은 '이 단어가 무슨 뜻인가'보다 '이 자리에 무엇이 와야 하는가'로 읽어야 오류가 보인다. 뼈대(주어·동사·목적어·보어)를 먼저 잡고, 빼도 문장이 성립하는 수식어(부사, 전치사구)는 괄호로 묶어 지운다고 생각하자.",
+    "table": [
+     [
+      "품사",
+      "하는 일",
+      "예"
+     ],
+     [
+      "명사",
+      "사람·사물·개념의 이름",
+      "book, Seoul, happiness"
+     ],
+     [
+      "대명사",
+      "명사 대신",
+      "I, it, they, this"
+     ],
+     [
+      "동사",
+      "동작·상태",
+      "run, is, seem, have"
+     ],
+     [
+      "형용사",
+      "명사를 꾸미거나 설명",
+      "happy, tall, interesting"
+     ],
+     [
+      "부사",
+      "동사·형용사·문장을 꾸밈",
+      "quickly, very, often"
+     ],
+     [
+      "전치사",
+      "명사 앞에서 관계(장소·시간 등)",
+      "in, on, with, for"
+     ],
+     [
+      "접속사",
+      "단어·문장을 이음",
+      "and, but, because, when"
+     ]
+    ],
+    "koreanNote": "한국어는 조사(은/는/을/를)가 역할을 알려 줘서 '사과를 나는 먹었다'처럼 순서를 바꿔도 뜻이 같다. 영어는 조사가 없어서 자리가 곧 역할이다: The dog bit the man.과 The man bit the dog.는 뜻이 정반대다. 그래서 '동사 찾기 → 앞이 주어 → 뒤가 목적어·보어' 순서로 읽는 습관이 중요하다. 또 한국어 '-하게'를 그대로 옮기면 보어 자리에 부사를 넣는 실수(She looks happily ✗)가 잦다.",
+    "points": [
+     "문장 성분 5가지: 주어(S, ~은/는/이/가), 동사(V, ~다), 목적어(O, ~을/를), 보어(C, 주어·목적어를 설명), 수식어(M, 빼도 문장이 성립)",
+     "주어·목적어 자리에는 명사(명사 덩어리)가, 보어 자리에는 명사나 형용사가, 동사 자리에는 동사만 온다",
+     "형용사는 명사를 꾸미거나 보어가 되고, 부사는 보어가 될 수 없다: She is happy. (O) / She is happily. (X)",
+     "전치사 + 명사 = 수식어 덩어리(전치사구). 주어나 목적어가 될 수 없으니 괄호로 묶는다",
+     "읽는 순서: 동사 찾기 → 그 앞 덩어리가 주어 → 뒤 덩어리가 목적어·보어 → 나머지는 수식어"
+    ],
+    "examples": [
+     {
+      "en": "My younger brother works at a bank in Seoul.",
+      "ko": "내 남동생은 서울에 있는 은행에서 일한다."
+     },
+     {
+      "en": "The coffee smells good.",
+      "ko": "커피 냄새가 좋다."
+     },
+     {
+      "en": "I finally finished the report last night.",
+      "ko": "나는 어젯밤 마침내 보고서를 끝냈다."
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "My younger brother works at a bank in Seoul.",
+      "parts": [
+       {
+        "text": "My younger brother",
+        "role": "S"
+       },
+       {
+        "text": "works",
+        "role": "V"
+       },
+       {
+        "text": "at a bank",
+        "role": "M"
+       },
+       {
+        "text": "in Seoul.",
+        "role": "M"
+       }
+      ],
+      "note": "works 뒤에 목적어가 없다. at a bank, in Seoul은 빼도 되는 수식어 — 뼈대는 My younger brother works."
+     },
+     {
+      "sentence": "The coffee smells good.",
+      "parts": [
+       {
+        "text": "The coffee",
+        "role": "S"
+       },
+       {
+        "text": "smells",
+        "role": "V"
+       },
+       {
+        "text": "good.",
+        "role": "C"
+       }
+      ],
+      "note": "good은 커피의 상태를 설명하는 보어. 보어 자리에 부사는 못 온다: smells well (X)"
+     },
+     {
+      "sentence": "I finally finished the report last night.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "finally",
+        "role": "M"
+       },
+       {
+        "text": "finished",
+        "role": "V"
+       },
+       {
+        "text": "the report",
+        "role": "O"
+       },
+       {
+        "text": "last night.",
+        "role": "M"
+       }
+      ],
+      "note": "finally, last night은 수식어. 뼈대는 I finished the report."
+     },
+     {
+      "sentence": "The man with a red hat is my teacher.",
+      "parts": [
+       {
+        "text": "The man",
+        "role": "S"
+       },
+       {
+        "text": "with a red hat",
+        "role": "M"
+       },
+       {
+        "text": "is",
+        "role": "V"
+       },
+       {
+        "text": "my teacher.",
+        "role": "C"
+       }
+      ],
+      "note": "with a red hat은 주어를 꾸미는 수식어. 동사 is는 The man에 맞춘다"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "She sings very good.",
+      "right": "She sings very well.",
+      "note": "동사(sings)를 꾸미는 건 부사 well"
+     },
+     {
+      "wrong": "I am very interesting in music.",
+      "right": "I am very interested in music.",
+      "note": "보어 자리 형용사 — 사람이 흥미를 느끼면 interested"
+     },
+     {
+      "wrong": "The people in my office is kind.",
+      "right": "The people in my office are kind.",
+      "note": "in my office는 수식어, 주어는 The people(복수)"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c1-01",
+     "kind": "structure",
+     "prompt": "이 문장의 동사를 고르세요",
+     "sentence": "My sister often cooks dinner for us.",
+     "hint": "주어 다음에 오는, 동작을 나타내는 말",
+     "explanation": "cooks가 동사. often은 얼마나 자주를 나타내는 부사(수식어)",
+     "choices": [
+      "My",
+      "sister",
+      "often",
+      "cooks",
+      "dinner",
+      "for",
+      "us."
+     ],
+     "answer": 3
+    },
+    {
+     "id": "c1-02",
+     "kind": "structure",
+     "prompt": "주어의 핵심 단어를 고르세요",
+     "sentence": "The books on the table are mine.",
+     "hint": "on the table(탁자 위의)을 괄호로 묶어 보세요",
+     "explanation": "주어의 핵심은 books — 그래서 동사도 복수 are",
+     "choices": [
+      "The",
+      "books",
+      "on",
+      "the",
+      "table",
+      "are",
+      "mine."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c1-03",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "She speaks English very good.",
+     "hint": "동사 speaks를 꾸미는 말은 형용사일까 부사일까?",
+     "explanation": "good → well: She speaks English very well.",
+     "choices": [
+      "She",
+      "speaks",
+      "English",
+      "very",
+      "good."
+     ],
+     "answer": 4
+    },
+    {
+     "id": "c1-04",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "The soup tastes ___.",
+     "hint": "tastes 뒤는 soup의 상태를 설명하는 보어 자리",
+     "explanation": "감각동사(taste, smell, look, sound, feel) 뒤 보어는 형용사: The soup tastes delicious.",
+     "choices": [
+      "deliciously",
+      "delicious",
+      "deliciousness"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c1-05",
+     "kind": "structure",
+     "prompt": "목적어를 고르세요",
+     "sentence": "Every morning I drink coffee at home.",
+     "hint": "drink — 무엇을?",
+     "explanation": "coffee가 목적어. Every morning, at home은 수식어",
+     "choices": [
+      "Every",
+      "morning",
+      "I",
+      "drink",
+      "coffee",
+      "at",
+      "home."
+     ],
+     "answer": 4
+    },
+    {
+     "id": "c1-06",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "The people in this city is very friendly.",
+     "hint": "in this city를 괄호로 묶어 보세요",
+     "explanation": "주어는 The people(복수) → are: The people in this city are very friendly.",
+     "choices": [
+      "The",
+      "people",
+      "in",
+      "this",
+      "city",
+      "is",
+      "very",
+      "friendly."
+     ],
+     "answer": 5
+    },
+    {
+     "id": "c1-07",
+     "kind": "choice",
+     "prompt": "boring은 어떤 성분일까요?",
+     "sentence": "I found the movie boring.",
+     "hint": "boring이 설명하는 대상은?",
+     "explanation": "the movie = boring 관계 — 목적어를 설명하는 목적격보어 (2장 5형식에서 자세히)",
+     "choices": [
+      "목적어",
+      "보어 (목적어를 설명)",
+      "수식어"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c1-08",
+     "kind": "blank",
+     "prompt": "빈칸에 happy를 알맞은 형태로 쓰세요",
+     "sentence": "She smiled ___ at me.",
+     "hint": "동사 smiled를 꾸미는 말",
+     "explanation": "동사를 꾸미는 건 부사: She smiled happily at me.",
+     "answers": [
+      "happily"
+     ]
+    },
+    {
+     "id": "c1-09",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "I am interesting in learning Chinese.",
+     "hint": "흥미를 '주는' 쪽인가, '느끼는' 쪽인가?",
+     "explanation": "사람이 흥미를 느끼면 interested: I am interested in learning Chinese.",
+     "choices": [
+      "I",
+      "am",
+      "interesting",
+      "in",
+      "learning",
+      "Chinese."
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c1-10",
+     "kind": "fix",
+     "prompt": "문장을 바르게 고치세요",
+     "sentence": "My friend with long hair live in Busan.",
+     "hint": "with long hair를 빼고 주어와 동사만 보세요",
+     "explanation": "주어 My friend(3인칭 단수) → lives",
+     "answers": [
+      "My friend with long hair lives in Busan."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "order": 2,
+   "track": "core",
+   "part": "1부 문장의 뼈대",
+   "title": "문장의 5형식",
+   "opicUse": "동사 뒤 구조 — discuss about, explain me 같은 실수 줄이기",
+   "errorType": "other",
+   "explanation": {
+    "summary": "동사마다 뒤에 무엇이 와야 하는지(목적어·보어가 필요한지)가 정해져 있다. 동사가 요구하는 것을 알면 문장을 빨리 읽고 틀린 곳을 찾을 수 있다.",
+    "concept": "5형식은 외울 공식이 아니라 '이 동사 뒤에 무엇이 와야 말이 끝나는가'를 다섯 가지로 나눈 것이다. He arrived.는 거기서 끝나지만 He made …는 '무엇을'이 있어야 끝난다. 동사를 외울 때 자동사(목적어 없음)인지 타동사(목적어 필요)인지, 뒤에 형용사가 오는지를 같이 보는 습관이 문법 오류를 크게 줄인다.",
+    "table": [
+     [
+      "형식",
+      "뼈대",
+      "예문",
+      "뜻"
+     ],
+     [
+      "1형식",
+      "S + V",
+      "The baby cried.",
+      "아기가 울었다"
+     ],
+     [
+      "2형식",
+      "S + V + C",
+      "She became a nurse.",
+      "그녀는 간호사가 되었다"
+     ],
+     [
+      "3형식",
+      "S + V + O",
+      "I love my job.",
+      "나는 내 일을 사랑한다"
+     ],
+     [
+      "4형식",
+      "S + V + IO + DO",
+      "He gave me a gift.",
+      "그는 나에게 선물을 주었다"
+     ],
+     [
+      "5형식",
+      "S + V + O + OC",
+      "The news made me happy.",
+      "그 소식이 나를 기쁘게 했다"
+     ]
+    ],
+    "koreanNote": "한국어 '~와 결혼하다', '~에 대해 의논하다'를 그대로 옮기면 marry with, discuss about가 되는데, marry·discuss는 타동사라 전치사 없이 바로 목적어가 온다. '~에게 ~을 설명하다'도 explain me the rule (X) — explain은 4형식이 안 되고 explain the rule to me로 쓴다. 반대로 give는 give me a gift(4형식)와 give a gift to me(3형식) 둘 다 된다.",
+    "points": [
+     "1형식 S + V: 뒤에 수식어만 온다 (arrive, go, happen, live, work, sleep) — I live in Seoul.의 in Seoul은 수식어",
+     "2형식 S + V + C: be, become, seem, look, sound, feel, taste, get(되다) — 보어는 명사나 형용사, 부사는 안 된다",
+     "3형식 S + V + O: 대부분의 동사. marry, discuss, enter, reach, attend, contact는 전치사 없이 바로 목적어",
+     "4형식 S + V + IO + DO: give, send, show, tell, teach, buy, make(만들어 주다), cook → 3형식으로 바꾸면 give/send/show/tell/teach + to, buy/make/cook + for",
+     "5형식 S + V + O + OC: make·keep·find·call + 형용사/명사, want·ask·tell + O + to 동사원형, let·make·have + O + 동사원형"
+    ],
+    "examples": [
+     {
+      "en": "The meeting finally started.",
+      "ko": "회의가 마침내 시작됐다."
+     },
+     {
+      "en": "My boss looked tired today.",
+      "ko": "오늘 상사가 피곤해 보였다."
+     },
+     {
+      "en": "She sent me a long message.",
+      "ko": "그녀가 나에게 긴 메시지를 보냈다."
+     },
+     {
+      "en": "This song always makes me sad.",
+      "ko": "이 노래는 늘 나를 슬프게 한다."
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "I live in Seoul.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "live",
+        "role": "V"
+       },
+       {
+        "text": "in Seoul.",
+        "role": "M"
+       }
+      ],
+      "note": "1형식: live는 목적어가 필요 없다. in Seoul은 수식어"
+     },
+     {
+      "sentence": "The plan sounds great.",
+      "parts": [
+       {
+        "text": "The plan",
+        "role": "S"
+       },
+       {
+        "text": "sounds",
+        "role": "V"
+       },
+       {
+        "text": "great.",
+        "role": "C"
+       }
+      ],
+      "note": "2형식: great(형용사)가 주어 plan을 설명. sounds greatly (X)"
+     },
+     {
+      "sentence": "We discussed the problem.",
+      "parts": [
+       {
+        "text": "We",
+        "role": "S"
+       },
+       {
+        "text": "discussed",
+        "role": "V"
+       },
+       {
+        "text": "the problem.",
+        "role": "O"
+       }
+      ],
+      "note": "3형식: discuss는 타동사 — discuss about (X)"
+     },
+     {
+      "sentence": "My mom bought me a new phone.",
+      "parts": [
+       {
+        "text": "My mom",
+        "role": "S"
+       },
+       {
+        "text": "bought",
+        "role": "V"
+       },
+       {
+        "text": "me",
+        "role": "IO"
+       },
+       {
+        "text": "a new phone.",
+        "role": "DO"
+       }
+      ],
+      "note": "4형식. 3형식으로 바꾸면 bought a new phone for me"
+     },
+     {
+      "sentence": "Exercise keeps me healthy.",
+      "parts": [
+       {
+        "text": "Exercise",
+        "role": "S"
+       },
+       {
+        "text": "keeps",
+        "role": "V"
+       },
+       {
+        "text": "me",
+        "role": "O"
+       },
+       {
+        "text": "healthy.",
+        "role": "OC"
+       }
+      ],
+      "note": "5형식: me = healthy 관계 (목적어를 설명)"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "We discussed about the trip.",
+      "right": "We discussed the trip.",
+      "note": "discuss는 바로 목적어"
+     },
+     {
+      "wrong": "He married with my cousin.",
+      "right": "He married my cousin.",
+      "note": "marry도 전치사 없이"
+     },
+     {
+      "wrong": "You look greatly today.",
+      "right": "You look great today.",
+      "note": "look(~해 보이다) 뒤 보어는 형용사"
+     },
+     {
+      "wrong": "She explained me the rule.",
+      "right": "She explained the rule to me.",
+      "note": "explain은 4형식 불가 — explain A to B"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c2-01",
+     "kind": "choice",
+     "prompt": "이 문장은 몇 형식일까요?",
+     "sentence": "The baby slept in my arms.",
+     "hint": "slept 뒤에 '무엇을'이 있나요? in my arms는?",
+     "explanation": "slept + 수식어(in my arms) → 1형식",
+     "choices": [
+      "1형식",
+      "2형식",
+      "3형식"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c2-02",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "We discussed about the new project yesterday.",
+     "hint": "discuss는 '~에 대해 의논하다'까지 한 단어",
+     "explanation": "about 삭제: We discussed the new project yesterday.",
+     "choices": [
+      "We",
+      "discussed",
+      "about",
+      "the",
+      "new",
+      "project",
+      "yesterday."
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c2-03",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "This cake looks ___.",
+     "hint": "look(~해 보이다) 뒤는 보어 자리",
+     "explanation": "2형식 — 형용사 보어: This cake looks delicious.",
+     "choices": [
+      "deliciously",
+      "delicious",
+      "taste"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c2-04",
+     "kind": "structure",
+     "prompt": "간접목적어(~에게)를 고르세요",
+     "sentence": "My father bought me a bike for my birthday.",
+     "hint": "누구에게 사 주었나요?",
+     "explanation": "me = 간접목적어, a bike = 직접목적어 (4형식)",
+     "choices": [
+      "My",
+      "father",
+      "bought",
+      "me",
+      "a",
+      "bike",
+      "for",
+      "my",
+      "birthday."
+     ],
+     "answer": 3
+    },
+    {
+     "id": "c2-05",
+     "kind": "fix",
+     "prompt": "3형식으로 바꿔 쓰세요",
+     "sentence": "She showed me her photos.",
+     "hint": "show는 to를 쓴다",
+     "explanation": "show/give/send/tell + 직접목적어 + to + 간접목적어",
+     "answers": [
+      "She showed her photos to me."
+     ]
+    },
+    {
+     "id": "c2-06",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "He married with a woman from Canada.",
+     "hint": "marry는 바로 목적어",
+     "explanation": "He married a woman from Canada.",
+     "choices": [
+      "He",
+      "married",
+      "with",
+      "a",
+      "woman",
+      "from",
+      "Canada."
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c2-07",
+     "kind": "choice",
+     "prompt": "보어가 있는 문장을 고르세요",
+     "sentence": "",
+     "hint": "주어를 설명하는 말이 있는 문장",
+     "explanation": "became + a famous singer(주어를 설명하는 명사 보어) → 2형식",
+     "choices": [
+      "I met her yesterday.",
+      "She became a famous singer.",
+      "He runs every morning."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c2-08",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "My teacher explained me the answer.",
+     "hint": "explain은 '~에게 ~을'을 한 번에 못 쓴다",
+     "explanation": "My teacher explained the answer to me.",
+     "choices": [
+      "My",
+      "teacher",
+      "explained",
+      "me",
+      "the",
+      "answer."
+     ],
+     "answer": 3
+    },
+    {
+     "id": "c2-09",
+     "kind": "blank",
+     "prompt": "빈칸에 알맞은 전치사를 쓰세요 (3형식)",
+     "sentence": "My mom cooked dinner ___ us.",
+     "hint": "make, buy, cook은 '~을 위해'",
+     "explanation": "cook/buy/make + for, give/send/show/tell + to",
+     "answers": [
+      "for"
+     ]
+    },
+    {
+     "id": "c2-10",
+     "kind": "structure",
+     "prompt": "목적격보어(목적어를 설명하는 말)를 고르세요",
+     "sentence": "Regular exercise keeps my body strong.",
+     "hint": "my body가 어떤 상태로 유지되나요?",
+     "explanation": "my body = strong — 5형식 목적격보어(형용사)",
+     "choices": [
+      "Regular",
+      "exercise",
+      "keeps",
+      "my",
+      "body",
+      "strong."
+     ],
+     "answer": 5
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "order": 3,
+   "track": "core",
+   "part": "1부 문장의 뼈대",
+   "title": "주어 찾기 — 긴 주어, It, There",
+   "opicUse": "집·동네 묘사의 기본(There is/are)과 수 일치",
+   "errorType": "agreement",
+   "explanation": {
+    "summary": "주어는 짧지 않다. 꾸미는 말이 붙어 길어진 주어에서 핵심 명사를 찾아야 동사의 단수·복수를 맞출 수 있다. 문장 앞의 It·There는 진짜 주어가 뒤에 있다는 신호다.",
+    "concept": "영어는 핵심 명사가 먼저 오고 꾸미는 말이 뒤에 붙는다: the woman [who lives next door] [with two dogs]. 한국어는 꾸미는 말이 앞에 온다(옆집에 사는, 개 두 마리를 키우는 여자). 그래서 한국어식으로 읽으면 주어 끝까지 가서야 핵심을 찾는데, 영어는 반대로 첫 명사를 잡고 뒤의 전치사구·관계절을 괄호로 묶어야 한다. 또 영어는 머리가 무거운 문장을 싫어해서 to부정사·that절 주어는 It으로 앞자리를 채우고 진짜 주어를 뒤로 보낸다(가주어 It). '~이 있다'는 There + be + 진짜 주어이고, be동사는 뒤의 진짜 주어에 맞춘다.",
+    "table": [
+     [
+      "형태",
+      "진짜 주어",
+      "예문"
+     ],
+     [
+      "명사 + 전치사구",
+      "첫 명사",
+      "The keys on the desk are mine."
+     ],
+     [
+      "명사 + 관계절",
+      "첫 명사",
+      "The man who called you is my uncle."
+     ],
+     [
+      "동명사(-ing) 주어",
+      "-ing 덩어리 (단수)",
+      "Learning languages takes time."
+     ],
+     [
+      "가주어 It",
+      "뒤의 to부정사·that절",
+      "It is hard to wake up early."
+     ],
+     [
+      "There + be",
+      "be 뒤의 명사",
+      "There are many cafés near my house."
+     ]
+    ],
+    "koreanNote": "'일찍 일어나는 것은 어렵다'를 그대로 옮기면 To wake up early is hard.가 되는데, 말할 때는 It is hard to wake up early.가 훨씬 자연스럽다. '우리 동네에 카페가 많다'도 Many cafés are in my neighborhood.보다 There are many cafés in my neighborhood.가 OPIc 묘사의 기본이다. 또 한국어는 주어를 자주 빼지만 영어는 주어 자리를 비울 수 없다: Is hard to … (X) → It is hard to …",
+    "points": [
+     "핵심 주어 찾기: 첫 명사에 밑줄 → 뒤의 of/in/with… 구, who/that 절은 괄호",
+     "동사는 핵심 명사에 맞춘다: The quality of the products is good. (quality 단수)",
+     "동명사·to부정사 덩어리 주어는 단수: Watching movies is my hobby.",
+     "It is + 형용사 + to 동사원형 / It is + 형용사 + that 절 — It은 뜻 없는 자리 채움",
+     "There is + 단수·셀 수 없는 명사 / There are + 복수: There is a lot of traffic. / There are a lot of cars.",
+     "one of / each of + 복수 명사 → 동사는 단수: One of my friends lives in Japan."
+    ],
+    "examples": [
+     {
+      "en": "One of my coworkers is from Australia.",
+      "ko": "내 동료 중 한 명은 호주 출신이다."
+     },
+     {
+      "en": "Taking a walk after dinner helps me relax.",
+      "ko": "저녁 먹고 산책하는 게 긴장을 푸는 데 도움이 된다."
+     },
+     {
+      "en": "It is important to drink enough water.",
+      "ko": "물을 충분히 마시는 게 중요하다."
+     },
+     {
+      "en": "There are three bedrooms in my apartment.",
+      "ko": "우리 아파트에는 방이 세 개 있다."
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "The keys on the desk are mine.",
+      "parts": [
+       {
+        "text": "The keys",
+        "role": "S"
+       },
+       {
+        "text": "on the desk",
+        "role": "M"
+       },
+       {
+        "text": "are",
+        "role": "V"
+       },
+       {
+        "text": "mine.",
+        "role": "C"
+       }
+      ],
+      "note": "핵심 주어 keys(복수) → are"
+     },
+     {
+      "sentence": "One of my friends lives in Japan.",
+      "parts": [
+       {
+        "text": "One",
+        "role": "S"
+       },
+       {
+        "text": "of my friends",
+        "role": "M"
+       },
+       {
+        "text": "lives",
+        "role": "V"
+       },
+       {
+        "text": "in Japan.",
+        "role": "M"
+       }
+      ],
+      "note": "핵심은 One → 단수 lives (friends는 복수지만 수식어 안)"
+     },
+     {
+      "sentence": "Watching movies is my hobby.",
+      "parts": [
+       {
+        "text": "Watching movies",
+        "role": "S"
+       },
+       {
+        "text": "is",
+        "role": "V"
+       },
+       {
+        "text": "my hobby.",
+        "role": "C"
+       }
+      ],
+      "note": "-ing 덩어리 = 단수 주어"
+     },
+     {
+      "sentence": "It is hard to wake up early.",
+      "parts": [
+       {
+        "text": "It",
+        "role": "S"
+       },
+       {
+        "text": "is",
+        "role": "V"
+       },
+       {
+        "text": "hard",
+        "role": "C"
+       },
+       {
+        "text": "to wake up early.",
+        "role": "S"
+       }
+      ],
+      "note": "It은 가주어, 진짜 주어는 to wake up early (뒤로 보낸 주어)"
+     },
+     {
+      "sentence": "There are many cafés near my house.",
+      "parts": [
+       {
+        "text": "There",
+        "role": "M"
+       },
+       {
+        "text": "are",
+        "role": "V"
+       },
+       {
+        "text": "many cafés",
+        "role": "S"
+       },
+       {
+        "text": "near my house.",
+        "role": "M"
+       }
+      ],
+      "note": "There는 주어가 아니다 — 진짜 주어 many cafés(복수) → are"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "The price of these shoes are too high.",
+      "right": "The price of these shoes is too high.",
+      "note": "핵심 price 단수"
+     },
+     {
+      "wrong": "One of my friend lives in Japan.",
+      "right": "One of my friends lives in Japan.",
+      "note": "one of 뒤는 복수 명사, 동사는 단수"
+     },
+     {
+      "wrong": "There is many people in the park.",
+      "right": "There are many people in the park.",
+      "note": "people 복수 → are"
+     },
+     {
+      "wrong": "Is hard to learn English.",
+      "right": "It is hard to learn English.",
+      "note": "주어 자리를 비우면 안 된다 — It"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c3-01",
+     "kind": "structure",
+     "prompt": "핵심 주어를 고르세요",
+     "sentence": "The number of tourists in Seoul has increased.",
+     "hint": "of tourists in Seoul을 괄호로 묶어 보세요",
+     "explanation": "핵심 number(단수) → has increased",
+     "choices": [
+      "The",
+      "number",
+      "of",
+      "tourists",
+      "in",
+      "Seoul",
+      "has",
+      "increased."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c3-02",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "There is a lot of restaurants near my office.",
+     "hint": "be동사는 뒤의 진짜 주어에 맞춰요",
+     "explanation": "restaurants(복수) → There are a lot of restaurants near my office.",
+     "choices": [
+      "There",
+      "is",
+      "a",
+      "lot",
+      "of",
+      "restaurants",
+      "near",
+      "my",
+      "office."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c3-03",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "One of my friends ___ a doctor.",
+     "hint": "핵심 주어는 friends일까 One일까?",
+     "explanation": "핵심 One → 단수 is",
+     "choices": [
+      "are",
+      "is",
+      "be"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c3-04",
+     "kind": "fix",
+     "prompt": "가주어 It으로 바꿔 쓰세요",
+     "sentence": "To learn a new language is exciting.",
+     "hint": "It is + 형용사 + to ~",
+     "explanation": "긴 to부정사 주어는 뒤로: It is exciting to learn a new language.",
+     "answers": [
+      "It is exciting to learn a new language."
+     ]
+    },
+    {
+     "id": "c3-05",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "Watching dramas are my favorite way to relax.",
+     "hint": "주어는 dramas가 아니라 Watching dramas 덩어리",
+     "explanation": "-ing 주어는 단수 → Watching dramas is my favorite way to relax.",
+     "choices": [
+      "Watching",
+      "dramas",
+      "are",
+      "my",
+      "favorite",
+      "way",
+      "to",
+      "relax."
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c3-06",
+     "kind": "structure",
+     "prompt": "진짜 주어의 핵심 단어를 고르세요",
+     "sentence": "There are two parks near my apartment.",
+     "hint": "There는 주어가 아니에요",
+     "explanation": "parks가 진짜 주어 (two parks) → are",
+     "choices": [
+      "There",
+      "are",
+      "two",
+      "parks",
+      "near",
+      "my",
+      "apartment."
+     ],
+     "answer": 3
+    },
+    {
+     "id": "c3-07",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "The people who live next door ___ very quiet.",
+     "hint": "who live next door를 괄호로 묶어 보세요",
+     "explanation": "핵심 people(복수) → are",
+     "choices": [
+      "is",
+      "are",
+      "be"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c3-08",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "The quality of these products are excellent.",
+     "hint": "핵심 주어는 quality일까 products일까?",
+     "explanation": "quality 단수 → The quality of these products is excellent.",
+     "choices": [
+      "The",
+      "quality",
+      "of",
+      "these",
+      "products",
+      "are",
+      "excellent."
+     ],
+     "answer": 5
+    },
+    {
+     "id": "c3-09",
+     "kind": "blank",
+     "prompt": "빈칸에 알맞은 한 단어를 쓰세요",
+     "sentence": "___ is important to get enough sleep.",
+     "hint": "뜻 없이 자리만 채우는 주어",
+     "explanation": "가주어 It: It is important to get enough sleep.",
+     "answers": [
+      "It"
+     ]
+    },
+    {
+     "id": "c3-10",
+     "kind": "structure",
+     "prompt": "진짜 주어가 시작되는 단어를 고르세요",
+     "sentence": "It is not easy to find a good apartment in Seoul.",
+     "hint": "It은 가주어 — 진짜 주어는 뒤에",
+     "explanation": "to find a good apartment in Seoul이 진짜 주어 — 'to'부터",
+     "choices": [
+      "It",
+      "is",
+      "not",
+      "easy",
+      "to",
+      "find",
+      "a",
+      "good",
+      "apartment",
+      "in",
+      "Seoul."
+     ],
+     "answer": 4
+    }
+   ]
+  }
+ ]
+}

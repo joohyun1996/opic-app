@@ -24,4 +24,27 @@ class GrammarCatalogTest {
         assertEquals(GrammarLoadResult.Failed, GrammarCatalog.parse(raw.replace("\"u1-02\"", "\"u1-01\"")))
         assertEquals(GrammarLoadResult.Failed, GrammarCatalog.parse(raw.replace("\"answer\": 1", "\"answer\": 99")))
     }
+
+    // 실전 영문법 (TASK 26)
+    private val coreRaw by lazy { File("../../exports/grammar-core.json").readText() }
+
+    @Test fun coreGrammarParsesWithNewKinds() {
+        val core = (GrammarCatalog.parse(coreRaw) as GrammarLoadResult.Loaded).book
+        assertEquals(3, core.units.size)
+        assertEquals(30, core.units.sumOf { it.exercises.size })
+        assertEquals(setOf("core"), core.units.map { it.track }.toSet())
+        val kinds = core.units.flatMap { u -> u.exercises.map { it.kind } }.toSet()
+        assertEquals(true, kinds.containsAll(listOf("spot", "structure")))
+        core.units.forEach { assertEquals(true, it.explanation.breakdowns.isNotEmpty() && it.explanation.table != null && it.writingTask == null) }
+        // spot 정답 위치가 문장 단어 범위 밖이면 실패
+        assertEquals(GrammarLoadResult.Failed, GrammarCatalog.parse(coreRaw.replaceFirst("\"answer\": 4", "\"answer\": 40")))
+    }
+
+    @Test fun mergeKeepsBothTracksAndRejectsDuplicateIds() {
+        val merged = mergeBooks(GrammarCatalog.parse(raw), GrammarCatalog.parse(coreRaw)) as GrammarLoadResult.Loaded
+        assertEquals(setOf("opic", "core"), merged.book.units.map { it.track }.toSet())
+        assertEquals(13, merged.book.units.size)
+        assertEquals(GrammarLoadResult.Failed, mergeBooks(GrammarCatalog.parse(raw), GrammarCatalog.parse(raw)))
+        assertEquals(GrammarLoadResult.Failed, mergeBooks(GrammarCatalog.parse(raw), GrammarLoadResult.Failed))
+    }
 }

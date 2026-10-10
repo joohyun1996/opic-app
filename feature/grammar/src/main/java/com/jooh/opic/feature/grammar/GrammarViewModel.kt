@@ -92,7 +92,7 @@ class GrammarViewModel(result: GrammarLoadResult, private val reviews: GrammarRe
         val old = state.value
         val question = old.current ?: return
         if (old.attempt.isFinished()) return
-        val correct = if (question.kind == "choice") old.selected?.let { gradeChoice(it, question.answer!!) } ?: false
+        val correct = if (question.kind in TAP_KINDS) old.selected?.let { gradeChoice(it, question.answer!!) } ?: false
             else gradeText(old.input, question.answers!!)
         val attempt = old.attempt.submit(correct)
         if (attempt.isFinished()) record(question, attempt.feedback, old.reviewMode)

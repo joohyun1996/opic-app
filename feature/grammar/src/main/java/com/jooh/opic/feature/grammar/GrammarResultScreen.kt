@@ -26,7 +26,7 @@ fun GrammarResultScreen(state: GrammarUiState, onRetry: () -> Unit, onList: () -
                 }
             }
             if (state.reviewMode) Text("1차에 맞힌 문제는 다음 단계로, 나머지는 내일 다시 나옵니다.", style = MaterialTheme.typography.bodySmall)
-            else OutlinedButton(onClick = onWrite, modifier = Modifier.fillMaxWidth()) { Text("직접 써 보기") }
+            else if (state.unit?.writingTask != null) OutlinedButton(onClick = onWrite, modifier = Modifier.fillMaxWidth()) { Text("직접 써 보기") }
         }
         if (!state.reviewMode) Button(onClick = onRetry, modifier = Modifier.fillMaxWidth()) { Text("다시 풀기") }
         TextButton(onClick = onList, modifier = Modifier.fillMaxWidth()) { Text("단원 목록") }

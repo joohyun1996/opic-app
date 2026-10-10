@@ -56,6 +56,7 @@ tasks.named("preBuild").configure { dependsOn(bundledWords) }
 
 val bundledGrammar = tasks.register<Sync>("bundleGrammar") {
     from(rootProject.file("exports/grammar.json"))
+    from(rootProject.file("exports/grammar-core.json"))
     into(layout.buildDirectory.dir("generated/grammarAssets"))
 }
 android.sourceSets["main"].assets.srcDir(layout.buildDirectory.dir("generated/grammarAssets").get().asFile)

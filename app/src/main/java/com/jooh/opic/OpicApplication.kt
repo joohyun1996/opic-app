@@ -21,6 +21,7 @@ import com.jooh.opic.core.llm.OnDeviceLlmEngine
 import com.jooh.opic.core.llm.createOnDeviceLlmEngine
 import com.jooh.opic.feature.grammar.GrammarCatalog
 import com.jooh.opic.feature.grammar.GrammarLoadResult
+import com.jooh.opic.feature.grammar.mergeBooks
 import com.jooh.opic.feature.shadowing.ShadowingViewModel
 import com.jooh.opic.core.stt.UserWhisper
 import com.jooh.opic.core.ui.UiSettings
@@ -59,7 +60,10 @@ class OpicApplication : Application() {
         }
         scope.launch {
             mutableGrammar.value = try {
-                GrammarCatalog.parse(assets.open("grammar.json").bufferedReader().use { it.readText() })
+                val opic = GrammarCatalog.parse(assets.open("grammar.json").bufferedReader().use { it.readText() })
+                // 실전 영문법 (TASK 26): 없거나 깨져도 OPIc 문법은 그대로
+                val core = runCatching { GrammarCatalog.parse(assets.open("grammar-core.json").bufferedReader().use { it.readText() }) }.getOrNull()
+                if (opic is GrammarLoadResult.Loaded && core is GrammarLoadResult.Loaded) mergeBooks(opic, core).takeIf { it is GrammarLoadResult.Loaded } ?: opic else opic
             } catch (_: Exception) { GrammarLoadResult.Failed }
         }
         scope.launch {

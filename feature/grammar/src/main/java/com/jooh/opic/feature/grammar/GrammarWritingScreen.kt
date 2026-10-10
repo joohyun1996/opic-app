@@ -26,13 +26,14 @@ fun GrammarWritingScreen(
     onList: () -> Unit,
 ) {
     val unit = state.unit ?: return
+    val task = unit.writingTask ?: return // 실전 영문법 장에는 쓰기 과제가 없다
     val count = splitSentences(state.input).size
     Column {
         TextButton(onClick = onBack) { Text("← 결과") }
         Column(Modifier.weight(1f).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-            Text(unit.writingTask.promptKo, style = MaterialTheme.typography.headlineSmall)
-            Text(unit.writingTask.promptEn, style = MaterialTheme.typography.bodySmall)
-            Text("최소 ${unit.writingTask.minSentences}문장 · 현재 ${count}문장")
+            Text(task.promptKo, style = MaterialTheme.typography.headlineSmall)
+            Text(task.promptEn, style = MaterialTheme.typography.bodySmall)
+            Text("최소 ${task.minSentences}문장 · 현재 ${count}문장")
             if (count > 5) Text("앞의 5문장만 교정합니다", color = MaterialTheme.colorScheme.error)
             OutlinedTextField(value = state.input, onValueChange = onInput, enabled = !state.isCorrecting,
                 label = { Text("영어로 직접 쓰기") }, modifier = Modifier.fillMaxWidth(), minLines = 6,
@@ -51,7 +52,7 @@ fun GrammarWritingScreen(
             }
         }
         if (!state.isCorrecting && state.results.isEmpty()) {
-            Button(onClick = onCorrect, enabled = count >= unit.writingTask.minSentences,
+            Button(onClick = onCorrect, enabled = count >= task.minSentences,
                 modifier = Modifier.fillMaxWidth().imePadding().padding(vertical = 12.dp)) { Text("교정 받기") }
         }
     }

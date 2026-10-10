@@ -12,14 +12,26 @@ import kotlinx.serialization.json.Json
     val errorType: String,
     val explanation: GrammarExplanation,
     val exercises: List<GrammarExercise>,
-    val writingTask: GrammarWritingTask,
+    val writingTask: GrammarWritingTask? = null,
+    /** "opic" = OPIc 문법, "core" = 실전 영문법 (TASK 26). */
+    val track: String = "opic",
+    /** 실전 영문법의 부 이름 (예: "1부 문장의 뼈대"). */
+    val part: String? = null,
 )
 @Serializable data class GrammarExplanation(
     val summary: String,
     val points: List<String>,
     val examples: List<GrammarExample>,
     val commonMistakes: List<GrammarMistake>,
+    // 실전 영문법 (TASK 26) — 모두 선택
+    val concept: String? = null,
+    val table: List<List<String>>? = null,
+    val koreanNote: String? = null,
+    val breakdowns: List<GrammarBreakdown> = emptyList(),
 )
+/** 문장 구조 분해. role: S(주어) V(동사) O(목적어) C(보어) M(수식어) 등. */
+@Serializable data class GrammarBreakdown(val sentence: String, val parts: List<GrammarPart>, val note: String? = null)
+@Serializable data class GrammarPart(val text: String, val role: String)
 @Serializable data class GrammarExample(val en: String, val ko: String)
 @Serializable data class GrammarMistake(val wrong: String, val right: String, val note: String)
 @Serializable data class GrammarWritingTask(val promptKo: String, val promptEn: String, val minSentences: Int)
@@ -34,7 +46,19 @@ import kotlinx.serialization.json.Json
     val choices: List<String>? = null,
     val answer: Int? = null,
 ) {
-    fun displayAnswer(): String = if (kind == "choice") choices!![answer!!] else answers!!.first()
+    fun displayAnswer(): String = if (kind in TAP_KINDS) choices!![answer!!] else answers!!.first()
+}
+
+/** 고르기로 채점하는 유형. */
+val TAP_KINDS = setOf("choice", "spot", "structure")
+
+/** OPIc 문법 + 실전 영문법을 한 책으로 합친다 (복습·검색은 하나로, 화면은 track으로 나눔). 하나라도 실패하면 실패. */
+fun mergeBooks(vararg results: GrammarLoadResult): GrammarLoadResult {
+    val books = results.map { (it as? GrammarLoadResult.Loaded)?.book ?: return GrammarLoadResult.Failed }
+    val units = books.flatMap { it.units }
+    val ids = units.flatMap { u -> listOf(u.id) + u.exercises.map { it.id } }
+    if (ids.size != ids.toSet().size) return GrammarLoadResult.Failed
+    return GrammarLoadResult.Loaded(GrammarBook(books.maxOf { it.dataVersion }, units))
 }
 
 sealed interface GrammarLoadResult {
@@ -57,7 +81,8 @@ object GrammarCatalog {
                 when (exercise.kind) {
                     "fix", "blank" -> require(exercise.answers?.isNotEmpty() == true &&
                         exercise.answers.all { it.isNotBlank() } && exercise.choices == null && exercise.answer == null)
-                    "choice" -> require(exercise.choices?.isNotEmpty() == true &&
+                    // spot(틀린 곳 찾기)·structure(구조 찾기): choices = 문장의 단어들, answer = 고를 단어 위치 (TASK 26)
+                    "choice", "spot", "structure" -> require(exercise.choices?.isNotEmpty() == true &&
                         exercise.answer != null && exercise.answer in exercise.choices.indices && exercise.answers == null)
                     else -> error("Unknown exercise kind")
                 }

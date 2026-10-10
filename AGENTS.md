@@ -93,10 +93,11 @@ Kotlin + Jetpack Compose 기반 안드로이드 전용 영어(OPIc) 학습 앱. 
 
 ## 금지사항
 - 허용 범위 밖의 네트워크 사용 — 허용: 모델 다운로드(LLM·Whisper), 섀도잉의 YouTube 재생·자막 (ADR 001, 2026-10-07 개정). 학습 기록·녹음·교정 결과를 외부로 보내지 않는다
-- 권한은 `INTERNET`, `RECORD_AUDIO`(스피킹·섀도잉 녹음)만. 그 밖의 권한은 사용자 허락 필요
+- 권한은 `INTERNET`, `RECORD_AUDIO`(스피킹·섀도잉 녹음), `MANAGE_EXTERNAL_STORAGE`(공용 Gemma 모델 `Develop/Core/llm` 읽기 전용, ADR 002 · 2026-10-10 사용자 승인)만. 그 밖의 권한은 사용자 허락 필요
 - API 키 하드코딩, `.env*`·`local.properties`·keystore 커밋
 - `OnConflictStrategy.REPLACE` 사용
-- main 브랜치 직접 커밋
+- main 브랜치 직접 커밋\
+
 
 ## SPEC.md 규칙
 - 새 기능은 해당 섹션에 기록하고 변경 사항은 하단 변경 이력에 추가한다 (삭제 금지).

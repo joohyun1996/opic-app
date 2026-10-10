@@ -26,6 +26,8 @@ import com.jooh.opic.feature.shadowing.ShadowingViewModel
 import com.jooh.opic.core.stt.UserWhisper
 import com.jooh.opic.core.ui.UiSettings
 import com.jooh.opic.core.common.SpeakingCatalog
+import com.jooh.opic.core.common.AnswerTemplates
+import com.jooh.opic.core.common.parseAnswerTemplates
 import com.jooh.opic.core.common.ShadowingVideo
 import com.jooh.opic.core.common.parseShadowingLibrary
 import com.jooh.opic.core.common.parseSpeakingCatalog
@@ -37,7 +39,7 @@ class OpicApplication : Application() {
     private val mutableGrammar = MutableStateFlow<GrammarLoadResult?>(null)
     val grammarResult = mutableGrammar.asStateFlow()
     /** speaking.json 파싱 결과. 바깥 null = 읽는 중, 안쪽 catalog null = 실패. */
-    data class SpeakingLoad(val catalog: SpeakingCatalog?)
+    data class SpeakingLoad(val catalog: SpeakingCatalog?, val templates: AnswerTemplates? = null)
     private val mutableSpeaking = MutableStateFlow<SpeakingLoad?>(null)
     val speakingCatalog = mutableSpeaking.asStateFlow()
     /** 섀도잉 추천 영상 (TASK 21). 실패하면 빈 목록 — 링크 붙여 넣기는 그대로. */
@@ -67,7 +69,8 @@ class OpicApplication : Application() {
             } catch (_: Exception) { GrammarLoadResult.Failed }
         }
         scope.launch {
-            mutableSpeaking.value = SpeakingLoad(runCatching { assets.open("speaking.json").bufferedReader().use { parseSpeakingCatalog(it.readText()) } }.getOrNull())
+            mutableSpeaking.value = SpeakingLoad(runCatching { assets.open("speaking.json").bufferedReader().use { parseSpeakingCatalog(it.readText()) } }.getOrNull(),
+                runCatching { assets.open("templates.json").bufferedReader().use { parseAnswerTemplates(it.readText()) } }.getOrNull())
         }
     }
 

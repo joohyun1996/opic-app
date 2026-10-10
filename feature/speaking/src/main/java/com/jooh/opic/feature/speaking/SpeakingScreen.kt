@@ -1,5 +1,7 @@
 package com.jooh.opic.feature.speaking
 
+import com.jooh.opic.core.correction.LocalGrammarLink
+
 import com.jooh.opic.core.ui.Opic
 import android.Manifest
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -57,6 +59,8 @@ fun SpeakingScreen(model: SpeakingViewModel, onBack: () -> Unit) {
             SpeakingPage.MOCK_TRANSCRIBE -> MockTranscribePage(model, state)
             SpeakingPage.MOCK_SUMMARY -> MockSummaryPage(model, state)
             SpeakingPage.HISTORY -> HistoryPage(model, state)
+            SpeakingPage.TEMPLATES -> TemplatesPage(model)
+            SpeakingPage.TEMPLATE -> TemplatePage(model, state)
         }
     }
 }
@@ -75,6 +79,7 @@ private fun TopicsPage(model: SpeakingViewModel, onBack: () -> Unit) {
         OutlinedButton(onClick = model::randomQuestion, modifier = Modifier.weight(1f)) { Text("무작위 질문") }
         OutlinedButton(onClick = model::openHistory, modifier = Modifier.weight(1f)) { Text("내 기록") }
     }
+    if (model.templates != null) OutlinedButton(onClick = model::openTemplates, modifier = Modifier.fillMaxWidth()) { Text("유형별 답변 템플릿") }
     CATEGORY_KO.forEach { (category, title) ->
         val topics = catalog.topics.filter { it.category == category }
         if (topics.isEmpty()) return@forEach
@@ -370,3 +375,47 @@ private fun dateTime(epochMs: Long): String =
     java.time.Instant.ofEpochMilli(epochMs).atZone(java.time.ZoneId.systemDefault()).format(DATE_FORMAT)
 
 private fun clock(ms: Long): String { val s = ms / 1000; return "${s / 60}:${(s % 60).toString().padStart(2, '0')}" }
+
+@Composable
+private fun TemplatesPage(model: SpeakingViewModel) {
+    TextButton(onClick = model::backToTopics) { Text("← 주제") }
+    Text("유형별 답변 템플릿", style = MaterialTheme.typography.headlineSmall)
+    Text("OPIc 질문은 유형마다 답하는 순서가 비슷해요. 뼈대를 익히고 바로 연습해 보세요.", color = MaterialTheme.colorScheme.onSurfaceVariant)
+    model.templates?.templates.orEmpty().forEach { t ->
+        Card(onClick = { model.openTemplate(t.type) }, modifier = Modifier.fillMaxWidth()) {
+            Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text(t.titleKo, style = MaterialTheme.typography.titleMedium)
+                Text(t.summary, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        }
+    }
+}
+
+@Composable
+private fun TemplatePage(model: SpeakingViewModel, state: SpeakingState) {
+    val t = model.templates?.templates?.firstOrNull { it.type == state.templateType } ?: return
+    var showKo by remember { mutableStateOf(false) }
+    TextButton(onClick = model::openTemplates) { Text("← 템플릿 목록") }
+    Text(t.titleKo, style = MaterialTheme.typography.headlineSmall)
+    Text(t.summary)
+    Button(onClick = { model.practiceType(t.type) }, modifier = Modifier.fillMaxWidth()) { Text("이 유형 문제 연습") }
+    t.steps.forEachIndexed { i, step ->
+        Card(Modifier.fillMaxWidth()) {
+            Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text("${i + 1}. ${step.name}", style = MaterialTheme.typography.titleMedium)
+                Text(step.tip, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                step.expressions.forEach { Text("• $it") }
+            }
+        }
+    }
+    Text("예시 답변", style = MaterialTheme.typography.titleMedium)
+    Text(t.sample)
+    TextButton(onClick = { model.say(t.sample) }) { Text("예시 답변 듣기") }
+    TextButton(onClick = { showKo = !showKo }) { Text(if (showKo) "한국어 뜻 접기" else "한국어 뜻 보기") }
+    if (showKo) Text(t.sampleKo, color = MaterialTheme.colorScheme.onSurfaceVariant)
+    LocalGrammarLink.current?.let { link ->
+        val titles = t.chapters.mapNotNull { id -> link.title(id)?.let { id to it } }
+        if (titles.isNotEmpty()) Text("관련 문법", style = MaterialTheme.typography.titleMedium)
+        titles.forEach { (id, title) -> OutlinedButton(onClick = { link.open(id) }, modifier = Modifier.fillMaxWidth()) { Text(title) } }
+    }
+}

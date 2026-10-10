@@ -66,6 +66,7 @@ tasks.named("preBuild").configure { dependsOn(bundledGrammar) }
 
 val bundledSpeaking = tasks.register<Sync>("bundleSpeaking") {
     from(rootProject.file("exports/speaking.json"))
+    from(rootProject.file("exports/templates.json"))
     into(layout.buildDirectory.dir("generated/speakingAssets"))
 }
 android.sourceSets["main"].assets.srcDir(layout.buildDirectory.dir("generated/speakingAssets").get().asFile)

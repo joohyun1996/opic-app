@@ -50,4 +50,4 @@
 - 매핑 `errorTypeChapters(type, language)` (core/common/Writing.kt) — 언어별 표, 새 언어는 표만 추가
 - 교정 카드는 `LocalGrammarLink`(CompositionLocal)가 있을 때만 버튼 표시 → 스피킹·영작 호출처 수정 없음
 - 앱: 최상위 경로 `grammarUnit/{id}`에서 장 설명만 띄움, 뒤로 가면 원래 화면. "문제 풀기"는 문법 탭으로 가서 그 장 문제를 바로 시작
-- AC5(실기기, Gemma 교정 필요)는 미확인
+- AC5: 같은 경로(grammarUnit/{id})를 TASK 33 템플릿 화면에서 실기기 확인. 교정 카드 버튼 자체는 Gemma 교정이 필요해 미확인

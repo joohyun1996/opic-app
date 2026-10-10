@@ -7,6 +7,7 @@ import android.content.pm.PackageManager
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.jooh.opic.core.common.AnswerTemplates
 import com.jooh.opic.core.common.EditableWord
 import com.jooh.opic.core.common.SpeakingCatalog
 import com.jooh.opic.core.database.MockSummaryRow
@@ -60,7 +61,7 @@ internal const val FILLER_PROMPT = "Um, uh, so, like, you know, I mean."
 internal const val MAX_ANSWER_MS = 120_000L
 internal const val MAX_CORRECTION_SENTENCES = 15
 
-enum class SpeakingPage { TOPICS, QUESTION, RESULT, MOCK_TRANSCRIBE, MOCK_SUMMARY, HISTORY }
+enum class SpeakingPage { TOPICS, QUESTION, RESULT, MOCK_TRANSCRIBE, MOCK_SUMMARY, HISTORY, TEMPLATES, TEMPLATE }
 
 /** 모의고사 답변 하나 (TASK 20). 받아 적기는 15문항이 끝난 뒤 한꺼번에. */
 data class MockAnswer(
@@ -71,6 +72,8 @@ enum class ModelState { MISSING, DOWNLOADING, NOT_LOADED, LOADING, READY, FAILED
 
 data class SpeakingState(
     val page: SpeakingPage = SpeakingPage.TOPICS,
+    /** 답변 템플릿 상세에서 보는 유형 (TASK 33) */
+    val templateType: String? = null,
     val topicId: String? = null,
     val question: SpeakingQuestion? = null,
     val replaysLeft: Int = 1,
@@ -117,6 +120,7 @@ class SpeakingViewModel(
     val llmModelDownloaded: () -> Boolean,
     val llmModelBytes: Long,
     private val history: SpeakingDao? = null,
+    val templates: AnswerTemplates? = null,
 ) : AndroidViewModel(app) {
     private val mutableLlm = MutableStateFlow<OnDeviceLlmEngine?>(null)
     /** 교정을 열었을 때만 만든다 (Whisper와 동시 적재 금지). */
@@ -145,6 +149,16 @@ class SpeakingViewModel(
     fun openTopic(topicId: String) {
         val first = catalog?.topics?.firstOrNull { it.id == topicId }?.questions?.firstOrNull() ?: return
         ask(topicId, first)
+    }
+
+    // ---- 답변 템플릿 (TASK 33) ----
+    fun openTemplates() { cancelWork(); stopSpeaking(); mutable.update { SpeakingState(page = SpeakingPage.TEMPLATES, model = it.model, hasToken = it.hasToken) } }
+    fun openTemplate(type: String) = mutable.update { it.copy(page = SpeakingPage.TEMPLATE, templateType = type) }
+
+    /** 그 유형 질문 중 하나로 녹음 화면을 연다. 질문이 없으면 아무것도 하지 않는다. */
+    fun practiceType(type: String) {
+        val (topicId, question) = allQuestions().filter { it.second.type == type }.randomOrNull() ?: return
+        ask(topicId, question)
     }
 
     fun randomQuestion() {

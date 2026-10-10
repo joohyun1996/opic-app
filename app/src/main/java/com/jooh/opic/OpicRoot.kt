@@ -226,7 +226,7 @@ fun OpicRoot(app: OpicApplication) {
                                     override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
                                         SpeakingViewModel(app, catalog, app.whisper, app::releaseGemmaBeforeWhisper, speaker::speak, speaker::stop,
                                             { app.llmEngine }, app.hfTokenStore, { ModelCatalog.isDownloaded(app) },
-                                            ModelCatalog.config(app).models.first().expectedBytes, app.database.speakingDao()) as T
+                                            ModelCatalog.config(app).models.first().expectedBytes, app.database.speakingDao(), loaded.templates) as T
                                 } })
                                 LaunchedEffect(Unit) { pendingSpeakingHistory.value?.let { pendingSpeakingHistory.value = null; model.openHistory() } }
                                 TabRoot(openMenu) {

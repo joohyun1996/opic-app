@@ -8,6 +8,7 @@ include(":feature:words")
 include(":feature:grammar")
 include(":core:stt")
 include(":core:correction")
+include(":core:ui")
 
 include(":feature:shadowing")
 include(":feature:speaking")

@@ -3,8 +3,9 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 }
+// 여러 기능이 같이 쓰는 화면 부품 (TASK 19 발음 힌트부터, 디자인 개편 때 공용 테마도 여기로)
 android {
-    namespace = "com.jooh.opic.feature.speaking"
+    namespace = "com.jooh.opic.core.ui"
     compileSdk = 37
     defaultConfig { minSdk = 34 }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
@@ -13,15 +14,7 @@ android {
 }
 dependencies {
     implementation(project(":core:common"))
-    implementation(project(":core:ui"))
-    implementation(project(":core:stt"))
-    implementation(project(":core:llm"))
-    implementation(project(":core:correction"))
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.kotlinx.coroutines.android)
-    testImplementation(libs.junit)
 }

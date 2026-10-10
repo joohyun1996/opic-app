@@ -16,6 +16,13 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jooh.opic.core.common.WordDiff
+import com.jooh.opic.core.common.flapWords
+import com.jooh.opic.core.common.linkingPairs
+import com.jooh.opic.core.common.pronunciationTips
+import com.jooh.opic.core.common.reductions
+import com.jooh.opic.core.common.werWords
+import com.jooh.opic.core.ui.PronunciationHintsCard
+import com.jooh.opic.core.ui.UnclearHint
 import com.jooh.opic.core.stt.PcmPlayer
 import com.jooh.opic.core.common.cueAt
 import com.jooh.opic.core.common.youtubeVideoId
@@ -25,7 +32,7 @@ import kotlinx.coroutines.withContext
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit) {
+fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit, speak: (String) -> Unit = {}) {
     val state by model.state.collectAsState()
     var player by remember { mutableStateOf<YouTubePlayer?>(null) }
     var current by remember { mutableDoubleStateOf(0.0) }
@@ -127,6 +134,15 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit)
                         is WordDiff.Delete -> Text(item.ref, color = Color.Gray, textDecoration = TextDecoration.LineThrough)
                         is WordDiff.Insert -> Text(item.hyp, color = Color(0xFFBA6500))
                     } }
+                }
+                if (state.sentence.isNotBlank()) {
+                    val unclear = state.diff.mapNotNull { item -> when (item) {
+                        is WordDiff.Substitute -> UnclearHint("${item.ref} → ${item.hyp}", item.ref)
+                        is WordDiff.Delete -> UnclearHint("${item.ref} (빠뜨림)", item.ref)
+                        else -> null
+                    } }.distinctBy { it.word }.take(5)
+                    PronunciationHintsCard(unclear, "다르게 들린 단어", pronunciationTips(werWords(state.sentence)),
+                        linkingPairs(state.sentence), reductions(state.sentence), flapWords(state.sentence), speak)
                 }
             }
         }

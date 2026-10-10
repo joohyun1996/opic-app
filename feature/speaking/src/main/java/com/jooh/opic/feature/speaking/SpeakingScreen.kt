@@ -18,6 +18,14 @@ import androidx.compose.ui.unit.dp
 import com.jooh.opic.core.common.EditState
 import com.jooh.opic.core.common.EditableWord
 import com.jooh.opic.core.common.durationAdvice
+import com.jooh.opic.core.common.editedText
+import com.jooh.opic.core.common.flapWords
+import com.jooh.opic.core.common.linkingPairs
+import com.jooh.opic.core.common.pronunciationTips
+import com.jooh.opic.core.common.reductions
+import com.jooh.opic.core.common.unclearWords
+import com.jooh.opic.core.ui.PronunciationHintsCard
+import com.jooh.opic.core.ui.UnclearHint
 import com.jooh.opic.core.correction.CorrectionResultCard
 import com.jooh.opic.core.correction.LlmPreparationScreen
 import com.jooh.opic.core.llm.LlmEngineState
@@ -169,6 +177,15 @@ private fun ResultPage(model: SpeakingViewModel, state: SpeakingState) {
             if (metrics.repeatedWords.isNotEmpty()) Text("자주 쓴 단어: " + metrics.repeatedWords.joinToString { "${it.first} ${it.second}번" })
         }
     }
+    val edited = remember(state.words) { editedText(state.words) }
+    val unclear = remember(state.words) {
+        val kept = state.words.withIndex().filter { it.value.original != null && it.value.state == EditState.KEPT }
+        unclearWords(kept.map { it.value.original!! }).map { kept[it] }.map { (index, word) ->
+            UnclearHint(word.text, werWords(word.text).firstOrNull() ?: word.text, playMine = { model.playWord(index) })
+        }
+    }
+    PronunciationHintsCard(unclear, "불명확하게 들린 단어", pronunciationTips(werWords(edited)),
+        linkingPairs(edited), reductions(edited), flapWords(edited), model::say)
     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         OutlinedButton(enabled = model.recordingFile.isFile, onClick = { scope.launch { PcmPlayer.play(model.recordingFile) } }) { Text("내 답변 듣기") }
         Button(onClick = model::retry) { Text("다시 답하기") }

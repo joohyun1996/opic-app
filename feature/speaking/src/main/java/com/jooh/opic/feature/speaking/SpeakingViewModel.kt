@@ -146,6 +146,9 @@ class SpeakingViewModel(
         speak(s.question.en)
     }
 
+    /** 발음 힌트의 원어민 발음 (TTS). */
+    fun say(text: String) = speak(text)
+
     fun toggleText() = mutable.update { it.copy(showText = !it.showText) }
 
     fun backToTopics() { cancelWork(); stopSpeaking(); mutable.update { SpeakingState(model = it.model, hasToken = it.hasToken) } }

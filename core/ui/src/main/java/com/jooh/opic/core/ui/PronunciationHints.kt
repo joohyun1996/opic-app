@@ -32,7 +32,7 @@ fun PronunciationHintsCard(
                 TextButton(onClick = { open = !open }) { Text(if (open) "접기" else "펼치기") }
             }
             if (!open) return@Column
-            Text("단어를 누르면 원어민 발음을 들려줘요", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+            Text("단어를 누르면 원어민 발음을 들려줘요", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             if (unclear.isNotEmpty()) {
                 Text(unclearTitle, style = MaterialTheme.typography.titleSmall)
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {

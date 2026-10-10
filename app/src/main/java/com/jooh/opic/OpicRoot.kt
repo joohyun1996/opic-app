@@ -38,7 +38,38 @@ import com.jooh.opic.feature.grammar.GrammarLoadResult
 import com.jooh.opic.feature.words.Speaker
 import com.jooh.opic.feature.words.WordsApp
 import com.jooh.opic.feature.words.WordsPage
-import com.jooh.opic.feature.words.WordsTheme
+import android.app.Activity
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
+import androidx.compose.material3.Scaffold
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalView
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.core.view.WindowCompat
+import androidx.navigation.NavDestination.Companion.hierarchy
+import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.navigation
+import com.jooh.opic.core.llm.SharedModel
+import com.jooh.opic.core.stt.SttModels
+import com.jooh.opic.core.ui.Opic
+import com.jooh.opic.core.ui.OpicTheme
+import com.jooh.opic.core.ui.ThemeMode
+import com.jooh.opic.core.ui.UiSettings
+import com.jooh.opic.feature.words.WordsViewModel
+
+/** 하단 바 탭 (TASK 24). route = 탭 그래프, start = 탭 첫 화면. */
+private enum class Tab(val route: String, val start: String, val label: String, val icon: ImageVector) {
+    HOME("tab/home", "home", "홈", Icons.Home),
+    WORDS("tab/words", "days", "단어", Icons.Cards),
+    GRAMMAR("tab/grammar", "grammar", "문법", Icons.Book),
+    SHADOWING("tab/shadowing", "shadowing", "섀도잉", Icons.Play),
+    SPEAKING("tab/speaking", "speaking", "스피킹", Icons.Mic),
+}
 
 @Composable
 fun OpicRoot(app: OpicApplication) {
@@ -49,6 +80,9 @@ fun OpicRoot(app: OpicApplication) {
     val speaker = remember(app) { Speaker(app) }
     DisposableEffect(speaker) { onDispose { speaker.shutdown() } }
     val ttsAvailable by speaker.available.collectAsState()
+    val themeMode by UiSettings.themeMode.collectAsState()
+    val speechRate by UiSettings.speechRate.collectAsState()
+    LaunchedEffect(ttsAvailable, speechRate) { if (ttsAvailable == true) speaker.setRate(speechRate) }
     var ttsNoticeShown by rememberSaveable { mutableStateOf(false) }
     LaunchedEffect(ttsAvailable) {
         if (ttsAvailable == false && !ttsNoticeShown) {
@@ -58,76 +92,185 @@ fun OpicRoot(app: OpicApplication) {
     }
     val navigate: (String) -> Unit = { nav.navigate(it) }
     val back: () -> Unit = { nav.safeBack() }
-    WordsTheme {
-        NavHost(navController = nav, startDestination = "home") {
-            composable("home") {
-                // 홈에 들어올 때마다 오늘의 복습 수를 다시 센다
-                var grammarDue by remember { mutableStateOf(0) }
-                LaunchedEffect(grammarResult) {
-                    val book = (grammarResult as? GrammarLoadResult.Loaded)?.book ?: return@LaunchedEffect
-                    grammarDue = runCatching { app.grammarReviews.dueExercises(book).size }.getOrDefault(0)
+    val dark = when (themeMode) { ThemeMode.SYSTEM -> isSystemInDarkTheme(); ThemeMode.LIGHT -> false; ThemeMode.DARK -> true }
+    val view = LocalView.current
+    SideEffect {
+        (view.context as? Activity)?.window?.let { window ->
+            WindowCompat.getInsetsController(window, view).apply { isAppearanceLightStatusBars = !dark; isAppearanceLightNavigationBars = !dark }
+        }
+    }
+    fun openTab(tab: Tab) = nav.navigate(tab.route) {
+        popUpTo(nav.graph.findStartDestination().id) { saveState = true }
+        launchSingleTop = true
+        restoreState = true
+    }
+    val openMenu: () -> Unit = { nav.navigate("menu") { launchSingleTop = true } }
+    var backupOpen by remember { mutableStateOf(false) }
+    var modelsOpen by remember { mutableStateOf(false) }
+    OpicTheme(themeMode) {
+        val entry by nav.currentBackStackEntryAsState()
+        val destination = entry?.destination
+        Scaffold(containerColor = MaterialTheme.colorScheme.background, bottomBar = {
+            if (destination?.route != "menu") NavigationBar(containerColor = MaterialTheme.colorScheme.surfaceContainerLowest, tonalElevation = 0.dp) {
+                Tab.entries.forEach { tab ->
+                    val selected = destination?.hierarchy?.any { it.route == tab.route } == true
+                    NavigationBarItem(selected = selected, onClick = { openTab(tab) }, icon = { Icon(tab.icon, contentDescription = null) },
+                        label = { Text(tab.label) }, colors = NavigationBarItemDefaults.colors(selectedIconColor = Opic.colors.accent,
+                            selectedTextColor = Opic.colors.accent, indicatorColor = MaterialTheme.colorScheme.surfaceVariant,
+                            unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant, unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant))
                 }
-                var backupOpen by remember { mutableStateOf(false) }
-                WordsApp(app.database, importResult, speaker, WordsPage.HOME, grammarCount,
-                    grammarDue = grammarDue, navigate = navigate, onBack = back, onBackup = { backupOpen = true })
-                if (backupOpen) BackupDialog(app) { backupOpen = false }
             }
-            composable("days") { WordsApp(app.database, importResult, speaker, WordsPage.DAYS, grammarCount,
-                navigate = navigate, onBack = back) }
-            composable("day/{day}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
-                WordsApp(app.database, importResult, speaker, WordsPage.DAY, grammarCount,
-                    day = entry.arguments?.getInt("day") ?: 1, navigate = navigate, onBack = back)
-            }
-            composable("study/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
-                WordsApp(app.database, importResult, speaker, WordsPage.STUDY, grammarCount,
-                    day = entry.arguments?.getInt("day") ?: 1, mode = entry.arguments?.getString("mode"), navigate = navigate, onBack = back)
-            }
-            composable("wrong") { WordsApp(app.database, importResult, speaker, WordsPage.WRONG, grammarCount,
-                navigate = navigate, onBack = back) }
-            composable("study/wrong/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
-                WordsApp(app.database, importResult, speaker, WordsPage.WRONG_STUDY, grammarCount,
-                    day = entry.arguments?.getInt("day") ?: 0, mode = entry.arguments?.getString("mode"), navigate = navigate, onBack = back)
-            }
-            composable("grammar") {
-                LaunchedEffect(Unit) { app.whisper.close() }
-                Box(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.TopCenter) {
-                    Column(Modifier.widthIn(max = 430.dp).fillMaxSize().padding(horizontal = 16.dp)) {
-                        GrammarFlow(grammarResult, app.llmEngine, app.hfTokenStore, { ModelCatalog.isDownloaded(app) },
-                            ModelCatalog.config(app).models.first().expectedBytes, back, reviews = app.grammarReviews)
+        }) { padding ->
+            Box(Modifier.fillMaxSize().padding(padding).consumeWindowInsets(padding)) {
+                NavHost(navController = nav, startDestination = Tab.HOME.route) {
+                    navigation(startDestination = "home", route = Tab.HOME.route) {
+                        composable("home") {
+                            // 홈에 들어올 때마다 실제 데이터를 다시 센다
+                            val words: WordsViewModel = viewModel(factory = remember(app) { WordsViewModel.Factory(app.database) })
+                            val wordState by words.state.collectAsState()
+                            var grammarDue by remember { mutableStateOf(0) }
+                            var recentVideo by remember { mutableStateOf<String?>(null) }
+                            LaunchedEffect(importResult) { words.refresh() }
+                            LaunchedEffect(grammarResult) {
+                                val book = (grammarResult as? GrammarLoadResult.Loaded)?.book ?: return@LaunchedEffect
+                                grammarDue = runCatching { app.grammarReviews.dueExercises(book).size }.getOrDefault(0)
+                            }
+                            LaunchedEffect(Unit) {
+                                val id = runCatching { app.database.shadowingAttemptDao().recentVideos("en", 1).firstOrNull()?.videoId }.getOrNull()
+                                recentVideo = app.shadowingVideos.firstOrNull { it.id == id }?.title
+                            }
+                            val next = wordState.days.firstOrNull { it.total > 0 && it.mastered < it.total }
+                            HomeScreen(HomeData(grammarDue, next?.day, next?.mastered ?: 0, next?.total ?: 0, wordState.mastered, wordState.total, recentVideo),
+                                onMenu = openMenu, onGrammarReview = { openTab(Tab.GRAMMAR) }, onWords = { openTab(Tab.WORDS) },
+                                onDay = { day -> openTab(Tab.WORDS); nav.navigate("day/$day") }, onMock = { openTab(Tab.SPEAKING) },
+                                onShadowing = { openTab(Tab.SHADOWING) })
+                        }
                     }
-                }
-            }
-            composable("shadowing") {
-                val model: ShadowingViewModel = viewModel(factory = remember(app) { object : ViewModelProvider.Factory {
-                    @Suppress("UNCHECKED_CAST")
-                    override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
-                        ShadowingViewModel(app, app.whisper, app::releaseGemmaBeforeWhisper, app.database.shadowingAttemptDao()) as T
-                } })
-                Box(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.TopCenter) {
-                    Box(Modifier.widthIn(max = 430.dp).fillMaxSize()) {
-                        ShadowingScreen(model, back, speaker::speak, app.shadowingVideos)
+                    navigation(startDestination = "days", route = Tab.WORDS.route) {
+                        composable("days") { TabRoot(openMenu) { WordsApp(app.database, importResult, speaker, WordsPage.DAYS, grammarCount, navigate = navigate, onBack = back) } }
+                        composable("day/{day}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
+                            WordsApp(app.database, importResult, speaker, WordsPage.DAY, grammarCount,
+                                day = entry.arguments?.getInt("day") ?: 1, navigate = navigate, onBack = back)
+                        }
+                        composable("study/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
+                            WordsApp(app.database, importResult, speaker, WordsPage.STUDY, grammarCount,
+                                day = entry.arguments?.getInt("day") ?: 1, mode = entry.arguments?.getString("mode"), navigate = navigate, onBack = back)
+                        }
+                        composable("wrong") { WordsApp(app.database, importResult, speaker, WordsPage.WRONG, grammarCount, navigate = navigate, onBack = back) }
+                        composable("study/wrong/{day}/{mode}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
+                            WordsApp(app.database, importResult, speaker, WordsPage.WRONG_STUDY, grammarCount,
+                                day = entry.arguments?.getInt("day") ?: 0, mode = entry.arguments?.getString("mode"), navigate = navigate, onBack = back)
+                        }
                     }
-                }
-            }
-            composable("speaking") {
-                val load by app.speakingCatalog.collectAsState()
-                // 파싱이 끝나기 전에 들어오면 ViewModel을 만들지 않고 기다린다
-                load?.let { loaded ->
-                    val catalog = loaded.catalog
-                    val model: SpeakingViewModel = viewModel(factory = remember(app, loaded) { object : ViewModelProvider.Factory {
-                        @Suppress("UNCHECKED_CAST")
-                        override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
-                            SpeakingViewModel(app, catalog, app.whisper, app::releaseGemmaBeforeWhisper, speaker::speak, speaker::stop,
-                                { app.llmEngine }, app.hfTokenStore, { ModelCatalog.isDownloaded(app) },
-                                ModelCatalog.config(app).models.first().expectedBytes, app.database.speakingDao()) as T
-                    } })
-                    Box(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.TopCenter) {
-                        Box(Modifier.widthIn(max = 430.dp).fillMaxSize()) { SpeakingScreen(model, back) }
+                    navigation(startDestination = "grammar", route = Tab.GRAMMAR.route) {
+                        composable("grammar") {
+                            LaunchedEffect(Unit) { app.whisper.close() }
+                            TabRoot(openMenu) {
+                                Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
+                                    Column(Modifier.widthIn(max = 430.dp).fillMaxSize().padding(horizontal = 16.dp)) {
+                                        GrammarFlow(grammarResult, app.llmEngine, app.hfTokenStore, { ModelCatalog.isDownloaded(app) },
+                                            ModelCatalog.config(app).models.first().expectedBytes, back, reviews = app.grammarReviews)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    navigation(startDestination = "shadowing", route = Tab.SHADOWING.route) {
+                        composable("shadowing") {
+                            val model: ShadowingViewModel = viewModel(factory = remember(app) { object : ViewModelProvider.Factory {
+                                @Suppress("UNCHECKED_CAST")
+                                override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
+                                    ShadowingViewModel(app, app.whisper, app::releaseGemmaBeforeWhisper, app.database.shadowingAttemptDao()) as T
+                            } })
+                            TabRoot(openMenu) {
+                                Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
+                                    Box(Modifier.widthIn(max = 430.dp).fillMaxSize()) { ShadowingScreen(model, back, speaker::speak, app.shadowingVideos) }
+                                }
+                            }
+                        }
+                    }
+                    navigation(startDestination = "speaking", route = Tab.SPEAKING.route) {
+                        composable("speaking") {
+                            val load by app.speakingCatalog.collectAsState()
+                            // 파싱이 끝나기 전에 들어오면 ViewModel을 만들지 않고 기다린다
+                            load?.let { loaded ->
+                                val catalog = loaded.catalog
+                                val model: SpeakingViewModel = viewModel(factory = remember(app, loaded) { object : ViewModelProvider.Factory {
+                                    @Suppress("UNCHECKED_CAST")
+                                    override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
+                                        SpeakingViewModel(app, catalog, app.whisper, app::releaseGemmaBeforeWhisper, speaker::speak, speaker::stop,
+                                            { app.llmEngine }, app.hfTokenStore, { ModelCatalog.isDownloaded(app) },
+                                            ModelCatalog.config(app).models.first().expectedBytes, app.database.speakingDao()) as T
+                                } })
+                                LaunchedEffect(Unit) { pendingSpeakingHistory.value?.let { pendingSpeakingHistory.value = null; model.openHistory() } }
+                                TabRoot(openMenu) {
+                                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
+                                        Box(Modifier.widthIn(max = 430.dp).fillMaxSize()) { SpeakingScreen(model, back) }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    composable("menu") {
+                        val words: WordsViewModel = viewModel(factory = remember(app) { WordsViewModel.Factory(app.database) })
+                        val wordState by words.state.collectAsState()
+                        LaunchedEffect(Unit) { words.refresh() }
+                        MenuScreen(
+                            wrongCount = wordState.wrong,
+                            gemmaStatus = gemmaStatus(app), whisperStatus = if (SttModels.isDownloaded(app.whisper.model)) "받음" else "없음",
+                            themeMode = themeMode, speechRate = speechRate, version = BuildConfig.VERSION_NAME,
+                            onClose = back, onWrong = { nav.navigate("wrong") },
+                            onSpeakingHistory = { pendingSpeakingHistory.value = true; openTab(Tab.SPEAKING) },
+                            onModels = { modelsOpen = true },
+                            onTheme = { UiSettings.setTheme(app, it) }, onSpeechRate = { UiSettings.setSpeechRate(app, it) },
+                            onBackup = { backupOpen = true },
+                        )
                     }
                 }
             }
         }
+        if (backupOpen) BackupDialog(app) { backupOpen = false }
+        if (modelsOpen) ModelsDialog(app) { modelsOpen = false }
     }
+}
+
+/** 메뉴 "스피킹 기록" → 스피킹 탭을 열면서 기록 화면으로. */
+private val pendingSpeakingHistory = kotlinx.coroutines.flow.MutableStateFlow<Boolean?>(null)
+
+/** 탭 첫 화면 오른쪽 위에 ≡ 전체 메뉴 버튼을 얹는다. */
+@Composable
+private fun TabRoot(onMenu: () -> Unit, content: @Composable () -> Unit) {
+    Box(Modifier.fillMaxSize()) {
+        content()
+        IconButton(onClick = onMenu, modifier = Modifier.align(Alignment.TopEnd).padding(top = 4.dp, end = 4.dp).size(48.dp)) {
+            Icon(Icons.Menu, contentDescription = "전체 메뉴")
+        }
+    }
+}
+
+private fun gemmaStatus(app: OpicApplication): String {
+    val bytes = ModelCatalog.config(app).models.first().expectedBytes
+    return when {
+        SharedModel.isValid(bytes) -> "공용 모델"
+        ModelCatalog.isDownloaded(app) -> "앱 안"
+        else -> "없음"
+    }
+}
+
+/** AI 모델 상태 (TASK 24). 공용 Gemma(ADR 002)는 모든 파일 접근이 필요하다. */
+@Composable
+private fun ModelsDialog(app: OpicApplication, onDismiss: () -> Unit) {
+    val bytes = ModelCatalog.config(app).models.first().expectedBytes
+    AlertDialog(onDismissRequest = onDismiss, title = { Text("AI 모델") }, text = {
+        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Text("문법 교정 (Gemma 3n E4B, 4.4GB): ${gemmaStatus(app)}")
+            Text("공용 위치: 내장 저장공간/${SharedModel.FOLDER_HINT}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            if (!SharedModel.hasAccess()) OutlinedButton(onClick = { app.startActivity(SharedModel.accessSettingsIntent(app).addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)) }) {
+                Text("모든 파일 접근 허용 (공용 모델 읽기)")
+            } else if (!SharedModel.isValid(bytes)) Text("공용 위치에 모델 파일이 없어요", color = Opic.colors.warning)
+            Text("음성 인식 (Whisper small.en, 190MB): " + if (SttModels.isDownloaded(app.whisper.model)) "받음" else "없음 — 섀도잉·스피킹에서 받기")
+        }
+    }, confirmButton = { TextButton(onClick = onDismiss) { Text("닫기") } })
 }
 
 /** 학습 기록 백업·복원 (TASK 22). 파일 위치는 시스템 선택 창으로 사용자가 고른다 (새 권한 없음). */

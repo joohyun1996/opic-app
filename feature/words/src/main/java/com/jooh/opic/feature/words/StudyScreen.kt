@@ -53,7 +53,7 @@ private fun ColumnScope.CardView(state: StudyState, word: WordEntity, mode: Stud
     )
     val border = when (state.checked) { true -> BorderStroke(2.dp, RightInk); false -> BorderStroke(2.dp, WrongInk); null -> BorderStroke(1.dp, Line) }
     // 카드는 내용 높이만 차지한다. 키보드가 올라와 공간이 줄면 카드 안에서 스크롤되고, 문제는 항상 보인다.
-    Card(Modifier.fillMaxWidth().weight(3f, fill = false), border = border, colors = CardDefaults.cardColors(containerColor = Color.White)) {
+    Card(Modifier.fillMaxWidth().weight(3f, fill = false), border = border, colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
         Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             when (mode) {
                 StudyMode.EN_KO -> {
@@ -61,11 +61,11 @@ private fun ColumnScope.CardView(state: StudyState, word: WordEntity, mode: Stud
                         Text(word.word, style = MaterialTheme.typography.headlineMedium)
                         SpeakButton(speaker, word.word)
                     }
-                    Text(word.phonetic, color = Color.Gray)
+                    Text(word.phonetic, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 StudyMode.KO_EN -> {
                     Text(word.meaningKo.removePrefix("*"), style = MaterialTheme.typography.headlineSmall)
-                    Text(word.partOfSpeech, color = Color.Gray)
+                    Text(word.partOfSpeech, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     if (state.hintShown) Text("힌트: ${maskHint(word.word)}", style = MaterialTheme.typography.titleMedium)
                     else if (state.checked == null) TextButton(onClick = model::showHint, contentPadding = PaddingValues(0.dp)) { Text("힌트 보기") }
                 }
@@ -79,11 +79,11 @@ private fun ColumnScope.CardView(state: StudyState, word: WordEntity, mode: Stud
                     StudyMode.KO_EN -> Row(verticalAlignment = Alignment.CenterVertically) {
                         Text(if (correct) word.word else "정답: ${word.word}", style = MaterialTheme.typography.titleMedium)
                         SpeakButton(speaker, word.word)
-                        Text(word.phonetic, color = Color.Gray)
+                        Text(word.phonetic, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                 }
                 Text(word.example, style = MaterialTheme.typography.bodyMedium)
-                Text(word.exampleKo, style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+                Text(word.exampleKo, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }
     }
@@ -122,7 +122,7 @@ private fun ResultView(state: StudyState, onRestart: () -> Unit, onBack: () -> U
             items(state.wrongWords, key = { it.id }) { word ->
                 Column(Modifier.padding(vertical = 6.dp)) {
                     Text(word.word, style = MaterialTheme.typography.titleMedium)
-                    Text(word.meaningKo.removePrefix("*"), color = Color.Gray)
+                    Text(word.meaningKo.removePrefix("*"), color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 HorizontalDivider(color = Line)
             }

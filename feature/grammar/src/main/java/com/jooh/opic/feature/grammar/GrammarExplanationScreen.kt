@@ -1,5 +1,6 @@
 package com.jooh.opic.feature.grammar
 
+import com.jooh.opic.core.ui.Opic
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -25,8 +26,8 @@ fun GrammarExplanationScreen(unit: GrammarUnit, onBack: () -> Unit, onStart: () 
             Text("흔한 실수", style = MaterialTheme.typography.titleMedium)
             unit.explanation.commonMistakes.forEach { mistake ->
                 Column {
-                    Text("✗ ${mistake.wrong}", color = Color(0xFFB3261E))
-                    Text("✓ ${mistake.right}", color = Color(0xFF146C2E))
+                    Text("✗ ${mistake.wrong}", color = Opic.colors.error)
+                    Text("✓ ${mistake.right}", color = Opic.colors.success)
                     Text(mistake.note, style = MaterialTheme.typography.bodySmall)
                 }
             }

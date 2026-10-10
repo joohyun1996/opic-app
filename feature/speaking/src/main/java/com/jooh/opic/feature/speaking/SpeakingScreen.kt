@@ -1,5 +1,6 @@
 package com.jooh.opic.feature.speaking
 
+import com.jooh.opic.core.ui.Opic
 import android.Manifest
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -84,7 +85,7 @@ private fun TopicsPage(model: SpeakingViewModel, onBack: () -> Unit) {
             Card(onClick = { model.openTopic(topic.id) }, modifier = Modifier.fillMaxWidth()) {
                 Row(Modifier.fillMaxWidth().padding(16.dp)) {
                     Text(topic.titleKo, Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
-                    Text("${topic.questions.size}문항 · ${levels.first()}" + if (levels.size > 1) "~${levels.last()}" else "", color = Color.Gray)
+                    Text("${topic.questions.size}문항 · ${levels.first()}" + if (levels.size > 1) "~${levels.last()}" else "", color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
         }
@@ -106,7 +107,7 @@ private fun MockSummaryPage(model: SpeakingViewModel, state: SpeakingState) {
     Text("모의고사 결과", style = MaterialTheme.typography.headlineSmall)
     val done = state.mock.mapNotNull { it.metrics }
     if (done.isNotEmpty()) Text("답한 문항 ${done.size}개 · 평균 ${done.sumOf { it.durationMs } / done.size / 1000}초 · 분당 ${done.sumOf { it.wordsPerMinute } / done.size}단어 · 머뭇거림 합계 ${done.sumOf { it.fillerCount }}번")
-    Text("문항을 누르면 답변 고치기·문법 교정·발음 힌트를 볼 수 있어요", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+    Text("문항을 누르면 답변 고치기·문법 교정·발음 힌트를 볼 수 있어요", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     state.mock.forEachIndexed { index, answer ->
         Card(onClick = { model.openMockAnswer(index) }, enabled = answer.metrics != null, modifier = Modifier.fillMaxWidth()) {
             Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -118,7 +119,7 @@ private fun MockSummaryPage(model: SpeakingViewModel, state: SpeakingState) {
                     answer.failed != null -> answer.failed
                     answer.file == null -> "답하지 않음"
                     else -> "받아 적지 않음"
-                }, color = if (m != null) Color.Unspecified else Color.Gray)
+                }, color = if (m != null) Color.Unspecified else MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }
     }
@@ -137,14 +138,14 @@ private fun QuestionPage(model: SpeakingViewModel, state: SpeakingState) {
             TextButton(enabled = !state.recording, onClick = model::finishMock) { Text("끝내기") }
         }
         LinearProgressIndicator(progress = { (state.mockIndex + 1f) / state.mock.size.coerceAtLeast(1) }, modifier = Modifier.fillMaxWidth())
-        Text("${item?.part.orEmpty()} · ${QUESTION_TYPE_KO[question.type].orEmpty()} · ${question.level}", color = Color.Gray)
+        Text("${item?.part.orEmpty()} · ${QUESTION_TYPE_KO[question.type].orEmpty()} · ${question.level}", color = MaterialTheme.colorScheme.onSurfaceVariant)
     } else {
         TextButton(onClick = model::backToTopics) { Text("← 주제") }
         Text("${topic?.titleKo.orEmpty()} · ${QUESTION_TYPE_KO[question.type].orEmpty()} · ${question.level}", style = MaterialTheme.typography.titleMedium)
     }
     state.lastPast?.let { last ->
         Text("지난 답변 ${state.pastCount}개 · 마지막 ${dateTime(last.createdAt)} · ${clock(last.durationMs)} · 분당 ${last.wordsPerMinute}단어 · 머뭇거림 ${last.fillerCount}번",
-            style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+            style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         OutlinedButton(enabled = state.replaysLeft > 0 && !state.recording, onClick = model::replay) {
@@ -155,7 +156,7 @@ private fun QuestionPage(model: SpeakingViewModel, state: SpeakingState) {
     if (state.showText) Card(Modifier.fillMaxWidth()) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
             Text(question.en, style = MaterialTheme.typography.bodyLarge)
-            Text(question.ko, color = Color.Gray)
+            Text(question.ko, color = MaterialTheme.colorScheme.onSurfaceVariant)
             Text("팁: ${question.tip}", style = MaterialTheme.typography.bodySmall)
         }
     }
@@ -201,7 +202,7 @@ private fun ResultPage(model: SpeakingViewModel, state: SpeakingState) {
     var editing by remember { mutableStateOf<Int?>(null) }
     if (state.fromMock) TextButton(onClick = model::backToMockSummary) { Text("← 모의고사 결과") }
     else TextButton(onClick = model::backToTopics) { Text("← 주제") }
-    state.question?.let { Text(it.en, style = MaterialTheme.typography.bodySmall, color = Color.Gray) }
+    state.question?.let { Text(it.en, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(if (state.showOriginal) "Whisper 받아 적기" else "내 답변", Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
         TextButton(onClick = model::toggleOriginal) { Text(if (state.showOriginal) "내가 고친 글 보기" else "Whisper 원문 보기") }
@@ -210,14 +211,14 @@ private fun ResultPage(model: SpeakingViewModel, state: SpeakingState) {
         Text(transcript)
     } else {
         Text("Whisper는 작은 실수를 고쳐서 적을 때가 있어요. 내 목소리를 들으며 실제로 말한 대로 고친 뒤 교정을 받으세요",
-            style = MaterialTheme.typography.bodySmall, color = Color.Gray)
-        Text("단어를 누르면 그 부분을 듣고, 꾹 누르면 고칠 수 있어요", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+            style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Text("단어를 누르면 그 부분을 듣고, 꾹 누르면 고칠 수 있어요", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         val mask = remember(state.words) { fillerMask(state.words.map { werWords(it.text).firstOrNull().orEmpty() }) }
         FlowRow(horizontalArrangement = Arrangement.spacedBy(5.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
             state.words.forEachIndexed { i, word ->
                 val color = when {
                     word.state == EditState.INSERTED -> EditBlue
-                    mask[i] -> Color.Gray
+                    mask[i] -> MaterialTheme.colorScheme.onSurfaceVariant
                     else -> Color.Unspecified
                 }
                 val decoration = when (word.state) {
@@ -225,7 +226,7 @@ private fun ResultPage(model: SpeakingViewModel, state: SpeakingState) {
                     EditState.DELETED -> TextDecoration.LineThrough
                     else -> null
                 }
-                Text(word.text, color = if (word.state == EditState.REPLACED) EditBlue else if (word.state == EditState.DELETED) Color.Gray else color,
+                Text(word.text, color = if (word.state == EditState.REPLACED) EditBlue else if (word.state == EditState.DELETED) MaterialTheme.colorScheme.onSurfaceVariant else color,
                     textDecoration = decoration,
                     modifier = Modifier.combinedClickable(onClick = { model.playWord(i) }, onLongClick = { editing = i }).padding(vertical = 2.dp))
             }
@@ -255,7 +256,7 @@ private fun ResultPage(model: SpeakingViewModel, state: SpeakingState) {
                 Text("말한 시간 ${clock(last.durationMs)} → ${clock(metrics.durationMs)}")
                 Text("분당 단어 ${last.wordsPerMinute} → ${metrics.wordsPerMinute} (${signed(metrics.wordsPerMinute - last.wordsPerMinute)})")
                 Text("머뭇거림 ${last.fillerCount} → ${metrics.fillerCount}번 (${signed(metrics.fillerCount - last.fillerCount)})")
-                Text("지난 답변: ${last.editedText}", style = MaterialTheme.typography.bodySmall, color = Color.Gray, maxLines = 4)
+                Text("지난 답변: ${last.editedText}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 4)
             }
         }
     }
@@ -315,7 +316,7 @@ private fun EditWordDialog(word: EditableWord, onDismiss: () -> Unit, onReplace:
     var insert by remember(word) { mutableStateOf("") }
     AlertDialog(onDismissRequest = onDismiss, title = { Text("단어 고치기") }, text = {
         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            word.original?.let { Text("Whisper: ${it.text}", color = Color.Gray) }
+            word.original?.let { Text("Whisper: ${it.text}", color = MaterialTheme.colorScheme.onSurfaceVariant) }
             OutlinedTextField(text, { text = it }, label = { Text("실제로 말한 단어") }, singleLine = true)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(onClick = { onReplace(text) }) { Text("바꾸기") }
@@ -327,7 +328,7 @@ private fun EditWordDialog(word: EditableWord, onDismiss: () -> Unit, onReplace:
     }, confirmButton = { TextButton(onClick = onRestore) { Text("원래대로") } }, dismissButton = { TextButton(onClick = onDismiss) { Text("닫기") } })
 }
 
-private val EditBlue = Color(0xFF1E5BD8)
+private val EditBlue: Color @Composable get() = Opic.colors.accent
 
 @Composable
 private fun HistoryPage(model: SpeakingViewModel, state: SpeakingState) {
@@ -343,22 +344,22 @@ private fun HistoryPage(model: SpeakingViewModel, state: SpeakingState) {
         HorizontalDivider()
     }
     Text("최근 답변 ${state.historyAnswers.size}개", style = MaterialTheme.typography.titleMedium)
-    if (state.historyAnswers.isEmpty()) Text("아직 저장된 답변이 없어요", color = Color.Gray)
+    if (state.historyAnswers.isEmpty()) Text("아직 저장된 답변이 없어요", color = MaterialTheme.colorScheme.onSurfaceVariant)
     state.historyAnswers.forEach { a ->
         Card(onClick = { open = a }, modifier = Modifier.fillMaxWidth()) {
             Column(Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 Text(questions[a.questionId]?.en ?: a.questionId, style = MaterialTheme.typography.bodyMedium, maxLines = 2)
                 Text("${dateTime(a.createdAt)} · ${clock(a.durationMs)} · 분당 ${a.wordsPerMinute}단어 · 머뭇거림 ${a.fillerCount}번" +
-                    if (a.mockId != null) " · 모의고사" else "", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+                    if (a.mockId != null) " · 모의고사" else "", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }
     }
     open?.let { a ->
         AlertDialog(onDismissRequest = { open = null }, title = { Text(dateTime(a.createdAt)) }, text = {
             Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(questions[a.questionId]?.en.orEmpty(), color = Color.Gray)
+                Text(questions[a.questionId]?.en.orEmpty(), color = MaterialTheme.colorScheme.onSurfaceVariant)
                 Text(a.editedText)
-                if (a.editedText != a.transcript) Text("Whisper: ${a.transcript}", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+                if (a.editedText != a.transcript) Text("Whisper: ${a.transcript}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }, confirmButton = { TextButton(onClick = { open = null }) { Text("닫기") } })
     }

@@ -28,6 +28,7 @@ dependencies {
     implementation(project(":core:model"))
     implementation(project(":core:database"))
     implementation(project(":core:stt"))
+    implementation(project(":core:ui"))
     implementation(project(":feature:shadowing"))
     implementation(project(":feature:speaking"))
     implementation(project(":core:llm"))

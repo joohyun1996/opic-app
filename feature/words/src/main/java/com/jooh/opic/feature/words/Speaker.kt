@@ -29,6 +29,11 @@ class Speaker(context: Context) : TextToSpeech.OnInitListener {
         if (mutableAvailable.value == true) tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, text)
     }
 
+    /** TTS 속도 (0.8 느리게 / 1.0 보통 / 1.2 빠르게, TASK 24). */
+    fun setRate(rate: Float) {
+        runCatching { tts.setSpeechRate(rate) }
+    }
+
     fun stop() {
         tts.stop()
     }

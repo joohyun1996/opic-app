@@ -1,5 +1,6 @@
 package com.jooh.opic.feature.grammar
 
+import com.jooh.opic.core.ui.Opic
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -30,8 +31,8 @@ fun GrammarExerciseScreen(
                 exercise.choices.orEmpty().forEachIndexed { index, choice ->
                     OutlinedButton(onClick = { onSelect(index) }, enabled = !state.attempt.isFinished(),
                         modifier = Modifier.fillMaxWidth(),
-                        colors = if (state.selected == index) ButtonDefaults.outlinedButtonColors(containerColor = Color(0xFFF1EFE8), contentColor = Color(0xFF1A1A18))
-                            else ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF1A1A18))) { Text(choice) }
+                        colors = if (state.selected == index) ButtonDefaults.outlinedButtonColors(containerColor = MaterialTheme.colorScheme.secondaryContainer, contentColor = MaterialTheme.colorScheme.onSurface)
+                            else ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.onSurface)) { Text(choice) }
                 }
             } else {
                 OutlinedTextField(value = state.input, onValueChange = onInput, enabled = !state.attempt.isFinished(),
@@ -40,16 +41,16 @@ fun GrammarExerciseScreen(
             }
             when (state.attempt.feedback) {
                 GrammarFeedback.HINT -> {
-                    Text("다시 생각해 보세요", color = Color(0xFF9A5600))
+                    Text("다시 생각해 보세요", color = Opic.colors.warning)
                     Text(exercise.hint)
                 }
                 GrammarFeedback.REVEAL_ANSWER -> {
-                    Text("정답: ${exercise.displayAnswer()}", color = Color(0xFFB3261E))
+                    Text("정답: ${exercise.displayAnswer()}", color = Opic.colors.error)
                     Text(exercise.explanation)
                 }
                 GrammarFeedback.CORRECT_FIRST, GrammarFeedback.CORRECT_SECOND -> {
                     Text(if (state.attempt.feedback == GrammarFeedback.CORRECT_FIRST) "정답! 첫 시도에 맞혔어요" else "정답! 두 번째 시도에 맞혔어요",
-                        color = Color(0xFF146C2E))
+                        color = Opic.colors.success)
                     Text(exercise.explanation)
                 }
                 null -> Unit

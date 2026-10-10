@@ -76,7 +76,7 @@ internal fun DayScreen(database: OpicDatabase, day: Int, speaker: Speaker, onBac
                                 SpeakButton(speaker, row.word.word)
                                 if ((row.wrongCount ?: 0) > 0 && (row.correctCount ?: 0) < 3) WrongBadge(row.wrongCount ?: 0)
                             }
-                            Text(row.word.phonetic, style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+                            Text(row.word.phonetic, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         }
                         if (showKorean) Text(
                             row.word.meaningKo.removePrefix("*"), Modifier.weight(1f).padding(start = 8.dp),

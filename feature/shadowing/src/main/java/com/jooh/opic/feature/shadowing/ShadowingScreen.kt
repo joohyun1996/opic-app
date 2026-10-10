@@ -1,5 +1,6 @@
 package com.jooh.opic.feature.shadowing
 
+import com.jooh.opic.core.ui.Opic
 import android.Manifest
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -70,7 +71,7 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit,
             model.link("https://youtu.be/${video.id}"); model.open(video.id); a = null; b = null; repeat = false
         } else {
             if (library.isNotEmpty()) TextButton(onClick = { model.close(); repeat = false }) { Text("← 추천 영상 목록") }
-            state.practice[state.videoId]?.let { Text("이 영상 연습 ${it.attempts}회 · 최고 일치율 ${"%.0f".format(it.bestMatchRate * 100)}%", color = Color.Gray) }
+            state.practice[state.videoId]?.let { Text("이 영상 연습 ${it.attempts}회 · 최고 일치율 ${"%.0f".format(it.bestMatchRate * 100)}%", color = MaterialTheme.colorScheme.onSurfaceVariant) }
         }
         state.videoId?.let { id ->
             key(id) { PlayerView(id, Modifier.fillMaxWidth().height(220.dp), { player = it }, { current = it },
@@ -139,9 +140,9 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit,
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(5.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     state.diff.forEach { item -> when (item) {
                         is WordDiff.Match -> Text(item.word)
-                        is WordDiff.Substitute -> Text("${item.ref} → ${item.hyp}", color = Color.Red)
-                        is WordDiff.Delete -> Text(item.ref, color = Color.Gray, textDecoration = TextDecoration.LineThrough)
-                        is WordDiff.Insert -> Text(item.hyp, color = Color(0xFFBA6500))
+                        is WordDiff.Substitute -> Text("${item.ref} → ${item.hyp}", color = Opic.colors.error)
+                        is WordDiff.Delete -> Text(item.ref, color = MaterialTheme.colorScheme.onSurfaceVariant, textDecoration = TextDecoration.LineThrough)
+                        is WordDiff.Insert -> Text(item.hyp, color = Opic.colors.warning)
                     } }
                 }
                 if (state.sentence.isNotBlank()) {
@@ -165,7 +166,7 @@ private fun RecommendedVideos(library: List<ShadowingVideo>, practice: Map<Strin
     if (library.isEmpty()) return
     var category by remember { mutableStateOf<String?>(null) }
     Text("추천 영상 ${library.size}개", style = MaterialTheme.typography.titleMedium)
-    Text("모두 영어 자막이 있고 앱 안에서 재생되는 영상이에요. 처음엔 학습자용부터 추천해요", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+    Text("모두 영어 자막이 있고 앱 안에서 재생되는 영상이에요. 처음엔 학습자용부터 추천해요", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
         FilterChip(selected = category == null, onClick = { category = null }, label = { Text("전체") })
         SHADOWING_CATEGORIES.forEach { (id, name) ->
@@ -190,7 +191,7 @@ private fun VideoCard(video: ShadowingVideo, names: Map<String, String>, practic
             Text(video.title, style = MaterialTheme.typography.bodyMedium, maxLines = 2)
             Text("${video.channel} · ${video.minutes}분 · ${names[video.category]} · ${video.level}" +
                 (practice?.let { " · 연습 ${it.attempts}회 · 최고 ${"%.0f".format(it.bestMatchRate * 100)}%" } ?: ""),
-                style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }

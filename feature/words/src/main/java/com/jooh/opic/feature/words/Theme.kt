@@ -9,16 +9,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.jooh.opic.core.model.WordStatus
+import com.jooh.opic.core.ui.Opic
 
-internal val Ink = Color(0xFF1A1A18)
-internal val Paper = Color(0xFFF8F7F4)
-internal val Line = Color(0xFFE8E6E0)
-internal val New = Color(0xFFF1EFE8)
-internal val Learned = Color(0xFFEAF3DE)
-internal val Learning = Color(0xFFFAEEDA)
-internal val WrongBg = Color(0xFFFCEBEB)
-internal val WrongInk = Color(0xFF9B2626)
-internal val RightInk = Color(0xFF2E6B1F)
+// TASK 24: 이름은 그대로 두고 공용 테마(밝게·어둡게) 값을 쓴다
+internal val Ink: Color @Composable get() = MaterialTheme.colorScheme.onBackground
+internal val Paper: Color @Composable get() = MaterialTheme.colorScheme.background
+internal val Line: Color @Composable get() = MaterialTheme.colorScheme.outlineVariant
+internal val New: Color @Composable get() = MaterialTheme.colorScheme.surfaceVariant
+internal val Learned: Color @Composable get() = Opic.colors.successBg
+internal val Learning: Color @Composable get() = Opic.colors.learning
+internal val WrongBg: Color @Composable get() = Opic.colors.errorBg
+internal val WrongInk: Color @Composable get() = Opic.colors.error
+internal val RightInk: Color @Composable get() = Opic.colors.success
 
 @Composable
 internal fun StatusBadge(status: WordStatus) {

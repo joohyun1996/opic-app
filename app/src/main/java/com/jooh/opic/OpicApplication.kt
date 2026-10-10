@@ -23,6 +23,7 @@ import com.jooh.opic.feature.grammar.GrammarCatalog
 import com.jooh.opic.feature.grammar.GrammarLoadResult
 import com.jooh.opic.feature.shadowing.ShadowingViewModel
 import com.jooh.opic.core.stt.UserWhisper
+import com.jooh.opic.core.ui.UiSettings
 import com.jooh.opic.core.common.SpeakingCatalog
 import com.jooh.opic.core.common.ShadowingVideo
 import com.jooh.opic.core.common.parseShadowingLibrary
@@ -45,6 +46,7 @@ class OpicApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        UiSettings.load(this)
         scope.launch {
             val start = SystemClock.elapsedRealtime()
             val result = try {

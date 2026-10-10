@@ -66,14 +66,14 @@ internal fun WrongScreen(database: OpicDatabase, speaker: Speaker, onBack: () ->
             all.isEmpty() -> Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) { Text("오답이 없습니다") }
             else -> LazyColumn(Modifier.weight(1f).fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 items(shown, key = { it.word.id }) { row ->
-                    Card(colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                    Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
                         Row(Modifier.height(IntrinsicSize.Min)) {
                             Box(Modifier.width(4.dp).fillMaxHeight().background(WrongInk))
                             Column(Modifier.weight(1f).padding(12.dp)) {
                                 Row(verticalAlignment = Alignment.CenterVertically) {
                                     Text(row.word.word, style = MaterialTheme.typography.titleMedium)
                                     SpeakButton(speaker, row.word.word)
-                                    Text(row.word.phonetic, style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+                                    Text(row.word.phonetic, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                 }
                                 Text(row.word.meaningKo.removePrefix("*"))
                                 Text("틀린 횟수 ${row.wrongCount ?: 0} · Day ${dayOf(row.word.seq)}",

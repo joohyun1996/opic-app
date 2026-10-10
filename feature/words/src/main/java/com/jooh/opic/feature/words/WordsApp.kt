@@ -14,13 +14,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jooh.opic.core.database.ImportResult
 import com.jooh.opic.core.database.OpicDatabase
 
-enum class WordsPage { HOME, DAYS, DAY, STUDY, WRONG, WRONG_STUDY }
-
-@Composable
-fun WordsTheme(content: @Composable () -> Unit) {
-    MaterialTheme(colorScheme = lightColorScheme(primary = Ink, onPrimary = Color.White, background = Paper,
-        surface = Paper, onSurface = Ink, onBackground = Ink, outline = Color(0xFFE8E6E0)), content = content)
-}
+enum class WordsPage { DAYS, DAY, STUDY, WRONG, WRONG_STUDY }
 
 @Composable
 fun WordsApp(
@@ -34,7 +28,6 @@ fun WordsApp(
     mode: String? = null,
     navigate: (String) -> Unit,
     onBack: () -> Unit,
-    onBackup: (() -> Unit)? = null,
 ) {
     val model: WordsViewModel = viewModel(factory = remember(database) { WordsViewModel.Factory(database) })
     val state by model.state.collectAsState()
@@ -51,37 +44,6 @@ fun WordsApp(
                         modifier = Modifier.padding(vertical = 8.dp))
                 }
                 when (page) {
-                    WordsPage.HOME -> Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                        Text("나의 언어 학습", style = MaterialTheme.typography.headlineMedium, modifier = Modifier.padding(vertical = 20.dp))
-                        Text("오늘도 한 걸음씩", style = MaterialTheme.typography.bodyLarge)
-                        Card(onClick = { navigate("days") }, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color.White)) {
-                            Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                                Text("영단어", style = MaterialTheme.typography.titleLarge)
-                                Text("습득 ${state.mastered} / ${state.total}개")
-                                LinearProgressIndicator(progress = { if (state.total == 0) 0f else state.mastered.toFloat() / state.total },
-                                    modifier = Modifier.fillMaxWidth(), color = Ink, trackColor = New, drawStopIndicator = {})
-                                Text("Day ${state.days.size}개")
-                            }
-                        }
-                        if (state.wrong > 0) TextButton(onClick = { navigate("wrong") }) { Text("오답노트 ${state.wrong}개 →", color = WrongInk) }
-                        Card(onClick = { navigate("grammar") }, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color.White)) {
-                            Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                                Text("영문법", style = MaterialTheme.typography.titleLarge)
-                                Text(if (grammarCount == null) "문법 데이터를 확인하세요 →" else "단원 ${grammarCount}개")
-                                if (grammarDue > 0) Text("오늘의 복습 ${grammarDue}개", color = WrongInk)
-                            }
-                        }
-                        Card(onClick = { navigate("shadowing") }, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color.White)) {
-                            Text("섀도잉", Modifier.padding(20.dp), style = MaterialTheme.typography.titleLarge)
-                        }
-                        Card(onClick = { navigate("speaking") }, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color.White)) {
-                            Text("스피킹", Modifier.padding(20.dp), style = MaterialTheme.typography.titleLarge)
-                        }
-                        Card(onClick = {}, enabled = false, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(disabledContainerColor = New)) {
-                            Text("중국어 (HSK) — 준비 중", Modifier.padding(20.dp))
-                        }
-                        onBackup?.let { TextButton(onClick = it) { Text("학습 기록 백업·복원") } }
-                    }
                     WordsPage.DAYS -> Column {
                         TextButton(onClick = onBack) { Text("← 홈") }
                         Text("영어 · Day 목록", style = MaterialTheme.typography.headlineSmall)

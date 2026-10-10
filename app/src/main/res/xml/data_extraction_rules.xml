@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  자동 백업·기기 이전 규칙 (2026-10-10).
+  Hugging Face 토큰 파일은 Android Keystore 키로 암호화되어 있다. 재설치하면 키는 복원되지 않아
+  복원된 파일을 열 수 없어 앱이 종료됐다 (04192d4). 그래서 토큰 파일은 백업·이전에서 뺀다.
+  재설치 후에는 토큰만 다시 입력하면 된다. 학습 기록은 앱의 "학습 기록 백업"을 쓴다.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="opic_hf_token_store.xml" />
+        <exclude domain="sharedpref" path="opic_hf_token_store_recovery.xml" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="opic_hf_token_store.xml" />
+        <exclude domain="sharedpref" path="opic_hf_token_store_recovery.xml" />
+    </device-transfer>
+</data-extraction-rules>

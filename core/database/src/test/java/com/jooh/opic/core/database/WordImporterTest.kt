@@ -7,6 +7,7 @@ import com.jooh.opic.core.common.WORDS_PER_DAY
 import com.jooh.opic.core.common.seqRange
 import com.jooh.opic.core.common.totalDays
 import java.io.File
+import java.io.ByteArrayInputStream
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.*
 import org.junit.After
@@ -114,6 +115,22 @@ class WordImporterTest {
         // dataVersion 1이 이미 적재된 상태에서, 단어 목록이 깨진 같은 버전 파일은 파싱 없이 UpToDate다.
         assertEquals(ImportResult.UpToDate(1), importer.importWords("{\"dataVersion\": 1, \"words\": [ not json"))
         assertEquals(1, dao.countByLanguage("en"))
+    }
+
+    @Test fun sameVersionStreamReadsOnlyPrefixAndKeepsProgress() = runBlocking {
+        importer.importWords(file(1, word()))
+        val before = dao.find("en", "alpha")!!
+        db.userWordDao().recordResult(before.id, true, 123)
+        val progress = db.userWordDao().get(before.id)
+        val bytes = ("{\"dataVersion\":1,\"words\":[" + "x".repeat(100_000)).toByteArray()
+        val stream = object : ByteArrayInputStream(bytes) {
+            var consumed = 0
+            override fun read(b: ByteArray, off: Int, len: Int): Int = super.read(b, off, len).also { if (it > 0) consumed += it }
+        }
+        assertEquals(ImportResult.UpToDate(1), importer.importWords(stream))
+        assertTrue(stream.consumed < bytes.size)
+        assertEquals(before, dao.find("en", "alpha"))
+        assertEquals(progress, db.userWordDao().get(before.id))
     }
 
     @Test fun correctionTurnsLastWrongIntoCorrect() = runBlocking {

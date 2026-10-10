@@ -1,6 +1,7 @@
 package com.jooh.opic.core.database
 
 import androidx.room.withTransaction
+import java.io.InputStream
 import kotlin.coroutines.cancellation.CancellationException
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -13,6 +14,23 @@ sealed interface ImportResult {
 
 class WordImporter(private val database: OpicDatabase) {
     private val json = Json { ignoreUnknownKeys = true }
+    suspend fun importWords(source: InputStream): ImportResult = try {
+        val input = source.buffered()
+        input.mark(PEEK_BYTES)
+        val prefix = input.readNBytes(PEEK_BYTES).toString(Charsets.UTF_8)
+        val peeked = VERSION_PATTERN.find(prefix)?.groupValues?.get(1)?.toIntOrNull()
+        val stored = database.dataMetaDao().get(VERSION_KEY)?.toIntOrNull() ?: 0
+        if (peeked != null && peeked >= 1 && stored >= peeked) ImportResult.UpToDate(stored)
+        else {
+            input.reset()
+            importWords(input.bufferedReader().use { it.readText() })
+        }
+    } catch (error: CancellationException) {
+        throw error
+    } catch (error: Exception) {
+        ImportResult.Failed(error.message ?: "단어 데이터 적재 실패")
+    }
+
     suspend fun importWords(raw: String): ImportResult = try {
         // 파일 앞부분의 dataVersion만 먼저 보고, 이미 적재된 버전이면 2MB 넘는 전체 파싱을 건너뛴다.
         val peeked = VERSION_PATTERN.find(raw.take(256))?.groupValues?.get(1)?.toIntOrNull()
@@ -55,6 +73,7 @@ class WordImporter(private val database: OpicDatabase) {
     }
 
     companion object { const val VERSION_KEY = "words_data_version"
+        private const val PEEK_BYTES = 4096
         private val VERSION_PATTERN = Regex("\"dataVersion\"\\s*:\\s*(\\d+)")
     }
 }

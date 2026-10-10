@@ -53,7 +53,7 @@ class OpicApplication : Application() {
         scope.launch {
             val start = SystemClock.elapsedRealtime()
             val result = try {
-                assets.open("words.json").bufferedReader().use { WordImporter(database).importWords(it.readText()) }
+                assets.open("words.json").use { WordImporter(database).importWords(it) }
             } catch (error: Exception) {
                 ImportResult.Failed(error.message ?: "단어 파일을 읽지 못했습니다")
             }

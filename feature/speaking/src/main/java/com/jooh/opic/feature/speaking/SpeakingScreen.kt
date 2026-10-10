@@ -11,6 +11,8 @@ import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -47,13 +49,17 @@ private val QUESTION_TYPE_KO = mapOf(
 @Composable
 fun SpeakingScreen(model: SpeakingViewModel, onBack: () -> Unit) {
     val state by model.state.collectAsState()
+    if (model.catalog != null && state.page == SpeakingPage.TOPICS) {
+        TopicsPage(model)
+        return
+    }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         if (model.catalog == null) {
             Text("스피킹 데이터를 불러오지 못했습니다", color = MaterialTheme.colorScheme.error)
             return@Column
         }
         when (state.page) {
-            SpeakingPage.TOPICS -> TopicsPage(model, onBack)
+            SpeakingPage.TOPICS -> Unit
             SpeakingPage.QUESTION -> QuestionPage(model, state)
             SpeakingPage.RESULT -> ResultPage(model, state)
             SpeakingPage.MOCK_TRANSCRIBE -> MockTranscribePage(model, state)
@@ -69,28 +75,32 @@ private val CATEGORY_KO = listOf("intro" to "자기소개", "survey" to "설문 
 private val LEVEL_ORDER = listOf("IM", "IH", "AL")
 
 @Composable
-private fun TopicsPage(model: SpeakingViewModel, onBack: () -> Unit) {
+private fun TopicsPage(model: SpeakingViewModel) {
     val catalog = model.catalog!!
-    // 탭 첫 화면: 제목이 오른쪽 위 ≡와 같은 줄 (TASK 25 — 화면 안쪽 여백만 사용)
-    Text("스피킹", style = MaterialTheme.typography.headlineSmall)
-    Text("질문을 듣고 바로 영어로 답해 보세요. 답변은 최대 2분입니다. ${catalog.topics.size}주제 ${catalog.topics.sumOf { it.questions.size }}문항")
-    Button(onClick = model::startMock, modifier = Modifier.fillMaxWidth()) { Text("모의고사 (실제 시험 순서 15문항)") }
-    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        OutlinedButton(onClick = model::randomQuestion, modifier = Modifier.weight(1f)) { Text("무작위 질문") }
-        OutlinedButton(onClick = model::openHistory, modifier = Modifier.weight(1f)) { Text("내 기록") }
-    }
-    if (model.templates != null) OutlinedButton(onClick = model::openTemplates, modifier = Modifier.fillMaxWidth()) { Text("유형별 답변 템플릿") }
-    CATEGORY_KO.forEach { (category, title) ->
-        val topics = catalog.topics.filter { it.category == category }
-        if (topics.isEmpty()) return@forEach
-        Text(title, style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(top = 8.dp))
-        topics.forEach { topic ->
+    LazyColumn(Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        // 탭 첫 화면: 제목이 오른쪽 위 ≡와 같은 줄 (TASK 25 — 화면 안쪽 여백만 사용)
+        item { Text("스피킹", style = MaterialTheme.typography.headlineSmall) }
+        item { Text("질문을 듣고 바로 영어로 답해 보세요. 답변은 최대 2분입니다. ${catalog.topics.size}주제 ${catalog.topics.sumOf { it.questions.size }}문항") }
+        item { Button(onClick = model::startMock, modifier = Modifier.fillMaxWidth()) { Text("모의고사 (실제 시험 순서 15문항)") } }
+        item {
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                OutlinedButton(onClick = model::randomQuestion, modifier = Modifier.weight(1f)) { Text("무작위 질문") }
+                OutlinedButton(onClick = model::openHistory, modifier = Modifier.weight(1f)) { Text("내 기록") }
+            }
+        }
+        if (model.templates != null) item { OutlinedButton(onClick = model::openTemplates, modifier = Modifier.fillMaxWidth()) { Text("유형별 답변 템플릿") } }
+        CATEGORY_KO.forEach { (category, title) ->
+            val topics = catalog.topics.filter { it.category == category }
+            if (topics.isEmpty()) return@forEach
+            item { Text(title, style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(top = 8.dp)) }
+            items(topics, key = { it.id }) { topic ->
             val levels = topic.questions.map { it.level }.toSet().sortedBy(LEVEL_ORDER::indexOf)
             Card(onClick = { model.openTopic(topic.id) }, modifier = Modifier.fillMaxWidth()) {
                 Row(Modifier.fillMaxWidth().padding(16.dp)) {
                     Text(topic.titleKo, Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
                     Text("${topic.questions.size}문항 · ${levels.first()}" + if (levels.size > 1) "~${levels.last()}" else "", color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
+            }
             }
         }
     }

@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -58,6 +60,20 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit,
             kotlinx.coroutines.delay(150)
         }
     }
+    if (state.videoId == null) {
+        RecommendedVideos(library, state.practice, header = {
+            Text("섀도잉", style = MaterialTheme.typography.headlineSmall)
+            OutlinedTextField(state.link, model::link, label = { Text("YouTube 링크") }, modifier = Modifier.fillMaxWidth())
+            Button(onClick = {
+                val id = youtubeVideoId(state.link)
+                if (id == null) model.message("YouTube 링크를 확인하세요") else { model.open(id); a = null; b = null; repeat = false }
+            }) { Text("열기") }
+            state.message?.let { Text(it, color = MaterialTheme.colorScheme.error) }
+        }) { video ->
+            model.link("https://youtu.be/${video.id}"); model.open(video.id); a = null; b = null; repeat = false
+        }
+        return
+    }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
         // 탭 첫 화면: 제목이 오른쪽 위 ≡와 같은 줄 (TASK 25 — 화면 안쪽 여백만 사용)
         Text("섀도잉", style = MaterialTheme.typography.headlineSmall)
@@ -67,12 +83,8 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit,
             if (id == null) model.message("YouTube 링크를 확인하세요") else { model.open(id); a = null; b = null; repeat = false }
         }) { Text("열기") }
         state.message?.let { Text(it, color = MaterialTheme.colorScheme.error) }
-        if (state.videoId == null) RecommendedVideos(library, state.practice) { video ->
-            model.link("https://youtu.be/${video.id}"); model.open(video.id); a = null; b = null; repeat = false
-        } else {
-            if (library.isNotEmpty()) TextButton(onClick = { model.close(); repeat = false }) { Text("← 추천 영상 목록") }
-            state.practice[state.videoId]?.let { Text("이 영상 연습 ${it.attempts}회 · 최고 일치율 ${"%.0f".format(it.bestMatchRate * 100)}%", color = MaterialTheme.colorScheme.onSurfaceVariant) }
-        }
+        if (library.isNotEmpty()) TextButton(onClick = { model.close(); repeat = false }) { Text("← 추천 영상 목록") }
+        state.practice[state.videoId]?.let { Text("이 영상 연습 ${it.attempts}회 · 최고 일치율 ${"%.0f".format(it.bestMatchRate * 100)}%", color = MaterialTheme.colorScheme.onSurfaceVariant) }
         state.videoId?.let { id ->
             key(id) { PlayerView(id, Modifier.fillMaxWidth().height(220.dp), { player = it }, { current = it },
                 { playerStatus = "플레이어 오류 $it"; model.message("영상 오류 코드 $it") },
@@ -162,26 +174,34 @@ fun ShadowingScreen(model: ShadowingViewModel = viewModel(), onBack: () -> Unit,
 /** 추천 영상 100개 (TASK 21): 분류 칩으로 거르고, 누르면 바로 연다. */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun RecommendedVideos(library: List<ShadowingVideo>, practice: Map<String, VideoPracticeRow>, onOpen: (ShadowingVideo) -> Unit) {
-    if (library.isEmpty()) return
+private fun RecommendedVideos(library: List<ShadowingVideo>, practice: Map<String, VideoPracticeRow>,
+    header: @Composable ColumnScope.() -> Unit, onOpen: (ShadowingVideo) -> Unit) {
     var category by remember { mutableStateOf<String?>(null) }
-    Text("추천 영상 ${library.size}개", style = MaterialTheme.typography.titleMedium)
-    Text("모두 영어 자막이 있고 앱 안에서 재생되는 영상이에요. 처음엔 학습자용부터 추천해요", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-    FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        FilterChip(selected = category == null, onClick = { category = null }, label = { Text("전체") })
-        SHADOWING_CATEGORIES.forEach { (id, name) ->
-            FilterChip(selected = category == id, onClick = { category = id }, label = { Text("$name ${library.count { it.category == id }}") })
-        }
-    }
     val names = SHADOWING_CATEGORIES.toMap()
     val byId = library.associateBy { it.id }
     val recent = practice.values.sortedByDescending { it.lastAt }.mapNotNull { byId[it.videoId] }.take(5)
-    if (category == null && recent.isNotEmpty()) {
-        Text("최근 연습한 영상", style = MaterialTheme.typography.titleSmall)
-        recent.forEach { video -> VideoCard(video, names, practice[video.id], onOpen) }
-        Text("전체", style = MaterialTheme.typography.titleSmall)
+    val filtered = library.filter { category == null || it.category == category }
+    LazyColumn(Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        item { Column(verticalArrangement = Arrangement.spacedBy(10.dp), content = header) }
+        if (library.isNotEmpty()) {
+            item { Text("추천 영상 ${library.size}개", style = MaterialTheme.typography.titleMedium) }
+            item { Text("모두 영어 자막이 있고 앱 안에서 재생되는 영상이에요. 처음엔 학습자용부터 추천해요", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+            item {
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    FilterChip(selected = category == null, onClick = { category = null }, label = { Text("전체") })
+                    SHADOWING_CATEGORIES.forEach { (id, name) ->
+                        FilterChip(selected = category == id, onClick = { category = id }, label = { Text("$name ${library.count { it.category == id }}") })
+                    }
+                }
+            }
+            if (category == null && recent.isNotEmpty()) {
+                item { Text("최근 연습한 영상", style = MaterialTheme.typography.titleSmall) }
+                items(recent, key = { "recent:${it.id}" }) { video -> VideoCard(video, names, practice[video.id], onOpen) }
+                item { Text("전체", style = MaterialTheme.typography.titleSmall) }
+            }
+            items(filtered, key = { "library:${it.id}" }) { video -> VideoCard(video, names, practice[video.id], onOpen) }
+        }
     }
-    library.filter { category == null || it.category == category }.forEach { video -> VideoCard(video, names, practice[video.id], onOpen) }
 }
 
 @Composable

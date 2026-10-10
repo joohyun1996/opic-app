@@ -5983,6 +5983,1377 @@
      "answer": 0
     }
    ]
+  },
+  {
+   "id": "c15",
+   "order": 15,
+   "track": "core",
+   "part": "5부 꾸미기와 비교",
+   "title": "형용사와 부사 — 꾸미는 말",
+   "opicUse": "묘사를 생생하게(really nice, pretty quickly, -ed/-ing 감정)",
+   "errorType": "other",
+   "explanation": {
+    "summary": "형용사는 명사를 꾸미거나 보어가 되고, 부사는 동사·형용사·다른 부사·문장 전체를 꾸민다. 같은 뜻이라도 꾸미는 대상에 따라 형태가 바뀐다(quick / quickly).",
+    "concept": "판단 기준은 '무엇을 꾸미나'다. 명사(a careful driver)나 be동사·감각동사 뒤 보어(She looks happy)는 형용사, 동사(drive carefully)·형용사(really good)는 부사. 감각동사(look, sound, feel, smell, taste) 뒤는 '상태'를 말하므로 형용사다 — It sounds well(X). 또 감정 형용사는 -ing(그런 감정을 주는)와 -ed(그런 감정을 느끼는)를 구별한다.",
+    "details": [
+     {
+      "title": "형용사의 두 자리",
+      "body": "명사 앞(a nice view)과 보어 자리(The view is nice). 감각동사·become·get·seem 뒤도 형용사.",
+      "examples": [
+       {
+        "en": "This soup tastes great.",
+        "ko": "이 수프 맛이 끝내준다."
+       },
+       {
+        "en": "I got really nervous.",
+        "ko": "정말 긴장됐다."
+       }
+      ]
+     },
+     {
+      "title": "부사 만들기와 예외",
+      "body": "대부분 형용사 + -ly. 예외: good → well, fast·hard·late·early는 형태 그대로. hardly(거의 ~않다), lately(최근에)는 뜻이 다른 단어.",
+      "examples": [
+       {
+        "en": "He works hard.",
+        "ko": "그는 열심히 일한다."
+       },
+       {
+        "en": "I hardly sleep these days.",
+        "ko": "요즘 거의 못 잔다."
+       }
+      ]
+     },
+     {
+      "title": "-ing vs -ed 감정 형용사",
+      "body": "boring(지루하게 만드는) / bored(지루함을 느끼는). 사물·상황은 보통 -ing, 사람의 기분은 -ed.",
+      "examples": [
+       {
+        "en": "The lecture was boring, so I was bored.",
+        "ko": "강의가 지루해서 나는 지루했다."
+       },
+       {
+        "en": "I was so excited about the trip.",
+        "ko": "여행에 정말 들떠 있었다."
+       }
+      ]
+     },
+     {
+      "title": "빈도부사의 자리",
+      "body": "always, usually, often, sometimes, never: 일반동사 앞, be동사·조동사 뒤.",
+      "examples": [
+       {
+        "en": "I usually go jogging in the morning.",
+        "ko": "보통 아침에 조깅한다."
+       },
+       {
+        "en": "She is always late.",
+        "ko": "그녀는 항상 늦는다."
+       }
+      ]
+     },
+     {
+      "title": "so / such, too / enough",
+      "body": "so + 형용사, such + (a) 형용사 + 명사. too + 형용사(지나치게, 부정적), 형용사 + enough(충분히).",
+      "examples": [
+       {
+        "en": "It was such a nice day.",
+        "ko": "정말 좋은 날이었다."
+       },
+       {
+        "en": "The room isn't big enough.",
+        "ko": "방이 충분히 크지 않다."
+       }
+      ]
+     }
+    ],
+    "table": [
+     [
+      "꾸밈 대상",
+      "품사",
+      "예"
+     ],
+     [
+      "명사",
+      "형용사",
+      "a careful driver"
+     ],
+     [
+      "보어 (be·look·feel 뒤)",
+      "형용사",
+      "It looks good."
+     ],
+     [
+      "동사",
+      "부사",
+      "He drives carefully."
+     ],
+     [
+      "형용사·부사",
+      "부사",
+      "really fast"
+     ],
+     [
+      "감정 (주는/느끼는)",
+      "-ing / -ed",
+      "boring / bored"
+     ]
+    ],
+    "koreanNote": "한국어 '좋다/잘'처럼 형태 차이가 분명하지 않아서, 영어로는 It sounds well, I feel badly 같은 실수가 잦다. 또 '나 지루해'를 I'm boring(나는 지루한 사람이야)이라고 말하기 쉬운데, 기분은 I'm bored.",
+    "points": [
+     "명사·보어는 형용사, 동사·형용사는 부사",
+     "look/sound/feel/taste/smell + 형용사",
+     "good(형) / well(부)",
+     "사람 기분은 -ed, 원인은 -ing",
+     "빈도부사: 일반동사 앞, be동사 뒤",
+     "such a + 형용사 + 명사 / 형용사 + enough"
+    ],
+    "examples": [
+     {
+      "en": "The view from the top was amazing.",
+      "ko": "정상에서 본 경치는 놀라웠다."
+     },
+     {
+      "en": "I was really tired after the long flight.",
+      "ko": "긴 비행 후 정말 피곤했다."
+     },
+     {
+      "en": "She speaks English very fluently.",
+      "ko": "그녀는 영어를 아주 유창하게 한다."
+     },
+     {
+      "en": "It was such a relaxing weekend.",
+      "ko": "정말 편안한 주말이었다."
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "This soup tastes great.",
+      "parts": [
+       {
+        "text": "This soup",
+        "role": "S"
+       },
+       {
+        "text": "tastes",
+        "role": "V"
+       },
+       {
+        "text": "great.",
+        "role": "C"
+       }
+      ],
+      "note": "감각동사 + 형용사 보어"
+     },
+     {
+      "sentence": "She speaks English very fluently.",
+      "parts": [
+       {
+        "text": "She",
+        "role": "S"
+       },
+       {
+        "text": "speaks",
+        "role": "V"
+       },
+       {
+        "text": "English",
+        "role": "O"
+       },
+       {
+        "text": "very fluently.",
+        "role": "M"
+       }
+      ],
+      "note": "fluently가 동사 speaks를 꾸밈"
+     },
+     {
+      "sentence": "I usually go jogging.",
+      "parts": [
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "usually",
+        "role": "M"
+       },
+       {
+        "text": "go",
+        "role": "V"
+       },
+       {
+        "text": "jogging.",
+        "role": "M"
+       }
+      ],
+      "note": "빈도부사는 일반동사 앞"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "I'm so boring today.",
+      "right": "I'm so bored today.",
+      "note": "기분은 -ed"
+     },
+     {
+      "wrong": "That sounds well.",
+      "right": "That sounds good.",
+      "note": "감각동사 + 형용사"
+     },
+     {
+      "wrong": "He drives very careful.",
+      "right": "He drives very carefully.",
+      "note": "동사를 꾸미면 부사"
+     },
+     {
+      "wrong": "I go usually to the gym.",
+      "right": "I usually go to the gym.",
+      "note": "일반동사 앞"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c15-01",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "The movie was so bored that I fell asleep.",
+     "hint": "영화가 지루함을 '느끼나요'?",
+     "explanation": "원인 → boring",
+     "choices": [
+      "The",
+      "movie",
+      "was",
+      "so",
+      "bored",
+      "that",
+      "I",
+      "fell",
+      "asleep."
+     ],
+     "answer": 4
+    },
+    {
+     "id": "c15-02",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "Your idea sounds ___.",
+     "hint": "sound는 감각동사",
+     "explanation": "감각동사 + 형용사",
+     "choices": [
+      "great",
+      "greatly"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c15-03",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "She sings really ___.",
+     "hint": "동사 sings를 꾸밈",
+     "explanation": "부사 well",
+     "choices": [
+      "good",
+      "well"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c15-04",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "I was very exciting about the concert.",
+     "hint": "내가 느낀 감정",
+     "explanation": "excited",
+     "choices": [
+      "I",
+      "was",
+      "very",
+      "exciting",
+      "about",
+      "the",
+      "concert."
+     ],
+     "answer": 3
+    },
+    {
+     "id": "c15-05",
+     "kind": "choice",
+     "prompt": "자연스러운 어순은?",
+     "sentence": "",
+     "hint": "be동사와 빈도부사",
+     "explanation": "be동사 뒤: I am always late.",
+     "choices": [
+      "I always am late.",
+      "I am always late."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c15-06",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "It was ___ beautiful day.",
+     "hint": "형용사 + 명사 앞",
+     "explanation": "such a + 형용사 + 명사",
+     "choices": [
+      "so a",
+      "such a",
+      "a so"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c15-07",
+     "kind": "fix",
+     "prompt": "바르게 고치세요",
+     "sentence": "He finished the work quick.",
+     "hint": "동사를 꾸미는 말",
+     "explanation": "quickly",
+     "answers": [
+      "He finished the work quickly."
+     ]
+    },
+    {
+     "id": "c15-08",
+     "kind": "structure",
+     "prompt": "동사를 꾸미는 부사를 고르세요",
+     "sentence": "My brother drives very carefully at night.",
+     "hint": "어떻게 운전하나요?",
+     "explanation": "carefully가 drives를 꾸밈",
+     "choices": [
+      "My",
+      "brother",
+      "drives",
+      "very",
+      "carefully",
+      "at",
+      "night."
+     ],
+     "answer": 4
+    }
+   ]
+  },
+  {
+   "id": "c16",
+   "order": 16,
+   "track": "core",
+   "part": "5부 꾸미기와 비교",
+   "title": "비교 — 더, 가장, 만큼",
+   "opicUse": "과거와 현재·두 장소 비교(OPIc 비교 문항)",
+   "errorType": "other",
+   "explanation": {
+    "summary": "원급(as ~ as), 비교급(-er / more ~ than), 최상급(the -est / the most ~)으로 비교한다. 짧은 단어는 -er/-est, 긴 단어(2음절 이상 대부분)는 more/most.",
+    "concept": "OPIc에는 '예전과 지금 비교' 문항이 거의 항상 나온다. 기본 틀 세 가지 — A is bigger than B / A is as big as B / A is the biggest in … — 만 정확하면 된다. 흔한 실수는 more bigger처럼 두 번 비교하는 것, than 대신 then, 최상급에 the를 빼는 것. 비교급을 강조할 때는 very가 아니라 much, a lot, far.",
+    "details": [
+     {
+      "title": "비교급·최상급 만들기",
+      "body": "1음절: -er/-est (tall-taller-tallest). -y로 끝나면 -ier (busy-busier). 2음절 이상: more/most (more expensive). 불규칙: good-better-best, bad-worse-worst, many/much-more-most, far-farther.",
+      "examples": [
+       {
+        "en": "My new apartment is bigger than the old one.",
+        "ko": "새 아파트가 예전 것보다 크다."
+       },
+       {
+        "en": "This is the best restaurant in town.",
+        "ko": "여기가 동네 최고의 식당이다."
+       }
+      ]
+     },
+     {
+      "title": "as ~ as — 같은 정도",
+      "body": "as + 원급 + as. 부정은 not as ~ as (~만큼 …하지 않다).",
+      "examples": [
+       {
+        "en": "Busan is not as crowded as Seoul.",
+        "ko": "부산은 서울만큼 붐비지 않는다."
+       }
+      ]
+     },
+     {
+      "title": "비교급 강조",
+      "body": "much, a lot, far, even + 비교급. very는 쓸 수 없다.",
+      "examples": [
+       {
+        "en": "Smartphones are much faster than before.",
+        "ko": "스마트폰은 예전보다 훨씬 빠르다."
+       }
+      ]
+     },
+     {
+      "title": "the 비교급, the 비교급",
+      "body": "~할수록 더 …하다.",
+      "examples": [
+       {
+        "en": "The more I practice, the better I get.",
+        "ko": "연습할수록 나아진다."
+       }
+      ]
+     },
+     {
+      "title": "최상급의 범위",
+      "body": "in + 장소·집단, of + 복수, (that) I've ever + p.p.",
+      "examples": [
+       {
+        "en": "It was the most beautiful place I've ever visited.",
+        "ko": "내가 가 본 곳 중 가장 아름다웠다."
+       }
+      ]
+     }
+    ],
+    "table": [
+     [
+      "원급",
+      "비교급",
+      "최상급"
+     ],
+     [
+      "tall",
+      "taller",
+      "the tallest"
+     ],
+     [
+      "busy",
+      "busier",
+      "the busiest"
+     ],
+     [
+      "expensive",
+      "more expensive",
+      "the most expensive"
+     ],
+     [
+      "good / well",
+      "better",
+      "the best"
+     ],
+     [
+      "bad",
+      "worse",
+      "the worst"
+     ]
+    ],
+    "koreanNote": "한국어 '더'를 그대로 붙여 more bigger라고 하기 쉽다. -er이 이미 '더'다. 또 '훨씬'을 very로 옮기면 틀린다 — much. '~만큼은 아니다'는 not as ~ as.",
+    "points": [
+     "짧은 단어 -er, 긴 단어 more",
+     "more + -er 겹치지 않기",
+     "than (then X)",
+     "최상급엔 the",
+     "비교급 강조는 much/a lot/far",
+     "not as ~ as = ~만큼 …하지 않다"
+    ],
+    "examples": [
+     {
+      "en": "Life in the city is more convenient than in the countryside.",
+      "ko": "도시 생활은 시골보다 편리하다."
+     },
+     {
+      "en": "Phones today are much lighter than ten years ago.",
+      "ko": "요즘 휴대폰은 10년 전보다 훨씬 가볍다."
+     },
+     {
+      "en": "My hometown isn't as busy as it used to be.",
+      "ko": "고향은 예전만큼 북적이지 않다."
+     },
+     {
+      "en": "That was the worst trip I've ever taken.",
+      "ko": "내가 한 여행 중 최악이었다."
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "My new apartment is bigger than the old one.",
+      "parts": [
+       {
+        "text": "My new apartment",
+        "role": "S"
+       },
+       {
+        "text": "is",
+        "role": "V"
+       },
+       {
+        "text": "bigger",
+        "role": "C"
+       },
+       {
+        "text": "than the old one.",
+        "role": "M"
+       }
+      ],
+      "note": "비교급 + than"
+     },
+     {
+      "sentence": "Busan is not as crowded as Seoul.",
+      "parts": [
+       {
+        "text": "Busan",
+        "role": "S"
+       },
+       {
+        "text": "is",
+        "role": "V"
+       },
+       {
+        "text": "not as crowded",
+        "role": "C"
+       },
+       {
+        "text": "as Seoul.",
+        "role": "M"
+       }
+      ],
+      "note": "not as + 원급 + as"
+     },
+     {
+      "sentence": "This is the best restaurant in town.",
+      "parts": [
+       {
+        "text": "This",
+        "role": "S"
+       },
+       {
+        "text": "is",
+        "role": "V"
+       },
+       {
+        "text": "the best restaurant",
+        "role": "C"
+       },
+       {
+        "text": "in town.",
+        "role": "M"
+       }
+      ],
+      "note": "the + 최상급 + in 범위"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "It's more bigger than mine.",
+      "right": "It's bigger than mine.",
+      "note": "비교 두 번 X"
+     },
+     {
+      "wrong": "She is taller then me.",
+      "right": "She is taller than me.",
+      "note": "than"
+     },
+     {
+      "wrong": "It's very cheaper now.",
+      "right": "It's much cheaper now.",
+      "note": "비교급 강조는 much"
+     },
+     {
+      "wrong": "He is best player on the team.",
+      "right": "He is the best player on the team.",
+      "note": "최상급엔 the"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c16-01",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "My new phone is more lighter than my old one.",
+     "hint": "lighter가 이미 비교급",
+     "explanation": "more 빼기",
+     "choices": [
+      "My",
+      "new",
+      "phone",
+      "is",
+      "more",
+      "lighter",
+      "than",
+      "my",
+      "old",
+      "one."
+     ],
+     "answer": 4
+    },
+    {
+     "id": "c16-02",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "Traveling by train is ___ than flying.",
+     "hint": "than이 있어요",
+     "explanation": "비교급 cheaper",
+     "choices": [
+      "cheap",
+      "cheaper",
+      "cheapest"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c16-03",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "This is ___ interesting book I've ever read.",
+     "hint": "I've ever read",
+     "explanation": "the most",
+     "choices": [
+      "the most",
+      "more",
+      "most"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c16-04",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "The weather is ___ better today.",
+     "hint": "비교급 강조",
+     "explanation": "much better",
+     "choices": [
+      "very",
+      "much",
+      "more"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c16-05",
+     "kind": "blank",
+     "prompt": "빈칸에 알맞은 한 단어를 쓰세요 (같은 정도)",
+     "sentence": "My brother is as tall ___ my dad.",
+     "hint": "as ~ as",
+     "explanation": "as tall as",
+     "answers": [
+      "as"
+     ]
+    },
+    {
+     "id": "c16-06",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "Seoul is bigger then Busan.",
+     "hint": "비교할 때 쓰는 말",
+     "explanation": "than",
+     "choices": [
+      "Seoul",
+      "is",
+      "bigger",
+      "then",
+      "Busan."
+     ],
+     "answer": 3
+    },
+    {
+     "id": "c16-07",
+     "kind": "fix",
+     "prompt": "바르게 고치세요",
+     "sentence": "The more you read, the more good you write.",
+     "hint": "good의 비교급",
+     "explanation": "the better",
+     "answers": [
+      "The more you read, the better you write."
+     ]
+    },
+    {
+     "id": "c16-08",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "Today's traffic was ___ than yesterday's.",
+     "hint": "bad의 비교급",
+     "explanation": "worse",
+     "choices": [
+      "bad",
+      "worse",
+      "worst"
+     ],
+     "answer": 1
+    }
+   ]
+  },
+  {
+   "id": "c17",
+   "order": 17,
+   "track": "core",
+   "part": "5부 꾸미기와 비교",
+   "title": "가정법 — 사실과 반대로 상상하기",
+   "opicUse": "If I had more time, I would …(가정 질문·롤플레이)",
+   "errorType": "tense",
+   "explanation": {
+    "summary": "현재 사실과 반대면 If + 과거, would + 동사원형. 과거 사실과 반대면 If + had p.p., would have p.p. 실제로 일어날 수 있는 일은 가정법이 아니라 조건문(If + 현재, will).",
+    "concept": "가정법의 핵심은 '시제를 한 칸 과거로 밀어 현실과 거리를 둔다'는 것이다. If I have time(시간 있으면 — 가능성 있음)과 If I had time(시간이 있다면 — 실제론 없음)은 뜻이 다르다. 과거 형태지만 뜻은 현재다. be동사는 주어와 상관없이 were가 기본(If I were you). 과거 일을 후회할 때는 한 칸 더: If I had studied, I would have passed.",
+    "details": [
+     {
+      "title": "1. 실제 조건 (가정법 아님)",
+      "body": "If + 현재, will + 동사원형. 일어날 수 있는 일.",
+      "examples": [
+       {
+        "en": "If it rains tomorrow, I'll stay home.",
+        "ko": "내일 비 오면 집에 있을 거다."
+       }
+      ]
+     },
+     {
+      "title": "2. 현재 반대 (가정법 과거)",
+      "body": "If + 과거, would/could + 동사원형. 지금 사실이 아님.",
+      "examples": [
+       {
+        "en": "If I had more time, I would travel more.",
+        "ko": "시간이 더 있다면 여행을 더 할 텐데."
+       },
+       {
+        "en": "If I were you, I'd take the job.",
+        "ko": "내가 너라면 그 일 맡겠어."
+       }
+      ]
+     },
+     {
+      "title": "3. 과거 반대 (가정법 과거완료)",
+      "body": "If + had p.p., would have p.p. 이미 지난 일에 대한 후회·상상.",
+      "examples": [
+       {
+        "en": "If I had left earlier, I wouldn't have missed the train.",
+        "ko": "더 일찍 나왔다면 기차를 안 놓쳤을 텐데."
+       }
+      ]
+     },
+     {
+      "title": "I wish — 바람",
+      "body": "I wish + 과거(지금 아쉬움), I wish + had p.p.(과거 후회).",
+      "examples": [
+       {
+        "en": "I wish I could speak Chinese.",
+        "ko": "중국어를 할 수 있으면 좋겠다."
+       },
+       {
+        "en": "I wish I had studied harder.",
+        "ko": "더 열심히 공부했으면 좋았을걸."
+       }
+      ]
+     },
+     {
+      "title": "would 줄임과 OPIc 표현",
+      "body": "I would = I'd. 롤플레이·가정 질문: What would you do if …? / I'd probably …",
+      "examples": [
+       {
+        "en": "If I won the lottery, I'd buy a house near the beach.",
+        "ko": "복권에 당첨되면 바닷가 집을 사겠다."
+       }
+      ]
+     }
+    ],
+    "table": [
+     [
+      "종류",
+      "if 절",
+      "주절",
+      "뜻"
+     ],
+     [
+      "실제 조건",
+      "현재",
+      "will + 원형",
+      "~하면 …할 것이다"
+     ],
+     [
+      "현재 반대",
+      "과거 (be → were)",
+      "would + 원형",
+      "~라면 …할 텐데"
+     ],
+     [
+      "과거 반대",
+      "had p.p.",
+      "would have p.p.",
+      "~했다면 …했을 텐데"
+     ],
+     [
+      "I wish",
+      "과거 / had p.p.",
+      "—",
+      "~라면 / ~했다면 좋을 텐데"
+     ]
+    ],
+    "koreanNote": "한국어는 '-면'과 '-다면'의 차이가 미묘해서 영어에서 If I have와 If I had를 섞기 쉽다. 또 if 절에 would를 넣는 실수(If I would have time X)가 흔하다 — would는 주절에만.",
+    "points": [
+     "가능한 일: If + 현재, will",
+     "현재 반대: If + 과거, would + 원형",
+     "과거 반대: If + had p.p., would have p.p.",
+     "If I were you (was보다 기본)",
+     "if 절에는 would를 쓰지 않는다",
+     "I wish + 과거 / had p.p."
+    ],
+    "examples": [
+     {
+      "en": "If I lived closer to work, I wouldn't need a car.",
+      "ko": "회사 가까이 산다면 차가 필요 없을 텐데."
+     },
+     {
+      "en": "If I were rich, I'd travel around the world.",
+      "ko": "부자라면 세계 여행을 할 텐데."
+     },
+     {
+      "en": "If I had known, I would have helped you.",
+      "ko": "알았다면 도와줬을 텐데."
+     },
+     {
+      "en": "I wish I had more free time.",
+      "ko": "자유 시간이 더 있으면 좋겠다."
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "If I had more time, I would travel more.",
+      "parts": [
+       {
+        "text": "If I had more time,",
+        "role": "M"
+       },
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "would travel",
+        "role": "V"
+       },
+       {
+        "text": "more.",
+        "role": "M"
+       }
+      ],
+      "note": "If + 과거 → would + 원형 (지금은 시간이 없음)"
+     },
+     {
+      "sentence": "If I were you, I 'd take the job.",
+      "parts": [
+       {
+        "text": "If I were you,",
+        "role": "M"
+       },
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "'d take",
+        "role": "V"
+       },
+       {
+        "text": "the job.",
+        "role": "O"
+       }
+      ],
+      "note": "be동사는 were"
+     },
+     {
+      "sentence": "If I had left earlier, I wouldn't have missed the train.",
+      "parts": [
+       {
+        "text": "If I had left earlier,",
+        "role": "M"
+       },
+       {
+        "text": "I",
+        "role": "S"
+       },
+       {
+        "text": "wouldn't have missed",
+        "role": "V"
+       },
+       {
+        "text": "the train.",
+        "role": "O"
+       }
+      ],
+      "note": "had p.p. → would have p.p. (과거 후회)"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "If I would have money, I would buy it.",
+      "right": "If I had money, I would buy it.",
+      "note": "if 절에 would X"
+     },
+     {
+      "wrong": "If I am you, I would quit.",
+      "right": "If I were you, I would quit.",
+      "note": "현재 반대 → were"
+     },
+     {
+      "wrong": "If I studied harder, I would have passed.",
+      "right": "If I had studied harder, I would have passed.",
+      "note": "과거 반대 → had p.p."
+     },
+     {
+      "wrong": "I wish I can drive.",
+      "right": "I wish I could drive.",
+      "note": "I wish + 과거"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c17-01",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "If I ___ a car, I would drive to work.",
+     "hint": "지금 차가 없어요",
+     "explanation": "현재 반대 → had",
+     "choices": [
+      "have",
+      "had",
+      "will have"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c17-02",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "If it ___ tomorrow, we'll cancel the picnic.",
+     "hint": "실제로 일어날 수 있는 일",
+     "explanation": "실제 조건 → 현재 rains",
+     "choices": [
+      "rains",
+      "rained",
+      "would rain"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c17-03",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "If I would have more money, I would buy a house.",
+     "hint": "if 절에 would?",
+     "explanation": "If I had more money…",
+     "choices": [
+      "If",
+      "I",
+      "would",
+      "have",
+      "more",
+      "money,",
+      "I",
+      "would",
+      "buy",
+      "a",
+      "house."
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c17-04",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "If I ___ you, I would apologize.",
+     "hint": "If I ___ you",
+     "explanation": "If I were you",
+     "choices": [
+      "am",
+      "were",
+      "be"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c17-05",
+     "kind": "fix",
+     "prompt": "과거 사실과 반대로 바르게 고치세요",
+     "sentence": "If I knew about the party, I would have gone.",
+     "hint": "주절이 would have gone",
+     "explanation": "had known",
+     "answers": [
+      "If I had known about the party, I would have gone."
+     ]
+    },
+    {
+     "id": "c17-06",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I wish I ___ swim.",
+     "hint": "I wish + 과거",
+     "explanation": "could",
+     "choices": [
+      "can",
+      "could",
+      "will"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c17-07",
+     "kind": "structure",
+     "prompt": "주절의 동사 덩어리 첫 단어를 고르세요",
+     "sentence": "If I had a dog, I would walk it every day.",
+     "hint": "쉼표 뒤 주절",
+     "explanation": "would walk",
+     "choices": [
+      "If",
+      "I",
+      "had",
+      "a",
+      "dog,",
+      "I",
+      "would",
+      "walk",
+      "it",
+      "every",
+      "day."
+     ],
+     "answer": 6
+    },
+    {
+     "id": "c17-08",
+     "kind": "blank",
+     "prompt": "빈칸에 알맞은 두 단어를 쓰세요",
+     "sentence": "If I had left earlier, I would ___ caught the bus.",
+     "hint": "과거 반대 주절: would have p.p.",
+     "explanation": "would have caught",
+     "answers": [
+      "have"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c18",
+   "order": 18,
+   "track": "core",
+   "part": "6부 작지만 자주 틀리는 것",
+   "title": "관사·수 일치·전치사",
+   "opicUse": "a/the 빠뜨리기, 3인칭 -s, in/on/at — OPIc 감점 1순위",
+   "errorType": "other",
+   "explanation": {
+    "summary": "셀 수 있는 단수 명사에는 a/an이나 the가 필요하다. 주어가 3인칭 단수면 현재 동사에 -s. 시간·장소 전치사는 큰 범위 in, 날·면 on, 점·지점 at.",
+    "concept": "이 세 가지는 뜻 전달에는 지장이 없어 보여도 채점에서 가장 많이 깎이는 부분이다. 한국어에는 관사도, 동사의 인칭 변화도 없어서 의식하지 않으면 계속 빠진다. 규칙 하나: 처음 말하는 단수 명사는 a, 서로 아는 것은 the, 일반적인 복수·셀 수 없는 명사는 관사 없이(I like dogs / I need water).",
+    "details": [
+     {
+      "title": "a/an vs the vs 무관사",
+      "body": "a: 처음 나오는 하나. the: 이미 말했거나 서로 아는 것, 하나뿐인 것(the sun). 무관사: 일반적인 복수(Cats are cute)·셀 수 없는 명사(music, information, advice).",
+      "examples": [
+       {
+        "en": "I saw a movie. The movie was great.",
+        "ko": "영화를 봤다. 그 영화는 좋았다."
+       },
+       {
+        "en": "I listen to music every day.",
+        "ko": "매일 음악을 듣는다."
+       }
+      ]
+     },
+     {
+      "title": "셀 수 없는 명사",
+      "body": "information, advice, furniture, homework, news, luggage는 -s도 a도 없다. 셀 때는 a piece of.",
+      "examples": [
+       {
+        "en": "She gave me some good advice.",
+        "ko": "좋은 조언을 해 줬다. (advices X)"
+       }
+      ]
+     },
+     {
+      "title": "수 일치 — 진짜 주어 찾기",
+      "body": "수식어가 길어도 동사는 핵심 주어에 맞춘다. everyone·each·every는 단수. There is/are는 뒤 명사에 맞춘다.",
+      "examples": [
+       {
+        "en": "The people in my office are friendly.",
+        "ko": "사무실 사람들은 친절하다."
+       },
+       {
+        "en": "Everyone in my family likes soccer.",
+        "ko": "가족 모두 축구를 좋아한다."
+       }
+      ]
+     },
+     {
+      "title": "시간 전치사 in / on / at",
+      "body": "in: 월·연도·계절·아침/오후(in May, in the morning). on: 요일·날짜(on Monday, on May 5). at: 시각·밤·주말(at 7, at night, at the weekend 영국식 / on weekends 미국식).",
+      "examples": [
+       {
+        "en": "I was born in 1995 on a Sunday.",
+        "ko": "1995년 어느 일요일에 태어났다."
+       },
+       {
+        "en": "I usually get up at 6.",
+        "ko": "보통 6시에 일어난다."
+       }
+      ]
+     },
+     {
+      "title": "장소 전치사 in / on / at",
+      "body": "in: 공간 안(in the room, in Seoul). on: 면 위·층·거리(on the wall, on the 3rd floor). at: 지점(at the bus stop, at home, at work).",
+      "examples": [
+       {
+        "en": "I live on the fifth floor.",
+        "ko": "5층에 산다."
+       },
+       {
+        "en": "I'm at home now.",
+        "ko": "지금 집이야."
+       }
+      ]
+     }
+    ],
+    "table": [
+     [
+      "",
+      "in",
+      "on",
+      "at"
+     ],
+     [
+      "시간",
+      "월·연도·계절·오전/오후",
+      "요일·날짜",
+      "시각·night"
+     ],
+     [
+      "장소",
+      "공간 안·도시·나라",
+      "면·층·거리",
+      "지점·home·work"
+     ],
+     [
+      "예",
+      "in July, in Busan",
+      "on Friday, on the wall",
+      "at 3 p.m., at the station"
+     ]
+    ],
+    "koreanNote": "한국어는 '영화 봤어'처럼 관사가 없고, '그는 산다/나는 산다'처럼 동사 형태가 같아서, 영어로 I watched movie, He live in Seoul이 자주 나온다. 말할 때는 명사 앞에서 잠깐 'a? the?'를 떠올리는 습관이 가장 효과적이다.",
+    "points": [
+     "셀 수 있는 단수 명사 앞에는 a/the",
+     "advice, information, homework, furniture는 셀 수 없다",
+     "3인칭 단수 현재 → 동사 -s",
+     "everyone/each/every → 단수 동사",
+     "시간: in(월·연) on(요일·날짜) at(시각)",
+     "장소: in(안) on(면·층) at(지점)"
+    ],
+    "examples": [
+     {
+      "en": "I have a dog. The dog is very smart.",
+      "ko": "개가 한 마리 있다. 그 개는 아주 똑똑하다."
+     },
+     {
+      "en": "My sister works at a bank in Seoul.",
+      "ko": "언니는 서울의 은행에서 일한다."
+     },
+     {
+      "en": "Each room has its own bathroom.",
+      "ko": "방마다 욕실이 있다."
+     },
+     {
+      "en": "We usually meet on Saturdays at 2.",
+      "ko": "우리는 보통 토요일 2시에 만난다."
+     }
+    ],
+    "breakdowns": [
+     {
+      "sentence": "The people in my office are friendly.",
+      "parts": [
+       {
+        "text": "The people in my office",
+        "role": "S"
+       },
+       {
+        "text": "are",
+        "role": "V"
+       },
+       {
+        "text": "friendly.",
+        "role": "C"
+       }
+      ],
+      "note": "핵심 주어 people(복수) → are"
+     },
+     {
+      "sentence": "Everyone in my family likes soccer.",
+      "parts": [
+       {
+        "text": "Everyone in my family",
+        "role": "S"
+       },
+       {
+        "text": "likes",
+        "role": "V"
+       },
+       {
+        "text": "soccer.",
+        "role": "O"
+       }
+      ],
+      "note": "everyone은 단수 → likes"
+     },
+     {
+      "sentence": "My sister works at a bank in Seoul.",
+      "parts": [
+       {
+        "text": "My sister",
+        "role": "S"
+       },
+       {
+        "text": "works",
+        "role": "V"
+       },
+       {
+        "text": "at a bank in Seoul.",
+        "role": "M"
+       }
+      ],
+      "note": "at 지점, in 도시, 3인칭 -s"
+     }
+    ],
+    "commonMistakes": [
+     {
+      "wrong": "I watched movie yesterday.",
+      "right": "I watched a movie yesterday.",
+      "note": "단수 명사 앞 관사"
+     },
+     {
+      "wrong": "He live in Busan.",
+      "right": "He lives in Busan.",
+      "note": "3인칭 -s"
+     },
+     {
+      "wrong": "She gave me many advices.",
+      "right": "She gave me a lot of advice.",
+      "note": "advice는 셀 수 없음"
+     },
+     {
+      "wrong": "I'll see you in Monday.",
+      "right": "I'll see you on Monday.",
+      "note": "요일은 on"
+     }
+    ]
+   },
+   "exercises": [
+    {
+     "id": "c18-01",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "My father go to work by subway.",
+     "hint": "주어가 3인칭 단수",
+     "explanation": "goes",
+     "choices": [
+      "My",
+      "father",
+      "go",
+      "to",
+      "work",
+      "by",
+      "subway."
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c18-02",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I bought ___ new laptop last week.",
+     "hint": "처음 말하는 하나",
+     "explanation": "a",
+     "choices": [
+      "a",
+      "the",
+      "(없음)"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c18-03",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "The meeting starts ___ 9 a.m.",
+     "hint": "시각",
+     "explanation": "at",
+     "choices": [
+      "in",
+      "on",
+      "at"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "c18-04",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "I was born ___ July.",
+     "hint": "월",
+     "explanation": "in",
+     "choices": [
+      "in",
+      "on",
+      "at"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c18-05",
+     "kind": "spot",
+     "prompt": "틀린 단어를 고르세요",
+     "sentence": "The students in my class is very friendly.",
+     "hint": "핵심 주어는?",
+     "explanation": "students(복수) → are",
+     "choices": [
+      "The",
+      "students",
+      "in",
+      "my",
+      "class",
+      "is",
+      "very",
+      "friendly."
+     ],
+     "answer": 5
+    },
+    {
+     "id": "c18-06",
+     "kind": "fix",
+     "prompt": "바르게 고치세요",
+     "sentence": "Can you give me some informations?",
+     "hint": "셀 수 없는 명사",
+     "explanation": "information",
+     "answers": [
+      "Can you give me some information?"
+     ]
+    },
+    {
+     "id": "c18-07",
+     "kind": "choice",
+     "prompt": "빈칸에 알맞은 것은?",
+     "sentence": "Everyone ___ excited about the trip.",
+     "hint": "everyone은 단수",
+     "explanation": "is",
+     "choices": [
+      "are",
+      "is",
+      "be"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "c18-08",
+     "kind": "structure",
+     "prompt": "문장의 동사를 고르세요",
+     "sentence": "The book on the table belongs to my brother.",
+     "hint": "on the table은 꾸밈",
+     "explanation": "핵심 주어 The book → belongs",
+     "choices": [
+      "The",
+      "book",
+      "on",
+      "the",
+      "table",
+      "belongs",
+      "to",
+      "my",
+      "brother."
+     ],
+     "answer": 5
+    }
+   ]
   }
  ]
 }

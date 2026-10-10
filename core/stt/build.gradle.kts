@@ -19,6 +19,7 @@ android {
     kotlinOptions { jvmTarget = "17" }
 }
 dependencies {
+    implementation(project(":core:common")) // SpokenWord·토큰 합치기
     implementation(project(":core:llm")) // ModelSpec, HttpModelStore (모델 다운로드 재사용)
     implementation(libs.kotlinx.coroutines.android)
 }

@@ -1,4 +1,4 @@
-package com.jooh.opic.feature.grammar
+package com.jooh.opic.core.correction
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*

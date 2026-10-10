@@ -1,5 +1,7 @@
 package com.jooh.opic.feature.grammar
 
+import com.jooh.opic.core.correction.*
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll

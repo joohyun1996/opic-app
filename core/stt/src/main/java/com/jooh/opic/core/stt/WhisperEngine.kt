@@ -2,6 +2,9 @@ package com.jooh.opic.core.stt
 
 import android.content.Context
 import com.jooh.opic.core.llm.ModelSpec
+import com.jooh.opic.core.common.SpokenWord
+import com.jooh.opic.core.common.mergeTokens
+import com.jooh.opic.core.common.parseTokenLines
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -16,7 +19,7 @@ internal object WhisperNative {
     init { System.loadLibrary("opic_whisper") }
     external fun initContext(modelPath: String): Long
     external fun freeContext(context: Long)
-    external fun transcribe(context: Long, threads: Int, audio: FloatArray, cancelled: AtomicBoolean?, prompt: String?): ByteArray?
+    external fun transcribe(context: Long, threads: Int, audio: FloatArray, cancelled: AtomicBoolean?, prompt: String?, withTokens: Boolean): ByteArray?
     external fun systemInfo(): String
 }
 
@@ -34,7 +37,8 @@ object SttModels {
     fun isDownloaded(spec: ModelSpec) = spec.file.isFile && spec.file.length() == spec.expectedBytes
 }
 
-data class Transcription(val text: String, val elapsedMs: Long, val audioMs: Long) {
+/** [words]는 `withWords = true`로 받아 적었을 때만 채워진다. */
+data class Transcription(val text: String, val elapsedMs: Long, val audioMs: Long, val words: List<SpokenWord> = emptyList()) {
     val rtf: Double get() = if (audioMs == 0L) 0.0 else elapsedMs.toDouble() / audioMs
 }
 
@@ -43,13 +47,16 @@ class WhisperEngine private constructor(private var context: Long, val modelId: 
     private val lock = Mutex()
 
     /** 16kHz mono float(-1..1) 오디오를 영어로 받아 적는다. */
-    suspend fun transcribe(audio: FloatArray, threads: Int = DEFAULT_THREADS, cancelled: AtomicBoolean? = null, prompt: String? = null): Transcription = lock.withLock {
+    suspend fun transcribe(audio: FloatArray, threads: Int = DEFAULT_THREADS, cancelled: AtomicBoolean? = null, prompt: String? = null, withWords: Boolean = false): Transcription = lock.withLock {
         withContext(Dispatchers.Default) {
             check(context != 0L) { "닫힌 엔진" }
             val start = System.nanoTime()
-            val bytes = WhisperNative.transcribe(context, threads, audio, cancelled, prompt) ?: if (cancelled?.get() == true) throw CancellationException("받아 적기 취소") else error("받아 적기 실패")
+            val bytes = WhisperNative.transcribe(context, threads, audio, cancelled, prompt, withWords) ?: if (cancelled?.get() == true) throw CancellationException("받아 적기 취소") else error("받아 적기 실패")
             currentCoroutineContext().ensureActive()
-            Transcription(bytes.toString(Charsets.UTF_8).trim(), (System.nanoTime() - start) / 1_000_000, audio.size * 1000L / SAMPLE_RATE)
+            val raw = bytes.toString(Charsets.UTF_8)
+            val text = raw.substringBefore(TOKENS_MARK).trim()
+            val words = if (withWords) mergeTokens(parseTokenLines(raw.substringAfter(TOKENS_MARK, ""))) else emptyList()
+            Transcription(text, (System.nanoTime() - start) / 1_000_000, audio.size * 1000L / SAMPLE_RATE, words)
         }
     }
 
@@ -63,6 +70,7 @@ class WhisperEngine private constructor(private var context: Long, val modelId: 
     companion object {
         const val SAMPLE_RATE = 16_000
         const val DEFAULT_THREADS = 4
+        private const val TOKENS_MARK = "\n#TOKENS\n"
         fun systemInfo(): String = WhisperNative.systemInfo()
 
         suspend fun load(spec: ModelSpec): WhisperEngine = withContext(Dispatchers.Default) {

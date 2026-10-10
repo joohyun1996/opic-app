@@ -7,6 +7,7 @@ include(":core:llm")
 include(":feature:words")
 include(":feature:grammar")
 include(":core:stt")
+include(":core:correction")
 
 include(":feature:shadowing")
 include(":feature:speaking")

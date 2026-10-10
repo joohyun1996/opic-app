@@ -1,5 +1,7 @@
 package com.jooh.opic.feature.grammar
 
+import com.jooh.opic.core.correction.*
+
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Text
@@ -42,7 +44,7 @@ fun GrammarFlow(
     Column(Modifier.fillMaxSize().padding(vertical = 8.dp)) {
         if (writingState.active) {
             when (writingState.page) {
-                WritingPage.PREPARATION -> GrammarPreparationScreen(engineState, writingState.hasToken, modelDownloaded(), modelBytes,
+                WritingPage.PREPARATION -> LlmPreparationScreen(engineState, writingState.hasToken, modelDownloaded(), modelBytes,
                     writing::saveToken, writing::download, writing::openEditor, back)
                 WritingPage.EDITOR -> GrammarWritingScreen(writingState, back, writing::setInput,
                     writing::startCorrection, writing::cancel, writing::retry, writing::again,

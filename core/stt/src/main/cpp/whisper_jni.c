@@ -1,3 +1,4 @@
+#include <stdio.h>
 // whisper.cpp ↔ Kotlin(com.jooh.opic.core.stt.WhisperNative) 연결. 예제(examples/whisper.android)를 우리 패키지에 맞게 줄인 것.
 #include <jni.h>
 #include <android/log.h>
@@ -39,7 +40,7 @@ static bool should_abort(void *user_data) {
 
 // 결과는 UTF-8 바이트로 넘긴다 (NewStringUTF는 4바이트 문자에서 실패할 수 있음)
 JNIEXPORT jbyteArray JNICALL
-Java_com_jooh_opic_core_stt_WhisperNative_transcribe(JNIEnv *env, jobject thiz, jlong ctx_ptr, jint threads, jfloatArray audio, jobject cancelled, jstring prompt) {
+Java_com_jooh_opic_core_stt_WhisperNative_transcribe(JNIEnv *env, jobject thiz, jlong ctx_ptr, jint threads, jfloatArray audio, jobject cancelled, jstring prompt, jboolean with_tokens) {
     struct whisper_context *ctx = (struct whisper_context *) ctx_ptr;
     jfloat *data = (*env)->GetFloatArrayElements(env, audio, NULL);
     const jsize n = (*env)->GetArrayLength(env, audio);
@@ -54,6 +55,7 @@ Java_com_jooh_opic_core_stt_WhisperNative_transcribe(JNIEnv *env, jobject thiz, 
     params.print_timestamps = false;
     params.print_special = false;
     params.single_segment = false;
+    params.token_timestamps = with_tokens;
     // 선택: 앞 문맥 힌트 (예: 머뭇거림을 지우지 않게 "Um, uh, ..."). null이면 기본 동작
     const char *prompt_chars = prompt != NULL ? (*env)->GetStringUTFChars(env, prompt, NULL) : NULL;
     if (prompt_chars != NULL) params.initial_prompt = prompt_chars;
@@ -76,12 +78,27 @@ Java_com_jooh_opic_core_stt_WhisperNative_transcribe(JNIEnv *env, jobject thiz, 
     if (rc != 0) return NULL;
     whisper_print_timings(ctx);
 
+    // 결과: 전체 텍스트. with_tokens면 뒤에 "\n#TOKENS\n" + 줄마다 "t0\tt1\tp\ttext" (t0·t1은 10ms 단위)
     const int segments = whisper_full_n_segments(ctx);
-    size_t total = 1;
-    for (int i = 0; i < segments; i++) total += strlen(whisper_full_get_segment_text(ctx, i));
-    char *text = calloc(total, 1);
-    for (int i = 0; i < segments; i++) strcat(text, whisper_full_get_segment_text(ctx, i));
-    const jsize len = (jsize) strlen(text);
+    size_t cap = 256;
+    for (int i = 0; i < segments; i++) {
+        cap += strlen(whisper_full_get_segment_text(ctx, i));
+        if (with_tokens) for (int j = 0; j < whisper_full_n_tokens(ctx, i); j++) cap += strlen(whisper_full_get_token_text(ctx, i, j)) + 48;
+    }
+    char *text = calloc(cap, 1);
+    size_t used = 0;
+    for (int i = 0; i < segments; i++) used += snprintf(text + used, cap - used, "%s", whisper_full_get_segment_text(ctx, i));
+    if (with_tokens) {
+        used += snprintf(text + used, cap - used, "\n#TOKENS\n");
+        for (int i = 0; i < segments; i++) {
+            for (int j = 0; j < whisper_full_n_tokens(ctx, i); j++) {
+                const whisper_token_data data = whisper_full_get_token_data(ctx, i, j);
+                used += snprintf(text + used, cap - used, "%lld\t%lld\t%.4f\t%s\n",
+                    (long long) data.t0, (long long) data.t1, data.p, whisper_full_get_token_text(ctx, i, j));
+            }
+        }
+    }
+    const jsize len = (jsize) used;
     jbyteArray result = (*env)->NewByteArray(env, len);
     (*env)->SetByteArrayRegion(env, result, 0, len, (const jbyte *) text);
     free(text);

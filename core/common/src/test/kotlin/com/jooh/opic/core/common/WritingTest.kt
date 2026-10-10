@@ -24,4 +24,10 @@ class WritingTest {
         }
         assertEquals(errorTypeGuide("other"), errorTypeGuide("unrecognized"))
     }
+
+    @Test fun speakingAllowsFifteenSentences() {
+        val input = (1..20).joinToString(" ") { "Sentence $it." }
+        assertEquals(5, sentencesToCorrect(input).size)
+        assertEquals(15, sentencesToCorrect(input, 15).size)
+    }
 }

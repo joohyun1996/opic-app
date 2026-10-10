@@ -1,4 +1,4 @@
-package com.jooh.opic.feature.grammar
+package com.jooh.opic.core.correction
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -10,7 +10,7 @@ import com.jooh.opic.core.llm.LlmEngineState
 import com.jooh.opic.core.llm.llmFailureLabel
 
 @Composable
-fun GrammarPreparationScreen(
+fun LlmPreparationScreen(
     engineState: LlmEngineState,
     hasToken: Boolean,
     modelDownloaded: Boolean,
@@ -19,10 +19,12 @@ fun GrammarPreparationScreen(
     onDownload: () -> Unit,
     onContinue: () -> Unit,
     onBack: () -> Unit,
+    backLabel: String = "← 결과",
+    continueLabel: String = "쓰기 시작",
 ) {
     var token by remember { mutableStateOf("") }
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        TextButton(onClick = onBack) { Text("← 결과") }
+        TextButton(onClick = onBack) { Text(backLabel) }
         Text("AI 교정 준비", style = MaterialTheme.typography.headlineSmall)
         when (engineState) {
             LlmEngineState.NotDownloaded -> Text("모델 없음")
@@ -37,7 +39,7 @@ fun GrammarPreparationScreen(
             LlmEngineState.Closed -> Text("엔진을 사용할 수 없습니다")
         }
         if (engineState is LlmEngineState.Ready) {
-            Button(onClick = onContinue, modifier = Modifier.fillMaxWidth()) { Text("쓰기 시작") }
+            Button(onClick = onContinue, modifier = Modifier.fillMaxWidth()) { Text(continueLabel) }
         }
         if (engineState is LlmEngineState.NotDownloaded || engineState is LlmEngineState.Failed) {
             if (modelDownloaded) Text("저장된 모델을 다시 불러올 수 있습니다.")

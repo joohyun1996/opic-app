@@ -3,15 +3,24 @@ package com.jooh.opic.feature.speaking
 import android.Manifest
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
+import com.jooh.opic.core.common.EditState
+import com.jooh.opic.core.common.EditableWord
 import com.jooh.opic.core.common.durationAdvice
+import com.jooh.opic.core.correction.CorrectionResultCard
+import com.jooh.opic.core.correction.LlmPreparationScreen
+import com.jooh.opic.core.llm.LlmEngineState
 import com.jooh.opic.core.common.fillerMask
 import com.jooh.opic.core.common.paceAdvice
 import com.jooh.opic.core.common.werWords
@@ -106,19 +115,51 @@ private fun ModelSection(model: SpeakingViewModel, state: SpeakingState) {
     }
 }
 
-@OptIn(ExperimentalLayoutApi::class)
+@OptIn(ExperimentalLayoutApi::class, ExperimentalFoundationApi::class)
 @Composable
 private fun ResultPage(model: SpeakingViewModel, state: SpeakingState) {
     val transcript = state.transcript ?: return
     val metrics = state.metrics ?: return
     val scope = rememberCoroutineScope()
+    var editing by remember { mutableStateOf<Int?>(null) }
     TextButton(onClick = model::backToTopics) { Text("← 주제") }
-    Text("내 답변", style = MaterialTheme.typography.titleMedium)
-    val tokens = remember(transcript) { transcript.split(Regex("\\s+")).filter { it.isNotEmpty() } }
-    val mask = remember(tokens) { fillerMask(tokens.map { werWords(it).firstOrNull().orEmpty() }) }
-    FlowRow(horizontalArrangement = Arrangement.spacedBy(5.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        tokens.forEachIndexed { i, token -> Text(token, color = if (mask[i]) Color.Gray else Color.Unspecified) }
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Text(if (state.showOriginal) "Whisper 받아 적기" else "내 답변", Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
+        TextButton(onClick = model::toggleOriginal) { Text(if (state.showOriginal) "내가 고친 글 보기" else "Whisper 원문 보기") }
     }
+    if (state.showOriginal) {
+        Text(transcript)
+    } else {
+        Text("Whisper는 작은 실수를 고쳐서 적을 때가 있어요. 내 목소리를 들으며 실제로 말한 대로 고친 뒤 교정을 받으세요",
+            style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+        Text("단어를 누르면 그 부분을 듣고, 꾹 누르면 고칠 수 있어요", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+        val mask = remember(state.words) { fillerMask(state.words.map { werWords(it.text).firstOrNull().orEmpty() }) }
+        FlowRow(horizontalArrangement = Arrangement.spacedBy(5.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            state.words.forEachIndexed { i, word ->
+                val color = when {
+                    word.state == EditState.INSERTED -> EditBlue
+                    mask[i] -> Color.Gray
+                    else -> Color.Unspecified
+                }
+                val decoration = when (word.state) {
+                    EditState.REPLACED -> TextDecoration.Underline
+                    EditState.DELETED -> TextDecoration.LineThrough
+                    else -> null
+                }
+                Text(word.text, color = if (word.state == EditState.REPLACED) EditBlue else if (word.state == EditState.DELETED) Color.Gray else color,
+                    textDecoration = decoration,
+                    modifier = Modifier.combinedClickable(onClick = { model.playWord(i) }, onLongClick = { editing = i }).padding(vertical = 2.dp))
+            }
+        }
+        if (state.words.any { it.state != EditState.KEPT }) TextButton(onClick = model::restoreAllWords) { Text("전체 되돌리기") }
+    }
+    editing?.let { index -> state.words.getOrNull(index)?.let { word ->
+        EditWordDialog(word, onDismiss = { editing = null },
+            onReplace = { model.replaceWord(index, it); editing = null },
+            onDelete = { model.deleteWord(index); editing = null },
+            onInsert = { model.insertWord(index, it); editing = null },
+            onRestore = { model.restoreWord(index); editing = null })
+    } }
     Card(Modifier.fillMaxWidth()) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
             Text("말한 시간 ${clock(metrics.durationMs)}" + (durationAdvice(metrics.durationMs)?.let { " · $it" } ?: ""))
@@ -129,10 +170,62 @@ private fun ResultPage(model: SpeakingViewModel, state: SpeakingState) {
         }
     }
     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        OutlinedButton(enabled = model.recordingFile.isFile, onClick = { scope.launch { PcmPlayer.play(model.recordingFile) } }) { Text("내 답변 듣기") }
         Button(onClick = model::retry) { Text("다시 답하기") }
         OutlinedButton(onClick = model::nextQuestion) { Text("다음 질문") }
     }
-    OutlinedButton(enabled = model.recordingFile.isFile, onClick = { scope.launch { PcmPlayer.play(model.recordingFile) } }) { Text("내 답변 듣기") }
+    HorizontalDivider()
+    if (!state.correctionOpen) Button(onClick = model::openCorrection, modifier = Modifier.fillMaxWidth()) { Text("문법 교정 받기 (AI)") }
+    else CorrectionSection(model, state)
 }
+
+@Composable
+private fun CorrectionSection(model: SpeakingViewModel, state: SpeakingState) {
+    val engine by model.llm.collectAsState()
+    val engineState = engine?.state?.collectAsState()?.value
+    if (engine == null || engineState == null) { Text("AI 교정 준비 중…"); return }
+    if (engineState !is LlmEngineState.Ready && engineState !is LlmEngineState.Generating) {
+        LlmPreparationScreen(engineState, state.hasToken, model.llmModelDownloaded(), model.llmModelBytes,
+            onSaveToken = model::saveToken, onDownload = model::prepareLlm, onContinue = model::startCorrection,
+            onBack = model::closeCorrection, backLabel = "← 닫기", continueLabel = "교정 시작")
+        return
+    }
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Text("문법 교정", Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
+        TextButton(onClick = model::closeCorrection) { Text("닫기") }
+    }
+    if (state.correctionTotal == 0 && !state.correcting) {
+        Button(onClick = model::startCorrection, modifier = Modifier.fillMaxWidth()) { Text("교정 시작 (최대 ${MAX_CORRECTION_SENTENCES}문장)") }
+    }
+    if (state.correcting) {
+        Text("${state.corrections.size} / ${state.correctionTotal} 문장 · 문장당 15초 안팎")
+        LinearProgressIndicator(Modifier.fillMaxWidth())
+        TextButton(onClick = model::cancelCorrection) { Text("교정 취소") }
+    }
+    state.corrections.forEachIndexed { index, outcome ->
+        CorrectionResultCard(outcome, onRetry = { model.retryCorrection(index) }, retryEnabled = !state.correcting)
+    }
+}
+
+@Composable
+private fun EditWordDialog(word: EditableWord, onDismiss: () -> Unit, onReplace: (String) -> Unit, onDelete: () -> Unit,
+                           onInsert: (String) -> Unit, onRestore: () -> Unit) {
+    var text by remember(word) { mutableStateOf(word.text) }
+    var insert by remember(word) { mutableStateOf("") }
+    AlertDialog(onDismissRequest = onDismiss, title = { Text("단어 고치기") }, text = {
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            word.original?.let { Text("Whisper: ${it.text}", color = Color.Gray) }
+            OutlinedTextField(text, { text = it }, label = { Text("실제로 말한 단어") }, singleLine = true)
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Button(onClick = { onReplace(text) }) { Text("바꾸기") }
+                OutlinedButton(onClick = onDelete) { Text("지우기") }
+            }
+            OutlinedTextField(insert, { insert = it }, label = { Text("뒤에 넣을 단어") }, singleLine = true)
+            OutlinedButton(enabled = insert.isNotBlank(), onClick = { onInsert(insert) }) { Text("뒤에 넣기") }
+        }
+    }, confirmButton = { TextButton(onClick = onRestore) { Text("원래대로") } }, dismissButton = { TextButton(onClick = onDismiss) { Text("닫기") } })
+}
+
+private val EditBlue = Color(0xFF1E5BD8)
 
 private fun clock(ms: Long): String { val s = ms / 1000; return "${s / 60}:${(s % 60).toString().padStart(2, '0')}" }

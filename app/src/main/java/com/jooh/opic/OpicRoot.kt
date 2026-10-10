@@ -104,7 +104,9 @@ fun OpicRoot(app: OpicApplication) {
                     val model: SpeakingViewModel = viewModel(factory = remember(app, loaded) { object : ViewModelProvider.Factory {
                         @Suppress("UNCHECKED_CAST")
                         override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T =
-                            SpeakingViewModel(app, catalog, app.whisper, app::releaseGemmaBeforeWhisper, speaker::speak, speaker::stop) as T
+                            SpeakingViewModel(app, catalog, app.whisper, app::releaseGemmaBeforeWhisper, speaker::speak, speaker::stop,
+                                { app.llmEngine }, app.hfTokenStore, { ModelCatalog.isDownloaded(app) },
+                                ModelCatalog.config(app).models.first().expectedBytes) as T
                     } })
                     Box(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding(), contentAlignment = Alignment.TopCenter) {
                         Box(Modifier.widthIn(max = 430.dp).fillMaxSize()) { SpeakingScreen(model, back) }

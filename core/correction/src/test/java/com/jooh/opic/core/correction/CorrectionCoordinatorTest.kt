@@ -1,4 +1,4 @@
-package com.jooh.opic.feature.grammar
+package com.jooh.opic.core.correction
 
 import com.jooh.opic.core.llm.LlmEngineState
 import com.jooh.opic.core.llm.OnDeviceLlmEngine

@@ -1,5 +1,7 @@
 package com.jooh.opic.feature.grammar
 
+import com.jooh.opic.core.correction.*
+
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope

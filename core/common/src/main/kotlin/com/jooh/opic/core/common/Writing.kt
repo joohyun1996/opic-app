@@ -18,7 +18,8 @@ fun splitSentences(input: String): List<String> {
     return sentences
 }
 
-fun sentencesToCorrect(input: String): List<String> = splitSentences(input).take(5)
+/** 교정할 문장 (문법 탭 5, 스피킹 15). */
+fun sentencesToCorrect(input: String, max: Int = 5): List<String> = splitSentences(input).take(max)
 
 data class ErrorGuide(val name: String, val explanation: String)
 

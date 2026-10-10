@@ -1,4 +1,4 @@
-package com.jooh.opic.feature.grammar
+package com.jooh.opic.core.correction
 
 import com.jooh.opic.core.common.CorrectionParse
 import com.jooh.opic.core.common.CorrectionResult
@@ -22,8 +22,8 @@ sealed interface CorrectionOutcome {
 enum class FailureReason { INVALID_JSON, CONTRADICTION, TIMEOUT, ENGINE }
 
 class CorrectionCoordinator(private val engine: OnDeviceLlmEngine) {
-    suspend fun correct(sentences: List<String>, onResult: suspend (CorrectionOutcome) -> Unit) {
-        for (sentence in sentences.take(5)) {
+    suspend fun correct(sentences: List<String>, max: Int = 5, onResult: suspend (CorrectionOutcome) -> Unit) {
+        for (sentence in sentences.take(max)) {
             currentCoroutineContext().ensureActive()
             onResult(correctOne(sentence))
         }

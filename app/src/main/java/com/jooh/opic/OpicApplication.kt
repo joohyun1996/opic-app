@@ -15,6 +15,7 @@ import com.jooh.opic.feature.grammar.GrammarReviewStore
 import com.jooh.opic.feature.grammar.RoomGrammarReviewStore
 import com.jooh.opic.core.llm.HfTokenStore
 import com.jooh.opic.core.llm.HttpModelStore
+import com.jooh.opic.core.llm.SharedFirstModelStore
 import com.jooh.opic.core.llm.ModelCatalog
 import com.jooh.opic.core.llm.OnDeviceLlmEngine
 import com.jooh.opic.core.llm.createOnDeviceLlmEngine
@@ -79,6 +80,6 @@ class OpicApplication : Application() {
         get() = synchronized(this) { currentLlmEngine ?: createOnDeviceLlmEngine(
             context = this,
             config = ModelCatalog.config(this),
-            store = HttpModelStore(headers = { hfTokenStore.authHeader() }),
+            store = SharedFirstModelStore(this, HttpModelStore(headers = { hfTokenStore.authHeader() })),
         ).also { currentLlmEngine = it } }
 }

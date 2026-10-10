@@ -6,7 +6,11 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.ui.platform.LocalContext
 import com.jooh.opic.core.llm.LlmEngineState
+import com.jooh.opic.core.llm.SharedModel
 import com.jooh.opic.core.llm.llmFailureLabel
 
 @Composable
@@ -23,6 +27,14 @@ fun LlmPreparationScreen(
     continueLabel: String = "쓰기 시작",
 ) {
     var token by remember { mutableStateOf("") }
+    val context = LocalContext.current
+    var pickMessage by remember { mutableStateOf<String?>(null) }
+    // 공용 폴더(Develop/Core/llm)의 모델을 여러 앱이 같이 쓴다 — 한 번 고르면 계속 사용
+    val pick = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri == null) return@rememberLauncherForActivityResult
+        if (SharedModel.save(context, uri, modelBytes)) { pickMessage = "공용 모델 파일을 쓰도록 설정했어요"; onDownload() }
+        else pickMessage = "모델 파일이 아니에요 (크기가 달라요). ${SharedModel.FOLDER_HINT}의 gemma-3n-e4b-it.task를 고르세요"
+    }
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         TextButton(onClick = onBack) { Text(backLabel) }
         Text("AI 교정 준비", style = MaterialTheme.typography.headlineSmall)
@@ -42,6 +54,10 @@ fun LlmPreparationScreen(
             Button(onClick = onContinue, modifier = Modifier.fillMaxWidth()) { Text(continueLabel) }
         }
         if (engineState is LlmEngineState.NotDownloaded || engineState is LlmEngineState.Failed) {
+            OutlinedButton(onClick = { pick.launch(arrayOf("*/*")) }, modifier = Modifier.fillMaxWidth()) {
+                Text("공용 모델 파일 선택 (${SharedModel.FOLDER_HINT})")
+            }
+            pickMessage?.let { Text(it) }
             if (modelDownloaded) Text("저장된 모델을 다시 불러올 수 있습니다.")
             else Text("AI 교정을 쓰려면 모델(약 ${"%.1f".format(modelBytes / 1_000_000_000.0)} GB)을 한 번 받아야 합니다. Wi-Fi에서 받으세요.")
             if (!modelDownloaded) {

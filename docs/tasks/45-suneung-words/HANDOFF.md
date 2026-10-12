@@ -62,3 +62,83 @@ adb -t 2 install -r app/build/outputs/apk/release/app-release.apk → Success
 ## 질문
 
 - 없음.
+
+## 리뷰 반영
+
+- 기준: `REVIEW.md` Must-fix 1. 반영 코드 커밋 `ff8bcb0` (`1eb4809..ff8bcb0`). 문서 변경은 후속 커밋.
+- `dataVersion` 2→3. 기존 6,261개 행의 단어·seq·Day 배정을 유지하고, 9개는 삭제하지 않고 `deleted: true`로 숨겼다. 새 단어 8개를 seq 6265~6272에 추가했다. 총 6,269행 중 화면 노출은 6,260개이며 Day 157은 32개다.
+- 사용자 요청에 따라 Day 카드와 Day 상세 화면의 `수능` 글자 표시를 제거했다. `deck` 데이터 구분은 유지한다.
+
+### 변경 표
+
+| 항목 | 변경 전 | 변경 후 | 이유 |
+|------|---------|---------|------|
+| 어근 7개 | Day에 노출 | `aggress`, `destruct`, `environ`, `evitable`, `illude`, `oversea`, `sophisticate` 숨김 | 학습 표제어로 부적합 |
+| 괄호 표기 추가 검토 | `datum`, `opportune` 노출 | 두 단어 숨김 | 괄호 안 `data`, `opportunity`가 학습에 적합 |
+| 신규 단어 | 없음 | `aggressive` 6265, `destruction` 6266, `environment` 6267, `inevitable` 6268, `illusion` 6269, `overseas` 6270, `data` 6271, `opportunity` 6272 | 고시 표기에서 실제 학습 단어 보완. 뜻·정의·예문 새로 작성 |
+| `sophisticated` | 기존 core 단어 4363 | 추가하지 않음 | 중복 방지 |
+| 단어장 표시 | Day 카드·상세 화면에 `수능` 글자 | 글자 제거 | 사용자 요청. Day 순서와 학습 모드는 유지 |
+| 테스트 | dataVersion 2와 최초 744개 검증 | dataVersion 3, 기존 6,261개 seq·Day 해시, 9개 숨김과 새 seq 고유성 검증 | 기존 학습 기록 보존과 표시 대상 확인 |
+
+### 괄호 표기 48개 검토
+
+| 고시 표기 | 기존 표제어 처리 | 괄호 안 단어 처리 | 판단 |
+|-----------|------------------|-------------------|------|
+| `ache (headache)` | `ache` 유지 | `headache` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `aggress (aggressive)` | `aggress` 숨김 | `aggressive (6265)` 추가 | 독립 학습 표제어로 부적합 |
+| `alternate (alternative)` | `alternate` 유지 | `alternative` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `ambition (ambitious)` | `ambition` 유지 | `ambitious` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `architect (architecture)` | `architect` 유지 | `architecture` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `behave (behavior / behaviour)` | `behave` 유지 | `behavior / behaviour` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `commit (commission)` | `commit` 유지 | `commission` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `compete (competent)` | `compete` 유지 | `competent` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `corporate (corporation)` | `corporate` 유지 | `corporation` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `courage (discourage, encourage)` | `courage` 유지 | `discourage, encourage` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `critic (criticize / criticise, criticism)` | `critic` 유지 | `criticize / criticise, criticism` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `datum (data)` | `datum` 숨김 | `data (6271)` 추가 | 독립 학습 표제어로 부적합 |
+| `decline (declension)` | `decline` 유지 | `declension` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `defend (defendant)` | `defend` 유지 | `defendant` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `depart (department, departure)` | `depart` 유지 | `department, departure` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `destruct (destruction)` | `destruct` 숨김 | `destruction (6266)` 추가 | 독립 학습 표제어로 부적합 |
+| `differ (different)` | `differ` 유지 | `different` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `dominate (dominant)` | `dominate` 유지 | `dominant` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `emerge (emergence)` | `emerge` 유지 | `emergence` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `emit (emission)` | `emit` 유지 | `emission` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `environ (environment)` | `environ` 숨김 | `environment (6267)` 추가 | 독립 학습 표제어로 부적합 |
+| `equip (equipment)` | `equip` 유지 | `equipment` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `erase (eraser)` | `erase` 유지 | `eraser` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `evitable (inevitable)` | `evitable` 숨김 | `inevitable (6268)` 추가 | 독립 학습 표제어로 부적합 |
+| `exclude (exclusive)` | `exclude` 유지 | `exclusive` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `fame (famous)` | `fame` 유지 | `famous` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `fate (fatal)` | `fate` 유지 | `fatal` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `gene (genetic)` | `gene` 유지 | `genetic` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `generate (generation)` | `generate` 유지 | `generation` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `globe (global)` | `globe` 유지 | `global` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `harmony (harmonious)` | `harmony` 유지 | `harmonious` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `illude (illusion)` | `illude` 숨김 | `illusion (6269)` 추가 | 독립 학습 표제어로 부적합 |
+| `import (importance, important)` | `import` 유지 | `importance, important` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `institute (institution)` | `institute` 유지 | `institution` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `medium (media)` | `medium` 유지 | `media` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `mine (miner)` | `mine` 유지 | `miner` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `occupy (occupation)` | `occupy` 유지 | `occupation` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `opportune (opportunity)` | `opportune` 숨김 | `opportunity (6272)` 추가 | 독립 학습 표제어로 부적합 |
+| `opt (option)` | `opt` 유지 | `option` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `organ (organic, organize / organise)` | `organ` 유지 | `organic, organize / organise` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `origin (original)` | `origin` 유지 | `original` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `populate (population)` | `populate` 유지 | `population` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `publish (publisher)` | `publish` 유지 | `publisher` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `submit (submission)` | `submit` 유지 | `submission` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `substance (substantial)` | `substance` 유지 | `substantial` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `terror (terrorist)` | `terror` 유지 | `terrorist` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `verb (verbal)` | `verb` 유지 | `verbal` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+| `virtue (virtual)` | `virtue` 유지 | `virtual` 별도 추가 없음 | 표제어 자체가 독립 학습 단어 |
+
+- 괄호 표기 48개 중 7개 표제어를 숨기고 대응 단어를 추가했다. 나머지 41개 표제어는 독립 학습 단어로 유지했다.
+- 괄호 밖의 `oversea / overseas`는 `oversea`를 숨기고 `overseas`를 추가했다. `sophisticate`는 숨겼고 `sophisticated`가 이미 core에 있으므로 추가하지 않았다.
+
+### 검증
+
+- `./gradlew test lint :app:assembleRelease --console=plain` 통과: `BUILD SUCCESSFUL in 42s` (855개 작업).
+- `WordImporterTest`: 기존 5,517개 해시와 리뷰 전 6,261개 `(language, word, seq, day)` 해시 유지. 숨긴 9개가 DB에 남고 해당 Day 목록에서는 빠짐. 신규 seq 6265~6272와 전체 `(language, word)`·`(language, seq)` 고유 확인.
+- `MigrationTest`: v4→v5 이후 dataVersion 3 전체 적재에서도 기존 단어 id·seq·UserWord 기록 유지.
+- 실기기 재설치는 이번 리뷰 반영에서 진행하지 않았다. `수능` 글자 제거는 코드와 릴리스 빌드로 확인했다.

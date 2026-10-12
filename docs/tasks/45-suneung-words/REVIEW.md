@@ -20,3 +20,9 @@
 
 ## Nit
 - `level` 4 일괄은 괜찮다
+
+## 2차 리뷰 (`1eb4809..9cb715e`)
+
+### 판정: Approve
+- Must-fix 1 반영: 어근 9개 `deleted: true`(행 유지), 실제 단어 8개 seq 6265~6272 추가, dataVersion 3. seq 중복 없음, 기존 seq·Day 해시 불변 테스트 확인
+- `수능` 라벨 제거는 사용자 요청으로 기록됨. `deck` 데이터는 유지

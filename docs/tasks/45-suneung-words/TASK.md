@@ -1,6 +1,6 @@
 # TASK: 수능 수준(고2~고3) 영어 단어 추가
 
-> 작성: Claude · 승인: [ ] 사용자
+> 작성: Claude · 승인: [x] 사용자 (2026-10-12, B안 · 초·중 어휘 제외 · DB 변경 승인)
 > 경로: docs/tasks/45-suneung-words/TASK.md
 > 순서: 이 TASK → TASK 46 접사 분해 (단어를 먼저 넣어야 접사 후보 추출을 한 번만 돌린다)
 
@@ -20,7 +20,7 @@
 ## 출처
 - **교육부 고시 영어과 교육과정 기본 어휘** (공개 자료). 사용한 고시 번호·연도·파일명을 리포트에 적는다
 - 시판 수능 단어장은 저작권 문제로 사용 금지
-- 기본 어휘 중 초·중학 수준(초·중 필수) 단어는 제외한다
+- 기본 어휘 중 초·중학 수준(초·중 필수) 단어는 **모두 제외**한다 (2026-10-12 사용자 확인: 초·중 어휘는 필요 없음)
   - 고시 목록이 초등 어휘만 표시하고 중학 수준은 따로 표시하지 않으면, 1단계 리포트에 **제외 기준 후보를 제안하고 사용자 결정을 받는다**
   - 후보 예: 2022 개정 교육과정 학교급 구분 / 기존 `level` / 빈도 순위
 
@@ -43,10 +43,9 @@
   - DB: `words`에 `deck TEXT NOT NULL DEFAULT 'core'` 열 추가, Migration v4→v5 (ALTER TABLE ADD COLUMN, 기존 행 보존)
   - `words.json`의 `dataVersion`을 2로 올린다 (기존 규칙)
 - seq: 5521부터 1씩 증가 (Day 139부터 수능 단어만)
-- 단어 탭 표시 방식 (제안, 구현 전에 사용자 확인)
-  - **A안 (추천)**: 단어 탭 위에 단어장 전환 "전체 단어 | 수능". 수능을 고르면 Day 139~를 "수능 Day 1~"로 다시 번호를 매겨 보여 준다. 저장된 seq·Day는 그대로다
-  - B안: 지금 Day 목록 그대로, Day 139부터 칸에 "수능" 표시만 붙인다
-  - 고른 안을 HANDOFF에 적는다
+- 단어 탭 표시 방식: **B안으로 결정** (2026-10-12 사용자: "어차피 둘 다 봐야 해")
+  - ~~A안: 단어장 전환 + 수능 Day 재번호~~ (채택 안 함)
+  - **B안**: 지금 Day 목록 그대로, Day 139부터 칸에 "수능" 표시만 붙인다
 
 ## 수정 범위
 | 파일 | 작업 | 내용 |
@@ -55,11 +54,10 @@
 | `tools/words/compare_curriculum.py` | 생성 | 1단계 비교 스크립트 |
 | `docs/tasks/45-suneung-words/REPORT-1.md`, `candidates.tsv` | 생성 | 1단계 결과 |
 | `exports/words.json` | 수정 | 2단계: 새 단어 추가, dataVersion 2, `deck` 필드 |
-| `core/database/.../Entities.kt` | 수정 | `WordEntity.deck` (사용자 승인 필요: 엔티티 변경) |
-| `core/database/.../Migrations.kt`, `OpicDatabase.kt`, `schemas/.../5.json` | 수정·생성 | v4→v5 Migration (사용자 승인 필요) |
+| `core/database/.../Entities.kt` | 수정 | `WordEntity.deck` (엔티티 변경 — 2026-10-12 승인) |
+| `core/database/.../Migrations.kt`, `OpicDatabase.kt`, `schemas/.../5.json` | 수정·생성 | v4→v5 Migration (2026-10-12 승인) |
 | `core/database/.../WordImporter.kt`, `WordDao.kt` | 수정 | `deck` 읽기·쓰기, 단어장별 Day 통계 쿼리 (language 필터 유지) |
-| `core/common/.../Day.kt` | 수정 | 단어장별 Day 번호 변환 (A안일 때) |
-| `feature/words/*` (WordsApp, WordsViewModel, DayScreen 등) | 수정 | 단어장 전환 표시 |
+| `feature/words/*` (WordsApp, DayScreen 등) | 수정 | Day 칸·Day 화면에 "수능" 표시 (B안) |
 | `core/database/src/test/...`, `core/common/src/test/...` | 생성·수정 | 아래 수용 기준 테스트 |
 
 ## 수용 기준

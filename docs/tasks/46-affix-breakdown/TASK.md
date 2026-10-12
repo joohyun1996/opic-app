@@ -1,6 +1,6 @@
 # TASK: 영어 단어 접사 분해
 
-> 작성: Claude · 승인: [ ] 사용자
+> 작성: Claude · 승인: [x] 사용자 (2026-10-12, DB 변경 승인)
 > 경로: docs/tasks/46-affix-breakdown/TASK.md
 > 전제: TASK 45(수능 단어) 적재 후 진행. 대상은 기존 단어 + TASK 45 단어
 
@@ -53,7 +53,7 @@
 | `docs/tasks/46-affix-breakdown/REPORT-1.md`, `review.tsv` | 생성 | 1단계 결과 |
 | `exports/affixes.json` | 생성 | 2단계 씨드 (검수 통과분만) |
 | `app/build.gradle.kts`, `app/.../OpicApplication.kt` | 수정 | 씨드 내장·적재 |
-| `core/database/.../Entities.kt`, `Migrations.kt`, `OpicDatabase.kt`, `schemas/...` | 수정·생성 | 새 엔티티 2개, Migration (사용자 승인 필요) |
+| `core/database/.../Entities.kt`, `Migrations.kt`, `OpicDatabase.kt`, `schemas/...` | 수정·생성 | 새 엔티티 2개, Migration (2026-10-12 승인) |
 | `core/database/.../AffixDao.kt`, `AffixImporter.kt` | 생성 | 조회(language 필터)·적재 |
 | `core/common/.../Affix.kt` | 생성 | 한 줄 표시 문자열 만들기 등 순수 함수 |
 | `feature/words/.../StudyScreen.kt`, `StudyViewModel.kt` | 수정 | 확인 후에만 분해 표시 |

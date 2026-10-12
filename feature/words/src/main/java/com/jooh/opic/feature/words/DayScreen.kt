@@ -57,6 +57,7 @@ internal fun DayScreen(database: OpicDatabase, language: StudyLanguage, day: Int
     Column(Modifier.fillMaxSize()) {
         TextButton(onClick = onBack) { Text("← Day 목록") }
         Text("Day $day", style = MaterialTheme.typography.headlineSmall)
+        if (list.any { it.word.deck == "suneung" }) Text("수능", style = MaterialTheme.typography.labelMedium)
         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             Text("습득 $mastered / ${list.size}", Modifier.weight(1f).padding(vertical = 8.dp))
             TextButton(onClick = { showKorean = !showKorean }) { Text(if (showKorean) "한국어 숨기기" else "한국어 보기") }

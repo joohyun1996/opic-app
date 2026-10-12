@@ -59,6 +59,7 @@ fun WordsApp(
                                 Card(onClick = { navigate("day/${item.day}") }, colors = CardDefaults.cardColors(containerColor = color)) {
                                     Column(Modifier.fillMaxWidth().padding(vertical = 16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                                         Text("Day ${item.day}", style = MaterialTheme.typography.labelLarge)
+                                        if (item.deck == "suneung") Text("수능", style = MaterialTheme.typography.labelSmall)
                                         Text("${item.mastered}/${item.total}", style = MaterialTheme.typography.bodySmall)
                                     }
                                 }

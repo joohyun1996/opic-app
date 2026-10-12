@@ -21,7 +21,7 @@ interface WordDao {
     suspend fun getDayWordsWithProgress(language: String, firstSeq: Int, lastSeq: Int): List<WordWithProgress>
 
     @Query("""
-        SELECT (w.seq - 1) / :wordsPerDay + 1 AS day, COUNT(*) AS total,
+        SELECT (w.seq - 1) / :wordsPerDay + 1 AS day, MIN(w.deck) AS deck, COUNT(*) AS total,
                SUM(CASE WHEN u.correctCount >= 3 THEN 1 ELSE 0 END) AS mastered,
                SUM(CASE WHEN u.wrongCount > 0 AND u.correctCount < 3 THEN 1 ELSE 0 END) AS wrong
         FROM words w LEFT JOIN user_words u ON u.wordId = w.id
@@ -32,7 +32,7 @@ interface WordDao {
 
     /** 같은 집계를 기록이 바뀔 때만 다시 계산해 흘려보낸다 (TASK 39, Room 무효화 추적). */
     @Query("""
-        SELECT (w.seq - 1) / :wordsPerDay + 1 AS day, COUNT(*) AS total,
+        SELECT (w.seq - 1) / :wordsPerDay + 1 AS day, MIN(w.deck) AS deck, COUNT(*) AS total,
                SUM(CASE WHEN u.correctCount >= 3 THEN 1 ELSE 0 END) AS mastered,
                SUM(CASE WHEN u.wrongCount > 0 AND u.correctCount < 3 THEN 1 ELSE 0 END) AS wrong
         FROM words w LEFT JOIN user_words u ON u.wordId = w.id
@@ -40,6 +40,16 @@ interface WordDao {
         GROUP BY (w.seq - 1) / :wordsPerDay ORDER BY day
     """)
     fun observeDayStats(language: String, wordsPerDay: Int): kotlinx.coroutines.flow.Flow<List<DayStats>>
+
+    @Query("""
+        SELECT (w.seq - 1) / :wordsPerDay + 1 AS day, MIN(w.deck) AS deck, COUNT(*) AS total,
+               SUM(CASE WHEN u.correctCount >= 3 THEN 1 ELSE 0 END) AS mastered,
+               SUM(CASE WHEN u.wrongCount > 0 AND u.correctCount < 3 THEN 1 ELSE 0 END) AS wrong
+        FROM words w LEFT JOIN user_words u ON u.wordId = w.id
+        WHERE w.language = :language AND w.deck = :deck AND w.deleted = 0
+        GROUP BY (w.seq - 1) / :wordsPerDay ORDER BY day
+    """)
+    suspend fun dayStatsByDeck(language: String, deck: String, wordsPerDay: Int): List<DayStats>
 
     @Query("SELECT COUNT(*) FROM words WHERE language = :language AND deleted = 0")
     suspend fun activeCount(language: String): Int
@@ -93,7 +103,7 @@ interface WordDao {
 data class KeyCount(val name: String, val count: Int)
 data class PaceRow(val wordsPerMinute: Int, val fillerCount: Int)
 
-data class DayStats(val day: Int, val total: Int, val mastered: Int, val wrong: Int)
+data class DayStats(val day: Int, val total: Int, val mastered: Int, val wrong: Int, val deck: String = "core")
 
 /** 학습 기록이 없으면 correctCount·wrongCount가 null (= 신규). */
 data class WordRecordRow(val id: Long, val word: String, val meaningKo: String, val correctCount: Int, val wrongCount: Int, val lastStudiedAt: Long?)

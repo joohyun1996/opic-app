@@ -10,6 +10,7 @@ import com.jooh.opic.core.common.seqRange
 import com.jooh.opic.core.common.totalDays
 import java.io.File
 import java.io.ByteArrayInputStream
+import java.security.MessageDigest
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.*
 import org.junit.After
@@ -42,20 +43,46 @@ class WordImporterTest {
 
     @Test fun actualFileAndRepeatAndLastDay() = runBlocking {
         val raw = File(requireNotNull(System.getProperty("words.file"))).readText()
-        assertEquals(ImportResult.Imported(1, 5517), importer.importWords(raw))
-        assertEquals(5517, dao.countByLanguage("en"))
-        assertEquals("1", meta.get(WordImporter.VERSION_KEY))
-        assertEquals(138, totalDays(dao.maxSeq("en")!!))
-        assertEquals(37, dao.dayStats("en", WORDS_PER_DAY).last().total)
+        assertEquals(ImportResult.Imported(2, 6261), importer.importWords(raw))
+        assertEquals(6261, dao.countByLanguage("en"))
+        assertEquals("2", meta.get(WordImporter.VERSION_KEY))
+        assertEquals(157, totalDays(dao.maxSeq("en")!!))
+        val days = dao.dayStats("en", WORDS_PER_DAY)
+        assertEquals(37, days.single { it.day == 138 }.total)
+        assertEquals("core", days.single { it.day == 138 }.deck)
+        assertEquals(24, days.last().total)
+        assertEquals("suneung", days.last().deck)
         val before = dao.getDayWords("en", 1, Int.MAX_VALUE)
         val sql = db.openHelper.writableDatabase
         sql.execSQL("CREATE TABLE write_audit (kind TEXT)")
         for (table in listOf("words", "data_meta")) for (operation in listOf("INSERT", "UPDATE", "DELETE")) {
             sql.execSQL("CREATE TRIGGER audit_${table}_$operation AFTER $operation ON $table BEGIN INSERT INTO write_audit VALUES ('$operation'); END")
         }
-        assertEquals(ImportResult.UpToDate(1), importer.importWords(raw))
+        assertEquals(ImportResult.UpToDate(2), importer.importWords(raw))
         assertEquals(before, dao.getDayWords("en", 1, Int.MAX_VALUE))
         sql.query("SELECT COUNT(*) FROM write_audit").use { assertTrue(it.moveToFirst()); assertEquals(0, it.getInt(0)) }
+    }
+
+    @Test fun originalSequenceAndDaySnapshotAndNewDeckAreStable() = runBlocking {
+        val raw = File(requireNotNull(System.getProperty("words.file"))).readText()
+        val rows = Json.parseToJsonElement(raw).jsonObject["words"]!!.jsonArray.map { it.jsonObject }
+        val old = rows.take(5517)
+        val snapshot = old.joinToString("\n") {
+            val seq = it["seq"]!!.jsonPrimitive.int
+            "${it["language"]!!.jsonPrimitive.content}\t${it["word"]!!.jsonPrimitive.content.trim().lowercase()}\t$seq\t${(seq - 1) / 40 + 1}"
+        }
+        val hash = MessageDigest.getInstance("SHA-256").digest(snapshot.toByteArray()).joinToString("") { "%02x".format(it) }
+        assertEquals("5b600ebd36fefaa0177e05a906fc2abae39a7d6e25ad38981057f08d095773ff", hash)
+        assertTrue(old.all { it["deck"]!!.jsonPrimitive.content == "core" })
+        val added = rows.drop(5517)
+        assertEquals(744, added.size)
+        assertEquals((5521..6264).toList(), added.map { it["seq"]!!.jsonPrimitive.int })
+        assertTrue(added.all { it["deck"]!!.jsonPrimitive.content == "suneung" })
+        assertEquals(6261, rows.map { "${it["language"]!!.jsonPrimitive.content}:${it["word"]!!.jsonPrimitive.content.trim().lowercase()}" }.toSet().size)
+        assertEquals(6261, rows.map { "${it["language"]!!.jsonPrimitive.content}:${it["seq"]!!.jsonPrimitive.int}" }.toSet().size)
+        assertEquals(ImportResult.Imported(2, 6261), importer.importWords(raw))
+        assertEquals(744, dao.dayStatsByDeck("en", "suneung", WORDS_PER_DAY).sumOf { it.total })
+        assertEquals(5517, dao.dayStatsByDeck("en", "core", WORDS_PER_DAY).sumOf { it.total })
     }
 
     @Test fun upgradePreservesIdentitySequenceAndProgress() = runBlocking {

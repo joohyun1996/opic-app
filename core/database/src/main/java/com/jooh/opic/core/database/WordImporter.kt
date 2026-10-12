@@ -59,7 +59,8 @@ class WordImporter(private val database: OpicDatabase, private val enabledLangua
             WordEntity(language = item.language, word = word, seq = item.seq,
                 phonetic = item.phonetic.orEmpty(), meaningKo = item.meaningKo, meaningEn = item.meaningEn.orEmpty(),
                 example = item.example.orEmpty(), exampleKo = item.exampleKo.orEmpty(), level = item.level,
-                category = item.category, partOfSpeech = item.partOfSpeech.orEmpty(), collocations = item.collocations, deleted = item.deleted)
+                category = item.category, partOfSpeech = item.partOfSpeech.orEmpty(), collocations = item.collocations, deleted = item.deleted,
+                deck = item.deck)
         }
         return database.withTransaction {
             val metadata = database.dataMetaDao()
@@ -89,4 +90,5 @@ private data class WordRecord(
     val language: String, val word: String, val seq: Int, val phonetic: String?,
     val meaningKo: String, val meaningEn: String?, val example: String?, val exampleKo: String?,
     val level: Int, val category: String, val partOfSpeech: String?, val collocations: List<String>, val deleted: Boolean,
+    val deck: String = "core",
 )

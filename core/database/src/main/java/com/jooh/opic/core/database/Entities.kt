@@ -1,6 +1,7 @@
 package com.jooh.opic.core.database
 
 import androidx.room.Entity
+import androidx.room.ColumnInfo
 import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
@@ -21,6 +22,7 @@ data class WordEntity(
     val partOfSpeech: String,
     val collocations: List<String> = emptyList(),
     val deleted: Boolean = false,
+    @ColumnInfo(defaultValue = "'core'") val deck: String = "core",
 )
 
 @Entity(tableName = "user_words", foreignKeys = [ForeignKey(entity = WordEntity::class, parentColumns = ["id"], childColumns = ["wordId"], onDelete = ForeignKey.NO_ACTION)])

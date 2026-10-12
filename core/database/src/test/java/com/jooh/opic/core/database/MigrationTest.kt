@@ -27,7 +27,8 @@ class MigrationTest {
 
     /** 내보낸 스키마(schemas/…/N.json)로 실제 vN DB 파일을 만들고 단어 기록 1개를 넣는다. */
     private fun create(file: File, property: String, version: Int, extra: (SQLiteDatabase) -> Unit = {}) {
-        val schema = Json.parseToJsonElement(File(requireNotNull(System.getProperty(property))).readText())
+        val schemaFile = File(requireNotNull(System.getProperty(property))).resolveSibling("$version.json")
+        val schema = Json.parseToJsonElement(schemaFile.readText())
             .jsonObject["database"]!!.jsonObject
         SQLiteDatabase.openOrCreateDatabase(file, null).use { db ->
             for (entity in schema["entities"]!!.jsonArray) {
@@ -101,6 +102,29 @@ class MigrationTest {
             db.grammarReviewDao().recordPractice("es", "c4-01", "c4", today = 100, now = 1)
             assertEquals(1, db.grammarReviewDao().all("es").size)
             assertEquals(3, db.grammarReviewDao().get("en", "c4-01")!!.wrongCount)
+        } finally {
+            db.close()
+        }
+    }
+
+    @Test fun v4ToV5KeepsWordIdentityAndProgressAfterFullSeedImport() = runBlocking {
+        val file = context.getDatabasePath("migration-v4-test.db").also { it.parentFile?.mkdirs(); it.delete() }
+        create(file, "schema.v3", 4)
+        val db = Room.databaseBuilder(context, OpicDatabase::class.java, file.absolutePath).addMigrations(*ALL_MIGRATIONS).build()
+        try {
+            val before = db.wordDao().find("en", "archipelago")!!
+            assertEquals(7L, before.id)
+            assertEquals("core", before.deck)
+            val progress = db.userWordDao().get(7)!!
+            val source = File(requireNotNull(System.getProperty("words.file"))).inputStream()
+            assertEquals(ImportResult.Imported(2, 6261), source.use { WordImporter(db).importWords(it) })
+            val after = db.wordDao().find("en", "archipelago")!!
+            assertEquals(before.id, after.id)
+            assertEquals(before.seq, after.seq)
+            assertEquals("core", after.deck)
+            assertEquals(progress, db.userWordDao().get(7))
+            assertEquals("2", db.dataMetaDao().get(WordImporter.VERSION_KEY))
+            assertEquals("suneung", db.wordDao().find("en", "abandon")!!.deck)
         } finally {
             db.close()
         }

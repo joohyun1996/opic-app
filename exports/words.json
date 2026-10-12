@@ -1,5 +1,5 @@
 {
-  "dataVersion": 2,
+  "dataVersion": 3,
   "seed": 20261004,
   "exportedAt": "2026-10-05T09:36:33.782Z",
   "words": [
@@ -88672,7 +88672,7 @@
       "category": "verb",
       "partOfSpeech": "verb",
       "collocations": [],
-      "deleted": false,
+      "deleted": true,
       "deck": "suneung"
     },
     {
@@ -90880,7 +90880,7 @@
       "category": "noun",
       "partOfSpeech": "noun",
       "collocations": [],
-      "deleted": false,
+      "deleted": true,
       "deck": "suneung"
     },
     {
@@ -91200,7 +91200,7 @@
       "category": "verb",
       "partOfSpeech": "verb",
       "collocations": [],
-      "deleted": false,
+      "deleted": true,
       "deck": "suneung"
     },
     {
@@ -91952,7 +91952,7 @@
       "category": "verb",
       "partOfSpeech": "verb",
       "collocations": [],
-      "deleted": false,
+      "deleted": true,
       "deck": "suneung"
     },
     {
@@ -92064,7 +92064,7 @@
       "category": "adjective",
       "partOfSpeech": "adjective",
       "collocations": [],
-      "deleted": false,
+      "deleted": true,
       "deck": "suneung"
     },
     {
@@ -93808,7 +93808,7 @@
       "category": "verb",
       "partOfSpeech": "verb",
       "collocations": [],
-      "deleted": false,
+      "deleted": true,
       "deck": "suneung"
     },
     {
@@ -95712,7 +95712,7 @@
       "category": "adjective",
       "partOfSpeech": "adjective",
       "collocations": [],
-      "deleted": false,
+      "deleted": true,
       "deck": "suneung"
     },
     {
@@ -95936,7 +95936,7 @@
       "category": "adjective",
       "partOfSpeech": "adjective",
       "collocations": [],
-      "deleted": false,
+      "deleted": true,
       "deck": "suneung"
     },
     {
@@ -98128,7 +98128,7 @@
       "category": "verb",
       "partOfSpeech": "verb",
       "collocations": [],
-      "deleted": false,
+      "deleted": true,
       "deck": "suneung"
     },
     {
@@ -100172,6 +100172,134 @@
       "meaningEn": "an area marked for a purpose",
       "example": "Cars cannot enter this zone.",
       "exampleKo": "차는 이 구역에 들어갈 수 없다.",
+      "level": 4,
+      "category": "noun",
+      "partOfSpeech": "noun",
+      "collocations": [],
+      "deleted": false,
+      "deck": "suneung"
+    },
+    {
+      "language": "en",
+      "word": "aggressive",
+      "seq": 6265,
+      "phonetic": "/əˈɡresɪv/",
+      "meaningKo": "공격적인",
+      "meaningEn": "ready to attack or argue",
+      "example": "His aggressive tone made the discussion difficult.",
+      "exampleKo": "그의 공격적인 말투 때문에 토론이 어려워졌다.",
+      "level": 4,
+      "category": "adjective",
+      "partOfSpeech": "adjective",
+      "collocations": [],
+      "deleted": false,
+      "deck": "suneung"
+    },
+    {
+      "language": "en",
+      "word": "destruction",
+      "seq": 6266,
+      "phonetic": "/dɪˈstrʌkʃən/",
+      "meaningKo": "파괴",
+      "meaningEn": "the act of damaging something completely",
+      "example": "The storm caused widespread destruction.",
+      "exampleKo": "폭풍은 광범위한 파괴를 일으켰다.",
+      "level": 4,
+      "category": "noun",
+      "partOfSpeech": "noun",
+      "collocations": [],
+      "deleted": false,
+      "deck": "suneung"
+    },
+    {
+      "language": "en",
+      "word": "environment",
+      "seq": 6267,
+      "phonetic": "/ɪnˈvaɪrənmənt/",
+      "meaningKo": "환경",
+      "meaningEn": "the natural world or surrounding conditions",
+      "example": "We need to protect the environment.",
+      "exampleKo": "우리는 환경을 보호해야 한다.",
+      "level": 4,
+      "category": "noun",
+      "partOfSpeech": "noun",
+      "collocations": [],
+      "deleted": false,
+      "deck": "suneung"
+    },
+    {
+      "language": "en",
+      "word": "inevitable",
+      "seq": 6268,
+      "phonetic": "/ɪnˈevɪtəbəl/",
+      "meaningKo": "피할 수 없는",
+      "meaningEn": "certain to happen and impossible to avoid",
+      "example": "Some changes are inevitable as we grow older.",
+      "exampleKo": "나이가 들면서 어떤 변화는 피할 수 없다.",
+      "level": 4,
+      "category": "adjective",
+      "partOfSpeech": "adjective",
+      "collocations": [],
+      "deleted": false,
+      "deck": "suneung"
+    },
+    {
+      "language": "en",
+      "word": "illusion",
+      "seq": 6269,
+      "phonetic": "/ɪˈluːʒən/",
+      "meaningKo": "착각; 환상",
+      "meaningEn": "a false impression or appearance",
+      "example": "The mirror created an illusion of more space.",
+      "exampleKo": "거울은 공간이 더 넓어 보이는 착각을 일으켰다.",
+      "level": 4,
+      "category": "noun",
+      "partOfSpeech": "noun",
+      "collocations": [],
+      "deleted": false,
+      "deck": "suneung"
+    },
+    {
+      "language": "en",
+      "word": "overseas",
+      "seq": 6270,
+      "phonetic": "/ˌoʊvərˈsiːz/",
+      "meaningKo": "해외로; 해외의",
+      "meaningEn": "in or to another country across the sea",
+      "example": "She plans to study overseas next year.",
+      "exampleKo": "그녀는 내년에 해외에서 공부할 계획이다.",
+      "level": 4,
+      "category": "adverb",
+      "partOfSpeech": "adverb",
+      "collocations": [],
+      "deleted": false,
+      "deck": "suneung"
+    },
+    {
+      "language": "en",
+      "word": "data",
+      "seq": 6271,
+      "phonetic": "/ˈdeɪtə/",
+      "meaningKo": "자료; 데이터",
+      "meaningEn": "facts and figures used for analysis",
+      "example": "The team collected data from several schools.",
+      "exampleKo": "팀은 여러 학교에서 자료를 수집했다.",
+      "level": 4,
+      "category": "noun",
+      "partOfSpeech": "noun",
+      "collocations": [],
+      "deleted": false,
+      "deck": "suneung"
+    },
+    {
+      "language": "en",
+      "word": "opportunity",
+      "seq": 6272,
+      "phonetic": "/ˌɑːpərˈtuːnəti/",
+      "meaningKo": "기회",
+      "meaningEn": "a chance to do something",
+      "example": "This course offers an opportunity to practice speaking.",
+      "exampleKo": "이 과정은 말하기를 연습할 기회를 제공한다.",
       "level": 4,
       "category": "noun",
       "partOfSpeech": "noun",

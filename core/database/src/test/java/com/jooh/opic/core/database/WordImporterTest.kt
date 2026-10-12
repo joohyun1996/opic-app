@@ -43,14 +43,14 @@ class WordImporterTest {
 
     @Test fun actualFileAndRepeatAndLastDay() = runBlocking {
         val raw = File(requireNotNull(System.getProperty("words.file"))).readText()
-        assertEquals(ImportResult.Imported(2, 6261), importer.importWords(raw))
-        assertEquals(6261, dao.countByLanguage("en"))
-        assertEquals("2", meta.get(WordImporter.VERSION_KEY))
+        assertEquals(ImportResult.Imported(3, 6269), importer.importWords(raw))
+        assertEquals(6269, dao.countByLanguage("en"))
+        assertEquals("3", meta.get(WordImporter.VERSION_KEY))
         assertEquals(157, totalDays(dao.maxSeq("en")!!))
         val days = dao.dayStats("en", WORDS_PER_DAY)
         assertEquals(37, days.single { it.day == 138 }.total)
         assertEquals("core", days.single { it.day == 138 }.deck)
-        assertEquals(24, days.last().total)
+        assertEquals(32, days.last().total)
         assertEquals("suneung", days.last().deck)
         val before = dao.getDayWords("en", 1, Int.MAX_VALUE)
         val sql = db.openHelper.writableDatabase
@@ -58,7 +58,7 @@ class WordImporterTest {
         for (table in listOf("words", "data_meta")) for (operation in listOf("INSERT", "UPDATE", "DELETE")) {
             sql.execSQL("CREATE TRIGGER audit_${table}_$operation AFTER $operation ON $table BEGIN INSERT INTO write_audit VALUES ('$operation'); END")
         }
-        assertEquals(ImportResult.UpToDate(2), importer.importWords(raw))
+        assertEquals(ImportResult.UpToDate(3), importer.importWords(raw))
         assertEquals(before, dao.getDayWords("en", 1, Int.MAX_VALUE))
         sql.query("SELECT COUNT(*) FROM write_audit").use { assertTrue(it.moveToFirst()); assertEquals(0, it.getInt(0)) }
     }
@@ -74,14 +74,29 @@ class WordImporterTest {
         val hash = MessageDigest.getInstance("SHA-256").digest(snapshot.toByteArray()).joinToString("") { "%02x".format(it) }
         assertEquals("5b600ebd36fefaa0177e05a906fc2abae39a7d6e25ad38981057f08d095773ff", hash)
         assertTrue(old.all { it["deck"]!!.jsonPrimitive.content == "core" })
+        val previous = rows.take(6261)
+        val previousSnapshot = previous.joinToString("\n") {
+            val seq = it["seq"]!!.jsonPrimitive.int
+            "${it["language"]!!.jsonPrimitive.content}\t${it["word"]!!.jsonPrimitive.content.trim().lowercase()}\t$seq\t${(seq - 1) / 40 + 1}"
+        }
+        val previousHash = MessageDigest.getInstance("SHA-256").digest(previousSnapshot.toByteArray()).joinToString("") { "%02x".format(it) }
+        assertEquals("a2e4a090c9f5612be842708da73b40c034c7c8c0dca4f508d3b07d68c3666f29", previousHash)
         val added = rows.drop(5517)
-        assertEquals(744, added.size)
-        assertEquals((5521..6264).toList(), added.map { it["seq"]!!.jsonPrimitive.int })
+        assertEquals(752, added.size)
+        assertEquals((5521..6264).toList(), added.take(744).map { it["seq"]!!.jsonPrimitive.int })
+        assertEquals((6265..6272).toList(), added.drop(744).map { it["seq"]!!.jsonPrimitive.int })
         assertTrue(added.all { it["deck"]!!.jsonPrimitive.content == "suneung" })
-        assertEquals(6261, rows.map { "${it["language"]!!.jsonPrimitive.content}:${it["word"]!!.jsonPrimitive.content.trim().lowercase()}" }.toSet().size)
-        assertEquals(6261, rows.map { "${it["language"]!!.jsonPrimitive.content}:${it["seq"]!!.jsonPrimitive.int}" }.toSet().size)
-        assertEquals(ImportResult.Imported(2, 6261), importer.importWords(raw))
-        assertEquals(744, dao.dayStatsByDeck("en", "suneung", WORDS_PER_DAY).sumOf { it.total })
+        assertEquals(6269, rows.map { "${it["language"]!!.jsonPrimitive.content}:${it["word"]!!.jsonPrimitive.content.trim().lowercase()}" }.toSet().size)
+        assertEquals(6269, rows.map { "${it["language"]!!.jsonPrimitive.content}:${it["seq"]!!.jsonPrimitive.int}" }.toSet().size)
+        assertEquals(ImportResult.Imported(3, 6269), importer.importWords(raw))
+        val hidden = listOf("aggress", "destruct", "environ", "evitable", "illude", "oversea", "sophisticate", "datum", "opportune")
+        for (word in hidden) {
+            val stored = dao.find("en", word)!!
+            assertTrue(stored.deleted)
+            val range = seqRange((stored.seq - 1) / WORDS_PER_DAY + 1)
+            assertFalse(dao.getDayWords("en", range.first, range.last).any { it.word == word })
+        }
+        assertEquals(743, dao.dayStatsByDeck("en", "suneung", WORDS_PER_DAY).sumOf { it.total })
         assertEquals(5517, dao.dayStatsByDeck("en", "core", WORDS_PER_DAY).sumOf { it.total })
     }
 

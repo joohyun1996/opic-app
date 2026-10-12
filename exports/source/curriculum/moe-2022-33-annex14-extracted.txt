@@ -1,0 +1,3883 @@
+
+=== PDF PAGE 260 ===
+
+영어과 교육과정
+[별표 3] 어휘
+기본 어휘 관련 지침
+1. 영어과 기본 어휘 목록은 영어과 교육과정의 성취기준 달성에 필요한 가장 기본적인 3,000개의
+단어로 되어 있다. *표를 한 단어는 800개로 초등학교에서 사용하기를 권장하고, **표를 한 단어
+는 1,200개로 중학교와 고등학교 공통과목에서 사용하기를 권장한다. 나머지 1,000개의 단어는
+그 외의 과목에서 사용하기를 권장한다.
+2. 각 학년군 및 과목의 학습 어휘 수는 다음과 같다.
+2022 개정 영어과 교육과정 어휘 수
+과목명 어휘 수
+초등학교 3∼4학년 300단어 이내
+초등학교
+초등학교 5∼6학년 300단어 이내
+누계: 600단어 이내
+중학교 중학교 1∼3학년 1,500단어 이내
+기본영어 1, 2 1,600단어 이내
+공통과목*
+공통영어 1, 2 1,800단어 이내
+영어Ⅰ 2,000단어 이내
+일반 선택
+영어 독해와 작문 2,200단어 이내
+영어Ⅱ 2,500단어 이내
+직무 영어 2,000단어 이내
+고등학교
+영어 발표와 토론 2,500단어 이내
+진로 선택
+심화 영어 2,800단어 이내
+영미 문학 읽기 3,000단어 이내
+심화 영어 독해와 작문 3,500단어 이내
+실생활 영어 회화 1,500단어 이내
+융합 선택
+미디어 영어 2,000단어 이내
+세계 문화와 영어 2,200단어 이내
+* 기본영어와 공통영어의 어휘 수는 각각 1과 2의 합본 상태의 어휘 수를 말한다.
+254
+
+=== PDF PAGE 261 ===
+
+[별표] 영역
+3. 학습 또는 평가에서 사용되는 어휘는 초등학교, 중학교, 고등학교 공통과목 및 일반 선택과목은
+90% 이상을, 진로 선택과목 및 융합 선택과목은 80% 이상을 기본 어휘 목록에서 사용할 것을
+권장한다.
+4. 기본 어휘 목록은 단어군의 대표형으로 제시한다. 대표형은 그 자체와 모든 굴절 변이형과 다음
+36개의 파생 접사에 의한 변이형을 나타낸다. 단, 이들 파생 변이형은 precious ‘price 어근 +
+-ous’와 같이 파생 접사가 의존 어근에 붙어 만들어진 변이형을 포함하지 않는다. 빈도가 상대
+적으로 높고 학습에 유용한 일부 파생 변이형은 대표형 옆의 ( ) 안에 표기한다.
+[예시]
+<굴절 변이형>
+write: writes, wrote, written, writing
+be: am, are, is, was, were, been, being
+have: has, had, having
+book: books, foot: feet
+tall: taller, tallest
+they: their, them, theirs, themselves
+<파생 변이형>
+un­: unable, unhappy, unlike
+in­ (il­, im­, ir­): incorrect, illogical, impossible, irresponsible
+en­ (em­): endanger, enjoy, enlarge, embody
+inter­: interact, international, interview
+mis­: misfortune, mistake, mistrust
+re­: rebuild, recycle, review
+dis­: disappear, discount, disease
+­able: considerable, preventable, sustainable
+­er: leader, teacher, writer
+­ish: childish, selfish, foolish
+­less: endless, homeless, restless
+­ly: finally, happily, softly
+­ness: darkness, softness, weakness
+­or: actor, conqueror, inventor
+­th: fourth, fifth, ninth, twelfth
+­y: rainy, dirty, easy
+­al (­i(c)al, ­ual): formal, biological, material, usual
+255
+
+=== PDF PAGE 262 ===
+
+영어과 교육과정
+­ation (­ication): information, realization, situation, application
+­ful: beautiful, colorful, harmful
+­ist: pianist, scientist, tourist
+­ity: ability, generosity, mentality
+­ism: capitalism, nationalism, romanticism,
+­ize (­ise): apologize, finalize, criticise
+­ment: basement, government, payment
+­ous: dangerous, famous, ambitious
+­ance: acceptance, importance, maintenance
+­ant (­icant): consultant, participant, pleasant, significant
+­ary: elementary, legendary, primary, secondary
+­ence: dependence, emergence, interference
+­ent: different, excellent, president, student
+­ship: friendship, membership, relationship, scholarship
+­ic: Arabic, economic, dramatic, programmatic
+­ify: identify, quantify, signify
+­ion: admission, convention, description, perception, union
+­ive: effective, negative, positive
+­ure: departure, failure, mixture
+5. 고유 명사, 호칭, 감탄사, 로마자화된 우리말 또는 영어 이외 외국어 단어, 알파벳과 문자, 단위
+명, 약어, 화학식, 기수와 서수는 기본 어휘뿐만 아니라 학습해야 하는 새로운 어휘로도 간주하
+지 않는다.
+[예시]
+<고유 명사>
+인명: Bill, Laura, Mr. Porter, Doctor Watson,...
+지명: Asia, Brazil, California, the Pacific (Ocean), Jeju, the (River) Thames, the Panama
+Canal, Lake Tahoe, the Sahara, Mount Everest, the Alps,...
+언어명: Korean, English, French, German, Chinese, Arabic,...
+월⋅요일명: January, February,... Monday, Tuesday,...
+축일명: Independence Day, Christmas,...
+기타: Kennedy Airport, Westminster Bridge, Harvard University, the House of Commons,
+the Savoy, the Mermaid (Theatre), the Louvre Museum, The New York Times,...
+단, Lake Tahoe와 같이 이름과 보통 명사로 이뤄진 고유 명사의 경우에 보통 명사에 해당
+하는 것은 일반 기본 어휘 관련 지침을 따른다.
+256
+
+=== PDF PAGE 263 ===
+
+[별표] 영역
+<호칭>
+Mr., Ms., Madam, sir, ma’am
+<감탄사>
+Oh, Ah, Aha, Wow, Yippee, Ouch, Ow, Ugh, Ouh, Shhh,...
+<로마자화된 우리말 또는 영어 이외 외국어 단어>
+bulgogi, pungsokdo, samullori,...
+umuntu ngumuntu ngabantu (a person is a person through (other) people),...
+<알파벳과 문자>
+A, B, C,... a, b, c,... α, β, γ,... A1, Q2,...
+<단위명>
+pound, gram, ounce, liter,... dollar, cent, euro,... meter, yard, mile,... percent
+<약어>
+Wi-Fi
+A.M. (a.m., am), P.M. (p.m., pm), A.D. (AD), B.C. (BC), TV, CD, DVD, DNA, SNS, AI,
+<화학식>
+CO2, H2O, CH4, ...
+<기수>
+zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen,
+twenty, thirty, hundred, thousand, million, billion을 제외한 기수
+<서수>
+first, second, third, twenty-first, twenty-second, twenty-third를 제외한 서수
+257
+
+=== PDF PAGE 264 ===
+
+영어과 교육과정
+a* (an)
+abandon
+able** (disabled)
+aboard
+abort (abortion)
+abound (abundant)
+about*
+above*
+abroad
+absent
+absolute**
+absorb
+abstract
+absurd
+abuse
+academy
+accelerate
+accent**
+accept**
+access**
+accident**
+accommodate
+accompany
+accomplish
+accord
+account**
+258
+기본 어휘 목록
+A
+accumulate
+accurate
+accuse**
+ache (headache)
+achieve**
+acid
+acknowledge
+acquire
+acquisition
+across*
+act* (actual, interact)
+adapt**
+add*
+addict
+address*
+adequate
+adjust
+administer
+(administration)
+admire**
+admit** (admission)
+adolescent
+adopt**
+adult*
+advance**
+advantage** (disadvantage)
+adventure**
+adverse
+advertize** / advertise**
+advice**
+advise**
+advocate
+aesthetic
+affair**
+affect** (affection)
+afford**
+afraid*
+after*
+afternoon*
+again*
+against*
+age*
+agency
+agenda
+agent**
+aggress (aggressive)
+ago*
+agree* (disagree)
+agriculture
+ahead*
+aid**
+aim**
+air*
+airline**
+airplane* / aeroplane*
+airport**
+alarm**
+album*
+
+=== PDF PAGE 265 ===
+
+alcohol**
+alert
+alien
+alike
+alive**
+all*
+allocate
+allow**
+ally
+almost*
+alone*
+along*
+alongside
+aloud**
+already*
+alright*
+also*
+alter**
+alternate (alternative)
+although**
+altogether**
+always*
+amaze**
+ambassador
+ambition (ambitious)
+ambulance**
+among**
+amount**
+amuse**
+analysis**
+analyze / analyse
+anchor
+[별표] 영역
+ancient
+and*
+angel**
+anger**
+angle
+animal*
+anniversary
+announce**
+annoy**
+annual**
+another*
+answer*
+ant**
+anticipate
+anxiety
+anxious**
+any*
+apart**
+apartment*
+apology
+apparent
+appeal**
+appear** (disappear)
+apple*
+apply** (applicant)
+appoint**
+appreciate**
+approach**
+appropriate**
+approve
+approximate
+architect (architecture)
+area*
+argue**
+arise
+arm*
+army**
+around*
+arrange**
+arrest**
+arrive*
+arrow
+art*
+article**
+artifice (artificial)
+as*
+aside**
+ask*
+asleep**
+aspect
+aspire
+assault
+assemble
+assert
+assess**
+asset
+assign** (assignment)
+assist** (assistant)
+associate**
+assume**
+assure
+astonish
+at*
+athlete
+259
+
+=== PDF PAGE 266 ===
+
+영어과 교육과정
+atmosphere**
+atom
+attach**
+attack**
+attempt**
+attend**
+attention**
+attitude**
+attract**
+attribute
+auction
+audience**
+aunt*
+authentic
+author
+automatic**
+autumn*
+avail (available)
+average**
+avoid**
+await
+awake**
+award**
+aware** (unaware)
+away*
+awe (awful)
+awkward**
+B
+baby*
+260
+back*
+background**
+bacon**
+bad*
+badminton*
+bag*
+bake*
+balance**
+ball*
+balloon**
+ban
+banana*
+band**
+bang**
+bank*
+bankrupt
+bar**
+bare**
+bargain
+bark**
+barrier
+base*
+baseball*
+basis**
+basket*
+basketball*
+bat*
+bath*
+battery**
+battle**
+bay**
+be*
+beach*
+beam
+bean**
+bear*
+beard
+beast
+beat**
+beauty*
+because*
+become*
+bed*
+bee*
+beef*
+beer**
+before*
+beg**
+begin*
+behalf
+behave (behavior /
+behaviour)
+behind*
+belief**
+believe*
+bell*
+belong**
+below*
+belt*
+bench**
+bend**
+beneath**
+benefit**
+beside*
+
+=== PDF PAGE 267 ===
+
+bet**
+betray
+between*
+beyond**
+bias
+big*
+bike*
+bill*
+billion**
+bin**
+bind**
+biography
+biology
+bird*
+birth*
+biscuit*
+bit**
+bite**
+bitter**
+black*
+blame**
+blank**
+blanket**
+blast
+blend
+bless**
+blind**
+blink
+block**
+blonde**
+blood*
+bloom**
+blossom
+blow**
+blue*
+board*
+boat*
+body* (embody)
+boil**
+bold
+bomb**
+bond**
+bone*
+book*
+boom**
+boost
+boot**
+border
+bore**
+borrow*
+boss**
+both*
+bother**
+bottle*
+bottom*
+bounce**
+boundary
+bow**
+bowl**
+box*
+boy*
+brain**
+brake**
+branch**
+[별표] 영역
+brand**
+brave*
+bread*
+break*
+breakfast*
+breast**
+breath**
+breathe**
+breed
+breeze
+brick**
+bridge*
+brief**
+bright*
+brilliant**
+bring*
+broad**
+broadcast
+brother*
+brown*
+brush*
+brute (brutal)
+bubble**
+budget**
+bug**
+build*
+bulk
+bull
+bully
+bump**
+bunch**
+bundle
+261
+
+=== PDF PAGE 268 ===
+
+영어과 교육과정
+burden
+burn*
+burst**
+bury**
+bus*
+bush**
+business*
+busy*
+but*
+butcher
+butter*
+button*
+buy*
+buzz
+by*
+C
+cable**
+cage**
+cake*
+calculate** (calculator)
+calendar**
+call*
+calm**
+camera*
+camp*
+campaign*
+can*
+cancel
+cancer
+262
+candidate
+candy*
+canvas
+cap*
+capable**
+cape**
+capital**
+captain**
+capture
+car*
+card*
+care*
+career**
+carpet**
+carrot*
+carry*
+cart**
+carve
+case* (casual)
+cash*
+cast**
+castle**
+cat*
+catalogue** / catalog**
+catch*
+category**
+cater
+cattle
+cause** (causal)
+caution
+cave
+cease
+ceiling**
+celebrate
+celebrity
+cell**
+censor
+center*
+century**
+certain*
+certificate
+chain**
+chair*
+chairman**
+challenge**
+chamber
+champion**
+chance*
+change*
+channel**
+chaos
+character**
+characteristic**
+charge** (discharge)
+charity
+charm**
+chart**
+chase**
+chat**
+cheap*
+check* / cheque*
+cheek**
+cheer**
+cheese*
+
+=== PDF PAGE 269 ===
+
+chef
+chemical
+chest**
+chew**
+chicken*
+chief**
+child*
+chill
+chin
+chip**
+chocolate*
+choice**
+choir
+choose*
+chop**
+chorus
+chronic
+church*
+cigarette**
+cinema**
+circle*
+circulate
+circumstance**
+cite
+citizen**
+city*
+civil**
+claim**
+clap
+clash
+class* (classic, classify)
+clause
+clay
+clean*
+clear* (clarify)
+clerk**
+clever*
+click**
+client**
+cliff**
+climate**
+climb*
+cling
+clinic
+clip**
+clock*
+close* (disclose, enclose)
+clothes*
+cloud*
+club*
+clue**
+cluster
+coach**
+coal**
+coast**
+coat*
+code**
+coffee*
+coin**
+coincide
+cold*
+collaborate
+collapse
+collar
+[별표] 영역
+colleague
+collect*
+college*
+colony
+color* / colour*
+column
+combat
+combine**
+come*
+comedy**
+comfort** (comfortable)
+comic*
+command**
+comment**
+commerce**
+commit (commission)
+committee**
+commodity
+common**
+communicate**
+(communication)
+communist
+community**
+companion
+company*
+compare**
+compatible
+compel
+compensate
+compete (competent)
+compile
+complain**
+263
+
+=== PDF PAGE 270 ===
+
+영어과 교육과정
+complement
+complete**
+complex** (complexity)
+complicate**
+component
+compose
+compound
+comprehend
+(comprehensive)
+comprise
+compromise
+compute* (computer)
+conceal
+conceive
+concentrate**
+concept**
+concern**
+concert**
+conclude
+concrete
+condemn
+condition*
+conduct
+confer
+confess
+confide (confident)
+confine
+confirm**
+conflict**
+conform
+confront
+confuse**
+264
+congratulate*
+congress
+connect**
+conscience
+conscious**
+consent
+conserve
+consider**
+consist (consistent)
+constant**
+constitute (constitution)
+constrain
+construct (construction)
+consult
+consume** (consumer,
+consumption)
+contact**
+contain**
+contemporary
+contend
+content**
+contest**
+context**
+continent
+continue**
+contract**
+contradict
+contrary
+contrast
+contribute**
+control*
+controversy
+convene (convenient,
+convention)
+converse** (conversation)
+convert
+convey
+convict
+convince**
+cook*
+cookie* / cooky*
+cool*
+cooperate
+coordinate
+cop**
+cope**
+copy**
+copyright
+cord
+core
+corn
+corner*
+corporate (corporation)
+correct**
+correspond
+corridor
+corrupt
+cost*
+costume
+cottage**
+cotton**
+cough**
+could*
+council**
+
+=== PDF PAGE 271 ===
+
+counsel
+count** (discount,
+counter)
+counterpart
+country*
+countryside**
+county**
+couple*
+coupon
+courage (discourage,
+encourage)
+course*
+court*
+cousin*
+cover* (discover)
+cow*
+crack**
+craft
+crash**
+crawl**
+crayon*
+craze (crazy)
+cream*
+create** (creature)
+credible (incredible)
+credit**
+creep
+crew
+crime** (criminal)
+crisis**
+crisp**
+criterion
+[별표] 영역
+critic (criticize / criticise,
+criticism)
+crop
+cross*
+crowd**
+crown**
+crucial
+cruel**
+cruise
+crush
+cry*
+crystal
+cultivate
+culture*
+cup*
+cure**
+curious** (curiosity)
+curl**
+currency
+current**
+curriculum
+curry
+curse
+curtain*
+curve
+custody
+custom
+customer*
+cut*
+cute**
+cycle**(recycle, cyclist)
+cynical
+D
+dairy
+damage**
+damp
+dance*
+danger*
+dare**
+dark*
+darling**
+dash
+database
+date*
+datum (data)
+daughter*
+dawn**
+day*
+dead*
+deal**
+death*
+debate**
+debt**
+decade
+decay
+decent
+decide* (decision)
+deck**
+declare
+decline (declension)
+decorate**
+decrease
+265
+
+=== PDF PAGE 272 ===
+
+영어과 교육과정
+dedicate
+deep*
+defeat
+defend (defendant)
+defense** / defence**
+deficiency
+deficit
+define**
+definite**
+degree**
+delay**
+delegate
+delete
+deliberate
+delicate
+delicious*
+delight**
+deliver**
+demand**
+democracy
+democrat
+demon
+demonstrate**
+dense
+dentist**
+deny**
+depart (department,
+departure)
+depend** (dependence,
+independent)
+depict
+deposit
+266
+depress**
+deprive
+derive
+descend
+describe** (description)
+desert**
+deserve**
+design*
+designate
+desire**
+desk*
+despair
+desperate**
+despite**
+destine (destination)
+destiny
+destroy**
+destruct (destruction)
+detach
+detail**
+detect**
+determine**
+develop**
+device
+devil
+devise
+devote
+diabetes
+dialogue* / dialog*
+diary**
+dictate
+dictionary**
+die*
+diet**
+differ (different)
+difficult*
+dig**
+dignity
+dimension
+diminish
+dine
+dinner*
+dip
+diplomat
+direct**
+dirt** (dirty)
+disappoint**
+disaster
+disc** (disk)
+discipline**
+discourse
+discriminate
+discuss*
+disgust**
+dish**
+dismiss
+display**
+dispute
+disrupt
+distance**
+distinct
+distinguish
+distort
+distract
+
+=== PDF PAGE 273 ===
+
+distribute
+district**
+disturb**
+dive**
+diverse
+divide**
+divine
+divorce**
+do*
+doctor*
+document**
+dog*
+doll*
+dolphin**
+domain
+domestic**
+dominate (dominant)
+donate**
+door*
+dose
+dot
+double*
+doubt**
+doughnut*
+down*
+dozen**
+draft
+drag**
+drain
+drama**
+draw* (drawer)
+dread
+[별표] 영역
+dream*
+dress*
+drill
+drink*
+drive*
+drop*
+drown
+drug**
+drum*
+dry*
+dual
+duck*
+due**
+dull
+dump**
+during*
+dust**
+duty**
+dwell
+dynamic
+E
+each**
+eager
+ear*
+early*
+earn**
+earth*
+ease** (disease, easy)
+east*
+eat*
+economy**
+edge**
+edit**
+educate**
+effect** (effective)
+efficient
+effort**
+egg*
+eight*
+either**
+elaborate
+elect**
+electric**
+electronic
+elegant
+element** (elementary)
+elephant*
+elevate (elevator)
+eleven*
+eliminate
+elite
+else**
+embarrass**
+embassy
+embrace
+emerge (emergence)
+emergency
+emit (emission)
+emotion**
+emphasis
+emphasize**
+267
+
+=== PDF PAGE 274 ===
+
+영어과 교육과정
+empire**
+employ**
+empty**
+encounter
+end*
+endure
+enemy**
+energy*
+engage**
+engine**
+engineer**
+enhance
+enormous**
+enough*
+enter*
+enterprise
+entertain**
+enthusiastic
+entire**
+entry
+envelope**
+environ (environment)
+envy
+equal**
+equip (equipment)
+era
+erase (eraser)
+erect
+err (error)
+escape**
+especial** (especially)
+essay**
+268
+essence (essential)
+establish**
+estate
+estimate**
+ethic (ethical)
+ethnic
+evacuate
+evaluate
+even**
+evening*
+event** (eventually)
+ever**
+every*
+evidence**
+evil**
+evitable (inevitable)
+evolution
+evolve
+exact**
+exaggerate
+examine** (examination /
+exam)
+example*
+exceed
+excel (excellent)
+except**
+excess
+exchange**
+excite**
+exclude (exclusive)
+excuse**
+executive
+exercise*
+exhaust**
+exhibit
+exist**
+exit**
+exotic
+expand**
+expect**
+expense** (expensive)
+experience**
+experiment**
+expert**
+expertise
+explain**
+explicit
+explode
+explore
+export
+expose**
+express**
+extend**
+extent
+external
+extinct
+extra**
+extract
+extraordinary
+extreme**
+eye*
+eyebrow
+
+=== PDF PAGE 275 ===
+
+F
+fabric
+face*
+facilitate
+facility
+fact* (factual)
+factor**
+factory**
+faculty
+fade
+fail*
+faint**
+fair**
+faith**
+fall*
+false
+fame (famous)
+familiar**
+family*
+fan*
+fancy**
+fantastic**
+far*
+fare
+farm*
+fascinate**
+fashion**
+fast*
+fasten
+fat*
+fate (fatal)
+father* (dad, daddy)
+fault**
+favor** / favour**
+favorite* / favourite*
+fear**
+feature**
+federal
+fee**
+feed**
+feel*
+fellow**
+female**
+fence**
+ferry
+fertile
+festival*
+fever**
+few**
+fiber / fibre
+fiction
+field*
+fierce
+fight*
+figure**
+file*
+fill*
+film*
+filter
+final**
+finance**
+find*
+[별표] 영역
+fine*
+finger*
+finish*
+finite
+fire*
+firm**
+first*
+fish*
+fit**
+five*
+fix*
+flag**
+flame**
+flash**
+flat**
+flavor / flavour
+flaw
+flee
+flesh
+flexible
+flight**
+flip
+float**
+flock
+flood**
+floor*
+flourish
+flow**
+flower*
+flush
+fly*
+focus*
+269
+
+=== PDF PAGE 276 ===
+
+영어과 교육과정
+fog**
+fold**
+folk**
+follow**
+fond
+food*
+fool*
+foot*
+football*
+for*
+forbid
+force** (enforce)
+forecast
+forehead
+foreign**
+forest*
+forever**
+forget*
+forgive**
+fork*
+form* (formal, formation,
+informal)
+format
+former
+formula
+forth**
+fortunate**
+fortune**
+forward**
+foster
+found** (foundation)
+fountain
+270
+four*
+fox*
+fraction
+frame**
+framework
+frankly**
+free*
+freeze**
+frequent
+fresh*
+friend* (friendship)
+fright**
+frog**
+from*
+front*
+frost
+frown
+fruit*
+frustrate**
+fry**
+fuel
+fulfil
+full*
+fun*
+function**
+fund**
+fundamental
+funeral
+fur**
+furnish
+furniture**
+furthermore
+fury (furious)
+fuse
+future*
+G
+gain**
+gallery
+gamble
+game*
+gang
+gap
+garage**
+garden*
+gas*
+gasoline / petrol
+gate**
+gather**
+gaze
+gear**
+gender
+gene (genetic)
+general**
+generate (generation)
+generous
+genius
+gentle**
+gentleman*
+genuine
+geography
+geology
+
+=== PDF PAGE 277 ===
+
+gesture**
+get*
+ghost**
+giant**
+gift**
+giraffe**
+girl*
+give*
+glad*
+glance**
+glare
+glass*
+globe (global)
+glory**
+glove**
+glow
+glue**
+go*
+goal*
+goat
+god*
+gold*
+golf**
+good* (goods)
+goodbye* (bye)
+gorgeous**
+govern** (government)
+grab**
+grace**
+grade** (gradual)
+graduate
+grain
+grand**
+grandfather*
+grant**
+grape*
+graph** (graphic)
+grasp
+grass*
+grateful
+grave
+gray* / grey*
+great*
+greed
+green*
+greet**
+grief
+grip
+grocery**
+gross
+ground*
+group*
+grow*
+guarantee**
+guard**
+guardian
+guess*
+guest**
+guide**
+guideline
+guilt** (guilty)
+guitar*
+gulf
+gum*
+[별표] 영역
+gun**
+guy*
+gymnasium / gym
+H
+habit*
+habitat
+hair*
+half**
+hall**
+halt
+hamburger*
+hammer
+hand*
+handicap
+handle**
+handsome**
+hang*
+happen**
+happy*
+harbor / harbour
+hard* (hardly)
+harm**
+harmony (harmonious)
+harsh
+harvest
+hat*
+hate*
+haunt
+have*
+271
+
+=== PDF PAGE 278 ===
+
+영어과 교육과정
+hazard
+he*
+head*
+headquarters
+heal
+health** (healthy)
+hear**
+heart*
+heat*
+heaven**
+heavy*
+heel
+height**
+heir
+helicopter**
+hell**
+hello* / hey* / hi*
+helmet*
+help*
+hence
+here*
+heritage
+hero*
+hesitate**
+hide**
+hierarchy
+high*
+highlight
+highway**
+hike*
+hill*
+hint**
+272
+hire**
+history*
+hit*
+hobby*
+hold*
+hole**
+holiday*
+holy
+home*
+homework*
+honest*
+honey**
+honor** / honour**
+hook
+hope*
+horizon
+horror
+horse*
+hospital*
+host
+hostile
+hot*
+hotel**
+hour*
+house*
+household
+how*
+however*
+hug**
+huge**
+human*
+humor** / humour**
+hundred*
+hunger** (hungry)
+hunt*
+hurry*
+hurt**
+husband*
+hut
+hypothesis
+I
+I*
+ice*
+idea*
+ideal
+identical
+identity** (identify)
+ideology
+if*
+ignore**
+ill**
+illude (illusion)
+illustrate**
+image*
+imagine**
+imitate
+immediate**
+immense
+immigrate
+immune
+impact
+
+=== PDF PAGE 279 ===
+
+imperial
+implement
+imply
+import (importance,
+important)
+impose
+impress**
+improve**
+in*
+incentive
+incident
+incline
+include**
+income**
+incorporate
+increase**
+indeed**
+index
+indicate**
+individual**
+induce
+industry**
+infant
+infect
+infer (inference)
+inflate
+influence**
+inform**
+ingredient
+inhabit
+inherent
+inhibit
+initial
+inject
+injure**
+inn
+innocent**
+innovate
+input
+inquire / enquire
+insect
+insert
+inside*
+insight
+insist**
+inspect**
+inspire
+install
+instance**
+instant**
+instead**
+instinct
+institute (institution)
+instruct**
+instrument**
+insult
+insure** (insurance)
+integrate
+intellect (intellectual)
+intelligent
+intend**
+intense**
+intent** (intention)
+interest**
+[별표] 영역
+interfere
+interior
+intermediate
+internal**
+internet*
+interpret
+interrupt**
+interval
+intervene
+intimate
+into*
+intrigue
+introduce*
+invade
+invent** (inventor)
+invest**
+investigate**
+invite*
+involve**
+iron**
+irony
+irritate
+island**
+isolate
+issue*
+it*
+item**
+J
+jacket*
+273
+
+=== PDF PAGE 280 ===
+
+영어과 교육과정
+jail
+jam*
+jar
+jaw**
+jeans**
+job*
+jog
+join*
+joint
+joke**
+journal
+journey**
+joy** (enjoy)
+judge**
+juice*
+jump*
+junior**
+jury
+just*
+justice**
+K
+keen
+keep*
+key*
+kick*
+kid*
+kill*
+kind*
+king*
+274
+kiss*
+kit
+kitchen*
+knee**
+knife*
+knight
+knock**
+knot
+know*
+knowledge**
+L
+label**
+labor** / labour**
+laboratory** / lab**
+lack**
+ladder
+lady*
+lake*
+lamb**
+lamp**
+land*
+landscape
+lane**
+language**
+lap
+large*
+laser*
+last*
+late*
+latter
+laugh**
+launch
+laundry
+law**
+lawn**
+lawyer**
+lay** (layer)
+lazy*
+lead**
+leaf**
+league**
+leak
+lean**
+leap**
+learn*
+lease
+leather
+leave**
+lecture
+left*
+leg*
+legal**
+legend
+legislate
+legitimate
+leisure
+lemon**
+lend**
+lesson*
+let**
+letter* (literal)
+
+=== PDF PAGE 281 ===
+
+level**
+liberal
+liberty
+library*
+license** / licence**
+lid**
+lie*
+life*
+lift**
+light*
+like* (likely)
+likewise
+limit**
+line*
+linguistic
+link**
+lion*
+lip*
+liquid
+list**
+listen*
+literature
+little*
+live*
+livingroom**
+load**
+loan**
+local**
+locate**
+lock**
+log**
+logic
+lone
+long*
+look*
+loose**
+lose**
+loss**
+lot**
+loud**
+love*
+low*
+loyal
+luck*
+lump
+lunch*
+luxury
+M
+machine**
+mad*
+magazine**
+magic**
+magnet
+magnificent
+mail*
+main**
+maintain**
+major** (majority)
+make*
+male**
+man*
+[별표] 영역
+manage**
+manifest
+manipulate
+manner**
+manufacture**
+many*
+map*
+marathon*
+margin
+marine
+mark**
+market*
+marry*
+marvel**
+mask**
+mass**
+master**
+match**
+mate**
+mathematics* / maths* /
+math*
+matter** (material)
+mature
+maximum**
+may*
+maybe**
+mayor
+meal**
+mean**
+meanwhile
+measure**
+meat*
+275
+
+=== PDF PAGE 282 ===
+
+영어과 교육과정
+mechanic
+mechanism
+medal*
+mediate
+medical**
+medicine**
+medieval
+medium (media)
+meet*
+melon**
+melt**
+member* (membership)
+memory*
+mental**
+mention**
+menu**
+merchant
+mere
+merge
+merit
+mess**
+message**
+metal**
+method**
+metropolitan
+microphone
+microwave**
+middle*
+might*
+migrate (migrant)
+mild
+military**
+276
+milk*
+mill**
+million
+mind*
+mine (miner)
+mineral
+minimal
+minimum
+ministry
+minor**
+minute**
+miracle
+mirror**
+miss*
+missile
+mission**
+mix**
+mobile
+mock
+mode
+modify
+model*
+moderate
+modern**
+modest
+moist (moisture)
+molecule
+moment**
+money*
+monitor**
+monkey*
+monster
+month*
+monument
+mood**
+moon* (half­moon)
+moral**
+moreover**
+morning*
+mortal
+mother* (mom, mommy)
+motion**
+motive
+motor**
+mount**
+mountain*
+mouse*
+mouth*
+move*
+movie*
+much*
+mud**
+multiple
+murder
+muscle**
+museum**
+mushroom**
+music*
+must*
+mutual
+mystery**
+myth
+
+=== PDF PAGE 283 ===
+
+N
+nail**
+naive
+naked
+name*
+narrate
+narrow**
+nasty
+nation* (international)
+native**
+nature*
+navy**
+near*
+neat**
+necessary**
+neck*
+need*
+needle
+negate (negative)
+neglect
+negotiate
+neighbor** / neighbour**
+neither**
+nephew
+nerve** (nervous)
+nest**
+net**
+network
+neutral
+never*
+nevertheless
+new*
+news*
+newspaper*
+next*
+nice*
+night*
+nightmare
+nine*
+no* / nope* / nay*
+noble
+nod
+noise**
+nominate
+none**
+nonetheless
+noon**
+nor**
+norm (normal)
+north*
+nose*
+not*
+note* (notion)
+notebook*
+nothing*
+notice**
+novel
+now*
+nowadays**
+nowhere**
+nuclear
+number*
+[별표] 영역
+numerous
+nurse*
+nut**
+O
+oak**
+obey
+object** (objective)
+oblige
+observe**
+obsess
+obtain
+obvious**
+occasion**
+occupy (occupation)
+occur** (occurrence)
+ocean**
+odd**
+of*
+off*
+offend
+offer**
+office* (official)
+officer**
+often*
+oil*
+okay* / okey* / OK*
+old*
+on*
+once**
+277
+
+=== PDF PAGE 284 ===
+
+영어과 교육과정
+one*
+only*
+open*
+opera**
+operate**
+opinion**
+opportune (opportunity)
+oppose**
+opt (option)
+optimist
+or*
+oral
+orange*
+orbit
+orchestra
+order** (disorder)
+ordinary**
+organ (organic, organize
+/ organise)
+orient (orientation)
+origin (original)
+other**
+otherwise**
+ought**
+out*
+outcome
+outline
+output
+outrage
+outstanding
+oven**
+over*
+278
+overall**
+overcome
+overhead
+overlap
+overlook
+overnight
+oversea / overseas
+overwhelm
+owe
+own**
+P
+pace
+pack**
+pad
+page*
+pain**
+paint*
+pair**
+palace**
+pale
+palm
+pan**
+panel
+panic**
+pants*
+paper*
+parade**
+paragraph**
+parallel
+pardon**
+parent*
+park*
+parliament
+part*
+participate
+particle
+particular** (particularly)
+partner*
+party*
+pass*
+passage
+passenger
+passion
+passport
+past**
+pat
+patch
+patent
+path**
+patient**
+pattern**
+pause**
+pave
+pay*
+peace** (peaceful)
+peak
+pear**
+peasant
+peel
+peer
+pen*
+
+=== PDF PAGE 285 ===
+
+penalty
+pencil*
+people*
+pepper**
+per**
+perceive (perception)
+perfect**
+perform**
+perhaps**
+period**
+permanent
+permit
+persist
+person** (personality)
+perspective
+persuade
+pet**
+phase
+phenomenon
+philosophy
+photograph** / photo**
+phrase
+physical**
+physics
+piano*
+pick*
+picnic**
+picture*
+pie**
+piece**
+pig*
+pile**
+pill
+pilot*
+pin**
+pinch
+pine**
+pink*
+pioneer
+pipe**
+pitch**
+pity**
+pizza*
+place* (displace)
+plain**
+plan*
+plane**
+planet**
+plant**
+plastic*
+plate**
+platform
+play*
+please* (pleasant,
+pleasure)
+plenty**
+plot
+plus**
+pocket**
+poem**
+poet**
+point*
+poison**
+pole** (polar)
+[별표] 영역
+police*
+policy**
+polish
+polite**
+politics**
+poll
+pollute**
+pond
+pool**
+poor*
+pop**
+popular**
+populate (population)
+pork**
+port**
+portion
+portrait
+pose (dispose)
+posit (position, positive)
+possess**
+possible**
+post** (poster)
+pot**
+potato*
+potential**
+pour**
+powder**
+power*
+practical**
+practice** / practise**
+praise
+pray**
+279
+
+=== PDF PAGE 286 ===
+
+영어과 교육과정
+preach
+precede (unprecedented)
+precise
+predator
+predict
+prefer**
+pregnant**
+prejudice
+premium
+prepare**
+prescribe
+presence**
+present*
+preserve
+preside (president)
+press**
+presume
+pretend**
+pretty*
+prevail
+prevent**
+previous**
+prey
+price**
+pride**
+priest
+prime** (primary)
+primitive
+prince*
+principal
+principle**
+print*
+280
+prior
+prison**
+privacy**
+private**
+privilege
+prize**
+probable** (probably)
+problem*
+proceed** (procedure)
+process**
+produce**
+profession**
+professor
+profile
+profit**
+profound
+program* / programme*
+(programmatic)
+progress**
+prohibit
+project*
+prominent
+promise**
+promote**
+prompt
+pronounce**
+(pronunciation)
+proof
+proper**
+property**
+proportion
+propose**
+prospect
+prosper
+protect**
+protein
+protest**
+proud**
+prove**
+provide**
+province
+provoke
+psychology
+pub**
+public**
+publish (publisher)
+pull**
+pump**
+punch**
+punish**
+pupil
+puppy*
+purchase**
+pure**
+purple**
+purpose**
+pursue
+push*
+put*
+puzzle**
+Q
+
+=== PDF PAGE 287 ===
+
+quality** (qualify)
+quantity
+quarter**
+queen*
+question*
+questionnaire
+quick*
+quiet*
+quit**
+quite**
+quiz*
+quote**
+R
+rabbit*
+race* (racial)
+radio*
+rage
+rail**
+rain*
+rainbow**
+raise**
+rally
+random
+range**
+rank
+rapid**
+rare**
+rat**
+rate**
+rather**
+rational
+raw
+reach**
+react**
+read*
+ready*
+real** (realize / realise)
+rear
+reason** (reasonable)
+rebel
+receipt
+receive** (reception)
+recent**
+recipe**
+recognize**
+recommend**
+record**
+recover**
+recreation*
+recruit
+red*
+reduce**
+refer**
+refine
+reflect**
+reform
+refrigerate (refrigerator)
+refuse**
+regard**
+region**
+register**
+[별표] 영역
+regret
+regular**
+regulate
+reinforce
+reject
+relate** (relative,
+relation, relationship)
+relax**
+release**
+relevant
+relief**
+relieve
+religion
+reluctant
+rely**
+remain**
+remark**
+remedy
+remember*
+remind**
+remote
+remove**
+rent**
+repair**
+repeat**
+replace**
+reply**
+report**
+represent**
+republic
+reputation
+request**
+281
+
+=== PDF PAGE 288 ===
+
+영어과 교육과정
+require**
+rescue
+research**
+resemble
+reserve**
+reside (resident)
+resign
+resist**
+resolve
+resort
+resource**
+respect** (respective)
+respond**
+responsible**
+rest**
+restaurant*
+restore
+restrain
+restrict
+restroom*
+result**
+resume
+retail
+retain
+retire**
+retreat
+return*
+reveal
+revenge
+reverse
+revise
+revive
+revolution
+reward
+rhythm
+ribbon*
+rice**
+rich*
+rid
+ride**
+ridicule (ridiculous)
+right*
+ring*
+riot
+rise**
+risk**
+rival
+river*
+road*
+roar
+roast
+rob**
+robot*
+rock*
+rocket**
+rod
+role**
+roll** (enroll / enrol)
+romantic
+roof**
+room*
+root**
+rope**
+rose*
+rot
+rough**
+round**
+route**
+routine
+row**
+royal**
+rub** (rubber)
+rude**
+ruin**
+rule**
+rumor / rumour
+run*
+rural
+rush**
+S
+sack
+sacred
+sacrifice
+sad*
+safe*
+sail**
+salad*
+salary**
+sale*
+salt*
+same*
+sample**
+sand*
+282
+
+=== PDF PAGE 289 ===
+
+sandwich*
+satellite
+satisfy**
+sauce**
+save*
+say*
+scale**
+scan
+scandal
+scarce
+scare**
+scarf**
+scatter
+scene**
+schedule**
+scheme
+scholar
+school*
+science*
+scissors*
+scope
+score*
+scramble
+scratch**
+scream**
+screen**
+screw
+sculpt (sculpture)
+sea*
+seal**
+search**
+season*
+seat**
+second* (secondary)
+secret**
+secretary**
+section**
+sector
+secure**
+see*
+seed**
+seek**
+seem**
+seize
+select**
+self**
+sell*
+send*
+senior**
+sense** (sensation)
+sensible
+sentence**
+sentiment
+separate**
+sequence
+series**
+serious**
+serve**
+service*
+session**
+set*
+settle**
+seven*
+several**
+[별표] 영역
+severe
+sew**
+sex**
+shade**
+shadow**
+shake**
+shall**
+shallow
+shame**
+shape**
+share**
+sharp**
+shave**
+she*
+sheep**
+sheet**
+shelf**
+shell**
+shelter**
+shift**
+shine**
+ship*
+shirt*
+shock**
+shoe*
+shoot**
+shop*
+shore**
+short*
+should*
+shoulder**
+shout**
+283
+
+=== PDF PAGE 290 ===
+
+영어과 교육과정
+show*
+shower**
+shut**
+shy*
+sick*
+side*
+sigh
+sight**
+sign** (significant)
+silent
+silly**
+silver**
+similar**
+simple**
+simulate
+simultaneous
+sin
+since**
+sing*
+single**
+sink**
+sister*
+sit*
+site**
+situate** (situation)
+six*
+size*
+skate*
+ski*
+skill**
+skin*
+skip
+284
+skirt*
+sky*
+slave**
+sleep*
+slice
+slide**
+slight**
+slim
+slip**
+slope
+slow*
+small*
+smart**
+smash**
+smell*
+smile*
+smoke**
+smooth**
+snack**
+snake**
+snap**
+sneak
+snow*
+so*
+soak
+soap
+soccer*
+social**
+society**
+sociology
+sock*
+soft*
+software*
+soil**
+soldier**
+sole
+solid**
+solve**
+some*
+somewhat**
+son*
+song*
+soon**
+sophisticate
+sore**
+sorry*
+sort**
+soul**
+sound*
+soup*
+sour**
+source**
+south*
+space*
+spaghetti*
+span
+spare**
+spark
+speak*
+species** (special)
+specific**
+spectacle
+spectrum
+speech**
+
+=== PDF PAGE 291 ===
+
+speed*
+spell**
+spend**
+sphere
+spill
+spin**
+spirit**
+spit
+splash
+split
+spoil**
+sponsor**
+spoon*
+sport*
+spot**
+spouse
+spray**
+spread**
+spring*
+spy**
+square**
+squeeze
+stable**
+stack
+staff*
+stage**
+stain
+stairs**
+stamp**
+stand*
+standard**
+star*
+stare**
+start*
+starve
+state**
+station**
+statistic
+statue
+status
+stay*
+steady**
+steak*
+steal**
+steam**
+steel**
+steep
+stem
+step**
+stick**
+stiff
+still**
+stimulate
+stir**
+stitch
+stock**
+stomach**
+stone*
+stop*
+store*
+storm**
+story*
+stove
+straight**
+[별표] 영역
+strain
+strange**
+strategy**
+strawberry**
+stream**
+street*
+stress**
+stretch**
+strict
+strike**
+string**
+strip
+stripe
+stroke
+strong*
+structure**
+struggle**
+studio**
+study* (student)
+stuff**
+style*
+subject** (subjective)
+submarine
+submit (submission)
+subscribe
+substance (substantial)
+substitute
+subtle
+suburb
+subway*
+succeed**
+success**
+285
+
+=== PDF PAGE 292 ===
+
+영어과 교육과정
+such**
+suck
+sudden**
+suffer**
+suffice (sufficient)
+sugar*
+suggest**
+suicide
+suit**
+suite
+sum** (summary)
+summer*
+summit
+sun*
+super**
+superb
+superior
+supervise
+supper**
+supplement
+supply**
+support**
+suppose**
+sure* (ensure)
+surface**
+surgery
+surprise**
+surrender
+surround**
+survey**
+survive**
+suspect**
+286
+suspend
+sustain
+swallow**
+swear
+sweat
+sweater**
+sweep**
+sweet**
+swell
+swift
+swim*
+swing**
+switch**
+symbol
+sympathy
+symphony
+symptom
+system**
+T
+table*
+tackle
+tag
+tail*
+take* (mistake)
+tale**
+talent
+talk*
+tall*
+tank**
+tap**
+tape*
+target**
+task
+taste*
+tax**
+taxi*
+tea**
+teach*
+team*
+tear**
+tease
+technique** / technic**
+technology**
+teenage**
+telegraph
+telephone* / phone*
+television*
+tell*
+temperature**
+temple
+temporary
+tempt
+ten*
+tenant
+tend**
+tender
+tennis*
+tense**
+tent*
+term**
+terminal
+
+=== PDF PAGE 293 ===
+
+terminate
+terrace
+terrible**
+terrific
+territory
+terror (terrorist)
+test*
+text**
+textbook*
+than*
+thank*
+that*
+the*
+theater** / theatre**
+theme
+then**
+theory**
+therapy
+there*
+therefore**
+they*
+thick**
+thief**
+thin**
+thing*
+think*
+third*
+thirst*
+thirteen*
+thirty*
+this*
+thorough
+though**
+thousand**
+thread
+threat**
+three*
+thrill
+throat**
+through**
+throw**
+thumb
+thus**
+tick
+ticket*
+tide** (tidy)
+tie**
+tiger*
+tight**
+till**
+timber
+time*
+tin**
+tiny**
+tip**
+tire* (tired)
+tissue
+title** (entitle)
+to*
+toast**
+today*
+toe**
+together*
+toilet**
+[별표] 영역
+tomato*
+tomorrow*
+tone**
+tongue**
+tonight*
+too*
+tool**
+tooth*
+top*
+topic**
+torture
+toss
+total**
+touch*
+tough**
+tour**
+toward** / towards**
+towel**
+tower**
+town*
+toxic
+toy*
+trace**
+track*
+trade**
+tradition**
+traffic**
+tragic
+trail
+train*
+transact
+transfer**
+287
+
+=== PDF PAGE 294 ===
+
+영어과 교육과정
+transform
+transition
+translate
+transmit
+transport**
+(transportation)
+trap**
+travel*
+tray**
+treasure
+treat**
+treaty
+tree*
+tremendous
+trend
+triangle**
+tribe
+trick**
+trigger
+trim
+trip*
+triumph
+troop
+trouble**
+truck*
+true*
+trunk**
+trust**
+truth**
+try* (trial)
+tube
+tune**
+288
+tunnel
+turn*
+turnover
+twelve*
+twenty*
+twenty-first*
+twenty-second*
+twenty-third*
+twice*
+twin**
+twist**
+two*
+type*
+U
+ugly*
+ultimate
+umbrella*
+uncle*
+under*
+undergo
+underlie
+undermine
+understand*
+undertake
+uniform**
+unify
+unique
+unit**
+unite** (union)
+universe
+university**
+unless**
+until**
+up*
+update
+upon**
+upper**
+upset**
+upward / upwards
+urban
+urge (urgent)
+use* (usual)
+utilize / utilise
+utter
+V
+vacate (vacation)
+vaccine
+vacuum
+vague
+valid
+valley**
+value**
+van**
+vanish
+various**
+vary**
+vast
+vegetable*
+
+=== PDF PAGE 295 ===
+
+vehicle**
+venture
+verb (verbal)
+verse
+version**
+versus
+vertical
+very*
+vessel
+veterinarian
+via
+vice
+victim**
+victory
+video*
+view** (interview, review)
+vigor (vigorous)
+villa**
+village**
+violent**
+violin*
+virgin
+virtue (virtual)
+virus
+visible
+vision**
+visit*
+visual
+vital
+vivid
+vocabulary
+vocation
+voice*
+volume**
+volunteer**
+vote**
+W
+wage**
+wait*
+wake*
+walk*
+wall*
+wander
+want*
+war*
+warehouse
+warm*
+warn**
+warrant
+wash*
+waste**
+watch*
+water*
+watermelon*
+wave**
+way*
+we*
+weak**
+wealth
+weapon**
+wear*
+[별표] 영역
+weather*
+weave
+website*
+wedding*
+weed
+week*
+weekend*
+weigh**
+weight*
+weird
+welcome*
+welfare
+well*
+west*
+wet*
+whale**
+what*
+wheat
+wheel**
+when*
+where*
+whereas
+whether**
+which**
+while**
+whip
+whisper**
+whistle**
+white*
+who*
+whole**
+why*
+289
+
+=== PDF PAGE 296 ===
+
+영어과 교육과정
+wicked
+wide**
+wife*
+wild**
+will*
+win*
+wind*
+window*
+wine*
+wing**
+winter*
+wipe**
+wire**
+wise**
+wish*
+wit
+with*
+withdraw
+within**
+without**
+witness
+woman*
+wonder**
+wood*
+wool**
+word*
+work*
+world*
+worry*
+worship
+worth**
+would**
+wound**
+wrap**
+wreck
+write*
+wrong*
+Y
+year*
+yell**
+yellow*
+yes* / yeah* / yep*
+yesterday*
+yet**
+yield
+you*
+young*
+Z
+zebra**
+zero**
+zone
+zoo*
+290
+
+=== PDF PAGE 297 ===
+
+[별표] 영역
+[별표 4] 의사소통에 필요한 언어 형식
+※ ● 표시는 학습 시작 권장 학교급을 의미
+범주 예문 학습 시작 권장 학교급
+초 중 고
+Kate is from London. ●
+A boy/The boy/The (two) boys ran in the park. ●
+Water is very important for life. ●
+The water in this river is clean. ●
+She lived in the woods when she was a kid. ●
+1.
+Nouns
+A lot of houses are made of wood. ●
+Thank you for your kindness. ●
+He does a kindness to poor people. ●
+The audience is/are enjoying the show. ●
+The news is very interesting. ●
+Mathematics is my favorite subject. ●
+The store is closed. ●
+This book is very interesting. ●
+That dog is smart. ●
+These/Those books are really large. ●
+You can choose any color you like. ●
+We didn't buy much/any food. ●
+2.
+Determiners
+I need a little more time to think. ●
+Most good comedians tell some bad jokes. ●
+Many young people have no money. ●
+Every monkey likes bananas. ●
+All children love baby animals. ●
+Each boy admires his teacher. ●
+A few/few students came late for class. ●
+A lion is brave. ●
+The lion is brave. ●
+3.
+Generic
+Expressions
+Lions are brave. ●
+A German is a good musician. ●
+Germans are good musicians. ●
+The Germans are diligent. ●
+Which do you like better, this or that? ●
+These are apples, and those are tomatoes. ●
+4.
+Pronouns
+I like your glasses. What about mine? ●
+We are very glad to hear from him. ●
+He will help her. ●
+291
+
+=== PDF PAGE 298 ===
+
+영어과 교육과정
+범주 5.
+Substitute
+Expressions
+6.
+Nonreferential It
+7.
+Tenses
+8.
+Progressives
+9.
+Perfectives
+292
+예문 학습 시작 권장 학교급
+초 중 고
+They’re really delicious. ●
+She is a scientist, and he’s a teacher. ●
+Susan likes math, but John doesn’t like it. ●
+You should be proud of yourself. ●
+He praised himself in the meeting. ●
+I myself took this picture. ●
+They’re talking to each other. ●
+I don't like the black coat, but I like the brown one. ●
+These cups are dirty. Could I have some clean ones? ●
+I have three books. One is mine. The others are yours. ●
+The chocolate cookie is sweet. I’m going to have another one. ●
+The climate of Seoul is milder than that of New York. ●
+The ears of rabbits are longer than those of squirrels. ●
+I’d like to write a diary, but I’m too busy to do so. ●
+It’s cold outside. ●
+It’s Wednesday. ●
+It’s half past four. ●
+It’s windy today. ●
+It’s far from here. ●
+He walks to school every day. ●
+We (usually) meet after lunch. ●
+We played soccer yesterday. ●
+She is going to visit her grandparents next week. ●
+I will visit New York next year. ●
+He is sleeping now. ●
+I was studying when John called me. ●
+She will be coming soon. ●
+I’m thinking about the problem. ●
+He’s being very rude. ●
+We are hoping you will be with us. ●
+The train has arrived. ●
+Have you ever been to Florida? ●
+He has attended the club meetings regularly. ●
+The bakery has been open since 1960. ●
+I’ve been reading for two hours. ●
+He had already left when we arrived. ●
+I will have finished my homework by the time you get here. ●
+
+=== PDF PAGE 299 ===
+
+범주 10.
+Sentence
+Patterns
+11.
+Enough / Too
+12.
+Equatives
+13.
+Comparatives
+14.
+Superlatives
+15.
+Causative Verbs /
+Sensory
+Perception Verbs
+16.
+To-Infinitive
+[별표] 영역
+예문 학습 시작 권장 학교급
+초 중 고
+The baby cried. ●
+She stayed in bed. ●
+He is a math teacher. ●
+You look happy today. ●
+I like gimbap. ●
+You can put the dish on the table. ●
+He gave me a present. ●
+They elected him president. ●
+Is the room warm enough? ●
+These bags are too expensive. ●
+We cannot thank you enough. ●
+You cannot be too careful to drive a car. ●
+She is as tall as her mother (is). ●
+She is old, but she is not as old as he (is). ●
+I don’t know as many people as you (do). ●
+You can run as fast as Billy can. ●
+I arrived at the same time as Tom (did). ●
+Mary is taller than I/me. ●
+Yellow tomatoes are less sour than red ones. ●
+They’ve got more/less money than they need. ●
+A car is much more expensive than a motorbike. ●
+I prefer tea to coffee. ●
+The more she thought about it, the less she liked it. ●
+Cindy is the shortest of the three. ●
+It was the worst moment in/of my life. ●
+Where is the world’s highest mountain? ●
+It is the most interesting speech I’ve ever heard. ●
+She is one of the smartest students in my class. ●
+I made him carry the box. ●
+They had me repeat the same things. ●
+You shouldn't let him go there again. ●
+Bill had the car cleaned. ●
+My mom got me to clean the room. ●
+I heard the children sing/singing. ●
+I saw him lying on the sofa. ●
+To see is to believe. ●
+He wanted to go home. ●
+I hope to see you again soon. ●
+293
+
+=== PDF PAGE 300 ===
+
+영어과 교육과정
+범주 17.
+To-Infinitive
+as an adjective
+complement
+18.
+Gerunds
+19.
+Clause Types
+294
+예문 학습 시작 권장 학교급
+초 중 고
+I have a book to read. ●
+He came to see me. ●
+He told me not to do it again. ●
+The problem is where to get money (from). ●
+He seemed to have been ill (for some time). ●
+This new ship is big enough (to cross the Pacific). ●
+This story sounds too good (to be true). ●
+The turtle moves slowly enough for us to catch it. ●
+Robin ran too fast for me to catch him. ●
+Dan wanted Betty to behave herself. ●
+I asked her to help me. ●
+I helped my mom (to) wash the dishes. ●
+Bill promised Jane to work out with her. ●
+Bill persuaded Jane to work out with him. ●
+Mike is slow to react. ●
+Chris was glad to hear the news. ●
+Ray is hesitant to agree with you. ●
+Ron is easy to please. ●
+Playing baseball is fun. ●
+We enjoy swimming in the pool. ●
+I’m interested in watching horror movies. ●
+I remembered John/John’s coming late for class. ●
+Did you go fishing last weekend? ●
+I don't feel like sleeping now. ●
+I cannot help doing things like that. ●
+It’s no use trying to persuade me. ●
+There is no use crying over the spilt milk. ●
+It goes without saying that time is money. ●
+Life is worth living. ●
+John and Mary are good friends. ●
+Does Anne work out on weekends? ●
+Open your book. ●
+Let’s go to Brian’s birthday party. ●
+How beautiful she is! ●
+What a wonderful day it is! ●
+How sweet! ●
+What a player! ●
+
+=== PDF PAGE 301 ===
+
+범주 20.
+Negation
+21.
+Interrogatives
+[별표] 영역
+예문 학습 시작 권장 학교급
+초 중 고
+I am not tired. ●
+It isn’t very cold. ●
+I don’t like snakes. ●
+You can’t swim here. ●
+We didn’t enjoy the movie very much. ●
+They haven’t told him what to do. ●
+Tom won’t be at the meeting tomorrow. ●
+Few/No people understand what he’s saying. ●
+The children seldom/rarely/hardly/scarcely like carrots. ●
+Are you ready? ●
+Is it raining? ●
+Do you like oranges? ●
+Don’t you like apples? ●
+Can you write a letter in English? ●
+Won’t you have some cookies? ●
+Have you finished your homework yet? ●
+This is your book, isn’t it? ●
+You like oranges, don’t you? ●
+Bob isn’t here, is he? ●
+They haven’t left, have they? ●
+Bring me some water, will you? ●
+Let’s go, shall we? ●
+There are children playing in the park, aren’t there? ●
+When will you come? ●
+Where can we take the bus? ●
+Why did he leave early? ●
+How do you spell your name? ●
+Who can answer that question? ●
+Whose dolls are these? ●
+Which ice cream do you like, vanilla or chocolate? ●
+What size is this shirt? ●
+What kind of job do you want? ●
+Which color do you prefer? ●
+What time is it? ●
+How old is she? ●
+How big is the house? ●
+How heavy is your computer? ●
+How much is it? ●
+295
+
+=== PDF PAGE 302 ===
+
+영어과 교육과정
+범주 22.
+Direct Speech /
+Indirect Speech
+23.
+Reports of
+Questions and
+Statements
+24.
+Real Conditionals
+25.
+Unreal
+Conditionals
+296
+예문 학습 시작 권장 학교급
+초 중 고
+How far did you drive today? ●
+How come you were late this morning? ●
+How good a dancer is she? ●
+Who cares? ●
+It cost how much? ●
+She said, “I will help you.” ●
+She said that she would help me. ●
+He said to me, “I have been busy lately.” ●
+He told me that he had been busy lately. ●
+He said to me, “I will come tomorrow.” ●
+He told me that he would come the next day. ●
+He said to me, “Please come at once.” ●
+He asked me to come at once. ●
+He said, “Do you need a pen?” ●
+He asked if/whether I needed a pen. ●
+Emma asked, “Where do you live?” ●
+Emma asked where I lived. ●
+I don’t know where he lives. ●
+Please tell me what happened. ●
+I wonder whose bicycle that is. ●
+I don’t know whether he will come (or not). ●
+Tell me how to make cookies. ●
+I think (that) he is a good actor. ●
+If oil is mixed with water, it floats. ●
+I’ll lend Jack the book if he needs it. ●
+If you feel seasick, take one of these pills. ●
+We’re going to play baseball tomorrow unless it rains. ●
+Take these pills in case you feel ill on the bus. ●
+I’ll lend you the book on condition that you return it within
+two weeks. ●
+Provided that/As long as they had plenty to eat, the crew
+seemed to be happy. ●
+If Joe had time, he would go to Spain. ●
+If I were/was a bird, I could fly home. ●
+If Joe should have time, he would go to Spain. ●
+Had I had enough money, I would have bought a cell phone. ●
+If it were not for you, I would be lonely. ●
+Without/But for your advice, I would have failed. ●
+
+=== PDF PAGE 303 ===
+
+범주 26.
+Modals
+[별표] 영역
+예문 학습 시작 권장 학교급
+초 중 고
+It’s time you were in bed. ●
+I wish I spoke English well. ●
+I wish I had learned swimming last summer. ●
+He acts as if he knew you. ●
+He acts as if he had been there. ●
+I’d rather we had dinner now.
+Can we sit down in here? ●
+May I borrow your book? ●
+You may leave now. ●
+Could we ask you what your opinion is? ●
+You should do as he says. ●
+You had better not say anything about this. ●
+They must do well on the test. ●
+Will you do me a favor? ●
+Shall we go now? ●
+You don’t have to go to school tomorrow. ●
+You needn’t worry about the test. ●
+You don’t need to pay that fine. ●
+Children may not use the swimming pool. ●
+You shouldn’t be so impatient. ●
+He suggested that they (should) play baseball. ●
+He may be sick. ●
+He can’t be working at this time. ●
+There might be some complaints. ●
+The whole plan could be ruined. ●
+Our guests should/ought to be home by now. ●
+I should have studied English grammar harder. ●
+There shouldn’t be any difficulties. ●
+You have to/You’ve got to be joking. ●
+They’ll fight to the end rather than give up. ●
+That must be my daughter. ●
+She may have made an important discovery. ●
+They must have arrived by now. ●
+She can play the violin. ●
+Could you show me the way to the nearest post office? ●
+I will be able to help you get to the party tonight. ●
+Will you please help me with my English? ●
+My father won’t give me any money. ●
+297
+
+=== PDF PAGE 304 ===
+
+영어과 교육과정
+범주 27.
+Coordinating
+Conjunctions
+28.
+Subordinating
+Conjunctions
+29.
+Conjunctive
+Adverbials
+30.
+Relative Clauses
+298
+예문 학습 시작 권장 학교급
+초 중 고
+Would you like me to open the window? ●
+Are you going to take the last train? ●
+Oil will float on water. ●
+He would take a walk every morning. ●
+There used to be a lake around here. ●
+Andy plays the guitar, and his sister plays the piano. ●
+They are my neighbors, but I don’t know them well. ●
+I may stop by tomorrow or just phone you. ●
+Both the teacher and the students enjoyed the class. ●
+You can have either tea or coffee. ●
+It is not only beautiful but (also) useful. ●
+The film was neither well-made nor well-acted. ●
+He came not to complain, but to help us. ●
+When we arrived, she was talking on the phone. ●
+Since he left this morning, I haven’t seen him. ●
+He went to bed because he was sleepy. ●
+We stayed home since it rained hard. ●
+Although/Though it was cold, I went swimming. ●
+I hurried so that I wouldn’t be late. ●
+We moved to London so (that) we could visit our friends
+more often. ●
+The weather was so nice that we went hiking. ●
+The cell phone is thin and light. Therefore, it is very
+convenient to carry around. ●
+We believe he is the thief. However, we have no evidence
+against him. ●
+I like spending my holidays in the mountains. On the other
+hand, my sister prefers the seaside. ●
+The girl who is playing the piano is called Ann. ●
+The pen which is on the desk is mine. ●
+This is the book (that) I bought yesterday. ●
+I met the girl whose father is a musician. ●
+She is the girl who/whom I told you about. ●
+The town in which I was born is very small. ●
+The house where she lives is very spacious. ●
+This is why we have to study English grammar. ●
+Mr. Lee, who teaches English, has two children. ●
+My kids work very hard, which makes me happy. ●
+Nobody understood what she said about that plan. ●
+
+=== PDF PAGE 305 ===
+
+범주 31.
+Postmodification
+32.
+Adverbial
+Participles
+33.
+Stance Markers
+34.
+Ellipsis
+35.
+Inversion
+36.
+Nonreferential
+There
+37.
+Focus/
+Emphasis
+[별표] 영역
+예문 학습 시작 권장 학교급
+초 중 고
+That’s just how he talks, always serious about his work. ●
+Whoever wins this game will win the World Cup. ●
+Something strange happened last night. ●
+At the station I met a lady carrying a large umbrella. ●
+Wallets found on the street must be reported to the police. ●
+Walking along the street, I met an old friend. ●
+Joshua returning home, the puppy ran toward him. ●
+(Being) tired, he went to bed. ●
+Having seen that movie before, I wanted to see it again. ●
+Too shy to reply, she kept staring at the floor. ●
+With the night coming, stars began to shine in the sky. ●
+Personally, I don’t like his paintings. ●
+Frankly speaking, I failed the test. ●
+Unfortunately, they couldn’t make it. ●
+To be sure, we have heard many such stories before. ●
+To our regret, she rejected the offer. ●
+My brother was wearing a raincoat and (he) didn’t get wet. ●
+One student has written a poem, and the other (has written)
+a short story. ●
+Kevin understands the problem better than Amy (does). ●
+Though (he had been) defeated, he remained popular. ●
+You can borrow my pen, if you want/like (to). ●
+Down came the rain. ●
+Here he comes. ●
+Here comes the bus. ●
+Not a word did he say. ●
+She was hungry and so was I. ●
+I enjoyed the play and so did my friends. ●
+Ryan didn’t see the accident and neither did Rachel. ●
+There are two books on the desk. ●
+There are some rooms available. ●
+There were several men running in the park. ●
+There have been three people rescued. ●
+Won’t you try again? - Yes, I will try again. ●
+You must speak to the teacher. - I have spoken to him. ●
+I do hope you will succeed. ●
+It was Justin who/that told me the truth. ●
+It was by train that we traveled to London. ●
+What we need is more time. ●
+299
+
+=== PDF PAGE 306 ===
+
+영어과 교육과정
+범주 38.
+Anticipatory
+It
+39.
+Appositives
+40.
+Passive Voice
+300
+예문 학습 시작 권장 학교급
+초 중 고
+It is important to protect our environment. ●
+It is difficult for me to speak French. ●
+It was kind of you to help us. ●
+It is strange that you don’t know such a thing. ●
+She found it exciting to learn new things. ●
+Ms. Pova, a famous tennis player, will be visiting us at the
+gym tomorrow. ●
+Your dream of becoming an astronaut requires a great
+amount of time and energy. ●
+The fact that Melissa was late didn’t surprise me. ●
+The novel was written by Mark Twain. ●
+The building was built in 1880. ●
+A prize was given to Jasmin. ●
+Stella was given a prize. ●
+Cooper will be invited to today’s meeting. ●
+The information superhighway will have been introduced to
+everyone by 2030. ●
+The monkey has been raised by human parents for years. ●
+I was made to clean the room. ●
+Nolan was seen to enter the building. ●
+Let it be done at once. ●

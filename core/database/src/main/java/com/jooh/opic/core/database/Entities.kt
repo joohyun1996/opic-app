@@ -77,3 +77,27 @@ data class ShadowingAttemptEntity(
     val matchRate: Double,
     val createdAt: Long,
 )
+
+@Entity(tableName = "affixes", indices = [Index(value = ["language", "form", "type"], unique = true)])
+data class AffixEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val language: String,
+    val form: String,
+    val type: String,
+    val meaningKo: String,
+)
+
+@Entity(tableName = "word_parts", indices = [
+    Index(value = ["language", "wordId", "position"], unique = true),
+    Index(value = ["language", "affixId"]),
+    Index(value = ["language", "baseWordId"]),
+])
+data class WordPartEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val language: String,
+    val wordId: Long,
+    val position: Int,
+    val affixId: Long? = null,
+    val baseWordId: Long? = null,
+    val glossKo: String? = null,
+)

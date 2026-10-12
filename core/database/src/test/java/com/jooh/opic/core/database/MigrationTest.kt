@@ -153,4 +153,18 @@ class MigrationTest {
             db.close()
         }
     }
+
+    @Test fun v5ToV6KeepsWordAndUserRecordWhileAddingAffixTables() = runBlocking {
+        val file = context.getDatabasePath("migration-v5-test.db").also { it.parentFile?.mkdirs(); it.delete() }
+        create(file, "schema.v3", 5)
+        val db = Room.databaseBuilder(context, OpicDatabase::class.java, file.absolutePath).addMigrations(*ALL_MIGRATIONS).build()
+        try {
+            assertEquals(7L, db.wordDao().find("en", "archipelago")!!.id)
+            assertEquals("core", db.wordDao().find("en", "archipelago")!!.deck)
+            assertEquals(2, db.userWordDao().get(7)!!.correctCount)
+            assertEquals(1, db.userWordDao().get(7)!!.wrongCount)
+            assertEquals(emptyList<AffixPartRow>(), db.affixDao().partsForWord("en", 7))
+            assertEquals("1", db.dataMetaDao().get(WordImporter.VERSION_KEY))
+        } finally { db.close() }
+    }
 }

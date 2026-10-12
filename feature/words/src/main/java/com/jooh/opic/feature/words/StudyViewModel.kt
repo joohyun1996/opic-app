@@ -15,6 +15,7 @@ import java.time.ZoneId
 import com.jooh.opic.core.common.StudyLanguage
 import com.jooh.opic.core.database.OpicDatabase
 import com.jooh.opic.core.database.WordEntity
+import com.jooh.opic.core.database.AffixPartRow
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -52,6 +53,8 @@ data class StudyState(
     val results: Map<Long, Boolean> = emptyMap(),
     val saveFailed: Boolean = false,
     val hintShown: Boolean = false,
+    /** 확인한 현재 단어에만 채운다. 다음 카드로 가면 즉시 지운다. */
+    val breakdown: List<AffixPartRow> = emptyList(),
 ) {
     val current get() = cards.getOrNull(index)
     val finished get() = !loading && index >= cards.size
@@ -97,6 +100,12 @@ class StudyViewModel(
             StudyMode.KO_EN -> gradeWord(now.input, word.word)
         }
         mutableState.value = now.copy(checked = correct, results = now.results + (word.id to correct))
+        viewModelScope.launch {
+            val parts = database.affixDao().partsForWord(language.code, word.id)
+            mutableState.update { state ->
+                if (state.checked != null && state.current?.id == word.id) state.copy(breakdown = parts) else state
+            }
+        }
         val previous = lastWrite
         lastWrite = viewModelScope.launch {
             previous?.join()
@@ -132,7 +141,7 @@ class StudyViewModel(
     fun showHint() = mutableState.update { it.copy(hintShown = true) }
 
     fun next() = mutableState.update {
-        if (it.checked == null) it else it.copy(index = it.index + 1, input = "", checked = null, corrected = false, hintShown = false)
+        if (it.checked == null) it else it.copy(index = it.index + 1, input = "", checked = null, corrected = false, hintShown = false, breakdown = emptyList())
     }
 
     fun restart() = mutableState.update { StudyState(loading = false, cards = it.cards.shuffled(), saveFailed = it.saveFailed) }

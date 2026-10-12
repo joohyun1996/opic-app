@@ -1,0 +1,4117 @@
+{
+  "dataVersion": 1,
+  "affixes": [
+    {
+      "language": "en",
+      "form": "anti-",
+      "type": "prefix",
+      "meaningKo": "반대하는"
+    },
+    {
+      "language": "en",
+      "form": "bi-",
+      "type": "prefix",
+      "meaningKo": "둘"
+    },
+    {
+      "language": "en",
+      "form": "de-",
+      "type": "prefix",
+      "meaningKo": "반대로·제거하여"
+    },
+    {
+      "language": "en",
+      "form": "dis-",
+      "type": "prefix",
+      "meaningKo": "아닌·반대의"
+    },
+    {
+      "language": "en",
+      "form": "il-",
+      "type": "prefix",
+      "meaningKo": "아닌"
+    },
+    {
+      "language": "en",
+      "form": "im-",
+      "type": "prefix",
+      "meaningKo": "아닌"
+    },
+    {
+      "language": "en",
+      "form": "in-",
+      "type": "prefix",
+      "meaningKo": "아닌"
+    },
+    {
+      "language": "en",
+      "form": "inter-",
+      "type": "prefix",
+      "meaningKo": "사이에"
+    },
+    {
+      "language": "en",
+      "form": "micro-",
+      "type": "prefix",
+      "meaningKo": "아주 작은"
+    },
+    {
+      "language": "en",
+      "form": "mis-",
+      "type": "prefix",
+      "meaningKo": "잘못"
+    },
+    {
+      "language": "en",
+      "form": "multi-",
+      "type": "prefix",
+      "meaningKo": "여러"
+    },
+    {
+      "language": "en",
+      "form": "non-",
+      "type": "prefix",
+      "meaningKo": "아닌"
+    },
+    {
+      "language": "en",
+      "form": "over-",
+      "type": "prefix",
+      "meaningKo": "지나치게·위에"
+    },
+    {
+      "language": "en",
+      "form": "pre-",
+      "type": "prefix",
+      "meaningKo": "미리·앞서"
+    },
+    {
+      "language": "en",
+      "form": "re-",
+      "type": "prefix",
+      "meaningKo": "다시"
+    },
+    {
+      "language": "en",
+      "form": "sub-",
+      "type": "prefix",
+      "meaningKo": "아래에"
+    },
+    {
+      "language": "en",
+      "form": "super-",
+      "type": "prefix",
+      "meaningKo": "위에·넘어서"
+    },
+    {
+      "language": "en",
+      "form": "un-",
+      "type": "prefix",
+      "meaningKo": "아닌·반대의"
+    },
+    {
+      "language": "en",
+      "form": "-able",
+      "type": "suffix",
+      "meaningKo": "할 수 있는"
+    },
+    {
+      "language": "en",
+      "form": "-al",
+      "type": "suffix",
+      "meaningKo": "~와 관련된"
+    },
+    {
+      "language": "en",
+      "form": "-ance",
+      "type": "suffix",
+      "meaningKo": "상태·행위"
+    },
+    {
+      "language": "en",
+      "form": "-ant",
+      "type": "suffix",
+      "meaningKo": "하는·~한"
+    },
+    {
+      "language": "en",
+      "form": "-ation",
+      "type": "suffix",
+      "meaningKo": "행위·상태"
+    },
+    {
+      "language": "en",
+      "form": "-en",
+      "type": "suffix",
+      "meaningKo": "~하게 하다"
+    },
+    {
+      "language": "en",
+      "form": "-ence",
+      "type": "suffix",
+      "meaningKo": "상태·행위"
+    },
+    {
+      "language": "en",
+      "form": "-ent",
+      "type": "suffix",
+      "meaningKo": "하는·~한"
+    },
+    {
+      "language": "en",
+      "form": "-er",
+      "type": "suffix",
+      "meaningKo": "하는 사람·도구"
+    },
+    {
+      "language": "en",
+      "form": "-ful",
+      "type": "suffix",
+      "meaningKo": "가득한·있는"
+    },
+    {
+      "language": "en",
+      "form": "-hood",
+      "type": "suffix",
+      "meaningKo": "시기·상태"
+    },
+    {
+      "language": "en",
+      "form": "-ible",
+      "type": "suffix",
+      "meaningKo": "할 수 있는"
+    },
+    {
+      "language": "en",
+      "form": "-ic",
+      "type": "suffix",
+      "meaningKo": "~에 관한"
+    },
+    {
+      "language": "en",
+      "form": "-ion",
+      "type": "suffix",
+      "meaningKo": "행위·상태"
+    },
+    {
+      "language": "en",
+      "form": "-ism",
+      "type": "suffix",
+      "meaningKo": "사상·방식"
+    },
+    {
+      "language": "en",
+      "form": "-ist",
+      "type": "suffix",
+      "meaningKo": "하는 사람·전문가"
+    },
+    {
+      "language": "en",
+      "form": "-ity",
+      "type": "suffix",
+      "meaningKo": "상태·성질"
+    },
+    {
+      "language": "en",
+      "form": "-ive",
+      "type": "suffix",
+      "meaningKo": "~한 성질의"
+    },
+    {
+      "language": "en",
+      "form": "-ize",
+      "type": "suffix",
+      "meaningKo": "~하게 하다"
+    },
+    {
+      "language": "en",
+      "form": "-less",
+      "type": "suffix",
+      "meaningKo": "없는"
+    },
+    {
+      "language": "en",
+      "form": "-ly",
+      "type": "suffix",
+      "meaningKo": "~하게"
+    },
+    {
+      "language": "en",
+      "form": "-ment",
+      "type": "suffix",
+      "meaningKo": "행위·결과"
+    },
+    {
+      "language": "en",
+      "form": "-ness",
+      "type": "suffix",
+      "meaningKo": "상태·성질"
+    },
+    {
+      "language": "en",
+      "form": "-or",
+      "type": "suffix",
+      "meaningKo": "하는 사람·도구"
+    },
+    {
+      "language": "en",
+      "form": "-ous",
+      "type": "suffix",
+      "meaningKo": "~한 성질의"
+    },
+    {
+      "language": "en",
+      "form": "-ship",
+      "type": "suffix",
+      "meaningKo": "관계·지위"
+    },
+    {
+      "language": "en",
+      "form": "-tion",
+      "type": "suffix",
+      "meaningKo": "행위·상태"
+    },
+    {
+      "language": "en",
+      "form": "-y",
+      "type": "suffix",
+      "meaningKo": "~한 성질의"
+    }
+  ],
+  "words": [
+    {
+      "language": "en",
+      "word": "abandonment",
+      "base": "abandon",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "버림, 포기",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "abolitionist",
+      "base": "abolition",
+      "affix": "-ist",
+      "type": "suffix",
+      "glossKo": "(노예제) 폐지론자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "abortion",
+      "base": "abort",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "임신 중단",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "abundantly",
+      "base": "abundant",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "풍부하게; 매우",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "acceleration",
+      "base": "accelerate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "가속; 촉진",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "accreditation",
+      "base": "accredit",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "공인 인증",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "accumulation",
+      "base": "accumulate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "축적",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "acidic",
+      "base": "acid",
+      "affix": "-ic",
+      "type": "suffix",
+      "glossKo": "산성의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "acidity",
+      "base": "acid",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "산도",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "activation",
+      "base": "activate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "활성화",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "adherence",
+      "base": "adhere",
+      "affix": "-ence",
+      "type": "suffix",
+      "glossKo": "고수, 준수",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "adornment",
+      "base": "adorn",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "장식(품)",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "adversely",
+      "base": "adverse",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "불리하게, 해롭게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "affliction",
+      "base": "afflict",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "고통, 질환",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "aggregation",
+      "base": "aggregate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "집합, 응집",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "aggressiveness",
+      "base": "aggressive",
+      "affix": "-ness",
+      "type": "suffix",
+      "glossKo": "공격성",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "agility",
+      "base": "agile",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "민첩성",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "agitation",
+      "base": "agitate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "동요, 불안; 선동",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "alignment",
+      "base": "align",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "정렬; 조정",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "allocation",
+      "base": "allocate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "배분",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "alternately",
+      "base": "alternate",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "번갈아",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "amplifier",
+      "base": "amplify",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "증폭기",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "anecdotal",
+      "base": "anecdote",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "일화적인, 개인 경험에 근거한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "anticipation",
+      "base": "anticipate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "기대; 예상",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "antivirus",
+      "base": "virus",
+      "affix": "anti-",
+      "type": "prefix",
+      "glossKo": "백신 프로그램",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "aspiration",
+      "base": "aspire",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "열망, 포부",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "assertive",
+      "base": "assert",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "자기주장이 강한, 단호한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "assertiveness",
+      "base": "assertive",
+      "affix": "-ness",
+      "type": "suffix",
+      "glossKo": "자기주장, 단호함",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "atomic",
+      "base": "atom",
+      "affix": "-ic",
+      "type": "suffix",
+      "glossKo": "원자의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "attainment",
+      "base": "attain",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "성취, 달성",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "authentication",
+      "base": "authenticate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "인증",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "authenticity",
+      "base": "authentic",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "진짜임, 진정성",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "beholder",
+      "base": "behold",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "보는 사람",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "bilateral",
+      "base": "lateral",
+      "affix": "bi-",
+      "type": "prefix",
+      "glossKo": "쌍방의, 양자 간의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "blissful",
+      "base": "bliss",
+      "affix": "-ful",
+      "type": "suffix",
+      "glossKo": "더없이 행복한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "bulky",
+      "base": "bulk",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "부피가 큰",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "calibration",
+      "base": "calibrate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "보정",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "cancellation",
+      "base": "cancel",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "취소",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "captivity",
+      "base": "captive",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "감금, 사로잡힘",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "carver",
+      "base": "carve",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "조각가; 고기 써는 칼",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "ceaseless",
+      "base": "cease",
+      "affix": "-less",
+      "type": "suffix",
+      "glossKo": "끊임없는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "characterization",
+      "base": "characterize",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "묘사; 특징 규정",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "chilly",
+      "base": "chill",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "쌀쌀한; 냉담한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "choreographer",
+      "base": "choreograph",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "안무가",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "circulation",
+      "base": "circulate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "순환; 유통",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "citation",
+      "base": "cite",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "인용; 출처 표기",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "coercion",
+      "base": "coerce",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "강압",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "collaborative",
+      "base": "collaborate",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "협력적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "colonial",
+      "base": "colony",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "식민지의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "commencement",
+      "base": "commence",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "시작; 졸업식",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "communal",
+      "base": "commune",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "공동의, 공용의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "compiler",
+      "base": "compile",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "컴파일러",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "composer",
+      "base": "compose",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "작곡가",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "computation",
+      "base": "compute",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "계산",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "computational",
+      "base": "computation",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "계산의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "condemnation",
+      "base": "condemn",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "비난",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "condensation",
+      "base": "condense",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "응결; 요약",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "confidentiality",
+      "base": "confidential",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "기밀 유지",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "configuration",
+      "base": "configure",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "구성; 설정",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "confinement",
+      "base": "confine",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "감금, 제한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "conformity",
+      "base": "conform",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "순응, 따름",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "conqueror",
+      "base": "conquer",
+      "affix": "-or",
+      "type": "suffix",
+      "glossKo": "정복자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "contamination",
+      "base": "contaminate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "오염",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "contender",
+      "base": "contend",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "경쟁자, 도전자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "contradiction",
+      "base": "contradict",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "모순",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "controversial",
+      "base": "controversy",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "논란이 되는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "convergence",
+      "base": "converge",
+      "affix": "-ence",
+      "type": "suffix",
+      "glossKo": "수렴",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "convergent",
+      "base": "converge",
+      "affix": "-ent",
+      "type": "suffix",
+      "glossKo": "수렴하는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "conviction",
+      "base": "convict",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "유죄 판결; 확신",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "convulsion",
+      "base": "convulse",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "경련; 격변",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "coordination",
+      "base": "coordinate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "조정; 협력",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "coordinator",
+      "base": "coordinate",
+      "affix": "-or",
+      "type": "suffix",
+      "glossKo": "조정자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "cordless",
+      "base": "cord",
+      "affix": "-less",
+      "type": "suffix",
+      "glossKo": "무선의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "correlation",
+      "base": "correlate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "상관관계",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "crystallize",
+      "base": "crystal",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "결정화하다; 구체화하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "culmination",
+      "base": "culminate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "정점, 결정",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "cultivation",
+      "base": "cultivate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "경작, 재배",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "customarily",
+      "base": "customary",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "관례적으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "cynical",
+      "base": "cynic",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "냉소적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "dampen",
+      "base": "damp",
+      "affix": "-en",
+      "type": "suffix",
+      "glossKo": "적시다; (기세를) 꺾다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "decompose",
+      "base": "compose",
+      "affix": "de-",
+      "type": "prefix",
+      "glossKo": "분해되다, 부패하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "decomposition",
+      "base": "composition",
+      "affix": "de-",
+      "type": "prefix",
+      "glossKo": "분해, 부패",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "defiance",
+      "base": "defy",
+      "affix": "-ance",
+      "type": "suffix",
+      "glossKo": "반항, 저항",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "defiant",
+      "base": "defy",
+      "affix": "-ant",
+      "type": "suffix",
+      "glossKo": "반항적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "defuse",
+      "base": "fuse",
+      "affix": "de-",
+      "type": "prefix",
+      "glossKo": "(폭탄을) 해체하다; 진정시키다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "degradation",
+      "base": "degrade",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "저하, 악화; 비하",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "dehydration",
+      "base": "dehydrate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "탈수",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "depletion",
+      "base": "deplete",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "고갈, 감소",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "deportation",
+      "base": "deport",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "강제 추방",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "deprivation",
+      "base": "deprive",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "박탈, 결핍",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "designation",
+      "base": "designate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "지정; 명칭",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "deterioration",
+      "base": "deteriorate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "악화",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "deterrent",
+      "base": "deter",
+      "affix": "-ent",
+      "type": "suffix",
+      "glossKo": "억지력, 제지하는 것",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "detonation",
+      "base": "detonate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "폭발",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "detrimental",
+      "base": "detriment",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "해로운",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "devastation",
+      "base": "devastate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "황폐, 대대적인 파괴",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "deviation",
+      "base": "deviate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "편차",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "devotion",
+      "base": "devote",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "헌신, 전념",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "diagonally",
+      "base": "diagonal",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "대각선으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "diffusion",
+      "base": "diffuse",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "확산, 보급",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "digestive",
+      "base": "digest",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "소화의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "diligently",
+      "base": "diligent",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "부지런히",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "dilution",
+      "base": "dilute",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "희석",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "dimensional",
+      "base": "dimension",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "차원의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "diplomatic",
+      "base": "diplomat",
+      "affix": "-ic",
+      "type": "suffix",
+      "glossKo": "외교의; 원만한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "discernible",
+      "base": "discern",
+      "affix": "-ible",
+      "type": "suffix",
+      "glossKo": "알아볼 수 있는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "discrimination",
+      "base": "discriminate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "차별",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "disillusion",
+      "base": "illusion",
+      "affix": "dis-",
+      "type": "prefix",
+      "glossKo": "환멸을 느끼게 하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "disintegrate",
+      "base": "integrate",
+      "affix": "dis-",
+      "type": "prefix",
+      "glossKo": "붕괴되다, 산산조각 나다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "disparity",
+      "base": "parity",
+      "affix": "dis-",
+      "type": "prefix",
+      "glossKo": "격차, 차이",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "displacement",
+      "base": "displace",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "이동, 강제 이주",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "disruptive",
+      "base": "disrupt",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "지장을 주는, 혁신적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "dissection",
+      "base": "dissect",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "해부; 정밀 분석",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "dissenter",
+      "base": "dissent",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "반대자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "distinctive",
+      "base": "distinct",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "독특한, 특유의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "distinctively",
+      "base": "distinctive",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "독특하게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "distinctly",
+      "base": "distinct",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "분명히, 뚜렷하게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "distortion",
+      "base": "distort",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "왜곡, 일그러짐",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "distraction",
+      "base": "distract",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "주의를 흩뜨리는 것",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "distributor",
+      "base": "distribute",
+      "affix": "-or",
+      "type": "suffix",
+      "glossKo": "유통업자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "divergence",
+      "base": "diverge",
+      "affix": "-ence",
+      "type": "suffix",
+      "glossKo": "차이, 분기",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "divergent",
+      "base": "diverge",
+      "affix": "-ent",
+      "type": "suffix",
+      "glossKo": "다른, 갈라지는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "domination",
+      "base": "dominate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "지배, 우세",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "dweller",
+      "base": "dwell",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "거주자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "eccentricity",
+      "base": "eccentric",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "기벽, 별남",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "efficacious",
+      "base": "efficacy",
+      "affix": "-ous",
+      "type": "suffix",
+      "glossKo": "효과적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "elaborately",
+      "base": "elaborate",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "정교하게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "elevation",
+      "base": "elevate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "고도",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "embellishment",
+      "base": "embellish",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "장식; 윤색",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "embodiment",
+      "base": "embody",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "화신, 구현",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "emergence",
+      "base": "emerge",
+      "affix": "-ence",
+      "type": "suffix",
+      "glossKo": "출현, 등장",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "enactment",
+      "base": "enact",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "(법의) 제정",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "endorsement",
+      "base": "endorse",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "지지; 보증; 광고 모델 계약",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "endowment",
+      "base": "endow",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "기부금; 재능",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "enhancement",
+      "base": "enhance",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "향상",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "enlightenment",
+      "base": "enlighten",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "계몽; 깨달음",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "entanglement",
+      "base": "entangle",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "얽힘",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "epitomize",
+      "base": "epitome",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "전형적으로 보여 주다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "eruption",
+      "base": "erupt",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "분출, 폭발",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "escalation",
+      "base": "escalate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "확대, 증가",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "ethical",
+      "base": "ethic",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "윤리적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "ethically",
+      "base": "ethical",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "윤리적으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "eviction",
+      "base": "evict",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "퇴거",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "exaggeration",
+      "base": "exaggerate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "과장",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "excavation",
+      "base": "excavate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "발굴",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "excellence",
+      "base": "excel",
+      "affix": "-ence",
+      "type": "suffix",
+      "glossKo": "우수함",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "excessive",
+      "base": "excess",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "과도한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "exemption",
+      "base": "exempt",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "면제",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "exertion",
+      "base": "exert",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "노력, 분투",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "explicitly",
+      "base": "explicit",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "명시적으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "exponentially",
+      "base": "exponential",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "기하급수적으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "externalize",
+      "base": "external",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "외면화하다, 표출하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "extraction",
+      "base": "extract",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "추출; 발치",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "falsehood",
+      "base": "false",
+      "affix": "-hood",
+      "type": "suffix",
+      "glossKo": "거짓",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "fanatical",
+      "base": "fanatic",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "광적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "fanaticism",
+      "base": "fanatic",
+      "affix": "-ism",
+      "type": "suffix",
+      "glossKo": "광신",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "fender",
+      "base": "fend",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "(자동차) 펜더, 흙받기",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "fermentation",
+      "base": "ferment",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "발효",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "fertilize",
+      "base": "fertile",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "비료를 주다; 수정시키다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "fluctuation",
+      "base": "fluctuate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "변동, 등락",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "formerly",
+      "base": "former",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "이전에",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "fussy",
+      "base": "fuss",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "까다로운",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "futility",
+      "base": "futile",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "헛됨, 무익",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "fuzzy",
+      "base": "fuzz",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "흐릿한; 보송보송한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "generalization",
+      "base": "generalize",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "일반화",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "geological",
+      "base": "geologic",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "지질학의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "glider",
+      "base": "glide",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "글라이더",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "gloomy",
+      "base": "gloom",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "우울한; 어둑어둑한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "glossy",
+      "base": "gloss",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "윤이 나는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "greasy",
+      "base": "grease",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "기름진",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "hacker",
+      "base": "hack",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "해커",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "harmonious",
+      "base": "harmony",
+      "affix": "-ous",
+      "type": "suffix",
+      "glossKo": "조화로운",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "harshly",
+      "base": "harsh",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "가혹하게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "hasten",
+      "base": "haste",
+      "affix": "-en",
+      "type": "suffix",
+      "glossKo": "재촉하다, 앞당기다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "hasty",
+      "base": "haste",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "성급한, 서두른",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "hazy",
+      "base": "haze",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "흐릿한, 뿌연",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "herder",
+      "base": "herd",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "목동",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "hostility",
+      "base": "hostile",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "적대감",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "humanistic",
+      "base": "humanist",
+      "affix": "-ic",
+      "type": "suffix",
+      "glossKo": "인문주의적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "illegitimate",
+      "base": "legitimate",
+      "affix": "il-",
+      "type": "prefix",
+      "glossKo": "불법의; 사생아의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "illumination",
+      "base": "illuminate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "조명; 깨달음",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "immobile",
+      "base": "mobile",
+      "affix": "im-",
+      "type": "prefix",
+      "glossKo": "움직이지 않는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "immobilize",
+      "base": "immobile",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "움직이지 못하게 하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "immortal",
+      "base": "mortal",
+      "affix": "im-",
+      "type": "prefix",
+      "glossKo": "불멸의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "immunity",
+      "base": "immune",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "면역력; 면제",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "immunize",
+      "base": "immune",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "면역력을 주다, 예방 접종하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "implausible",
+      "base": "plausible",
+      "affix": "im-",
+      "type": "prefix",
+      "glossKo": "믿기 어려운",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "imprecise",
+      "base": "precise",
+      "affix": "im-",
+      "type": "prefix",
+      "glossKo": "부정확한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "impropriety",
+      "base": "propriety",
+      "affix": "im-",
+      "type": "prefix",
+      "glossKo": "부적절한 행위",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "impulsive",
+      "base": "impulse",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "충동적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "impurity",
+      "base": "purity",
+      "affix": "im-",
+      "type": "prefix",
+      "glossKo": "불순물",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "inadequate",
+      "base": "adequate",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "불충분한, 부적절한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "inclination",
+      "base": "incline",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "경향, 성향; 의향",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "incoherent",
+      "base": "coherent",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "앞뒤가 안 맞는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "incompatible",
+      "base": "compatible",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "양립할 수 없는, 호환되지 않는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "incompetent",
+      "base": "competent",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "무능한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "incomprehensible",
+      "base": "comprehensible",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "이해할 수 없는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "inconclusive",
+      "base": "conclusive",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "결론에 이르지 못한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "inconsequential",
+      "base": "consequential",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "대수롭지 않은",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "incorporation",
+      "base": "incorporate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "통합, 편입; 법인 설립",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "incubation",
+      "base": "incubate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "잠복기; 부화",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "incubator",
+      "base": "incubate",
+      "affix": "-or",
+      "type": "suffix",
+      "glossKo": "인큐베이터; 창업 지원 기관",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "indecent",
+      "base": "decent",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "음란한, 부적절한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "indefinitely",
+      "base": "indefinite",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "무기한으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "indictment",
+      "base": "indict",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "기소; 고발장",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "induction",
+      "base": "induct",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "도입; 입문 교육",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "inference",
+      "base": "infer",
+      "affix": "-ence",
+      "type": "suffix",
+      "glossKo": "추론",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "infertile",
+      "base": "fertile",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "불임의; 척박한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "inflation",
+      "base": "inflate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "물가 상승",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "inflexible",
+      "base": "flexible",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "융통성 없는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "infringement",
+      "base": "infringe",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "(권리) 침해; 위반",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "infusion",
+      "base": "infuse",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "투입; 우려낸 차; 주입",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "inhabitant",
+      "base": "inhabit",
+      "affix": "-ant",
+      "type": "suffix",
+      "glossKo": "주민, 거주자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "inhibitor",
+      "base": "inhibit",
+      "affix": "-or",
+      "type": "suffix",
+      "glossKo": "억제제",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "inhumane",
+      "base": "humane",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "비인간적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "injection",
+      "base": "inject",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "주사",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "insanity",
+      "base": "sanity",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "정신 이상; 미친 짓",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "insertion",
+      "base": "insert",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "삽입",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "instinctive",
+      "base": "instinct",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "본능적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "instinctively",
+      "base": "instinctive",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "본능적으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "institutionalize",
+      "base": "institutional",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "제도화하다; 시설에 수용하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "insulation",
+      "base": "insulate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "단열; 절연",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "intangible",
+      "base": "tangible",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "무형의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "intentionally",
+      "base": "intentional",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "고의로, 의도적으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "interdependence",
+      "base": "dependence",
+      "affix": "inter-",
+      "type": "prefix",
+      "glossKo": "상호 의존",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "interference",
+      "base": "interfere",
+      "affix": "-ence",
+      "type": "suffix",
+      "glossKo": "간섭; 방해",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "internship",
+      "base": "intern",
+      "affix": "-ship",
+      "type": "suffix",
+      "glossKo": "인턴십, 수습 기간",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "interstellar",
+      "base": "stellar",
+      "affix": "inter-",
+      "type": "prefix",
+      "glossKo": "항성 간의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "intervention",
+      "base": "intervene",
+      "affix": "-tion",
+      "type": "suffix",
+      "glossKo": "개입",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "interweave",
+      "base": "weave",
+      "affix": "inter-",
+      "type": "prefix",
+      "glossKo": "섞어 짜다, 엮다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "intimidation",
+      "base": "intimidate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "위협, 협박",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "intoxication",
+      "base": "intoxicate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "중독, 취함",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "intricately",
+      "base": "intricate",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "복잡하게, 정교하게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "intruder",
+      "base": "intrude",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "침입자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "invader",
+      "base": "invade",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "침략자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "invalid",
+      "base": "valid",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "유효하지 않은",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "invalidate",
+      "base": "validate",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "무효화하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "invertebrate",
+      "base": "vertebrate",
+      "affix": "in-",
+      "type": "prefix",
+      "glossKo": "무척추동물",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "irrigation",
+      "base": "irrigate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "관개",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "irritation",
+      "base": "irritate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "짜증; (피부) 자극",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "isolation",
+      "base": "isolate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "고립",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "justifiable",
+      "base": "justify",
+      "affix": "-able",
+      "type": "suffix",
+      "glossKo": "정당한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "laudable",
+      "base": "laud",
+      "affix": "-able",
+      "type": "suffix",
+      "glossKo": "칭찬할 만한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "leaky",
+      "base": "leak",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "새는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "logical",
+      "base": "logic",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "논리적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "manifestation",
+      "base": "manifest",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "표명, 나타남",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "manipulative",
+      "base": "manipulate",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "조종하는, 교묘하게 다루는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "marginal",
+      "base": "margin",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "미미한; 주변부의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "maturity",
+      "base": "mature",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "성숙; (만기)",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "mediator",
+      "base": "mediate",
+      "affix": "-or",
+      "type": "suffix",
+      "glossKo": "중재자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "mediocrity",
+      "base": "mediocre",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "평범함",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "methodically",
+      "base": "methodical",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "체계적으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "meticulously",
+      "base": "meticulous",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "꼼꼼하게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "microorganism",
+      "base": "organism",
+      "affix": "micro-",
+      "type": "prefix",
+      "glossKo": "미생물",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "misconception",
+      "base": "conception",
+      "affix": "mis-",
+      "type": "prefix",
+      "glossKo": "오해",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "misdeed",
+      "base": "deed",
+      "affix": "mis-",
+      "type": "prefix",
+      "glossKo": "비행, 악행",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "misrepresentation",
+      "base": "misrepresent",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "허위 진술, 왜곡",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "mobility",
+      "base": "mobile",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "이동성",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "mobilize",
+      "base": "mobile",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "동원하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "moisten",
+      "base": "moist",
+      "affix": "-en",
+      "type": "suffix",
+      "glossKo": "적시다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "mournful",
+      "base": "mourn",
+      "affix": "-ful",
+      "type": "suffix",
+      "glossKo": "구슬픈",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "muffler",
+      "base": "muffle",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "머플러; 소음기",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "multilateral",
+      "base": "lateral",
+      "affix": "multi-",
+      "type": "prefix",
+      "glossKo": "다자간의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "mutation",
+      "base": "mutate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "돌연변이; 변화",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "narration",
+      "base": "narrate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "내레이션, 서술",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "naturalistic",
+      "base": "naturalist",
+      "affix": "-ic",
+      "type": "suffix",
+      "glossKo": "자연주의적인, 사실적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "negation",
+      "base": "negate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "부정",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "negotiation",
+      "base": "negotiate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "협상",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "neutralize",
+      "base": "neutral",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "무력화하다, 중화하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "nomadic",
+      "base": "nomad",
+      "affix": "-ic",
+      "type": "suffix",
+      "glossKo": "유목의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "nomination",
+      "base": "nominate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "지명",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "nonfiction",
+      "base": "fiction",
+      "affix": "non-",
+      "type": "prefix",
+      "glossKo": "논픽션",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "notoriously",
+      "base": "notorious",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "악명 높게, 널리 알려지게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "nourishment",
+      "base": "nourish",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "영양(분)",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "numerical",
+      "base": "numeric",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "숫자의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "obscurity",
+      "base": "obscure",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "무명; 모호함",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "obstruction",
+      "base": "obstruct",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "방해물, 차단",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "optimization",
+      "base": "optimize",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "최적화",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "orbital",
+      "base": "orbit",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "궤도의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "ornamental",
+      "base": "ornament",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "장식용의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "overdose",
+      "base": "dose",
+      "affix": "over-",
+      "type": "prefix",
+      "glossKo": "과다 복용",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "parasitic",
+      "base": "parasite",
+      "affix": "-ic",
+      "type": "suffix",
+      "glossKo": "기생하는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "patriarchal",
+      "base": "patriarch",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "가부장적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "patriotic",
+      "base": "patriot",
+      "affix": "-ic",
+      "type": "suffix",
+      "glossKo": "애국적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "patriotism",
+      "base": "patriot",
+      "affix": "-ism",
+      "type": "suffix",
+      "glossKo": "애국심",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "peculiarity",
+      "base": "peculiar",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "특이한 점",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "penalize",
+      "base": "penal",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "처벌하다, 불이익을 주다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "penetration",
+      "base": "penetrate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "침투",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "perilous",
+      "base": "peril",
+      "affix": "-ous",
+      "type": "suffix",
+      "glossKo": "아주 위험한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "perseverance",
+      "base": "persevere",
+      "affix": "-ance",
+      "type": "suffix",
+      "glossKo": "인내, 끈기",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "persistent",
+      "base": "persist",
+      "affix": "-ent",
+      "type": "suffix",
+      "glossKo": "끈질긴; 지속되는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "porous",
+      "base": "pore",
+      "affix": "-ous",
+      "type": "suffix",
+      "glossKo": "구멍이 많은, 다공성의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "precedence",
+      "base": "precede",
+      "affix": "-ence",
+      "type": "suffix",
+      "glossKo": "우선(권)",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "precisely",
+      "base": "precise",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "정확히",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "predatory",
+      "base": "predator",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "약탈적인; 포식성의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "predictive",
+      "base": "predict",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "예측의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "predominantly",
+      "base": "predominant",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "주로, 대부분",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "premature",
+      "base": "mature",
+      "affix": "pre-",
+      "type": "prefix",
+      "glossKo": "너무 이른, 조기의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "prerequisite",
+      "base": "requisite",
+      "affix": "pre-",
+      "type": "prefix",
+      "glossKo": "선행 조건",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "preservation",
+      "base": "preserve",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "보존",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "procurement",
+      "base": "procure",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "조달",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "profoundly",
+      "base": "profound",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "깊이, 극심하게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "prohibitive",
+      "base": "prohibit",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "엄청나게 비싼; 금지하는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "proliferation",
+      "base": "proliferate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "급증, 확산",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "propagation",
+      "base": "propagate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "번식; 전파",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "propeller",
+      "base": "propel",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "프로펠러",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "prophetic",
+      "base": "prophet",
+      "affix": "-ic",
+      "type": "suffix",
+      "glossKo": "예언적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "prosecution",
+      "base": "prosecute",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "기소; 검찰 측",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "prosperity",
+      "base": "prosper",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "번영, 번창",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "radiation",
+      "base": "radiate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "방사선",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "radically",
+      "base": "radical",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "근본적으로, 급진적으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "rancher",
+      "base": "ranch",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "목장주",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "readjust",
+      "base": "adjust",
+      "affix": "re-",
+      "type": "prefix",
+      "glossKo": "재조정하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "realign",
+      "base": "align",
+      "affix": "re-",
+      "type": "prefix",
+      "glossKo": "재조정하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "reconstitute",
+      "base": "constitute",
+      "affix": "re-",
+      "type": "prefix",
+      "glossKo": "재구성하다; (가루를) 물에 타서 되돌리다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "reconstruct",
+      "base": "construct",
+      "affix": "re-",
+      "type": "prefix",
+      "glossKo": "재건하다, 재구성하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "reconstruction",
+      "base": "reconstruct",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "재건",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "refinement",
+      "base": "refine",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "개선; 세련됨; 정제",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "reformer",
+      "base": "reform",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "개혁가",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "refrigeration",
+      "base": "refrigerate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "냉장",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "regenerate",
+      "base": "generate",
+      "affix": "re-",
+      "type": "prefix",
+      "glossKo": "재생하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "regeneration",
+      "base": "regenerate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "재생, 부활",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "regression",
+      "base": "regress",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "퇴보; 회귀",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "regressive",
+      "base": "regress",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "퇴행적인; 역진적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "rehabilitation",
+      "base": "rehabilitate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "재활",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "rekindle",
+      "base": "kindle",
+      "affix": "re-",
+      "type": "prefix",
+      "glossKo": "다시 불붙이다, 되살리다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "relentless",
+      "base": "relent",
+      "affix": "-less",
+      "type": "suffix",
+      "glossKo": "끊임없는, 가차 없는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "reliance",
+      "base": "rely",
+      "affix": "-ance",
+      "type": "suffix",
+      "glossKo": "의존",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "reliant",
+      "base": "rely",
+      "affix": "-ant",
+      "type": "suffix",
+      "glossKo": "의존하는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "replication",
+      "base": "replicate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "복제; 재현",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "reproduction",
+      "base": "reproduce",
+      "affix": "-tion",
+      "type": "suffix",
+      "glossKo": "복제; 번식",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "repulsive",
+      "base": "repulse",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "역겨운",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "resemblance",
+      "base": "resemble",
+      "affix": "-ance",
+      "type": "suffix",
+      "glossKo": "닮음, 유사함",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "residual",
+      "base": "residue",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "남은, 잔여의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "resignation",
+      "base": "resign",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "사직, 사임; 체념",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "resistant",
+      "base": "resist",
+      "affix": "-ant",
+      "type": "suffix",
+      "glossKo": "저항력이 있는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "responsiveness",
+      "base": "responsive",
+      "affix": "-ness",
+      "type": "suffix",
+      "glossKo": "반응성, 대응력",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "restrictive",
+      "base": "restrict",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "제한하는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "retaliation",
+      "base": "retaliate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "보복",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "retriever",
+      "base": "retrieve",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "리트리버 (개)",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "reverence",
+      "base": "revere",
+      "affix": "-ence",
+      "type": "suffix",
+      "glossKo": "숭배, 존경",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "revitalization",
+      "base": "revitalize",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "재활성화",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "revolutionize",
+      "base": "revolution",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "혁명적으로 바꾸다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "rhythmic",
+      "base": "rhythm",
+      "affix": "-ic",
+      "type": "suffix",
+      "glossKo": "리드미컬한, 율동적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "rigidity",
+      "base": "rigid",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "경직성",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "rigorous",
+      "base": "rigor",
+      "affix": "-ous",
+      "type": "suffix",
+      "glossKo": "엄격한, 철저한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "rover",
+      "base": "rove",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "탐사 차량",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "salinity",
+      "base": "saline",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "염도",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "sanity",
+      "base": "sane",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "제정신",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "scanner",
+      "base": "scan",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "스캐너",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "scarcity",
+      "base": "scarce",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "부족, 결핍",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "scrupulously",
+      "base": "scrupulous",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "꼼꼼하게, 철저하게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "sculptor",
+      "base": "sculpt",
+      "affix": "-or",
+      "type": "suffix",
+      "glossKo": "조각가",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "secretion",
+      "base": "secrete",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "분비(물)",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "sentimental",
+      "base": "sentiment",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "감상적인, 정서적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "serenity",
+      "base": "serene",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "평온, 고요",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "singularity",
+      "base": "singular",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "특이점; 독특함",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "skepticism",
+      "base": "skeptic",
+      "affix": "-ism",
+      "type": "suffix",
+      "glossKo": "회의론, 의심",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "slimy",
+      "base": "slime",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "끈적끈적한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "solely",
+      "base": "sole",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "오로지",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "soloist",
+      "base": "solo",
+      "affix": "-ist",
+      "type": "suffix",
+      "glossKo": "독주자, 독창자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "sparsely",
+      "base": "sparse",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "드문드문",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "spectacularly",
+      "base": "spectacular",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "극적으로, 눈부시게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "speculation",
+      "base": "speculate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "추측; 투기",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "speculative",
+      "base": "speculate",
+      "affix": "-ive",
+      "type": "suffix",
+      "glossKo": "추측에 근거한; 투기적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "spiky",
+      "base": "spike",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "뾰족뾰족한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "spinal",
+      "base": "spine",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "척추의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "spontaneously",
+      "base": "spontaneous",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "자발적으로, 즉흥적으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "starvation",
+      "base": "starve",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "기아, 굶주림",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "sterilize",
+      "base": "sterile",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "살균하다; 불임 시술을 하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "stiffen",
+      "base": "stiff",
+      "affix": "-en",
+      "type": "suffix",
+      "glossKo": "뻣뻣해지다, 굳어지다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "stimulation",
+      "base": "stimulate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "자극",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "stipulation",
+      "base": "stipulate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "조항, 조건",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "strictly",
+      "base": "strict",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "엄격히",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "submarine",
+      "base": "marine",
+      "affix": "sub-",
+      "type": "prefix",
+      "glossKo": "잠수함",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "subscriber",
+      "base": "subscribe",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "구독자",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "subsequently",
+      "base": "subsequent",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "그 후에",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "subsistence",
+      "base": "subsist",
+      "affix": "-ence",
+      "type": "suffix",
+      "glossKo": "최저 생활, 생계",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "substantially",
+      "base": "substantial",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "상당히",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "superficially",
+      "base": "superficial",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "피상적으로, 겉으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "superiority",
+      "base": "superior",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "우월성, 우위",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "supersonic",
+      "base": "sonic",
+      "affix": "super-",
+      "type": "prefix",
+      "glossKo": "초음속의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "supervision",
+      "base": "supervise",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "감독",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "supplemental",
+      "base": "supplement",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "추가의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "symbolism",
+      "base": "symbol",
+      "affix": "-ism",
+      "type": "suffix",
+      "glossKo": "상징성, 상징주의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "symbolize",
+      "base": "symbol",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "상징하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "tenderness",
+      "base": "tender",
+      "affix": "-ness",
+      "type": "suffix",
+      "glossKo": "다정함; 압통",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "tension",
+      "base": "tense",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "긴장",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "termination",
+      "base": "terminate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "종료",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "territorial",
+      "base": "territory",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "영토의; 텃세를 부리는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "thorny",
+      "base": "thorn",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "가시가 많은; 곤란한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "thoroughly",
+      "base": "thorough",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "철저히",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "tranquility",
+      "base": "tranquil",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "평온, 고요",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "transcendent",
+      "base": "transcend",
+      "affix": "-ent",
+      "type": "suffix",
+      "glossKo": "초월적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "transcendental",
+      "base": "transcendent",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "초월적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "transmitter",
+      "base": "transmit",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "송신기",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "tribal",
+      "base": "tribe",
+      "affix": "-al",
+      "type": "suffix",
+      "glossKo": "부족의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "ultimately",
+      "base": "ultimate",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "궁극적으로",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "uncertainty",
+      "base": "certainty",
+      "affix": "un-",
+      "type": "prefix",
+      "glossKo": "불확실성",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "unconditional",
+      "base": "conditional",
+      "affix": "un-",
+      "type": "prefix",
+      "glossKo": "무조건의",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "understatement",
+      "base": "understate",
+      "affix": "-ment",
+      "type": "suffix",
+      "glossKo": "절제된 표현, 과소 진술",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "undesirable",
+      "base": "desirable",
+      "affix": "un-",
+      "type": "prefix",
+      "glossKo": "바람직하지 않은",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "undisturbed",
+      "base": "disturbed",
+      "affix": "un-",
+      "type": "prefix",
+      "glossKo": "방해받지 않은",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "unevenly",
+      "base": "uneven",
+      "affix": "-ly",
+      "type": "suffix",
+      "glossKo": "고르지 않게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "uniqueness",
+      "base": "unique",
+      "affix": "-ness",
+      "type": "suffix",
+      "glossKo": "독특함, 고유성",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "unjustly",
+      "base": "justly",
+      "affix": "un-",
+      "type": "prefix",
+      "glossKo": "부당하게",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "unleash",
+      "base": "leash",
+      "affix": "un-",
+      "type": "prefix",
+      "glossKo": "풀어놓다, 촉발하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "unpretentious",
+      "base": "pretentious",
+      "affix": "un-",
+      "type": "prefix",
+      "glossKo": "꾸밈없는, 소박한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "unregulated",
+      "base": "regulated",
+      "affix": "un-",
+      "type": "prefix",
+      "glossKo": "규제되지 않은",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "unscrupulous",
+      "base": "scrupulous",
+      "affix": "un-",
+      "type": "prefix",
+      "glossKo": "부도덕한, 파렴치한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "unveil",
+      "base": "veil",
+      "affix": "un-",
+      "type": "prefix",
+      "glossKo": "공개하다, 발표하다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "utilization",
+      "base": "utilize",
+      "affix": "-ation",
+      "type": "suffix",
+      "glossKo": "활용",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "utterance",
+      "base": "utter",
+      "affix": "-ance",
+      "type": "suffix",
+      "glossKo": "발언, 말",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "validation",
+      "base": "validate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "유효성 확인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "validity",
+      "base": "valid",
+      "affix": "-ity",
+      "type": "suffix",
+      "glossKo": "유효성",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "vaporize",
+      "base": "vapor",
+      "affix": "-ize",
+      "type": "suffix",
+      "glossKo": "증발시키다",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "vastness",
+      "base": "vast",
+      "affix": "-ness",
+      "type": "suffix",
+      "glossKo": "광대함",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "venomous",
+      "base": "venom",
+      "affix": "-ous",
+      "type": "suffix",
+      "glossKo": "독이 있는; 악의적인",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "vibration",
+      "base": "vibrate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "진동",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "vigorous",
+      "base": "vigor",
+      "affix": "-ous",
+      "type": "suffix",
+      "glossKo": "활발한, 격렬한",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "vindication",
+      "base": "vindicate",
+      "affix": "-ion",
+      "type": "suffix",
+      "glossKo": "정당성 입증",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "virtuous",
+      "base": "virtue",
+      "affix": "-ous",
+      "type": "suffix",
+      "glossKo": "고결한, 덕이 있는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "weariness",
+      "base": "weary",
+      "affix": "-ness",
+      "type": "suffix",
+      "glossKo": "피로, 권태",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "weaver",
+      "base": "weave",
+      "affix": "-er",
+      "type": "suffix",
+      "glossKo": "직조공",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "witty",
+      "base": "wit",
+      "affix": "-y",
+      "type": "suffix",
+      "glossKo": "재치 있는",
+      "transparent": true
+    },
+    {
+      "language": "en",
+      "word": "zealous",
+      "base": "zeal",
+      "affix": "-ous",
+      "type": "suffix",
+      "glossKo": "열성적인",
+      "transparent": true
+    }
+  ]
+}

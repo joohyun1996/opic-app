@@ -55,4 +55,18 @@ val MIGRATION_4_5 = object : Migration(4, 5) {
     }
 }
 
-val ALL_MIGRATIONS = arrayOf(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5)
+/** v5 → v6: 기존 단어·학습 기록을 그대로 두고 검수된 접사 분해 테이블만 추가한다. */
+val MIGRATION_5_6 = object : Migration(5, 6) {
+    override fun migrate(db: SupportSQLiteDatabase) {
+        listOf(
+            "CREATE TABLE IF NOT EXISTS `affixes` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `language` TEXT NOT NULL, `form` TEXT NOT NULL, `type` TEXT NOT NULL, `meaningKo` TEXT NOT NULL)",
+            "CREATE UNIQUE INDEX IF NOT EXISTS `index_affixes_language_form_type` ON `affixes` (`language`, `form`, `type`)",
+            "CREATE TABLE IF NOT EXISTS `word_parts` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `language` TEXT NOT NULL, `wordId` INTEGER NOT NULL, `position` INTEGER NOT NULL, `affixId` INTEGER, `baseWordId` INTEGER, `glossKo` TEXT)",
+            "CREATE UNIQUE INDEX IF NOT EXISTS `index_word_parts_language_wordId_position` ON `word_parts` (`language`, `wordId`, `position`)",
+            "CREATE INDEX IF NOT EXISTS `index_word_parts_language_affixId` ON `word_parts` (`language`, `affixId`)",
+            "CREATE INDEX IF NOT EXISTS `index_word_parts_language_baseWordId` ON `word_parts` (`language`, `baseWordId`)",
+        ).forEach(db::execSQL)
+    }
+}
+
+val ALL_MIGRATIONS = arrayOf(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5, MIGRATION_5_6)

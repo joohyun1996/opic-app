@@ -4,7 +4,7 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
-@Database(entities = [WordEntity::class, UserWordEntity::class, DataMetaEntity::class, GrammarReviewEntity::class, SpeakingAnswerEntity::class, ShadowingAttemptEntity::class], version = 5, exportSchema = true)
+@Database(entities = [WordEntity::class, UserWordEntity::class, DataMetaEntity::class, GrammarReviewEntity::class, SpeakingAnswerEntity::class, ShadowingAttemptEntity::class, AffixEntity::class, WordPartEntity::class], version = 6, exportSchema = true)
 @TypeConverters(Converters::class)
 abstract class OpicDatabase : RoomDatabase() {
     abstract fun dataMetaDao(): DataMetaDao
@@ -13,4 +13,5 @@ abstract class OpicDatabase : RoomDatabase() {
     abstract fun grammarReviewDao(): GrammarReviewDao
     abstract fun speakingDao(): SpeakingDao
     abstract fun shadowingAttemptDao(): ShadowingAttemptDao
+    abstract fun affixDao(): AffixDao
 }

@@ -5,6 +5,7 @@ import android.os.SystemClock
 import android.util.Log
 import com.jooh.opic.core.database.ImportResult
 import com.jooh.opic.core.database.WordImporter
+import com.jooh.opic.core.database.AffixImporter
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -61,6 +62,11 @@ class OpicApplication : Application() {
             }
             mutableImport.value = result
             Log.i("WordImport", "$result elapsedMs=${SystemClock.elapsedRealtime() - start}")
+            if (result !is ImportResult.Failed) {
+                val affixResult = runCatching { assets.open("affixes.json").use { AffixImporter(database).importAffixes(it) } }
+                    .getOrElse { ImportResult.Failed(it.message ?: "접사 파일을 읽지 못했습니다") }
+                Log.i("AffixImport", "$affixResult")
+            }
         }
         scope.launch {
             mutableGrammar.value = try {

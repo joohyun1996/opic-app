@@ -34,6 +34,8 @@ import com.jooh.opic.feature.grammar.GrammarTracks
 import com.jooh.opic.feature.grammar.displayTitle
 import com.jooh.opic.feature.words.Speaker
 import com.jooh.opic.feature.words.WordsApp
+import com.jooh.opic.feature.words.AffixWordsScreen
+import com.jooh.opic.feature.words.LocalAffixNavigator
 import com.jooh.opic.feature.words.dueReviewWords
 import com.jooh.opic.feature.words.WordsPage
 import android.app.Activity
@@ -111,7 +113,8 @@ fun OpicRoot(app: OpicApplication) {
                 val coreUnits = remember(grammarResult) { (grammarResult as? GrammarLoadResult.Loaded)?.book?.units.orEmpty().filter { it.track == GrammarTracks.CORE }.associateBy { it.id } }
                 val grammarLink = remember(grammarResult) { GrammarLink(title = { id -> coreUnits[id]?.displayTitle()?.removePrefix("실전 ") },
                     open = { id -> nav.navigate("grammarUnit/$id") }) }
-                CompositionLocalProvider(LocalGrammarLink provides grammarLink) {
+                CompositionLocalProvider(LocalGrammarLink provides grammarLink,
+                    LocalAffixNavigator provides { kind, id -> nav.navigate("affix/$kind/$id") }) {
                 NavHost(navController = nav, startDestination = Tab.HOME.route) {
                     composable("grammarUnit/{id}") { entry ->
                         val id = entry.arguments?.getString("id")
@@ -150,6 +153,10 @@ fun OpicRoot(app: OpicApplication) {
                         }
                     }
                     navigation(startDestination = "days", route = Tab.WORDS.route) {
+                        composable("affix/{kind}/{id}", arguments = listOf(navArgument("id") { type = NavType.LongType })) { entry ->
+                            AffixWordsScreen(app.database, app.currentLanguage, entry.arguments?.getString("kind").orEmpty(),
+                                entry.arguments?.getLong("id") ?: 0L, back)
+                        }
                         composable("days") { TabRoot(openMenu) { WordsApp(app.database, app.currentLanguage, importResult, speaker, WordsPage.DAYS, grammarCount, navigate = navigate, onBack = back) } }
                         composable("day/{day}", arguments = listOf(navArgument("day") { type = NavType.IntType })) { entry ->
                             WordsApp(app.database, app.currentLanguage, importResult, speaker, WordsPage.DAY, grammarCount,

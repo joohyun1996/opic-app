@@ -21,6 +21,8 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jooh.opic.core.common.maskHint
 import com.jooh.opic.core.common.StudyLanguage
+import com.jooh.opic.core.common.AffixPiece
+import com.jooh.opic.core.common.formatAffixBreakdown
 import com.jooh.opic.core.database.OpicDatabase
 import com.jooh.opic.core.database.WordEntity
 
@@ -48,6 +50,7 @@ internal fun StudyScreen(
 
 @Composable
 private fun ColumnScope.CardView(state: StudyState, word: WordEntity, mode: StudyMode, speaker: Speaker, model: StudyViewModel) {
+    val openAffix = LocalAffixNavigator.current
     Text("${mode.title} · ${state.index + 1} / ${state.cards.size}", style = MaterialTheme.typography.labelLarge)
     LinearProgressIndicator(
         progress = { (state.index + 1).toFloat() / state.cards.size },
@@ -86,6 +89,19 @@ private fun ColumnScope.CardView(state: StudyState, word: WordEntity, mode: Stud
                 }
                 Text(word.example, style = MaterialTheme.typography.bodyMedium)
                 Text(word.exampleKo, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                if (state.breakdown.size == 2) {
+                    val parts = state.breakdown
+                    val line = formatAffixBreakdown(parts.map { AffixPiece(it.label, it.meaningKo, it.affixId, it.baseWordId) }, parts.first().glossKo.orEmpty())
+                    Text(line, style = MaterialTheme.typography.bodyMedium)
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        parts.forEach { part ->
+                            TextButton(onClick = {
+                                part.affixId?.let { openAffix("affix", it) }
+                                    ?: part.baseWordId?.let { openAffix("base", it) }
+                            }) { Text("${part.label} 관련 단어") }
+                        }
+                    }
+                }
             }
         }
     }

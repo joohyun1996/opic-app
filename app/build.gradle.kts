@@ -56,6 +56,10 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.room.runtime)
+    testImplementation(libs.junit)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.androidx.test.core)
+    testImplementation(libs.kotlinx.coroutines.test)
 }
 
 val bundledWords = tasks.register<Sync>("bundleWords") {
@@ -64,6 +68,13 @@ val bundledWords = tasks.register<Sync>("bundleWords") {
 }
 android.sourceSets["main"].assets.srcDir(layout.buildDirectory.dir("generated/wordAssets").get().asFile)
 tasks.named("preBuild").configure { dependsOn(bundledWords) }
+
+val bundledAffixes = tasks.register<Sync>("bundleAffixes") {
+    from(rootProject.file("exports/affixes.json"))
+    into(layout.buildDirectory.dir("generated/affixAssets"))
+}
+android.sourceSets["main"].assets.srcDir(layout.buildDirectory.dir("generated/affixAssets").get().asFile)
+tasks.named("preBuild").configure { dependsOn(bundledAffixes) }
 
 val bundledGrammar = tasks.register<Sync>("bundleGrammar") {
     from(rootProject.file("exports/grammar.json"))

@@ -28,6 +28,12 @@
   - 검수용 목록 `review.tsv`: word, 분해, 어간, 접사, 제안 뜻풀이, transparent(빈칸 — 검수자가 true/false)
 - **사용자가 검수(또는 검수 방식 결정)한 뒤 2단계로 간다**
 
+
+### 1단계 검수 결과 (2026-10-12 Claude 표본 확인)
+- 전수 판정: true 426 / false 235 / hold 91. 단어당 true 1개 이하 확인
+- true 표본 54개 확인, 함정(cavity·cubic·gallant·infraction·undermine)은 false로 정리됨 → 통과
+- 2단계에는 **true 426개만** 넣는다. hold·false는 넣지 않는다
+
 ## 2단계: 검수 반영 + DB + 화면
 - 씨드 `exports/affixes.json` (dataVersion 포함): `transparent = true`인 것만 넣는다
   - 단어는 id가 아니라 `(language, word)`로 적는다. 적재할 때 id로 바꾼다

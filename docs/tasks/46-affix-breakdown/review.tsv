@@ -1,753 +1,753 @@
 language	word	분해	어간	접사	종류	철자 규칙	제안 뜻풀이	transparent	판단 이유
-en	abandonment	abandon + -ment	abandon	-ment	suffix	그대로	행위·결과 + 버리다 → 버림, 포기	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	abolitionist	abolition + -ist	abolition	-ist	suffix	그대로	하는 사람·전문가 + 폐지 → (노예제) 폐지론자	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	abortion	abort + -ion	abort	-ion	suffix	그대로	행위·상태 + 중단하다; 낙태하다 → 임신 중단	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	absenteeism	absentee + -ism	absentee	-ism	suffix	그대로	사상·방식 + 결석자, 부재자 → 잦은 결근	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	abstraction	abstract + -ion	abstract	-ion	suffix	그대로	행위·상태 + 추상적인 → 추상, 추상적 개념	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	abundantly	abundant + -ly	abundant	-ly	suffix	그대로	~하게 + 풍부한 → 풍부하게; 매우	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	abusive	abuse + -ive	abuse	-ive	suffix	-e 탈락	~한 성질의 + 남용, 학대 → 폭력적인, 모욕적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	acceleration	accelerate + -ion	accelerate	-ion	suffix	-e 탈락	행위·상태 + 가속하다 → 가속; 촉진	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	accompaniment	accompany + -ment	accompany	-ment	suffix	y→i	행위·결과 + 동행하다 → 반주; 곁들임	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	accreditation	accredit + -ation	accredit	-ation	suffix	그대로	행위·상태 + 인가하다, 공인하다 → 공인 인증	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	accumulation	accumulate + -ion	accumulate	-ion	suffix	-e 탈락	행위·상태 + 쌓이다, 축적하다 → 축적	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	acidic	acid + -ic	acid	-ic	suffix	그대로	~에 관한 + 산 → 산성의	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	acidity	acid + -ity	acid	-ity	suffix	그대로	상태·성질 + 산 → 산도	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	acquaintance	acquaint + -ance	acquaint	-ance	suffix	그대로	상태·행위 + 익히다 (acquaint oneself with) → 아는 사람, 지인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	acquittal	acquit + -al	acquit	-al	suffix	자음 겹침	~와 관련된 + 무죄를 선고하다 → 무죄 석방	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	activation	activate + -ion	activate	-ion	suffix	-e 탈락	행위·상태 + 작동시키다, 활성화하다 → 활성화	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	adherence	adhere + -ence	adhere	-ence	suffix	-e 탈락	상태·행위 + 고수하다; 들러붙다 → 고수, 준수	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	adherent	adhere + -ent	adhere	-ent	suffix	-e 탈락	하는·~한 + 고수하다; 들러붙다 → 지지자, 신봉자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	adornment	adorn + -ment	adorn	-ment	suffix	그대로	행위·결과 + 장식하다 → 장식(품)	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	adversely	adverse + -ly	adverse	-ly	suffix	그대로	~하게 + 불리한 → 불리하게, 해롭게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	adversity	adverse + -ity	adverse	-ity	suffix	-e 탈락	상태·성질 + 불리한 → 역경	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	affliction	afflict + -ion	afflict	-ion	suffix	그대로	행위·상태 + 괴롭히다 → 고통, 질환	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	aggregation	aggregate + -ion	aggregate	-ion	suffix	-e 탈락	행위·상태 + 총합의 → 집합, 응집	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	aggressiveness	aggressive + -ness	aggressive	-ness	suffix	그대로	상태·성질 + 공격적인 → 공격성	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	agility	agile + -ity	agile	-ity	suffix	-e 탈락	상태·성질 + 민첩한 → 민첩성	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	agitation	agitate + -ion	agitate	-ion	suffix	-e 탈락	행위·상태 + 선동하다; 동요시키다 → 동요, 불안; 선동	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	ailment	ail + -ment	ail	-ment	suffix	그대로	행위·결과 + 괴롭히다 → (가벼운) 질병	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	alignment	align + -ment	align	-ment	suffix	그대로	행위·결과 + 정렬하다 → 정렬; 조정	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	allocation	allocate + -ion	allocate	-ion	suffix	-e 탈락	행위·상태 + 할당하다, 배분하다 → 배분	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	alternately	alternate + -ly	alternate	-ly	suffix	그대로	~하게 + 번갈아 하다 → 번갈아	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	amplifier	amplify + -er	amplify	-er	suffix	y→i	하는 사람·도구 + 증폭시키다 → 증폭기	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	analogous	analog + -ous	analog	-ous	suffix	그대로	~한 성질의 + 아날로그의 → 유사한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	analogy	analog + -y	analog	-y	suffix	그대로	~한 성질의 + 아날로그의 → 비유, 유사점	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	anecdotal	anecdote + -al	anecdote	-al	suffix	-e 탈락	~와 관련된 + 일화 → 일화적인, 개인 경험에 근거한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	annexation	annex + -ation	annex	-ation	suffix	그대로	행위·상태 + 별관 → 병합	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	anticipation	anticipate + -ion	anticipate	-ion	suffix	-e 탈락	행위·상태 + 예상하다 → 기대; 예상	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	antiseptic	anti- + septic	septic	anti-	prefix	그대로	반대하는 + 감염된, 부패한 → 소독약	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	antithesis	anti- + thesis	thesis	anti-	prefix	그대로	반대하는 + 논문; 주장 → 정반대	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	antivirus	anti- + virus	virus	anti-	prefix	그대로	반대하는 + 바이러스 → 백신 프로그램	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	appraisal	appraise + -al	appraise	-al	suffix	-e 탈락	~와 관련된 + 평가하다, 감정하다 → 감정 평가	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	aspiration	aspire + -ation	aspire	-ation	suffix	-e 탈락	행위·상태 + 열망하다 → 열망, 포부	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	assassination	assassin + -ation	assassin	-ation	suffix	그대로	행위·상태 + 암살자 → 암살	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	assertive	assert + -ive	assert	-ive	suffix	그대로	~한 성질의 + 주장하다, 단언하다 → 자기주장이 강한, 단호한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	assertiveness	assertive + -ness	assertive	-ness	suffix	그대로	상태·성질 + 자기주장이 강한, 단호한 → 자기주장, 단호함	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	atomic	atom + -ic	atom	-ic	suffix	그대로	~에 관한 + 원자 → 원자의	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	attainment	attain + -ment	attain	-ment	suffix	그대로	행위·결과 + 달성하다, 이루다 → 성취, 달성	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	auditory	auditor + -y	auditor	-y	suffix	그대로	~한 성질의 + 회계 감사관 → 청각의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	austerity	austere + -ity	austere	-ity	suffix	-e 탈락	상태·성질 + 엄격한; 간소한 → 긴축; 검소함	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	authentication	authentic + -ation	authentic	-ation	suffix	그대로	행위·상태 + 진짜의, 진정한 → 인증	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	authentication	authenticate + -ion	authenticate	-ion	suffix	-e 탈락	행위·상태 + 진짜임을 증명하다 → 인증	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	authenticity	authentic + -ity	authentic	-ity	suffix	그대로	상태·성질 + 진짜의, 진정한 → 진짜임, 진정성	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	balmy	balm + -y	balm	-y	suffix	그대로	~한 성질의 + 연고; 위안 → 온화한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	banal	ban + -al	ban	-al	suffix	그대로	~와 관련된 + 금지하다 → 진부한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	banish	ban + -ish	ban	-ish	suffix	그대로	~같은 + 금지하다 → 추방하다; 떨쳐 버리다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	barber	barb + -er	barb	-er	suffix	그대로	하는 사람·도구 + 가시 돋친 말; 갈고리 → 이발사	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	beholden	behold + -en	behold	-en	suffix	그대로	~하게 하다 + 보다 → 신세를 진	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	beholder	behold + -er	behold	-er	suffix	그대로	하는 사람·도구 + 보다 → 보는 사람	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	bilateral	bi- + lateral	lateral	bi-	prefix	그대로	둘 + 옆의, 측면의 → 쌍방의, 양자 간의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	blissful	bliss + -ful	bliss	-ful	suffix	그대로	가득한·있는 + 더없는 행복 → 더없이 행복한	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	bulky	bulk + -y	bulk	-y	suffix	그대로	~한 성질의 + 대부분, 큰 부피 → 부피가 큰	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	bully	bull + -y	bull	-y	suffix	그대로	~한 성질의 + 황소 → 괴롭히는 사람	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	buoyant	buoy + -ant	buoy	-ant	suffix	그대로	하는·~한 + 띄우다; 북돋우다 → 부력이 있는; 경기가 좋은	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	calibration	calibrate + -ion	calibrate	-ion	suffix	-e 탈락	행위·상태 + (계기를) 보정하다 → 보정	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	cancellation	cancel + -ation	cancel	-ation	suffix	자음 겹침	행위·상태 + 취소하다 → 취소	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	captivity	captive + -ity	captive	-ity	suffix	-e 탈락	상태·성질 + 포로 → 감금, 사로잡힘	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	carver	carve + -er	carve	-er	suffix	-e 탈락	하는 사람·도구 + 깎아 만들다 → 조각가; 고기 써는 칼	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	cavity	cave + -ity	cave	-ity	suffix	-e 탈락	상태·성질 + 동굴 → 충치; 구멍	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	ceaseless	cease + -less	cease	-less	suffix	그대로	없는 + 멈추다 → 끊임없는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	characterization	characterize + -ation	characterize	-ation	suffix	-e 탈락	행위·상태 + 특징짓다, 묘사하다 → 묘사; 특징 규정	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	chastise	chaste + -ise	chaste	-ise	suffix	-e 탈락	~하게 하다 + 순결한; 소박한 → 꾸짖다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	chilly	chill + -y	chill	-y	suffix	그대로	~한 성질의 + 한기 → 쌀쌀한; 냉담한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	choreographer	choreograph + -er	choreograph	-er	suffix	그대로	하는 사람·도구 + 안무하다; 세심하게 계획하다 → 안무가	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	choreography	choreograph + -y	choreograph	-y	suffix	그대로	~한 성질의 + 안무하다; 세심하게 계획하다 → 안무	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	circulation	circulate + -ion	circulate	-ion	suffix	-e 탈락	행위·상태 + 순환하다; 유포되다 → 순환; 유통	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	citation	cite + -ation	cite	-ation	suffix	-e 탈락	행위·상태 + 인용하다 → 인용; 출처 표기	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	clamor	clam + -or	clam	-or	suffix	그대로	하는 사람·도구 + 조개 → 아우성, 외침	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	coercion	coerce + -ion	coerce	-ion	suffix	-e 탈락	행위·상태 + 강요하다 → 강압	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	collaborative	collaborate + -ive	collaborate	-ive	suffix	-e 탈락	~한 성질의 + 협력하다 → 협력적인	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	colonial	colony + -al	colony	-al	suffix	y→i	~와 관련된 + 군집, 식민지 → 식민지의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	colonize	colon + -ize	colon	-ize	suffix	그대로	~하게 하다 + 콜론; 대장 → 식민지로 만들다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	colony	colon + -y	colon	-y	suffix	그대로	~한 성질의 + 콜론; 대장 → 군집, 식민지	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	commencement	commence + -ment	commence	-ment	suffix	그대로	행위·결과 + 시작되다 → 시작; 졸업식	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	communal	commune + -al	commune	-al	suffix	-e 탈락	~와 관련된 + 공동체, 공동 생활체 → 공동의, 공용의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	communist	commune + -ist	commune	-ist	suffix	-e 탈락	하는 사람·전문가 + 공동체, 공동 생활체 → 공산주의의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	comparatively	comparative + -ly	comparative	-ly	suffix	그대로	~하게 + 비교의 → 비교적	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	compassion	compass + -ion	compass	-ion	suffix	그대로	행위·상태 + 나침반 → 연민, 동정심	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	competence	compete + -ence	compete	-ence	suffix	-e 탈락	상태·행위 + 경쟁하다 → 능력, 역량	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	competent	compete + -ent	compete	-ent	suffix	-e 탈락	하는·~한 + 경쟁하다 → 유능한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	compilation	compile + -ation	compile	-ation	suffix	-e 탈락	행위·상태 + 편집하다; 컴파일하다 → 편집물; 모음	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	compiler	compile + -er	compile	-er	suffix	-e 탈락	하는 사람·도구 + 편집하다; 컴파일하다 → 컴파일러	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	composer	compose + -er	compose	-er	suffix	-e 탈락	하는 사람·도구 + 작곡하다, 구성하다 → 작곡가	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	composition	composite + -ion	composite	-ion	suffix	-e 탈락	행위·상태 + 합성의; 복합적인 → 구성; 작문	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	computation	compute + -ation	compute	-ation	suffix	-e 탈락	행위·상태 + 계산하다 → 계산	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	computational	computation + -al	computation	-al	suffix	그대로	~와 관련된 + 계산 → 계산의	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	concurrent	concur + -ent	concur	-ent	suffix	자음 겹침	하는·~한 + 동의하다 → 동시에 일어나는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	condemnation	condemn + -ation	condemn	-ation	suffix	그대로	행위·상태 + 비난하다; 선고하다 → 비난	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	condensation	condense + -ation	condense	-ation	suffix	-e 탈락	행위·상태 + 압축하다; 응결하다 → 응결; 요약	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	confidant	confide + -ant	confide	-ant	suffix	-e 탈락	하는·~한 + (비밀을) 털어놓다 → (비밀을 털어놓는) 절친한 친구	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	confidentiality	confidential + -ity	confidential	-ity	suffix	그대로	상태·성질 + 기밀의 → 기밀 유지	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	configuration	configure + -ation	configure	-ation	suffix	-e 탈락	행위·상태 + 설정하다 → 구성; 설정	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	confinement	confine + -ment	confine	-ment	suffix	그대로	행위·결과 + 제한하다 → 감금, 제한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	conformity	conform + -ity	conform	-ity	suffix	그대로	상태·성질 + 따르다, 순응하다 → 순응, 따름	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	conqueror	conquer + -or	conquer	-or	suffix	그대로	하는 사람·도구 + 정복하다; 극복하다 → 정복자	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	considerable	consider + -able	consider	-able	suffix	그대로	할 수 있는 + 고려하다 → 상당한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	contamination	contaminate + -ion	contaminate	-ion	suffix	-e 탈락	행위·상태 + 오염시키다 → 오염	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	contender	contend + -er	contend	-er	suffix	그대로	하는 사람·도구 + 주장하다; 겨루다 → 경쟁자, 도전자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	contradiction	contradict + -ion	contradict	-ion	suffix	그대로	행위·상태 + 반박하다; 모순되다 → 모순	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	controversial	controversy + -al	controversy	-al	suffix	y→i	~와 관련된 + 논란 → 논란이 되는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	convergence	converge + -ence	converge	-ence	suffix	-e 탈락	상태·행위 + 모이다, 수렴하다 → 수렴	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	convergent	converge + -ent	converge	-ent	suffix	-e 탈락	하는·~한 + 모이다, 수렴하다 → 수렴하는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	conversely	converse + -ly	converse	-ly	suffix	그대로	~하게 + 대화하다 → 반대로, 거꾸로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	convertible	convert + -ible	convert	-ible	suffix	그대로	할 수 있는 + 바꾸다, 변환하다 → 지붕을 열 수 있는 차	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	conviction	convict + -ion	convict	-ion	suffix	그대로	행위·상태 + 유죄 판결하다 → 유죄 판결; 확신	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	convulsion	convulse + -ion	convulse	-ion	suffix	-e 탈락	행위·상태 + 경련을 일으키다 → 경련; 격변	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	coordination	coordinate + -ion	coordinate	-ion	suffix	-e 탈락	행위·상태 + 조정하다 → 조정; 협력	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	coordinator	coordinate + -or	coordinate	-or	suffix	-e 탈락	하는 사람·도구 + 조정하다 → 조정자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	copious	co- + pious	pious	co-	prefix	그대로	함께 + 경건한, 독실한 → 풍부한, 많은	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	coral	core + -al	core	-al	suffix	-e 탈락	~와 관련된 + 핵심 → 산호	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	cordless	cord + -less	cord	-less	suffix	그대로	없는 + 끈, 전선 → 무선의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	corny	corn + -y	corn	-y	suffix	그대로	~한 성질의 + 옥수수 → 진부한, 유치한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	correlation	correlate + -ion	correlate	-ion	suffix	-e 탈락	행위·상태 + 연관성이 있다 → 상관관계	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	crafty	craft + -y	craft	-y	suffix	그대로	~한 성질의 + 공예, 기술 → 교활한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	crater	crate + -er	crate	-er	suffix	-e 탈락	하는 사람·도구 + 나무 상자 → 분화구; 움푹 팬 곳	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	criticism	critic + -ism	critic	-ism	suffix	그대로	사상·방식 + 비평가 → 비판	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	cryptic	crypt + -ic	crypt	-ic	suffix	그대로	~에 관한 + 지하 납골당 → 아리송한, 수수께끼 같은	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	crystallize	crystal + -ize	crystal	-ize	suffix	자음 겹침	~하게 하다 + 수정, 결정체 → 결정화하다; 구체화하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	cubic	cub + -ic	cub	-ic	suffix	그대로	~에 관한 + (곰·사자 등의) 새끼 → 세제곱의; 입방의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	culmination	culminate + -ion	culminate	-ion	suffix	-e 탈락	행위·상태 + 절정에 이르다 → 정점, 결정	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	cultivation	cultivate + -ion	cultivate	-ion	suffix	-e 탈락	행위·상태 + 경작하다; 기르다, 쌓다 → 경작, 재배	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	cursor	curse + -or	curse	-or	suffix	-e 탈락	하는 사람·도구 + 저주; 욕설 → 커서	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	cursory	cursor + -y	cursor	-y	suffix	그대로	~한 성질의 + 커서 → 대충 하는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	customarily	customary + -ly	customary	-ly	suffix	y→i	~하게 + 관례적인 → 관례적으로	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	customize	custom + -ize	custom	-ize	suffix	그대로	~하게 하다 + 관습 → 맞춤 설정하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	cynical	cynic + -al	cynic	-al	suffix	그대로	~와 관련된 + 냉소주의자 → 냉소적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dampen	damp + -en	damp	-en	suffix	그대로	~하게 하다 + 축축한 → 적시다; (기세를) 꺾다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	debunk	de- + bunk	bunk	de-	prefix	그대로	반대로·제거하여 + (이층) 침대 → 정체를 폭로하다, 틀렸음을 밝히다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	decadence	de- + cadence	cadence	de-	prefix	그대로	반대로·제거하여 + 억양, 운율 → 퇴폐, 타락	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	decadence	decade + -ence	decade	-ence	suffix	-e 탈락	상태·행위 + 10년 → 퇴폐, 타락	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	decadent	decade + -ent	decade	-ent	suffix	-e 탈락	하는·~한 + 10년 → 퇴폐적인; 호사스러운	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	decompose	de- + compose	compose	de-	prefix	그대로	반대로·제거하여 + 작곡하다, 구성하다 → 분해되다, 부패하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	decomposition	de- + composition	composition	de-	prefix	그대로	반대로·제거하여 + 구성; 작문 → 분해, 부패	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	decoy	de- + coy	coy	de-	prefix	그대로	반대로·제거하여 + 수줍은 체하는; 말을 아끼는 → 미끼, 유인물	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	decrease	de- + crease	crease	de-	prefix	그대로	반대로·제거하여 + 주름 → 줄다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	deduct	de- + duct	duct	de-	prefix	그대로	반대로·제거하여 + 관, 배관 → 공제하다, 빼다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	defeat	de- + feat	feat	de-	prefix	그대로	반대로·제거하여 + 위업; 묘기 → 물리치다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	defection	defect + -ion	defect	-ion	suffix	그대로	행위·상태 + 결함 → 망명; 탈당	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	defend	de- + fend	fend	de-	prefix	그대로	반대로·제거하여 + 스스로 꾸려 가다 (fend for oneself); 막다 (fend off) → 방어하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	deference	defer + -ence	defer	-ence	suffix	그대로	상태·행위 + 연기하다; 따르다 (defer to) → 존중, 경의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	defiance	defy + -ance	defy	-ance	suffix	y→i	상태·행위 + 거역하다, 무시하다 → 반항, 저항	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	defiant	defy + -ant	defy	-ant	suffix	y→i	하는·~한 + 거역하다, 무시하다 → 반항적인	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	defuse	de- + fuse	fuse	de-	prefix	그대로	반대로·제거하여 + 퓨즈; 도화선 → (폭탄을) 해체하다; 진정시키다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	degenerate	de- + generate	generate	de-	prefix	그대로	반대로·제거하여 + 생산하다 → 퇴화하다, 악화되다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	degradation	degrade + -ation	degrade	-ation	suffix	-e 탈락	행위·상태 + 비하하다; 저하시키다 → 저하, 악화; 비하	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dehydration	dehydrate + -ion	dehydrate	-ion	suffix	-e 탈락	행위·상태 + 탈수시키다; 건조하다 → 탈수	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	delegation	delegate + -ion	delegate	-ion	suffix	-e 탈락	행위·상태 + 위임하다 → 대표단	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	deliberate	de- + liberate	liberate	de-	prefix	그대로	반대로·제거하여 + 해방시키다 → 의도적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	denomination	de- + nomination	nomination	de-	prefix	그대로	반대로·제거하여 + 지명 → 교파; (화폐) 단위	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	depletion	deplete + -ion	deplete	-ion	suffix	-e 탈락	행위·상태 + 고갈시키다 → 고갈, 감소	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	deportation	deport + -ation	deport	-ation	suffix	그대로	행위·상태 + 추방하다 → 강제 추방	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	depose	de- + pose	pose	de-	prefix	그대로	반대로·제거하여 + (문제·위험을) 제기하다; 자세를 취하다 → (권좌에서) 물러나게 하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	deposit	de- + posit	posit	de-	prefix	그대로	반대로·제거하여 + 가정하다, 상정하다 → 보증금, 예금	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	deposition	deposit + -ion	deposit	-ion	suffix	그대로	행위·상태 + 보증금, 예금 → (법정 밖) 증언 녹취; 퇴적	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	depositor	deposit + -or	deposit	-or	suffix	그대로	하는 사람·도구 + 보증금, 예금 → 예금자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	deprivation	deprive + -ation	deprive	-ation	suffix	-e 탈락	행위·상태 + 빼앗다, 박탈하다 → 박탈, 결핍	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	descendant	descend + -ant	descend	-ant	suffix	그대로	하는·~한 + 내려가다 → 자손, 후손	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	designation	designate + -ion	designate	-ion	suffix	-e 탈락	행위·상태 + 지정하다, 지명하다 → 지정; 명칭	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	destiny	destine + -y	destine	-y	suffix	-e 탈락	~한 성질의 + 운명 짓다 (be destined to) → 운명	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	deterioration	deteriorate + -ion	deteriorate	-ion	suffix	-e 탈락	행위·상태 + 악화되다 → 악화	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	deterrent	deter + -ent	deter	-ent	suffix	자음 겹침	하는·~한 + 단념시키다, 막다 → 억지력, 제지하는 것	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	detonation	detonate + -ion	detonate	-ion	suffix	-e 탈락	행위·상태 + 폭발시키다 → 폭발	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	detract	de- + tract	tract	de-	prefix	그대로	반대로·제거하여 + 넓은 땅 → 손상시키다 (detract from)	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	detrimental	detriment + -al	detriment	-al	suffix	그대로	~와 관련된 + 손상, 손해 → 해로운	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	devastation	devastate + -ion	devastate	-ion	suffix	-e 탈락	행위·상태 + 완전히 파괴하다; 큰 충격을 주다 → 황폐, 대대적인 파괴	true	단어와 어간의 현재 뜻이 접사의 뜻을 더한 구성과 직접 이어짐 (1차 수동 검토)
-en	deviation	deviate + -ion	deviate	-ion	suffix	-e 탈락	행위·상태 + 벗어나다 → 편차	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	device	de- + vice	vice	de-	prefix	그대로	반대로·제거하여 + 악습 → 장치	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	devoid	de- + void	void	de-	prefix	그대로	반대로·제거하여 + 무효의; 빈 → ~이 없는 (devoid of)	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	devotion	devote + -ion	devote	-ion	suffix	-e 탈락	행위·상태 + 쏟다, 바치다 → 헌신, 전념	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	devotional	devotion + -al	devotion	-al	suffix	그대로	~와 관련된 + 헌신, 전념 → 신앙의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	diagonally	diagonal + -ly	diagonal	-ly	suffix	그대로	~하게 + 대각선의 → 대각선으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	diagonally	diagonal + -y	diagonal	-y	suffix	자음 겹침	~한 성질의 + 대각선의 → 대각선으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	diffusion	diffuse + -ion	diffuse	-ion	suffix	-e 탈락	행위·상태 + 확산시키다; 누그러뜨리다 → 확산, 보급	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	digestive	digest + -ive	digest	-ive	suffix	그대로	~한 성질의 + 소화하다 → 소화의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	diligently	diligent + -ly	diligent	-ly	suffix	그대로	~하게 + 부지런한 → 부지런히	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dilution	dilute + -ion	dilute	-ion	suffix	-e 탈락	행위·상태 + 희석하다 → 희석	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dimensional	dimension + -al	dimension	-al	suffix	그대로	~와 관련된 + 차원, 크기 → 차원의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dimly	dime + -ly	dime	-ly	suffix	-e 탈락	~하게 + 10센트 동전 → 어둑하게; 희미하게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	diplomatic	diplomat + -ic	diplomat	-ic	suffix	그대로	~에 관한 + 외교관 → 외교의; 원만한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	discernible	discern + -ible	discern	-ible	suffix	그대로	할 수 있는 + 분별하다, 알아차리다 → 알아볼 수 있는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	disclosure	dis- + closure	closure	dis-	prefix	그대로	아닌·반대의 + 폐쇄; 종료 → 공개	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	discord	dis- + cord	cord	dis-	prefix	그대로	아닌·반대의 + 끈, 전선 → 불화	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	discourage	dis- + courage	courage	dis-	prefix	그대로	아닌·반대의 + 용기 → 낙담시키다; 막다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	discretion	discrete + -ion	discrete	-ion	suffix	-e 탈락	행위·상태 + 별개의 → 재량	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	discrimination	discriminate + -ion	discriminate	-ion	suffix	-e 탈락	행위·상태 + 차별하다; 구별하다 → 차별	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	disillusion	dis- + illusion	illusion	dis-	prefix	그대로	아닌·반대의 + 착각; 환상 → 환멸을 느끼게 하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	disintegrate	dis- + integrate	integrate	dis-	prefix	그대로	아닌·반대의 + 통합하다 → 붕괴되다, 산산조각 나다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dismantle	dis- + mantle	mantle	dis-	prefix	그대로	아닌·반대의 + 망토; 책임, 역할 → 해체하다, 분해하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	disparity	dis- + parity	parity	dis-	prefix	그대로	아닌·반대의 + 동등, 균등 → 격차, 차이	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dispatch	dis- + patch	patch	dis-	prefix	그대로	아닌·반대의 + 작은 조각, 부분 → 발송하다	false	'파견하다'는 dis(반대) + patch(헝겊 조각)로 설명되지 않는다.
-en	dispersal	disperse + -al	disperse	-al	suffix	-e 탈락	~와 관련된 + 흩어지다, 해산시키다 → 분산, 해산	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	displacement	displace + -ment	displace	-ment	suffix	그대로	행위·결과 + 쫓아내다; 대체하다 → 이동, 강제 이주	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	displacement	dis- + placement	placement	dis-	prefix	그대로	아닌·반대의 + 배치 → 이동, 강제 이주	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dispose	dis- + pose	pose	dis-	prefix	그대로	아닌·반대의 + (문제·위험을) 제기하다; 자세를 취하다 → 처리하다, 버리다 (dispose of)	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	disruptive	disrupt + -ive	disrupt	-ive	suffix	그대로	~한 성질의 + 방해하다, 지장을 주다 → 지장을 주는, 혁신적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dissect	dis- + sect	sect	dis-	prefix	그대로	아닌·반대의 + 종파, 분파 → 해부하다; 분석하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dissection	dissect + -ion	dissect	-ion	suffix	그대로	행위·상태 + 해부하다; 분석하다 → 해부; 정밀 분석	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dissenter	dissent + -er	dissent	-er	suffix	그대로	하는 사람·도구 + 반대 의견 → 반대자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	distinction	distinct + -ion	distinct	-ion	suffix	그대로	행위·상태 + 뚜렷이 다른 → 차이; 구별	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	distinctive	distinct + -ive	distinct	-ive	suffix	그대로	~한 성질의 + 뚜렷이 다른 → 독특한, 특유의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	distinctively	distinctive + -ly	distinctive	-ly	suffix	그대로	~하게 + 독특한, 특유의 → 독특하게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	distinctly	distinct + -ly	distinct	-ly	suffix	그대로	~하게 + 뚜렷이 다른 → 분명히, 뚜렷하게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	distortion	distort + -ion	distort	-ion	suffix	그대로	행위·상태 + 왜곡하다 → 왜곡, 일그러짐	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	distract	dis- + tract	tract	dis-	prefix	그대로	아닌·반대의 + 넓은 땅 → 주의를 산만하게 하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	distraction	distract + -ion	distract	-ion	suffix	그대로	행위·상태 + 주의를 산만하게 하다 → 주의를 흩뜨리는 것	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	distraction	dis- + traction	traction	dis-	prefix	그대로	아닌·반대의 + 정지 마찰력; 지지, 관심 → 주의를 흩뜨리는 것	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	distribute	dis- + tribute	tribute	dis-	prefix	그대로	아닌·반대의 + 헌사 → 나누어 주다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	distributor	distribute + -or	distribute	-or	suffix	-e 탈락	하는 사람·도구 + 나누어 주다 → 유통업자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	divergence	diverge + -ence	diverge	-ence	suffix	-e 탈락	상태·행위 + 갈라지다; 다르다 → 차이, 분기	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	divergent	diverge + -ent	diverge	-ent	suffix	-e 탈락	하는·~한 + 갈라지다; 다르다 → 다른, 갈라지는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	diversion	diverse + -ion	diverse	-ion	suffix	-e 탈락	행위·상태 + 다양한 → 우회로; 기분 전환; 전용	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	domination	dominate + -ion	dominate	-ion	suffix	-e 탈락	행위·상태 + 지배하다 → 지배, 우세	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dreadful	dread + -ful	dread	-ful	suffix	그대로	가득한·있는 + 몹시 두려워하다 → 끔찍한, 지독한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	dweller	dwell + -er	dwell	-er	suffix	그대로	하는 사람·도구 + 살다; 곱씹다 (dwell on) → 거주자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	eccentricity	eccentric + -ity	eccentric	-ity	suffix	그대로	상태·성질 + 별난, 괴짜인 → 기벽, 별남	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	efficacious	efficacy + -ous	efficacy	-ous	suffix	y→i	~한 성질의 + 효능, 효험 → 효과적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	elaborately	elaborate + -ly	elaborate	-ly	suffix	그대로	~하게 + 정교한, 공들인 → 정교하게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	elaboration	elaborate + -ion	elaborate	-ion	suffix	-e 탈락	행위·상태 + 정교한, 공들인 → 상세한 설명	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	elevation	elevate + -ion	elevate	-ion	suffix	-e 탈락	행위·상태 + 높이다, 승진시키다 → 고도	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	embellishment	embellish + -ment	embellish	-ment	suffix	그대로	행위·결과 + 꾸미다, 윤색하다 → 장식; 윤색	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	embodiment	embody + -ment	embody	-ment	suffix	y→i	행위·결과 + 구현하다, 상징하다 → 화신, 구현	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	embroidery	embroider + -y	embroider	-y	suffix	그대로	~한 성질의 + 수를 놓다; 윤색하다 → 자수	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	emergence	emerge + -ence	emerge	-ence	suffix	-e 탈락	상태·행위 + 나타나다 → 출현, 등장	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	emergency	emergence + -y	emergence	-y	suffix	-e 탈락	~한 성질의 + 출현, 등장 → 비상사태	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	enactment	enact + -ment	enact	-ment	suffix	그대로	행위·결과 + (법을) 제정하다 → (법의) 제정	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	endorsement	endorse + -ment	endorse	-ment	suffix	그대로	행위·결과 + 지지하다, 보증하다 → 지지; 보증; 광고 모델 계약	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	endowment	endow + -ment	endow	-ment	suffix	그대로	행위·결과 + (재능을) 부여하다; 기부하다 → 기부금; 재능	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	enhancement	enhance + -ment	enhance	-ment	suffix	그대로	행위·결과 + 향상하다 → 향상	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	enlightenment	enlighten + -ment	enlighten	-ment	suffix	그대로	행위·결과 + 깨우치다, 이해시키다 → 계몽; 깨달음	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	entanglement	entangle + -ment	entangle	-ment	suffix	그대로	행위·결과 + 얽어매다, 휘말리게 하다 → 얽힘	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	epitomize	epitome + -ize	epitome	-ize	suffix	-e 탈락	~하게 하다 + 전형, 본보기 → 전형적으로 보여 주다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	eruption	erupt + -ion	erupt	-ion	suffix	그대로	행위·상태 + 분출하다; 터지다 → 분출, 폭발	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	escalation	escalate + -ion	escalate	-ion	suffix	-e 탈락	행위·상태 + 확대되다, 고조되다 → 확대, 증가	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	ethical	ethic + -al	ethic	-al	suffix	그대로	~와 관련된 + 윤리; 가치관 → 윤리적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	ethically	ethical + -ly	ethical	-ly	suffix	그대로	~하게 + 윤리적인 → 윤리적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	ethically	ethical + -y	ethical	-y	suffix	자음 겹침	~한 성질의 + 윤리적인 → 윤리적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	eviction	evict + -ion	evict	-ion	suffix	그대로	행위·상태 + 퇴거시키다 → 퇴거	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	exaggeration	exaggerate + -ion	exaggerate	-ion	suffix	-e 탈락	행위·상태 + 과장하다 → 과장	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	excavation	excavate + -ion	excavate	-ion	suffix	-e 탈락	행위·상태 + 발굴하다; 파다 → 발굴	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	excellence	excel + -ence	excel	-ence	suffix	자음 겹침	상태·행위 + 뛰어나다 → 우수함	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	excessive	excess + -ive	excess	-ive	suffix	그대로	~한 성질의 + 초과, 과잉 → 과도한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	exemption	exempt + -ion	exempt	-ion	suffix	그대로	행위·상태 + 면제된 → 면제	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	exertion	exert + -ion	exert	-ion	suffix	그대로	행위·상태 + (힘·영향을) 가하다, 행사하다 → 노력, 분투	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	exhaustive	exhaust + -ive	exhaust	-ive	suffix	그대로	~한 성질의 + 배기가스 → 철저한, 빠짐없는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	expansive	expanse + -ive	expanse	-ive	suffix	-e 탈락	~한 성질의 + 넓게 트인 공간 → 광활한; 넓은	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	explicitly	explicit + -ly	explicit	-ly	suffix	그대로	~하게 + 명확한; 명시적인 → 명시적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	exponentially	exponential + -ly	exponential	-ly	suffix	그대로	~하게 + 기하급수적인 → 기하급수적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	exponentially	exponential + -y	exponential	-y	suffix	자음 겹침	~한 성질의 + 기하급수적인 → 기하급수적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	externalize	external + -ize	external	-ize	suffix	그대로	~하게 하다 + 외부의 → 외면화하다, 표출하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	extraction	extract + -ion	extract	-ion	suffix	그대로	행위·상태 + 추출하다 → 추출; 발치	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	facility	facile + -ity	facile	-ity	suffix	-e 탈락	상태·성질 + 안이한, 손쉬운 → 시설	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	falsehood	false + -hood	false	-hood	suffix	그대로	시기·상태 + 거짓의 → 거짓	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	fanatical	fanatic + -al	fanatic	-al	suffix	그대로	~와 관련된 + 광신자; 열광적인 팬 → 광적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	fanaticism	fanatic + -ism	fanatic	-ism	suffix	그대로	사상·방식 + 광신자; 열광적인 팬 → 광신	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	fatal	fate + -al	fate	-al	suffix	-e 탈락	~와 관련된 + 운명 → 치명적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	fateful	fate + -ful	fate	-ful	suffix	그대로	가득한·있는 + 운명 → 운명적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	felony	felon + -y	felon	-y	suffix	그대로	~한 성질의 + 중범죄자 → 중범죄	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	fender	fend + -er	fend	-er	suffix	그대로	하는 사람·도구 + 스스로 꾸려 가다 (fend for oneself); 막다 (fend off) → (자동차) 펜더, 흙받기	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	fermentation	ferment + -ation	ferment	-ation	suffix	그대로	행위·상태 + 발효시키다 → 발효	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	fertilize	fertile + -ize	fertile	-ize	suffix	-e 탈락	~하게 하다 + 비옥한; 생식력 있는 → 비료를 주다; 수정시키다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	feudal	feud + -al	feud	-al	suffix	그대로	~와 관련된 + 불화, 반목 → 봉건 제도의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	flicker	flick + -er	flick	-er	suffix	그대로	하는 사람·도구 + 튀기다, 휙 움직이다 → 깜박이다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	fluctuation	fluctuate + -ion	fluctuate	-ion	suffix	-e 탈락	행위·상태 + 변동하다 → 변동, 등락	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	forestall	fore- + stall	stall	fore-	prefix	그대로	앞서 + (엔진이) 멈추다; 지연시키다 → 미연에 방지하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	formative	format + -ive	format	-ive	suffix	그대로	~한 성질의 + 형식 → 형성에 중요한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	formerly	former + -ly	former	-ly	suffix	그대로	~하게 + 이전의 → 이전에	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	freighter	freight + -er	freight	-er	suffix	그대로	하는 사람·도구 + 화물 → 화물선	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	funky	funk + -y	funk	-y	suffix	그대로	~한 성질의 + 펑크 음악 → 독특하고 멋진	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	fusion	fuse + -ion	fuse	-ion	suffix	-e 탈락	행위·상태 + 퓨즈; 도화선 → 융합	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	fussy	fuss + -y	fuss	-y	suffix	그대로	~한 성질의 + 야단법석, 호들갑 → 까다로운	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	futility	futile + -ity	futile	-ity	suffix	-e 탈락	상태·성질 + 헛된, 소용없는 → 헛됨, 무익	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	fuzzy	fuzz + -y	fuzz	-y	suffix	그대로	~한 성질의 + 솜털, 보풀 → 흐릿한; 보송보송한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	gallant	gall + -ant	gall	-ant	suffix	그대로	하는·~한 + 뻔뻔함 → 용감한; 정중한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	generalization	generalize + -ation	generalize	-ation	suffix	-e 탈락	행위·상태 + 일반화하다 → 일반화	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	geological	geologic + -al	geologic	-al	suffix	그대로	~와 관련된 + 지질학의 → 지질학의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	glider	glide + -er	glide	-er	suffix	-e 탈락	하는 사람·도구 + 미끄러지듯 가다 → 글라이더	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	gloomy	gloom + -y	gloom	-y	suffix	그대로	~한 성질의 + 어둠; 우울 → 우울한; 어둑어둑한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	glossy	gloss + -y	gloss	-y	suffix	그대로	~한 성질의 + 광택; 주석, 해설 → 윤이 나는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	glower	glow + -er	glow	-er	suffix	그대로	하는 사람·도구 + 빛나다 → 노려보다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	grateful	grate + -ful	grate	-ful	suffix	그대로	가득한·있는 + (강판에) 갈다; 거슬리다 → 감사하는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	greasy	grease + -y	grease	-y	suffix	-e 탈락	~한 성질의 + 기름, 그리스 → 기름진	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	grievance	grieve + -ance	grieve	-ance	suffix	-e 탈락	상태·행위 + 몹시 슬퍼하다 → 불만, 고충	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	gullible	gull + -ible	gull	-ible	suffix	그대로	할 수 있는 + 갈매기 → 잘 속는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	gully	gull + -y	gull	-y	suffix	그대로	~한 성질의 + 갈매기 → 도랑, 협곡	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	hacker	hack + -er	hack	-er	suffix	그대로	하는 사람·도구 + 해킹하다 → 해커	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	harmonious	harmony + -ous	harmony	-ous	suffix	y→i	~한 성질의 + 조화 → 조화로운	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	harshly	harsh + -ly	harsh	-ly	suffix	그대로	~하게 + 가혹한 → 가혹하게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	hasten	haste + -en	haste	-en	suffix	-e 탈락	~하게 하다 + 서두름 → 재촉하다, 앞당기다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	hasty	haste + -y	haste	-y	suffix	-e 탈락	~한 성질의 + 서두름 → 성급한, 서두른	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	hazy	haze + -y	haze	-y	suffix	-e 탈락	~한 성질의 + 아지랑이, 연무 → 흐릿한, 뿌연	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	herder	herd + -er	herd	-er	suffix	그대로	하는 사람·도구 + (동물의) 떼, 무리 → 목동	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	holy	hoe + -ly	hoe	-ly	suffix	-e 탈락	~하게 + 괭이 → 성스러운	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	hostility	hostile + -ity	hostile	-ity	suffix	-e 탈락	상태·성질 + 적대적인 → 적대감	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	humanist	humane + -ist	humane	-ist	suffix	-e 탈락	하는 사람·전문가 + 인도적인 → 인본주의자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	humanistic	humanist + -ic	humanist	-ic	suffix	그대로	~에 관한 + 인본주의자 → 인문주의적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	husky	husk + -y	husk	-y	suffix	그대로	~한 성질의 + 껍질, 겉껍데기 → 목쉰; 건장한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	illegitimate	il- + legitimate	legitimate	il-	prefix	그대로	아닌 + 정당한; 합법적인 → 불법의; 사생아의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	illumination	illuminate + -ion	illuminate	-ion	suffix	-e 탈락	행위·상태 + 밝게 비추다; 설명하다 → 조명; 깨달음	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	immigrate	im- + migrate	migrate	im-	prefix	그대로	아닌 + 이주하다, 이동하다 → 이민 오다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	immobile	im- + mobile	mobile	im-	prefix	그대로	아닌 + 이동할 수 있는 → 움직이지 않는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	immobilize	immobile + -ize	immobile	-ize	suffix	-e 탈락	~하게 하다 + 움직이지 않는 → 움직이지 못하게 하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	immobilize	im- + mobilize	mobilize	im-	prefix	그대로	아닌 + 동원하다 → 움직이지 못하게 하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	immortal	im- + mortal	mortal	im-	prefix	그대로	아닌 + 죽을 운명의; 치명적인 → 불멸의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	immunity	immune + -ity	immune	-ity	suffix	-e 탈락	상태·성질 + 면역이 있는 → 면역력; 면제	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	immunize	immune + -ize	immune	-ize	suffix	-e 탈락	~하게 하다 + 면역이 있는 → 면역력을 주다, 예방 접종하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	impact	im- + pact	pact	im-	prefix	그대로	아닌 + 협정, 조약 → 영향	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	impale	im- + pale	pale	im-	prefix	그대로	아닌 + 창백한 → 찌르다, 꿰뚫다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	impassive	impasse + -ive	impasse	-ive	suffix	-e 탈락	~한 성질의 + 교착 상태 → 무표정한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	imperil	im- + peril	peril	im-	prefix	그대로	아닌 + 위험 → 위태롭게 하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	implausible	im- + plausible	plausible	im-	prefix	그대로	아닌 + 그럴듯한 → 믿기 어려운	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	imply	im- + ply	ply	im-	prefix	그대로	아닌 + (일을) 계속하다; 정기 운항하다 → 암시하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	impose	im- + pose	pose	im-	prefix	그대로	아닌 + (문제·위험을) 제기하다; 자세를 취하다 → 부과하다; 강요하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	imprecise	im- + precise	precise	im-	prefix	그대로	아닌 + 정확한 → 부정확한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	impropriety	im- + propriety	propriety	im-	prefix	그대로	아닌 + 예의 바름, 적절성 → 부적절한 행위	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	impulsive	impulse + -ive	impulse	-ive	suffix	-e 탈락	~한 성질의 + 충동 → 충동적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	impurity	im- + purity	purity	im-	prefix	그대로	아닌 + 순수함, 순도 → 불순물	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inadequate	in- + adequate	adequate	in-	prefix	그대로	아닌 + 충분한 → 불충분한, 부적절한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inanimate	in- + animate	animate	in-	prefix	그대로	아닌 + 생기를 불어넣다 → 무생물의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	incite	in- + cite	cite	in-	prefix	그대로	아닌 + 인용하다 → 선동하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inclination	incline + -ation	incline	-ation	suffix	-e 탈락	행위·상태 + (마음이) 기울다 (be inclined to) → 경향, 성향; 의향	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	incoherent	in- + coherent	coherent	in-	prefix	그대로	아닌 + 일관성 있는, 논리 정연한 → 앞뒤가 안 맞는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	incompatible	in- + compatible	compatible	in-	prefix	그대로	아닌 + 호환되는 → 양립할 수 없는, 호환되지 않는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	incompetent	in- + competent	competent	in-	prefix	그대로	아닌 + 유능한 → 무능한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	incomprehensible	in- + comprehensible	comprehensible	in-	prefix	그대로	아닌 + 이해할 수 있는 → 이해할 수 없는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inconclusive	in- + conclusive	conclusive	in-	prefix	그대로	아닌 + 결정적인 → 결론에 이르지 못한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inconsequential	in- + consequential	consequential	in-	prefix	그대로	아닌 + 중대한; 결과로 생기는 → 대수롭지 않은	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	incorporate	in- + corporate	corporate	in-	prefix	그대로	아닌 + 기업의 → 포함하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	incorporation	incorporate + -ion	incorporate	-ion	suffix	-e 탈락	행위·상태 + 포함하다 → 통합, 편입; 법인 설립	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	incubation	incubate + -ion	incubate	-ion	suffix	-e 탈락	행위·상태 + 부화시키다; 배양하다 → 잠복기; 부화	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	incubator	incubate + -or	incubate	-or	suffix	-e 탈락	하는 사람·도구 + 부화시키다; 배양하다 → 인큐베이터; 창업 지원 기관	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	indecent	in- + decent	decent	in-	prefix	그대로	아닌 + 괜찮은, 품위 있는 → 음란한, 부적절한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	indefinitely	indefinite + -ly	indefinite	-ly	suffix	그대로	~하게 + 무기한의; 막연한 → 무기한으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	indictment	indict + -ment	indict	-ment	suffix	그대로	행위·결과 + 기소하다 → 기소; 고발장	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	indignity	in- + dignity	dignity	in-	prefix	그대로	아닌 + 존엄 → 모욕, 수모	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	induct	in- + duct	duct	in-	prefix	그대로	아닌 + 관, 배관 → (공식적으로) 입회시키다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	induction	induce + -tion	induce	-tion	suffix	-e 탈락	행위·상태 + 유발하다; 설득하다 → 도입; 입문 교육	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	induction	induct + -ion	induct	-ion	suffix	그대로	행위·상태 + (공식적으로) 입회시키다 → 도입; 입문 교육	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inference	infer + -ence	infer	-ence	suffix	그대로	상태·행위 + 추론하다 → 추론	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	infertile	in- + fertile	fertile	in-	prefix	그대로	아닌 + 비옥한; 생식력 있는 → 불임의; 척박한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inflation	inflate + -ion	inflate	-ion	suffix	-e 탈락	행위·상태 + 부풀리다 → 물가 상승	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inflexible	in- + flexible	flexible	in-	prefix	그대로	아닌 + 유연한 → 융통성 없는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	influx	in- + flux	flux	in-	prefix	그대로	아닌 + 계속적인 변화 → 유입, 쇄도	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	informative	in- + formative	formative	in-	prefix	그대로	아닌 + 형성에 중요한 → 유익한 정보를 주는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	informer	in- + former	former	in-	prefix	그대로	아닌 + 이전의 → 밀고자, 정보원	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	infraction	in- + fraction	fraction	in-	prefix	그대로	아닌 + 일부, 분수 → 위반	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	infringe	in- + fringe	fringe	in-	prefix	그대로	아닌 + 가장자리, 주변; 비주류 → 침해하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	infringement	infringe + -ment	infringe	-ment	suffix	그대로	행위·결과 + 침해하다 → (권리) 침해; 위반	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	infuse	in- + fuse	fuse	in-	prefix	그대로	아닌 + 퓨즈; 도화선 → 주입하다, 불어넣다; 우려내다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	infusion	in- + fusion	fusion	in-	prefix	그대로	아닌 + 융합 → 투입; 우려낸 차; 주입	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	infusion	infuse + -ion	infuse	-ion	suffix	-e 탈락	행위·상태 + 주입하다, 불어넣다; 우려내다 → 투입; 우려낸 차; 주입	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inhabitant	inhabit + -ant	inhabit	-ant	suffix	그대로	하는·~한 + 살다, 거주하다 → 주민, 거주자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inhibitor	inhibit + -or	inhibit	-or	suffix	그대로	하는 사람·도구 + 억제하다, 방해하다 → 억제제	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inhumane	in- + humane	humane	in-	prefix	그대로	아닌 + 인도적인 → 비인간적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	injection	inject + -ion	inject	-ion	suffix	그대로	행위·상태 + 주사하다; 투입하다 → 주사	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	injunction	in- + junction	junction	in-	prefix	그대로	아닌 + 교차점 → (법원의) 금지 명령	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	insanity	in- + sanity	sanity	in-	prefix	그대로	아닌 + 제정신 → 정신 이상; 미친 짓	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	insect	in- + sect	sect	in-	prefix	그대로	아닌 + 종파, 분파 → 곤충	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	insertion	insert + -ion	insert	-ion	suffix	그대로	행위·상태 + 넣다 → 삽입	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inspire	in- + spire	spire	in-	prefix	그대로	아닌 + 첨탑 → 영감을 주다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	install	in- + stall	stall	in-	prefix	그대로	아닌 + (엔진이) 멈추다; 지연시키다 → 설치하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	instinctive	instinct + -ive	instinct	-ive	suffix	그대로	~한 성질의 + 본능 → 본능적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	instinctively	instinctive + -ly	instinctive	-ly	suffix	그대로	~하게 + 본능적인 → 본능적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	institutionalize	institutional + -ize	institutional	-ize	suffix	그대로	~하게 하다 + 기관의 → 제도화하다; 시설에 수용하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	insulation	insulate + -ion	insulate	-ion	suffix	-e 탈락	행위·상태 + 단열하다, 절연하다; 보호하다 → 단열; 절연	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intact	in- + tact	tact	in-	prefix	그대로	아닌 + 요령, 눈치 → 손상되지 않은, 온전한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intangible	in- + tangible	tangible	in-	prefix	그대로	아닌 + 실재하는, 실질적인 → 무형의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intense	in- + tense	tense	in-	prefix	그대로	아닌 + 긴장한, 긴박한 → 강렬한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intensive	intense + -ive	intense	-ive	suffix	-e 탈락	~한 성질의 + 강렬한 → 집중적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intentionally	intentional + -ly	intentional	-ly	suffix	그대로	~하게 + 의도적인 → 고의로, 의도적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intentionally	intentional + -y	intentional	-y	suffix	자음 겹침	~한 성질의 + 의도적인 → 고의로, 의도적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intercede	inter- + cede	cede	inter-	prefix	그대로	사이에 + 양도하다 → 중재하다, 탄원하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	interdependence	inter- + dependence	dependence	inter-	prefix	그대로	사이에 + 의존 → 상호 의존	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	interdisciplinary	inter- + disciplinary	disciplinary	inter-	prefix	그대로	사이에 + 징계의 → 여러 학문 분야가 관련된	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	interference	interfere + -ence	interfere	-ence	suffix	-e 탈락	상태·행위 + 간섭하다 → 간섭; 방해	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intermediate	inter- + mediate	mediate	inter-	prefix	그대로	사이에 + 중재하다 → 중간 단계의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	internship	intern + -ship	intern	-ship	suffix	그대로	관계·지위 + 인턴, 수습사원 → 인턴십, 수습 기간	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intersect	inter- + sect	sect	inter-	prefix	그대로	사이에 + 종파, 분파 → 교차하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	interstellar	inter- + stellar	stellar	inter-	prefix	그대로	사이에 + 뛰어난; 별의 → 항성 간의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intertwine	inter- + twine	twine	inter-	prefix	그대로	사이에 + 노끈 → 뒤얽히다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intervention	intervene + -tion	intervene	-tion	suffix	-e 탈락	행위·상태 + 개입하다 → 개입	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	interweave	inter- + weave	weave	inter-	prefix	그대로	사이에 + (천을) 짜다; 누비며 가다 → 섞어 짜다, 엮다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intimidation	intimidate + -ion	intimidate	-ion	suffix	-e 탈락	행위·상태 + 겁주다, 위협하다 → 위협, 협박	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intoxication	intoxicate + -ion	intoxicate	-ion	suffix	-e 탈락	행위·상태 + 취하게 하다; 도취시키다 → 중독, 취함	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intricately	intricate + -ly	intricate	-ly	suffix	그대로	~하게 + 복잡한, 정교한 → 복잡하게, 정교하게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	intruder	intrude + -er	intrude	-er	suffix	-e 탈락	하는 사람·도구 + 침범하다, 방해하다 → 침입자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	invader	invade + -er	invade	-er	suffix	-e 탈락	하는 사람·도구 + 침입하다 → 침략자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	invalid	in- + valid	valid	in-	prefix	그대로	아닌 + 유효한 → 유효하지 않은	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	invalidate	in- + validate	validate	in-	prefix	그대로	아닌 + 입증하다; 승인하다 → 무효화하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	inverse	in- + verse	verse	in-	prefix	그대로	아닌 + 시구, 절 → 역의, 반대의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	invertebrate	in- + vertebrate	vertebrate	in-	prefix	그대로	아닌 + 척추동물 → 무척추동물	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	invocation	in- + vocation	vocation	in-	prefix	그대로	아닌 + 천직, 소명 → 기원, 기도; (법) 발동	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	irrigation	irrigate + -ion	irrigate	-ion	suffix	-e 탈락	행위·상태 + 관개하다, 물을 대다 → 관개	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	irritation	irritate + -ion	irritate	-ion	suffix	-e 탈락	행위·상태 + 짜증 나게 하다 → 짜증; (피부) 자극	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	isolation	isolate + -ion	isolate	-ion	suffix	-e 탈락	행위·상태 + 고립시키다 → 고립	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	jaunty	jaunt + -y	jaunt	-y	suffix	그대로	~한 성질의 + 짧은 여행 → 쾌활한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	justifiable	justify + -able	justify	-able	suffix	y→i	할 수 있는 + 정당화하다 → 정당한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	lament	lame + -ent	lame	-ent	suffix	-e 탈락	하는·~한 + 절름발이의; 설득력 없는 → 애도하다, 한탄하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	laudable	laud + -able	laud	-able	suffix	그대로	할 수 있는 + 칭찬하다 → 칭찬할 만한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	leaky	leak + -y	leak	-y	suffix	그대로	~한 성질의 + 새다 → 새는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	ledger	ledge + -er	ledge	-er	suffix	-e 탈락	하는 사람·도구 + 선반 모양의 돌출부 → 원장, 장부	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	leisurely	leisure + -ly	leisure	-ly	suffix	그대로	~하게 + 여가 → 느긋한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	liberally	liberal + -ly	liberal	-ly	suffix	그대로	~하게 + 자유주의적인 → 아낌없이	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	liberally	liberal + -y	liberal	-y	suffix	자음 겹침	~한 성질의 + 자유주의적인 → 아낌없이	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	locality	locale + -ity	locale	-ity	suffix	-e 탈락	상태·성질 + 장소; 배경 → 지역, 부근	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	lofty	loft + -y	loft	-y	suffix	그대로	~한 성질의 + 다락; 로프트 → 고상한; 매우 높은	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	logical	logic + -al	logic	-al	suffix	그대로	~와 관련된 + 논리 → 논리적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	luster	lust + -er	lust	-er	suffix	그대로	하는 사람·도구 + 욕망, 정욕 → 광택; 영광	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	lusty	lust + -y	lust	-y	suffix	그대로	~한 성질의 + 욕망, 정욕 → 원기 왕성한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	magnetism	magnet + -ism	magnet	-ism	suffix	그대로	사상·방식 + 자석 → 자력; 매력	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	malignant	malign + -ant	malign	-ant	suffix	그대로	하는·~한 + 헐뜯다 → 악성의; 악의적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	manifestation	manifest + -ation	manifest	-ation	suffix	그대로	행위·상태 + (분명히) 나타내다 → 표명, 나타남	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	manipulative	manipulate + -ive	manipulate	-ive	suffix	-e 탈락	~한 성질의 + 조작하다 → 조종하는, 교묘하게 다루는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	marginal	margin + -al	margin	-al	suffix	그대로	~와 관련된 + 여백; 차이 → 미미한; 주변부의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	mariner	marine + -er	marine	-er	suffix	-e 탈락	하는 사람·도구 + 해양의 → 선원	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	marshal	marsh + -al	marsh	-al	suffix	그대로	~와 관련된 + 습지 → (사람·생각을) 정리하다, 모으다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	maturity	mature + -ity	mature	-ity	suffix	-e 탈락	상태·성질 + 성숙한 → 성숙; (만기)	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	mediator	mediate + -or	mediate	-or	suffix	-e 탈락	하는 사람·도구 + 중재하다 → 중재자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	mediocrity	mediocre + -ity	mediocre	-ity	suffix	-e 탈락	상태·성질 + 평범한, 그저 그런 → 평범함	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	merger	merge + -er	merge	-er	suffix	-e 탈락	하는 사람·도구 + 합치다 → 합병	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	methodically	methodical + -ly	methodical	-ly	suffix	그대로	~하게 + 체계적인, 꼼꼼한 → 체계적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	methodically	methodical + -y	methodical	-y	suffix	자음 겹침	~한 성질의 + 체계적인, 꼼꼼한 → 체계적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	meticulously	meticulous + -ly	meticulous	-ly	suffix	그대로	~하게 + 꼼꼼한 → 꼼꼼하게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	microorganism	micro- + organism	organism	micro-	prefix	그대로	아주 작은 + 유기체, 생물 → 미생물	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	minimalist	minimal + -ist	minimal	-ist	suffix	그대로	하는 사람·전문가 + 최소한의 → 미니멀리즘의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	miscarriage	mis- + carriage	carriage	mis-	prefix	그대로	잘못 + 마차; 객차 → 유산; (재판의) 오심	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	misconception	mis- + conception	conception	mis-	prefix	그대로	잘못 + 개념, 구상; 임신 → 오해	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	misdeed	mis- + deed	deed	mis-	prefix	그대로	잘못 + 행위; (부동산) 증서 → 비행, 악행	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	misrepresentation	misrepresent + -ation	misrepresent	-ation	suffix	그대로	행위·상태 + 잘못 전하다, 왜곡하다 → 허위 진술, 왜곡	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	mobility	mobile + -ity	mobile	-ity	suffix	-e 탈락	상태·성질 + 이동할 수 있는 → 이동성	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	mobilize	mobile + -ize	mobile	-ize	suffix	-e 탈락	~하게 하다 + 이동할 수 있는 → 동원하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	moisten	moist + -en	moist	-en	suffix	그대로	~하게 하다 + 촉촉한 → 적시다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	monarchy	monarch + -y	monarch	-y	suffix	그대로	~한 성질의 + 군주 → 군주제	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	monotony	monotone + -y	monotone	-y	suffix	-e 탈락	~한 성질의 + 단조로운 소리 → 단조로움	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	monumental	monument + -al	monument	-al	suffix	그대로	~와 관련된 + 기념물 → 기념비적인; 엄청난	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	morality	morale + -ity	morale	-ity	suffix	-e 탈락	상태·성질 + 사기, 의욕 → 도덕성, 도덕	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	mortality	mortal + -ity	mortal	-ity	suffix	그대로	상태·성질 + 죽을 운명의; 치명적인 → 사망률	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	mournful	mourn + -ful	mourn	-ful	suffix	그대로	가득한·있는 + 애도하다 → 구슬픈	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	muffler	muffle + -er	muffle	-er	suffix	-e 탈락	하는 사람·도구 + 소리를 죽이다 → 머플러; 소음기	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	multilateral	multi- + lateral	lateral	multi-	prefix	그대로	여러 + 옆의, 측면의 → 다자간의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	municipality	municipal + -ity	municipal	-ity	suffix	그대로	상태·성질 + 시의, 지방 자치의 → 지방 자치체	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	mutation	mutate + -ion	mutate	-ion	suffix	-e 탈락	행위·상태 + 돌연변이를 일으키다 → 돌연변이; 변화	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	mutation	mute + -ation	mute	-ation	suffix	-e 탈락	행위·상태 + 말을 못 하는; 무음의 → 돌연변이; 변화	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	narration	narrate + -ion	narrate	-ion	suffix	-e 탈락	행위·상태 + 이야기하다 → 내레이션, 서술	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	narrative	narrate + -ive	narrate	-ive	suffix	-e 탈락	~한 성질의 + 이야기하다 → 서사	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	naturalistic	naturalist + -ic	naturalist	-ic	suffix	그대로	~에 관한 + 박물학자, 자연주의자 → 자연주의적인, 사실적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	negation	negate + -ion	negate	-ion	suffix	-e 탈락	행위·상태 + 무효화하다 → 부정	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	negotiation	negotiate + -ion	negotiate	-ion	suffix	-e 탈락	행위·상태 + 협상하다 → 협상	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	neutralize	neutral + -ize	neutral	-ize	suffix	그대로	~하게 하다 + 중립적인 → 무력화하다, 중화하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	nomadic	nomad + -ic	nomad	-ic	suffix	그대로	~에 관한 + 유목민 → 유목의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	nomination	nominate + -ion	nominate	-ion	suffix	-e 탈락	행위·상태 + 지명하다 → 지명	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	nonfiction	non- + fiction	fiction	non-	prefix	그대로	아닌 + 소설, 허구 → 논픽션	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	notably	notable + -ly	notable	-ly	suffix	-le→-ly	~하게 + 주목할 만한, 유명한 → 특히, 현저히	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	notably	notable + -y	notable	-y	suffix	-e 탈락	~한 성질의 + 주목할 만한, 유명한 → 특히, 현저히	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	notoriously	notorious + -ly	notorious	-ly	suffix	그대로	~하게 + 악명 높은 → 악명 높게, 널리 알려지게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	nourishment	nourish + -ment	nourish	-ment	suffix	그대로	행위·결과 + 영양분을 주다; 키우다 → 영양(분)	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	numerical	numeric + -al	numeric	-al	suffix	그대로	~와 관련된 + 숫자의 → 숫자의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	obscurity	obscure + -ity	obscure	-ity	suffix	-e 탈락	상태·성질 + 잘 알려지지 않은; 모호한 → 무명; 모호함	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	observance	observe + -ance	observe	-ance	suffix	-e 탈락	상태·행위 + 관찰하다 → 준수; 기념 행사	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	obstruction	obstruct + -ion	obstruct	-ion	suffix	그대로	행위·상태 + 막다, 방해하다 → 방해물, 차단	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	odor	ode + -or	ode	-or	suffix	-e 탈락	하는 사람·도구 + 송시, 찬가 → 냄새, 악취	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	optic	opt + -ic	opt	-ic	suffix	그대로	~에 관한 + 선택하다 → 눈의, 시각의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	optimization	optimize + -ation	optimize	-ation	suffix	-e 탈락	행위·상태 + 최적화하다 → 최적화	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	oral	ore + -al	ore	-al	suffix	-e 탈락	~와 관련된 + 광석 → 구두의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	oratory	orator + -y	orator	-y	suffix	그대로	~한 성질의 + 연설가 → 웅변(술)	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	orbital	orbit + -al	orbit	-al	suffix	그대로	~와 관련된 + 궤도 → 궤도의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	organism	organ + -ism	organ	-ism	suffix	그대로	사상·방식 + 장기 → 유기체, 생물	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	oriental	orient + -al	orient	-al	suffix	그대로	~와 관련된 + 방향을 맞추다; 적응시키다 → 동양의(구식 표현)	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	ornamental	ornament + -al	ornament	-al	suffix	그대로	~와 관련된 + 장식품 → 장식용의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	overdose	over- + dose	dose	over-	prefix	그대로	지나치게·위에 + 복용량 → 과다 복용	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	overhaul	over- + haul	haul	over-	prefix	그대로	지나치게·위에 + 끌다, 운반하다 → 정비하다, 전면 개편하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	overlap	over- + lap	lap	over-	prefix	그대로	지나치게·위에 + 무릎 위, 한 바퀴 → 겹치다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	palatable	palate + -able	palate	-able	suffix	-e 탈락	할 수 있는 + 미각; 입천장 → 맛있는; 받아들일 만한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	parable	pare + -able	pare	-able	suffix	-e 탈락	할 수 있는 + (껍질을) 벗기다; 줄이다 → 우화, 비유담	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	parasitic	parasite + -ic	parasite	-ic	suffix	-e 탈락	~에 관한 + 기생충, 기생 생물 → 기생하는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	parish	pare + -ish	pare	-ish	suffix	-e 탈락	~같은 + (껍질을) 벗기다; 줄이다 → 교구	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	parity	pare + -ity	pare	-ity	suffix	-e 탈락	상태·성질 + (껍질을) 벗기다; 줄이다 → 동등, 균등	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	patent	pat + -ent	pat	-ent	suffix	그대로	하는·~한 + 가볍게 두드리다 → 특허	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	patriarchal	patriarch + -al	patriarch	-al	suffix	그대로	~와 관련된 + 가장, 족장 → 가부장적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	patriotic	patriot + -ic	patriot	-ic	suffix	그대로	~에 관한 + 애국자 → 애국적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	patriotism	patriot + -ism	patriot	-ism	suffix	그대로	사상·방식 + 애국자 → 애국심	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	patronize	patron + -ize	patron	-ize	suffix	그대로	~하게 하다 + 후원자; 단골손님 → 단골로 다니다; 깔보다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	peculiarity	peculiar + -ity	peculiar	-ity	suffix	그대로	상태·성질 + 이상한, 특이한; 고유의 → 특이한 점	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	penalize	penal + -ize	penal	-ize	suffix	그대로	~하게 하다 + 형벌의 → 처벌하다, 불이익을 주다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	penetration	penetrate + -ion	penetrate	-ion	suffix	-e 탈락	행위·상태 + 관통하다, 침투하다 → 침투	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	perilous	peril + -ous	peril	-ous	suffix	그대로	~한 성질의 + 위험 → 아주 위험한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	periodically	periodical + -ly	periodical	-ly	suffix	그대로	~하게 + 정기 간행물 → 주기적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	periodically	periodical + -y	periodical	-y	suffix	자음 겹침	~한 성질의 + 정기 간행물 → 주기적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	perseverance	persevere + -ance	persevere	-ance	suffix	-e 탈락	상태·행위 + 인내하다, 끈기 있게 계속하다 → 인내, 끈기	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	persistent	persist + -ent	persist	-ent	suffix	그대로	하는·~한 + 계속하다 → 끈질긴; 지속되는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	pivotal	pivot + -al	pivot	-al	suffix	그대로	~와 관련된 + (축을 중심으로) 회전하다; 방향을 전환하다 → 중추적인, 중요한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	polarity	polar + -ity	polar	-ity	suffix	그대로	상태·성질 + 극지의 → 양극성; 대립	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	polarize	polar + -ize	polar	-ize	suffix	그대로	~하게 하다 + 극지의 → 양극화하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	pollen	poll + -en	poll	-en	suffix	그대로	~하게 하다 + 여론 조사 → 꽃가루	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	ponder	pond + -er	pond	-er	suffix	그대로	하는 사람·도구 + 연못 → 숙고하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	ponderous	ponder + -ous	ponder	-ous	suffix	그대로	~한 성질의 + 숙고하다 → 육중한; 지루한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	porous	pore + -ous	pore	-ous	suffix	-e 탈락	~한 성질의 + 땀구멍, 모공 → 구멍이 많은, 다공성의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	portion	pore + -tion	pore	-tion	suffix	-e 탈락	행위·상태 + 땀구멍, 모공 → 부분, 1인분	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	postoperative	post- + operative	operative	post-	prefix	그대로	뒤에 + 작동하는; 효력 있는 → 수술 후의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	preamble	pre- + amble	amble	pre-	prefix	그대로	미리·앞서 + 느긋하게 걷다 → 서문, 전문	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	precede	pre- + cede	cede	pre-	prefix	그대로	미리·앞서 + 양도하다 → 앞서다, 선행하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	precedence	precede + -ence	precede	-ence	suffix	-e 탈락	상태·행위 + 앞서다, 선행하다 → 우선(권)	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	precedent	precede + -ent	precede	-ent	suffix	-e 탈락	하는·~한 + 앞서다, 선행하다 → 선례, 전례	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	precipitation	precipitate + -ion	precipitate	-ion	suffix	-e 탈락	행위·상태 + 촉발하다 → 강수	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	precisely	precise + -ly	precise	-ly	suffix	그대로	~하게 + 정확한 → 정확히	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	precursor	pre- + cursor	cursor	pre-	prefix	그대로	미리·앞서 + 커서 → 선구자, 전조	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	predatory	predator + -y	predator	-y	suffix	그대로	~한 성질의 + 포식자 → 약탈적인; 포식성의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	predictive	predict + -ive	predict	-ive	suffix	그대로	~한 성질의 + 예측하다 → 예측의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	predisposition	pre- + disposition	disposition	pre-	prefix	그대로	미리·앞서 + 성향 → 성향, 소인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	predominant	pre- + dominant	dominant	pre-	prefix	그대로	미리·앞서 + 지배적인 → 우세한, 주된	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	predominantly	predominant + -ly	predominant	-ly	suffix	그대로	~하게 + 우세한, 주된 → 주로, 대부분	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	predominate	pre- + dominate	dominate	pre-	prefix	그대로	미리·앞서 + 지배하다 → 우세하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	premature	pre- + mature	mature	pre-	prefix	그대로	미리·앞서 + 성숙한 → 너무 이른, 조기의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	prerequisite	pre- + requisite	requisite	pre-	prefix	그대로	미리·앞서 + 필요한, 필수의 → 선행 조건	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	preservation	preserve + -ation	preserve	-ation	suffix	-e 탈락	행위·상태 + 보존하다 → 보존	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	presumptuous	pre- + sumptuous	sumptuous	pre-	prefix	그대로	미리·앞서 + 호화로운 → 주제넘은	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	pretense	pre- + tense	tense	pre-	prefix	그대로	미리·앞서 + 긴장한, 긴박한 → 가식, 핑계	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	pretension	pretense + -ion	pretense	-ion	suffix	-e 탈락	행위·상태 + 가식, 핑계 → 허세, 가식	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	pretension	pre- + tension	tension	pre-	prefix	그대로	미리·앞서 + 긴장 → 허세, 가식	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	primal	prim + -al	prim	-al	suffix	그대로	~와 관련된 + 새침한, 고지식한 → 원초적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	prior	pry + -or	pry	-or	suffix	y→i	하는 사람·도구 + 캐묻다; 비틀어 열다 → 이전의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	probation	probe + -ation	probe	-ation	suffix	-e 탈락	행위·상태 + 조사하다 → 집행 유예; 수습 기간	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	procurement	procure + -ment	procure	-ment	suffix	그대로	행위·결과 + 구하다, 조달하다 → 조달	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	prodigious	prodigy + -ous	prodigy	-ous	suffix	y→i	~한 성질의 + 신동 → 엄청난, 비범한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	professor	profess + -or	profess	-or	suffix	그대로	하는 사람·도구 + 주장하다, 공언하다 → 교수	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	profoundly	profound + -ly	profound	-ly	suffix	그대로	~하게 + 깊은 → 깊이, 극심하게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	prohibitive	prohibit + -ive	prohibit	-ive	suffix	그대로	~한 성질의 + 금지하다 → 엄청나게 비싼; 금지하는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	proliferation	proliferate + -ion	proliferate	-ion	suffix	-e 탈락	행위·상태 + 급증하다 → 급증, 확산	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	propagation	propagate + -ion	propagate	-ion	suffix	-e 탈락	행위·상태 + 전파하다; 번식시키다 → 번식; 전파	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	propeller	propel + -er	propel	-er	suffix	자음 겹침	하는 사람·도구 + 나아가게 하다, 추진하다 → 프로펠러	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	prophetic	prophet + -ic	prophet	-ic	suffix	그대로	~에 관한 + 예언자 → 예언적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	prosecution	prosecute + -ion	prosecute	-ion	suffix	-e 탈락	행위·상태 + 기소하다 → 기소; 검찰 측	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	prospective	prospect + -ive	prospect	-ive	suffix	그대로	~한 성질의 + 전망 → 장래의; 예비의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	prospector	prospect + -or	prospect	-or	suffix	그대로	하는 사람·도구 + 전망 → 탐광자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	prosperity	prosper + -ity	prosper	-ity	suffix	그대로	상태·성질 + 번영하다, 번창하다 → 번영, 번창	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	puny	pun + -y	pun	-y	suffix	그대로	~한 성질의 + 말장난 → 왜소한, 보잘것없는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	pursuant	pursue + -ant	pursue	-ant	suffix	-e 탈락	하는·~한 + 추구하다 → ~에 따른	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	radiation	radiate + -ion	radiate	-ion	suffix	-e 탈락	행위·상태 + 발산하다 → 방사선	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	radically	radical + -ly	radical	-ly	suffix	그대로	~하게 + 급진적인 → 근본적으로, 급진적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	radically	radical + -y	radical	-y	suffix	자음 겹침	~한 성질의 + 급진적인 → 근본적으로, 급진적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rafter	raft + -er	raft	-er	suffix	그대로	하는 사람·도구 + 뗏목; 다수 → 서까래	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rampant	ramp + -ant	ramp	-ant	suffix	그대로	하는·~한 + 경사로 → 만연한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rancher	ranch + -er	ranch	-er	suffix	그대로	하는 사람·도구 + 목장 → 목장주	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rational	ration + -al	ration	-al	suffix	그대로	~와 관련된 + 배급량 → 합리적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	raven	rave + -en	rave	-en	suffix	-e 탈락	~하게 하다 + 극찬하다; 헛소리하다 → 큰까마귀	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	ravenous	raven + -ous	raven	-ous	suffix	그대로	~한 성질의 + 큰까마귀 → 몹시 배고픈	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	readjust	re- + adjust	adjust	re-	prefix	그대로	다시 + 조정하다 → 재조정하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	realign	re- + align	align	re-	prefix	그대로	다시 + 정렬하다 → 재조정하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reassure	re- + assure	assure	re-	prefix	그대로	다시 + 확신시키다 → 안심시키다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rebuttal	rebut + -al	rebut	-al	suffix	자음 겹침	~와 관련된 + 반박하다 → 반박	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	recede	re- + cede	cede	re-	prefix	그대로	다시 + 양도하다 → 물러나다, 약해지다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	recital	recite + -al	recite	-al	suffix	-e 탈락	~와 관련된 + 암송하다, 낭독하다 → 독주회, 발표회	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	recite	re- + cite	cite	re-	prefix	그대로	다시 + 인용하다 → 암송하다, 낭독하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	recoil	re- + coil	coil	re-	prefix	그대로	다시 + 고리, 코일 → 움찔하다, 뒷걸음질 치다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reconstitute	re- + constitute	constitute	re-	prefix	그대로	다시 + 구성하다 → 재구성하다; (가루를) 물에 타서 되돌리다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reconstruct	re- + construct	construct	re-	prefix	그대로	다시 + 건설하다 → 재건하다, 재구성하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reconstruction	reconstruct + -ion	reconstruct	-ion	suffix	그대로	행위·상태 + 재건하다, 재구성하다 → 재건	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	redeem	re- + deem	deem	re-	prefix	그대로	다시 + 여기다, 간주하다 → 교환하다; 만회하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	refinance	refine + -ance	refine	-ance	suffix	-e 탈락	상태·행위 + 다듬다 → 재융자하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	refinement	refine + -ment	refine	-ment	suffix	그대로	행위·결과 + 다듬다 → 개선; 세련됨; 정제	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reformer	re- + former	former	re-	prefix	그대로	다시 + 이전의 → 개혁가	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reformer	reform + -er	reform	-er	suffix	그대로	하는 사람·도구 + 개혁 → 개혁가	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	refrigeration	refrigerate + -ion	refrigerate	-ion	suffix	-e 탈락	행위·상태 + 냉장하다 → 냉장	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	regenerate	re- + generate	generate	re-	prefix	그대로	다시 + 생산하다 → 재생하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	regeneration	regenerate + -ion	regenerate	-ion	suffix	-e 탈락	행위·상태 + 재생하다 → 재생, 부활	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	regimen	regime + -en	regime	-en	suffix	-e 탈락	~하게 하다 + 정권; 체제 → 식이 요법, 처방 계획	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	regiment	regime + -ent	regime	-ent	suffix	-e 탈락	하는·~한 + 정권; 체제 → 연대	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	regression	regress + -ion	regress	-ion	suffix	그대로	행위·상태 + 퇴보하다 → 퇴보; 회귀	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	regressive	regress + -ive	regress	-ive	suffix	그대로	~한 성질의 + 퇴보하다 → 퇴행적인; 역진적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rehabilitation	rehabilitate + -ion	rehabilitate	-ion	suffix	-e 탈락	행위·상태 + 재활시키다; 복원하다 → 재활	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rekindle	re- + kindle	kindle	re-	prefix	그대로	다시 + 불을 붙이다; 불러일으키다 → 다시 불붙이다, 되살리다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	relentless	relent + -less	relent	-less	suffix	그대로	없는 + 누그러지다 → 끊임없는, 가차 없는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reliance	rely + -ance	rely	-ance	suffix	y→i	상태·행위 + 의지하다 → 의존	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reliant	rely + -ant	rely	-ant	suffix	y→i	하는·~한 + 의지하다 → 의존하는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	remarkable	remark + -able	remark	-able	suffix	그대로	할 수 있는 + 발언 → 놀라운	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	repellent	repel + -ent	repel	-ent	suffix	자음 겹침	하는·~한 + 물리치다; 쫓아내다 → 방충제; 퇴치제	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	repercussion	re- + percussion	percussion	re-	prefix	그대로	다시 + 타악기 → (부정적) 영향, 반향	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	replication	replicate + -ion	replicate	-ion	suffix	-e 탈락	행위·상태 + 복제하다, 재현하다 → 복제; 재현	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	repose	re- + pose	pose	re-	prefix	그대로	다시 + (문제·위험을) 제기하다; 자세를 취하다 → 휴식, 평온	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reproduction	reproduce + -tion	reproduce	-tion	suffix	-e 탈락	행위·상태 + 번식하다; 복제하다 → 복제; 번식	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	repulsive	repulse + -ive	repulse	-ive	suffix	-e 탈락	~한 성질의 + 격퇴하다; 혐오감을 주다 → 역겨운	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reputation	repute + -ation	repute	-ation	suffix	-e 탈락	행위·상태 + 평판 → 평판	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	resemblance	resemble + -ance	resemble	-ance	suffix	-e 탈락	상태·행위 + 닮다 → 닮음, 유사함	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	resemblance	re- + semblance	semblance	re-	prefix	그대로	다시 + 외관, 겉모양 → 닮음, 유사함	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	residual	residue + -al	residue	-al	suffix	-e 탈락	~와 관련된 + 잔여물, 찌꺼기 → 남은, 잔여의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	resignation	resign + -ation	resign	-ation	suffix	그대로	행위·상태 + 사임하다 → 사직, 사임; 체념	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	resin	re- + sin	sin	re-	prefix	그대로	다시 + 죄 → 수지, 송진	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	resistant	resist + -ant	resist	-ant	suffix	그대로	하는·~한 + 저항하다; 참다 → 저항력이 있는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	responsiveness	responsive + -ness	responsive	-ness	suffix	그대로	상태·성질 + 즉각 반응하는 → 반응성, 대응력	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	restrain	re- + strain	strain	re-	prefix	그대로	다시 + 부담; 긴장 → 제지하다, 억제하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	restrict	re- + strict	strict	re-	prefix	그대로	다시 + 엄격한 → 제한하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	restrictive	restrict + -ive	restrict	-ive	suffix	그대로	~한 성질의 + 제한하다 → 제한하는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	retainer	retain + -er	retain	-er	suffix	그대로	하는 사람·도구 + 유지하다 → 착수금, 고용료; 교정 장치	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	retaliation	retaliate + -ion	retaliate	-ion	suffix	-e 탈락	행위·상태 + 보복하다 → 보복	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	retract	re- + tract	tract	re-	prefix	그대로	다시 + 넓은 땅 → 철회하다; 집어넣다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	retrieval	retrieve + -al	retrieve	-al	suffix	-e 탈락	~와 관련된 + 되찾다 → 검색; 회수	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	retriever	retrieve + -er	retrieve	-er	suffix	-e 탈락	하는 사람·도구 + 되찾다 → 리트리버 (개)	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	retrospective	retrospect + -ive	retrospect	-ive	suffix	그대로	~한 성질의 + 회상 (in retrospect: 돌이켜 보면) → 회고전	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reverence	revere + -ence	revere	-ence	suffix	-e 탈락	상태·행위 + 숭배하다, 존경하다 → 숭배, 존경	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reverse	re- + verse	verse	re-	prefix	그대로	다시 + 시구, 절 → 뒤집다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	revile	re- + vile	vile	re-	prefix	그대로	다시 + 비열한; 지독한 → 욕하다, 매도하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	revitalization	revitalize + -ation	revitalize	-ation	suffix	-e 탈락	행위·상태 + 활성화하다, 되살리다 → 재활성화	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	revival	revive + -al	revive	-al	suffix	-e 탈락	~와 관련된 + 되살리다 → 부활, 회복	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	revolt	re- + volt	volt	re-	prefix	그대로	다시 + 볼트(전압 단위) → 반란, 봉기	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	revolutionize	revolution + -ize	revolution	-ize	suffix	그대로	~하게 하다 + 혁명 → 혁명적으로 바꾸다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	reward	re- + ward	ward	re-	prefix	그대로	다시 + 병동 → 보상	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rhythmic	rhythm + -ic	rhythm	-ic	suffix	그대로	~에 관한 + 리듬 → 리드미컬한, 율동적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rigidity	rigid + -ity	rigid	-ity	suffix	그대로	상태·성질 + 엄격한; 뻣뻣한 → 경직성	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rigor	rig + -or	rig	-or	suffix	그대로	하는 사람·도구 + 조작하다 → 엄격함, 철저함	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rigorous	rigor + -ous	rigor	-ous	suffix	그대로	~한 성질의 + 엄격함, 철저함 → 엄격한, 철저한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rodent	rod + -ent	rod	-ent	suffix	그대로	하는·~한 + 막대 → 설치류	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rooster	roost + -er	roost	-er	suffix	그대로	하는 사람·도구 + (새의) 횃대 → 수탉	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	routinely	routine + -ly	routine	-ly	suffix	그대로	~하게 + 일상, 규칙적인 절차 → 일상적으로, 정기적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	rover	rove + -er	rove	-er	suffix	-e 탈락	하는 사람·도구 + 돌아다니다, 배회하다 → 탐사 차량	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	salinity	saline + -ity	saline	-ity	suffix	-e 탈락	상태·성질 + 소금을 함유한 → 염도	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	sanity	sane + -ity	sane	-ity	suffix	-e 탈락	상태·성질 + 제정신의; 분별 있는 → 제정신	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	scanner	scan + -er	scan	-er	suffix	자음 겹침	하는 사람·도구 + 훑어보다 → 스캐너	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	scarcely	scarce + -ly	scarce	-ly	suffix	그대로	~하게 + 부족한 → 거의 ~않다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	scarcity	scarce + -ity	scarce	-ity	suffix	-e 탈락	상태·성질 + 부족한 → 부족, 결핍	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	scholarly	scholar + -ly	scholar	-ly	suffix	그대로	~하게 + 학자 → 학문적인, 학술적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	scrupulously	scrupulous + -ly	scrupulous	-ly	suffix	그대로	~하게 + 꼼꼼한; 양심적인 → 꼼꼼하게, 철저하게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	sculptor	sculpt + -or	sculpt	-or	suffix	그대로	하는 사람·도구 + 조각하다 → 조각가	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	secretion	secrete + -ion	secrete	-ion	suffix	-e 탈락	행위·상태 + 분비하다; 숨기다 → 분비(물)	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	secretive	secrete + -ive	secrete	-ive	suffix	-e 탈락	~한 성질의 + 분비하다; 숨기다 → 비밀스러운	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	sector	sect + -or	sect	-or	suffix	그대로	하는 사람·도구 + 종파, 분파 → 부문	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	sedative	sedate + -ive	sedate	-ive	suffix	-e 탈락	~한 성질의 + 차분한; 느긋한 → 진정제	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	sensory	sensor + -y	sensor	-y	suffix	그대로	~한 성질의 + 감지기 → 감각의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	sentimental	sentiment + -al	sentiment	-al	suffix	그대로	~와 관련된 + 감정, 정서; 의견 → 감상적인, 정서적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	serenity	serene + -ity	serene	-ity	suffix	-e 탈락	상태·성질 + 고요한, 평화로운 → 평온, 고요	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	singularity	singular + -ity	singular	-ity	suffix	그대로	상태·성질 + 단수의; 뛰어난, 남다른 → 특이점; 독특함	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	skepticism	skeptic + -ism	skeptic	-ism	suffix	그대로	사상·방식 + 회의론자 → 회의론, 의심	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	skewer	skew + -er	skew	-er	suffix	그대로	하는 사람·도구 + 왜곡하다 → 꼬치	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	slimy	slim + -y	slim	-y	suffix	그대로	~한 성질의 + 날씬한 → 끈적끈적한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	slimy	slime + -y	slime	-y	suffix	-e 탈락	~한 성질의 + 점액, 끈적한 것 → 끈적끈적한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	sluggish	slug + -ish	slug	-ish	suffix	자음 겹침	~같은 + 민달팽이 → 부진한, 느린	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	solely	sole + -ly	sole	-ly	suffix	그대로	~하게 + 유일한 → 오로지	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	solicitor	solicit + -or	solicit	-or	suffix	그대로	하는 사람·도구 + 요청하다, 간청하다 → 사무 변호사 (영국)	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	soloist	solo + -ist	solo	-ist	suffix	그대로	하는 사람·전문가 + 혼자의, 독주하는 → 독주자, 독창자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	sparsely	sparse + -ly	sparse	-ly	suffix	그대로	~하게 + 드문드문한, 희박한 → 드문드문	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	spectacularly	spectacular + -ly	spectacular	-ly	suffix	그대로	~하게 + 장관인 → 극적으로, 눈부시게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	speculation	speculate + -ion	speculate	-ion	suffix	-e 탈락	행위·상태 + 추측하다; 투기하다 → 추측; 투기	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	speculative	speculate + -ive	speculate	-ive	suffix	-e 탈락	~한 성질의 + 추측하다; 투기하다 → 추측에 근거한; 투기적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	spiky	spike + -y	spike	-y	suffix	-e 탈락	~한 성질의 + 급등; 뾰족한 것 → 뾰족뾰족한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	spinal	spine + -al	spine	-al	suffix	-e 탈락	~와 관련된 + 척추; 책등 → 척추의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	spiral	spire + -al	spire	-al	suffix	-e 탈락	~와 관련된 + 첨탑 → 나선; 악순환, 급등	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	spontaneously	spontaneous + -ly	spontaneous	-ly	suffix	그대로	~하게 + 자발적인, 즉흥적인 → 자발적으로, 즉흥적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	starvation	starve + -ation	starve	-ation	suffix	-e 탈락	행위·상태 + 굶주리다 → 기아, 굶주림	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	sterilize	sterile + -ize	sterile	-ize	suffix	-e 탈락	~하게 하다 + 살균한; 불임의 → 살균하다; 불임 시술을 하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	stiffen	stiff + -en	stiff	-en	suffix	그대로	~하게 하다 + 뻣뻣한 → 뻣뻣해지다, 굳어지다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	stimulation	stimulate + -ion	stimulate	-ion	suffix	-e 탈락	행위·상태 + 자극하다 → 자극	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	stipulation	stipulate + -ion	stipulate	-ion	suffix	-e 탈락	행위·상태 + 규정하다, 명시하다 → 조항, 조건	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	strenuously	strenuous + -ly	strenuous	-ly	suffix	그대로	~하게 + 몹시 힘든 → 열렬히, 강력히	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	strictly	strict + -ly	strict	-ly	suffix	그대로	~하게 + 엄격한 → 엄격히	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	strident	stride + -ent	stride	-ent	suffix	-e 탈락	하는·~한 + 성큼성큼 걷기; 진전 → 귀에 거슬리는; 강경한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	sublime	sub- + lime	lime	sub-	prefix	그대로	아래에 + 라임; 석회 → 숭고한; 뛰어난	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	submarine	sub- + marine	marine	sub-	prefix	그대로	아래에 + 해양의 → 잠수함	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	submerge	sub- + merge	merge	sub-	prefix	그대로	아래에 + 합치다 → 물에 잠기다, 담그다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	subscriber	subscribe + -er	subscribe	-er	suffix	-e 탈락	하는 사람·도구 + 구독하다 → 구독자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	subsequently	subsequent + -ly	subsequent	-ly	suffix	그대로	~하게 + 그다음의 → 그 후에	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	subsidize	subside + -ize	subside	-ize	suffix	-e 탈락	~하게 하다 + 가라앉다, 진정되다 → 보조금을 지급하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	subsidy	subside + -y	subside	-y	suffix	-e 탈락	~한 성질의 + 가라앉다, 진정되다 → 보조금	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	subsistence	subsist + -ence	subsist	-ence	suffix	그대로	상태·행위 + 근근이 살아가다 → 최저 생활, 생계	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	substance	sub- + stance	stance	sub-	prefix	그대로	아래에 + 입장, 태도 → 물질	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	substantially	substantial + -ly	substantial	-ly	suffix	그대로	~하게 + 상당한 → 상당히	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	substantially	substantial + -y	substantial	-y	suffix	자음 겹침	~한 성질의 + 상당한 → 상당히	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	superficially	superficial + -ly	superficial	-ly	suffix	그대로	~하게 + 피상적인, 표면적인 → 피상적으로, 겉으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	superficially	superficial + -y	superficial	-y	suffix	자음 겹침	~한 성질의 + 피상적인, 표면적인 → 피상적으로, 겉으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	superimpose	super- + impose	impose	super-	prefix	그대로	위에·넘어서 + 부과하다; 강요하다 → 겹쳐 놓다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	superiority	superior + -ity	superior	-ity	suffix	그대로	상태·성질 + 더 우수한 → 우월성, 우위	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	supersonic	super- + sonic	sonic	super-	prefix	그대로	위에·넘어서 + 소리의 → 초음속의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	supervision	supervise + -ion	supervise	-ion	suffix	-e 탈락	행위·상태 + 감독하다 → 감독	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	supplant	supple + -ant	supple	-ant	suffix	-e 탈락	하는·~한 + 유연한 → 대신하다, 대체하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	supplement	supple + -ment	supple	-ment	suffix	그대로	행위·결과 + 유연한 → 보충물	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	supplemental	supplement + -al	supplement	-al	suffix	그대로	~와 관련된 + 보충물 → 추가의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	supplementation	supplement + -ation	supplement	-ation	suffix	그대로	행위·상태 + 보충물 → 보충	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	symbolism	symbol + -ism	symbol	-ism	suffix	그대로	사상·방식 + 상징 → 상징성, 상징주의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	symbolize	symbol + -ize	symbol	-ize	suffix	그대로	~하게 하다 + 상징 → 상징하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	syndication	syndicate + -ion	syndicate	-ion	suffix	-e 탈락	행위·상태 + 연합체 → 콘텐츠 동시 배포	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	tactic	tact + -ic	tact	-ic	suffix	그대로	~에 관한 + 요령, 눈치 → 전술, 작전	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	tenderness	tender + -ness	tender	-ness	suffix	그대로	상태·성질 + 부드러운 → 다정함; 압통	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	tension	tense + -ion	tense	-ion	suffix	-e 탈락	행위·상태 + 긴장한, 긴박한 → 긴장	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	termination	terminate + -ion	terminate	-ion	suffix	-e 탈락	행위·상태 + 끝내다 → 종료	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	territorial	territory + -al	territory	-al	suffix	y→i	~와 관련된 + 영토 → 영토의; 텃세를 부리는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	terrorism	terror + -ism	terror	-ism	suffix	그대로	사상·방식 + 공포 → 테러 행위	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	thorny	thorn + -y	thorn	-y	suffix	그대로	~한 성질의 + 가시 → 가시가 많은; 곤란한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	thoroughly	thorough + -ly	thorough	-ly	suffix	그대로	~하게 + 철저한 → 철저히	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	traction	tract + -ion	tract	-ion	suffix	그대로	행위·상태 + 넓은 땅 → 정지 마찰력; 지지, 관심	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	tractor	tract + -or	tract	-or	suffix	그대로	하는 사람·도구 + 넓은 땅 → 트랙터	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	traitor	trait + -or	trait	-or	suffix	그대로	하는 사람·도구 + 특성, 특징 → 배신자, 반역자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	tranquility	tranquil + -ity	tranquil	-ity	suffix	그대로	상태·성질 + 고요한, 평온한 → 평온, 고요	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	transcendent	transcend + -ent	transcend	-ent	suffix	그대로	하는·~한 + 초월하다 → 초월적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	transcendental	transcendent + -al	transcendent	-al	suffix	그대로	~와 관련된 + 초월적인 → 초월적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	transcription	transcript + -ion	transcript	-ion	suffix	그대로	행위·상태 + 녹취록; 성적표 → 전사; 기록	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	transmitter	transmit + -er	transmit	-er	suffix	자음 겹침	하는 사람·도구 + 전송하다; 전염시키다 → 송신기	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	transplantation	trans- + plantation	plantation	trans-	prefix	그대로	가로질러 + (대규모) 농장 → 이식	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	transpose	trans- + pose	pose	trans-	prefix	그대로	가로질러 + (문제·위험을) 제기하다; 자세를 취하다 → 바꿔 놓다; 이조하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	treasurer	treasure + -er	treasure	-er	suffix	-e 탈락	하는 사람·도구 + 보물 → 회계 담당자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	treasury	treasure + -y	treasure	-y	suffix	-e 탈락	~한 성질의 + 보물 → 재무부; 금고	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	tribal	tribe + -al	tribe	-al	suffix	-e 탈락	~와 관련된 + 부족 → 부족의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	tribunal	tribune + -al	tribune	-al	suffix	-e 탈락	~와 관련된 + 민중의 대변자 → 재판소	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	tuber	tube + -er	tube	-er	suffix	-e 탈락	하는 사람·도구 + 관 → 덩이줄기	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	ultimately	ultimate + -ly	ultimate	-ly	suffix	그대로	~하게 + 궁극적인 → 궁극적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	uncanny	un- + canny	canny	un-	prefix	그대로	아닌·반대의 + 약삭빠른, 영리한 → 묘한, 이상한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	uncertainty	un- + certainty	certainty	un-	prefix	그대로	아닌·반대의 + 확실성 → 불확실성	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	unconditional	un- + conditional	conditional	un-	prefix	그대로	아닌·반대의 + 조건부의 → 무조건의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	undermine	under- + mine	mine	under-	prefix	그대로	부족하게·아래에 + 광산 → 약화시키다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	understatement	understate + -ment	understate	-ment	suffix	그대로	행위·결과 + 축소해서 말하다 → 절제된 표현, 과소 진술	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	undesirable	un- + desirable	desirable	un-	prefix	그대로	아닌·반대의 + 바람직한 → 바람직하지 않은	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	undisturbed	un- + disturbed	disturbed	un-	prefix	그대로	아닌·반대의 + 불안한; 방해받은 → 방해받지 않은	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	unevenly	un- + evenly	evenly	un-	prefix	그대로	아닌·반대의 + 고르게, 균등하게 → 고르지 않게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	unevenly	uneven + -ly	uneven	-ly	suffix	그대로	~하게 + 고르지 않은 → 고르지 않게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	uniqueness	unique + -ness	unique	-ness	suffix	그대로	상태·성질 + 독특한 → 독특함, 고유성	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	unjustly	un- + justly	justly	un-	prefix	그대로	아닌·반대의 + 정당하게 → 부당하게	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	unleash	un- + leash	leash	un-	prefix	그대로	아닌·반대의 + (개) 목줄 → 풀어놓다, 촉발하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	unpretentious	un- + pretentious	pretentious	un-	prefix	그대로	아닌·반대의 + 허세 부리는 → 꾸밈없는, 소박한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	unregulated	un- + regulated	regulated	un-	prefix	그대로	아닌·반대의 + 규제를 받는 → 규제되지 않은	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	unscrupulous	un- + scrupulous	scrupulous	un-	prefix	그대로	아닌·반대의 + 꼼꼼한; 양심적인 → 부도덕한, 파렴치한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	unveil	un- + veil	veil	un-	prefix	그대로	아닌·반대의 + 베일, 장막 → 공개하다, 발표하다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	utilization	utilize + -ation	utilize	-ation	suffix	-e 탈락	행위·상태 + 활용하다 → 활용	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	utterance	utter + -ance	utter	-ance	suffix	그대로	상태·행위 + (말을) 하다, 내뱉다 → 발언, 말	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	utterly	utter + -ly	utter	-ly	suffix	그대로	~하게 + (말을) 하다, 내뱉다 → 완전히, 전적으로	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	validation	valid + -ation	valid	-ation	suffix	그대로	행위·상태 + 유효한 → 유효성 확인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	validation	validate + -ion	validate	-ion	suffix	-e 탈락	행위·상태 + 입증하다; 승인하다 → 유효성 확인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	validity	valid + -ity	valid	-ity	suffix	그대로	상태·성질 + 유효한 → 유효성	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	vaporize	vapor + -ize	vapor	-ize	suffix	그대로	~하게 하다 + 증기 → 증발시키다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	vastness	vast + -ness	vast	-ness	suffix	그대로	상태·성질 + 광대한 → 광대함	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	venomous	venom + -ous	venom	-ous	suffix	그대로	~한 성질의 + (뱀 등의) 독; 악의 → 독이 있는; 악의적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	verbal	verb + -al	verb	-al	suffix	그대로	~와 관련된 + 동사 → 말의; 구두의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	viable	vie + -able	vie	-able	suffix	-e 탈락	할 수 있는 + 다투다, 경쟁하다 → 실행 가능한, 성공할 수 있는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	vibration	vibrate + -ion	vibrate	-ion	suffix	-e 탈락	행위·상태 + 진동하다 → 진동	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	vigorous	vigor + -ous	vigor	-ous	suffix	그대로	~한 성질의 + 활력, 원기 → 활발한, 격렬한	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	vindication	vindicate + -ion	vindicate	-ion	suffix	-e 탈락	행위·상태 + 정당성을 입증하다 → 정당성 입증	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	virtuous	virtue + -ous	virtue	-ous	suffix	-e 탈락	~한 성질의 + 미덕 → 고결한, 덕이 있는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	vitality	vital + -ity	vital	-ity	suffix	그대로	상태·성질 + 필수적인 → 활력	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	vocational	vocation + -al	vocation	-al	suffix	그대로	~와 관련된 + 천직, 소명 → 직업 교육의	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	wager	wag + -er	wag	-er	suffix	그대로	하는 사람·도구 + (꼬리를) 흔들다 → 내기	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	waiver	waive + -er	waive	-er	suffix	-e 탈락	하는 사람·도구 + (권리를) 포기하다; 면제하다 → 권리 포기 각서	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	wander	wand + -er	wand	-er	suffix	그대로	하는 사람·도구 + 지팡이, 마법봉 → 거닐다	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	warden	ward + -en	ward	-en	suffix	그대로	~하게 하다 + 병동 → 교도소장; 관리인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	weariness	weary + -ness	weary	-ness	suffix	y→i	상태·성질 + 지친, 싫증 난 → 피로, 권태	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	weaver	weave + -er	weave	-er	suffix	-e 탈락	하는 사람·도구 + (천을) 짜다; 누비며 가다 → 직조공	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	withdrawal	withdraw + -al	withdraw	-al	suffix	그대로	~와 관련된 + 철회하다, 인출하다 → 인출; 철수	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	witness	wit + -ness	wit	-ness	suffix	그대로	상태·성질 + 재치 → 목격자	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	witty	wit + -y	wit	-y	suffix	자음 겹침	~한 성질의 + 재치 → 재치 있는	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
-en	zealous	zeal + -ous	zeal	-ous	suffix	그대로	~한 성질의 + 열의 → 열성적인	false	철자와 어간은 확인했으나 뜻의 연결은 사람 검수 전
+en	abandonment	abandon + -ment	abandon	-ment	suffix	그대로	행위·결과 + 버리다 → 버림, 포기	true	어간 뜻(abandon: 버리다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(버림, 포기)에 직접 대응한다.
+en	abolitionist	abolition + -ist	abolition	-ist	suffix	그대로	하는 사람·전문가 + 폐지 → (노예제) 폐지론자	true	어간 뜻(abolition: 폐지)과 접사 뜻(-ist: 하는 사람·전문가)이 현재 뜻((노예제) 폐지론자)에 직접 대응한다.
+en	abortion	abort + -ion	abort	-ion	suffix	그대로	행위·상태 + 중단하다; 낙태하다 → 임신 중단	true	어간 뜻(abort: 중단하다; 낙태하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(임신 중단)에 직접 대응한다.
+en	absenteeism	absentee + -ism	absentee	-ism	suffix	그대로	사상·방식 + 결석자, 부재자 → 잦은 결근	hold	어간 뜻(absentee: 결석자, 부재자)과 현재 뜻(잦은 결근) 사이에 의미·품사 간극이 있어 -ism 분석을 확정하기 어렵다.
+en	abstraction	abstract + -ion	abstract	-ion	suffix	그대로	행위·상태 + 추상적인 → 추상, 추상적 개념	hold	어간 뜻(abstract: 추상적인)과 현재 뜻(추상, 추상적 개념) 사이에 의미·품사 간극이 있어 -ion 분석을 확정하기 어렵다.
+en	abundantly	abundant + -ly	abundant	-ly	suffix	그대로	~하게 + 풍부한 → 풍부하게; 매우	true	어간 뜻(abundant: 풍부한)과 접사 뜻(-ly: ~하게)이 현재 뜻(풍부하게; 매우)에 직접 대응한다.
+en	abusive	abuse + -ive	abuse	-ive	suffix	-e 탈락	~한 성질의 + 남용, 학대 → 폭력적인, 모욕적인	hold	어간 뜻(abuse: 남용, 학대)과 현재 뜻(폭력적인, 모욕적인) 사이에 의미·품사 간극이 있어 -ive 분석을 확정하기 어렵다.
+en	acceleration	accelerate + -ion	accelerate	-ion	suffix	-e 탈락	행위·상태 + 가속하다 → 가속; 촉진	true	어간 뜻(accelerate: 가속하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(가속; 촉진)에 직접 대응한다.
+en	accompaniment	accompany + -ment	accompany	-ment	suffix	y→i	행위·결과 + 동행하다 → 반주; 곁들임	false	어간 뜻(accompany: 동행하다)과 접사 뜻(-ment: 행위·결과)으로는 현재 뜻(반주; 곁들임)을 설명할 수 없다.
+en	accreditation	accredit + -ation	accredit	-ation	suffix	그대로	행위·상태 + 인가하다, 공인하다 → 공인 인증	true	어간 뜻(accredit: 인가하다, 공인하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(공인 인증)에 직접 대응한다.
+en	accumulation	accumulate + -ion	accumulate	-ion	suffix	-e 탈락	행위·상태 + 쌓이다, 축적하다 → 축적	true	어간 뜻(accumulate: 쌓이다, 축적하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(축적)에 직접 대응한다.
+en	acidic	acid + -ic	acid	-ic	suffix	그대로	~에 관한 + 산 → 산성의	true	어간 뜻(acid: 산)과 접사 뜻(-ic: ~에 관한)이 현재 뜻(산성의)에 직접 대응한다.
+en	acidity	acid + -ity	acid	-ity	suffix	그대로	상태·성질 + 산 → 산도	true	어간 뜻(acid: 산)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(산도)에 직접 대응한다.
+en	acquaintance	acquaint + -ance	acquaint	-ance	suffix	그대로	상태·행위 + 익히다 (acquaint oneself with) → 아는 사람, 지인	hold	어간 뜻(acquaint: 익히다 (acquaint oneself with))과 현재 뜻(아는 사람, 지인) 사이에 의미·품사 간극이 있어 -ance 분석을 확정하기 어렵다.
+en	acquittal	acquit + -al	acquit	-al	suffix	자음 겹침	~와 관련된 + 무죄를 선고하다 → 무죄 석방	hold	어간 뜻(acquit: 무죄를 선고하다)과 현재 뜻(무죄 석방) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	activation	activate + -ion	activate	-ion	suffix	-e 탈락	행위·상태 + 작동시키다, 활성화하다 → 활성화	true	어간 뜻(activate: 작동시키다, 활성화하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(활성화)에 직접 대응한다.
+en	adherence	adhere + -ence	adhere	-ence	suffix	-e 탈락	상태·행위 + 고수하다; 들러붙다 → 고수, 준수	true	어간 뜻(adhere: 고수하다; 들러붙다)과 접사 뜻(-ence: 상태·행위)이 현재 뜻(고수, 준수)에 직접 대응한다.
+en	adherent	adhere + -ent	adhere	-ent	suffix	-e 탈락	하는·~한 + 고수하다; 들러붙다 → 지지자, 신봉자	hold	어간 뜻(adhere: 고수하다; 들러붙다)과 현재 뜻(지지자, 신봉자) 사이에 의미·품사 간극이 있어 -ent 분석을 확정하기 어렵다.
+en	adornment	adorn + -ment	adorn	-ment	suffix	그대로	행위·결과 + 장식하다 → 장식(품)	true	어간 뜻(adorn: 장식하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(장식(품))에 직접 대응한다.
+en	adversely	adverse + -ly	adverse	-ly	suffix	그대로	~하게 + 불리한 → 불리하게, 해롭게	true	어간 뜻(adverse: 불리한)과 접사 뜻(-ly: ~하게)이 현재 뜻(불리하게, 해롭게)에 직접 대응한다.
+en	adversity	adverse + -ity	adverse	-ity	suffix	-e 탈락	상태·성질 + 불리한 → 역경	hold	어간 뜻(adverse: 불리한)과 현재 뜻(역경) 사이에 의미·품사 간극이 있어 -ity 분석을 확정하기 어렵다.
+en	affliction	afflict + -ion	afflict	-ion	suffix	그대로	행위·상태 + 괴롭히다 → 고통, 질환	true	어간 뜻(afflict: 괴롭히다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(고통, 질환)에 직접 대응한다.
+en	aggregation	aggregate + -ion	aggregate	-ion	suffix	-e 탈락	행위·상태 + 총합의 → 집합, 응집	true	어간 뜻(aggregate: 총합의)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(집합, 응집)에 직접 대응한다.
+en	aggressiveness	aggressive + -ness	aggressive	-ness	suffix	그대로	상태·성질 + 공격적인 → 공격성	true	어간 뜻(aggressive: 공격적인)과 접사 뜻(-ness: 상태·성질)이 현재 뜻(공격성)에 직접 대응한다.
+en	agility	agile + -ity	agile	-ity	suffix	-e 탈락	상태·성질 + 민첩한 → 민첩성	true	어간 뜻(agile: 민첩한)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(민첩성)에 직접 대응한다.
+en	agitation	agitate + -ion	agitate	-ion	suffix	-e 탈락	행위·상태 + 선동하다; 동요시키다 → 동요, 불안; 선동	true	어간 뜻(agitate: 선동하다; 동요시키다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(동요, 불안; 선동)에 직접 대응한다.
+en	ailment	ail + -ment	ail	-ment	suffix	그대로	행위·결과 + 괴롭히다 → (가벼운) 질병	hold	어간 뜻(ail: 괴롭히다)과 현재 뜻((가벼운) 질병) 사이에 의미·품사 간극이 있어 -ment 분석을 확정하기 어렵다.
+en	alignment	align + -ment	align	-ment	suffix	그대로	행위·결과 + 정렬하다 → 정렬; 조정	true	어간 뜻(align: 정렬하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(정렬; 조정)에 직접 대응한다.
+en	allocation	allocate + -ion	allocate	-ion	suffix	-e 탈락	행위·상태 + 할당하다, 배분하다 → 배분	true	어간 뜻(allocate: 할당하다, 배분하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(배분)에 직접 대응한다.
+en	alternately	alternate + -ly	alternate	-ly	suffix	그대로	~하게 + 번갈아 하다 → 번갈아	true	어간 뜻(alternate: 번갈아 하다)과 접사 뜻(-ly: ~하게)이 현재 뜻(번갈아)에 직접 대응한다.
+en	amplifier	amplify + -er	amplify	-er	suffix	y→i	하는 사람·도구 + 증폭시키다 → 증폭기	true	어간 뜻(amplify: 증폭시키다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(증폭기)에 직접 대응한다.
+en	analogous	analog + -ous	analog	-ous	suffix	그대로	~한 성질의 + 아날로그의 → 유사한	false	어간 뜻(analog: 아날로그의)과 접사 뜻(-ous: ~한 성질의)으로는 현재 뜻(유사한)을 설명할 수 없다.
+en	analogy	analog + -y	analog	-y	suffix	그대로	~한 성질의 + 아날로그의 → 비유, 유사점	false	어간 뜻(analog: 아날로그의)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(비유, 유사점)을 설명할 수 없다.
+en	anecdotal	anecdote + -al	anecdote	-al	suffix	-e 탈락	~와 관련된 + 일화 → 일화적인, 개인 경험에 근거한	true	어간 뜻(anecdote: 일화)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(일화적인, 개인 경험에 근거한)에 직접 대응한다.
+en	annexation	annex + -ation	annex	-ation	suffix	그대로	행위·상태 + 별관 → 병합	false	어간 뜻(annex: 별관)과 접사 뜻(-ation: 행위·상태)으로는 현재 뜻(병합)을 설명할 수 없다.
+en	anticipation	anticipate + -ion	anticipate	-ion	suffix	-e 탈락	행위·상태 + 예상하다 → 기대; 예상	true	어간 뜻(anticipate: 예상하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(기대; 예상)에 직접 대응한다.
+en	antiseptic	anti- + septic	septic	anti-	prefix	그대로	반대하는 + 감염된, 부패한 → 소독약	hold	어간 뜻(septic: 감염된, 부패한)과 현재 뜻(소독약) 사이에 의미·품사 간극이 있어 anti- 분석을 확정하기 어렵다.
+en	antithesis	anti- + thesis	thesis	anti-	prefix	그대로	반대하는 + 논문; 주장 → 정반대	hold	어간 뜻(thesis: 논문; 주장)과 현재 뜻(정반대) 사이에 의미·품사 간극이 있어 anti- 분석을 확정하기 어렵다.
+en	antivirus	anti- + virus	virus	anti-	prefix	그대로	반대하는 + 바이러스 → 백신 프로그램	true	어간 뜻(virus: 바이러스)과 접사 뜻(anti-: 반대하는)이 현재 뜻(백신 프로그램)에 직접 대응한다.
+en	appraisal	appraise + -al	appraise	-al	suffix	-e 탈락	~와 관련된 + 평가하다, 감정하다 → 감정 평가	hold	어간 뜻(appraise: 평가하다, 감정하다)과 현재 뜻(감정 평가) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	aspiration	aspire + -ation	aspire	-ation	suffix	-e 탈락	행위·상태 + 열망하다 → 열망, 포부	true	어간 뜻(aspire: 열망하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(열망, 포부)에 직접 대응한다.
+en	assassination	assassin + -ation	assassin	-ation	suffix	그대로	행위·상태 + 암살자 → 암살	false	어간 뜻(assassin: 암살자)과 접사 뜻(-ation: 행위·상태)으로는 현재 뜻(암살)을 설명할 수 없다.
+en	assertive	assert + -ive	assert	-ive	suffix	그대로	~한 성질의 + 주장하다, 단언하다 → 자기주장이 강한, 단호한	true	어간 뜻(assert: 주장하다, 단언하다)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(자기주장이 강한, 단호한)에 직접 대응한다.
+en	assertiveness	assertive + -ness	assertive	-ness	suffix	그대로	상태·성질 + 자기주장이 강한, 단호한 → 자기주장, 단호함	true	어간 뜻(assertive: 자기주장이 강한, 단호한)과 접사 뜻(-ness: 상태·성질)이 현재 뜻(자기주장, 단호함)에 직접 대응한다.
+en	atomic	atom + -ic	atom	-ic	suffix	그대로	~에 관한 + 원자 → 원자의	true	어간 뜻(atom: 원자)과 접사 뜻(-ic: ~에 관한)이 현재 뜻(원자의)에 직접 대응한다.
+en	attainment	attain + -ment	attain	-ment	suffix	그대로	행위·결과 + 달성하다, 이루다 → 성취, 달성	true	어간 뜻(attain: 달성하다, 이루다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(성취, 달성)에 직접 대응한다.
+en	auditory	auditor + -y	auditor	-y	suffix	그대로	~한 성질의 + 회계 감사관 → 청각의	false	어간 뜻(auditor: 회계 감사관)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(청각의)을 설명할 수 없다.
+en	austerity	austere + -ity	austere	-ity	suffix	-e 탈락	상태·성질 + 엄격한; 간소한 → 긴축; 검소함	hold	어간 뜻(austere: 엄격한; 간소한)과 현재 뜻(긴축; 검소함) 사이에 의미·품사 간극이 있어 -ity 분석을 확정하기 어렵다.
+en	authentication	authentic + -ation	authentic	-ation	suffix	그대로	행위·상태 + 진짜의, 진정한 → 인증	hold	어간 뜻(authentic: 진짜의, 진정한)과 현재 뜻(인증) 사이에 의미·품사 간극이 있어 -ation 분석을 확정하기 어렵다.
+en	authentication	authenticate + -ion	authenticate	-ion	suffix	-e 탈락	행위·상태 + 진짜임을 증명하다 → 인증	true	어간 뜻(authenticate: 진짜임을 증명하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(인증)에 직접 대응한다.
+en	authenticity	authentic + -ity	authentic	-ity	suffix	그대로	상태·성질 + 진짜의, 진정한 → 진짜임, 진정성	true	어간 뜻(authentic: 진짜의, 진정한)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(진짜임, 진정성)에 직접 대응한다.
+en	balmy	balm + -y	balm	-y	suffix	그대로	~한 성질의 + 연고; 위안 → 온화한	hold	어간 뜻(balm: 연고; 위안)과 현재 뜻(온화한) 사이에 의미·품사 간극이 있어 -y 분석을 확정하기 어렵다.
+en	banal	ban + -al	ban	-al	suffix	그대로	~와 관련된 + 금지하다 → 진부한	false	어간 뜻(ban: 금지하다)과 접사 뜻(-al: ~와 관련된)으로는 현재 뜻(진부한)을 설명할 수 없다.
+en	banish	ban + -ish	ban	-ish	suffix	그대로	~같은 + 금지하다 → 추방하다; 떨쳐 버리다	false	어간 뜻(ban: 금지하다)과 접사 뜻(-ish: ~같은)으로는 현재 뜻(추방하다; 떨쳐 버리다)을 설명할 수 없다.
+en	barber	barb + -er	barb	-er	suffix	그대로	하는 사람·도구 + 가시 돋친 말; 갈고리 → 이발사	false	어간 뜻(barb: 가시 돋친 말; 갈고리)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(이발사)을 설명할 수 없다.
+en	beholden	behold + -en	behold	-en	suffix	그대로	~하게 하다 + 보다 → 신세를 진	false	어간 뜻(behold: 보다)과 접사 뜻(-en: ~하게 하다)으로는 현재 뜻(신세를 진)을 설명할 수 없다.
+en	beholder	behold + -er	behold	-er	suffix	그대로	하는 사람·도구 + 보다 → 보는 사람	true	어간 뜻(behold: 보다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(보는 사람)에 직접 대응한다.
+en	bilateral	bi- + lateral	lateral	bi-	prefix	그대로	둘 + 옆의, 측면의 → 쌍방의, 양자 간의	true	어간 뜻(lateral: 옆의, 측면의)과 접사 뜻(bi-: 둘)이 현재 뜻(쌍방의, 양자 간의)에 직접 대응한다.
+en	blissful	bliss + -ful	bliss	-ful	suffix	그대로	가득한·있는 + 더없는 행복 → 더없이 행복한	true	어간 뜻(bliss: 더없는 행복)과 접사 뜻(-ful: 가득한·있는)이 현재 뜻(더없이 행복한)에 직접 대응한다.
+en	bulky	bulk + -y	bulk	-y	suffix	그대로	~한 성질의 + 대부분, 큰 부피 → 부피가 큰	true	어간 뜻(bulk: 대부분, 큰 부피)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(부피가 큰)에 직접 대응한다.
+en	bully	bull + -y	bull	-y	suffix	그대로	~한 성질의 + 황소 → 괴롭히는 사람	false	어간 뜻(bull: 황소)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(괴롭히는 사람)을 설명할 수 없다.
+en	buoyant	buoy + -ant	buoy	-ant	suffix	그대로	하는·~한 + 띄우다; 북돋우다 → 부력이 있는; 경기가 좋은	hold	어간 뜻(buoy: 띄우다; 북돋우다)과 현재 뜻(부력이 있는; 경기가 좋은) 사이에 의미·품사 간극이 있어 -ant 분석을 확정하기 어렵다.
+en	calibration	calibrate + -ion	calibrate	-ion	suffix	-e 탈락	행위·상태 + (계기를) 보정하다 → 보정	true	어간 뜻(calibrate: (계기를) 보정하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(보정)에 직접 대응한다.
+en	cancellation	cancel + -ation	cancel	-ation	suffix	자음 겹침	행위·상태 + 취소하다 → 취소	true	어간 뜻(cancel: 취소하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(취소)에 직접 대응한다.
+en	captivity	captive + -ity	captive	-ity	suffix	-e 탈락	상태·성질 + 포로 → 감금, 사로잡힘	true	어간 뜻(captive: 포로)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(감금, 사로잡힘)에 직접 대응한다.
+en	carver	carve + -er	carve	-er	suffix	-e 탈락	하는 사람·도구 + 깎아 만들다 → 조각가; 고기 써는 칼	true	어간 뜻(carve: 깎아 만들다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(조각가; 고기 써는 칼)에 직접 대응한다.
+en	cavity	cave + -ity	cave	-ity	suffix	-e 탈락	상태·성질 + 동굴 → 충치; 구멍	false	cave는 동굴이고 cavity는 빈 공간·충치여서 -ity를 붙인 뜻이 아니다.
+en	ceaseless	cease + -less	cease	-less	suffix	그대로	없는 + 멈추다 → 끊임없는	true	어간 뜻(cease: 멈추다)과 접사 뜻(-less: 없는)이 현재 뜻(끊임없는)에 직접 대응한다.
+en	characterization	characterize + -ation	characterize	-ation	suffix	-e 탈락	행위·상태 + 특징짓다, 묘사하다 → 묘사; 특징 규정	true	어간 뜻(characterize: 특징짓다, 묘사하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(묘사; 특징 규정)에 직접 대응한다.
+en	chastise	chaste + -ise	chaste	-ise	suffix	-e 탈락	~하게 하다 + 순결한; 소박한 → 꾸짖다	false	어간 뜻(chaste: 순결한; 소박한)과 접사 뜻(-ise: ~하게 하다)으로는 현재 뜻(꾸짖다)을 설명할 수 없다.
+en	chilly	chill + -y	chill	-y	suffix	그대로	~한 성질의 + 한기 → 쌀쌀한; 냉담한	true	어간 뜻(chill: 한기)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(쌀쌀한; 냉담한)에 직접 대응한다.
+en	choreographer	choreograph + -er	choreograph	-er	suffix	그대로	하는 사람·도구 + 안무하다; 세심하게 계획하다 → 안무가	true	어간 뜻(choreograph: 안무하다; 세심하게 계획하다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(안무가)에 직접 대응한다.
+en	choreography	choreograph + -y	choreograph	-y	suffix	그대로	~한 성질의 + 안무하다; 세심하게 계획하다 → 안무	hold	어간 뜻(choreograph: 안무하다; 세심하게 계획하다)과 현재 뜻(안무) 사이에 의미·품사 간극이 있어 -y 분석을 확정하기 어렵다.
+en	circulation	circulate + -ion	circulate	-ion	suffix	-e 탈락	행위·상태 + 순환하다; 유포되다 → 순환; 유통	true	어간 뜻(circulate: 순환하다; 유포되다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(순환; 유통)에 직접 대응한다.
+en	citation	cite + -ation	cite	-ation	suffix	-e 탈락	행위·상태 + 인용하다 → 인용; 출처 표기	true	어간 뜻(cite: 인용하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(인용; 출처 표기)에 직접 대응한다.
+en	clamor	clam + -or	clam	-or	suffix	그대로	하는 사람·도구 + 조개 → 아우성, 외침	false	어간 뜻(clam: 조개)과 접사 뜻(-or: 하는 사람·도구)으로는 현재 뜻(아우성, 외침)을 설명할 수 없다.
+en	coercion	coerce + -ion	coerce	-ion	suffix	-e 탈락	행위·상태 + 강요하다 → 강압	true	어간 뜻(coerce: 강요하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(강압)에 직접 대응한다.
+en	collaborative	collaborate + -ive	collaborate	-ive	suffix	-e 탈락	~한 성질의 + 협력하다 → 협력적인	true	어간 뜻(collaborate: 협력하다)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(협력적인)에 직접 대응한다.
+en	colonial	colony + -al	colony	-al	suffix	y→i	~와 관련된 + 군집, 식민지 → 식민지의	true	어간 뜻(colony: 군집, 식민지)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(식민지의)에 직접 대응한다.
+en	colonize	colon + -ize	colon	-ize	suffix	그대로	~하게 하다 + 콜론; 대장 → 식민지로 만들다	false	어간 뜻(colon: 콜론; 대장)과 접사 뜻(-ize: ~하게 하다)으로는 현재 뜻(식민지로 만들다)을 설명할 수 없다.
+en	colony	colon + -y	colon	-y	suffix	그대로	~한 성질의 + 콜론; 대장 → 군집, 식민지	false	어간 뜻(colon: 콜론; 대장)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(군집, 식민지)을 설명할 수 없다.
+en	commencement	commence + -ment	commence	-ment	suffix	그대로	행위·결과 + 시작되다 → 시작; 졸업식	true	어간 뜻(commence: 시작되다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(시작; 졸업식)에 직접 대응한다.
+en	communal	commune + -al	commune	-al	suffix	-e 탈락	~와 관련된 + 공동체, 공동 생활체 → 공동의, 공용의	true	어간 뜻(commune: 공동체, 공동 생활체)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(공동의, 공용의)에 직접 대응한다.
+en	communist	commune + -ist	commune	-ist	suffix	-e 탈락	하는 사람·전문가 + 공동체, 공동 생활체 → 공산주의의	hold	어간 뜻(commune: 공동체, 공동 생활체)과 현재 뜻(공산주의의) 사이에 의미·품사 간극이 있어 -ist 분석을 확정하기 어렵다.
+en	comparatively	comparative + -ly	comparative	-ly	suffix	그대로	~하게 + 비교의 → 비교적	hold	어간 뜻(comparative: 비교의)과 현재 뜻(비교적) 사이에 의미·품사 간극이 있어 -ly 분석을 확정하기 어렵다.
+en	compassion	compass + -ion	compass	-ion	suffix	그대로	행위·상태 + 나침반 → 연민, 동정심	false	어간 뜻(compass: 나침반)과 접사 뜻(-ion: 행위·상태)으로는 현재 뜻(연민, 동정심)을 설명할 수 없다.
+en	competence	compete + -ence	compete	-ence	suffix	-e 탈락	상태·행위 + 경쟁하다 → 능력, 역량	false	어간 뜻(compete: 경쟁하다)과 접사 뜻(-ence: 상태·행위)으로는 현재 뜻(능력, 역량)을 설명할 수 없다.
+en	competent	compete + -ent	compete	-ent	suffix	-e 탈락	하는·~한 + 경쟁하다 → 유능한	false	어간 뜻(compete: 경쟁하다)과 접사 뜻(-ent: 하는·~한)으로는 현재 뜻(유능한)을 설명할 수 없다.
+en	compilation	compile + -ation	compile	-ation	suffix	-e 탈락	행위·상태 + 편집하다; 컴파일하다 → 편집물; 모음	hold	어간 뜻(compile: 편집하다; 컴파일하다)과 현재 뜻(편집물; 모음) 사이에 의미·품사 간극이 있어 -ation 분석을 확정하기 어렵다.
+en	compiler	compile + -er	compile	-er	suffix	-e 탈락	하는 사람·도구 + 편집하다; 컴파일하다 → 컴파일러	true	어간 뜻(compile: 편집하다; 컴파일하다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(컴파일러)에 직접 대응한다.
+en	composer	compose + -er	compose	-er	suffix	-e 탈락	하는 사람·도구 + 작곡하다, 구성하다 → 작곡가	true	어간 뜻(compose: 작곡하다, 구성하다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(작곡가)에 직접 대응한다.
+en	composition	composite + -ion	composite	-ion	suffix	-e 탈락	행위·상태 + 합성의; 복합적인 → 구성; 작문	false	어간 뜻(composite: 합성의; 복합적인)과 접사 뜻(-ion: 행위·상태)으로는 현재 뜻(구성; 작문)을 설명할 수 없다.
+en	computation	compute + -ation	compute	-ation	suffix	-e 탈락	행위·상태 + 계산하다 → 계산	true	어간 뜻(compute: 계산하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(계산)에 직접 대응한다.
+en	computational	computation + -al	computation	-al	suffix	그대로	~와 관련된 + 계산 → 계산의	true	어간 뜻(computation: 계산)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(계산의)에 직접 대응한다.
+en	concurrent	concur + -ent	concur	-ent	suffix	자음 겹침	하는·~한 + 동의하다 → 동시에 일어나는	false	어간 뜻(concur: 동의하다)과 접사 뜻(-ent: 하는·~한)으로는 현재 뜻(동시에 일어나는)을 설명할 수 없다.
+en	condemnation	condemn + -ation	condemn	-ation	suffix	그대로	행위·상태 + 비난하다; 선고하다 → 비난	true	어간 뜻(condemn: 비난하다; 선고하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(비난)에 직접 대응한다.
+en	condensation	condense + -ation	condense	-ation	suffix	-e 탈락	행위·상태 + 압축하다; 응결하다 → 응결; 요약	true	어간 뜻(condense: 압축하다; 응결하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(응결; 요약)에 직접 대응한다.
+en	confidant	confide + -ant	confide	-ant	suffix	-e 탈락	하는·~한 + (비밀을) 털어놓다 → (비밀을 털어놓는) 절친한 친구	hold	어간 뜻(confide: (비밀을) 털어놓다)과 현재 뜻((비밀을 털어놓는) 절친한 친구) 사이에 의미·품사 간극이 있어 -ant 분석을 확정하기 어렵다.
+en	confidentiality	confidential + -ity	confidential	-ity	suffix	그대로	상태·성질 + 기밀의 → 기밀 유지	true	어간 뜻(confidential: 기밀의)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(기밀 유지)에 직접 대응한다.
+en	configuration	configure + -ation	configure	-ation	suffix	-e 탈락	행위·상태 + 설정하다 → 구성; 설정	true	어간 뜻(configure: 설정하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(구성; 설정)에 직접 대응한다.
+en	confinement	confine + -ment	confine	-ment	suffix	그대로	행위·결과 + 제한하다 → 감금, 제한	true	어간 뜻(confine: 제한하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(감금, 제한)에 직접 대응한다.
+en	conformity	conform + -ity	conform	-ity	suffix	그대로	상태·성질 + 따르다, 순응하다 → 순응, 따름	true	어간 뜻(conform: 따르다, 순응하다)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(순응, 따름)에 직접 대응한다.
+en	conqueror	conquer + -or	conquer	-or	suffix	그대로	하는 사람·도구 + 정복하다; 극복하다 → 정복자	true	어간 뜻(conquer: 정복하다; 극복하다)과 접사 뜻(-or: 하는 사람·도구)이 현재 뜻(정복자)에 직접 대응한다.
+en	considerable	consider + -able	consider	-able	suffix	그대로	할 수 있는 + 고려하다 → 상당한	false	어간 뜻(consider: 고려하다)과 접사 뜻(-able: 할 수 있는)으로는 현재 뜻(상당한)을 설명할 수 없다.
+en	contamination	contaminate + -ion	contaminate	-ion	suffix	-e 탈락	행위·상태 + 오염시키다 → 오염	true	어간 뜻(contaminate: 오염시키다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(오염)에 직접 대응한다.
+en	contender	contend + -er	contend	-er	suffix	그대로	하는 사람·도구 + 주장하다; 겨루다 → 경쟁자, 도전자	true	어간 뜻(contend: 주장하다; 겨루다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(경쟁자, 도전자)에 직접 대응한다.
+en	contradiction	contradict + -ion	contradict	-ion	suffix	그대로	행위·상태 + 반박하다; 모순되다 → 모순	true	어간 뜻(contradict: 반박하다; 모순되다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(모순)에 직접 대응한다.
+en	controversial	controversy + -al	controversy	-al	suffix	y→i	~와 관련된 + 논란 → 논란이 되는	true	어간 뜻(controversy: 논란)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(논란이 되는)에 직접 대응한다.
+en	convergence	converge + -ence	converge	-ence	suffix	-e 탈락	상태·행위 + 모이다, 수렴하다 → 수렴	true	어간 뜻(converge: 모이다, 수렴하다)과 접사 뜻(-ence: 상태·행위)이 현재 뜻(수렴)에 직접 대응한다.
+en	convergent	converge + -ent	converge	-ent	suffix	-e 탈락	하는·~한 + 모이다, 수렴하다 → 수렴하는	true	어간 뜻(converge: 모이다, 수렴하다)과 접사 뜻(-ent: 하는·~한)이 현재 뜻(수렴하는)에 직접 대응한다.
+en	conversely	converse + -ly	converse	-ly	suffix	그대로	~하게 + 대화하다 → 반대로, 거꾸로	false	어간 뜻(converse: 대화하다)과 접사 뜻(-ly: ~하게)으로는 현재 뜻(반대로, 거꾸로)을 설명할 수 없다.
+en	convertible	convert + -ible	convert	-ible	suffix	그대로	할 수 있는 + 바꾸다, 변환하다 → 지붕을 열 수 있는 차	hold	어간 뜻(convert: 바꾸다, 변환하다)과 현재 뜻(지붕을 열 수 있는 차) 사이에 의미·품사 간극이 있어 -ible 분석을 확정하기 어렵다.
+en	conviction	convict + -ion	convict	-ion	suffix	그대로	행위·상태 + 유죄 판결하다 → 유죄 판결; 확신	true	어간 뜻(convict: 유죄 판결하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(유죄 판결; 확신)에 직접 대응한다.
+en	convulsion	convulse + -ion	convulse	-ion	suffix	-e 탈락	행위·상태 + 경련을 일으키다 → 경련; 격변	true	어간 뜻(convulse: 경련을 일으키다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(경련; 격변)에 직접 대응한다.
+en	coordination	coordinate + -ion	coordinate	-ion	suffix	-e 탈락	행위·상태 + 조정하다 → 조정; 협력	true	어간 뜻(coordinate: 조정하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(조정; 협력)에 직접 대응한다.
+en	coordinator	coordinate + -or	coordinate	-or	suffix	-e 탈락	하는 사람·도구 + 조정하다 → 조정자	true	어간 뜻(coordinate: 조정하다)과 접사 뜻(-or: 하는 사람·도구)이 현재 뜻(조정자)에 직접 대응한다.
+en	copious	co- + pious	pious	co-	prefix	그대로	함께 + 경건한, 독실한 → 풍부한, 많은	false	어간 뜻(pious: 경건한, 독실한)과 접사 뜻(co-: 함께)으로는 현재 뜻(풍부한, 많은)을 설명할 수 없다.
+en	coral	core + -al	core	-al	suffix	-e 탈락	~와 관련된 + 핵심 → 산호	false	어간 뜻(core: 핵심)과 접사 뜻(-al: ~와 관련된)으로는 현재 뜻(산호)을 설명할 수 없다.
+en	cordless	cord + -less	cord	-less	suffix	그대로	없는 + 끈, 전선 → 무선의	true	어간 뜻(cord: 끈, 전선)과 접사 뜻(-less: 없는)이 현재 뜻(무선의)에 직접 대응한다.
+en	corny	corn + -y	corn	-y	suffix	그대로	~한 성질의 + 옥수수 → 진부한, 유치한	false	어간 뜻(corn: 옥수수)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(진부한, 유치한)을 설명할 수 없다.
+en	correlation	correlate + -ion	correlate	-ion	suffix	-e 탈락	행위·상태 + 연관성이 있다 → 상관관계	true	어간 뜻(correlate: 연관성이 있다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(상관관계)에 직접 대응한다.
+en	crafty	craft + -y	craft	-y	suffix	그대로	~한 성질의 + 공예, 기술 → 교활한	hold	어간 뜻(craft: 공예, 기술)과 현재 뜻(교활한) 사이에 의미·품사 간극이 있어 -y 분석을 확정하기 어렵다.
+en	crater	crate + -er	crate	-er	suffix	-e 탈락	하는 사람·도구 + 나무 상자 → 분화구; 움푹 팬 곳	false	어간 뜻(crate: 나무 상자)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(분화구; 움푹 팬 곳)을 설명할 수 없다.
+en	criticism	critic + -ism	critic	-ism	suffix	그대로	사상·방식 + 비평가 → 비판	false	어간 뜻(critic: 비평가)과 접사 뜻(-ism: 사상·방식)으로는 현재 뜻(비판)을 설명할 수 없다.
+en	cryptic	crypt + -ic	crypt	-ic	suffix	그대로	~에 관한 + 지하 납골당 → 아리송한, 수수께끼 같은	false	어간 뜻(crypt: 지하 납골당)과 접사 뜻(-ic: ~에 관한)으로는 현재 뜻(아리송한, 수수께끼 같은)을 설명할 수 없다.
+en	crystallize	crystal + -ize	crystal	-ize	suffix	자음 겹침	~하게 하다 + 수정, 결정체 → 결정화하다; 구체화하다	true	어간 뜻(crystal: 수정, 결정체)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(결정화하다; 구체화하다)에 직접 대응한다.
+en	cubic	cub + -ic	cub	-ic	suffix	그대로	~에 관한 + (곰·사자 등의) 새끼 → 세제곱의; 입방의	false	cub는 동물 새끼이고 cubic은 입방·세제곱이어서 -ic으로 연결되지 않는다.
+en	culmination	culminate + -ion	culminate	-ion	suffix	-e 탈락	행위·상태 + 절정에 이르다 → 정점, 결정	true	어간 뜻(culminate: 절정에 이르다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(정점, 결정)에 직접 대응한다.
+en	cultivation	cultivate + -ion	cultivate	-ion	suffix	-e 탈락	행위·상태 + 경작하다; 기르다, 쌓다 → 경작, 재배	true	어간 뜻(cultivate: 경작하다; 기르다, 쌓다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(경작, 재배)에 직접 대응한다.
+en	cursor	curse + -or	curse	-or	suffix	-e 탈락	하는 사람·도구 + 저주; 욕설 → 커서	false	어간 뜻(curse: 저주; 욕설)과 접사 뜻(-or: 하는 사람·도구)으로는 현재 뜻(커서)을 설명할 수 없다.
+en	cursory	cursor + -y	cursor	-y	suffix	그대로	~한 성질의 + 커서 → 대충 하는	false	어간 뜻(cursor: 커서)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(대충 하는)을 설명할 수 없다.
+en	customarily	customary + -ly	customary	-ly	suffix	y→i	~하게 + 관례적인 → 관례적으로	true	어간 뜻(customary: 관례적인)과 접사 뜻(-ly: ~하게)이 현재 뜻(관례적으로)에 직접 대응한다.
+en	customize	custom + -ize	custom	-ize	suffix	그대로	~하게 하다 + 관습 → 맞춤 설정하다	false	어간 뜻(custom: 관습)과 접사 뜻(-ize: ~하게 하다)으로는 현재 뜻(맞춤 설정하다)을 설명할 수 없다.
+en	cynical	cynic + -al	cynic	-al	suffix	그대로	~와 관련된 + 냉소주의자 → 냉소적인	true	어간 뜻(cynic: 냉소주의자)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(냉소적인)에 직접 대응한다.
+en	dampen	damp + -en	damp	-en	suffix	그대로	~하게 하다 + 축축한 → 적시다; (기세를) 꺾다	true	어간 뜻(damp: 축축한)과 접사 뜻(-en: ~하게 하다)이 현재 뜻(적시다; (기세를) 꺾다)에 직접 대응한다.
+en	debunk	de- + bunk	bunk	de-	prefix	그대로	반대로·제거하여 + (이층) 침대 → 정체를 폭로하다, 틀렸음을 밝히다	false	어간 뜻(bunk: (이층) 침대)과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(정체를 폭로하다, 틀렸음을 밝히다)을 설명할 수 없다.
+en	decadence	de- + cadence	cadence	de-	prefix	그대로	반대로·제거하여 + 억양, 운율 → 퇴폐, 타락	false	어간 뜻(cadence: 억양, 운율)과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(퇴폐, 타락)을 설명할 수 없다.
+en	decadence	decade + -ence	decade	-ence	suffix	-e 탈락	상태·행위 + 10년 → 퇴폐, 타락	false	어간 뜻(decade: 10년)과 접사 뜻(-ence: 상태·행위)으로는 현재 뜻(퇴폐, 타락)을 설명할 수 없다.
+en	decadent	decade + -ent	decade	-ent	suffix	-e 탈락	하는·~한 + 10년 → 퇴폐적인; 호사스러운	false	어간 뜻(decade: 10년)과 접사 뜻(-ent: 하는·~한)으로는 현재 뜻(퇴폐적인; 호사스러운)을 설명할 수 없다.
+en	decompose	de- + compose	compose	de-	prefix	그대로	반대로·제거하여 + 작곡하다, 구성하다 → 분해되다, 부패하다	true	어간 뜻(compose: 작곡하다, 구성하다)과 접사 뜻(de-: 반대로·제거하여)이 현재 뜻(분해되다, 부패하다)에 직접 대응한다.
+en	decomposition	de- + composition	composition	de-	prefix	그대로	반대로·제거하여 + 구성; 작문 → 분해, 부패	true	어간 뜻(composition: 구성; 작문)과 접사 뜻(de-: 반대로·제거하여)이 현재 뜻(분해, 부패)에 직접 대응한다.
+en	decoy	de- + coy	coy	de-	prefix	그대로	반대로·제거하여 + 수줍은 체하는; 말을 아끼는 → 미끼, 유인물	false	어간 뜻(coy: 수줍은 체하는; 말을 아끼는)과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(미끼, 유인물)을 설명할 수 없다.
+en	decrease	de- + crease	crease	de-	prefix	그대로	반대로·제거하여 + 주름 → 줄다	false	어간 뜻(crease: 주름)과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(줄다)을 설명할 수 없다.
+en	deduct	de- + duct	duct	de-	prefix	그대로	반대로·제거하여 + 관, 배관 → 공제하다, 빼다	false	어간 뜻(duct: 관, 배관)과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(공제하다, 빼다)을 설명할 수 없다.
+en	defeat	de- + feat	feat	de-	prefix	그대로	반대로·제거하여 + 위업; 묘기 → 물리치다	false	어간 뜻(feat: 위업; 묘기)과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(물리치다)을 설명할 수 없다.
+en	defection	defect + -ion	defect	-ion	suffix	그대로	행위·상태 + 결함 → 망명; 탈당	false	어간 뜻(defect: 결함)과 접사 뜻(-ion: 행위·상태)으로는 현재 뜻(망명; 탈당)을 설명할 수 없다.
+en	defend	de- + fend	fend	de-	prefix	그대로	반대로·제거하여 + 스스로 꾸려 가다 (fend for oneself); 막다 (fend off) → 방어하다	false	어간 뜻(fend: 스스로 꾸려 가다 (fend for oneself); 막다 (fend off))과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(방어하다)을 설명할 수 없다.
+en	deference	defer + -ence	defer	-ence	suffix	그대로	상태·행위 + 연기하다; 따르다 (defer to) → 존중, 경의	hold	어간 뜻(defer: 연기하다; 따르다 (defer to))과 현재 뜻(존중, 경의) 사이에 의미·품사 간극이 있어 -ence 분석을 확정하기 어렵다.
+en	defiance	defy + -ance	defy	-ance	suffix	y→i	상태·행위 + 거역하다, 무시하다 → 반항, 저항	true	어간 뜻(defy: 거역하다, 무시하다)과 접사 뜻(-ance: 상태·행위)이 현재 뜻(반항, 저항)에 직접 대응한다.
+en	defiant	defy + -ant	defy	-ant	suffix	y→i	하는·~한 + 거역하다, 무시하다 → 반항적인	true	어간 뜻(defy: 거역하다, 무시하다)과 접사 뜻(-ant: 하는·~한)이 현재 뜻(반항적인)에 직접 대응한다.
+en	defuse	de- + fuse	fuse	de-	prefix	그대로	반대로·제거하여 + 퓨즈; 도화선 → (폭탄을) 해체하다; 진정시키다	true	어간 뜻(fuse: 퓨즈; 도화선)과 접사 뜻(de-: 반대로·제거하여)이 현재 뜻((폭탄을) 해체하다; 진정시키다)에 직접 대응한다.
+en	degenerate	de- + generate	generate	de-	prefix	그대로	반대로·제거하여 + 생산하다 → 퇴화하다, 악화되다	hold	어간 뜻(generate: 생산하다)과 현재 뜻(퇴화하다, 악화되다) 사이에 의미·품사 간극이 있어 de- 분석을 확정하기 어렵다.
+en	degradation	degrade + -ation	degrade	-ation	suffix	-e 탈락	행위·상태 + 비하하다; 저하시키다 → 저하, 악화; 비하	true	어간 뜻(degrade: 비하하다; 저하시키다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(저하, 악화; 비하)에 직접 대응한다.
+en	dehydration	dehydrate + -ion	dehydrate	-ion	suffix	-e 탈락	행위·상태 + 탈수시키다; 건조하다 → 탈수	true	어간 뜻(dehydrate: 탈수시키다; 건조하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(탈수)에 직접 대응한다.
+en	delegation	delegate + -ion	delegate	-ion	suffix	-e 탈락	행위·상태 + 위임하다 → 대표단	hold	어간 뜻(delegate: 위임하다)과 현재 뜻(대표단) 사이에 의미·품사 간극이 있어 -ion 분석을 확정하기 어렵다.
+en	deliberate	de- + liberate	liberate	de-	prefix	그대로	반대로·제거하여 + 해방시키다 → 의도적인	false	어간 뜻(liberate: 해방시키다)과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(의도적인)을 설명할 수 없다.
+en	denomination	de- + nomination	nomination	de-	prefix	그대로	반대로·제거하여 + 지명 → 교파; (화폐) 단위	false	어간 뜻(nomination: 지명)과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(교파; (화폐) 단위)을 설명할 수 없다.
+en	depletion	deplete + -ion	deplete	-ion	suffix	-e 탈락	행위·상태 + 고갈시키다 → 고갈, 감소	true	어간 뜻(deplete: 고갈시키다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(고갈, 감소)에 직접 대응한다.
+en	deportation	deport + -ation	deport	-ation	suffix	그대로	행위·상태 + 추방하다 → 강제 추방	true	어간 뜻(deport: 추방하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(강제 추방)에 직접 대응한다.
+en	depose	de- + pose	pose	de-	prefix	그대로	반대로·제거하여 + (문제·위험을) 제기하다; 자세를 취하다 → (권좌에서) 물러나게 하다	hold	어간 뜻(pose: (문제·위험을) 제기하다; 자세를 취하다)과 현재 뜻((권좌에서) 물러나게 하다) 사이에 의미·품사 간극이 있어 de- 분석을 확정하기 어렵다.
+en	deposit	de- + posit	posit	de-	prefix	그대로	반대로·제거하여 + 가정하다, 상정하다 → 보증금, 예금	false	어간 뜻(posit: 가정하다, 상정하다)과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(보증금, 예금)을 설명할 수 없다.
+en	deposition	deposit + -ion	deposit	-ion	suffix	그대로	행위·상태 + 보증금, 예금 → (법정 밖) 증언 녹취; 퇴적	false	어간 뜻(deposit: 보증금, 예금)과 접사 뜻(-ion: 행위·상태)으로는 현재 뜻((법정 밖) 증언 녹취; 퇴적)을 설명할 수 없다.
+en	depositor	deposit + -or	deposit	-or	suffix	그대로	하는 사람·도구 + 보증금, 예금 → 예금자	hold	어간 뜻(deposit: 보증금, 예금)과 현재 뜻(예금자) 사이에 의미·품사 간극이 있어 -or 분석을 확정하기 어렵다.
+en	deprivation	deprive + -ation	deprive	-ation	suffix	-e 탈락	행위·상태 + 빼앗다, 박탈하다 → 박탈, 결핍	true	어간 뜻(deprive: 빼앗다, 박탈하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(박탈, 결핍)에 직접 대응한다.
+en	descendant	descend + -ant	descend	-ant	suffix	그대로	하는·~한 + 내려가다 → 자손, 후손	hold	어간 뜻(descend: 내려가다)과 현재 뜻(자손, 후손) 사이에 의미·품사 간극이 있어 -ant 분석을 확정하기 어렵다.
+en	designation	designate + -ion	designate	-ion	suffix	-e 탈락	행위·상태 + 지정하다, 지명하다 → 지정; 명칭	true	어간 뜻(designate: 지정하다, 지명하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(지정; 명칭)에 직접 대응한다.
+en	destiny	destine + -y	destine	-y	suffix	-e 탈락	~한 성질의 + 운명 짓다 (be destined to) → 운명	false	어간 뜻(destine: 운명 짓다 (be destined to))과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(운명)을 설명할 수 없다.
+en	deterioration	deteriorate + -ion	deteriorate	-ion	suffix	-e 탈락	행위·상태 + 악화되다 → 악화	true	어간 뜻(deteriorate: 악화되다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(악화)에 직접 대응한다.
+en	deterrent	deter + -ent	deter	-ent	suffix	자음 겹침	하는·~한 + 단념시키다, 막다 → 억지력, 제지하는 것	true	어간 뜻(deter: 단념시키다, 막다)과 접사 뜻(-ent: 하는·~한)이 현재 뜻(억지력, 제지하는 것)에 직접 대응한다.
+en	detonation	detonate + -ion	detonate	-ion	suffix	-e 탈락	행위·상태 + 폭발시키다 → 폭발	true	어간 뜻(detonate: 폭발시키다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(폭발)에 직접 대응한다.
+en	detract	de- + tract	tract	de-	prefix	그대로	반대로·제거하여 + 넓은 땅 → 손상시키다 (detract from)	false	어간 뜻(tract: 넓은 땅)과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(손상시키다 (detract from))을 설명할 수 없다.
+en	detrimental	detriment + -al	detriment	-al	suffix	그대로	~와 관련된 + 손상, 손해 → 해로운	true	어간 뜻(detriment: 손상, 손해)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(해로운)에 직접 대응한다.
+en	devastation	devastate + -ion	devastate	-ion	suffix	-e 탈락	행위·상태 + 완전히 파괴하다; 큰 충격을 주다 → 황폐, 대대적인 파괴	true	어간 뜻(devastate: 완전히 파괴하다; 큰 충격을 주다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(황폐, 대대적인 파괴)에 직접 대응한다.
+en	deviation	deviate + -ion	deviate	-ion	suffix	-e 탈락	행위·상태 + 벗어나다 → 편차	true	어간 뜻(deviate: 벗어나다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(편차)에 직접 대응한다.
+en	device	de- + vice	vice	de-	prefix	그대로	반대로·제거하여 + 악습 → 장치	false	어간 뜻(vice: 악습)과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(장치)을 설명할 수 없다.
+en	devoid	de- + void	void	de-	prefix	그대로	반대로·제거하여 + 무효의; 빈 → ~이 없는 (devoid of)	false	어간 뜻(void: 무효의; 빈)과 접사 뜻(de-: 반대로·제거하여)으로는 현재 뜻(~이 없는 (devoid of))을 설명할 수 없다.
+en	devotion	devote + -ion	devote	-ion	suffix	-e 탈락	행위·상태 + 쏟다, 바치다 → 헌신, 전념	true	어간 뜻(devote: 쏟다, 바치다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(헌신, 전념)에 직접 대응한다.
+en	devotional	devotion + -al	devotion	-al	suffix	그대로	~와 관련된 + 헌신, 전념 → 신앙의	hold	어간 뜻(devotion: 헌신, 전념)과 현재 뜻(신앙의) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	diagonally	diagonal + -ly	diagonal	-ly	suffix	그대로	~하게 + 대각선의 → 대각선으로	true	어간 뜻(diagonal: 대각선의)과 접사 뜻(-ly: ~하게)이 현재 뜻(대각선으로)에 직접 대응한다.
+en	diagonally	diagonal + -y	diagonal	-y	suffix	자음 겹침	~한 성질의 + 대각선의 → 대각선으로	false	대상은 부사인데 -y는 성질을 나타내는 형용사 접미사이므로 이 분해가 맞지 않는다.
+en	diffusion	diffuse + -ion	diffuse	-ion	suffix	-e 탈락	행위·상태 + 확산시키다; 누그러뜨리다 → 확산, 보급	true	어간 뜻(diffuse: 확산시키다; 누그러뜨리다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(확산, 보급)에 직접 대응한다.
+en	digestive	digest + -ive	digest	-ive	suffix	그대로	~한 성질의 + 소화하다 → 소화의	true	어간 뜻(digest: 소화하다)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(소화의)에 직접 대응한다.
+en	diligently	diligent + -ly	diligent	-ly	suffix	그대로	~하게 + 부지런한 → 부지런히	true	어간 뜻(diligent: 부지런한)과 접사 뜻(-ly: ~하게)이 현재 뜻(부지런히)에 직접 대응한다.
+en	dilution	dilute + -ion	dilute	-ion	suffix	-e 탈락	행위·상태 + 희석하다 → 희석	true	어간 뜻(dilute: 희석하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(희석)에 직접 대응한다.
+en	dimensional	dimension + -al	dimension	-al	suffix	그대로	~와 관련된 + 차원, 크기 → 차원의	true	어간 뜻(dimension: 차원, 크기)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(차원의)에 직접 대응한다.
+en	dimly	dime + -ly	dime	-ly	suffix	-e 탈락	~하게 + 10센트 동전 → 어둑하게; 희미하게	false	어간 뜻(dime: 10센트 동전)과 접사 뜻(-ly: ~하게)으로는 현재 뜻(어둑하게; 희미하게)을 설명할 수 없다.
+en	diplomatic	diplomat + -ic	diplomat	-ic	suffix	그대로	~에 관한 + 외교관 → 외교의; 원만한	true	어간 뜻(diplomat: 외교관)과 접사 뜻(-ic: ~에 관한)이 현재 뜻(외교의; 원만한)에 직접 대응한다.
+en	discernible	discern + -ible	discern	-ible	suffix	그대로	할 수 있는 + 분별하다, 알아차리다 → 알아볼 수 있는	true	어간 뜻(discern: 분별하다, 알아차리다)과 접사 뜻(-ible: 할 수 있는)이 현재 뜻(알아볼 수 있는)에 직접 대응한다.
+en	disclosure	dis- + closure	closure	dis-	prefix	그대로	아닌·반대의 + 폐쇄; 종료 → 공개	false	어간 뜻(closure: 폐쇄; 종료)과 접사 뜻(dis-: 아닌·반대의)으로는 현재 뜻(공개)을 설명할 수 없다.
+en	discord	dis- + cord	cord	dis-	prefix	그대로	아닌·반대의 + 끈, 전선 → 불화	false	어간 뜻(cord: 끈, 전선)과 접사 뜻(dis-: 아닌·반대의)으로는 현재 뜻(불화)을 설명할 수 없다.
+en	discourage	dis- + courage	courage	dis-	prefix	그대로	아닌·반대의 + 용기 → 낙담시키다; 막다	hold	어간 뜻(courage: 용기)과 현재 뜻(낙담시키다; 막다) 사이에 의미·품사 간극이 있어 dis- 분석을 확정하기 어렵다.
+en	discretion	discrete + -ion	discrete	-ion	suffix	-e 탈락	행위·상태 + 별개의 → 재량	false	어간 뜻(discrete: 별개의)과 접사 뜻(-ion: 행위·상태)으로는 현재 뜻(재량)을 설명할 수 없다.
+en	discrimination	discriminate + -ion	discriminate	-ion	suffix	-e 탈락	행위·상태 + 차별하다; 구별하다 → 차별	true	어간 뜻(discriminate: 차별하다; 구별하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(차별)에 직접 대응한다.
+en	disillusion	dis- + illusion	illusion	dis-	prefix	그대로	아닌·반대의 + 착각; 환상 → 환멸을 느끼게 하다	true	어간 뜻(illusion: 착각; 환상)과 접사 뜻(dis-: 아닌·반대의)이 현재 뜻(환멸을 느끼게 하다)에 직접 대응한다.
+en	disintegrate	dis- + integrate	integrate	dis-	prefix	그대로	아닌·반대의 + 통합하다 → 붕괴되다, 산산조각 나다	true	어간 뜻(integrate: 통합하다)과 접사 뜻(dis-: 아닌·반대의)이 현재 뜻(붕괴되다, 산산조각 나다)에 직접 대응한다.
+en	dismantle	dis- + mantle	mantle	dis-	prefix	그대로	아닌·반대의 + 망토; 책임, 역할 → 해체하다, 분해하다	false	어간 뜻(mantle: 망토; 책임, 역할)과 접사 뜻(dis-: 아닌·반대의)으로는 현재 뜻(해체하다, 분해하다)을 설명할 수 없다.
+en	disparity	dis- + parity	parity	dis-	prefix	그대로	아닌·반대의 + 동등, 균등 → 격차, 차이	true	어간 뜻(parity: 동등, 균등)과 접사 뜻(dis-: 아닌·반대의)이 현재 뜻(격차, 차이)에 직접 대응한다.
+en	dispatch	dis- + patch	patch	dis-	prefix	그대로	아닌·반대의 + 작은 조각, 부분 → 발송하다	false	patch는 작은 조각이고 dispatch는 발송하다는 뜻이라 dis-로 설명되지 않는다.
+en	dispersal	disperse + -al	disperse	-al	suffix	-e 탈락	~와 관련된 + 흩어지다, 해산시키다 → 분산, 해산	hold	어간 뜻(disperse: 흩어지다, 해산시키다)과 현재 뜻(분산, 해산) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	displacement	displace + -ment	displace	-ment	suffix	그대로	행위·결과 + 쫓아내다; 대체하다 → 이동, 강제 이주	true	어간 뜻(displace: 쫓아내다; 대체하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(이동, 강제 이주)에 직접 대응한다.
+en	displacement	dis- + placement	placement	dis-	prefix	그대로	아닌·반대의 + 배치 → 이동, 강제 이주	false	어간 뜻(placement: 배치)과 접사 뜻(dis-: 아닌·반대의)으로는 현재 뜻(이동, 강제 이주)을 설명할 수 없다.
+en	dispose	dis- + pose	pose	dis-	prefix	그대로	아닌·반대의 + (문제·위험을) 제기하다; 자세를 취하다 → 처리하다, 버리다 (dispose of)	false	어간 뜻(pose: (문제·위험을) 제기하다; 자세를 취하다)과 접사 뜻(dis-: 아닌·반대의)으로는 현재 뜻(처리하다, 버리다 (dispose of))을 설명할 수 없다.
+en	disruptive	disrupt + -ive	disrupt	-ive	suffix	그대로	~한 성질의 + 방해하다, 지장을 주다 → 지장을 주는, 혁신적인	true	어간 뜻(disrupt: 방해하다, 지장을 주다)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(지장을 주는, 혁신적인)에 직접 대응한다.
+en	dissect	dis- + sect	sect	dis-	prefix	그대로	아닌·반대의 + 종파, 분파 → 해부하다; 분석하다	false	어간 뜻(sect: 종파, 분파)과 접사 뜻(dis-: 아닌·반대의)으로는 현재 뜻(해부하다; 분석하다)을 설명할 수 없다.
+en	dissection	dissect + -ion	dissect	-ion	suffix	그대로	행위·상태 + 해부하다; 분석하다 → 해부; 정밀 분석	true	어간 뜻(dissect: 해부하다; 분석하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(해부; 정밀 분석)에 직접 대응한다.
+en	dissenter	dissent + -er	dissent	-er	suffix	그대로	하는 사람·도구 + 반대 의견 → 반대자	true	어간 뜻(dissent: 반대 의견)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(반대자)에 직접 대응한다.
+en	distinction	distinct + -ion	distinct	-ion	suffix	그대로	행위·상태 + 뚜렷이 다른 → 차이; 구별	hold	어간 뜻(distinct: 뚜렷이 다른)과 현재 뜻(차이; 구별) 사이에 의미·품사 간극이 있어 -ion 분석을 확정하기 어렵다.
+en	distinctive	distinct + -ive	distinct	-ive	suffix	그대로	~한 성질의 + 뚜렷이 다른 → 독특한, 특유의	true	어간 뜻(distinct: 뚜렷이 다른)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(독특한, 특유의)에 직접 대응한다.
+en	distinctively	distinctive + -ly	distinctive	-ly	suffix	그대로	~하게 + 독특한, 특유의 → 독특하게	true	어간 뜻(distinctive: 독특한, 특유의)과 접사 뜻(-ly: ~하게)이 현재 뜻(독특하게)에 직접 대응한다.
+en	distinctly	distinct + -ly	distinct	-ly	suffix	그대로	~하게 + 뚜렷이 다른 → 분명히, 뚜렷하게	true	어간 뜻(distinct: 뚜렷이 다른)과 접사 뜻(-ly: ~하게)이 현재 뜻(분명히, 뚜렷하게)에 직접 대응한다.
+en	distortion	distort + -ion	distort	-ion	suffix	그대로	행위·상태 + 왜곡하다 → 왜곡, 일그러짐	true	어간 뜻(distort: 왜곡하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(왜곡, 일그러짐)에 직접 대응한다.
+en	distract	dis- + tract	tract	dis-	prefix	그대로	아닌·반대의 + 넓은 땅 → 주의를 산만하게 하다	false	어간 뜻(tract: 넓은 땅)과 접사 뜻(dis-: 아닌·반대의)으로는 현재 뜻(주의를 산만하게 하다)을 설명할 수 없다.
+en	distraction	distract + -ion	distract	-ion	suffix	그대로	행위·상태 + 주의를 산만하게 하다 → 주의를 흩뜨리는 것	true	어간 뜻(distract: 주의를 산만하게 하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(주의를 흩뜨리는 것)에 직접 대응한다.
+en	distraction	dis- + traction	traction	dis-	prefix	그대로	아닌·반대의 + 정지 마찰력; 지지, 관심 → 주의를 흩뜨리는 것	false	어간 뜻(traction: 정지 마찰력; 지지, 관심)과 접사 뜻(dis-: 아닌·반대의)으로는 현재 뜻(주의를 흩뜨리는 것)을 설명할 수 없다.
+en	distribute	dis- + tribute	tribute	dis-	prefix	그대로	아닌·반대의 + 헌사 → 나누어 주다	false	어간 뜻(tribute: 헌사)과 접사 뜻(dis-: 아닌·반대의)으로는 현재 뜻(나누어 주다)을 설명할 수 없다.
+en	distributor	distribute + -or	distribute	-or	suffix	-e 탈락	하는 사람·도구 + 나누어 주다 → 유통업자	true	어간 뜻(distribute: 나누어 주다)과 접사 뜻(-or: 하는 사람·도구)이 현재 뜻(유통업자)에 직접 대응한다.
+en	divergence	diverge + -ence	diverge	-ence	suffix	-e 탈락	상태·행위 + 갈라지다; 다르다 → 차이, 분기	true	어간 뜻(diverge: 갈라지다; 다르다)과 접사 뜻(-ence: 상태·행위)이 현재 뜻(차이, 분기)에 직접 대응한다.
+en	divergent	diverge + -ent	diverge	-ent	suffix	-e 탈락	하는·~한 + 갈라지다; 다르다 → 다른, 갈라지는	true	어간 뜻(diverge: 갈라지다; 다르다)과 접사 뜻(-ent: 하는·~한)이 현재 뜻(다른, 갈라지는)에 직접 대응한다.
+en	diversion	diverse + -ion	diverse	-ion	suffix	-e 탈락	행위·상태 + 다양한 → 우회로; 기분 전환; 전용	false	어간 뜻(diverse: 다양한)과 접사 뜻(-ion: 행위·상태)으로는 현재 뜻(우회로; 기분 전환; 전용)을 설명할 수 없다.
+en	domination	dominate + -ion	dominate	-ion	suffix	-e 탈락	행위·상태 + 지배하다 → 지배, 우세	true	어간 뜻(dominate: 지배하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(지배, 우세)에 직접 대응한다.
+en	dreadful	dread + -ful	dread	-ful	suffix	그대로	가득한·있는 + 몹시 두려워하다 → 끔찍한, 지독한	hold	어간 뜻(dread: 몹시 두려워하다)과 현재 뜻(끔찍한, 지독한) 사이에 의미·품사 간극이 있어 -ful 분석을 확정하기 어렵다.
+en	dweller	dwell + -er	dwell	-er	suffix	그대로	하는 사람·도구 + 살다; 곱씹다 (dwell on) → 거주자	true	어간 뜻(dwell: 살다; 곱씹다 (dwell on))과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(거주자)에 직접 대응한다.
+en	eccentricity	eccentric + -ity	eccentric	-ity	suffix	그대로	상태·성질 + 별난, 괴짜인 → 기벽, 별남	true	어간 뜻(eccentric: 별난, 괴짜인)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(기벽, 별남)에 직접 대응한다.
+en	efficacious	efficacy + -ous	efficacy	-ous	suffix	y→i	~한 성질의 + 효능, 효험 → 효과적인	true	어간 뜻(efficacy: 효능, 효험)과 접사 뜻(-ous: ~한 성질의)이 현재 뜻(효과적인)에 직접 대응한다.
+en	elaborately	elaborate + -ly	elaborate	-ly	suffix	그대로	~하게 + 정교한, 공들인 → 정교하게	true	어간 뜻(elaborate: 정교한, 공들인)과 접사 뜻(-ly: ~하게)이 현재 뜻(정교하게)에 직접 대응한다.
+en	elaboration	elaborate + -ion	elaborate	-ion	suffix	-e 탈락	행위·상태 + 정교한, 공들인 → 상세한 설명	hold	어간 뜻(elaborate: 정교한, 공들인)과 현재 뜻(상세한 설명) 사이에 의미·품사 간극이 있어 -ion 분석을 확정하기 어렵다.
+en	elevation	elevate + -ion	elevate	-ion	suffix	-e 탈락	행위·상태 + 높이다, 승진시키다 → 고도	true	어간 뜻(elevate: 높이다, 승진시키다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(고도)에 직접 대응한다.
+en	embellishment	embellish + -ment	embellish	-ment	suffix	그대로	행위·결과 + 꾸미다, 윤색하다 → 장식; 윤색	true	어간 뜻(embellish: 꾸미다, 윤색하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(장식; 윤색)에 직접 대응한다.
+en	embodiment	embody + -ment	embody	-ment	suffix	y→i	행위·결과 + 구현하다, 상징하다 → 화신, 구현	true	어간 뜻(embody: 구현하다, 상징하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(화신, 구현)에 직접 대응한다.
+en	embroidery	embroider + -y	embroider	-y	suffix	그대로	~한 성질의 + 수를 놓다; 윤색하다 → 자수	hold	어간 뜻(embroider: 수를 놓다; 윤색하다)과 현재 뜻(자수) 사이에 의미·품사 간극이 있어 -y 분석을 확정하기 어렵다.
+en	emergence	emerge + -ence	emerge	-ence	suffix	-e 탈락	상태·행위 + 나타나다 → 출현, 등장	true	어간 뜻(emerge: 나타나다)과 접사 뜻(-ence: 상태·행위)이 현재 뜻(출현, 등장)에 직접 대응한다.
+en	emergency	emergence + -y	emergence	-y	suffix	-e 탈락	~한 성질의 + 출현, 등장 → 비상사태	false	어간 뜻(emergence: 출현, 등장)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(비상사태)을 설명할 수 없다.
+en	enactment	enact + -ment	enact	-ment	suffix	그대로	행위·결과 + (법을) 제정하다 → (법의) 제정	true	어간 뜻(enact: (법을) 제정하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻((법의) 제정)에 직접 대응한다.
+en	endorsement	endorse + -ment	endorse	-ment	suffix	그대로	행위·결과 + 지지하다, 보증하다 → 지지; 보증; 광고 모델 계약	true	어간 뜻(endorse: 지지하다, 보증하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(지지; 보증; 광고 모델 계약)에 직접 대응한다.
+en	endowment	endow + -ment	endow	-ment	suffix	그대로	행위·결과 + (재능을) 부여하다; 기부하다 → 기부금; 재능	true	어간 뜻(endow: (재능을) 부여하다; 기부하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(기부금; 재능)에 직접 대응한다.
+en	enhancement	enhance + -ment	enhance	-ment	suffix	그대로	행위·결과 + 향상하다 → 향상	true	어간 뜻(enhance: 향상하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(향상)에 직접 대응한다.
+en	enlightenment	enlighten + -ment	enlighten	-ment	suffix	그대로	행위·결과 + 깨우치다, 이해시키다 → 계몽; 깨달음	true	어간 뜻(enlighten: 깨우치다, 이해시키다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(계몽; 깨달음)에 직접 대응한다.
+en	entanglement	entangle + -ment	entangle	-ment	suffix	그대로	행위·결과 + 얽어매다, 휘말리게 하다 → 얽힘	true	어간 뜻(entangle: 얽어매다, 휘말리게 하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(얽힘)에 직접 대응한다.
+en	epitomize	epitome + -ize	epitome	-ize	suffix	-e 탈락	~하게 하다 + 전형, 본보기 → 전형적으로 보여 주다	true	어간 뜻(epitome: 전형, 본보기)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(전형적으로 보여 주다)에 직접 대응한다.
+en	eruption	erupt + -ion	erupt	-ion	suffix	그대로	행위·상태 + 분출하다; 터지다 → 분출, 폭발	true	어간 뜻(erupt: 분출하다; 터지다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(분출, 폭발)에 직접 대응한다.
+en	escalation	escalate + -ion	escalate	-ion	suffix	-e 탈락	행위·상태 + 확대되다, 고조되다 → 확대, 증가	true	어간 뜻(escalate: 확대되다, 고조되다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(확대, 증가)에 직접 대응한다.
+en	ethical	ethic + -al	ethic	-al	suffix	그대로	~와 관련된 + 윤리; 가치관 → 윤리적인	true	어간 뜻(ethic: 윤리; 가치관)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(윤리적인)에 직접 대응한다.
+en	ethically	ethical + -ly	ethical	-ly	suffix	그대로	~하게 + 윤리적인 → 윤리적으로	true	어간 뜻(ethical: 윤리적인)과 접사 뜻(-ly: ~하게)이 현재 뜻(윤리적으로)에 직접 대응한다.
+en	ethically	ethical + -y	ethical	-y	suffix	자음 겹침	~한 성질의 + 윤리적인 → 윤리적으로	false	대상은 부사인데 -y는 성질을 나타내는 형용사 접미사이므로 이 분해가 맞지 않는다.
+en	eviction	evict + -ion	evict	-ion	suffix	그대로	행위·상태 + 퇴거시키다 → 퇴거	true	어간 뜻(evict: 퇴거시키다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(퇴거)에 직접 대응한다.
+en	exaggeration	exaggerate + -ion	exaggerate	-ion	suffix	-e 탈락	행위·상태 + 과장하다 → 과장	true	어간 뜻(exaggerate: 과장하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(과장)에 직접 대응한다.
+en	excavation	excavate + -ion	excavate	-ion	suffix	-e 탈락	행위·상태 + 발굴하다; 파다 → 발굴	true	어간 뜻(excavate: 발굴하다; 파다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(발굴)에 직접 대응한다.
+en	excellence	excel + -ence	excel	-ence	suffix	자음 겹침	상태·행위 + 뛰어나다 → 우수함	true	어간 뜻(excel: 뛰어나다)과 접사 뜻(-ence: 상태·행위)이 현재 뜻(우수함)에 직접 대응한다.
+en	excessive	excess + -ive	excess	-ive	suffix	그대로	~한 성질의 + 초과, 과잉 → 과도한	true	어간 뜻(excess: 초과, 과잉)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(과도한)에 직접 대응한다.
+en	exemption	exempt + -ion	exempt	-ion	suffix	그대로	행위·상태 + 면제된 → 면제	true	어간 뜻(exempt: 면제된)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(면제)에 직접 대응한다.
+en	exertion	exert + -ion	exert	-ion	suffix	그대로	행위·상태 + (힘·영향을) 가하다, 행사하다 → 노력, 분투	true	어간 뜻(exert: (힘·영향을) 가하다, 행사하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(노력, 분투)에 직접 대응한다.
+en	exhaustive	exhaust + -ive	exhaust	-ive	suffix	그대로	~한 성질의 + 배기가스 → 철저한, 빠짐없는	false	어간 뜻(exhaust: 배기가스)과 접사 뜻(-ive: ~한 성질의)으로는 현재 뜻(철저한, 빠짐없는)을 설명할 수 없다.
+en	expansive	expanse + -ive	expanse	-ive	suffix	-e 탈락	~한 성질의 + 넓게 트인 공간 → 광활한; 넓은	hold	어간 뜻(expanse: 넓게 트인 공간)과 현재 뜻(광활한; 넓은) 사이에 의미·품사 간극이 있어 -ive 분석을 확정하기 어렵다.
+en	explicitly	explicit + -ly	explicit	-ly	suffix	그대로	~하게 + 명확한; 명시적인 → 명시적으로	true	어간 뜻(explicit: 명확한; 명시적인)과 접사 뜻(-ly: ~하게)이 현재 뜻(명시적으로)에 직접 대응한다.
+en	exponentially	exponential + -ly	exponential	-ly	suffix	그대로	~하게 + 기하급수적인 → 기하급수적으로	true	어간 뜻(exponential: 기하급수적인)과 접사 뜻(-ly: ~하게)이 현재 뜻(기하급수적으로)에 직접 대응한다.
+en	exponentially	exponential + -y	exponential	-y	suffix	자음 겹침	~한 성질의 + 기하급수적인 → 기하급수적으로	false	대상은 부사인데 -y는 성질을 나타내는 형용사 접미사이므로 이 분해가 맞지 않는다.
+en	externalize	external + -ize	external	-ize	suffix	그대로	~하게 하다 + 외부의 → 외면화하다, 표출하다	true	어간 뜻(external: 외부의)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(외면화하다, 표출하다)에 직접 대응한다.
+en	extraction	extract + -ion	extract	-ion	suffix	그대로	행위·상태 + 추출하다 → 추출; 발치	true	어간 뜻(extract: 추출하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(추출; 발치)에 직접 대응한다.
+en	facility	facile + -ity	facile	-ity	suffix	-e 탈락	상태·성질 + 안이한, 손쉬운 → 시설	false	어간 뜻(facile: 안이한, 손쉬운)과 접사 뜻(-ity: 상태·성질)으로는 현재 뜻(시설)을 설명할 수 없다.
+en	falsehood	false + -hood	false	-hood	suffix	그대로	시기·상태 + 거짓의 → 거짓	true	어간 뜻(false: 거짓의)과 접사 뜻(-hood: 시기·상태)이 현재 뜻(거짓)에 직접 대응한다.
+en	fanatical	fanatic + -al	fanatic	-al	suffix	그대로	~와 관련된 + 광신자; 열광적인 팬 → 광적인	true	어간 뜻(fanatic: 광신자; 열광적인 팬)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(광적인)에 직접 대응한다.
+en	fanaticism	fanatic + -ism	fanatic	-ism	suffix	그대로	사상·방식 + 광신자; 열광적인 팬 → 광신	true	어간 뜻(fanatic: 광신자; 열광적인 팬)과 접사 뜻(-ism: 사상·방식)이 현재 뜻(광신)에 직접 대응한다.
+en	fatal	fate + -al	fate	-al	suffix	-e 탈락	~와 관련된 + 운명 → 치명적인	false	어간 뜻(fate: 운명)과 접사 뜻(-al: ~와 관련된)으로는 현재 뜻(치명적인)을 설명할 수 없다.
+en	fateful	fate + -ful	fate	-ful	suffix	그대로	가득한·있는 + 운명 → 운명적인	hold	어간 뜻(fate: 운명)과 현재 뜻(운명적인) 사이에 의미·품사 간극이 있어 -ful 분석을 확정하기 어렵다.
+en	felony	felon + -y	felon	-y	suffix	그대로	~한 성질의 + 중범죄자 → 중범죄	hold	어간 뜻(felon: 중범죄자)과 현재 뜻(중범죄) 사이에 의미·품사 간극이 있어 -y 분석을 확정하기 어렵다.
+en	fender	fend + -er	fend	-er	suffix	그대로	하는 사람·도구 + 스스로 꾸려 가다 (fend for oneself); 막다 (fend off) → (자동차) 펜더, 흙받기	true	어간 뜻(fend: 스스로 꾸려 가다 (fend for oneself); 막다 (fend off))과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻((자동차) 펜더, 흙받기)에 직접 대응한다.
+en	fermentation	ferment + -ation	ferment	-ation	suffix	그대로	행위·상태 + 발효시키다 → 발효	true	어간 뜻(ferment: 발효시키다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(발효)에 직접 대응한다.
+en	fertilize	fertile + -ize	fertile	-ize	suffix	-e 탈락	~하게 하다 + 비옥한; 생식력 있는 → 비료를 주다; 수정시키다	true	어간 뜻(fertile: 비옥한; 생식력 있는)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(비료를 주다; 수정시키다)에 직접 대응한다.
+en	feudal	feud + -al	feud	-al	suffix	그대로	~와 관련된 + 불화, 반목 → 봉건 제도의	false	어간 뜻(feud: 불화, 반목)과 접사 뜻(-al: ~와 관련된)으로는 현재 뜻(봉건 제도의)을 설명할 수 없다.
+en	flicker	flick + -er	flick	-er	suffix	그대로	하는 사람·도구 + 튀기다, 휙 움직이다 → 깜박이다	false	어간 뜻(flick: 튀기다, 휙 움직이다)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(깜박이다)을 설명할 수 없다.
+en	fluctuation	fluctuate + -ion	fluctuate	-ion	suffix	-e 탈락	행위·상태 + 변동하다 → 변동, 등락	true	어간 뜻(fluctuate: 변동하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(변동, 등락)에 직접 대응한다.
+en	forestall	fore- + stall	stall	fore-	prefix	그대로	앞서 + (엔진이) 멈추다; 지연시키다 → 미연에 방지하다	false	어간 뜻(stall: (엔진이) 멈추다; 지연시키다)과 접사 뜻(fore-: 앞서)으로는 현재 뜻(미연에 방지하다)을 설명할 수 없다.
+en	formative	format + -ive	format	-ive	suffix	그대로	~한 성질의 + 형식 → 형성에 중요한	false	어간 뜻(format: 형식)과 접사 뜻(-ive: ~한 성질의)으로는 현재 뜻(형성에 중요한)을 설명할 수 없다.
+en	formerly	former + -ly	former	-ly	suffix	그대로	~하게 + 이전의 → 이전에	true	어간 뜻(former: 이전의)과 접사 뜻(-ly: ~하게)이 현재 뜻(이전에)에 직접 대응한다.
+en	freighter	freight + -er	freight	-er	suffix	그대로	하는 사람·도구 + 화물 → 화물선	hold	어간 뜻(freight: 화물)과 현재 뜻(화물선) 사이에 의미·품사 간극이 있어 -er 분석을 확정하기 어렵다.
+en	funky	funk + -y	funk	-y	suffix	그대로	~한 성질의 + 펑크 음악 → 독특하고 멋진	hold	어간 뜻(funk: 펑크 음악)과 현재 뜻(독특하고 멋진) 사이에 의미·품사 간극이 있어 -y 분석을 확정하기 어렵다.
+en	fusion	fuse + -ion	fuse	-ion	suffix	-e 탈락	행위·상태 + 퓨즈; 도화선 → 융합	false	어간 뜻(fuse: 퓨즈; 도화선)과 접사 뜻(-ion: 행위·상태)으로는 현재 뜻(융합)을 설명할 수 없다.
+en	fussy	fuss + -y	fuss	-y	suffix	그대로	~한 성질의 + 야단법석, 호들갑 → 까다로운	true	어간 뜻(fuss: 야단법석, 호들갑)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(까다로운)에 직접 대응한다.
+en	futility	futile + -ity	futile	-ity	suffix	-e 탈락	상태·성질 + 헛된, 소용없는 → 헛됨, 무익	true	어간 뜻(futile: 헛된, 소용없는)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(헛됨, 무익)에 직접 대응한다.
+en	fuzzy	fuzz + -y	fuzz	-y	suffix	그대로	~한 성질의 + 솜털, 보풀 → 흐릿한; 보송보송한	true	어간 뜻(fuzz: 솜털, 보풀)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(흐릿한; 보송보송한)에 직접 대응한다.
+en	gallant	gall + -ant	gall	-ant	suffix	그대로	하는·~한 + 뻔뻔함 → 용감한; 정중한	false	gall은 뻔뻔함이고 gallant는 용감·정중함이어서 -ant로 연결되지 않는다.
+en	generalization	generalize + -ation	generalize	-ation	suffix	-e 탈락	행위·상태 + 일반화하다 → 일반화	true	어간 뜻(generalize: 일반화하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(일반화)에 직접 대응한다.
+en	geological	geologic + -al	geologic	-al	suffix	그대로	~와 관련된 + 지질학의 → 지질학의	true	어간 뜻(geologic: 지질학의)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(지질학의)에 직접 대응한다.
+en	glider	glide + -er	glide	-er	suffix	-e 탈락	하는 사람·도구 + 미끄러지듯 가다 → 글라이더	true	어간 뜻(glide: 미끄러지듯 가다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(글라이더)에 직접 대응한다.
+en	gloomy	gloom + -y	gloom	-y	suffix	그대로	~한 성질의 + 어둠; 우울 → 우울한; 어둑어둑한	true	어간 뜻(gloom: 어둠; 우울)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(우울한; 어둑어둑한)에 직접 대응한다.
+en	glossy	gloss + -y	gloss	-y	suffix	그대로	~한 성질의 + 광택; 주석, 해설 → 윤이 나는	true	어간 뜻(gloss: 광택; 주석, 해설)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(윤이 나는)에 직접 대응한다.
+en	glower	glow + -er	glow	-er	suffix	그대로	하는 사람·도구 + 빛나다 → 노려보다	false	어간 뜻(glow: 빛나다)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(노려보다)을 설명할 수 없다.
+en	grateful	grate + -ful	grate	-ful	suffix	그대로	가득한·있는 + (강판에) 갈다; 거슬리다 → 감사하는	false	어간 뜻(grate: (강판에) 갈다; 거슬리다)과 접사 뜻(-ful: 가득한·있는)으로는 현재 뜻(감사하는)을 설명할 수 없다.
+en	greasy	grease + -y	grease	-y	suffix	-e 탈락	~한 성질의 + 기름, 그리스 → 기름진	true	어간 뜻(grease: 기름, 그리스)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(기름진)에 직접 대응한다.
+en	grievance	grieve + -ance	grieve	-ance	suffix	-e 탈락	상태·행위 + 몹시 슬퍼하다 → 불만, 고충	hold	어간 뜻(grieve: 몹시 슬퍼하다)과 현재 뜻(불만, 고충) 사이에 의미·품사 간극이 있어 -ance 분석을 확정하기 어렵다.
+en	gullible	gull + -ible	gull	-ible	suffix	그대로	할 수 있는 + 갈매기 → 잘 속는	false	어간 뜻(gull: 갈매기)과 접사 뜻(-ible: 할 수 있는)으로는 현재 뜻(잘 속는)을 설명할 수 없다.
+en	gully	gull + -y	gull	-y	suffix	그대로	~한 성질의 + 갈매기 → 도랑, 협곡	false	어간 뜻(gull: 갈매기)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(도랑, 협곡)을 설명할 수 없다.
+en	hacker	hack + -er	hack	-er	suffix	그대로	하는 사람·도구 + 해킹하다 → 해커	true	어간 뜻(hack: 해킹하다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(해커)에 직접 대응한다.
+en	harmonious	harmony + -ous	harmony	-ous	suffix	y→i	~한 성질의 + 조화 → 조화로운	true	어간 뜻(harmony: 조화)과 접사 뜻(-ous: ~한 성질의)이 현재 뜻(조화로운)에 직접 대응한다.
+en	harshly	harsh + -ly	harsh	-ly	suffix	그대로	~하게 + 가혹한 → 가혹하게	true	어간 뜻(harsh: 가혹한)과 접사 뜻(-ly: ~하게)이 현재 뜻(가혹하게)에 직접 대응한다.
+en	hasten	haste + -en	haste	-en	suffix	-e 탈락	~하게 하다 + 서두름 → 재촉하다, 앞당기다	true	어간 뜻(haste: 서두름)과 접사 뜻(-en: ~하게 하다)이 현재 뜻(재촉하다, 앞당기다)에 직접 대응한다.
+en	hasty	haste + -y	haste	-y	suffix	-e 탈락	~한 성질의 + 서두름 → 성급한, 서두른	true	어간 뜻(haste: 서두름)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(성급한, 서두른)에 직접 대응한다.
+en	hazy	haze + -y	haze	-y	suffix	-e 탈락	~한 성질의 + 아지랑이, 연무 → 흐릿한, 뿌연	true	어간 뜻(haze: 아지랑이, 연무)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(흐릿한, 뿌연)에 직접 대응한다.
+en	herder	herd + -er	herd	-er	suffix	그대로	하는 사람·도구 + (동물의) 떼, 무리 → 목동	true	어간 뜻(herd: (동물의) 떼, 무리)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(목동)에 직접 대응한다.
+en	holy	hoe + -ly	hoe	-ly	suffix	-e 탈락	~하게 + 괭이 → 성스러운	false	어간 뜻(hoe: 괭이)과 접사 뜻(-ly: ~하게)으로는 현재 뜻(성스러운)을 설명할 수 없다.
+en	hostility	hostile + -ity	hostile	-ity	suffix	-e 탈락	상태·성질 + 적대적인 → 적대감	true	어간 뜻(hostile: 적대적인)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(적대감)에 직접 대응한다.
+en	humanist	humane + -ist	humane	-ist	suffix	-e 탈락	하는 사람·전문가 + 인도적인 → 인본주의자	hold	어간 뜻(humane: 인도적인)과 현재 뜻(인본주의자) 사이에 의미·품사 간극이 있어 -ist 분석을 확정하기 어렵다.
+en	humanistic	humanist + -ic	humanist	-ic	suffix	그대로	~에 관한 + 인본주의자 → 인문주의적인	true	어간 뜻(humanist: 인본주의자)과 접사 뜻(-ic: ~에 관한)이 현재 뜻(인문주의적인)에 직접 대응한다.
+en	husky	husk + -y	husk	-y	suffix	그대로	~한 성질의 + 껍질, 겉껍데기 → 목쉰; 건장한	false	어간 뜻(husk: 껍질, 겉껍데기)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(목쉰; 건장한)을 설명할 수 없다.
+en	illegitimate	il- + legitimate	legitimate	il-	prefix	그대로	아닌 + 정당한; 합법적인 → 불법의; 사생아의	true	어간 뜻(legitimate: 정당한; 합법적인)과 접사 뜻(il-: 아닌)이 현재 뜻(불법의; 사생아의)에 직접 대응한다.
+en	illumination	illuminate + -ion	illuminate	-ion	suffix	-e 탈락	행위·상태 + 밝게 비추다; 설명하다 → 조명; 깨달음	true	어간 뜻(illuminate: 밝게 비추다; 설명하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(조명; 깨달음)에 직접 대응한다.
+en	immigrate	im- + migrate	migrate	im-	prefix	그대로	아닌 + 이주하다, 이동하다 → 이민 오다	false	어간 뜻(migrate: 이주하다, 이동하다)과 접사 뜻(im-: 아닌)으로는 현재 뜻(이민 오다)을 설명할 수 없다.
+en	immobile	im- + mobile	mobile	im-	prefix	그대로	아닌 + 이동할 수 있는 → 움직이지 않는	true	어간 뜻(mobile: 이동할 수 있는)과 접사 뜻(im-: 아닌)이 현재 뜻(움직이지 않는)에 직접 대응한다.
+en	immobilize	immobile + -ize	immobile	-ize	suffix	-e 탈락	~하게 하다 + 움직이지 않는 → 움직이지 못하게 하다	true	어간 뜻(immobile: 움직이지 않는)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(움직이지 못하게 하다)에 직접 대응한다.
+en	immobilize	im- + mobilize	mobilize	im-	prefix	그대로	아닌 + 동원하다 → 움직이지 못하게 하다	false	어간 뜻(mobilize: 동원하다)과 접사 뜻(im-: 아닌)으로는 현재 뜻(움직이지 못하게 하다)을 설명할 수 없다.
+en	immortal	im- + mortal	mortal	im-	prefix	그대로	아닌 + 죽을 운명의; 치명적인 → 불멸의	true	어간 뜻(mortal: 죽을 운명의; 치명적인)과 접사 뜻(im-: 아닌)이 현재 뜻(불멸의)에 직접 대응한다.
+en	immunity	immune + -ity	immune	-ity	suffix	-e 탈락	상태·성질 + 면역이 있는 → 면역력; 면제	true	어간 뜻(immune: 면역이 있는)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(면역력; 면제)에 직접 대응한다.
+en	immunize	immune + -ize	immune	-ize	suffix	-e 탈락	~하게 하다 + 면역이 있는 → 면역력을 주다, 예방 접종하다	true	어간 뜻(immune: 면역이 있는)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(면역력을 주다, 예방 접종하다)에 직접 대응한다.
+en	impact	im- + pact	pact	im-	prefix	그대로	아닌 + 협정, 조약 → 영향	false	어간 뜻(pact: 협정, 조약)과 접사 뜻(im-: 아닌)으로는 현재 뜻(영향)을 설명할 수 없다.
+en	impale	im- + pale	pale	im-	prefix	그대로	아닌 + 창백한 → 찌르다, 꿰뚫다	false	어간 뜻(pale: 창백한)과 접사 뜻(im-: 아닌)으로는 현재 뜻(찌르다, 꿰뚫다)을 설명할 수 없다.
+en	impassive	impasse + -ive	impasse	-ive	suffix	-e 탈락	~한 성질의 + 교착 상태 → 무표정한	false	어간 뜻(impasse: 교착 상태)과 접사 뜻(-ive: ~한 성질의)으로는 현재 뜻(무표정한)을 설명할 수 없다.
+en	imperil	im- + peril	peril	im-	prefix	그대로	아닌 + 위험 → 위태롭게 하다	false	어간 뜻(peril: 위험)과 접사 뜻(im-: 아닌)으로는 현재 뜻(위태롭게 하다)을 설명할 수 없다.
+en	implausible	im- + plausible	plausible	im-	prefix	그대로	아닌 + 그럴듯한 → 믿기 어려운	true	어간 뜻(plausible: 그럴듯한)과 접사 뜻(im-: 아닌)이 현재 뜻(믿기 어려운)에 직접 대응한다.
+en	imply	im- + ply	ply	im-	prefix	그대로	아닌 + (일을) 계속하다; 정기 운항하다 → 암시하다	false	어간 뜻(ply: (일을) 계속하다; 정기 운항하다)과 접사 뜻(im-: 아닌)으로는 현재 뜻(암시하다)을 설명할 수 없다.
+en	impose	im- + pose	pose	im-	prefix	그대로	아닌 + (문제·위험을) 제기하다; 자세를 취하다 → 부과하다; 강요하다	false	어간 뜻(pose: (문제·위험을) 제기하다; 자세를 취하다)과 접사 뜻(im-: 아닌)으로는 현재 뜻(부과하다; 강요하다)을 설명할 수 없다.
+en	imprecise	im- + precise	precise	im-	prefix	그대로	아닌 + 정확한 → 부정확한	true	어간 뜻(precise: 정확한)과 접사 뜻(im-: 아닌)이 현재 뜻(부정확한)에 직접 대응한다.
+en	impropriety	im- + propriety	propriety	im-	prefix	그대로	아닌 + 예의 바름, 적절성 → 부적절한 행위	true	어간 뜻(propriety: 예의 바름, 적절성)과 접사 뜻(im-: 아닌)이 현재 뜻(부적절한 행위)에 직접 대응한다.
+en	impulsive	impulse + -ive	impulse	-ive	suffix	-e 탈락	~한 성질의 + 충동 → 충동적인	true	어간 뜻(impulse: 충동)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(충동적인)에 직접 대응한다.
+en	impurity	im- + purity	purity	im-	prefix	그대로	아닌 + 순수함, 순도 → 불순물	true	어간 뜻(purity: 순수함, 순도)과 접사 뜻(im-: 아닌)이 현재 뜻(불순물)에 직접 대응한다.
+en	inadequate	in- + adequate	adequate	in-	prefix	그대로	아닌 + 충분한 → 불충분한, 부적절한	true	어간 뜻(adequate: 충분한)과 접사 뜻(in-: 아닌)이 현재 뜻(불충분한, 부적절한)에 직접 대응한다.
+en	inanimate	in- + animate	animate	in-	prefix	그대로	아닌 + 생기를 불어넣다 → 무생물의	hold	어간 뜻(animate: 생기를 불어넣다)과 현재 뜻(무생물의) 사이에 의미·품사 간극이 있어 in- 분석을 확정하기 어렵다.
+en	incite	in- + cite	cite	in-	prefix	그대로	아닌 + 인용하다 → 선동하다	false	어간 뜻(cite: 인용하다)과 접사 뜻(in-: 아닌)으로는 현재 뜻(선동하다)을 설명할 수 없다.
+en	inclination	incline + -ation	incline	-ation	suffix	-e 탈락	행위·상태 + (마음이) 기울다 (be inclined to) → 경향, 성향; 의향	true	어간 뜻(incline: (마음이) 기울다 (be inclined to))과 접사 뜻(-ation: 행위·상태)이 현재 뜻(경향, 성향; 의향)에 직접 대응한다.
+en	incoherent	in- + coherent	coherent	in-	prefix	그대로	아닌 + 일관성 있는, 논리 정연한 → 앞뒤가 안 맞는	true	어간 뜻(coherent: 일관성 있는, 논리 정연한)과 접사 뜻(in-: 아닌)이 현재 뜻(앞뒤가 안 맞는)에 직접 대응한다.
+en	incompatible	in- + compatible	compatible	in-	prefix	그대로	아닌 + 호환되는 → 양립할 수 없는, 호환되지 않는	true	어간 뜻(compatible: 호환되는)과 접사 뜻(in-: 아닌)이 현재 뜻(양립할 수 없는, 호환되지 않는)에 직접 대응한다.
+en	incompetent	in- + competent	competent	in-	prefix	그대로	아닌 + 유능한 → 무능한	true	어간 뜻(competent: 유능한)과 접사 뜻(in-: 아닌)이 현재 뜻(무능한)에 직접 대응한다.
+en	incomprehensible	in- + comprehensible	comprehensible	in-	prefix	그대로	아닌 + 이해할 수 있는 → 이해할 수 없는	true	어간 뜻(comprehensible: 이해할 수 있는)과 접사 뜻(in-: 아닌)이 현재 뜻(이해할 수 없는)에 직접 대응한다.
+en	inconclusive	in- + conclusive	conclusive	in-	prefix	그대로	아닌 + 결정적인 → 결론에 이르지 못한	true	어간 뜻(conclusive: 결정적인)과 접사 뜻(in-: 아닌)이 현재 뜻(결론에 이르지 못한)에 직접 대응한다.
+en	inconsequential	in- + consequential	consequential	in-	prefix	그대로	아닌 + 중대한; 결과로 생기는 → 대수롭지 않은	true	어간 뜻(consequential: 중대한; 결과로 생기는)과 접사 뜻(in-: 아닌)이 현재 뜻(대수롭지 않은)에 직접 대응한다.
+en	incorporate	in- + corporate	corporate	in-	prefix	그대로	아닌 + 기업의 → 포함하다	false	어간 뜻(corporate: 기업의)과 접사 뜻(in-: 아닌)으로는 현재 뜻(포함하다)을 설명할 수 없다.
+en	incorporation	incorporate + -ion	incorporate	-ion	suffix	-e 탈락	행위·상태 + 포함하다 → 통합, 편입; 법인 설립	true	어간 뜻(incorporate: 포함하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(통합, 편입; 법인 설립)에 직접 대응한다.
+en	incubation	incubate + -ion	incubate	-ion	suffix	-e 탈락	행위·상태 + 부화시키다; 배양하다 → 잠복기; 부화	true	어간 뜻(incubate: 부화시키다; 배양하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(잠복기; 부화)에 직접 대응한다.
+en	incubator	incubate + -or	incubate	-or	suffix	-e 탈락	하는 사람·도구 + 부화시키다; 배양하다 → 인큐베이터; 창업 지원 기관	true	어간 뜻(incubate: 부화시키다; 배양하다)과 접사 뜻(-or: 하는 사람·도구)이 현재 뜻(인큐베이터; 창업 지원 기관)에 직접 대응한다.
+en	indecent	in- + decent	decent	in-	prefix	그대로	아닌 + 괜찮은, 품위 있는 → 음란한, 부적절한	true	어간 뜻(decent: 괜찮은, 품위 있는)과 접사 뜻(in-: 아닌)이 현재 뜻(음란한, 부적절한)에 직접 대응한다.
+en	indefinitely	indefinite + -ly	indefinite	-ly	suffix	그대로	~하게 + 무기한의; 막연한 → 무기한으로	true	어간 뜻(indefinite: 무기한의; 막연한)과 접사 뜻(-ly: ~하게)이 현재 뜻(무기한으로)에 직접 대응한다.
+en	indictment	indict + -ment	indict	-ment	suffix	그대로	행위·결과 + 기소하다 → 기소; 고발장	true	어간 뜻(indict: 기소하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(기소; 고발장)에 직접 대응한다.
+en	indignity	in- + dignity	dignity	in-	prefix	그대로	아닌 + 존엄 → 모욕, 수모	hold	어간 뜻(dignity: 존엄)과 현재 뜻(모욕, 수모) 사이에 의미·품사 간극이 있어 in- 분석을 확정하기 어렵다.
+en	induct	in- + duct	duct	in-	prefix	그대로	아닌 + 관, 배관 → (공식적으로) 입회시키다	false	어간 뜻(duct: 관, 배관)과 접사 뜻(in-: 아닌)으로는 현재 뜻((공식적으로) 입회시키다)을 설명할 수 없다.
+en	induction	induce + -tion	induce	-tion	suffix	-e 탈락	행위·상태 + 유발하다; 설득하다 → 도입; 입문 교육	hold	어간 뜻(induce: 유발하다; 설득하다)과 현재 뜻(도입; 입문 교육) 사이에 의미·품사 간극이 있어 -tion 분석을 확정하기 어렵다.
+en	induction	induct + -ion	induct	-ion	suffix	그대로	행위·상태 + (공식적으로) 입회시키다 → 도입; 입문 교육	true	어간 뜻(induct: (공식적으로) 입회시키다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(도입; 입문 교육)에 직접 대응한다.
+en	inference	infer + -ence	infer	-ence	suffix	그대로	상태·행위 + 추론하다 → 추론	true	어간 뜻(infer: 추론하다)과 접사 뜻(-ence: 상태·행위)이 현재 뜻(추론)에 직접 대응한다.
+en	infertile	in- + fertile	fertile	in-	prefix	그대로	아닌 + 비옥한; 생식력 있는 → 불임의; 척박한	true	어간 뜻(fertile: 비옥한; 생식력 있는)과 접사 뜻(in-: 아닌)이 현재 뜻(불임의; 척박한)에 직접 대응한다.
+en	inflation	inflate + -ion	inflate	-ion	suffix	-e 탈락	행위·상태 + 부풀리다 → 물가 상승	true	어간 뜻(inflate: 부풀리다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(물가 상승)에 직접 대응한다.
+en	inflexible	in- + flexible	flexible	in-	prefix	그대로	아닌 + 유연한 → 융통성 없는	true	어간 뜻(flexible: 유연한)과 접사 뜻(in-: 아닌)이 현재 뜻(융통성 없는)에 직접 대응한다.
+en	influx	in- + flux	flux	in-	prefix	그대로	아닌 + 계속적인 변화 → 유입, 쇄도	false	어간 뜻(flux: 계속적인 변화)과 접사 뜻(in-: 아닌)으로는 현재 뜻(유입, 쇄도)을 설명할 수 없다.
+en	informative	in- + formative	formative	in-	prefix	그대로	아닌 + 형성에 중요한 → 유익한 정보를 주는	false	어간 뜻(formative: 형성에 중요한)과 접사 뜻(in-: 아닌)으로는 현재 뜻(유익한 정보를 주는)을 설명할 수 없다.
+en	informer	in- + former	former	in-	prefix	그대로	아닌 + 이전의 → 밀고자, 정보원	false	어간 뜻(former: 이전의)과 접사 뜻(in-: 아닌)으로는 현재 뜻(밀고자, 정보원)을 설명할 수 없다.
+en	infraction	in- + fraction	fraction	in-	prefix	그대로	아닌 + 일부, 분수 → 위반	false	fraction은 일부·분수이고 infraction은 위반이라 in-으로 연결되지 않는다.
+en	infringe	in- + fringe	fringe	in-	prefix	그대로	아닌 + 가장자리, 주변; 비주류 → 침해하다	false	어간 뜻(fringe: 가장자리, 주변; 비주류)과 접사 뜻(in-: 아닌)으로는 현재 뜻(침해하다)을 설명할 수 없다.
+en	infringement	infringe + -ment	infringe	-ment	suffix	그대로	행위·결과 + 침해하다 → (권리) 침해; 위반	true	어간 뜻(infringe: 침해하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻((권리) 침해; 위반)에 직접 대응한다.
+en	infuse	in- + fuse	fuse	in-	prefix	그대로	아닌 + 퓨즈; 도화선 → 주입하다, 불어넣다; 우려내다	false	어간 뜻(fuse: 퓨즈; 도화선)과 접사 뜻(in-: 아닌)으로는 현재 뜻(주입하다, 불어넣다; 우려내다)을 설명할 수 없다.
+en	infusion	in- + fusion	fusion	in-	prefix	그대로	아닌 + 융합 → 투입; 우려낸 차; 주입	false	어간 뜻(fusion: 융합)과 접사 뜻(in-: 아닌)으로는 현재 뜻(투입; 우려낸 차; 주입)을 설명할 수 없다.
+en	infusion	infuse + -ion	infuse	-ion	suffix	-e 탈락	행위·상태 + 주입하다, 불어넣다; 우려내다 → 투입; 우려낸 차; 주입	true	어간 뜻(infuse: 주입하다, 불어넣다; 우려내다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(투입; 우려낸 차; 주입)에 직접 대응한다.
+en	inhabitant	inhabit + -ant	inhabit	-ant	suffix	그대로	하는·~한 + 살다, 거주하다 → 주민, 거주자	true	어간 뜻(inhabit: 살다, 거주하다)과 접사 뜻(-ant: 하는·~한)이 현재 뜻(주민, 거주자)에 직접 대응한다.
+en	inhibitor	inhibit + -or	inhibit	-or	suffix	그대로	하는 사람·도구 + 억제하다, 방해하다 → 억제제	true	어간 뜻(inhibit: 억제하다, 방해하다)과 접사 뜻(-or: 하는 사람·도구)이 현재 뜻(억제제)에 직접 대응한다.
+en	inhumane	in- + humane	humane	in-	prefix	그대로	아닌 + 인도적인 → 비인간적인	true	어간 뜻(humane: 인도적인)과 접사 뜻(in-: 아닌)이 현재 뜻(비인간적인)에 직접 대응한다.
+en	injection	inject + -ion	inject	-ion	suffix	그대로	행위·상태 + 주사하다; 투입하다 → 주사	true	어간 뜻(inject: 주사하다; 투입하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(주사)에 직접 대응한다.
+en	injunction	in- + junction	junction	in-	prefix	그대로	아닌 + 교차점 → (법원의) 금지 명령	false	어간 뜻(junction: 교차점)과 접사 뜻(in-: 아닌)으로는 현재 뜻((법원의) 금지 명령)을 설명할 수 없다.
+en	insanity	in- + sanity	sanity	in-	prefix	그대로	아닌 + 제정신 → 정신 이상; 미친 짓	true	어간 뜻(sanity: 제정신)과 접사 뜻(in-: 아닌)이 현재 뜻(정신 이상; 미친 짓)에 직접 대응한다.
+en	insect	in- + sect	sect	in-	prefix	그대로	아닌 + 종파, 분파 → 곤충	false	어간 뜻(sect: 종파, 분파)과 접사 뜻(in-: 아닌)으로는 현재 뜻(곤충)을 설명할 수 없다.
+en	insertion	insert + -ion	insert	-ion	suffix	그대로	행위·상태 + 넣다 → 삽입	true	어간 뜻(insert: 넣다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(삽입)에 직접 대응한다.
+en	inspire	in- + spire	spire	in-	prefix	그대로	아닌 + 첨탑 → 영감을 주다	false	어간 뜻(spire: 첨탑)과 접사 뜻(in-: 아닌)으로는 현재 뜻(영감을 주다)을 설명할 수 없다.
+en	install	in- + stall	stall	in-	prefix	그대로	아닌 + (엔진이) 멈추다; 지연시키다 → 설치하다	false	어간 뜻(stall: (엔진이) 멈추다; 지연시키다)과 접사 뜻(in-: 아닌)으로는 현재 뜻(설치하다)을 설명할 수 없다.
+en	instinctive	instinct + -ive	instinct	-ive	suffix	그대로	~한 성질의 + 본능 → 본능적인	true	어간 뜻(instinct: 본능)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(본능적인)에 직접 대응한다.
+en	instinctively	instinctive + -ly	instinctive	-ly	suffix	그대로	~하게 + 본능적인 → 본능적으로	true	어간 뜻(instinctive: 본능적인)과 접사 뜻(-ly: ~하게)이 현재 뜻(본능적으로)에 직접 대응한다.
+en	institutionalize	institutional + -ize	institutional	-ize	suffix	그대로	~하게 하다 + 기관의 → 제도화하다; 시설에 수용하다	true	어간 뜻(institutional: 기관의)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(제도화하다; 시설에 수용하다)에 직접 대응한다.
+en	insulation	insulate + -ion	insulate	-ion	suffix	-e 탈락	행위·상태 + 단열하다, 절연하다; 보호하다 → 단열; 절연	true	어간 뜻(insulate: 단열하다, 절연하다; 보호하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(단열; 절연)에 직접 대응한다.
+en	intact	in- + tact	tact	in-	prefix	그대로	아닌 + 요령, 눈치 → 손상되지 않은, 온전한	false	어간 뜻(tact: 요령, 눈치)과 접사 뜻(in-: 아닌)으로는 현재 뜻(손상되지 않은, 온전한)을 설명할 수 없다.
+en	intangible	in- + tangible	tangible	in-	prefix	그대로	아닌 + 실재하는, 실질적인 → 무형의	true	어간 뜻(tangible: 실재하는, 실질적인)과 접사 뜻(in-: 아닌)이 현재 뜻(무형의)에 직접 대응한다.
+en	intense	in- + tense	tense	in-	prefix	그대로	아닌 + 긴장한, 긴박한 → 강렬한	false	어간 뜻(tense: 긴장한, 긴박한)과 접사 뜻(in-: 아닌)으로는 현재 뜻(강렬한)을 설명할 수 없다.
+en	intensive	intense + -ive	intense	-ive	suffix	-e 탈락	~한 성질의 + 강렬한 → 집중적인	hold	어간 뜻(intense: 강렬한)과 현재 뜻(집중적인) 사이에 의미·품사 간극이 있어 -ive 분석을 확정하기 어렵다.
+en	intentionally	intentional + -ly	intentional	-ly	suffix	그대로	~하게 + 의도적인 → 고의로, 의도적으로	true	어간 뜻(intentional: 의도적인)과 접사 뜻(-ly: ~하게)이 현재 뜻(고의로, 의도적으로)에 직접 대응한다.
+en	intentionally	intentional + -y	intentional	-y	suffix	자음 겹침	~한 성질의 + 의도적인 → 고의로, 의도적으로	false	대상은 부사인데 -y는 성질을 나타내는 형용사 접미사이므로 이 분해가 맞지 않는다.
+en	intercede	inter- + cede	cede	inter-	prefix	그대로	사이에 + 양도하다 → 중재하다, 탄원하다	false	어간 뜻(cede: 양도하다)과 접사 뜻(inter-: 사이에)으로는 현재 뜻(중재하다, 탄원하다)을 설명할 수 없다.
+en	interdependence	inter- + dependence	dependence	inter-	prefix	그대로	사이에 + 의존 → 상호 의존	true	어간 뜻(dependence: 의존)과 접사 뜻(inter-: 사이에)이 현재 뜻(상호 의존)에 직접 대응한다.
+en	interdisciplinary	inter- + disciplinary	disciplinary	inter-	prefix	그대로	사이에 + 징계의 → 여러 학문 분야가 관련된	false	어간 뜻(disciplinary: 징계의)과 접사 뜻(inter-: 사이에)으로는 현재 뜻(여러 학문 분야가 관련된)을 설명할 수 없다.
+en	interference	interfere + -ence	interfere	-ence	suffix	-e 탈락	상태·행위 + 간섭하다 → 간섭; 방해	true	어간 뜻(interfere: 간섭하다)과 접사 뜻(-ence: 상태·행위)이 현재 뜻(간섭; 방해)에 직접 대응한다.
+en	intermediate	inter- + mediate	mediate	inter-	prefix	그대로	사이에 + 중재하다 → 중간 단계의	false	어간 뜻(mediate: 중재하다)과 접사 뜻(inter-: 사이에)으로는 현재 뜻(중간 단계의)을 설명할 수 없다.
+en	internship	intern + -ship	intern	-ship	suffix	그대로	관계·지위 + 인턴, 수습사원 → 인턴십, 수습 기간	true	어간 뜻(intern: 인턴, 수습사원)과 접사 뜻(-ship: 관계·지위)이 현재 뜻(인턴십, 수습 기간)에 직접 대응한다.
+en	intersect	inter- + sect	sect	inter-	prefix	그대로	사이에 + 종파, 분파 → 교차하다	false	어간 뜻(sect: 종파, 분파)과 접사 뜻(inter-: 사이에)으로는 현재 뜻(교차하다)을 설명할 수 없다.
+en	interstellar	inter- + stellar	stellar	inter-	prefix	그대로	사이에 + 뛰어난; 별의 → 항성 간의	true	어간 뜻(stellar: 뛰어난; 별의)과 접사 뜻(inter-: 사이에)이 현재 뜻(항성 간의)에 직접 대응한다.
+en	intertwine	inter- + twine	twine	inter-	prefix	그대로	사이에 + 노끈 → 뒤얽히다	hold	어간 뜻(twine: 노끈)과 현재 뜻(뒤얽히다) 사이에 의미·품사 간극이 있어 inter- 분석을 확정하기 어렵다.
+en	intervention	intervene + -tion	intervene	-tion	suffix	-e 탈락	행위·상태 + 개입하다 → 개입	true	어간 뜻(intervene: 개입하다)과 접사 뜻(-tion: 행위·상태)이 현재 뜻(개입)에 직접 대응한다.
+en	interweave	inter- + weave	weave	inter-	prefix	그대로	사이에 + (천을) 짜다; 누비며 가다 → 섞어 짜다, 엮다	true	어간 뜻(weave: (천을) 짜다; 누비며 가다)과 접사 뜻(inter-: 사이에)이 현재 뜻(섞어 짜다, 엮다)에 직접 대응한다.
+en	intimidation	intimidate + -ion	intimidate	-ion	suffix	-e 탈락	행위·상태 + 겁주다, 위협하다 → 위협, 협박	true	어간 뜻(intimidate: 겁주다, 위협하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(위협, 협박)에 직접 대응한다.
+en	intoxication	intoxicate + -ion	intoxicate	-ion	suffix	-e 탈락	행위·상태 + 취하게 하다; 도취시키다 → 중독, 취함	true	어간 뜻(intoxicate: 취하게 하다; 도취시키다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(중독, 취함)에 직접 대응한다.
+en	intricately	intricate + -ly	intricate	-ly	suffix	그대로	~하게 + 복잡한, 정교한 → 복잡하게, 정교하게	true	어간 뜻(intricate: 복잡한, 정교한)과 접사 뜻(-ly: ~하게)이 현재 뜻(복잡하게, 정교하게)에 직접 대응한다.
+en	intruder	intrude + -er	intrude	-er	suffix	-e 탈락	하는 사람·도구 + 침범하다, 방해하다 → 침입자	true	어간 뜻(intrude: 침범하다, 방해하다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(침입자)에 직접 대응한다.
+en	invader	invade + -er	invade	-er	suffix	-e 탈락	하는 사람·도구 + 침입하다 → 침략자	true	어간 뜻(invade: 침입하다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(침략자)에 직접 대응한다.
+en	invalid	in- + valid	valid	in-	prefix	그대로	아닌 + 유효한 → 유효하지 않은	true	어간 뜻(valid: 유효한)과 접사 뜻(in-: 아닌)이 현재 뜻(유효하지 않은)에 직접 대응한다.
+en	invalidate	in- + validate	validate	in-	prefix	그대로	아닌 + 입증하다; 승인하다 → 무효화하다	true	어간 뜻(validate: 입증하다; 승인하다)과 접사 뜻(in-: 아닌)이 현재 뜻(무효화하다)에 직접 대응한다.
+en	inverse	in- + verse	verse	in-	prefix	그대로	아닌 + 시구, 절 → 역의, 반대의	false	어간 뜻(verse: 시구, 절)과 접사 뜻(in-: 아닌)으로는 현재 뜻(역의, 반대의)을 설명할 수 없다.
+en	invertebrate	in- + vertebrate	vertebrate	in-	prefix	그대로	아닌 + 척추동물 → 무척추동물	true	어간 뜻(vertebrate: 척추동물)과 접사 뜻(in-: 아닌)이 현재 뜻(무척추동물)에 직접 대응한다.
+en	invocation	in- + vocation	vocation	in-	prefix	그대로	아닌 + 천직, 소명 → 기원, 기도; (법) 발동	false	어간 뜻(vocation: 천직, 소명)과 접사 뜻(in-: 아닌)으로는 현재 뜻(기원, 기도; (법) 발동)을 설명할 수 없다.
+en	irrigation	irrigate + -ion	irrigate	-ion	suffix	-e 탈락	행위·상태 + 관개하다, 물을 대다 → 관개	true	어간 뜻(irrigate: 관개하다, 물을 대다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(관개)에 직접 대응한다.
+en	irritation	irritate + -ion	irritate	-ion	suffix	-e 탈락	행위·상태 + 짜증 나게 하다 → 짜증; (피부) 자극	true	어간 뜻(irritate: 짜증 나게 하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(짜증; (피부) 자극)에 직접 대응한다.
+en	isolation	isolate + -ion	isolate	-ion	suffix	-e 탈락	행위·상태 + 고립시키다 → 고립	true	어간 뜻(isolate: 고립시키다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(고립)에 직접 대응한다.
+en	jaunty	jaunt + -y	jaunt	-y	suffix	그대로	~한 성질의 + 짧은 여행 → 쾌활한	false	어간 뜻(jaunt: 짧은 여행)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(쾌활한)을 설명할 수 없다.
+en	justifiable	justify + -able	justify	-able	suffix	y→i	할 수 있는 + 정당화하다 → 정당한	true	어간 뜻(justify: 정당화하다)과 접사 뜻(-able: 할 수 있는)이 현재 뜻(정당한)에 직접 대응한다.
+en	lament	lame + -ent	lame	-ent	suffix	-e 탈락	하는·~한 + 절름발이의; 설득력 없는 → 애도하다, 한탄하다	false	어간 뜻(lame: 절름발이의; 설득력 없는)과 접사 뜻(-ent: 하는·~한)으로는 현재 뜻(애도하다, 한탄하다)을 설명할 수 없다.
+en	laudable	laud + -able	laud	-able	suffix	그대로	할 수 있는 + 칭찬하다 → 칭찬할 만한	true	어간 뜻(laud: 칭찬하다)과 접사 뜻(-able: 할 수 있는)이 현재 뜻(칭찬할 만한)에 직접 대응한다.
+en	leaky	leak + -y	leak	-y	suffix	그대로	~한 성질의 + 새다 → 새는	true	어간 뜻(leak: 새다)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(새는)에 직접 대응한다.
+en	ledger	ledge + -er	ledge	-er	suffix	-e 탈락	하는 사람·도구 + 선반 모양의 돌출부 → 원장, 장부	false	어간 뜻(ledge: 선반 모양의 돌출부)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(원장, 장부)을 설명할 수 없다.
+en	leisurely	leisure + -ly	leisure	-ly	suffix	그대로	~하게 + 여가 → 느긋한	hold	어간 뜻(leisure: 여가)과 현재 뜻(느긋한) 사이에 의미·품사 간극이 있어 -ly 분석을 확정하기 어렵다.
+en	liberally	liberal + -ly	liberal	-ly	suffix	그대로	~하게 + 자유주의적인 → 아낌없이	false	어간 뜻(liberal: 자유주의적인)과 접사 뜻(-ly: ~하게)으로는 현재 뜻(아낌없이)을 설명할 수 없다.
+en	liberally	liberal + -y	liberal	-y	suffix	자음 겹침	~한 성질의 + 자유주의적인 → 아낌없이	false	어간 뜻(liberal: 자유주의적인)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(아낌없이)을 설명할 수 없다.
+en	locality	locale + -ity	locale	-ity	suffix	-e 탈락	상태·성질 + 장소; 배경 → 지역, 부근	hold	어간 뜻(locale: 장소; 배경)과 현재 뜻(지역, 부근) 사이에 의미·품사 간극이 있어 -ity 분석을 확정하기 어렵다.
+en	lofty	loft + -y	loft	-y	suffix	그대로	~한 성질의 + 다락; 로프트 → 고상한; 매우 높은	false	어간 뜻(loft: 다락; 로프트)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(고상한; 매우 높은)을 설명할 수 없다.
+en	logical	logic + -al	logic	-al	suffix	그대로	~와 관련된 + 논리 → 논리적인	true	어간 뜻(logic: 논리)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(논리적인)에 직접 대응한다.
+en	luster	lust + -er	lust	-er	suffix	그대로	하는 사람·도구 + 욕망, 정욕 → 광택; 영광	false	어간 뜻(lust: 욕망, 정욕)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(광택; 영광)을 설명할 수 없다.
+en	lusty	lust + -y	lust	-y	suffix	그대로	~한 성질의 + 욕망, 정욕 → 원기 왕성한	false	어간 뜻(lust: 욕망, 정욕)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(원기 왕성한)을 설명할 수 없다.
+en	magnetism	magnet + -ism	magnet	-ism	suffix	그대로	사상·방식 + 자석 → 자력; 매력	false	어간 뜻(magnet: 자석)과 접사 뜻(-ism: 사상·방식)으로는 현재 뜻(자력; 매력)을 설명할 수 없다.
+en	malignant	malign + -ant	malign	-ant	suffix	그대로	하는·~한 + 헐뜯다 → 악성의; 악의적인	false	어간 뜻(malign: 헐뜯다)과 접사 뜻(-ant: 하는·~한)으로는 현재 뜻(악성의; 악의적인)을 설명할 수 없다.
+en	manifestation	manifest + -ation	manifest	-ation	suffix	그대로	행위·상태 + (분명히) 나타내다 → 표명, 나타남	true	어간 뜻(manifest: (분명히) 나타내다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(표명, 나타남)에 직접 대응한다.
+en	manipulative	manipulate + -ive	manipulate	-ive	suffix	-e 탈락	~한 성질의 + 조작하다 → 조종하는, 교묘하게 다루는	true	어간 뜻(manipulate: 조작하다)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(조종하는, 교묘하게 다루는)에 직접 대응한다.
+en	marginal	margin + -al	margin	-al	suffix	그대로	~와 관련된 + 여백; 차이 → 미미한; 주변부의	true	어간 뜻(margin: 여백; 차이)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(미미한; 주변부의)에 직접 대응한다.
+en	mariner	marine + -er	marine	-er	suffix	-e 탈락	하는 사람·도구 + 해양의 → 선원	hold	어간 뜻(marine: 해양의)과 현재 뜻(선원) 사이에 의미·품사 간극이 있어 -er 분석을 확정하기 어렵다.
+en	marshal	marsh + -al	marsh	-al	suffix	그대로	~와 관련된 + 습지 → (사람·생각을) 정리하다, 모으다	false	어간 뜻(marsh: 습지)과 접사 뜻(-al: ~와 관련된)으로는 현재 뜻((사람·생각을) 정리하다, 모으다)을 설명할 수 없다.
+en	maturity	mature + -ity	mature	-ity	suffix	-e 탈락	상태·성질 + 성숙한 → 성숙; (만기)	true	어간 뜻(mature: 성숙한)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(성숙; (만기))에 직접 대응한다.
+en	mediator	mediate + -or	mediate	-or	suffix	-e 탈락	하는 사람·도구 + 중재하다 → 중재자	true	어간 뜻(mediate: 중재하다)과 접사 뜻(-or: 하는 사람·도구)이 현재 뜻(중재자)에 직접 대응한다.
+en	mediocrity	mediocre + -ity	mediocre	-ity	suffix	-e 탈락	상태·성질 + 평범한, 그저 그런 → 평범함	true	어간 뜻(mediocre: 평범한, 그저 그런)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(평범함)에 직접 대응한다.
+en	merger	merge + -er	merge	-er	suffix	-e 탈락	하는 사람·도구 + 합치다 → 합병	false	어간 뜻(merge: 합치다)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(합병)을 설명할 수 없다.
+en	methodically	methodical + -ly	methodical	-ly	suffix	그대로	~하게 + 체계적인, 꼼꼼한 → 체계적으로	true	어간 뜻(methodical: 체계적인, 꼼꼼한)과 접사 뜻(-ly: ~하게)이 현재 뜻(체계적으로)에 직접 대응한다.
+en	methodically	methodical + -y	methodical	-y	suffix	자음 겹침	~한 성질의 + 체계적인, 꼼꼼한 → 체계적으로	false	대상은 부사인데 -y는 성질을 나타내는 형용사 접미사이므로 이 분해가 맞지 않는다.
+en	meticulously	meticulous + -ly	meticulous	-ly	suffix	그대로	~하게 + 꼼꼼한 → 꼼꼼하게	true	어간 뜻(meticulous: 꼼꼼한)과 접사 뜻(-ly: ~하게)이 현재 뜻(꼼꼼하게)에 직접 대응한다.
+en	microorganism	micro- + organism	organism	micro-	prefix	그대로	아주 작은 + 유기체, 생물 → 미생물	true	어간 뜻(organism: 유기체, 생물)과 접사 뜻(micro-: 아주 작은)이 현재 뜻(미생물)에 직접 대응한다.
+en	minimalist	minimal + -ist	minimal	-ist	suffix	그대로	하는 사람·전문가 + 최소한의 → 미니멀리즘의	hold	어간 뜻(minimal: 최소한의)과 현재 뜻(미니멀리즘의) 사이에 의미·품사 간극이 있어 -ist 분석을 확정하기 어렵다.
+en	miscarriage	mis- + carriage	carriage	mis-	prefix	그대로	잘못 + 마차; 객차 → 유산; (재판의) 오심	false	어간 뜻(carriage: 마차; 객차)과 접사 뜻(mis-: 잘못)으로는 현재 뜻(유산; (재판의) 오심)을 설명할 수 없다.
+en	misconception	mis- + conception	conception	mis-	prefix	그대로	잘못 + 개념, 구상; 임신 → 오해	true	어간 뜻(conception: 개념, 구상; 임신)과 접사 뜻(mis-: 잘못)이 현재 뜻(오해)에 직접 대응한다.
+en	misdeed	mis- + deed	deed	mis-	prefix	그대로	잘못 + 행위; (부동산) 증서 → 비행, 악행	true	어간 뜻(deed: 행위; (부동산) 증서)과 접사 뜻(mis-: 잘못)이 현재 뜻(비행, 악행)에 직접 대응한다.
+en	misrepresentation	misrepresent + -ation	misrepresent	-ation	suffix	그대로	행위·상태 + 잘못 전하다, 왜곡하다 → 허위 진술, 왜곡	true	어간 뜻(misrepresent: 잘못 전하다, 왜곡하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(허위 진술, 왜곡)에 직접 대응한다.
+en	mobility	mobile + -ity	mobile	-ity	suffix	-e 탈락	상태·성질 + 이동할 수 있는 → 이동성	true	어간 뜻(mobile: 이동할 수 있는)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(이동성)에 직접 대응한다.
+en	mobilize	mobile + -ize	mobile	-ize	suffix	-e 탈락	~하게 하다 + 이동할 수 있는 → 동원하다	true	어간 뜻(mobile: 이동할 수 있는)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(동원하다)에 직접 대응한다.
+en	moisten	moist + -en	moist	-en	suffix	그대로	~하게 하다 + 촉촉한 → 적시다	true	어간 뜻(moist: 촉촉한)과 접사 뜻(-en: ~하게 하다)이 현재 뜻(적시다)에 직접 대응한다.
+en	monarchy	monarch + -y	monarch	-y	suffix	그대로	~한 성질의 + 군주 → 군주제	false	어간 뜻(monarch: 군주)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(군주제)을 설명할 수 없다.
+en	monotony	monotone + -y	monotone	-y	suffix	-e 탈락	~한 성질의 + 단조로운 소리 → 단조로움	false	어간 뜻(monotone: 단조로운 소리)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(단조로움)을 설명할 수 없다.
+en	monumental	monument + -al	monument	-al	suffix	그대로	~와 관련된 + 기념물 → 기념비적인; 엄청난	hold	어간 뜻(monument: 기념물)과 현재 뜻(기념비적인; 엄청난) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	morality	morale + -ity	morale	-ity	suffix	-e 탈락	상태·성질 + 사기, 의욕 → 도덕성, 도덕	false	어간 뜻(morale: 사기, 의욕)과 접사 뜻(-ity: 상태·성질)으로는 현재 뜻(도덕성, 도덕)을 설명할 수 없다.
+en	mortality	mortal + -ity	mortal	-ity	suffix	그대로	상태·성질 + 죽을 운명의; 치명적인 → 사망률	hold	어간 뜻(mortal: 죽을 운명의; 치명적인)과 현재 뜻(사망률) 사이에 의미·품사 간극이 있어 -ity 분석을 확정하기 어렵다.
+en	mournful	mourn + -ful	mourn	-ful	suffix	그대로	가득한·있는 + 애도하다 → 구슬픈	true	어간 뜻(mourn: 애도하다)과 접사 뜻(-ful: 가득한·있는)이 현재 뜻(구슬픈)에 직접 대응한다.
+en	muffler	muffle + -er	muffle	-er	suffix	-e 탈락	하는 사람·도구 + 소리를 죽이다 → 머플러; 소음기	true	어간 뜻(muffle: 소리를 죽이다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(머플러; 소음기)에 직접 대응한다.
+en	multilateral	multi- + lateral	lateral	multi-	prefix	그대로	여러 + 옆의, 측면의 → 다자간의	true	어간 뜻(lateral: 옆의, 측면의)과 접사 뜻(multi-: 여러)이 현재 뜻(다자간의)에 직접 대응한다.
+en	municipality	municipal + -ity	municipal	-ity	suffix	그대로	상태·성질 + 시의, 지방 자치의 → 지방 자치체	hold	어간 뜻(municipal: 시의, 지방 자치의)과 현재 뜻(지방 자치체) 사이에 의미·품사 간극이 있어 -ity 분석을 확정하기 어렵다.
+en	mutation	mutate + -ion	mutate	-ion	suffix	-e 탈락	행위·상태 + 돌연변이를 일으키다 → 돌연변이; 변화	true	어간 뜻(mutate: 돌연변이를 일으키다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(돌연변이; 변화)에 직접 대응한다.
+en	mutation	mute + -ation	mute	-ation	suffix	-e 탈락	행위·상태 + 말을 못 하는; 무음의 → 돌연변이; 변화	false	어간 뜻(mute: 말을 못 하는; 무음의)과 접사 뜻(-ation: 행위·상태)으로는 현재 뜻(돌연변이; 변화)을 설명할 수 없다.
+en	narration	narrate + -ion	narrate	-ion	suffix	-e 탈락	행위·상태 + 이야기하다 → 내레이션, 서술	true	어간 뜻(narrate: 이야기하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(내레이션, 서술)에 직접 대응한다.
+en	narrative	narrate + -ive	narrate	-ive	suffix	-e 탈락	~한 성질의 + 이야기하다 → 서사	hold	어간 뜻(narrate: 이야기하다)과 현재 뜻(서사) 사이에 의미·품사 간극이 있어 -ive 분석을 확정하기 어렵다.
+en	naturalistic	naturalist + -ic	naturalist	-ic	suffix	그대로	~에 관한 + 박물학자, 자연주의자 → 자연주의적인, 사실적인	true	어간 뜻(naturalist: 박물학자, 자연주의자)과 접사 뜻(-ic: ~에 관한)이 현재 뜻(자연주의적인, 사실적인)에 직접 대응한다.
+en	negation	negate + -ion	negate	-ion	suffix	-e 탈락	행위·상태 + 무효화하다 → 부정	true	어간 뜻(negate: 무효화하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(부정)에 직접 대응한다.
+en	negotiation	negotiate + -ion	negotiate	-ion	suffix	-e 탈락	행위·상태 + 협상하다 → 협상	true	어간 뜻(negotiate: 협상하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(협상)에 직접 대응한다.
+en	neutralize	neutral + -ize	neutral	-ize	suffix	그대로	~하게 하다 + 중립적인 → 무력화하다, 중화하다	true	어간 뜻(neutral: 중립적인)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(무력화하다, 중화하다)에 직접 대응한다.
+en	nomadic	nomad + -ic	nomad	-ic	suffix	그대로	~에 관한 + 유목민 → 유목의	true	어간 뜻(nomad: 유목민)과 접사 뜻(-ic: ~에 관한)이 현재 뜻(유목의)에 직접 대응한다.
+en	nomination	nominate + -ion	nominate	-ion	suffix	-e 탈락	행위·상태 + 지명하다 → 지명	true	어간 뜻(nominate: 지명하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(지명)에 직접 대응한다.
+en	nonfiction	non- + fiction	fiction	non-	prefix	그대로	아닌 + 소설, 허구 → 논픽션	true	어간 뜻(fiction: 소설, 허구)과 접사 뜻(non-: 아닌)이 현재 뜻(논픽션)에 직접 대응한다.
+en	notably	notable + -ly	notable	-ly	suffix	-le→-ly	~하게 + 주목할 만한, 유명한 → 특히, 현저히	hold	어간 뜻(notable: 주목할 만한, 유명한)과 현재 뜻(특히, 현저히) 사이에 의미·품사 간극이 있어 -ly 분석을 확정하기 어렵다.
+en	notably	notable + -y	notable	-y	suffix	-e 탈락	~한 성질의 + 주목할 만한, 유명한 → 특히, 현저히	false	대상은 부사인데 -y는 성질을 나타내는 형용사 접미사이므로 이 분해가 맞지 않는다.
+en	notoriously	notorious + -ly	notorious	-ly	suffix	그대로	~하게 + 악명 높은 → 악명 높게, 널리 알려지게	true	어간 뜻(notorious: 악명 높은)과 접사 뜻(-ly: ~하게)이 현재 뜻(악명 높게, 널리 알려지게)에 직접 대응한다.
+en	nourishment	nourish + -ment	nourish	-ment	suffix	그대로	행위·결과 + 영양분을 주다; 키우다 → 영양(분)	true	어간 뜻(nourish: 영양분을 주다; 키우다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(영양(분))에 직접 대응한다.
+en	numerical	numeric + -al	numeric	-al	suffix	그대로	~와 관련된 + 숫자의 → 숫자의	true	어간 뜻(numeric: 숫자의)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(숫자의)에 직접 대응한다.
+en	obscurity	obscure + -ity	obscure	-ity	suffix	-e 탈락	상태·성질 + 잘 알려지지 않은; 모호한 → 무명; 모호함	true	어간 뜻(obscure: 잘 알려지지 않은; 모호한)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(무명; 모호함)에 직접 대응한다.
+en	observance	observe + -ance	observe	-ance	suffix	-e 탈락	상태·행위 + 관찰하다 → 준수; 기념 행사	false	어간 뜻(observe: 관찰하다)과 접사 뜻(-ance: 상태·행위)으로는 현재 뜻(준수; 기념 행사)을 설명할 수 없다.
+en	obstruction	obstruct + -ion	obstruct	-ion	suffix	그대로	행위·상태 + 막다, 방해하다 → 방해물, 차단	true	어간 뜻(obstruct: 막다, 방해하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(방해물, 차단)에 직접 대응한다.
+en	odor	ode + -or	ode	-or	suffix	-e 탈락	하는 사람·도구 + 송시, 찬가 → 냄새, 악취	false	어간 뜻(ode: 송시, 찬가)과 접사 뜻(-or: 하는 사람·도구)으로는 현재 뜻(냄새, 악취)을 설명할 수 없다.
+en	optic	opt + -ic	opt	-ic	suffix	그대로	~에 관한 + 선택하다 → 눈의, 시각의	false	어간 뜻(opt: 선택하다)과 접사 뜻(-ic: ~에 관한)으로는 현재 뜻(눈의, 시각의)을 설명할 수 없다.
+en	optimization	optimize + -ation	optimize	-ation	suffix	-e 탈락	행위·상태 + 최적화하다 → 최적화	true	어간 뜻(optimize: 최적화하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(최적화)에 직접 대응한다.
+en	oral	ore + -al	ore	-al	suffix	-e 탈락	~와 관련된 + 광석 → 구두의	false	어간 뜻(ore: 광석)과 접사 뜻(-al: ~와 관련된)으로는 현재 뜻(구두의)을 설명할 수 없다.
+en	oratory	orator + -y	orator	-y	suffix	그대로	~한 성질의 + 연설가 → 웅변(술)	false	어간 뜻(orator: 연설가)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(웅변(술))을 설명할 수 없다.
+en	orbital	orbit + -al	orbit	-al	suffix	그대로	~와 관련된 + 궤도 → 궤도의	true	어간 뜻(orbit: 궤도)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(궤도의)에 직접 대응한다.
+en	organism	organ + -ism	organ	-ism	suffix	그대로	사상·방식 + 장기 → 유기체, 생물	false	어간 뜻(organ: 장기)과 접사 뜻(-ism: 사상·방식)으로는 현재 뜻(유기체, 생물)을 설명할 수 없다.
+en	oriental	orient + -al	orient	-al	suffix	그대로	~와 관련된 + 방향을 맞추다; 적응시키다 → 동양의(구식 표현)	false	어간 뜻(orient: 방향을 맞추다; 적응시키다)과 접사 뜻(-al: ~와 관련된)으로는 현재 뜻(동양의(구식 표현))을 설명할 수 없다.
+en	ornamental	ornament + -al	ornament	-al	suffix	그대로	~와 관련된 + 장식품 → 장식용의	true	어간 뜻(ornament: 장식품)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(장식용의)에 직접 대응한다.
+en	overdose	over- + dose	dose	over-	prefix	그대로	지나치게·위에 + 복용량 → 과다 복용	true	어간 뜻(dose: 복용량)과 접사 뜻(over-: 지나치게·위에)이 현재 뜻(과다 복용)에 직접 대응한다.
+en	overhaul	over- + haul	haul	over-	prefix	그대로	지나치게·위에 + 끌다, 운반하다 → 정비하다, 전면 개편하다	false	어간 뜻(haul: 끌다, 운반하다)과 접사 뜻(over-: 지나치게·위에)으로는 현재 뜻(정비하다, 전면 개편하다)을 설명할 수 없다.
+en	overlap	over- + lap	lap	over-	prefix	그대로	지나치게·위에 + 무릎 위, 한 바퀴 → 겹치다	hold	어간 뜻(lap: 무릎 위, 한 바퀴)과 현재 뜻(겹치다) 사이에 의미·품사 간극이 있어 over- 분석을 확정하기 어렵다.
+en	palatable	palate + -able	palate	-able	suffix	-e 탈락	할 수 있는 + 미각; 입천장 → 맛있는; 받아들일 만한	hold	어간 뜻(palate: 미각; 입천장)과 현재 뜻(맛있는; 받아들일 만한) 사이에 의미·품사 간극이 있어 -able 분석을 확정하기 어렵다.
+en	parable	pare + -able	pare	-able	suffix	-e 탈락	할 수 있는 + (껍질을) 벗기다; 줄이다 → 우화, 비유담	false	어간 뜻(pare: (껍질을) 벗기다; 줄이다)과 접사 뜻(-able: 할 수 있는)으로는 현재 뜻(우화, 비유담)을 설명할 수 없다.
+en	parasitic	parasite + -ic	parasite	-ic	suffix	-e 탈락	~에 관한 + 기생충, 기생 생물 → 기생하는	true	어간 뜻(parasite: 기생충, 기생 생물)과 접사 뜻(-ic: ~에 관한)이 현재 뜻(기생하는)에 직접 대응한다.
+en	parish	pare + -ish	pare	-ish	suffix	-e 탈락	~같은 + (껍질을) 벗기다; 줄이다 → 교구	false	어간 뜻(pare: (껍질을) 벗기다; 줄이다)과 접사 뜻(-ish: ~같은)으로는 현재 뜻(교구)을 설명할 수 없다.
+en	parity	pare + -ity	pare	-ity	suffix	-e 탈락	상태·성질 + (껍질을) 벗기다; 줄이다 → 동등, 균등	false	어간 뜻(pare: (껍질을) 벗기다; 줄이다)과 접사 뜻(-ity: 상태·성질)으로는 현재 뜻(동등, 균등)을 설명할 수 없다.
+en	patent	pat + -ent	pat	-ent	suffix	그대로	하는·~한 + 가볍게 두드리다 → 특허	false	어간 뜻(pat: 가볍게 두드리다)과 접사 뜻(-ent: 하는·~한)으로는 현재 뜻(특허)을 설명할 수 없다.
+en	patriarchal	patriarch + -al	patriarch	-al	suffix	그대로	~와 관련된 + 가장, 족장 → 가부장적인	true	어간 뜻(patriarch: 가장, 족장)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(가부장적인)에 직접 대응한다.
+en	patriotic	patriot + -ic	patriot	-ic	suffix	그대로	~에 관한 + 애국자 → 애국적인	true	어간 뜻(patriot: 애국자)과 접사 뜻(-ic: ~에 관한)이 현재 뜻(애국적인)에 직접 대응한다.
+en	patriotism	patriot + -ism	patriot	-ism	suffix	그대로	사상·방식 + 애국자 → 애국심	true	어간 뜻(patriot: 애국자)과 접사 뜻(-ism: 사상·방식)이 현재 뜻(애국심)에 직접 대응한다.
+en	patronize	patron + -ize	patron	-ize	suffix	그대로	~하게 하다 + 후원자; 단골손님 → 단골로 다니다; 깔보다	hold	어간 뜻(patron: 후원자; 단골손님)과 현재 뜻(단골로 다니다; 깔보다) 사이에 의미·품사 간극이 있어 -ize 분석을 확정하기 어렵다.
+en	peculiarity	peculiar + -ity	peculiar	-ity	suffix	그대로	상태·성질 + 이상한, 특이한; 고유의 → 특이한 점	true	어간 뜻(peculiar: 이상한, 특이한; 고유의)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(특이한 점)에 직접 대응한다.
+en	penalize	penal + -ize	penal	-ize	suffix	그대로	~하게 하다 + 형벌의 → 처벌하다, 불이익을 주다	true	어간 뜻(penal: 형벌의)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(처벌하다, 불이익을 주다)에 직접 대응한다.
+en	penetration	penetrate + -ion	penetrate	-ion	suffix	-e 탈락	행위·상태 + 관통하다, 침투하다 → 침투	true	어간 뜻(penetrate: 관통하다, 침투하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(침투)에 직접 대응한다.
+en	perilous	peril + -ous	peril	-ous	suffix	그대로	~한 성질의 + 위험 → 아주 위험한	true	어간 뜻(peril: 위험)과 접사 뜻(-ous: ~한 성질의)이 현재 뜻(아주 위험한)에 직접 대응한다.
+en	periodically	periodical + -ly	periodical	-ly	suffix	그대로	~하게 + 정기 간행물 → 주기적으로	false	어간 뜻(periodical: 정기 간행물)과 접사 뜻(-ly: ~하게)으로는 현재 뜻(주기적으로)을 설명할 수 없다.
+en	periodically	periodical + -y	periodical	-y	suffix	자음 겹침	~한 성질의 + 정기 간행물 → 주기적으로	false	대상은 부사인데 -y는 성질을 나타내는 형용사 접미사이므로 이 분해가 맞지 않는다.
+en	perseverance	persevere + -ance	persevere	-ance	suffix	-e 탈락	상태·행위 + 인내하다, 끈기 있게 계속하다 → 인내, 끈기	true	어간 뜻(persevere: 인내하다, 끈기 있게 계속하다)과 접사 뜻(-ance: 상태·행위)이 현재 뜻(인내, 끈기)에 직접 대응한다.
+en	persistent	persist + -ent	persist	-ent	suffix	그대로	하는·~한 + 계속하다 → 끈질긴; 지속되는	true	어간 뜻(persist: 계속하다)과 접사 뜻(-ent: 하는·~한)이 현재 뜻(끈질긴; 지속되는)에 직접 대응한다.
+en	pivotal	pivot + -al	pivot	-al	suffix	그대로	~와 관련된 + (축을 중심으로) 회전하다; 방향을 전환하다 → 중추적인, 중요한	hold	어간 뜻(pivot: (축을 중심으로) 회전하다; 방향을 전환하다)과 현재 뜻(중추적인, 중요한) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	polarity	polar + -ity	polar	-ity	suffix	그대로	상태·성질 + 극지의 → 양극성; 대립	false	어간 뜻(polar: 극지의)과 접사 뜻(-ity: 상태·성질)으로는 현재 뜻(양극성; 대립)을 설명할 수 없다.
+en	polarize	polar + -ize	polar	-ize	suffix	그대로	~하게 하다 + 극지의 → 양극화하다	false	어간 뜻(polar: 극지의)과 접사 뜻(-ize: ~하게 하다)으로는 현재 뜻(양극화하다)을 설명할 수 없다.
+en	pollen	poll + -en	poll	-en	suffix	그대로	~하게 하다 + 여론 조사 → 꽃가루	false	어간 뜻(poll: 여론 조사)과 접사 뜻(-en: ~하게 하다)으로는 현재 뜻(꽃가루)을 설명할 수 없다.
+en	ponder	pond + -er	pond	-er	suffix	그대로	하는 사람·도구 + 연못 → 숙고하다	false	어간 뜻(pond: 연못)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(숙고하다)을 설명할 수 없다.
+en	ponderous	ponder + -ous	ponder	-ous	suffix	그대로	~한 성질의 + 숙고하다 → 육중한; 지루한	false	어간 뜻(ponder: 숙고하다)과 접사 뜻(-ous: ~한 성질의)으로는 현재 뜻(육중한; 지루한)을 설명할 수 없다.
+en	porous	pore + -ous	pore	-ous	suffix	-e 탈락	~한 성질의 + 땀구멍, 모공 → 구멍이 많은, 다공성의	true	어간 뜻(pore: 땀구멍, 모공)과 접사 뜻(-ous: ~한 성질의)이 현재 뜻(구멍이 많은, 다공성의)에 직접 대응한다.
+en	portion	pore + -tion	pore	-tion	suffix	-e 탈락	행위·상태 + 땀구멍, 모공 → 부분, 1인분	false	어간 뜻(pore: 땀구멍, 모공)과 접사 뜻(-tion: 행위·상태)으로는 현재 뜻(부분, 1인분)을 설명할 수 없다.
+en	postoperative	post- + operative	operative	post-	prefix	그대로	뒤에 + 작동하는; 효력 있는 → 수술 후의	false	어간 뜻(operative: 작동하는; 효력 있는)과 접사 뜻(post-: 뒤에)으로는 현재 뜻(수술 후의)을 설명할 수 없다.
+en	preamble	pre- + amble	amble	pre-	prefix	그대로	미리·앞서 + 느긋하게 걷다 → 서문, 전문	false	어간 뜻(amble: 느긋하게 걷다)과 접사 뜻(pre-: 미리·앞서)으로는 현재 뜻(서문, 전문)을 설명할 수 없다.
+en	precede	pre- + cede	cede	pre-	prefix	그대로	미리·앞서 + 양도하다 → 앞서다, 선행하다	false	어간 뜻(cede: 양도하다)과 접사 뜻(pre-: 미리·앞서)으로는 현재 뜻(앞서다, 선행하다)을 설명할 수 없다.
+en	precedence	precede + -ence	precede	-ence	suffix	-e 탈락	상태·행위 + 앞서다, 선행하다 → 우선(권)	true	어간 뜻(precede: 앞서다, 선행하다)과 접사 뜻(-ence: 상태·행위)이 현재 뜻(우선(권))에 직접 대응한다.
+en	precedent	precede + -ent	precede	-ent	suffix	-e 탈락	하는·~한 + 앞서다, 선행하다 → 선례, 전례	hold	어간 뜻(precede: 앞서다, 선행하다)과 현재 뜻(선례, 전례) 사이에 의미·품사 간극이 있어 -ent 분석을 확정하기 어렵다.
+en	precipitation	precipitate + -ion	precipitate	-ion	suffix	-e 탈락	행위·상태 + 촉발하다 → 강수	false	어간 뜻(precipitate: 촉발하다)과 접사 뜻(-ion: 행위·상태)으로는 현재 뜻(강수)을 설명할 수 없다.
+en	precisely	precise + -ly	precise	-ly	suffix	그대로	~하게 + 정확한 → 정확히	true	어간 뜻(precise: 정확한)과 접사 뜻(-ly: ~하게)이 현재 뜻(정확히)에 직접 대응한다.
+en	precursor	pre- + cursor	cursor	pre-	prefix	그대로	미리·앞서 + 커서 → 선구자, 전조	false	어간 뜻(cursor: 커서)과 접사 뜻(pre-: 미리·앞서)으로는 현재 뜻(선구자, 전조)을 설명할 수 없다.
+en	predatory	predator + -y	predator	-y	suffix	그대로	~한 성질의 + 포식자 → 약탈적인; 포식성의	true	어간 뜻(predator: 포식자)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(약탈적인; 포식성의)에 직접 대응한다.
+en	predictive	predict + -ive	predict	-ive	suffix	그대로	~한 성질의 + 예측하다 → 예측의	true	어간 뜻(predict: 예측하다)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(예측의)에 직접 대응한다.
+en	predisposition	pre- + disposition	disposition	pre-	prefix	그대로	미리·앞서 + 성향 → 성향, 소인	hold	어간 뜻(disposition: 성향)과 현재 뜻(성향, 소인) 사이에 의미·품사 간극이 있어 pre- 분석을 확정하기 어렵다.
+en	predominant	pre- + dominant	dominant	pre-	prefix	그대로	미리·앞서 + 지배적인 → 우세한, 주된	false	어간 뜻(dominant: 지배적인)과 접사 뜻(pre-: 미리·앞서)으로는 현재 뜻(우세한, 주된)을 설명할 수 없다.
+en	predominantly	predominant + -ly	predominant	-ly	suffix	그대로	~하게 + 우세한, 주된 → 주로, 대부분	true	어간 뜻(predominant: 우세한, 주된)과 접사 뜻(-ly: ~하게)이 현재 뜻(주로, 대부분)에 직접 대응한다.
+en	predominate	pre- + dominate	dominate	pre-	prefix	그대로	미리·앞서 + 지배하다 → 우세하다	false	어간 뜻(dominate: 지배하다)과 접사 뜻(pre-: 미리·앞서)으로는 현재 뜻(우세하다)을 설명할 수 없다.
+en	premature	pre- + mature	mature	pre-	prefix	그대로	미리·앞서 + 성숙한 → 너무 이른, 조기의	true	어간 뜻(mature: 성숙한)과 접사 뜻(pre-: 미리·앞서)이 현재 뜻(너무 이른, 조기의)에 직접 대응한다.
+en	prerequisite	pre- + requisite	requisite	pre-	prefix	그대로	미리·앞서 + 필요한, 필수의 → 선행 조건	true	어간 뜻(requisite: 필요한, 필수의)과 접사 뜻(pre-: 미리·앞서)이 현재 뜻(선행 조건)에 직접 대응한다.
+en	preservation	preserve + -ation	preserve	-ation	suffix	-e 탈락	행위·상태 + 보존하다 → 보존	true	어간 뜻(preserve: 보존하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(보존)에 직접 대응한다.
+en	presumptuous	pre- + sumptuous	sumptuous	pre-	prefix	그대로	미리·앞서 + 호화로운 → 주제넘은	false	어간 뜻(sumptuous: 호화로운)과 접사 뜻(pre-: 미리·앞서)으로는 현재 뜻(주제넘은)을 설명할 수 없다.
+en	pretense	pre- + tense	tense	pre-	prefix	그대로	미리·앞서 + 긴장한, 긴박한 → 가식, 핑계	false	어간 뜻(tense: 긴장한, 긴박한)과 접사 뜻(pre-: 미리·앞서)으로는 현재 뜻(가식, 핑계)을 설명할 수 없다.
+en	pretension	pretense + -ion	pretense	-ion	suffix	-e 탈락	행위·상태 + 가식, 핑계 → 허세, 가식	hold	어간 뜻(pretense: 가식, 핑계)과 현재 뜻(허세, 가식) 사이에 의미·품사 간극이 있어 -ion 분석을 확정하기 어렵다.
+en	pretension	pre- + tension	tension	pre-	prefix	그대로	미리·앞서 + 긴장 → 허세, 가식	false	어간 뜻(tension: 긴장)과 접사 뜻(pre-: 미리·앞서)으로는 현재 뜻(허세, 가식)을 설명할 수 없다.
+en	primal	prim + -al	prim	-al	suffix	그대로	~와 관련된 + 새침한, 고지식한 → 원초적인	false	어간 뜻(prim: 새침한, 고지식한)과 접사 뜻(-al: ~와 관련된)으로는 현재 뜻(원초적인)을 설명할 수 없다.
+en	prior	pry + -or	pry	-or	suffix	y→i	하는 사람·도구 + 캐묻다; 비틀어 열다 → 이전의	false	어간 뜻(pry: 캐묻다; 비틀어 열다)과 접사 뜻(-or: 하는 사람·도구)으로는 현재 뜻(이전의)을 설명할 수 없다.
+en	probation	probe + -ation	probe	-ation	suffix	-e 탈락	행위·상태 + 조사하다 → 집행 유예; 수습 기간	false	어간 뜻(probe: 조사하다)과 접사 뜻(-ation: 행위·상태)으로는 현재 뜻(집행 유예; 수습 기간)을 설명할 수 없다.
+en	procurement	procure + -ment	procure	-ment	suffix	그대로	행위·결과 + 구하다, 조달하다 → 조달	true	어간 뜻(procure: 구하다, 조달하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(조달)에 직접 대응한다.
+en	prodigious	prodigy + -ous	prodigy	-ous	suffix	y→i	~한 성질의 + 신동 → 엄청난, 비범한	hold	어간 뜻(prodigy: 신동)과 현재 뜻(엄청난, 비범한) 사이에 의미·품사 간극이 있어 -ous 분석을 확정하기 어렵다.
+en	professor	profess + -or	profess	-or	suffix	그대로	하는 사람·도구 + 주장하다, 공언하다 → 교수	false	어간 뜻(profess: 주장하다, 공언하다)과 접사 뜻(-or: 하는 사람·도구)으로는 현재 뜻(교수)을 설명할 수 없다.
+en	profoundly	profound + -ly	profound	-ly	suffix	그대로	~하게 + 깊은 → 깊이, 극심하게	true	어간 뜻(profound: 깊은)과 접사 뜻(-ly: ~하게)이 현재 뜻(깊이, 극심하게)에 직접 대응한다.
+en	prohibitive	prohibit + -ive	prohibit	-ive	suffix	그대로	~한 성질의 + 금지하다 → 엄청나게 비싼; 금지하는	true	어간 뜻(prohibit: 금지하다)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(엄청나게 비싼; 금지하는)에 직접 대응한다.
+en	proliferation	proliferate + -ion	proliferate	-ion	suffix	-e 탈락	행위·상태 + 급증하다 → 급증, 확산	true	어간 뜻(proliferate: 급증하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(급증, 확산)에 직접 대응한다.
+en	propagation	propagate + -ion	propagate	-ion	suffix	-e 탈락	행위·상태 + 전파하다; 번식시키다 → 번식; 전파	true	어간 뜻(propagate: 전파하다; 번식시키다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(번식; 전파)에 직접 대응한다.
+en	propeller	propel + -er	propel	-er	suffix	자음 겹침	하는 사람·도구 + 나아가게 하다, 추진하다 → 프로펠러	true	어간 뜻(propel: 나아가게 하다, 추진하다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(프로펠러)에 직접 대응한다.
+en	prophetic	prophet + -ic	prophet	-ic	suffix	그대로	~에 관한 + 예언자 → 예언적인	true	어간 뜻(prophet: 예언자)과 접사 뜻(-ic: ~에 관한)이 현재 뜻(예언적인)에 직접 대응한다.
+en	prosecution	prosecute + -ion	prosecute	-ion	suffix	-e 탈락	행위·상태 + 기소하다 → 기소; 검찰 측	true	어간 뜻(prosecute: 기소하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(기소; 검찰 측)에 직접 대응한다.
+en	prospective	prospect + -ive	prospect	-ive	suffix	그대로	~한 성질의 + 전망 → 장래의; 예비의	hold	어간 뜻(prospect: 전망)과 현재 뜻(장래의; 예비의) 사이에 의미·품사 간극이 있어 -ive 분석을 확정하기 어렵다.
+en	prospector	prospect + -or	prospect	-or	suffix	그대로	하는 사람·도구 + 전망 → 탐광자	false	어간 뜻(prospect: 전망)과 접사 뜻(-or: 하는 사람·도구)으로는 현재 뜻(탐광자)을 설명할 수 없다.
+en	prosperity	prosper + -ity	prosper	-ity	suffix	그대로	상태·성질 + 번영하다, 번창하다 → 번영, 번창	true	어간 뜻(prosper: 번영하다, 번창하다)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(번영, 번창)에 직접 대응한다.
+en	puny	pun + -y	pun	-y	suffix	그대로	~한 성질의 + 말장난 → 왜소한, 보잘것없는	false	어간 뜻(pun: 말장난)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(왜소한, 보잘것없는)을 설명할 수 없다.
+en	pursuant	pursue + -ant	pursue	-ant	suffix	-e 탈락	하는·~한 + 추구하다 → ~에 따른	hold	어간 뜻(pursue: 추구하다)과 현재 뜻(~에 따른) 사이에 의미·품사 간극이 있어 -ant 분석을 확정하기 어렵다.
+en	radiation	radiate + -ion	radiate	-ion	suffix	-e 탈락	행위·상태 + 발산하다 → 방사선	true	어간 뜻(radiate: 발산하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(방사선)에 직접 대응한다.
+en	radically	radical + -ly	radical	-ly	suffix	그대로	~하게 + 급진적인 → 근본적으로, 급진적으로	true	어간 뜻(radical: 급진적인)과 접사 뜻(-ly: ~하게)이 현재 뜻(근본적으로, 급진적으로)에 직접 대응한다.
+en	radically	radical + -y	radical	-y	suffix	자음 겹침	~한 성질의 + 급진적인 → 근본적으로, 급진적으로	false	대상은 부사인데 -y는 성질을 나타내는 형용사 접미사이므로 이 분해가 맞지 않는다.
+en	rafter	raft + -er	raft	-er	suffix	그대로	하는 사람·도구 + 뗏목; 다수 → 서까래	false	어간 뜻(raft: 뗏목; 다수)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(서까래)을 설명할 수 없다.
+en	rampant	ramp + -ant	ramp	-ant	suffix	그대로	하는·~한 + 경사로 → 만연한	false	어간 뜻(ramp: 경사로)과 접사 뜻(-ant: 하는·~한)으로는 현재 뜻(만연한)을 설명할 수 없다.
+en	rancher	ranch + -er	ranch	-er	suffix	그대로	하는 사람·도구 + 목장 → 목장주	true	어간 뜻(ranch: 목장)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(목장주)에 직접 대응한다.
+en	rational	ration + -al	ration	-al	suffix	그대로	~와 관련된 + 배급량 → 합리적인	false	어간 뜻(ration: 배급량)과 접사 뜻(-al: ~와 관련된)으로는 현재 뜻(합리적인)을 설명할 수 없다.
+en	raven	rave + -en	rave	-en	suffix	-e 탈락	~하게 하다 + 극찬하다; 헛소리하다 → 큰까마귀	false	어간 뜻(rave: 극찬하다; 헛소리하다)과 접사 뜻(-en: ~하게 하다)으로는 현재 뜻(큰까마귀)을 설명할 수 없다.
+en	ravenous	raven + -ous	raven	-ous	suffix	그대로	~한 성질의 + 큰까마귀 → 몹시 배고픈	false	어간 뜻(raven: 큰까마귀)과 접사 뜻(-ous: ~한 성질의)으로는 현재 뜻(몹시 배고픈)을 설명할 수 없다.
+en	readjust	re- + adjust	adjust	re-	prefix	그대로	다시 + 조정하다 → 재조정하다	true	어간 뜻(adjust: 조정하다)과 접사 뜻(re-: 다시)이 현재 뜻(재조정하다)에 직접 대응한다.
+en	realign	re- + align	align	re-	prefix	그대로	다시 + 정렬하다 → 재조정하다	true	어간 뜻(align: 정렬하다)과 접사 뜻(re-: 다시)이 현재 뜻(재조정하다)에 직접 대응한다.
+en	reassure	re- + assure	assure	re-	prefix	그대로	다시 + 확신시키다 → 안심시키다	hold	어간 뜻(assure: 확신시키다)과 현재 뜻(안심시키다) 사이에 의미·품사 간극이 있어 re- 분석을 확정하기 어렵다.
+en	rebuttal	rebut + -al	rebut	-al	suffix	자음 겹침	~와 관련된 + 반박하다 → 반박	hold	어간 뜻(rebut: 반박하다)과 현재 뜻(반박) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	recede	re- + cede	cede	re-	prefix	그대로	다시 + 양도하다 → 물러나다, 약해지다	false	어간 뜻(cede: 양도하다)과 접사 뜻(re-: 다시)으로는 현재 뜻(물러나다, 약해지다)을 설명할 수 없다.
+en	recital	recite + -al	recite	-al	suffix	-e 탈락	~와 관련된 + 암송하다, 낭독하다 → 독주회, 발표회	hold	어간 뜻(recite: 암송하다, 낭독하다)과 현재 뜻(독주회, 발표회) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	recite	re- + cite	cite	re-	prefix	그대로	다시 + 인용하다 → 암송하다, 낭독하다	false	어간 뜻(cite: 인용하다)과 접사 뜻(re-: 다시)으로는 현재 뜻(암송하다, 낭독하다)을 설명할 수 없다.
+en	recoil	re- + coil	coil	re-	prefix	그대로	다시 + 고리, 코일 → 움찔하다, 뒷걸음질 치다	false	어간 뜻(coil: 고리, 코일)과 접사 뜻(re-: 다시)으로는 현재 뜻(움찔하다, 뒷걸음질 치다)을 설명할 수 없다.
+en	reconstitute	re- + constitute	constitute	re-	prefix	그대로	다시 + 구성하다 → 재구성하다; (가루를) 물에 타서 되돌리다	true	어간 뜻(constitute: 구성하다)과 접사 뜻(re-: 다시)이 현재 뜻(재구성하다; (가루를) 물에 타서 되돌리다)에 직접 대응한다.
+en	reconstruct	re- + construct	construct	re-	prefix	그대로	다시 + 건설하다 → 재건하다, 재구성하다	true	어간 뜻(construct: 건설하다)과 접사 뜻(re-: 다시)이 현재 뜻(재건하다, 재구성하다)에 직접 대응한다.
+en	reconstruction	reconstruct + -ion	reconstruct	-ion	suffix	그대로	행위·상태 + 재건하다, 재구성하다 → 재건	true	어간 뜻(reconstruct: 재건하다, 재구성하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(재건)에 직접 대응한다.
+en	redeem	re- + deem	deem	re-	prefix	그대로	다시 + 여기다, 간주하다 → 교환하다; 만회하다	false	어간 뜻(deem: 여기다, 간주하다)과 접사 뜻(re-: 다시)으로는 현재 뜻(교환하다; 만회하다)을 설명할 수 없다.
+en	refinance	refine + -ance	refine	-ance	suffix	-e 탈락	상태·행위 + 다듬다 → 재융자하다	false	어간 뜻(refine: 다듬다)과 접사 뜻(-ance: 상태·행위)으로는 현재 뜻(재융자하다)을 설명할 수 없다.
+en	refinement	refine + -ment	refine	-ment	suffix	그대로	행위·결과 + 다듬다 → 개선; 세련됨; 정제	true	어간 뜻(refine: 다듬다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(개선; 세련됨; 정제)에 직접 대응한다.
+en	reformer	re- + former	former	re-	prefix	그대로	다시 + 이전의 → 개혁가	false	어간 뜻(former: 이전의)과 접사 뜻(re-: 다시)으로는 현재 뜻(개혁가)을 설명할 수 없다.
+en	reformer	reform + -er	reform	-er	suffix	그대로	하는 사람·도구 + 개혁 → 개혁가	true	어간 뜻(reform: 개혁)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(개혁가)에 직접 대응한다.
+en	refrigeration	refrigerate + -ion	refrigerate	-ion	suffix	-e 탈락	행위·상태 + 냉장하다 → 냉장	true	어간 뜻(refrigerate: 냉장하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(냉장)에 직접 대응한다.
+en	regenerate	re- + generate	generate	re-	prefix	그대로	다시 + 생산하다 → 재생하다	true	어간 뜻(generate: 생산하다)과 접사 뜻(re-: 다시)이 현재 뜻(재생하다)에 직접 대응한다.
+en	regeneration	regenerate + -ion	regenerate	-ion	suffix	-e 탈락	행위·상태 + 재생하다 → 재생, 부활	true	어간 뜻(regenerate: 재생하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(재생, 부활)에 직접 대응한다.
+en	regimen	regime + -en	regime	-en	suffix	-e 탈락	~하게 하다 + 정권; 체제 → 식이 요법, 처방 계획	false	어간 뜻(regime: 정권; 체제)과 접사 뜻(-en: ~하게 하다)으로는 현재 뜻(식이 요법, 처방 계획)을 설명할 수 없다.
+en	regiment	regime + -ent	regime	-ent	suffix	-e 탈락	하는·~한 + 정권; 체제 → 연대	false	어간 뜻(regime: 정권; 체제)과 접사 뜻(-ent: 하는·~한)으로는 현재 뜻(연대)을 설명할 수 없다.
+en	regression	regress + -ion	regress	-ion	suffix	그대로	행위·상태 + 퇴보하다 → 퇴보; 회귀	true	어간 뜻(regress: 퇴보하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(퇴보; 회귀)에 직접 대응한다.
+en	regressive	regress + -ive	regress	-ive	suffix	그대로	~한 성질의 + 퇴보하다 → 퇴행적인; 역진적인	true	어간 뜻(regress: 퇴보하다)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(퇴행적인; 역진적인)에 직접 대응한다.
+en	rehabilitation	rehabilitate + -ion	rehabilitate	-ion	suffix	-e 탈락	행위·상태 + 재활시키다; 복원하다 → 재활	true	어간 뜻(rehabilitate: 재활시키다; 복원하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(재활)에 직접 대응한다.
+en	rekindle	re- + kindle	kindle	re-	prefix	그대로	다시 + 불을 붙이다; 불러일으키다 → 다시 불붙이다, 되살리다	true	어간 뜻(kindle: 불을 붙이다; 불러일으키다)과 접사 뜻(re-: 다시)이 현재 뜻(다시 불붙이다, 되살리다)에 직접 대응한다.
+en	relentless	relent + -less	relent	-less	suffix	그대로	없는 + 누그러지다 → 끊임없는, 가차 없는	true	어간 뜻(relent: 누그러지다)과 접사 뜻(-less: 없는)이 현재 뜻(끊임없는, 가차 없는)에 직접 대응한다.
+en	reliance	rely + -ance	rely	-ance	suffix	y→i	상태·행위 + 의지하다 → 의존	true	어간 뜻(rely: 의지하다)과 접사 뜻(-ance: 상태·행위)이 현재 뜻(의존)에 직접 대응한다.
+en	reliant	rely + -ant	rely	-ant	suffix	y→i	하는·~한 + 의지하다 → 의존하는	true	어간 뜻(rely: 의지하다)과 접사 뜻(-ant: 하는·~한)이 현재 뜻(의존하는)에 직접 대응한다.
+en	remarkable	remark + -able	remark	-able	suffix	그대로	할 수 있는 + 발언 → 놀라운	false	어간 뜻(remark: 발언)과 접사 뜻(-able: 할 수 있는)으로는 현재 뜻(놀라운)을 설명할 수 없다.
+en	repellent	repel + -ent	repel	-ent	suffix	자음 겹침	하는·~한 + 물리치다; 쫓아내다 → 방충제; 퇴치제	hold	어간 뜻(repel: 물리치다; 쫓아내다)과 현재 뜻(방충제; 퇴치제) 사이에 의미·품사 간극이 있어 -ent 분석을 확정하기 어렵다.
+en	repercussion	re- + percussion	percussion	re-	prefix	그대로	다시 + 타악기 → (부정적) 영향, 반향	false	어간 뜻(percussion: 타악기)과 접사 뜻(re-: 다시)으로는 현재 뜻((부정적) 영향, 반향)을 설명할 수 없다.
+en	replication	replicate + -ion	replicate	-ion	suffix	-e 탈락	행위·상태 + 복제하다, 재현하다 → 복제; 재현	true	어간 뜻(replicate: 복제하다, 재현하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(복제; 재현)에 직접 대응한다.
+en	repose	re- + pose	pose	re-	prefix	그대로	다시 + (문제·위험을) 제기하다; 자세를 취하다 → 휴식, 평온	false	어간 뜻(pose: (문제·위험을) 제기하다; 자세를 취하다)과 접사 뜻(re-: 다시)으로는 현재 뜻(휴식, 평온)을 설명할 수 없다.
+en	reproduction	reproduce + -tion	reproduce	-tion	suffix	-e 탈락	행위·상태 + 번식하다; 복제하다 → 복제; 번식	true	어간 뜻(reproduce: 번식하다; 복제하다)과 접사 뜻(-tion: 행위·상태)이 현재 뜻(복제; 번식)에 직접 대응한다.
+en	repulsive	repulse + -ive	repulse	-ive	suffix	-e 탈락	~한 성질의 + 격퇴하다; 혐오감을 주다 → 역겨운	true	어간 뜻(repulse: 격퇴하다; 혐오감을 주다)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(역겨운)에 직접 대응한다.
+en	reputation	repute + -ation	repute	-ation	suffix	-e 탈락	행위·상태 + 평판 → 평판	hold	어간 뜻(repute: 평판)과 현재 뜻(평판) 사이에 의미·품사 간극이 있어 -ation 분석을 확정하기 어렵다.
+en	resemblance	resemble + -ance	resemble	-ance	suffix	-e 탈락	상태·행위 + 닮다 → 닮음, 유사함	true	어간 뜻(resemble: 닮다)과 접사 뜻(-ance: 상태·행위)이 현재 뜻(닮음, 유사함)에 직접 대응한다.
+en	resemblance	re- + semblance	semblance	re-	prefix	그대로	다시 + 외관, 겉모양 → 닮음, 유사함	false	어간 뜻(semblance: 외관, 겉모양)과 접사 뜻(re-: 다시)으로는 현재 뜻(닮음, 유사함)을 설명할 수 없다.
+en	residual	residue + -al	residue	-al	suffix	-e 탈락	~와 관련된 + 잔여물, 찌꺼기 → 남은, 잔여의	true	어간 뜻(residue: 잔여물, 찌꺼기)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(남은, 잔여의)에 직접 대응한다.
+en	resignation	resign + -ation	resign	-ation	suffix	그대로	행위·상태 + 사임하다 → 사직, 사임; 체념	true	어간 뜻(resign: 사임하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(사직, 사임; 체념)에 직접 대응한다.
+en	resin	re- + sin	sin	re-	prefix	그대로	다시 + 죄 → 수지, 송진	false	어간 뜻(sin: 죄)과 접사 뜻(re-: 다시)으로는 현재 뜻(수지, 송진)을 설명할 수 없다.
+en	resistant	resist + -ant	resist	-ant	suffix	그대로	하는·~한 + 저항하다; 참다 → 저항력이 있는	true	어간 뜻(resist: 저항하다; 참다)과 접사 뜻(-ant: 하는·~한)이 현재 뜻(저항력이 있는)에 직접 대응한다.
+en	responsiveness	responsive + -ness	responsive	-ness	suffix	그대로	상태·성질 + 즉각 반응하는 → 반응성, 대응력	true	어간 뜻(responsive: 즉각 반응하는)과 접사 뜻(-ness: 상태·성질)이 현재 뜻(반응성, 대응력)에 직접 대응한다.
+en	restrain	re- + strain	strain	re-	prefix	그대로	다시 + 부담; 긴장 → 제지하다, 억제하다	false	어간 뜻(strain: 부담; 긴장)과 접사 뜻(re-: 다시)으로는 현재 뜻(제지하다, 억제하다)을 설명할 수 없다.
+en	restrict	re- + strict	strict	re-	prefix	그대로	다시 + 엄격한 → 제한하다	false	어간 뜻(strict: 엄격한)과 접사 뜻(re-: 다시)으로는 현재 뜻(제한하다)을 설명할 수 없다.
+en	restrictive	restrict + -ive	restrict	-ive	suffix	그대로	~한 성질의 + 제한하다 → 제한하는	true	어간 뜻(restrict: 제한하다)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(제한하는)에 직접 대응한다.
+en	retainer	retain + -er	retain	-er	suffix	그대로	하는 사람·도구 + 유지하다 → 착수금, 고용료; 교정 장치	hold	어간 뜻(retain: 유지하다)과 현재 뜻(착수금, 고용료; 교정 장치) 사이에 의미·품사 간극이 있어 -er 분석을 확정하기 어렵다.
+en	retaliation	retaliate + -ion	retaliate	-ion	suffix	-e 탈락	행위·상태 + 보복하다 → 보복	true	어간 뜻(retaliate: 보복하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(보복)에 직접 대응한다.
+en	retract	re- + tract	tract	re-	prefix	그대로	다시 + 넓은 땅 → 철회하다; 집어넣다	false	어간 뜻(tract: 넓은 땅)과 접사 뜻(re-: 다시)으로는 현재 뜻(철회하다; 집어넣다)을 설명할 수 없다.
+en	retrieval	retrieve + -al	retrieve	-al	suffix	-e 탈락	~와 관련된 + 되찾다 → 검색; 회수	hold	어간 뜻(retrieve: 되찾다)과 현재 뜻(검색; 회수) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	retriever	retrieve + -er	retrieve	-er	suffix	-e 탈락	하는 사람·도구 + 되찾다 → 리트리버 (개)	true	어간 뜻(retrieve: 되찾다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(리트리버 (개))에 직접 대응한다.
+en	retrospective	retrospect + -ive	retrospect	-ive	suffix	그대로	~한 성질의 + 회상 (in retrospect: 돌이켜 보면) → 회고전	hold	어간 뜻(retrospect: 회상 (in retrospect: 돌이켜 보면))과 현재 뜻(회고전) 사이에 의미·품사 간극이 있어 -ive 분석을 확정하기 어렵다.
+en	reverence	revere + -ence	revere	-ence	suffix	-e 탈락	상태·행위 + 숭배하다, 존경하다 → 숭배, 존경	true	어간 뜻(revere: 숭배하다, 존경하다)과 접사 뜻(-ence: 상태·행위)이 현재 뜻(숭배, 존경)에 직접 대응한다.
+en	reverse	re- + verse	verse	re-	prefix	그대로	다시 + 시구, 절 → 뒤집다	false	어간 뜻(verse: 시구, 절)과 접사 뜻(re-: 다시)으로는 현재 뜻(뒤집다)을 설명할 수 없다.
+en	revile	re- + vile	vile	re-	prefix	그대로	다시 + 비열한; 지독한 → 욕하다, 매도하다	false	어간 뜻(vile: 비열한; 지독한)과 접사 뜻(re-: 다시)으로는 현재 뜻(욕하다, 매도하다)을 설명할 수 없다.
+en	revitalization	revitalize + -ation	revitalize	-ation	suffix	-e 탈락	행위·상태 + 활성화하다, 되살리다 → 재활성화	true	어간 뜻(revitalize: 활성화하다, 되살리다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(재활성화)에 직접 대응한다.
+en	revival	revive + -al	revive	-al	suffix	-e 탈락	~와 관련된 + 되살리다 → 부활, 회복	hold	어간 뜻(revive: 되살리다)과 현재 뜻(부활, 회복) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	revolt	re- + volt	volt	re-	prefix	그대로	다시 + 볼트(전압 단위) → 반란, 봉기	false	어간 뜻(volt: 볼트(전압 단위))과 접사 뜻(re-: 다시)으로는 현재 뜻(반란, 봉기)을 설명할 수 없다.
+en	revolutionize	revolution + -ize	revolution	-ize	suffix	그대로	~하게 하다 + 혁명 → 혁명적으로 바꾸다	true	어간 뜻(revolution: 혁명)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(혁명적으로 바꾸다)에 직접 대응한다.
+en	reward	re- + ward	ward	re-	prefix	그대로	다시 + 병동 → 보상	false	어간 뜻(ward: 병동)과 접사 뜻(re-: 다시)으로는 현재 뜻(보상)을 설명할 수 없다.
+en	rhythmic	rhythm + -ic	rhythm	-ic	suffix	그대로	~에 관한 + 리듬 → 리드미컬한, 율동적인	true	어간 뜻(rhythm: 리듬)과 접사 뜻(-ic: ~에 관한)이 현재 뜻(리드미컬한, 율동적인)에 직접 대응한다.
+en	rigidity	rigid + -ity	rigid	-ity	suffix	그대로	상태·성질 + 엄격한; 뻣뻣한 → 경직성	true	어간 뜻(rigid: 엄격한; 뻣뻣한)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(경직성)에 직접 대응한다.
+en	rigor	rig + -or	rig	-or	suffix	그대로	하는 사람·도구 + 조작하다 → 엄격함, 철저함	false	어간 뜻(rig: 조작하다)과 접사 뜻(-or: 하는 사람·도구)으로는 현재 뜻(엄격함, 철저함)을 설명할 수 없다.
+en	rigorous	rigor + -ous	rigor	-ous	suffix	그대로	~한 성질의 + 엄격함, 철저함 → 엄격한, 철저한	true	어간 뜻(rigor: 엄격함, 철저함)과 접사 뜻(-ous: ~한 성질의)이 현재 뜻(엄격한, 철저한)에 직접 대응한다.
+en	rodent	rod + -ent	rod	-ent	suffix	그대로	하는·~한 + 막대 → 설치류	false	어간 뜻(rod: 막대)과 접사 뜻(-ent: 하는·~한)으로는 현재 뜻(설치류)을 설명할 수 없다.
+en	rooster	roost + -er	roost	-er	suffix	그대로	하는 사람·도구 + (새의) 횃대 → 수탉	false	어간 뜻(roost: (새의) 횃대)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(수탉)을 설명할 수 없다.
+en	routinely	routine + -ly	routine	-ly	suffix	그대로	~하게 + 일상, 규칙적인 절차 → 일상적으로, 정기적으로	hold	어간 뜻(routine: 일상, 규칙적인 절차)과 현재 뜻(일상적으로, 정기적으로) 사이에 의미·품사 간극이 있어 -ly 분석을 확정하기 어렵다.
+en	rover	rove + -er	rove	-er	suffix	-e 탈락	하는 사람·도구 + 돌아다니다, 배회하다 → 탐사 차량	true	어간 뜻(rove: 돌아다니다, 배회하다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(탐사 차량)에 직접 대응한다.
+en	salinity	saline + -ity	saline	-ity	suffix	-e 탈락	상태·성질 + 소금을 함유한 → 염도	true	어간 뜻(saline: 소금을 함유한)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(염도)에 직접 대응한다.
+en	sanity	sane + -ity	sane	-ity	suffix	-e 탈락	상태·성질 + 제정신의; 분별 있는 → 제정신	true	어간 뜻(sane: 제정신의; 분별 있는)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(제정신)에 직접 대응한다.
+en	scanner	scan + -er	scan	-er	suffix	자음 겹침	하는 사람·도구 + 훑어보다 → 스캐너	true	어간 뜻(scan: 훑어보다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(스캐너)에 직접 대응한다.
+en	scarcely	scarce + -ly	scarce	-ly	suffix	그대로	~하게 + 부족한 → 거의 ~않다	hold	어간 뜻(scarce: 부족한)과 현재 뜻(거의 ~않다) 사이에 의미·품사 간극이 있어 -ly 분석을 확정하기 어렵다.
+en	scarcity	scarce + -ity	scarce	-ity	suffix	-e 탈락	상태·성질 + 부족한 → 부족, 결핍	true	어간 뜻(scarce: 부족한)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(부족, 결핍)에 직접 대응한다.
+en	scholarly	scholar + -ly	scholar	-ly	suffix	그대로	~하게 + 학자 → 학문적인, 학술적인	false	어간 뜻(scholar: 학자)과 접사 뜻(-ly: ~하게)으로는 현재 뜻(학문적인, 학술적인)을 설명할 수 없다.
+en	scrupulously	scrupulous + -ly	scrupulous	-ly	suffix	그대로	~하게 + 꼼꼼한; 양심적인 → 꼼꼼하게, 철저하게	true	어간 뜻(scrupulous: 꼼꼼한; 양심적인)과 접사 뜻(-ly: ~하게)이 현재 뜻(꼼꼼하게, 철저하게)에 직접 대응한다.
+en	sculptor	sculpt + -or	sculpt	-or	suffix	그대로	하는 사람·도구 + 조각하다 → 조각가	true	어간 뜻(sculpt: 조각하다)과 접사 뜻(-or: 하는 사람·도구)이 현재 뜻(조각가)에 직접 대응한다.
+en	secretion	secrete + -ion	secrete	-ion	suffix	-e 탈락	행위·상태 + 분비하다; 숨기다 → 분비(물)	true	어간 뜻(secrete: 분비하다; 숨기다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(분비(물))에 직접 대응한다.
+en	secretive	secrete + -ive	secrete	-ive	suffix	-e 탈락	~한 성질의 + 분비하다; 숨기다 → 비밀스러운	hold	어간 뜻(secrete: 분비하다; 숨기다)과 현재 뜻(비밀스러운) 사이에 의미·품사 간극이 있어 -ive 분석을 확정하기 어렵다.
+en	sector	sect + -or	sect	-or	suffix	그대로	하는 사람·도구 + 종파, 분파 → 부문	false	어간 뜻(sect: 종파, 분파)과 접사 뜻(-or: 하는 사람·도구)으로는 현재 뜻(부문)을 설명할 수 없다.
+en	sedative	sedate + -ive	sedate	-ive	suffix	-e 탈락	~한 성질의 + 차분한; 느긋한 → 진정제	hold	어간 뜻(sedate: 차분한; 느긋한)과 현재 뜻(진정제) 사이에 의미·품사 간극이 있어 -ive 분석을 확정하기 어렵다.
+en	sensory	sensor + -y	sensor	-y	suffix	그대로	~한 성질의 + 감지기 → 감각의	false	어간 뜻(sensor: 감지기)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(감각의)을 설명할 수 없다.
+en	sentimental	sentiment + -al	sentiment	-al	suffix	그대로	~와 관련된 + 감정, 정서; 의견 → 감상적인, 정서적인	true	어간 뜻(sentiment: 감정, 정서; 의견)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(감상적인, 정서적인)에 직접 대응한다.
+en	serenity	serene + -ity	serene	-ity	suffix	-e 탈락	상태·성질 + 고요한, 평화로운 → 평온, 고요	true	어간 뜻(serene: 고요한, 평화로운)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(평온, 고요)에 직접 대응한다.
+en	singularity	singular + -ity	singular	-ity	suffix	그대로	상태·성질 + 단수의; 뛰어난, 남다른 → 특이점; 독특함	true	어간 뜻(singular: 단수의; 뛰어난, 남다른)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(특이점; 독특함)에 직접 대응한다.
+en	skepticism	skeptic + -ism	skeptic	-ism	suffix	그대로	사상·방식 + 회의론자 → 회의론, 의심	true	어간 뜻(skeptic: 회의론자)과 접사 뜻(-ism: 사상·방식)이 현재 뜻(회의론, 의심)에 직접 대응한다.
+en	skewer	skew + -er	skew	-er	suffix	그대로	하는 사람·도구 + 왜곡하다 → 꼬치	false	어간 뜻(skew: 왜곡하다)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(꼬치)을 설명할 수 없다.
+en	slimy	slim + -y	slim	-y	suffix	그대로	~한 성질의 + 날씬한 → 끈적끈적한	false	어간 뜻(slim: 날씬한)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(끈적끈적한)을 설명할 수 없다.
+en	slimy	slime + -y	slime	-y	suffix	-e 탈락	~한 성질의 + 점액, 끈적한 것 → 끈적끈적한	true	어간 뜻(slime: 점액, 끈적한 것)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(끈적끈적한)에 직접 대응한다.
+en	sluggish	slug + -ish	slug	-ish	suffix	자음 겹침	~같은 + 민달팽이 → 부진한, 느린	hold	어간 뜻(slug: 민달팽이)과 현재 뜻(부진한, 느린) 사이에 의미·품사 간극이 있어 -ish 분석을 확정하기 어렵다.
+en	solely	sole + -ly	sole	-ly	suffix	그대로	~하게 + 유일한 → 오로지	true	어간 뜻(sole: 유일한)과 접사 뜻(-ly: ~하게)이 현재 뜻(오로지)에 직접 대응한다.
+en	solicitor	solicit + -or	solicit	-or	suffix	그대로	하는 사람·도구 + 요청하다, 간청하다 → 사무 변호사 (영국)	false	어간 뜻(solicit: 요청하다, 간청하다)과 접사 뜻(-or: 하는 사람·도구)으로는 현재 뜻(사무 변호사 (영국))을 설명할 수 없다.
+en	soloist	solo + -ist	solo	-ist	suffix	그대로	하는 사람·전문가 + 혼자의, 독주하는 → 독주자, 독창자	true	어간 뜻(solo: 혼자의, 독주하는)과 접사 뜻(-ist: 하는 사람·전문가)이 현재 뜻(독주자, 독창자)에 직접 대응한다.
+en	sparsely	sparse + -ly	sparse	-ly	suffix	그대로	~하게 + 드문드문한, 희박한 → 드문드문	true	어간 뜻(sparse: 드문드문한, 희박한)과 접사 뜻(-ly: ~하게)이 현재 뜻(드문드문)에 직접 대응한다.
+en	spectacularly	spectacular + -ly	spectacular	-ly	suffix	그대로	~하게 + 장관인 → 극적으로, 눈부시게	true	어간 뜻(spectacular: 장관인)과 접사 뜻(-ly: ~하게)이 현재 뜻(극적으로, 눈부시게)에 직접 대응한다.
+en	speculation	speculate + -ion	speculate	-ion	suffix	-e 탈락	행위·상태 + 추측하다; 투기하다 → 추측; 투기	true	어간 뜻(speculate: 추측하다; 투기하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(추측; 투기)에 직접 대응한다.
+en	speculative	speculate + -ive	speculate	-ive	suffix	-e 탈락	~한 성질의 + 추측하다; 투기하다 → 추측에 근거한; 투기적인	true	어간 뜻(speculate: 추측하다; 투기하다)과 접사 뜻(-ive: ~한 성질의)이 현재 뜻(추측에 근거한; 투기적인)에 직접 대응한다.
+en	spiky	spike + -y	spike	-y	suffix	-e 탈락	~한 성질의 + 급등; 뾰족한 것 → 뾰족뾰족한	true	어간 뜻(spike: 급등; 뾰족한 것)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(뾰족뾰족한)에 직접 대응한다.
+en	spinal	spine + -al	spine	-al	suffix	-e 탈락	~와 관련된 + 척추; 책등 → 척추의	true	어간 뜻(spine: 척추; 책등)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(척추의)에 직접 대응한다.
+en	spiral	spire + -al	spire	-al	suffix	-e 탈락	~와 관련된 + 첨탑 → 나선; 악순환, 급등	false	어간 뜻(spire: 첨탑)과 접사 뜻(-al: ~와 관련된)으로는 현재 뜻(나선; 악순환, 급등)을 설명할 수 없다.
+en	spontaneously	spontaneous + -ly	spontaneous	-ly	suffix	그대로	~하게 + 자발적인, 즉흥적인 → 자발적으로, 즉흥적으로	true	어간 뜻(spontaneous: 자발적인, 즉흥적인)과 접사 뜻(-ly: ~하게)이 현재 뜻(자발적으로, 즉흥적으로)에 직접 대응한다.
+en	starvation	starve + -ation	starve	-ation	suffix	-e 탈락	행위·상태 + 굶주리다 → 기아, 굶주림	true	어간 뜻(starve: 굶주리다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(기아, 굶주림)에 직접 대응한다.
+en	sterilize	sterile + -ize	sterile	-ize	suffix	-e 탈락	~하게 하다 + 살균한; 불임의 → 살균하다; 불임 시술을 하다	true	어간 뜻(sterile: 살균한; 불임의)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(살균하다; 불임 시술을 하다)에 직접 대응한다.
+en	stiffen	stiff + -en	stiff	-en	suffix	그대로	~하게 하다 + 뻣뻣한 → 뻣뻣해지다, 굳어지다	true	어간 뜻(stiff: 뻣뻣한)과 접사 뜻(-en: ~하게 하다)이 현재 뜻(뻣뻣해지다, 굳어지다)에 직접 대응한다.
+en	stimulation	stimulate + -ion	stimulate	-ion	suffix	-e 탈락	행위·상태 + 자극하다 → 자극	true	어간 뜻(stimulate: 자극하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(자극)에 직접 대응한다.
+en	stipulation	stipulate + -ion	stipulate	-ion	suffix	-e 탈락	행위·상태 + 규정하다, 명시하다 → 조항, 조건	true	어간 뜻(stipulate: 규정하다, 명시하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(조항, 조건)에 직접 대응한다.
+en	strenuously	strenuous + -ly	strenuous	-ly	suffix	그대로	~하게 + 몹시 힘든 → 열렬히, 강력히	hold	어간 뜻(strenuous: 몹시 힘든)과 현재 뜻(열렬히, 강력히) 사이에 의미·품사 간극이 있어 -ly 분석을 확정하기 어렵다.
+en	strictly	strict + -ly	strict	-ly	suffix	그대로	~하게 + 엄격한 → 엄격히	true	어간 뜻(strict: 엄격한)과 접사 뜻(-ly: ~하게)이 현재 뜻(엄격히)에 직접 대응한다.
+en	strident	stride + -ent	stride	-ent	suffix	-e 탈락	하는·~한 + 성큼성큼 걷기; 진전 → 귀에 거슬리는; 강경한	false	어간 뜻(stride: 성큼성큼 걷기; 진전)과 접사 뜻(-ent: 하는·~한)으로는 현재 뜻(귀에 거슬리는; 강경한)을 설명할 수 없다.
+en	sublime	sub- + lime	lime	sub-	prefix	그대로	아래에 + 라임; 석회 → 숭고한; 뛰어난	false	어간 뜻(lime: 라임; 석회)과 접사 뜻(sub-: 아래에)으로는 현재 뜻(숭고한; 뛰어난)을 설명할 수 없다.
+en	submarine	sub- + marine	marine	sub-	prefix	그대로	아래에 + 해양의 → 잠수함	true	어간 뜻(marine: 해양의)과 접사 뜻(sub-: 아래에)이 현재 뜻(잠수함)에 직접 대응한다.
+en	submerge	sub- + merge	merge	sub-	prefix	그대로	아래에 + 합치다 → 물에 잠기다, 담그다	false	어간 뜻(merge: 합치다)과 접사 뜻(sub-: 아래에)으로는 현재 뜻(물에 잠기다, 담그다)을 설명할 수 없다.
+en	subscriber	subscribe + -er	subscribe	-er	suffix	-e 탈락	하는 사람·도구 + 구독하다 → 구독자	true	어간 뜻(subscribe: 구독하다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(구독자)에 직접 대응한다.
+en	subsequently	subsequent + -ly	subsequent	-ly	suffix	그대로	~하게 + 그다음의 → 그 후에	true	어간 뜻(subsequent: 그다음의)과 접사 뜻(-ly: ~하게)이 현재 뜻(그 후에)에 직접 대응한다.
+en	subsidize	subside + -ize	subside	-ize	suffix	-e 탈락	~하게 하다 + 가라앉다, 진정되다 → 보조금을 지급하다	false	어간 뜻(subside: 가라앉다, 진정되다)과 접사 뜻(-ize: ~하게 하다)으로는 현재 뜻(보조금을 지급하다)을 설명할 수 없다.
+en	subsidy	subside + -y	subside	-y	suffix	-e 탈락	~한 성질의 + 가라앉다, 진정되다 → 보조금	false	어간 뜻(subside: 가라앉다, 진정되다)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(보조금)을 설명할 수 없다.
+en	subsistence	subsist + -ence	subsist	-ence	suffix	그대로	상태·행위 + 근근이 살아가다 → 최저 생활, 생계	true	어간 뜻(subsist: 근근이 살아가다)과 접사 뜻(-ence: 상태·행위)이 현재 뜻(최저 생활, 생계)에 직접 대응한다.
+en	substance	sub- + stance	stance	sub-	prefix	그대로	아래에 + 입장, 태도 → 물질	false	어간 뜻(stance: 입장, 태도)과 접사 뜻(sub-: 아래에)으로는 현재 뜻(물질)을 설명할 수 없다.
+en	substantially	substantial + -ly	substantial	-ly	suffix	그대로	~하게 + 상당한 → 상당히	true	어간 뜻(substantial: 상당한)과 접사 뜻(-ly: ~하게)이 현재 뜻(상당히)에 직접 대응한다.
+en	substantially	substantial + -y	substantial	-y	suffix	자음 겹침	~한 성질의 + 상당한 → 상당히	false	대상은 부사인데 -y는 성질을 나타내는 형용사 접미사이므로 이 분해가 맞지 않는다.
+en	superficially	superficial + -ly	superficial	-ly	suffix	그대로	~하게 + 피상적인, 표면적인 → 피상적으로, 겉으로	true	어간 뜻(superficial: 피상적인, 표면적인)과 접사 뜻(-ly: ~하게)이 현재 뜻(피상적으로, 겉으로)에 직접 대응한다.
+en	superficially	superficial + -y	superficial	-y	suffix	자음 겹침	~한 성질의 + 피상적인, 표면적인 → 피상적으로, 겉으로	false	대상은 부사인데 -y는 성질을 나타내는 형용사 접미사이므로 이 분해가 맞지 않는다.
+en	superimpose	super- + impose	impose	super-	prefix	그대로	위에·넘어서 + 부과하다; 강요하다 → 겹쳐 놓다	false	어간 뜻(impose: 부과하다; 강요하다)과 접사 뜻(super-: 위에·넘어서)으로는 현재 뜻(겹쳐 놓다)을 설명할 수 없다.
+en	superiority	superior + -ity	superior	-ity	suffix	그대로	상태·성질 + 더 우수한 → 우월성, 우위	true	어간 뜻(superior: 더 우수한)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(우월성, 우위)에 직접 대응한다.
+en	supersonic	super- + sonic	sonic	super-	prefix	그대로	위에·넘어서 + 소리의 → 초음속의	true	어간 뜻(sonic: 소리의)과 접사 뜻(super-: 위에·넘어서)이 현재 뜻(초음속의)에 직접 대응한다.
+en	supervision	supervise + -ion	supervise	-ion	suffix	-e 탈락	행위·상태 + 감독하다 → 감독	true	어간 뜻(supervise: 감독하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(감독)에 직접 대응한다.
+en	supplant	supple + -ant	supple	-ant	suffix	-e 탈락	하는·~한 + 유연한 → 대신하다, 대체하다	false	어간 뜻(supple: 유연한)과 접사 뜻(-ant: 하는·~한)으로는 현재 뜻(대신하다, 대체하다)을 설명할 수 없다.
+en	supplement	supple + -ment	supple	-ment	suffix	그대로	행위·결과 + 유연한 → 보충물	false	어간 뜻(supple: 유연한)과 접사 뜻(-ment: 행위·결과)으로는 현재 뜻(보충물)을 설명할 수 없다.
+en	supplemental	supplement + -al	supplement	-al	suffix	그대로	~와 관련된 + 보충물 → 추가의	true	어간 뜻(supplement: 보충물)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(추가의)에 직접 대응한다.
+en	supplementation	supplement + -ation	supplement	-ation	suffix	그대로	행위·상태 + 보충물 → 보충	hold	어간 뜻(supplement: 보충물)과 현재 뜻(보충) 사이에 의미·품사 간극이 있어 -ation 분석을 확정하기 어렵다.
+en	symbolism	symbol + -ism	symbol	-ism	suffix	그대로	사상·방식 + 상징 → 상징성, 상징주의	true	어간 뜻(symbol: 상징)과 접사 뜻(-ism: 사상·방식)이 현재 뜻(상징성, 상징주의)에 직접 대응한다.
+en	symbolize	symbol + -ize	symbol	-ize	suffix	그대로	~하게 하다 + 상징 → 상징하다	true	어간 뜻(symbol: 상징)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(상징하다)에 직접 대응한다.
+en	syndication	syndicate + -ion	syndicate	-ion	suffix	-e 탈락	행위·상태 + 연합체 → 콘텐츠 동시 배포	hold	어간 뜻(syndicate: 연합체)과 현재 뜻(콘텐츠 동시 배포) 사이에 의미·품사 간극이 있어 -ion 분석을 확정하기 어렵다.
+en	tactic	tact + -ic	tact	-ic	suffix	그대로	~에 관한 + 요령, 눈치 → 전술, 작전	false	어간 뜻(tact: 요령, 눈치)과 접사 뜻(-ic: ~에 관한)으로는 현재 뜻(전술, 작전)을 설명할 수 없다.
+en	tenderness	tender + -ness	tender	-ness	suffix	그대로	상태·성질 + 부드러운 → 다정함; 압통	true	어간 뜻(tender: 부드러운)과 접사 뜻(-ness: 상태·성질)이 현재 뜻(다정함; 압통)에 직접 대응한다.
+en	tension	tense + -ion	tense	-ion	suffix	-e 탈락	행위·상태 + 긴장한, 긴박한 → 긴장	true	어간 뜻(tense: 긴장한, 긴박한)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(긴장)에 직접 대응한다.
+en	termination	terminate + -ion	terminate	-ion	suffix	-e 탈락	행위·상태 + 끝내다 → 종료	true	어간 뜻(terminate: 끝내다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(종료)에 직접 대응한다.
+en	territorial	territory + -al	territory	-al	suffix	y→i	~와 관련된 + 영토 → 영토의; 텃세를 부리는	true	어간 뜻(territory: 영토)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(영토의; 텃세를 부리는)에 직접 대응한다.
+en	terrorism	terror + -ism	terror	-ism	suffix	그대로	사상·방식 + 공포 → 테러 행위	hold	어간 뜻(terror: 공포)과 현재 뜻(테러 행위) 사이에 의미·품사 간극이 있어 -ism 분석을 확정하기 어렵다.
+en	thorny	thorn + -y	thorn	-y	suffix	그대로	~한 성질의 + 가시 → 가시가 많은; 곤란한	true	어간 뜻(thorn: 가시)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(가시가 많은; 곤란한)에 직접 대응한다.
+en	thoroughly	thorough + -ly	thorough	-ly	suffix	그대로	~하게 + 철저한 → 철저히	true	어간 뜻(thorough: 철저한)과 접사 뜻(-ly: ~하게)이 현재 뜻(철저히)에 직접 대응한다.
+en	traction	tract + -ion	tract	-ion	suffix	그대로	행위·상태 + 넓은 땅 → 정지 마찰력; 지지, 관심	false	어간 뜻(tract: 넓은 땅)과 접사 뜻(-ion: 행위·상태)으로는 현재 뜻(정지 마찰력; 지지, 관심)을 설명할 수 없다.
+en	tractor	tract + -or	tract	-or	suffix	그대로	하는 사람·도구 + 넓은 땅 → 트랙터	false	어간 뜻(tract: 넓은 땅)과 접사 뜻(-or: 하는 사람·도구)으로는 현재 뜻(트랙터)을 설명할 수 없다.
+en	traitor	trait + -or	trait	-or	suffix	그대로	하는 사람·도구 + 특성, 특징 → 배신자, 반역자	false	어간 뜻(trait: 특성, 특징)과 접사 뜻(-or: 하는 사람·도구)으로는 현재 뜻(배신자, 반역자)을 설명할 수 없다.
+en	tranquility	tranquil + -ity	tranquil	-ity	suffix	그대로	상태·성질 + 고요한, 평온한 → 평온, 고요	true	어간 뜻(tranquil: 고요한, 평온한)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(평온, 고요)에 직접 대응한다.
+en	transcendent	transcend + -ent	transcend	-ent	suffix	그대로	하는·~한 + 초월하다 → 초월적인	true	어간 뜻(transcend: 초월하다)과 접사 뜻(-ent: 하는·~한)이 현재 뜻(초월적인)에 직접 대응한다.
+en	transcendental	transcendent + -al	transcendent	-al	suffix	그대로	~와 관련된 + 초월적인 → 초월적인	true	어간 뜻(transcendent: 초월적인)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(초월적인)에 직접 대응한다.
+en	transcription	transcript + -ion	transcript	-ion	suffix	그대로	행위·상태 + 녹취록; 성적표 → 전사; 기록	hold	어간 뜻(transcript: 녹취록; 성적표)과 현재 뜻(전사; 기록) 사이에 의미·품사 간극이 있어 -ion 분석을 확정하기 어렵다.
+en	transmitter	transmit + -er	transmit	-er	suffix	자음 겹침	하는 사람·도구 + 전송하다; 전염시키다 → 송신기	true	어간 뜻(transmit: 전송하다; 전염시키다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(송신기)에 직접 대응한다.
+en	transplantation	trans- + plantation	plantation	trans-	prefix	그대로	가로질러 + (대규모) 농장 → 이식	false	어간 뜻(plantation: (대규모) 농장)과 접사 뜻(trans-: 가로질러)으로는 현재 뜻(이식)을 설명할 수 없다.
+en	transpose	trans- + pose	pose	trans-	prefix	그대로	가로질러 + (문제·위험을) 제기하다; 자세를 취하다 → 바꿔 놓다; 이조하다	false	어간 뜻(pose: (문제·위험을) 제기하다; 자세를 취하다)과 접사 뜻(trans-: 가로질러)으로는 현재 뜻(바꿔 놓다; 이조하다)을 설명할 수 없다.
+en	treasurer	treasure + -er	treasure	-er	suffix	-e 탈락	하는 사람·도구 + 보물 → 회계 담당자	hold	어간 뜻(treasure: 보물)과 현재 뜻(회계 담당자) 사이에 의미·품사 간극이 있어 -er 분석을 확정하기 어렵다.
+en	treasury	treasure + -y	treasure	-y	suffix	-e 탈락	~한 성질의 + 보물 → 재무부; 금고	false	어간 뜻(treasure: 보물)과 접사 뜻(-y: ~한 성질의)으로는 현재 뜻(재무부; 금고)을 설명할 수 없다.
+en	tribal	tribe + -al	tribe	-al	suffix	-e 탈락	~와 관련된 + 부족 → 부족의	true	어간 뜻(tribe: 부족)과 접사 뜻(-al: ~와 관련된)이 현재 뜻(부족의)에 직접 대응한다.
+en	tribunal	tribune + -al	tribune	-al	suffix	-e 탈락	~와 관련된 + 민중의 대변자 → 재판소	false	어간 뜻(tribune: 민중의 대변자)과 접사 뜻(-al: ~와 관련된)으로는 현재 뜻(재판소)을 설명할 수 없다.
+en	tuber	tube + -er	tube	-er	suffix	-e 탈락	하는 사람·도구 + 관 → 덩이줄기	false	어간 뜻(tube: 관)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(덩이줄기)을 설명할 수 없다.
+en	ultimately	ultimate + -ly	ultimate	-ly	suffix	그대로	~하게 + 궁극적인 → 궁극적으로	true	어간 뜻(ultimate: 궁극적인)과 접사 뜻(-ly: ~하게)이 현재 뜻(궁극적으로)에 직접 대응한다.
+en	uncanny	un- + canny	canny	un-	prefix	그대로	아닌·반대의 + 약삭빠른, 영리한 → 묘한, 이상한	false	어간 뜻(canny: 약삭빠른, 영리한)과 접사 뜻(un-: 아닌·반대의)으로는 현재 뜻(묘한, 이상한)을 설명할 수 없다.
+en	uncertainty	un- + certainty	certainty	un-	prefix	그대로	아닌·반대의 + 확실성 → 불확실성	true	어간 뜻(certainty: 확실성)과 접사 뜻(un-: 아닌·반대의)이 현재 뜻(불확실성)에 직접 대응한다.
+en	unconditional	un- + conditional	conditional	un-	prefix	그대로	아닌·반대의 + 조건부의 → 무조건의	true	어간 뜻(conditional: 조건부의)과 접사 뜻(un-: 아닌·반대의)이 현재 뜻(무조건의)에 직접 대응한다.
+en	undermine	under- + mine	mine	under-	prefix	그대로	부족하게·아래에 + 광산 → 약화시키다	false	mine은 광산이고 undermine은 약화시키다여서 under-만으로 뜻이 이어지지 않는다.
+en	understatement	understate + -ment	understate	-ment	suffix	그대로	행위·결과 + 축소해서 말하다 → 절제된 표현, 과소 진술	true	어간 뜻(understate: 축소해서 말하다)과 접사 뜻(-ment: 행위·결과)이 현재 뜻(절제된 표현, 과소 진술)에 직접 대응한다.
+en	undesirable	un- + desirable	desirable	un-	prefix	그대로	아닌·반대의 + 바람직한 → 바람직하지 않은	true	어간 뜻(desirable: 바람직한)과 접사 뜻(un-: 아닌·반대의)이 현재 뜻(바람직하지 않은)에 직접 대응한다.
+en	undisturbed	un- + disturbed	disturbed	un-	prefix	그대로	아닌·반대의 + 불안한; 방해받은 → 방해받지 않은	true	어간 뜻(disturbed: 불안한; 방해받은)과 접사 뜻(un-: 아닌·반대의)이 현재 뜻(방해받지 않은)에 직접 대응한다.
+en	unevenly	un- + evenly	evenly	un-	prefix	그대로	아닌·반대의 + 고르게, 균등하게 → 고르지 않게	hold	un- + evenly도 가능한 표현이지만 같은 단어의 uneven + -ly를 채택하여 이 분석은 보류한다.
+en	unevenly	uneven + -ly	uneven	-ly	suffix	그대로	~하게 + 고르지 않은 → 고르지 않게	true	어간 뜻(uneven: 고르지 않은)과 접사 뜻(-ly: ~하게)이 현재 뜻(고르지 않게)에 직접 대응한다.
+en	uniqueness	unique + -ness	unique	-ness	suffix	그대로	상태·성질 + 독특한 → 독특함, 고유성	true	어간 뜻(unique: 독특한)과 접사 뜻(-ness: 상태·성질)이 현재 뜻(독특함, 고유성)에 직접 대응한다.
+en	unjustly	un- + justly	justly	un-	prefix	그대로	아닌·반대의 + 정당하게 → 부당하게	true	어간 뜻(justly: 정당하게)과 접사 뜻(un-: 아닌·반대의)이 현재 뜻(부당하게)에 직접 대응한다.
+en	unleash	un- + leash	leash	un-	prefix	그대로	아닌·반대의 + (개) 목줄 → 풀어놓다, 촉발하다	true	어간 뜻(leash: (개) 목줄)과 접사 뜻(un-: 아닌·반대의)이 현재 뜻(풀어놓다, 촉발하다)에 직접 대응한다.
+en	unpretentious	un- + pretentious	pretentious	un-	prefix	그대로	아닌·반대의 + 허세 부리는 → 꾸밈없는, 소박한	true	어간 뜻(pretentious: 허세 부리는)과 접사 뜻(un-: 아닌·반대의)이 현재 뜻(꾸밈없는, 소박한)에 직접 대응한다.
+en	unregulated	un- + regulated	regulated	un-	prefix	그대로	아닌·반대의 + 규제를 받는 → 규제되지 않은	true	어간 뜻(regulated: 규제를 받는)과 접사 뜻(un-: 아닌·반대의)이 현재 뜻(규제되지 않은)에 직접 대응한다.
+en	unscrupulous	un- + scrupulous	scrupulous	un-	prefix	그대로	아닌·반대의 + 꼼꼼한; 양심적인 → 부도덕한, 파렴치한	true	어간 뜻(scrupulous: 꼼꼼한; 양심적인)과 접사 뜻(un-: 아닌·반대의)이 현재 뜻(부도덕한, 파렴치한)에 직접 대응한다.
+en	unveil	un- + veil	veil	un-	prefix	그대로	아닌·반대의 + 베일, 장막 → 공개하다, 발표하다	true	어간 뜻(veil: 베일, 장막)과 접사 뜻(un-: 아닌·반대의)이 현재 뜻(공개하다, 발표하다)에 직접 대응한다.
+en	utilization	utilize + -ation	utilize	-ation	suffix	-e 탈락	행위·상태 + 활용하다 → 활용	true	어간 뜻(utilize: 활용하다)과 접사 뜻(-ation: 행위·상태)이 현재 뜻(활용)에 직접 대응한다.
+en	utterance	utter + -ance	utter	-ance	suffix	그대로	상태·행위 + (말을) 하다, 내뱉다 → 발언, 말	true	어간 뜻(utter: (말을) 하다, 내뱉다)과 접사 뜻(-ance: 상태·행위)이 현재 뜻(발언, 말)에 직접 대응한다.
+en	utterly	utter + -ly	utter	-ly	suffix	그대로	~하게 + (말을) 하다, 내뱉다 → 완전히, 전적으로	false	어간 뜻(utter: (말을) 하다, 내뱉다)과 접사 뜻(-ly: ~하게)으로는 현재 뜻(완전히, 전적으로)을 설명할 수 없다.
+en	validation	valid + -ation	valid	-ation	suffix	그대로	행위·상태 + 유효한 → 유효성 확인	hold	valid + -ation보다 validate + -ion이 현재 뜻을 직접 설명해 이 분석은 보류한다.
+en	validation	validate + -ion	validate	-ion	suffix	-e 탈락	행위·상태 + 입증하다; 승인하다 → 유효성 확인	true	어간 뜻(validate: 입증하다; 승인하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(유효성 확인)에 직접 대응한다.
+en	validity	valid + -ity	valid	-ity	suffix	그대로	상태·성질 + 유효한 → 유효성	true	어간 뜻(valid: 유효한)과 접사 뜻(-ity: 상태·성질)이 현재 뜻(유효성)에 직접 대응한다.
+en	vaporize	vapor + -ize	vapor	-ize	suffix	그대로	~하게 하다 + 증기 → 증발시키다	true	어간 뜻(vapor: 증기)과 접사 뜻(-ize: ~하게 하다)이 현재 뜻(증발시키다)에 직접 대응한다.
+en	vastness	vast + -ness	vast	-ness	suffix	그대로	상태·성질 + 광대한 → 광대함	true	어간 뜻(vast: 광대한)과 접사 뜻(-ness: 상태·성질)이 현재 뜻(광대함)에 직접 대응한다.
+en	venomous	venom + -ous	venom	-ous	suffix	그대로	~한 성질의 + (뱀 등의) 독; 악의 → 독이 있는; 악의적인	true	어간 뜻(venom: (뱀 등의) 독; 악의)과 접사 뜻(-ous: ~한 성질의)이 현재 뜻(독이 있는; 악의적인)에 직접 대응한다.
+en	verbal	verb + -al	verb	-al	suffix	그대로	~와 관련된 + 동사 → 말의; 구두의	hold	어간 뜻(verb: 동사)과 현재 뜻(말의; 구두의) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	viable	vie + -able	vie	-able	suffix	-e 탈락	할 수 있는 + 다투다, 경쟁하다 → 실행 가능한, 성공할 수 있는	false	어간 뜻(vie: 다투다, 경쟁하다)과 접사 뜻(-able: 할 수 있는)으로는 현재 뜻(실행 가능한, 성공할 수 있는)을 설명할 수 없다.
+en	vibration	vibrate + -ion	vibrate	-ion	suffix	-e 탈락	행위·상태 + 진동하다 → 진동	true	어간 뜻(vibrate: 진동하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(진동)에 직접 대응한다.
+en	vigorous	vigor + -ous	vigor	-ous	suffix	그대로	~한 성질의 + 활력, 원기 → 활발한, 격렬한	true	어간 뜻(vigor: 활력, 원기)과 접사 뜻(-ous: ~한 성질의)이 현재 뜻(활발한, 격렬한)에 직접 대응한다.
+en	vindication	vindicate + -ion	vindicate	-ion	suffix	-e 탈락	행위·상태 + 정당성을 입증하다 → 정당성 입증	true	어간 뜻(vindicate: 정당성을 입증하다)과 접사 뜻(-ion: 행위·상태)이 현재 뜻(정당성 입증)에 직접 대응한다.
+en	virtuous	virtue + -ous	virtue	-ous	suffix	-e 탈락	~한 성질의 + 미덕 → 고결한, 덕이 있는	true	어간 뜻(virtue: 미덕)과 접사 뜻(-ous: ~한 성질의)이 현재 뜻(고결한, 덕이 있는)에 직접 대응한다.
+en	vitality	vital + -ity	vital	-ity	suffix	그대로	상태·성질 + 필수적인 → 활력	false	어간 뜻(vital: 필수적인)과 접사 뜻(-ity: 상태·성질)으로는 현재 뜻(활력)을 설명할 수 없다.
+en	vocational	vocation + -al	vocation	-al	suffix	그대로	~와 관련된 + 천직, 소명 → 직업 교육의	hold	어간 뜻(vocation: 천직, 소명)과 현재 뜻(직업 교육의) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	wager	wag + -er	wag	-er	suffix	그대로	하는 사람·도구 + (꼬리를) 흔들다 → 내기	false	어간 뜻(wag: (꼬리를) 흔들다)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(내기)을 설명할 수 없다.
+en	waiver	waive + -er	waive	-er	suffix	-e 탈락	하는 사람·도구 + (권리를) 포기하다; 면제하다 → 권리 포기 각서	false	어간 뜻(waive: (권리를) 포기하다; 면제하다)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(권리 포기 각서)을 설명할 수 없다.
+en	wander	wand + -er	wand	-er	suffix	그대로	하는 사람·도구 + 지팡이, 마법봉 → 거닐다	false	어간 뜻(wand: 지팡이, 마법봉)과 접사 뜻(-er: 하는 사람·도구)으로는 현재 뜻(거닐다)을 설명할 수 없다.
+en	warden	ward + -en	ward	-en	suffix	그대로	~하게 하다 + 병동 → 교도소장; 관리인	false	어간 뜻(ward: 병동)과 접사 뜻(-en: ~하게 하다)으로는 현재 뜻(교도소장; 관리인)을 설명할 수 없다.
+en	weariness	weary + -ness	weary	-ness	suffix	y→i	상태·성질 + 지친, 싫증 난 → 피로, 권태	true	어간 뜻(weary: 지친, 싫증 난)과 접사 뜻(-ness: 상태·성질)이 현재 뜻(피로, 권태)에 직접 대응한다.
+en	weaver	weave + -er	weave	-er	suffix	-e 탈락	하는 사람·도구 + (천을) 짜다; 누비며 가다 → 직조공	true	어간 뜻(weave: (천을) 짜다; 누비며 가다)과 접사 뜻(-er: 하는 사람·도구)이 현재 뜻(직조공)에 직접 대응한다.
+en	withdrawal	withdraw + -al	withdraw	-al	suffix	그대로	~와 관련된 + 철회하다, 인출하다 → 인출; 철수	hold	어간 뜻(withdraw: 철회하다, 인출하다)과 현재 뜻(인출; 철수) 사이에 의미·품사 간극이 있어 -al 분석을 확정하기 어렵다.
+en	witness	wit + -ness	wit	-ness	suffix	그대로	상태·성질 + 재치 → 목격자	false	어간 뜻(wit: 재치)과 접사 뜻(-ness: 상태·성질)으로는 현재 뜻(목격자)을 설명할 수 없다.
+en	witty	wit + -y	wit	-y	suffix	자음 겹침	~한 성질의 + 재치 → 재치 있는	true	어간 뜻(wit: 재치)과 접사 뜻(-y: ~한 성질의)이 현재 뜻(재치 있는)에 직접 대응한다.
+en	zealous	zeal + -ous	zeal	-ous	suffix	그대로	~한 성질의 + 열의 → 열성적인	true	어간 뜻(zeal: 열의)과 접사 뜻(-ous: ~한 성질의)이 현재 뜻(열성적인)에 직접 대응한다.

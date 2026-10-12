@@ -56,3 +56,13 @@ git diff --check                                                    → 통과
 - 확인 안 된 것: 검수된 단어를 누른 뒤 관련 단어 목록이 실기기에 정상 표시되는지.
 - 중단 이유: AGENTS.md에 따라 큰 단계 뒤 사용량을 확인했으며 5시간 한도 잔량이 18%였다(초기화 예정: 2026-10-13 오전 1:35).
 - 자동 승인 검토: 검수 단어가 나올 때까지 Day 1 학습 화면을 최대 16회 다시 여는 조작은 Day당 5장 제한을 초과할 위험이 있어 거절되었다. 해당 조작은 수행하지 않았다.
+
+## 중단 지점 이어서 (Claude, 2026-10-12 — GPT 사용량 부족으로 대신 수행)
+- `./gradlew test lint :app:assembleRelease` 재실행 → 종료 코드 0 (`f43a6f0` 기준)
+- release APK `adb install -r` 재설치 (데이터 유지)
+- Day 4 영→한: 카드가 섞여 나와 5장(radiate·shameless·artifact·pendulum·prod) 안에 분해 대상이 없음. 비대상 단어는 확인 후에도 분해 미표시 확인
+- Day 6 영→한 1장째 `regenerate`(대상):
+  - 확인 전: 분해 줄 없음 ✅
+  - 확인 후: `re(다시) + generate(생산하다) → 재생하다`와 관련 단어 버튼 2개 표시 ✅
+  - `re- 관련 단어`: reconstruct·regenerate·rekindle·readjust·reconstitute·realign 등 목록 ✅ / `generate 관련 단어`: regenerate ✅ / 뒤로 가기 시 같은 카드로 복귀 ✅
+- Day별 5장 제한 준수 (Day 4 5장, Day 6 1장). 확인한 카드는 입력 `x`로 오답 처리됨

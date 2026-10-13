@@ -26,7 +26,7 @@ Kotlin + Jetpack Compose 기반 안드로이드 전용 영어(OPIc) 학습 앱. 
 ### 데이터 규칙
 - `exports/words.json`(dataVersion 포함)을 앱에 내장한다. 저장된 dataVersion보다 크면 Word만 한 트랜잭션에서 upsert하고 UserWord는 건드리지 않는다.
 - `OnConflictStrategy.REPLACE` 사용 금지. 삭제 후 삽입으로 id가 바뀌면 UserWord 기록이 깨진다. `(language, word)`로 찾아 기존 행은 UPDATE, 새 행은 INSERT한다. `@Upsert`는 이 키에 맞게 동작할 때 허용한다.
-- 기존 단어의 `seq`는 절대 바꾸지 않는다. 삭제는 행 제거 대신 `deleted = true`로 표시한다.
+- 기존 단어의 `seq`는 절대 바꾸지 않는다. 예외: `deck = suneung`(수능) 단어는 학습 순서를 섞기 위해 seq 5521 이상 범위 안에서 다시 배치할 수 있다 (2026-10-13 사용자 승인, 적재기 `REORDER_DECKS`). 삭제는 행 제거 대신 `deleted = true`로 표시한다.
 - Day = `(seq - 1) / 40 + 1`. deleted 단어는 해당 Day에서 숨기기만 한다.
 - 단어 저장·비교는 소문자로 한다. 뜻이 불확실하면 값 앞에 `*`를 붙인다.
 - 모든 DB 쿼리는 `language` 필드로 필터링한다.

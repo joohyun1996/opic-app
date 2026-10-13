@@ -43,6 +43,9 @@ class AffixImporterTest {
             assertEquals(1, db.affixDao().wordsWithBase("en", baseId).size)
             assertEquals(emptyList<WordEntity>(), db.affixDao().wordsWithAffix("zh", parts[0].affixId!!))
             assertEquals(ImportResult.UpToDate(1), AffixImporter(db).importAffixes(seed))
+            // 같은 버전이면 스트림 앞부분만 보고 끝낸다 (뒤가 깨진 JSON이어도 UpToDate).
+            val broken = "{\"dataVersion\": 1, \"affixes\": [ not json"
+            assertEquals(ImportResult.UpToDate(1), AffixImporter(db).importAffixes(broken.byteInputStream()))
             assertEquals(before, db.userWordDao().get(wordId))
         } finally { db.close() }
     }

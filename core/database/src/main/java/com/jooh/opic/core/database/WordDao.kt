@@ -79,6 +79,9 @@ interface WordDao {
     @Query("SELECT COUNT(*) FROM words WHERE language = :language")
     suspend fun countByLanguage(language: String): Int
 
+    @Query("SELECT * FROM words WHERE language = :language")
+    suspend fun allByLanguage(language: String): List<WordEntity>
+
     @Query("SELECT * FROM words WHERE language = :language AND word = :word LIMIT 1")
     suspend fun find(language: String, word: String): WordEntity?
 
@@ -95,7 +98,9 @@ interface WordDao {
     @Transaction
     suspend fun upsertWords(words: List<WordEntity>, reorderDecks: Set<String> = emptySet()) {
         val normalized = words.map { it.copy(word = it.word.trim().lowercase()) }
-        val existing = normalized.map { find(it.language, it.word) }
+        // 단어마다 find()를 부르지 않고 언어별로 한 번에 읽어 찾는다.
+        val stored = normalized.map { it.language }.distinct().associateWith { language -> allByLanguage(language).associateBy { it.word } }
+        val existing = normalized.map { stored.getValue(it.language)[it.word] }
         val moved = normalized.indices.filter { i ->
             val old = existing[i]
             old != null && old.deck in reorderDecks && normalized[i].deck == old.deck && old.seq != normalized[i].seq

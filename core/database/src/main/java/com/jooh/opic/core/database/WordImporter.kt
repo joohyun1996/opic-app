@@ -17,16 +17,7 @@ sealed interface ImportResult {
 class WordImporter(private val database: OpicDatabase, private val enabledLanguages: List<StudyLanguage> = StudyLanguages.all) {
     private val json = Json { ignoreUnknownKeys = true }
     suspend fun importWords(source: InputStream): ImportResult = try {
-        val input = source.buffered()
-        input.mark(PEEK_BYTES)
-        val prefix = input.readNBytes(PEEK_BYTES).toString(Charsets.UTF_8)
-        val peeked = VERSION_PATTERN.find(prefix)?.groupValues?.get(1)?.toIntOrNull()
-        val stored = database.dataMetaDao().get(VERSION_KEY)?.toIntOrNull() ?: 0
-        if (peeked != null && peeked >= 1 && stored >= peeked) ImportResult.UpToDate(stored)
-        else {
-            input.reset()
-            importWords(input.bufferedReader().use { it.readText() })
-        }
+        SeedVersion.readIfNewer(database, VERSION_KEY, source)?.let { load(it) } ?: ImportResult.UpToDate(SeedVersion.stored(database, VERSION_KEY))
     } catch (error: CancellationException) {
         throw error
     } catch (error: Exception) {
@@ -35,9 +26,9 @@ class WordImporter(private val database: OpicDatabase, private val enabledLangua
 
     suspend fun importWords(raw: String): ImportResult = try {
         // 파일 앞부분의 dataVersion만 먼저 보고, 이미 적재된 버전이면 2MB 넘는 전체 파싱을 건너뛴다.
-        val peeked = VERSION_PATTERN.find(raw.take(256))?.groupValues?.get(1)?.toIntOrNull()
-        val storedBefore = database.dataMetaDao().get(VERSION_KEY)?.toIntOrNull() ?: 0
-        if (peeked != null && peeked >= 1 && storedBefore >= peeked) ImportResult.UpToDate(storedBefore) else load(raw)
+        val peeked = SeedVersion.peek(raw)
+        val storedBefore = SeedVersion.stored(database, VERSION_KEY)
+        if (peeked != null && storedBefore >= peeked) ImportResult.UpToDate(storedBefore) else load(raw)
     } catch (error: CancellationException) {
         throw error
     } catch (error: Exception) {
@@ -63,14 +54,11 @@ class WordImporter(private val database: OpicDatabase, private val enabledLangua
                 deck = item.deck)
         }
         return database.withTransaction {
-            val metadata = database.dataMetaDao()
-            val stored = metadata.get(VERSION_KEY)?.toInt() ?: 0
+            val stored = SeedVersion.stored(database, VERSION_KEY)
             if (stored >= input.dataVersion) ImportResult.UpToDate(stored)
             else {
                 database.wordDao().upsertWords(words, REORDER_DECKS)
-                // 행이 없으면 insert(IGNORE)로 만들고, 있으면 insert는 무시되므로 update로 값을 바꾼다.
-                metadata.insert(DataMetaEntity(VERSION_KEY, input.dataVersion.toString()))
-                metadata.update(VERSION_KEY, input.dataVersion.toString())
+                SeedVersion.save(database, VERSION_KEY, input.dataVersion)
                 ImportResult.Imported(input.dataVersion, words.size)
             }
         }
@@ -79,8 +67,6 @@ class WordImporter(private val database: OpicDatabase, private val enabledLangua
     companion object { const val VERSION_KEY = "words_data_version"
         /** 학습 순서를 섞어도 되는 단어장. core는 seq를 절대 바꾸지 않는다. */
         val REORDER_DECKS = setOf("suneung")
-        private const val PEEK_BYTES = 4096
-        private val VERSION_PATTERN = Regex("\"dataVersion\"\\s*:\\s*(\\d+)")
     }
 }
 

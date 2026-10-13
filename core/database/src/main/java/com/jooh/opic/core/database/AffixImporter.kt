@@ -9,13 +9,19 @@ import kotlinx.serialization.json.Json
 class AffixImporter(private val database: OpicDatabase) {
     private val json = Json { ignoreUnknownKeys = true }
 
-    suspend fun importAffixes(source: InputStream): ImportResult =
-        importAffixes(source.bufferedReader().use { it.readText() })
+    /** 앞부분의 dataVersion으로 이미 적재된 씨드면 전체 파싱을 건너뛴다. */
+    suspend fun importAffixes(source: InputStream): ImportResult = try {
+        SeedVersion.readIfNewer(database, VERSION_KEY, source)?.let { importAffixes(it) } ?: ImportResult.UpToDate(SeedVersion.stored(database, VERSION_KEY))
+    } catch (error: kotlin.coroutines.cancellation.CancellationException) {
+        throw error
+    } catch (error: Exception) {
+        ImportResult.Failed(error.message ?: "접사 데이터 적재 실패")
+    }
 
     suspend fun importAffixes(raw: String): ImportResult = try {
         val input = json.decodeFromString<AffixFile>(raw)
         require(input.dataVersion >= 1)
-        val stored = database.dataMetaDao().get(VERSION_KEY)?.toIntOrNull() ?: 0
+        val stored = SeedVersion.stored(database, VERSION_KEY)
         if (stored >= input.dataVersion) ImportResult.UpToDate(stored)
         else load(input)
     } catch (error: kotlin.coroutines.cancellation.CancellationException) {
@@ -25,8 +31,7 @@ class AffixImporter(private val database: OpicDatabase) {
     }
 
     private suspend fun load(input: AffixFile): ImportResult = database.withTransaction {
-        val meta = database.dataMetaDao()
-        val stored = meta.get(VERSION_KEY)?.toIntOrNull() ?: 0
+        val stored = SeedVersion.stored(database, VERSION_KEY)
         if (stored >= input.dataVersion) return@withTransaction ImportResult.UpToDate(stored)
         val dao = database.affixDao()
         val words = database.wordDao()
@@ -75,8 +80,7 @@ class AffixImporter(private val database: OpicDatabase) {
             }
             dao.deleteUnusedAffixes(language)
         }
-        meta.insert(DataMetaEntity(VERSION_KEY, input.dataVersion.toString()))
-        meta.update(VERSION_KEY, input.dataVersion.toString())
+        SeedVersion.save(database, VERSION_KEY, input.dataVersion)
         ImportResult.Imported(input.dataVersion, input.words.size)
     }
 

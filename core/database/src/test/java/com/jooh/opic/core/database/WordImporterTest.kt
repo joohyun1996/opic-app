@@ -43,9 +43,9 @@ class WordImporterTest {
 
     @Test fun actualFileAndRepeatAndLastDay() = runBlocking {
         val raw = File(requireNotNull(System.getProperty("words.file"))).readText()
-        assertEquals(ImportResult.Imported(3, 6269), importer.importWords(raw))
+        assertEquals(ImportResult.Imported(4, 6269), importer.importWords(raw))
         assertEquals(6269, dao.countByLanguage("en"))
-        assertEquals("3", meta.get(WordImporter.VERSION_KEY))
+        assertEquals("4", meta.get(WordImporter.VERSION_KEY))
         assertEquals(157, totalDays(dao.maxSeq("en")!!))
         val days = dao.dayStats("en", WORDS_PER_DAY)
         assertEquals(37, days.single { it.day == 138 }.total)
@@ -58,7 +58,7 @@ class WordImporterTest {
         for (table in listOf("words", "data_meta")) for (operation in listOf("INSERT", "UPDATE", "DELETE")) {
             sql.execSQL("CREATE TRIGGER audit_${table}_$operation AFTER $operation ON $table BEGIN INSERT INTO write_audit VALUES ('$operation'); END")
         }
-        assertEquals(ImportResult.UpToDate(3), importer.importWords(raw))
+        assertEquals(ImportResult.UpToDate(4), importer.importWords(raw))
         assertEquals(before, dao.getDayWords("en", 1, Int.MAX_VALUE))
         sql.query("SELECT COUNT(*) FROM write_audit").use { assertTrue(it.moveToFirst()); assertEquals(0, it.getInt(0)) }
     }
@@ -74,21 +74,16 @@ class WordImporterTest {
         val hash = MessageDigest.getInstance("SHA-256").digest(snapshot.toByteArray()).joinToString("") { "%02x".format(it) }
         assertEquals("5b600ebd36fefaa0177e05a906fc2abae39a7d6e25ad38981057f08d095773ff", hash)
         assertTrue(old.all { it["deck"]!!.jsonPrimitive.content == "core" })
-        val previous = rows.take(6261)
-        val previousSnapshot = previous.joinToString("\n") {
-            val seq = it["seq"]!!.jsonPrimitive.int
-            "${it["language"]!!.jsonPrimitive.content}\t${it["word"]!!.jsonPrimitive.content.trim().lowercase()}\t$seq\t${(seq - 1) / 40 + 1}"
-        }
-        val previousHash = MessageDigest.getInstance("SHA-256").digest(previousSnapshot.toByteArray()).joinToString("") { "%02x".format(it) }
-        assertEquals("a2e4a090c9f5612be842708da73b40c034c7c8c0dca4f508d3b07d68c3666f29", previousHash)
         val added = rows.drop(5517)
         assertEquals(752, added.size)
-        assertEquals((5521..6264).toList(), added.take(744).map { it["seq"]!!.jsonPrimitive.int })
-        assertEquals((6265..6272).toList(), added.drop(744).map { it["seq"]!!.jsonPrimitive.int })
+        // TASK 45 후속: 수능 752행은 seq 5521~6272 안에서 섞였다 (알파벳 순서 아님).
+        val addedSeqs = added.map { it["seq"]!!.jsonPrimitive.int }
+        assertEquals((5521..6272).toList(), addedSeqs.sorted())
+        assertNotEquals(addedSeqs.sorted(), addedSeqs)
         assertTrue(added.all { it["deck"]!!.jsonPrimitive.content == "suneung" })
         assertEquals(6269, rows.map { "${it["language"]!!.jsonPrimitive.content}:${it["word"]!!.jsonPrimitive.content.trim().lowercase()}" }.toSet().size)
         assertEquals(6269, rows.map { "${it["language"]!!.jsonPrimitive.content}:${it["seq"]!!.jsonPrimitive.int}" }.toSet().size)
-        assertEquals(ImportResult.Imported(3, 6269), importer.importWords(raw))
+        assertEquals(ImportResult.Imported(4, 6269), importer.importWords(raw))
         val hidden = listOf("aggress", "destruct", "environ", "evitable", "illude", "oversea", "sophisticate", "datum", "opportune")
         for (word in hidden) {
             val stored = dao.find("en", word)!!
@@ -112,6 +107,21 @@ class WordImporterTest {
         assertEquals("2", meta.get(WordImporter.VERSION_KEY))
         assertEquals(ImportResult.UpToDate(2), importer.importWords(file(1, word())))
         assertEquals("바뀐 뜻", dao.find("en", "alpha")!!.meaningKo)
+    }
+
+    @Test fun reorderDeckMovesSequenceButCoreKeepsIt() = runBlocking {
+        fun w(text: String, seq: Int, deck: String) = word(text, seq).change("deck", JsonPrimitive(deck))
+        importer.importWords(file(1, w("core", 1, "core"), w("a", 2, "suneung"), w("b", 3, "suneung")))
+        val a = dao.find("en", "a")!!
+        db.userWordDao().recordResult(a.id, true, 123)
+        val progress = db.userWordDao().get(a.id)
+        // 수능끼리 seq를 맞바꿔도 unique 인덱스 충돌 없이 반영되고, core는 파일 seq를 무시한다.
+        assertEquals(ImportResult.Imported(2, 3), importer.importWords(file(2, w("core", 9, "core"), w("a", 3, "suneung"), w("b", 2, "suneung"))))
+        assertEquals(1, dao.find("en", "core")!!.seq)
+        assertEquals(3, dao.find("en", "a")!!.seq)
+        assertEquals(2, dao.find("en", "b")!!.seq)
+        assertEquals(a.id, dao.find("en", "a")!!.id)
+        assertEquals(progress, db.userWordDao().get(a.id))
     }
 
     @Test fun collisionRollsBackEarlierUpdatesAndVersion() = runBlocking {

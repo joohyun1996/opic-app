@@ -117,13 +117,13 @@ class MigrationTest {
             assertEquals("core", before.deck)
             val progress = db.userWordDao().get(7)!!
             val source = File(requireNotNull(System.getProperty("words.file"))).inputStream()
-            assertEquals(ImportResult.Imported(3, 6269), source.use { WordImporter(db).importWords(it) })
+            assertEquals(ImportResult.Imported(4, 6269), source.use { WordImporter(db).importWords(it) })
             val after = db.wordDao().find("en", "archipelago")!!
             assertEquals(before.id, after.id)
             assertEquals(before.seq, after.seq)
             assertEquals("core", after.deck)
             assertEquals(progress, db.userWordDao().get(7))
-            assertEquals("3", db.dataMetaDao().get(WordImporter.VERSION_KEY))
+            assertEquals("4", db.dataMetaDao().get(WordImporter.VERSION_KEY))
             assertEquals("suneung", db.wordDao().find("en", "abandon")!!.deck)
         } finally {
             db.close()

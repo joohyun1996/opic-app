@@ -26,3 +26,8 @@
 ### 판정: Approve
 - Must-fix 1 반영: 어근 9개 `deleted: true`(행 유지), 실제 단어 8개 seq 6265~6272 추가, dataVersion 3. seq 중복 없음, 기존 seq·Day 해시 불변 테스트 확인
 - `수능` 라벨 제거는 사용자 요청으로 기록됨. `deck` 데이터는 유지
+
+## 후속 (2026-10-13, 사용자 요청: 수능 단어 섞기)
+- 사용자 요청으로 수능 752행의 seq를 5521~6272 안에서 섞었다(시드 20261013). dataVersion 4. core 5,517개 seq는 그대로다
+- 적재기는 `REORDER_DECKS = {suneung}`만 파일 seq로 다시 배치한다. 옮길 행은 먼저 `seq = -id`로 비켜 두어 `(language, seq)` unique 충돌을 피한다. wordId가 바뀌지 않으므로 UserWord는 유지된다
+- 테스트: `reorderDeckMovesSequenceButCoreKeepsIt` 추가(맞바꾸기·core 유지·학습 기록 유지). test·lint·release 통과, 실기기 `install -r` 후 클론 삭제

@@ -67,7 +67,7 @@ class WordImporter(private val database: OpicDatabase, private val enabledLangua
             val stored = metadata.get(VERSION_KEY)?.toInt() ?: 0
             if (stored >= input.dataVersion) ImportResult.UpToDate(stored)
             else {
-                database.wordDao().upsertWords(words)
+                database.wordDao().upsertWords(words, REORDER_DECKS)
                 // 행이 없으면 insert(IGNORE)로 만들고, 있으면 insert는 무시되므로 update로 값을 바꾼다.
                 metadata.insert(DataMetaEntity(VERSION_KEY, input.dataVersion.toString()))
                 metadata.update(VERSION_KEY, input.dataVersion.toString())
@@ -77,6 +77,8 @@ class WordImporter(private val database: OpicDatabase, private val enabledLangua
     }
 
     companion object { const val VERSION_KEY = "words_data_version"
+        /** 학습 순서를 섞어도 되는 단어장. core는 seq를 절대 바꾸지 않는다. */
+        val REORDER_DECKS = setOf("suneung")
         private const val PEEK_BYTES = 4096
         private val VERSION_PATTERN = Regex("\"dataVersion\"\\s*:\\s*(\\d+)")
     }

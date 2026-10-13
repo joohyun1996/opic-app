@@ -88,13 +88,24 @@ interface WordDao {
     @Update
     suspend fun update(word: WordEntity)
 
+    @Query("UPDATE words SET seq = -id WHERE language = :language AND id = :id")
+    suspend fun parkSeq(language: String, id: Long)
+
+    /** 기존 단어의 seq는 유지한다. [reorderDecks]의 단어장만 파일의 seq로 다시 배치한다 (TASK 45 수능 섞기). */
     @Transaction
-    suspend fun upsertWords(words: List<WordEntity>) {
-        for (incoming in words) {
-            val normalized = incoming.copy(word = incoming.word.trim().lowercase())
-            val existing = find(normalized.language, normalized.word)
-            if (existing == null) insert(normalized.copy(id = 0))
-            else update(normalized.copy(id = existing.id, seq = existing.seq))
+    suspend fun upsertWords(words: List<WordEntity>, reorderDecks: Set<String> = emptySet()) {
+        val normalized = words.map { it.copy(word = it.word.trim().lowercase()) }
+        val existing = normalized.map { find(it.language, it.word) }
+        val moved = normalized.indices.filter { i ->
+            val old = existing[i]
+            old != null && old.deck in reorderDecks && normalized[i].deck == old.deck && old.seq != normalized[i].seq
+        }.toSet()
+        // (language, seq) unique 인덱스 충돌을 피하려고 옮길 행을 음수 seq로 먼저 비켜 둔다.
+        for (i in moved) parkSeq(normalized[i].language, existing[i]!!.id)
+        for (i in normalized.indices) {
+            val old = existing[i]
+            if (old == null) insert(normalized[i].copy(id = 0))
+            else update(normalized[i].copy(id = old.id, seq = if (i in moved) normalized[i].seq else old.seq))
         }
     }
 }

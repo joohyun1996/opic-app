@@ -1,5 +1,5 @@
 {
-  "dataVersion": 3,
+  "dataVersion": 4,
   "seed": 20261004,
   "exportedAt": "2026-10-05T09:36:33.782Z",
   "words": [
@@ -88278,7 +88278,7 @@
     {
       "language": "en",
       "word": "abandon",
-      "seq": 5521,
+      "seq": 5555,
       "phonetic": "/əˈbændən/",
       "meaningKo": "버리다",
       "meaningEn": "to leave something behind",
@@ -88294,7 +88294,7 @@
     {
       "language": "en",
       "word": "abroad",
-      "seq": 5522,
+      "seq": 5850,
       "phonetic": "/əˈbrɔːd/",
       "meaningKo": "해외에",
       "meaningEn": "in another country",
@@ -88310,7 +88310,7 @@
     {
       "language": "en",
       "word": "absent",
-      "seq": 5523,
+      "seq": 5734,
       "phonetic": "/ˈæbsənt/",
       "meaningKo": "없는, 결석한",
       "meaningEn": "not present in a place",
@@ -88326,7 +88326,7 @@
     {
       "language": "en",
       "word": "absorb",
-      "seq": 5524,
+      "seq": 5731,
       "phonetic": "/əbˈzɔːrb/",
       "meaningKo": "흡수하다",
       "meaningEn": "to take in liquid or information",
@@ -88342,7 +88342,7 @@
     {
       "language": "en",
       "word": "abstract",
-      "seq": 5525,
+      "seq": 5598,
       "phonetic": "/ˈæbstrækt/",
       "meaningKo": "추상적인",
       "meaningEn": "based on ideas rather than physical things",
@@ -88358,7 +88358,7 @@
     {
       "language": "en",
       "word": "absurd",
-      "seq": 5526,
+      "seq": 5737,
       "phonetic": "/əbˈsɜːrd/",
       "meaningKo": "터무니없는",
       "meaningEn": "clearly unreasonable",
@@ -88374,7 +88374,7 @@
     {
       "language": "en",
       "word": "abuse",
-      "seq": 5527,
+      "seq": 5903,
       "phonetic": "/əˈbjuːs/",
       "meaningKo": "남용, 학대",
       "meaningEn": "harmful or improper use",
@@ -88390,7 +88390,7 @@
     {
       "language": "en",
       "word": "academy",
-      "seq": 5528,
+      "seq": 5952,
       "phonetic": "/əˈkædəmi/",
       "meaningKo": "학원, 교육기관",
       "meaningEn": "a school for specialized study",
@@ -88406,7 +88406,7 @@
     {
       "language": "en",
       "word": "accelerate",
-      "seq": 5529,
+      "seq": 6175,
       "phonetic": "/əkˈseləreɪt/",
       "meaningKo": "가속하다",
       "meaningEn": "to increase speed",
@@ -88422,7 +88422,7 @@
     {
       "language": "en",
       "word": "accommodate",
-      "seq": 5530,
+      "seq": 5603,
       "phonetic": "/əˈkɑːmədeɪt/",
       "meaningKo": "수용하다, 숙박시키다",
       "meaningEn": "to provide space for people",
@@ -88438,7 +88438,7 @@
     {
       "language": "en",
       "word": "accompany",
-      "seq": 5531,
+      "seq": 6220,
       "phonetic": "/əˈkʌmpəni/",
       "meaningKo": "동행하다",
       "meaningEn": "to go somewhere with someone",
@@ -88454,7 +88454,7 @@
     {
       "language": "en",
       "word": "accomplish",
-      "seq": 5532,
+      "seq": 5992,
       "phonetic": "/əˈkɑːmplɪʃ/",
       "meaningKo": "성취하다",
       "meaningEn": "to complete a goal",
@@ -88470,7 +88470,7 @@
     {
       "language": "en",
       "word": "accord",
-      "seq": 5533,
+      "seq": 5597,
       "phonetic": "/əˈkɔːrd/",
       "meaningKo": "합의",
       "meaningEn": "an agreement between groups",
@@ -88486,7 +88486,7 @@
     {
       "language": "en",
       "word": "accumulate",
-      "seq": 5534,
+      "seq": 5720,
       "phonetic": "/əˈkjuːmjəleɪt/",
       "meaningKo": "쌓이다, 축적하다",
       "meaningEn": "to gather over time",
@@ -88502,7 +88502,7 @@
     {
       "language": "en",
       "word": "accurate",
-      "seq": 5535,
+      "seq": 6066,
       "phonetic": "/ˈækjərət/",
       "meaningKo": "정확한",
       "meaningEn": "free from mistakes",
@@ -88518,7 +88518,7 @@
     {
       "language": "en",
       "word": "ache",
-      "seq": 5536,
+      "seq": 6113,
       "phonetic": "/eɪk/",
       "meaningKo": "쑤시다, 아프다",
       "meaningEn": "to feel a steady pain",
@@ -88534,7 +88534,7 @@
     {
       "language": "en",
       "word": "acid",
-      "seq": 5537,
+      "seq": 5590,
       "phonetic": "/ˈæsɪd/",
       "meaningKo": "산",
       "meaningEn": "a substance with a sour chemical quality",
@@ -88550,7 +88550,7 @@
     {
       "language": "en",
       "word": "acquisition",
-      "seq": 5538,
+      "seq": 5546,
       "phonetic": "/ˌækwɪˈzɪʃən/",
       "meaningKo": "획득",
       "meaningEn": "the act of obtaining something",
@@ -88566,7 +88566,7 @@
     {
       "language": "en",
       "word": "addict",
-      "seq": 5539,
+      "seq": 6092,
       "phonetic": "/ˈædɪkt/",
       "meaningKo": "중독자",
       "meaningEn": "a person dependent on something",
@@ -88582,7 +88582,7 @@
     {
       "language": "en",
       "word": "adjust",
-      "seq": 5540,
+      "seq": 6255,
       "phonetic": "/əˈdʒʌst/",
       "meaningKo": "조정하다",
       "meaningEn": "to change something slightly",
@@ -88598,7 +88598,7 @@
     {
       "language": "en",
       "word": "adolescent",
-      "seq": 5541,
+      "seq": 6132,
       "phonetic": "/ˌædəˈlesənt/",
       "meaningKo": "청소년",
       "meaningEn": "a person in the teenage years",
@@ -88614,7 +88614,7 @@
     {
       "language": "en",
       "word": "adverse",
-      "seq": 5542,
+      "seq": 5643,
       "phonetic": "/ˈædvɜːrs/",
       "meaningKo": "불리한",
       "meaningEn": "harmful or unfavorable",
@@ -88630,7 +88630,7 @@
     {
       "language": "en",
       "word": "agency",
-      "seq": 5543,
+      "seq": 6010,
       "phonetic": "/ˈeɪdʒənsi/",
       "meaningKo": "기관, 대행사",
       "meaningEn": "an organization providing a service",
@@ -88646,7 +88646,7 @@
     {
       "language": "en",
       "word": "agenda",
-      "seq": 5544,
+      "seq": 5954,
       "phonetic": "/əˈdʒendə/",
       "meaningKo": "의제, 일정",
       "meaningEn": "a list of matters to discuss",
@@ -88662,7 +88662,7 @@
     {
       "language": "en",
       "word": "aggress",
-      "seq": 5545,
+      "seq": 5541,
       "phonetic": "/əˈɡres/",
       "meaningKo": "*공격적으로 행동하다",
       "meaningEn": "to act aggressively toward others",
@@ -88678,7 +88678,7 @@
     {
       "language": "en",
       "word": "agriculture",
-      "seq": 5546,
+      "seq": 6203,
       "phonetic": "/ˈæɡrɪkʌltʃər/",
       "meaningKo": "농업",
       "meaningEn": "the practice of growing crops and raising animals",
@@ -88694,7 +88694,7 @@
     {
       "language": "en",
       "word": "alert",
-      "seq": 5547,
+      "seq": 6201,
       "phonetic": "/əˈlɜːrt/",
       "meaningKo": "경계하는",
       "meaningEn": "quick to notice danger",
@@ -88710,7 +88710,7 @@
     {
       "language": "en",
       "word": "alien",
-      "seq": 5548,
+      "seq": 5630,
       "phonetic": "/ˈeɪliən/",
       "meaningKo": "낯선, 이질적인",
       "meaningEn": "unfamiliar and strange",
@@ -88726,7 +88726,7 @@
     {
       "language": "en",
       "word": "alike",
-      "seq": 5549,
+      "seq": 5956,
       "phonetic": "/əˈlaɪk/",
       "meaningKo": "서로 비슷한",
       "meaningEn": "similar to each other",
@@ -88742,7 +88742,7 @@
     {
       "language": "en",
       "word": "ally",
-      "seq": 5550,
+      "seq": 5670,
       "phonetic": "/ˈælaɪ/",
       "meaningKo": "동맹국, 협력자",
       "meaningEn": "a person or country that offers support",
@@ -88758,7 +88758,7 @@
     {
       "language": "en",
       "word": "alongside",
-      "seq": 5551,
+      "seq": 6068,
       "phonetic": "/əˌlɔːŋˈsaɪd/",
       "meaningKo": "~와 나란히",
       "meaningEn": "next to or together with",
@@ -88774,7 +88774,7 @@
     {
       "language": "en",
       "word": "alternate",
-      "seq": 5552,
+      "seq": 5618,
       "phonetic": "/ˈɔːltərneɪt/",
       "meaningKo": "번갈아 하다",
       "meaningEn": "to take turns between two things",
@@ -88790,7 +88790,7 @@
     {
       "language": "en",
       "word": "ambassador",
-      "seq": 5553,
+      "seq": 6051,
       "phonetic": "/æmˈbæsədər/",
       "meaningKo": "대사",
       "meaningEn": "a country's official representative abroad",
@@ -88806,7 +88806,7 @@
     {
       "language": "en",
       "word": "ambition",
-      "seq": 5554,
+      "seq": 6063,
       "phonetic": "/æmˈbɪʃən/",
       "meaningKo": "야망, 포부",
       "meaningEn": "a strong wish to achieve something",
@@ -88822,7 +88822,7 @@
     {
       "language": "en",
       "word": "analyze",
-      "seq": 5555,
+      "seq": 5653,
       "phonetic": "/ˈænəlaɪz/",
       "meaningKo": "분석하다",
       "meaningEn": "to examine something in detail",
@@ -88838,7 +88838,7 @@
     {
       "language": "en",
       "word": "ancient",
-      "seq": 5556,
+      "seq": 6049,
       "phonetic": "/ˈeɪnʃənt/",
       "meaningKo": "고대의",
       "meaningEn": "belonging to a very distant past",
@@ -88854,7 +88854,7 @@
     {
       "language": "en",
       "word": "anniversary",
-      "seq": 5557,
+      "seq": 5961,
       "phonetic": "/ˌænɪˈvɜːrsəri/",
       "meaningKo": "기념일",
       "meaningEn": "the date when a past event is remembered",
@@ -88870,7 +88870,7 @@
     {
       "language": "en",
       "word": "anticipate",
-      "seq": 5558,
+      "seq": 5680,
       "phonetic": "/ænˈtɪsɪpeɪt/",
       "meaningKo": "예상하다",
       "meaningEn": "to expect something in advance",
@@ -88886,7 +88886,7 @@
     {
       "language": "en",
       "word": "anxiety",
-      "seq": 5559,
+      "seq": 5710,
       "phonetic": "/æŋˈzaɪəti/",
       "meaningKo": "불안",
       "meaningEn": "a feeling of worry or fear",
@@ -88902,7 +88902,7 @@
     {
       "language": "en",
       "word": "apology",
-      "seq": 5560,
+      "seq": 6195,
       "phonetic": "/əˈpɑːlədʒi/",
       "meaningKo": "사과",
       "meaningEn": "an expression of regret for a mistake",
@@ -88918,7 +88918,7 @@
     {
       "language": "en",
       "word": "approve",
-      "seq": 5561,
+      "seq": 6191,
       "phonetic": "/əˈpruːv/",
       "meaningKo": "승인하다",
       "meaningEn": "to give official agreement",
@@ -88934,7 +88934,7 @@
     {
       "language": "en",
       "word": "architect",
-      "seq": 5562,
+      "seq": 5887,
       "phonetic": "/ˈɑːrkɪtekt/",
       "meaningKo": "건축가",
       "meaningEn": "a person who designs buildings",
@@ -88950,7 +88950,7 @@
     {
       "language": "en",
       "word": "arise",
-      "seq": 5563,
+      "seq": 5675,
       "phonetic": "/əˈraɪz/",
       "meaningKo": "발생하다",
       "meaningEn": "to begin to happen",
@@ -88966,7 +88966,7 @@
     {
       "language": "en",
       "word": "arrow",
-      "seq": 5564,
+      "seq": 6048,
       "phonetic": "/ˈæroʊ/",
       "meaningKo": "화살",
       "meaningEn": "a pointed object shot from a bow",
@@ -88982,7 +88982,7 @@
     {
       "language": "en",
       "word": "aspect",
-      "seq": 5565,
+      "seq": 6096,
       "phonetic": "/ˈæspekt/",
       "meaningKo": "측면",
       "meaningEn": "one part of a situation or issue",
@@ -88998,7 +88998,7 @@
     {
       "language": "en",
       "word": "assault",
-      "seq": 5566,
+      "seq": 5870,
       "phonetic": "/əˈsɔːlt/",
       "meaningKo": "폭행, 공격",
       "meaningEn": "a violent attack",
@@ -89014,7 +89014,7 @@
     {
       "language": "en",
       "word": "assemble",
-      "seq": 5567,
+      "seq": 5936,
       "phonetic": "/əˈsembəl/",
       "meaningKo": "모으다, 조립하다",
       "meaningEn": "to put parts together",
@@ -89030,7 +89030,7 @@
     {
       "language": "en",
       "word": "asset",
-      "seq": 5568,
+      "seq": 6243,
       "phonetic": "/ˈæset/",
       "meaningKo": "자산",
       "meaningEn": "something valuable that someone owns",
@@ -89046,7 +89046,7 @@
     {
       "language": "en",
       "word": "assure",
-      "seq": 5569,
+      "seq": 5567,
       "phonetic": "/əˈʃʊr/",
       "meaningKo": "확신시키다",
       "meaningEn": "to tell someone confidently that something is true",
@@ -89062,7 +89062,7 @@
     {
       "language": "en",
       "word": "athlete",
-      "seq": 5570,
+      "seq": 5592,
       "phonetic": "/ˈæθliːt/",
       "meaningKo": "운동선수",
       "meaningEn": "a person trained in sports",
@@ -89078,7 +89078,7 @@
     {
       "language": "en",
       "word": "atom",
-      "seq": 5571,
+      "seq": 5728,
       "phonetic": "/ˈætəm/",
       "meaningKo": "원자",
       "meaningEn": "the smallest basic unit of an element",
@@ -89094,7 +89094,7 @@
     {
       "language": "en",
       "word": "auction",
-      "seq": 5572,
+      "seq": 5642,
       "phonetic": "/ˈɔːkʃən/",
       "meaningKo": "경매",
       "meaningEn": "a sale in which buyers offer competing prices",
@@ -89110,7 +89110,7 @@
     {
       "language": "en",
       "word": "authentic",
-      "seq": 5573,
+      "seq": 5796,
       "phonetic": "/ɔːˈθentɪk/",
       "meaningKo": "진짜의, 진정한",
       "meaningEn": "real and not copied",
@@ -89126,7 +89126,7 @@
     {
       "language": "en",
       "word": "author",
-      "seq": 5574,
+      "seq": 5640,
       "phonetic": "/ˈɔːθər/",
       "meaningKo": "저자",
       "meaningEn": "a person who writes a book",
@@ -89142,7 +89142,7 @@
     {
       "language": "en",
       "word": "await",
-      "seq": 5575,
+      "seq": 6259,
       "phonetic": "/əˈweɪt/",
       "meaningKo": "기다리다",
       "meaningEn": "to wait for something expected",
@@ -89158,7 +89158,7 @@
     {
       "language": "en",
       "word": "ban",
-      "seq": 5576,
+      "seq": 5613,
       "phonetic": "/bæn/",
       "meaningKo": "금지하다",
       "meaningEn": "to officially forbid something",
@@ -89174,7 +89174,7 @@
     {
       "language": "en",
       "word": "bankrupt",
-      "seq": 5577,
+      "seq": 5808,
       "phonetic": "/ˈbæŋkrʌpt/",
       "meaningKo": "파산한",
       "meaningEn": "unable to pay debts",
@@ -89190,7 +89190,7 @@
     {
       "language": "en",
       "word": "bargain",
-      "seq": 5578,
+      "seq": 6094,
       "phonetic": "/ˈbɑːrɡən/",
       "meaningKo": "싼 물건, 거래",
       "meaningEn": "something bought for less than expected",
@@ -89206,7 +89206,7 @@
     {
       "language": "en",
       "word": "beam",
-      "seq": 5579,
+      "seq": 5648,
       "phonetic": "/biːm/",
       "meaningKo": "광선",
       "meaningEn": "a narrow line of light",
@@ -89222,7 +89222,7 @@
     {
       "language": "en",
       "word": "beard",
-      "seq": 5580,
+      "seq": 5750,
       "phonetic": "/bɪrd/",
       "meaningKo": "수염",
       "meaningEn": "hair growing on the lower face",
@@ -89238,7 +89238,7 @@
     {
       "language": "en",
       "word": "beast",
-      "seq": 5581,
+      "seq": 5777,
       "phonetic": "/biːst/",
       "meaningKo": "짐승",
       "meaningEn": "a large or wild animal",
@@ -89254,7 +89254,7 @@
     {
       "language": "en",
       "word": "behalf",
-      "seq": 5582,
+      "seq": 5948,
       "phonetic": "/bɪˈhæf/",
       "meaningKo": "대신함, 이익",
       "meaningEn": "someone's interest or representation",
@@ -89270,7 +89270,7 @@
     {
       "language": "en",
       "word": "behave",
-      "seq": 5583,
+      "seq": 5965,
       "phonetic": "/bɪˈheɪv/",
       "meaningKo": "행동하다",
       "meaningEn": "to act in a particular way",
@@ -89286,7 +89286,7 @@
     {
       "language": "en",
       "word": "betray",
-      "seq": 5584,
+      "seq": 6011,
       "phonetic": "/bɪˈtreɪ/",
       "meaningKo": "배신하다",
       "meaningEn": "to be disloyal to someone",
@@ -89302,7 +89302,7 @@
     {
       "language": "en",
       "word": "biography",
-      "seq": 5585,
+      "seq": 6061,
       "phonetic": "/baɪˈɑːɡrəfi/",
       "meaningKo": "전기",
       "meaningEn": "a written account of a person's life",
@@ -89318,7 +89318,7 @@
     {
       "language": "en",
       "word": "biology",
-      "seq": 5586,
+      "seq": 6053,
       "phonetic": "/baɪˈɑːlədʒi/",
       "meaningKo": "생물학",
       "meaningEn": "the study of living things",
@@ -89334,7 +89334,7 @@
     {
       "language": "en",
       "word": "blast",
-      "seq": 5587,
+      "seq": 5927,
       "phonetic": "/blæst/",
       "meaningKo": "폭발",
       "meaningEn": "a sudden powerful explosion",
@@ -89350,7 +89350,7 @@
     {
       "language": "en",
       "word": "blend",
-      "seq": 5588,
+      "seq": 6052,
       "phonetic": "/blend/",
       "meaningKo": "섞다",
       "meaningEn": "to mix things smoothly",
@@ -89366,7 +89366,7 @@
     {
       "language": "en",
       "word": "blossom",
-      "seq": 5589,
+      "seq": 5629,
       "phonetic": "/ˈblɑːsəm/",
       "meaningKo": "꽃이 피다",
       "meaningEn": "to produce flowers",
@@ -89382,7 +89382,7 @@
     {
       "language": "en",
       "word": "bold",
-      "seq": 5590,
+      "seq": 6170,
       "phonetic": "/boʊld/",
       "meaningKo": "대담한",
       "meaningEn": "willing to take risks",
@@ -89398,7 +89398,7 @@
     {
       "language": "en",
       "word": "boost",
-      "seq": 5591,
+      "seq": 5840,
       "phonetic": "/buːst/",
       "meaningKo": "높이다, 증진하다",
       "meaningEn": "to increase or improve something",
@@ -89414,7 +89414,7 @@
     {
       "language": "en",
       "word": "border",
-      "seq": 5592,
+      "seq": 6209,
       "phonetic": "/ˈbɔːrdər/",
       "meaningKo": "경계, 국경",
       "meaningEn": "the line dividing two areas",
@@ -89430,7 +89430,7 @@
     {
       "language": "en",
       "word": "boundary",
-      "seq": 5593,
+      "seq": 6193,
       "phonetic": "/ˈbaʊndəri/",
       "meaningKo": "경계선",
       "meaningEn": "a line marking the limit of an area",
@@ -89446,7 +89446,7 @@
     {
       "language": "en",
       "word": "breed",
-      "seq": 5594,
+      "seq": 5637,
       "phonetic": "/briːd/",
       "meaningKo": "번식하다",
       "meaningEn": "to produce young animals",
@@ -89462,7 +89462,7 @@
     {
       "language": "en",
       "word": "breeze",
-      "seq": 5595,
+      "seq": 5526,
       "phonetic": "/briːz/",
       "meaningKo": "산들바람",
       "meaningEn": "a light wind",
@@ -89478,7 +89478,7 @@
     {
       "language": "en",
       "word": "broadcast",
-      "seq": 5596,
+      "seq": 6256,
       "phonetic": "/ˈbrɔːdkæst/",
       "meaningKo": "방송하다",
       "meaningEn": "to transmit a program to the public",
@@ -89494,7 +89494,7 @@
     {
       "language": "en",
       "word": "bulk",
-      "seq": 5597,
+      "seq": 5919,
       "phonetic": "/bʌlk/",
       "meaningKo": "대부분, 큰 부피",
       "meaningEn": "the largest part of something",
@@ -89510,7 +89510,7 @@
     {
       "language": "en",
       "word": "bull",
-      "seq": 5598,
+      "seq": 6054,
       "phonetic": "/bʊl/",
       "meaningKo": "황소",
       "meaningEn": "an adult male cow",
@@ -89526,7 +89526,7 @@
     {
       "language": "en",
       "word": "bully",
-      "seq": 5599,
+      "seq": 6105,
       "phonetic": "/ˈbʊli/",
       "meaningKo": "괴롭히는 사람",
       "meaningEn": "a person who intimidates others",
@@ -89542,7 +89542,7 @@
     {
       "language": "en",
       "word": "burden",
-      "seq": 5600,
+      "seq": 5583,
       "phonetic": "/ˈbɜːrdən/",
       "meaningKo": "부담",
       "meaningEn": "a heavy duty or worry",
@@ -89558,7 +89558,7 @@
     {
       "language": "en",
       "word": "buzz",
-      "seq": 5601,
+      "seq": 5893,
       "phonetic": "/bʌz/",
       "meaningKo": "윙윙거리다",
       "meaningEn": "to make a low humming sound",
@@ -89574,7 +89574,7 @@
     {
       "language": "en",
       "word": "cancel",
-      "seq": 5602,
+      "seq": 5660,
       "phonetic": "/ˈkænsəl/",
       "meaningKo": "취소하다",
       "meaningEn": "to decide an event will not happen",
@@ -89590,7 +89590,7 @@
     {
       "language": "en",
       "word": "cancer",
-      "seq": 5603,
+      "seq": 5984,
       "phonetic": "/ˈkænsər/",
       "meaningKo": "암",
       "meaningEn": "a disease involving uncontrolled cell growth",
@@ -89606,7 +89606,7 @@
     {
       "language": "en",
       "word": "candidate",
-      "seq": 5604,
+      "seq": 6110,
       "phonetic": "/ˈkændɪdeɪt/",
       "meaningKo": "후보자",
       "meaningEn": "a person considered for a position",
@@ -89622,7 +89622,7 @@
     {
       "language": "en",
       "word": "canvas",
-      "seq": 5605,
+      "seq": 6128,
       "phonetic": "/ˈkænvəs/",
       "meaningKo": "캔버스",
       "meaningEn": "strong cloth used for painting",
@@ -89638,7 +89638,7 @@
     {
       "language": "en",
       "word": "capture",
-      "seq": 5606,
+      "seq": 5878,
       "phonetic": "/ˈkæptʃər/",
       "meaningKo": "포착하다, 붙잡다",
       "meaningEn": "to catch or record something",
@@ -89654,7 +89654,7 @@
     {
       "language": "en",
       "word": "carve",
-      "seq": 5607,
+      "seq": 5542,
       "phonetic": "/kɑːrv/",
       "meaningKo": "깎아 만들다",
       "meaningEn": "to cut a shape from wood or stone",
@@ -89670,7 +89670,7 @@
     {
       "language": "en",
       "word": "cattle",
-      "seq": 5608,
+      "seq": 5672,
       "phonetic": "/ˈkætəl/",
       "meaningKo": "소 떼",
       "meaningEn": "farm animals kept for meat or milk",
@@ -89686,7 +89686,7 @@
     {
       "language": "en",
       "word": "caution",
-      "seq": 5609,
+      "seq": 5669,
       "phonetic": "/ˈkɔːʃən/",
       "meaningKo": "주의",
       "meaningEn": "care taken to avoid danger",
@@ -89702,7 +89702,7 @@
     {
       "language": "en",
       "word": "cave",
-      "seq": 5610,
+      "seq": 5738,
       "phonetic": "/keɪv/",
       "meaningKo": "동굴",
       "meaningEn": "a natural hollow in rock",
@@ -89718,7 +89718,7 @@
     {
       "language": "en",
       "word": "cease",
-      "seq": 5611,
+      "seq": 6179,
       "phonetic": "/siːs/",
       "meaningKo": "멈추다",
       "meaningEn": "to stop happening",
@@ -89734,7 +89734,7 @@
     {
       "language": "en",
       "word": "celebrate",
-      "seq": 5612,
+      "seq": 5837,
       "phonetic": "/ˈseləbreɪt/",
       "meaningKo": "축하하다",
       "meaningEn": "to mark a happy event",
@@ -89750,7 +89750,7 @@
     {
       "language": "en",
       "word": "celebrity",
-      "seq": 5613,
+      "seq": 5848,
       "phonetic": "/səˈlebrəti/",
       "meaningKo": "유명인",
       "meaningEn": "a widely known person",
@@ -89766,7 +89766,7 @@
     {
       "language": "en",
       "word": "certificate",
-      "seq": 5614,
+      "seq": 6018,
       "phonetic": "/sərˈtɪfɪkət/",
       "meaningKo": "증명서",
       "meaningEn": "an official document proving a fact",
@@ -89782,7 +89782,7 @@
     {
       "language": "en",
       "word": "chamber",
-      "seq": 5615,
+      "seq": 5791,
       "phonetic": "/ˈtʃeɪmbər/",
       "meaningKo": "방, 회의실",
       "meaningEn": "a room used for a particular purpose",
@@ -89798,7 +89798,7 @@
     {
       "language": "en",
       "word": "chaos",
-      "seq": 5616,
+      "seq": 5529,
       "phonetic": "/ˈkeɪɑːs/",
       "meaningKo": "혼란",
       "meaningEn": "a state of complete disorder",
@@ -89814,7 +89814,7 @@
     {
       "language": "en",
       "word": "charity",
-      "seq": 5617,
+      "seq": 5832,
       "phonetic": "/ˈtʃærəti/",
       "meaningKo": "자선 단체",
       "meaningEn": "an organization that helps people in need",
@@ -89830,7 +89830,7 @@
     {
       "language": "en",
       "word": "chef",
-      "seq": 5618,
+      "seq": 5706,
       "phonetic": "/ʃef/",
       "meaningKo": "요리사",
       "meaningEn": "a professional cook",
@@ -89846,7 +89846,7 @@
     {
       "language": "en",
       "word": "chemical",
-      "seq": 5619,
+      "seq": 5575,
       "phonetic": "/ˈkemɪkəl/",
       "meaningKo": "화학 물질",
       "meaningEn": "a substance made or used in chemistry",
@@ -89862,7 +89862,7 @@
     {
       "language": "en",
       "word": "chill",
-      "seq": 5620,
+      "seq": 6265,
       "phonetic": "/tʃɪl/",
       "meaningKo": "한기",
       "meaningEn": "an unpleasant feeling of cold",
@@ -89878,7 +89878,7 @@
     {
       "language": "en",
       "word": "chin",
-      "seq": 5621,
+      "seq": 5789,
       "phonetic": "/tʃɪn/",
       "meaningKo": "턱",
       "meaningEn": "the lower part of the face",
@@ -89894,7 +89894,7 @@
     {
       "language": "en",
       "word": "chorus",
-      "seq": 5622,
+      "seq": 5697,
       "phonetic": "/ˈkɔːrəs/",
       "meaningKo": "합창단, 후렴",
       "meaningEn": "a group singing together",
@@ -89910,7 +89910,7 @@
     {
       "language": "en",
       "word": "chronic",
-      "seq": 5623,
+      "seq": 6050,
       "phonetic": "/ˈkrɑːnɪk/",
       "meaningKo": "만성적인",
       "meaningEn": "lasting a long time",
@@ -89926,7 +89926,7 @@
     {
       "language": "en",
       "word": "cite",
-      "seq": 5624,
+      "seq": 5719,
       "phonetic": "/saɪt/",
       "meaningKo": "인용하다",
       "meaningEn": "to quote as evidence",
@@ -89942,7 +89942,7 @@
     {
       "language": "en",
       "word": "clap",
-      "seq": 5625,
+      "seq": 6216,
       "phonetic": "/klæp/",
       "meaningKo": "박수 치다",
       "meaningEn": "to strike the hands together",
@@ -89958,7 +89958,7 @@
     {
       "language": "en",
       "word": "clay",
-      "seq": 5626,
+      "seq": 6082,
       "phonetic": "/kleɪ/",
       "meaningKo": "점토",
       "meaningEn": "soft earth that can be shaped",
@@ -89974,7 +89974,7 @@
     {
       "language": "en",
       "word": "clinic",
-      "seq": 5627,
+      "seq": 6251,
       "phonetic": "/ˈklɪnɪk/",
       "meaningKo": "진료소",
       "meaningEn": "a place providing medical care",
@@ -89990,7 +89990,7 @@
     {
       "language": "en",
       "word": "cluster",
-      "seq": 5628,
+      "seq": 5627,
       "phonetic": "/ˈklʌstər/",
       "meaningKo": "무리, 집단",
       "meaningEn": "a group close together",
@@ -90006,7 +90006,7 @@
     {
       "language": "en",
       "word": "collaborate",
-      "seq": 5629,
+      "seq": 6083,
       "phonetic": "/kəˈlæbəreɪt/",
       "meaningKo": "협력하다",
       "meaningEn": "to work together",
@@ -90022,7 +90022,7 @@
     {
       "language": "en",
       "word": "collapse",
-      "seq": 5630,
+      "seq": 5572,
       "phonetic": "/kəˈlæps/",
       "meaningKo": "무너지다",
       "meaningEn": "to fall down suddenly",
@@ -90038,7 +90038,7 @@
     {
       "language": "en",
       "word": "collar",
-      "seq": 5631,
+      "seq": 5865,
       "phonetic": "/ˈkɑːlər/",
       "meaningKo": "옷깃",
       "meaningEn": "the part of clothing around the neck",
@@ -90054,7 +90054,7 @@
     {
       "language": "en",
       "word": "colleague",
-      "seq": 5632,
+      "seq": 5573,
       "phonetic": "/ˈkɑːliːɡ/",
       "meaningKo": "동료",
       "meaningEn": "a person one works with",
@@ -90070,7 +90070,7 @@
     {
       "language": "en",
       "word": "colony",
-      "seq": 5633,
+      "seq": 5885,
       "phonetic": "/ˈkɑːləni/",
       "meaningKo": "군집, 식민지",
       "meaningEn": "a group living together",
@@ -90086,7 +90086,7 @@
     {
       "language": "en",
       "word": "column",
-      "seq": 5634,
+      "seq": 5986,
       "phonetic": "/ˈkɑːləm/",
       "meaningKo": "기둥, 세로줄",
       "meaningEn": "a vertical line or support",
@@ -90102,7 +90102,7 @@
     {
       "language": "en",
       "word": "combat",
-      "seq": 5635,
+      "seq": 5654,
       "phonetic": "/kəmˈbæt/",
       "meaningKo": "맞서 싸우다",
       "meaningEn": "to fight against a problem",
@@ -90118,7 +90118,7 @@
     {
       "language": "en",
       "word": "commit",
-      "seq": 5636,
+      "seq": 5886,
       "phonetic": "/kəˈmɪt/",
       "meaningKo": "전념하다",
       "meaningEn": "to devote oneself to something",
@@ -90134,7 +90134,7 @@
     {
       "language": "en",
       "word": "compatible",
-      "seq": 5637,
+      "seq": 5683,
       "phonetic": "/kəmˈpætəbəl/",
       "meaningKo": "호환되는",
       "meaningEn": "able to work together",
@@ -90150,7 +90150,7 @@
     {
       "language": "en",
       "word": "compensate",
-      "seq": 5638,
+      "seq": 5909,
       "phonetic": "/ˈkɑːmpənseɪt/",
       "meaningKo": "보상하다",
       "meaningEn": "to make up for a loss",
@@ -90166,7 +90166,7 @@
     {
       "language": "en",
       "word": "compete",
-      "seq": 5639,
+      "seq": 5536,
       "phonetic": "/kəmˈpiːt/",
       "meaningKo": "경쟁하다",
       "meaningEn": "to try to win against others",
@@ -90182,7 +90182,7 @@
     {
       "language": "en",
       "word": "component",
-      "seq": 5640,
+      "seq": 5785,
       "phonetic": "/kəmˈpoʊnənt/",
       "meaningKo": "구성 요소",
       "meaningEn": "one part of a larger whole",
@@ -90198,7 +90198,7 @@
     {
       "language": "en",
       "word": "compose",
-      "seq": 5641,
+      "seq": 5727,
       "phonetic": "/kəmˈpoʊz/",
       "meaningKo": "작곡하다, 구성하다",
       "meaningEn": "to create music or form a whole",
@@ -90214,7 +90214,7 @@
     {
       "language": "en",
       "word": "conclude",
-      "seq": 5642,
+      "seq": 6166,
       "phonetic": "/kənˈkluːd/",
       "meaningKo": "결론짓다",
       "meaningEn": "to decide after considering evidence",
@@ -90230,7 +90230,7 @@
     {
       "language": "en",
       "word": "concrete",
-      "seq": 5643,
+      "seq": 5673,
       "phonetic": "/ˈkɑːnkriːt/",
       "meaningKo": "구체적인",
       "meaningEn": "clear and specific",
@@ -90246,7 +90246,7 @@
     {
       "language": "en",
       "word": "conduct",
-      "seq": 5644,
+      "seq": 5805,
       "phonetic": "/kənˈdʌkt/",
       "meaningKo": "수행하다",
       "meaningEn": "to organize and carry out",
@@ -90262,7 +90262,7 @@
     {
       "language": "en",
       "word": "confess",
-      "seq": 5645,
+      "seq": 5628,
       "phonetic": "/kənˈfes/",
       "meaningKo": "고백하다",
       "meaningEn": "to admit something openly",
@@ -90278,7 +90278,7 @@
     {
       "language": "en",
       "word": "confine",
-      "seq": 5646,
+      "seq": 5749,
       "phonetic": "/kənˈfaɪn/",
       "meaningKo": "제한하다",
       "meaningEn": "to keep within limits",
@@ -90294,7 +90294,7 @@
     {
       "language": "en",
       "word": "confront",
-      "seq": 5647,
+      "seq": 5925,
       "phonetic": "/kənˈfrʌnt/",
       "meaningKo": "직면하다",
       "meaningEn": "to face a difficult situation",
@@ -90310,7 +90310,7 @@
     {
       "language": "en",
       "word": "congress",
-      "seq": 5648,
+      "seq": 6131,
       "phonetic": "/ˈkɑːŋɡrəs/",
       "meaningKo": "의회",
       "meaningEn": "a national lawmaking body",
@@ -90326,7 +90326,7 @@
     {
       "language": "en",
       "word": "conscience",
-      "seq": 5649,
+      "seq": 6015,
       "phonetic": "/ˈkɑːnʃəns/",
       "meaningKo": "양심",
       "meaningEn": "the inner sense of right and wrong",
@@ -90342,7 +90342,7 @@
     {
       "language": "en",
       "word": "consent",
-      "seq": 5650,
+      "seq": 5574,
       "phonetic": "/kənˈsent/",
       "meaningKo": "동의",
       "meaningEn": "permission given freely",
@@ -90358,7 +90358,7 @@
     {
       "language": "en",
       "word": "consult",
-      "seq": 5651,
+      "seq": 5547,
       "phonetic": "/kənˈsʌlt/",
       "meaningKo": "상담하다",
       "meaningEn": "to seek advice from someone",
@@ -90374,7 +90374,7 @@
     {
       "language": "en",
       "word": "contemporary",
-      "seq": 5652,
+      "seq": 5606,
       "phonetic": "/kənˈtempəreri/",
       "meaningKo": "현대의",
       "meaningEn": "belonging to the present time",
@@ -90390,7 +90390,7 @@
     {
       "language": "en",
       "word": "contrast",
-      "seq": 5653,
+      "seq": 6248,
       "phonetic": "/ˈkɑːntræst/",
       "meaningKo": "대조",
       "meaningEn": "a clear difference",
@@ -90406,7 +90406,7 @@
     {
       "language": "en",
       "word": "convert",
-      "seq": 5654,
+      "seq": 6040,
       "phonetic": "/kənˈvɜːrt/",
       "meaningKo": "바꾸다, 변환하다",
       "meaningEn": "to change into another form",
@@ -90422,7 +90422,7 @@
     {
       "language": "en",
       "word": "convey",
-      "seq": 5655,
+      "seq": 5852,
       "phonetic": "/kənˈveɪ/",
       "meaningKo": "전달하다",
       "meaningEn": "to communicate a message",
@@ -90438,7 +90438,7 @@
     {
       "language": "en",
       "word": "convict",
-      "seq": 5656,
+      "seq": 5792,
       "phonetic": "/kənˈvɪkt/",
       "meaningKo": "유죄 판결하다",
       "meaningEn": "to find someone guilty in court",
@@ -90454,7 +90454,7 @@
     {
       "language": "en",
       "word": "cooperate",
-      "seq": 5657,
+      "seq": 5716,
       "phonetic": "/koʊˈɑːpəreɪt/",
       "meaningKo": "협력하다",
       "meaningEn": "to work together toward a goal",
@@ -90470,7 +90470,7 @@
     {
       "language": "en",
       "word": "copyright",
-      "seq": 5658,
+      "seq": 5774,
       "phonetic": "/ˈkɑːpiraɪt/",
       "meaningKo": "저작권",
       "meaningEn": "the legal right over a creative work",
@@ -90486,7 +90486,7 @@
     {
       "language": "en",
       "word": "cord",
-      "seq": 5659,
+      "seq": 5656,
       "phonetic": "/kɔːrd/",
       "meaningKo": "끈, 전선",
       "meaningEn": "a long thin rope or wire",
@@ -90502,7 +90502,7 @@
     {
       "language": "en",
       "word": "core",
-      "seq": 5660,
+      "seq": 5971,
       "phonetic": "/kɔːr/",
       "meaningKo": "핵심",
       "meaningEn": "the central part of something",
@@ -90518,7 +90518,7 @@
     {
       "language": "en",
       "word": "corn",
-      "seq": 5661,
+      "seq": 5690,
       "phonetic": "/kɔːrn/",
       "meaningKo": "옥수수",
       "meaningEn": "a crop with rows of yellow kernels",
@@ -90534,7 +90534,7 @@
     {
       "language": "en",
       "word": "corporate",
-      "seq": 5662,
+      "seq": 6117,
       "phonetic": "/ˈkɔːrpərət/",
       "meaningKo": "기업의",
       "meaningEn": "relating to a company",
@@ -90550,7 +90550,7 @@
     {
       "language": "en",
       "word": "corridor",
-      "seq": 5663,
+      "seq": 6242,
       "phonetic": "/ˈkɔːrɪdɔːr/",
       "meaningKo": "복도",
       "meaningEn": "a long passage inside a building",
@@ -90566,7 +90566,7 @@
     {
       "language": "en",
       "word": "corrupt",
-      "seq": 5664,
+      "seq": 5944,
       "phonetic": "/kəˈrʌpt/",
       "meaningKo": "부패한",
       "meaningEn": "dishonest in a position of power",
@@ -90582,7 +90582,7 @@
     {
       "language": "en",
       "word": "costume",
-      "seq": 5665,
+      "seq": 6205,
       "phonetic": "/ˈkɑːstuːm/",
       "meaningKo": "의상",
       "meaningEn": "clothes worn for a performance",
@@ -90598,7 +90598,7 @@
     {
       "language": "en",
       "word": "counsel",
-      "seq": 5666,
+      "seq": 5891,
       "phonetic": "/ˈkaʊnsəl/",
       "meaningKo": "조언",
       "meaningEn": "advice given to someone",
@@ -90614,7 +90614,7 @@
     {
       "language": "en",
       "word": "courage",
-      "seq": 5667,
+      "seq": 5599,
       "phonetic": "/ˈkɜːrɪdʒ/",
       "meaningKo": "용기",
       "meaningEn": "the ability to face fear",
@@ -90630,7 +90630,7 @@
     {
       "language": "en",
       "word": "craft",
-      "seq": 5668,
+      "seq": 5676,
       "phonetic": "/kræft/",
       "meaningKo": "공예, 기술",
       "meaningEn": "an activity requiring skill by hand",
@@ -90646,7 +90646,7 @@
     {
       "language": "en",
       "word": "crew",
-      "seq": 5669,
+      "seq": 6181,
       "phonetic": "/kruː/",
       "meaningKo": "승무원, 작업팀",
       "meaningEn": "people working together on a vehicle or project",
@@ -90662,7 +90662,7 @@
     {
       "language": "en",
       "word": "critic",
-      "seq": 5670,
+      "seq": 6185,
       "phonetic": "/ˈkrɪtɪk/",
       "meaningKo": "비평가",
       "meaningEn": "a person who judges artistic work",
@@ -90678,7 +90678,7 @@
     {
       "language": "en",
       "word": "crop",
-      "seq": 5671,
+      "seq": 5645,
       "phonetic": "/krɑːp/",
       "meaningKo": "농작물",
       "meaningEn": "a plant grown for food",
@@ -90694,7 +90694,7 @@
     {
       "language": "en",
       "word": "cruise",
-      "seq": 5672,
+      "seq": 6219,
       "phonetic": "/kruːz/",
       "meaningKo": "유람선 여행",
       "meaningEn": "a journey by ship for pleasure",
@@ -90710,7 +90710,7 @@
     {
       "language": "en",
       "word": "crush",
-      "seq": 5673,
+      "seq": 6008,
       "phonetic": "/krʌʃ/",
       "meaningKo": "짓누르다",
       "meaningEn": "to press until broken",
@@ -90726,7 +90726,7 @@
     {
       "language": "en",
       "word": "crystal",
-      "seq": 5674,
+      "seq": 5644,
       "phonetic": "/ˈkrɪstəl/",
       "meaningKo": "수정, 결정체",
       "meaningEn": "a solid with an orderly structure",
@@ -90742,7 +90742,7 @@
     {
       "language": "en",
       "word": "currency",
-      "seq": 5675,
+      "seq": 5562,
       "phonetic": "/ˈkɜːrənsi/",
       "meaningKo": "통화",
       "meaningEn": "the money used in a country",
@@ -90758,7 +90758,7 @@
     {
       "language": "en",
       "word": "curriculum",
-      "seq": 5676,
+      "seq": 5717,
       "phonetic": "/kəˈrɪkjələm/",
       "meaningKo": "교육과정",
       "meaningEn": "the subjects taught in a school",
@@ -90774,7 +90774,7 @@
     {
       "language": "en",
       "word": "curry",
-      "seq": 5677,
+      "seq": 6244,
       "phonetic": "/ˈkɜːri/",
       "meaningKo": "카레",
       "meaningEn": "a seasoned dish with sauce",
@@ -90790,7 +90790,7 @@
     {
       "language": "en",
       "word": "curve",
-      "seq": 5678,
+      "seq": 6098,
       "phonetic": "/kɜːrv/",
       "meaningKo": "곡선",
       "meaningEn": "a smoothly bending line",
@@ -90806,7 +90806,7 @@
     {
       "language": "en",
       "word": "custom",
-      "seq": 5679,
+      "seq": 6188,
       "phonetic": "/ˈkʌstəm/",
       "meaningKo": "관습",
       "meaningEn": "a traditional way of acting",
@@ -90822,7 +90822,7 @@
     {
       "language": "en",
       "word": "dairy",
-      "seq": 5680,
+      "seq": 5947,
       "phonetic": "/ˈderi/",
       "meaningKo": "유제품",
       "meaningEn": "foods made from milk",
@@ -90838,7 +90838,7 @@
     {
       "language": "en",
       "word": "damp",
-      "seq": 5681,
+      "seq": 5601,
       "phonetic": "/dæmp/",
       "meaningKo": "축축한",
       "meaningEn": "slightly wet",
@@ -90854,7 +90854,7 @@
     {
       "language": "en",
       "word": "database",
-      "seq": 5682,
+      "seq": 5561,
       "phonetic": "/ˈdeɪtəbeɪs/",
       "meaningKo": "데이터베이스",
       "meaningEn": "an organized collection of data",
@@ -90870,7 +90870,7 @@
     {
       "language": "en",
       "word": "datum",
-      "seq": 5683,
+      "seq": 5973,
       "phonetic": "/ˈdeɪtəm/",
       "meaningKo": "자료 한 항목",
       "meaningEn": "a single piece of data",
@@ -90886,7 +90886,7 @@
     {
       "language": "en",
       "word": "decade",
-      "seq": 5684,
+      "seq": 5725,
       "phonetic": "/ˈdekeɪd/",
       "meaningKo": "10년",
       "meaningEn": "a period of ten years",
@@ -90902,7 +90902,7 @@
     {
       "language": "en",
       "word": "decay",
-      "seq": 5685,
+      "seq": 5935,
       "phonetic": "/dɪˈkeɪ/",
       "meaningKo": "썩다, 쇠퇴하다",
       "meaningEn": "to break down over time",
@@ -90918,7 +90918,7 @@
     {
       "language": "en",
       "word": "decent",
-      "seq": 5686,
+      "seq": 5994,
       "phonetic": "/ˈdiːsənt/",
       "meaningKo": "괜찮은, 품위 있는",
       "meaningEn": "good enough or respectable",
@@ -90934,7 +90934,7 @@
     {
       "language": "en",
       "word": "decline",
-      "seq": 5687,
+      "seq": 6058,
       "phonetic": "/dɪˈklaɪn/",
       "meaningKo": "감소하다",
       "meaningEn": "to become smaller or weaker",
@@ -90950,7 +90950,7 @@
     {
       "language": "en",
       "word": "decrease",
-      "seq": 5688,
+      "seq": 6012,
       "phonetic": "/dɪˈkriːs/",
       "meaningKo": "줄다",
       "meaningEn": "to become less",
@@ -90966,7 +90966,7 @@
     {
       "language": "en",
       "word": "dedicate",
-      "seq": 5689,
+      "seq": 5915,
       "phonetic": "/ˈdedɪkeɪt/",
       "meaningKo": "바치다",
       "meaningEn": "to give time or effort to a purpose",
@@ -90982,7 +90982,7 @@
     {
       "language": "en",
       "word": "defend",
-      "seq": 5690,
+      "seq": 6033,
       "phonetic": "/dɪˈfend/",
       "meaningKo": "방어하다",
       "meaningEn": "to protect against attack",
@@ -90998,7 +90998,7 @@
     {
       "language": "en",
       "word": "delegate",
-      "seq": 5691,
+      "seq": 5908,
       "phonetic": "/ˈdelɪɡeɪt/",
       "meaningKo": "위임하다",
       "meaningEn": "to give a task to another person",
@@ -91014,7 +91014,7 @@
     {
       "language": "en",
       "word": "delete",
-      "seq": 5692,
+      "seq": 5757,
       "phonetic": "/dɪˈliːt/",
       "meaningKo": "삭제하다",
       "meaningEn": "to remove written or stored information",
@@ -91030,7 +91030,7 @@
     {
       "language": "en",
       "word": "deliberate",
-      "seq": 5693,
+      "seq": 6076,
       "phonetic": "/dɪˈlɪbərət/",
       "meaningKo": "의도적인",
       "meaningEn": "done after careful thought",
@@ -91046,7 +91046,7 @@
     {
       "language": "en",
       "word": "delicate",
-      "seq": 5694,
+      "seq": 6121,
       "phonetic": "/ˈdelɪkət/",
       "meaningKo": "섬세한",
       "meaningEn": "easily damaged",
@@ -91062,7 +91062,7 @@
     {
       "language": "en",
       "word": "democracy",
-      "seq": 5695,
+      "seq": 5650,
       "phonetic": "/dɪˈmɑːkrəsi/",
       "meaningKo": "민주주의",
       "meaningEn": "government by the people",
@@ -91078,7 +91078,7 @@
     {
       "language": "en",
       "word": "democrat",
-      "seq": 5696,
+      "seq": 6145,
       "phonetic": "/ˈdeməkræt/",
       "meaningKo": "민주주의자",
       "meaningEn": "a supporter of democracy",
@@ -91094,7 +91094,7 @@
     {
       "language": "en",
       "word": "demon",
-      "seq": 5697,
+      "seq": 5874,
       "phonetic": "/ˈdiːmən/",
       "meaningKo": "악마",
       "meaningEn": "an evil spirit in stories",
@@ -91110,7 +91110,7 @@
     {
       "language": "en",
       "word": "dense",
-      "seq": 5698,
+      "seq": 5524,
       "phonetic": "/dens/",
       "meaningKo": "빽빽한",
       "meaningEn": "closely packed together",
@@ -91126,7 +91126,7 @@
     {
       "language": "en",
       "word": "depart",
-      "seq": 5699,
+      "seq": 6001,
       "phonetic": "/dɪˈpɑːrt/",
       "meaningKo": "출발하다",
       "meaningEn": "to leave a place",
@@ -91142,7 +91142,7 @@
     {
       "language": "en",
       "word": "deposit",
-      "seq": 5700,
+      "seq": 5860,
       "phonetic": "/dɪˈpɑːzɪt/",
       "meaningKo": "보증금, 예금",
       "meaningEn": "money paid or placed for safekeeping",
@@ -91158,7 +91158,7 @@
     {
       "language": "en",
       "word": "derive",
-      "seq": 5701,
+      "seq": 5538,
       "phonetic": "/dɪˈraɪv/",
       "meaningKo": "얻다, 유래하다",
       "meaningEn": "to obtain from a source",
@@ -91174,7 +91174,7 @@
     {
       "language": "en",
       "word": "destiny",
-      "seq": 5702,
+      "seq": 5790,
       "phonetic": "/ˈdestəni/",
       "meaningKo": "운명",
       "meaningEn": "what is expected to happen in life",
@@ -91190,7 +91190,7 @@
     {
       "language": "en",
       "word": "destruct",
-      "seq": 5703,
+      "seq": 5605,
       "phonetic": "/dɪˈstrʌkt/",
       "meaningKo": "*파괴하다",
       "meaningEn": "to destroy something",
@@ -91206,7 +91206,7 @@
     {
       "language": "en",
       "word": "device",
-      "seq": 5704,
+      "seq": 5861,
       "phonetic": "/dɪˈvaɪs/",
       "meaningKo": "장치",
       "meaningEn": "a tool made for a purpose",
@@ -91222,7 +91222,7 @@
     {
       "language": "en",
       "word": "devote",
-      "seq": 5705,
+      "seq": 6238,
       "phonetic": "/dɪˈvoʊt/",
       "meaningKo": "쏟다, 바치다",
       "meaningEn": "to give time or effort",
@@ -91238,7 +91238,7 @@
     {
       "language": "en",
       "word": "diabetes",
-      "seq": 5706,
+      "seq": 5744,
       "phonetic": "/ˌdaɪəˈbiːtiːz/",
       "meaningKo": "당뇨병",
       "meaningEn": "a condition affecting blood sugar",
@@ -91254,7 +91254,7 @@
     {
       "language": "en",
       "word": "differ",
-      "seq": 5707,
+      "seq": 6073,
       "phonetic": "/ˈdɪfər/",
       "meaningKo": "다르다",
       "meaningEn": "to be unlike something else",
@@ -91270,7 +91270,7 @@
     {
       "language": "en",
       "word": "dignity",
-      "seq": 5708,
+      "seq": 5795,
       "phonetic": "/ˈdɪɡnəti/",
       "meaningKo": "존엄",
       "meaningEn": "the quality of deserving respect",
@@ -91286,7 +91286,7 @@
     {
       "language": "en",
       "word": "dimension",
-      "seq": 5709,
+      "seq": 6085,
       "phonetic": "/dɪˈmenʃən/",
       "meaningKo": "차원, 크기",
       "meaningEn": "a measurement or aspect",
@@ -91302,7 +91302,7 @@
     {
       "language": "en",
       "word": "diminish",
-      "seq": 5710,
+      "seq": 5990,
       "phonetic": "/dɪˈmɪnɪʃ/",
       "meaningKo": "줄어들다",
       "meaningEn": "to become smaller",
@@ -91318,7 +91318,7 @@
     {
       "language": "en",
       "word": "dine",
-      "seq": 5711,
+      "seq": 5881,
       "phonetic": "/daɪn/",
       "meaningKo": "식사하다",
       "meaningEn": "to eat a meal",
@@ -91334,7 +91334,7 @@
     {
       "language": "en",
       "word": "dip",
-      "seq": 5712,
+      "seq": 5877,
       "phonetic": "/dɪp/",
       "meaningKo": "담그다",
       "meaningEn": "to put briefly into liquid",
@@ -91350,7 +91350,7 @@
     {
       "language": "en",
       "word": "diplomat",
-      "seq": 5713,
+      "seq": 5930,
       "phonetic": "/ˈdɪpləmæt/",
       "meaningKo": "외교관",
       "meaningEn": "a government representative abroad",
@@ -91366,7 +91366,7 @@
     {
       "language": "en",
       "word": "disaster",
-      "seq": 5714,
+      "seq": 5801,
       "phonetic": "/dɪˈzæstər/",
       "meaningKo": "재난",
       "meaningEn": "a sudden event causing great harm",
@@ -91382,7 +91382,7 @@
     {
       "language": "en",
       "word": "dismiss",
-      "seq": 5715,
+      "seq": 5863,
       "phonetic": "/dɪsˈmɪs/",
       "meaningKo": "일축하다, 해고하다",
       "meaningEn": "to reject or remove from a job",
@@ -91398,7 +91398,7 @@
     {
       "language": "en",
       "word": "dispute",
-      "seq": 5716,
+      "seq": 5962,
       "phonetic": "/dɪˈspjuːt/",
       "meaningKo": "분쟁",
       "meaningEn": "a serious disagreement",
@@ -91414,7 +91414,7 @@
     {
       "language": "en",
       "word": "distinct",
-      "seq": 5717,
+      "seq": 6173,
       "phonetic": "/dɪˈstɪŋkt/",
       "meaningKo": "뚜렷이 다른",
       "meaningEn": "clearly different",
@@ -91430,7 +91430,7 @@
     {
       "language": "en",
       "word": "distinguish",
-      "seq": 5718,
+      "seq": 5780,
       "phonetic": "/dɪˈstɪŋɡwɪʃ/",
       "meaningKo": "구별하다",
       "meaningEn": "to tell the difference",
@@ -91446,7 +91446,7 @@
     {
       "language": "en",
       "word": "distract",
-      "seq": 5719,
+      "seq": 6270,
       "phonetic": "/dɪˈstrækt/",
       "meaningKo": "주의를 산만하게 하다",
       "meaningEn": "to take attention away",
@@ -91462,7 +91462,7 @@
     {
       "language": "en",
       "word": "distribute",
-      "seq": 5720,
+      "seq": 5995,
       "phonetic": "/dɪˈstrɪbjuːt/",
       "meaningKo": "나누어 주다",
       "meaningEn": "to give out to several people",
@@ -91478,7 +91478,7 @@
     {
       "language": "en",
       "word": "diverse",
-      "seq": 5721,
+      "seq": 6139,
       "phonetic": "/daɪˈvɜːrs/",
       "meaningKo": "다양한",
       "meaningEn": "showing many different kinds",
@@ -91494,7 +91494,7 @@
     {
       "language": "en",
       "word": "domain",
-      "seq": 5722,
+      "seq": 6197,
       "phonetic": "/doʊˈmeɪn/",
       "meaningKo": "영역",
       "meaningEn": "an area of knowledge or activity",
@@ -91510,7 +91510,7 @@
     {
       "language": "en",
       "word": "dominate",
-      "seq": 5723,
+      "seq": 5619,
       "phonetic": "/ˈdɑːmɪneɪt/",
       "meaningKo": "지배하다",
       "meaningEn": "to have the most control or influence",
@@ -91526,7 +91526,7 @@
     {
       "language": "en",
       "word": "dose",
-      "seq": 5724,
+      "seq": 6111,
       "phonetic": "/doʊs/",
       "meaningKo": "복용량",
       "meaningEn": "a measured amount of medicine",
@@ -91542,7 +91542,7 @@
     {
       "language": "en",
       "word": "dot",
-      "seq": 5725,
+      "seq": 5981,
       "phonetic": "/dɑːt/",
       "meaningKo": "점",
       "meaningEn": "a small round mark",
@@ -91558,7 +91558,7 @@
     {
       "language": "en",
       "word": "draft",
-      "seq": 5726,
+      "seq": 6247,
       "phonetic": "/dræft/",
       "meaningKo": "초안",
       "meaningEn": "an early version of writing",
@@ -91574,7 +91574,7 @@
     {
       "language": "en",
       "word": "drain",
-      "seq": 5727,
+      "seq": 5980,
       "phonetic": "/dreɪn/",
       "meaningKo": "물을 빼다",
       "meaningEn": "to remove liquid",
@@ -91590,7 +91590,7 @@
     {
       "language": "en",
       "word": "drown",
-      "seq": 5728,
+      "seq": 5926,
       "phonetic": "/draʊn/",
       "meaningKo": "물에 빠져 죽다",
       "meaningEn": "to die from being underwater",
@@ -91606,7 +91606,7 @@
     {
       "language": "en",
       "word": "dual",
-      "seq": 5729,
+      "seq": 6199,
       "phonetic": "/ˈduːəl/",
       "meaningKo": "이중의",
       "meaningEn": "having two parts",
@@ -91622,7 +91622,7 @@
     {
       "language": "en",
       "word": "dull",
-      "seq": 5730,
+      "seq": 5699,
       "phonetic": "/dʌl/",
       "meaningKo": "지루한, 무딘",
       "meaningEn": "not interesting or sharp",
@@ -91638,7 +91638,7 @@
     {
       "language": "en",
       "word": "dynamic",
-      "seq": 5731,
+      "seq": 6100,
       "phonetic": "/daɪˈnæmɪk/",
       "meaningKo": "활기찬, 역동적인",
       "meaningEn": "full of energy and change",
@@ -91654,7 +91654,7 @@
     {
       "language": "en",
       "word": "eager",
-      "seq": 5732,
+      "seq": 5668,
       "phonetic": "/ˈiːɡər/",
       "meaningKo": "열망하는",
       "meaningEn": "strongly wanting to do something",
@@ -91670,7 +91670,7 @@
     {
       "language": "en",
       "word": "efficient",
-      "seq": 5733,
+      "seq": 6134,
       "phonetic": "/ɪˈfɪʃənt/",
       "meaningKo": "효율적인",
       "meaningEn": "working with little waste",
@@ -91686,7 +91686,7 @@
     {
       "language": "en",
       "word": "electronic",
-      "seq": 5734,
+      "seq": 5652,
       "phonetic": "/ɪˌlekˈtrɑːnɪk/",
       "meaningKo": "전자식의",
       "meaningEn": "using electrical technology",
@@ -91702,7 +91702,7 @@
     {
       "language": "en",
       "word": "elegant",
-      "seq": 5735,
+      "seq": 5831,
       "phonetic": "/ˈelɪɡənt/",
       "meaningKo": "우아한",
       "meaningEn": "graceful and attractive",
@@ -91718,7 +91718,7 @@
     {
       "language": "en",
       "word": "eliminate",
-      "seq": 5736,
+      "seq": 5612,
       "phonetic": "/ɪˈlɪmɪneɪt/",
       "meaningKo": "제거하다",
       "meaningEn": "to remove completely",
@@ -91734,7 +91734,7 @@
     {
       "language": "en",
       "word": "elite",
-      "seq": 5737,
+      "seq": 5838,
       "phonetic": "/ɪˈliːt/",
       "meaningKo": "최상위의",
       "meaningEn": "belonging to the best group",
@@ -91750,7 +91750,7 @@
     {
       "language": "en",
       "word": "embassy",
-      "seq": 5738,
+      "seq": 6006,
       "phonetic": "/ˈembəsi/",
       "meaningKo": "대사관",
       "meaningEn": "an ambassador's office abroad",
@@ -91766,7 +91766,7 @@
     {
       "language": "en",
       "word": "embrace",
-      "seq": 5739,
+      "seq": 5966,
       "phonetic": "/ɪmˈbreɪs/",
       "meaningKo": "받아들이다, 껴안다",
       "meaningEn": "to accept or hold closely",
@@ -91782,7 +91782,7 @@
     {
       "language": "en",
       "word": "emerge",
-      "seq": 5740,
+      "seq": 5636,
       "phonetic": "/ɪˈmɜːrdʒ/",
       "meaningKo": "나타나다",
       "meaningEn": "to come into view",
@@ -91798,7 +91798,7 @@
     {
       "language": "en",
       "word": "emergency",
-      "seq": 5741,
+      "seq": 5803,
       "phonetic": "/ɪˈmɜːrdʒənsi/",
       "meaningKo": "비상사태",
       "meaningEn": "a sudden dangerous situation",
@@ -91814,7 +91814,7 @@
     {
       "language": "en",
       "word": "emit",
-      "seq": 5742,
+      "seq": 5938,
       "phonetic": "/ɪˈmɪt/",
       "meaningKo": "내뿜다",
       "meaningEn": "to send out light, heat, or gas",
@@ -91830,7 +91830,7 @@
     {
       "language": "en",
       "word": "emphasis",
-      "seq": 5743,
+      "seq": 6190,
       "phonetic": "/ˈemfəsɪs/",
       "meaningKo": "강조",
       "meaningEn": "special importance given to something",
@@ -91846,7 +91846,7 @@
     {
       "language": "en",
       "word": "encounter",
-      "seq": 5744,
+      "seq": 6153,
       "phonetic": "/ɪnˈkaʊntər/",
       "meaningKo": "마주치다",
       "meaningEn": "to meet unexpectedly",
@@ -91862,7 +91862,7 @@
     {
       "language": "en",
       "word": "endure",
-      "seq": 5745,
+      "seq": 5957,
       "phonetic": "/ɪnˈdʊr/",
       "meaningKo": "견디다",
       "meaningEn": "to bear hardship",
@@ -91878,7 +91878,7 @@
     {
       "language": "en",
       "word": "enhance",
-      "seq": 5746,
+      "seq": 5906,
       "phonetic": "/ɪnˈhæns/",
       "meaningKo": "향상하다",
       "meaningEn": "to make better",
@@ -91894,7 +91894,7 @@
     {
       "language": "en",
       "word": "enterprise",
-      "seq": 5747,
+      "seq": 6254,
       "phonetic": "/ˈentərpraɪz/",
       "meaningKo": "기업, 사업",
       "meaningEn": "a business or difficult undertaking",
@@ -91910,7 +91910,7 @@
     {
       "language": "en",
       "word": "enthusiastic",
-      "seq": 5748,
+      "seq": 5581,
       "phonetic": "/ɪnˌθuːziˈæstɪk/",
       "meaningKo": "열정적인",
       "meaningEn": "showing strong interest",
@@ -91926,7 +91926,7 @@
     {
       "language": "en",
       "word": "entry",
-      "seq": 5749,
+      "seq": 5595,
       "phonetic": "/ˈentri/",
       "meaningKo": "입장, 항목",
       "meaningEn": "the act of entering or an item in a list",
@@ -91942,7 +91942,7 @@
     {
       "language": "en",
       "word": "environ",
-      "seq": 5750,
+      "seq": 6239,
       "phonetic": "/ɪnˈvaɪrən/",
       "meaningKo": "*둘러싸다",
       "meaningEn": "to surround something",
@@ -91958,7 +91958,7 @@
     {
       "language": "en",
       "word": "envy",
-      "seq": 5751,
+      "seq": 6086,
       "phonetic": "/ˈenvi/",
       "meaningKo": "부러움, 질투",
       "meaningEn": "a desire for what another has",
@@ -91974,7 +91974,7 @@
     {
       "language": "en",
       "word": "equip",
-      "seq": 5752,
+      "seq": 5985,
       "phonetic": "/ɪˈkwɪp/",
       "meaningKo": "갖추다",
       "meaningEn": "to provide needed tools",
@@ -91990,7 +91990,7 @@
     {
       "language": "en",
       "word": "era",
-      "seq": 5753,
+      "seq": 6013,
       "phonetic": "/ˈɪrə/",
       "meaningKo": "시대",
       "meaningEn": "a long period marked by particular events",
@@ -92006,7 +92006,7 @@
     {
       "language": "en",
       "word": "erase",
-      "seq": 5754,
+      "seq": 5617,
       "phonetic": "/ɪˈreɪs/",
       "meaningKo": "지우다",
       "meaningEn": "to remove writing or marks",
@@ -92022,7 +92022,7 @@
     {
       "language": "en",
       "word": "estate",
-      "seq": 5755,
+      "seq": 6133,
       "phonetic": "/ɪˈsteɪt/",
       "meaningKo": "재산, 토지",
       "meaningEn": "land or property someone owns",
@@ -92038,7 +92038,7 @@
     {
       "language": "en",
       "word": "evacuate",
-      "seq": 5756,
+      "seq": 5793,
       "phonetic": "/ɪˈvækjueɪt/",
       "meaningKo": "대피시키다",
       "meaningEn": "to move away from danger",
@@ -92054,7 +92054,7 @@
     {
       "language": "en",
       "word": "evitable",
-      "seq": 5757,
+      "seq": 6138,
       "phonetic": "/ˈevɪtəbəl/",
       "meaningKo": "*피할 수 있는",
       "meaningEn": "able to be avoided",
@@ -92070,7 +92070,7 @@
     {
       "language": "en",
       "word": "evolution",
-      "seq": 5758,
+      "seq": 6196,
       "phonetic": "/ˌevəˈluːʃən/",
       "meaningKo": "진화, 발전",
       "meaningEn": "gradual change over time",
@@ -92086,7 +92086,7 @@
     {
       "language": "en",
       "word": "exaggerate",
-      "seq": 5759,
+      "seq": 5764,
       "phonetic": "/ɪɡˈzædʒəreɪt/",
       "meaningKo": "과장하다",
       "meaningEn": "to make something seem bigger than it is",
@@ -92102,7 +92102,7 @@
     {
       "language": "en",
       "word": "exceed",
-      "seq": 5760,
+      "seq": 5696,
       "phonetic": "/ɪkˈsiːd/",
       "meaningKo": "초과하다",
       "meaningEn": "to go beyond a limit",
@@ -92118,7 +92118,7 @@
     {
       "language": "en",
       "word": "excess",
-      "seq": 5761,
+      "seq": 5959,
       "phonetic": "/ɪkˈses/",
       "meaningKo": "초과, 과잉",
       "meaningEn": "more than is needed",
@@ -92134,7 +92134,7 @@
     {
       "language": "en",
       "word": "exclude",
-      "seq": 5762,
+      "seq": 6217,
       "phonetic": "/ɪkˈskluːd/",
       "meaningKo": "제외하다",
       "meaningEn": "to leave something out",
@@ -92150,7 +92150,7 @@
     {
       "language": "en",
       "word": "executive",
-      "seq": 5763,
+      "seq": 6258,
       "phonetic": "/ɪɡˈzekjətɪv/",
       "meaningKo": "임원",
       "meaningEn": "a person managing an organization",
@@ -92166,7 +92166,7 @@
     {
       "language": "en",
       "word": "exhibit",
-      "seq": 5764,
+      "seq": 5949,
       "phonetic": "/ɪɡˈzɪbɪt/",
       "meaningKo": "전시하다",
       "meaningEn": "to display publicly",
@@ -92182,7 +92182,7 @@
     {
       "language": "en",
       "word": "exotic",
-      "seq": 5765,
+      "seq": 5842,
       "phonetic": "/ɪɡˈzɑːtɪk/",
       "meaningKo": "이국적인",
       "meaningEn": "unusual and from another place",
@@ -92198,7 +92198,7 @@
     {
       "language": "en",
       "word": "expertise",
-      "seq": 5766,
+      "seq": 5978,
       "phonetic": "/ˌekspɜːrˈtiːz/",
       "meaningKo": "전문 지식",
       "meaningEn": "skill gained through experience",
@@ -92214,7 +92214,7 @@
     {
       "language": "en",
       "word": "explode",
-      "seq": 5767,
+      "seq": 6074,
       "phonetic": "/ɪkˈsploʊd/",
       "meaningKo": "폭발하다",
       "meaningEn": "to burst violently",
@@ -92230,7 +92230,7 @@
     {
       "language": "en",
       "word": "explore",
-      "seq": 5768,
+      "seq": 5662,
       "phonetic": "/ɪkˈsplɔːr/",
       "meaningKo": "탐험하다, 살펴보다",
       "meaningEn": "to travel through or examine",
@@ -92246,7 +92246,7 @@
     {
       "language": "en",
       "word": "export",
-      "seq": 5769,
+      "seq": 6062,
       "phonetic": "/ɪkˈspɔːrt/",
       "meaningKo": "수출하다",
       "meaningEn": "to sell goods abroad",
@@ -92262,7 +92262,7 @@
     {
       "language": "en",
       "word": "extent",
-      "seq": 5770,
+      "seq": 6222,
       "phonetic": "/ɪkˈstent/",
       "meaningKo": "정도, 범위",
       "meaningEn": "the size or degree of something",
@@ -92278,7 +92278,7 @@
     {
       "language": "en",
       "word": "external",
-      "seq": 5771,
+      "seq": 5794,
       "phonetic": "/ɪkˈstɜːrnəl/",
       "meaningKo": "외부의",
       "meaningEn": "coming from outside",
@@ -92294,7 +92294,7 @@
     {
       "language": "en",
       "word": "extinct",
-      "seq": 5772,
+      "seq": 5895,
       "phonetic": "/ɪkˈstɪŋkt/",
       "meaningKo": "멸종한",
       "meaningEn": "no longer existing",
@@ -92310,7 +92310,7 @@
     {
       "language": "en",
       "word": "extract",
-      "seq": 5773,
+      "seq": 6023,
       "phonetic": "/ɪkˈstrækt/",
       "meaningKo": "추출하다",
       "meaningEn": "to remove from a source",
@@ -92326,7 +92326,7 @@
     {
       "language": "en",
       "word": "extraordinary",
-      "seq": 5774,
+      "seq": 6002,
       "phonetic": "/ɪkˈstrɔːrdəneri/",
       "meaningKo": "비범한",
       "meaningEn": "far beyond the usual",
@@ -92342,7 +92342,7 @@
     {
       "language": "en",
       "word": "eyebrow",
-      "seq": 5775,
+      "seq": 5821,
       "phonetic": "/ˈaɪbraʊ/",
       "meaningKo": "눈썹",
       "meaningEn": "the strip of hair above an eye",
@@ -92358,7 +92358,7 @@
     {
       "language": "en",
       "word": "fabric",
-      "seq": 5776,
+      "seq": 6250,
       "phonetic": "/ˈfæbrɪk/",
       "meaningKo": "직물",
       "meaningEn": "material made from threads",
@@ -92374,7 +92374,7 @@
     {
       "language": "en",
       "word": "facilitate",
-      "seq": 5777,
+      "seq": 5565,
       "phonetic": "/fəˈsɪlɪteɪt/",
       "meaningKo": "쉽게 하다",
       "meaningEn": "to make an activity easier",
@@ -92390,7 +92390,7 @@
     {
       "language": "en",
       "word": "facility",
-      "seq": 5778,
+      "seq": 5688,
       "phonetic": "/fəˈsɪləti/",
       "meaningKo": "시설",
       "meaningEn": "a building or service for a purpose",
@@ -92406,7 +92406,7 @@
     {
       "language": "en",
       "word": "faculty",
-      "seq": 5779,
+      "seq": 5522,
       "phonetic": "/ˈfækəlti/",
       "meaningKo": "교수진",
       "meaningEn": "the teaching staff of a school",
@@ -92422,7 +92422,7 @@
     {
       "language": "en",
       "word": "fade",
-      "seq": 5780,
+      "seq": 5657,
       "phonetic": "/feɪd/",
       "meaningKo": "바래다, 희미해지다",
       "meaningEn": "to gradually lose color or strength",
@@ -92438,7 +92438,7 @@
     {
       "language": "en",
       "word": "false",
-      "seq": 5781,
+      "seq": 5937,
       "phonetic": "/fɔːls/",
       "meaningKo": "거짓의",
       "meaningEn": "not true",
@@ -92454,7 +92454,7 @@
     {
       "language": "en",
       "word": "fame",
-      "seq": 5782,
+      "seq": 5721,
       "phonetic": "/feɪm/",
       "meaningKo": "명성",
       "meaningEn": "the state of being well known",
@@ -92470,7 +92470,7 @@
     {
       "language": "en",
       "word": "fare",
-      "seq": 5783,
+      "seq": 5914,
       "phonetic": "/fer/",
       "meaningKo": "요금",
       "meaningEn": "the price of a journey",
@@ -92486,7 +92486,7 @@
     {
       "language": "en",
       "word": "fasten",
-      "seq": 5784,
+      "seq": 5700,
       "phonetic": "/ˈfæsən/",
       "meaningKo": "잠그다, 고정하다",
       "meaningEn": "to close or secure firmly",
@@ -92502,7 +92502,7 @@
     {
       "language": "en",
       "word": "fate",
-      "seq": 5785,
+      "seq": 6077,
       "phonetic": "/feɪt/",
       "meaningKo": "운명",
       "meaningEn": "what happens beyond one's control",
@@ -92518,7 +92518,7 @@
     {
       "language": "en",
       "word": "federal",
-      "seq": 5786,
+      "seq": 5678,
       "phonetic": "/ˈfedərəl/",
       "meaningKo": "연방의",
       "meaningEn": "relating to a central national government",
@@ -92534,7 +92534,7 @@
     {
       "language": "en",
       "word": "ferry",
-      "seq": 5787,
+      "seq": 6028,
       "phonetic": "/ˈferi/",
       "meaningKo": "연락선",
       "meaningEn": "a boat carrying people or vehicles",
@@ -92550,7 +92550,7 @@
     {
       "language": "en",
       "word": "fiction",
-      "seq": 5788,
+      "seq": 6146,
       "phonetic": "/ˈfɪkʃən/",
       "meaningKo": "소설, 허구",
       "meaningEn": "invented stories",
@@ -92566,7 +92566,7 @@
     {
       "language": "en",
       "word": "fierce",
-      "seq": 5789,
+      "seq": 5751,
       "phonetic": "/fɪrs/",
       "meaningKo": "사나운, 치열한",
       "meaningEn": "very strong or intense",
@@ -92582,7 +92582,7 @@
     {
       "language": "en",
       "word": "filter",
-      "seq": 5790,
+      "seq": 5916,
       "phonetic": "/ˈfɪltər/",
       "meaningKo": "여과기",
       "meaningEn": "a device that removes unwanted material",
@@ -92598,7 +92598,7 @@
     {
       "language": "en",
       "word": "finite",
-      "seq": 5791,
+      "seq": 5901,
       "phonetic": "/ˈfaɪnaɪt/",
       "meaningKo": "유한한",
       "meaningEn": "having a limit",
@@ -92614,7 +92614,7 @@
     {
       "language": "en",
       "word": "flavor",
-      "seq": 5792,
+      "seq": 5960,
       "phonetic": "/ˈfleɪvər/",
       "meaningKo": "맛",
       "meaningEn": "the taste of food",
@@ -92630,7 +92630,7 @@
     {
       "language": "en",
       "word": "flee",
-      "seq": 5793,
+      "seq": 5735,
       "phonetic": "/fliː/",
       "meaningKo": "달아나다",
       "meaningEn": "to escape danger",
@@ -92646,7 +92646,7 @@
     {
       "language": "en",
       "word": "flesh",
-      "seq": 5794,
+      "seq": 5857,
       "phonetic": "/fleʃ/",
       "meaningKo": "살, 과육",
       "meaningEn": "the soft part of a body or fruit",
@@ -92662,7 +92662,7 @@
     {
       "language": "en",
       "word": "flexible",
-      "seq": 5795,
+      "seq": 6140,
       "phonetic": "/ˈfleksəbəl/",
       "meaningKo": "유연한",
       "meaningEn": "able to bend or change easily",
@@ -92678,7 +92678,7 @@
     {
       "language": "en",
       "word": "flip",
-      "seq": 5796,
+      "seq": 5890,
       "phonetic": "/flɪp/",
       "meaningKo": "뒤집다",
       "meaningEn": "to turn over quickly",
@@ -92694,7 +92694,7 @@
     {
       "language": "en",
       "word": "flock",
-      "seq": 5797,
+      "seq": 5807,
       "phonetic": "/flɑːk/",
       "meaningKo": "새 떼",
       "meaningEn": "a group of birds",
@@ -92710,7 +92710,7 @@
     {
       "language": "en",
       "word": "fond",
-      "seq": 5798,
+      "seq": 6069,
       "phonetic": "/fɑːnd/",
       "meaningKo": "좋아하는",
       "meaningEn": "having a warm liking",
@@ -92726,7 +92726,7 @@
     {
       "language": "en",
       "word": "forbid",
-      "seq": 5799,
+      "seq": 5622,
       "phonetic": "/fərˈbɪd/",
       "meaningKo": "금지하다",
       "meaningEn": "to refuse to allow",
@@ -92742,7 +92742,7 @@
     {
       "language": "en",
       "word": "forecast",
-      "seq": 5800,
+      "seq": 5816,
       "phonetic": "/ˈfɔːrkæst/",
       "meaningKo": "예보",
       "meaningEn": "a prediction of future conditions",
@@ -92758,7 +92758,7 @@
     {
       "language": "en",
       "word": "forehead",
-      "seq": 5801,
+      "seq": 6148,
       "phonetic": "/ˈfɔːrhed/",
       "meaningKo": "이마",
       "meaningEn": "the part of the face above the eyes",
@@ -92774,7 +92774,7 @@
     {
       "language": "en",
       "word": "format",
-      "seq": 5802,
+      "seq": 5733,
       "phonetic": "/ˈfɔːrmæt/",
       "meaningKo": "형식",
       "meaningEn": "the arrangement of a document or event",
@@ -92790,7 +92790,7 @@
     {
       "language": "en",
       "word": "former",
-      "seq": 5803,
+      "seq": 5527,
       "phonetic": "/ˈfɔːrmər/",
       "meaningKo": "이전의",
       "meaningEn": "belonging to an earlier time",
@@ -92806,7 +92806,7 @@
     {
       "language": "en",
       "word": "formula",
-      "seq": 5804,
+      "seq": 5788,
       "phonetic": "/ˈfɔːrmjələ/",
       "meaningKo": "공식",
       "meaningEn": "a rule expressed with symbols",
@@ -92822,7 +92822,7 @@
     {
       "language": "en",
       "word": "fountain",
-      "seq": 5805,
+      "seq": 6154,
       "phonetic": "/ˈfaʊntən/",
       "meaningKo": "분수",
       "meaningEn": "a structure that sprays water",
@@ -92838,7 +92838,7 @@
     {
       "language": "en",
       "word": "fraction",
-      "seq": 5806,
+      "seq": 5763,
       "phonetic": "/ˈfrækʃən/",
       "meaningKo": "일부, 분수",
       "meaningEn": "a small part of a whole",
@@ -92854,7 +92854,7 @@
     {
       "language": "en",
       "word": "framework",
-      "seq": 5807,
+      "seq": 5943,
       "phonetic": "/ˈfreɪmwɜːrk/",
       "meaningKo": "기본 틀",
       "meaningEn": "a structure guiding work",
@@ -92870,7 +92870,7 @@
     {
       "language": "en",
       "word": "frequent",
-      "seq": 5808,
+      "seq": 6127,
       "phonetic": "/ˈfriːkwənt/",
       "meaningKo": "빈번한",
       "meaningEn": "happening often",
@@ -92886,7 +92886,7 @@
     {
       "language": "en",
       "word": "frost",
-      "seq": 5809,
+      "seq": 6162,
       "phonetic": "/frɔːst/",
       "meaningKo": "서리",
       "meaningEn": "a thin layer of ice",
@@ -92902,7 +92902,7 @@
     {
       "language": "en",
       "word": "fuel",
-      "seq": 5810,
+      "seq": 5560,
       "phonetic": "/ˈfjuːəl/",
       "meaningKo": "연료",
       "meaningEn": "material used to produce energy",
@@ -92918,7 +92918,7 @@
     {
       "language": "en",
       "word": "fundamental",
-      "seq": 5811,
+      "seq": 5544,
       "phonetic": "/ˌfʌndəˈmentəl/",
       "meaningKo": "근본적인",
       "meaningEn": "basic and essential",
@@ -92934,7 +92934,7 @@
     {
       "language": "en",
       "word": "funeral",
-      "seq": 5812,
+      "seq": 5799,
       "phonetic": "/ˈfjuːnərəl/",
       "meaningKo": "장례식",
       "meaningEn": "a ceremony for someone who died",
@@ -92950,7 +92950,7 @@
     {
       "language": "en",
       "word": "furthermore",
-      "seq": 5813,
+      "seq": 5900,
       "phonetic": "/ˌfɜːrðərˈmɔːr/",
       "meaningKo": "게다가",
       "meaningEn": "in addition to what was said",
@@ -92966,7 +92966,7 @@
     {
       "language": "en",
       "word": "gallery",
-      "seq": 5814,
+      "seq": 6150,
       "phonetic": "/ˈɡæləri/",
       "meaningKo": "화랑, 전시관",
       "meaningEn": "a place where art is shown",
@@ -92982,7 +92982,7 @@
     {
       "language": "en",
       "word": "gamble",
-      "seq": 5815,
+      "seq": 5531,
       "phonetic": "/ˈɡæmbəl/",
       "meaningKo": "도박하다",
       "meaningEn": "to risk money on an uncertain result",
@@ -92998,7 +92998,7 @@
     {
       "language": "en",
       "word": "gang",
-      "seq": 5816,
+      "seq": 5818,
       "phonetic": "/ɡæŋ/",
       "meaningKo": "무리, 패거리",
       "meaningEn": "a group acting together",
@@ -93014,7 +93014,7 @@
     {
       "language": "en",
       "word": "gap",
-      "seq": 5817,
+      "seq": 5665,
       "phonetic": "/ɡæp/",
       "meaningKo": "틈, 격차",
       "meaningEn": "an empty space or difference",
@@ -93030,7 +93030,7 @@
     {
       "language": "en",
       "word": "gasoline",
-      "seq": 5818,
+      "seq": 6030,
       "phonetic": "/ˈɡæsəliːn/",
       "meaningKo": "휘발유",
       "meaningEn": "fuel used in cars",
@@ -93046,7 +93046,7 @@
     {
       "language": "en",
       "word": "gaze",
-      "seq": 5819,
+      "seq": 6003,
       "phonetic": "/ɡeɪz/",
       "meaningKo": "응시하다",
       "meaningEn": "to look steadily",
@@ -93062,7 +93062,7 @@
     {
       "language": "en",
       "word": "gender",
-      "seq": 5820,
+      "seq": 5883,
       "phonetic": "/ˈdʒendər/",
       "meaningKo": "성별",
       "meaningEn": "a social or personal category of sex",
@@ -93078,7 +93078,7 @@
     {
       "language": "en",
       "word": "gene",
-      "seq": 5821,
+      "seq": 6026,
       "phonetic": "/dʒiːn/",
       "meaningKo": "유전자",
       "meaningEn": "a unit of inherited information",
@@ -93094,7 +93094,7 @@
     {
       "language": "en",
       "word": "generate",
-      "seq": 5822,
+      "seq": 6189,
       "phonetic": "/ˈdʒenəreɪt/",
       "meaningKo": "생산하다",
       "meaningEn": "to produce something",
@@ -93110,7 +93110,7 @@
     {
       "language": "en",
       "word": "generous",
-      "seq": 5823,
+      "seq": 5946,
       "phonetic": "/ˈdʒenərəs/",
       "meaningKo": "관대한",
       "meaningEn": "willing to give freely",
@@ -93126,7 +93126,7 @@
     {
       "language": "en",
       "word": "genius",
-      "seq": 5824,
+      "seq": 6192,
       "phonetic": "/ˈdʒiːniəs/",
       "meaningKo": "천재",
       "meaningEn": "a person with exceptional ability",
@@ -93142,7 +93142,7 @@
     {
       "language": "en",
       "word": "genuine",
-      "seq": 5825,
+      "seq": 6044,
       "phonetic": "/ˈdʒenjuɪn/",
       "meaningKo": "진짜의, 진심 어린",
       "meaningEn": "real and sincere",
@@ -93158,7 +93158,7 @@
     {
       "language": "en",
       "word": "geography",
-      "seq": 5826,
+      "seq": 5932,
       "phonetic": "/dʒiˈɑːɡrəfi/",
       "meaningKo": "지리학",
       "meaningEn": "the study of places and landscapes",
@@ -93174,7 +93174,7 @@
     {
       "language": "en",
       "word": "geology",
-      "seq": 5827,
+      "seq": 5685,
       "phonetic": "/dʒiˈɑːlədʒi/",
       "meaningKo": "지질학",
       "meaningEn": "the study of Earth's rocks",
@@ -93190,7 +93190,7 @@
     {
       "language": "en",
       "word": "globe",
-      "seq": 5828,
+      "seq": 5907,
       "phonetic": "/ɡloʊb/",
       "meaningKo": "지구본",
       "meaningEn": "a round model of Earth",
@@ -93206,7 +93206,7 @@
     {
       "language": "en",
       "word": "glow",
-      "seq": 5829,
+      "seq": 5782,
       "phonetic": "/ɡloʊ/",
       "meaningKo": "빛나다",
       "meaningEn": "to shine softly",
@@ -93222,7 +93222,7 @@
     {
       "language": "en",
       "word": "goat",
-      "seq": 5830,
+      "seq": 5939,
       "phonetic": "/ɡoʊt/",
       "meaningKo": "염소",
       "meaningEn": "a farm animal with horns",
@@ -93238,7 +93238,7 @@
     {
       "language": "en",
       "word": "graduate",
-      "seq": 5831,
+      "seq": 5638,
       "phonetic": "/ˈɡrædʒueɪt/",
       "meaningKo": "졸업하다",
       "meaningEn": "to complete a course of study",
@@ -93254,7 +93254,7 @@
     {
       "language": "en",
       "word": "grain",
-      "seq": 5832,
+      "seq": 6059,
       "phonetic": "/ɡreɪn/",
       "meaningKo": "곡물",
       "meaningEn": "a seed grown for food",
@@ -93270,7 +93270,7 @@
     {
       "language": "en",
       "word": "grasp",
-      "seq": 5833,
+      "seq": 5646,
       "phonetic": "/ɡræsp/",
       "meaningKo": "붙잡다, 이해하다",
       "meaningEn": "to hold firmly or understand",
@@ -93286,7 +93286,7 @@
     {
       "language": "en",
       "word": "grateful",
-      "seq": 5834,
+      "seq": 6221,
       "phonetic": "/ˈɡreɪtfəl/",
       "meaningKo": "감사하는",
       "meaningEn": "feeling thanks",
@@ -93302,7 +93302,7 @@
     {
       "language": "en",
       "word": "grave",
-      "seq": 5835,
+      "seq": 5836,
       "phonetic": "/ɡreɪv/",
       "meaningKo": "무덤",
       "meaningEn": "a place where a dead person is buried",
@@ -93318,7 +93318,7 @@
     {
       "language": "en",
       "word": "greed",
-      "seq": 5836,
+      "seq": 5921,
       "phonetic": "/ɡriːd/",
       "meaningKo": "탐욕",
       "meaningEn": "an excessive desire for more",
@@ -93334,7 +93334,7 @@
     {
       "language": "en",
       "word": "grief",
-      "seq": 5837,
+      "seq": 5855,
       "phonetic": "/ɡriːf/",
       "meaningKo": "슬픔",
       "meaningEn": "deep sadness after a loss",
@@ -93350,7 +93350,7 @@
     {
       "language": "en",
       "word": "grip",
-      "seq": 5838,
+      "seq": 6067,
       "phonetic": "/ɡrɪp/",
       "meaningKo": "꽉 잡다",
       "meaningEn": "to hold tightly",
@@ -93366,7 +93366,7 @@
     {
       "language": "en",
       "word": "gross",
-      "seq": 5839,
+      "seq": 5596,
       "phonetic": "/ɡroʊs/",
       "meaningKo": "총계의",
       "meaningEn": "before deductions",
@@ -93382,7 +93382,7 @@
     {
       "language": "en",
       "word": "guideline",
-      "seq": 5840,
+      "seq": 5752,
       "phonetic": "/ˈɡaɪdlaɪn/",
       "meaningKo": "지침",
       "meaningEn": "advice on how to act",
@@ -93398,7 +93398,7 @@
     {
       "language": "en",
       "word": "gulf",
-      "seq": 5841,
+      "seq": 5537,
       "phonetic": "/ɡʌlf/",
       "meaningKo": "만, 큰 격차",
       "meaningEn": "a large inlet of sea",
@@ -93414,7 +93414,7 @@
     {
       "language": "en",
       "word": "gymnasium",
-      "seq": 5842,
+      "seq": 5584,
       "phonetic": "/dʒɪmˈneɪziəm/",
       "meaningKo": "체육관",
       "meaningEn": "a building for indoor sports",
@@ -93430,7 +93430,7 @@
     {
       "language": "en",
       "word": "habitat",
-      "seq": 5843,
+      "seq": 6016,
       "phonetic": "/ˈhæbɪtæt/",
       "meaningKo": "서식지",
       "meaningEn": "an animal's natural home",
@@ -93446,7 +93446,7 @@
     {
       "language": "en",
       "word": "halt",
-      "seq": 5844,
+      "seq": 5945,
       "phonetic": "/hɔːlt/",
       "meaningKo": "멈추다",
       "meaningEn": "to stop movement or activity",
@@ -93462,7 +93462,7 @@
     {
       "language": "en",
       "word": "hammer",
-      "seq": 5845,
+      "seq": 5756,
       "phonetic": "/ˈhæmər/",
       "meaningKo": "망치",
       "meaningEn": "a tool for driving nails",
@@ -93478,7 +93478,7 @@
     {
       "language": "en",
       "word": "handicap",
-      "seq": 5846,
+      "seq": 5828,
       "phonetic": "/ˈhændikæp/",
       "meaningKo": "불리한 조건",
       "meaningEn": "a condition that makes success harder",
@@ -93494,7 +93494,7 @@
     {
       "language": "en",
       "word": "harbor",
-      "seq": 5847,
+      "seq": 6041,
       "phonetic": "/ˈhɑːrbər/",
       "meaningKo": "항구",
       "meaningEn": "a sheltered place for ships",
@@ -93510,7 +93510,7 @@
     {
       "language": "en",
       "word": "harmony",
-      "seq": 5848,
+      "seq": 5825,
       "phonetic": "/ˈhɑːrməni/",
       "meaningKo": "조화",
       "meaningEn": "a pleasing balance",
@@ -93526,7 +93526,7 @@
     {
       "language": "en",
       "word": "harsh",
-      "seq": 5849,
+      "seq": 6116,
       "phonetic": "/hɑːrʃ/",
       "meaningKo": "가혹한",
       "meaningEn": "severe and unpleasant",
@@ -93542,7 +93542,7 @@
     {
       "language": "en",
       "word": "harvest",
-      "seq": 5850,
+      "seq": 5811,
       "phonetic": "/ˈhɑːrvɪst/",
       "meaningKo": "수확하다",
       "meaningEn": "to gather crops",
@@ -93558,7 +93558,7 @@
     {
       "language": "en",
       "word": "hazard",
-      "seq": 5851,
+      "seq": 5754,
       "phonetic": "/ˈhæzərd/",
       "meaningKo": "위험 요소",
       "meaningEn": "a possible source of harm",
@@ -93574,7 +93574,7 @@
     {
       "language": "en",
       "word": "headquarters",
-      "seq": 5852,
+      "seq": 5769,
       "phonetic": "/ˈhedkwɔːrtərz/",
       "meaningKo": "본부",
       "meaningEn": "the main office of an organization",
@@ -93590,7 +93590,7 @@
     {
       "language": "en",
       "word": "heal",
-      "seq": 5853,
+      "seq": 5967,
       "phonetic": "/hiːl/",
       "meaningKo": "낫다",
       "meaningEn": "to become healthy again",
@@ -93606,7 +93606,7 @@
     {
       "language": "en",
       "word": "hence",
-      "seq": 5854,
+      "seq": 6235,
       "phonetic": "/hens/",
       "meaningKo": "그러므로",
       "meaningEn": "for this reason",
@@ -93622,7 +93622,7 @@
     {
       "language": "en",
       "word": "heritage",
-      "seq": 5855,
+      "seq": 5566,
       "phonetic": "/ˈherɪtɪdʒ/",
       "meaningKo": "유산",
       "meaningEn": "traditions passed down",
@@ -93638,7 +93638,7 @@
     {
       "language": "en",
       "word": "highlight",
-      "seq": 5856,
+      "seq": 6267,
       "phonetic": "/ˈhaɪlaɪt/",
       "meaningKo": "강조하다",
       "meaningEn": "to draw attention to",
@@ -93654,7 +93654,7 @@
     {
       "language": "en",
       "word": "holy",
-      "seq": 5857,
+      "seq": 5997,
       "phonetic": "/ˈhoʊli/",
       "meaningKo": "성스러운",
       "meaningEn": "connected with religion",
@@ -93670,7 +93670,7 @@
     {
       "language": "en",
       "word": "hook",
-      "seq": 5858,
+      "seq": 5781,
       "phonetic": "/hʊk/",
       "meaningKo": "갈고리",
       "meaningEn": "a curved piece for hanging things",
@@ -93686,7 +93686,7 @@
     {
       "language": "en",
       "word": "horizon",
-      "seq": 5859,
+      "seq": 5941,
       "phonetic": "/həˈraɪzən/",
       "meaningKo": "수평선",
       "meaningEn": "the line where earth and sky meet",
@@ -93702,7 +93702,7 @@
     {
       "language": "en",
       "word": "horror",
-      "seq": 5860,
+      "seq": 6115,
       "phonetic": "/ˈhɔːrər/",
       "meaningKo": "공포",
       "meaningEn": "a feeling of intense fear",
@@ -93718,7 +93718,7 @@
     {
       "language": "en",
       "word": "host",
-      "seq": 5861,
+      "seq": 6112,
       "phonetic": "/hoʊst/",
       "meaningKo": "주최자",
       "meaningEn": "a person who welcomes guests",
@@ -93734,7 +93734,7 @@
     {
       "language": "en",
       "word": "hostile",
-      "seq": 5862,
+      "seq": 5951,
       "phonetic": "/ˈhɑːstaɪl/",
       "meaningKo": "적대적인",
       "meaningEn": "unfriendly or aggressive",
@@ -93750,7 +93750,7 @@
     {
       "language": "en",
       "word": "household",
-      "seq": 5863,
+      "seq": 5998,
       "phonetic": "/ˈhaʊshoʊld/",
       "meaningKo": "가구, 한집 사람들",
       "meaningEn": "people living together in one home",
@@ -93766,7 +93766,7 @@
     {
       "language": "en",
       "word": "ideal",
-      "seq": 5864,
+      "seq": 5784,
       "phonetic": "/aɪˈdiːəl/",
       "meaningKo": "이상적인",
       "meaningEn": "perfect for a purpose",
@@ -93782,7 +93782,7 @@
     {
       "language": "en",
       "word": "identical",
-      "seq": 5865,
+      "seq": 5563,
       "phonetic": "/aɪˈdentɪkəl/",
       "meaningKo": "동일한",
       "meaningEn": "exactly the same",
@@ -93798,7 +93798,7 @@
     {
       "language": "en",
       "word": "illude",
-      "seq": 5866,
+      "seq": 5775,
       "phonetic": "/ɪˈluːd/",
       "meaningKo": "*착각하게 하다",
       "meaningEn": "to deceive or mislead",
@@ -93814,7 +93814,7 @@
     {
       "language": "en",
       "word": "imitate",
-      "seq": 5867,
+      "seq": 5765,
       "phonetic": "/ˈɪmɪteɪt/",
       "meaningKo": "모방하다",
       "meaningEn": "to copy someone's actions",
@@ -93830,7 +93830,7 @@
     {
       "language": "en",
       "word": "immigrate",
-      "seq": 5868,
+      "seq": 6231,
       "phonetic": "/ˈɪmɪɡreɪt/",
       "meaningKo": "이민 오다",
       "meaningEn": "to move to another country to live",
@@ -93846,7 +93846,7 @@
     {
       "language": "en",
       "word": "immune",
-      "seq": 5869,
+      "seq": 6039,
       "phonetic": "/ɪˈmjuːn/",
       "meaningKo": "면역이 있는",
       "meaningEn": "protected against disease",
@@ -93862,7 +93862,7 @@
     {
       "language": "en",
       "word": "impact",
-      "seq": 5870,
+      "seq": 6093,
       "phonetic": "/ˈɪmpækt/",
       "meaningKo": "영향",
       "meaningEn": "a strong effect",
@@ -93878,7 +93878,7 @@
     {
       "language": "en",
       "word": "implement",
-      "seq": 5871,
+      "seq": 6099,
       "phonetic": "/ˈɪmplɪment/",
       "meaningKo": "시행하다",
       "meaningEn": "to put a plan into action",
@@ -93894,7 +93894,7 @@
     {
       "language": "en",
       "word": "imply",
-      "seq": 5872,
+      "seq": 5929,
       "phonetic": "/ɪmˈplaɪ/",
       "meaningKo": "암시하다",
       "meaningEn": "to suggest without stating directly",
@@ -93910,7 +93910,7 @@
     {
       "language": "en",
       "word": "import",
-      "seq": 5873,
+      "seq": 5649,
       "phonetic": "/ɪmˈpɔːrt/",
       "meaningKo": "수입하다",
       "meaningEn": "to bring goods from abroad",
@@ -93926,7 +93926,7 @@
     {
       "language": "en",
       "word": "incident",
-      "seq": 5874,
+      "seq": 6159,
       "phonetic": "/ˈɪnsɪdənt/",
       "meaningKo": "사건",
       "meaningEn": "an event, often unusual",
@@ -93942,7 +93942,7 @@
     {
       "language": "en",
       "word": "index",
-      "seq": 5875,
+      "seq": 5810,
       "phonetic": "/ˈɪndeks/",
       "meaningKo": "색인",
       "meaningEn": "a list for finding information",
@@ -93958,7 +93958,7 @@
     {
       "language": "en",
       "word": "infant",
-      "seq": 5876,
+      "seq": 5742,
       "phonetic": "/ˈɪnfənt/",
       "meaningKo": "영아",
       "meaningEn": "a very young child",
@@ -93974,7 +93974,7 @@
     {
       "language": "en",
       "word": "infect",
-      "seq": 5877,
+      "seq": 5525,
       "phonetic": "/ɪnˈfekt/",
       "meaningKo": "감염시키다",
       "meaningEn": "to spread disease to",
@@ -93990,7 +93990,7 @@
     {
       "language": "en",
       "word": "ingredient",
-      "seq": 5878,
+      "seq": 6037,
       "phonetic": "/ɪnˈɡriːdiənt/",
       "meaningKo": "재료",
       "meaningEn": "one item in a recipe",
@@ -94006,7 +94006,7 @@
     {
       "language": "en",
       "word": "initial",
-      "seq": 5879,
+      "seq": 5761,
       "phonetic": "/ɪˈnɪʃəl/",
       "meaningKo": "처음의",
       "meaningEn": "happening at the start",
@@ -94022,7 +94022,7 @@
     {
       "language": "en",
       "word": "inn",
-      "seq": 5880,
+      "seq": 5609,
       "phonetic": "/ɪn/",
       "meaningKo": "여관",
       "meaningEn": "a small place to stay overnight",
@@ -94038,7 +94038,7 @@
     {
       "language": "en",
       "word": "innovate",
-      "seq": 5881,
+      "seq": 5772,
       "phonetic": "/ˈɪnəveɪt/",
       "meaningKo": "혁신하다",
       "meaningEn": "to introduce new methods",
@@ -94054,7 +94054,7 @@
     {
       "language": "en",
       "word": "input",
-      "seq": 5882,
+      "seq": 6119,
       "phonetic": "/ˈɪnpʊt/",
       "meaningKo": "의견, 입력",
       "meaningEn": "information or advice supplied",
@@ -94070,7 +94070,7 @@
     {
       "language": "en",
       "word": "insect",
-      "seq": 5883,
+      "seq": 5844,
       "phonetic": "/ˈɪnsekt/",
       "meaningKo": "곤충",
       "meaningEn": "a small animal with six legs",
@@ -94086,7 +94086,7 @@
     {
       "language": "en",
       "word": "insert",
-      "seq": 5884,
+      "seq": 5753,
       "phonetic": "/ɪnˈsɜːrt/",
       "meaningKo": "넣다",
       "meaningEn": "to put something inside",
@@ -94102,7 +94102,7 @@
     {
       "language": "en",
       "word": "inspire",
-      "seq": 5885,
+      "seq": 6118,
       "phonetic": "/ɪnˈspaɪr/",
       "meaningKo": "영감을 주다",
       "meaningEn": "to encourage creative action",
@@ -94118,7 +94118,7 @@
     {
       "language": "en",
       "word": "install",
-      "seq": 5886,
+      "seq": 5987,
       "phonetic": "/ɪnˈstɔːl/",
       "meaningKo": "설치하다",
       "meaningEn": "to set up equipment or software",
@@ -94134,7 +94134,7 @@
     {
       "language": "en",
       "word": "instinct",
-      "seq": 5887,
+      "seq": 6143,
       "phonetic": "/ˈɪnstɪŋkt/",
       "meaningKo": "본능",
       "meaningEn": "a natural way of responding",
@@ -94150,7 +94150,7 @@
     {
       "language": "en",
       "word": "institute",
-      "seq": 5888,
+      "seq": 5934,
       "phonetic": "/ˈɪnstɪtuːt/",
       "meaningKo": "연구소",
       "meaningEn": "an organization for study or research",
@@ -94166,7 +94166,7 @@
     {
       "language": "en",
       "word": "insult",
-      "seq": 5889,
+      "seq": 5585,
       "phonetic": "/ɪnˈsʌlt/",
       "meaningKo": "모욕하다",
       "meaningEn": "to speak disrespectfully to",
@@ -94182,7 +94182,7 @@
     {
       "language": "en",
       "word": "integrate",
-      "seq": 5890,
+      "seq": 6183,
       "phonetic": "/ˈɪntɪɡreɪt/",
       "meaningKo": "통합하다",
       "meaningEn": "to combine into a whole",
@@ -94198,7 +94198,7 @@
     {
       "language": "en",
       "word": "intelligent",
-      "seq": 5891,
+      "seq": 6151,
       "phonetic": "/ɪnˈtelɪdʒənt/",
       "meaningKo": "지능적인",
       "meaningEn": "able to learn and reason well",
@@ -94214,7 +94214,7 @@
     {
       "language": "en",
       "word": "interfere",
-      "seq": 5892,
+      "seq": 6042,
       "phonetic": "/ˌɪntərˈfɪr/",
       "meaningKo": "간섭하다",
       "meaningEn": "to get involved in an unwanted way",
@@ -94230,7 +94230,7 @@
     {
       "language": "en",
       "word": "interior",
-      "seq": 5893,
+      "seq": 5552,
       "phonetic": "/ɪnˈtɪriər/",
       "meaningKo": "내부",
       "meaningEn": "the inside of a place",
@@ -94246,7 +94246,7 @@
     {
       "language": "en",
       "word": "intermediate",
-      "seq": 5894,
+      "seq": 5579,
       "phonetic": "/ˌɪntərˈmiːdiət/",
       "meaningKo": "중간 단계의",
       "meaningEn": "between beginner and advanced",
@@ -94262,7 +94262,7 @@
     {
       "language": "en",
       "word": "interpret",
-      "seq": 5895,
+      "seq": 6075,
       "phonetic": "/ɪnˈtɜːrprət/",
       "meaningKo": "해석하다",
       "meaningEn": "to explain the meaning",
@@ -94278,7 +94278,7 @@
     {
       "language": "en",
       "word": "interval",
-      "seq": 5896,
+      "seq": 5958,
       "phonetic": "/ˈɪntərvəl/",
       "meaningKo": "간격",
       "meaningEn": "time between events",
@@ -94294,7 +94294,7 @@
     {
       "language": "en",
       "word": "intervene",
-      "seq": 5897,
+      "seq": 6107,
       "phonetic": "/ˌɪntərˈviːn/",
       "meaningKo": "개입하다",
       "meaningEn": "to step in to change events",
@@ -94310,7 +94310,7 @@
     {
       "language": "en",
       "word": "invade",
-      "seq": 5898,
+      "seq": 5798,
       "phonetic": "/ɪnˈveɪd/",
       "meaningKo": "침입하다",
       "meaningEn": "to enter by force",
@@ -94326,7 +94326,7 @@
     {
       "language": "en",
       "word": "irritate",
-      "seq": 5899,
+      "seq": 5955,
       "phonetic": "/ˈɪrɪteɪt/",
       "meaningKo": "짜증 나게 하다",
       "meaningEn": "to annoy or inflame",
@@ -94342,7 +94342,7 @@
     {
       "language": "en",
       "word": "isolate",
-      "seq": 5900,
+      "seq": 5625,
       "phonetic": "/ˈaɪsəleɪt/",
       "meaningKo": "고립시키다",
       "meaningEn": "to separate from others",
@@ -94358,7 +94358,7 @@
     {
       "language": "en",
       "word": "jail",
-      "seq": 5901,
+      "seq": 6124,
       "phonetic": "/dʒeɪl/",
       "meaningKo": "감옥",
       "meaningEn": "a place where people are held as punishment",
@@ -94374,7 +94374,7 @@
     {
       "language": "en",
       "word": "jar",
-      "seq": 5902,
+      "seq": 5868,
       "phonetic": "/dʒɑːr/",
       "meaningKo": "병, 단지",
       "meaningEn": "a container with a wide opening",
@@ -94390,7 +94390,7 @@
     {
       "language": "en",
       "word": "jog",
-      "seq": 5903,
+      "seq": 5611,
       "phonetic": "/dʒɑːɡ/",
       "meaningKo": "가볍게 뛰다",
       "meaningEn": "to run slowly for exercise",
@@ -94406,7 +94406,7 @@
     {
       "language": "en",
       "word": "joint",
-      "seq": 5904,
+      "seq": 6198,
       "phonetic": "/dʒɔɪnt/",
       "meaningKo": "공동의",
       "meaningEn": "shared by two or more parties",
@@ -94422,7 +94422,7 @@
     {
       "language": "en",
       "word": "journal",
-      "seq": 5905,
+      "seq": 5833,
       "phonetic": "/ˈdʒɜːrnəl/",
       "meaningKo": "일지, 학술지",
       "meaningEn": "a record or periodical",
@@ -94438,7 +94438,7 @@
     {
       "language": "en",
       "word": "jury",
-      "seq": 5906,
+      "seq": 5940,
       "phonetic": "/ˈdʒʊri/",
       "meaningKo": "배심원단",
       "meaningEn": "a group deciding a court case",
@@ -94454,7 +94454,7 @@
     {
       "language": "en",
       "word": "kit",
-      "seq": 5907,
+      "seq": 6034,
       "phonetic": "/kɪt/",
       "meaningKo": "도구 세트",
       "meaningEn": "a set of useful equipment",
@@ -94470,7 +94470,7 @@
     {
       "language": "en",
       "word": "knight",
-      "seq": 5908,
+      "seq": 5823,
       "phonetic": "/naɪt/",
       "meaningKo": "기사",
       "meaningEn": "a medieval soldier of high rank",
@@ -94486,7 +94486,7 @@
     {
       "language": "en",
       "word": "knot",
-      "seq": 5909,
+      "seq": 6095,
       "phonetic": "/nɑːt/",
       "meaningKo": "매듭",
       "meaningEn": "a tight fastening in rope",
@@ -94502,7 +94502,7 @@
     {
       "language": "en",
       "word": "landscape",
-      "seq": 5910,
+      "seq": 5558,
       "phonetic": "/ˈlændskeɪp/",
       "meaningKo": "풍경",
       "meaningEn": "the visible features of land",
@@ -94518,7 +94518,7 @@
     {
       "language": "en",
       "word": "lap",
-      "seq": 5911,
+      "seq": 6109,
       "phonetic": "/læp/",
       "meaningKo": "무릎 위, 한 바퀴",
       "meaningEn": "the top of seated legs or one circuit",
@@ -94534,7 +94534,7 @@
     {
       "language": "en",
       "word": "latter",
-      "seq": 5912,
+      "seq": 5691,
       "phonetic": "/ˈlætər/",
       "meaningKo": "후자의",
       "meaningEn": "the second of two mentioned",
@@ -94550,7 +94550,7 @@
     {
       "language": "en",
       "word": "launch",
-      "seq": 5913,
+      "seq": 6156,
       "phonetic": "/lɔːntʃ/",
       "meaningKo": "시작하다, 출시하다",
       "meaningEn": "to begin or introduce",
@@ -94566,7 +94566,7 @@
     {
       "language": "en",
       "word": "laundry",
-      "seq": 5914,
+      "seq": 5714,
       "phonetic": "/ˈlɔːndri/",
       "meaningKo": "세탁물",
       "meaningEn": "clothes that need washing",
@@ -94582,7 +94582,7 @@
     {
       "language": "en",
       "word": "leak",
-      "seq": 5915,
+      "seq": 5912,
       "phonetic": "/liːk/",
       "meaningKo": "새다",
       "meaningEn": "to let liquid escape",
@@ -94598,7 +94598,7 @@
     {
       "language": "en",
       "word": "leather",
-      "seq": 5916,
+      "seq": 5535,
       "phonetic": "/ˈleðər/",
       "meaningKo": "가죽",
       "meaningEn": "material made from animal hide",
@@ -94614,7 +94614,7 @@
     {
       "language": "en",
       "word": "lecture",
-      "seq": 5917,
+      "seq": 5835,
       "phonetic": "/ˈlektʃər/",
       "meaningKo": "강의",
       "meaningEn": "a formal educational talk",
@@ -94630,7 +94630,7 @@
     {
       "language": "en",
       "word": "legend",
-      "seq": 5918,
+      "seq": 5533,
       "phonetic": "/ˈledʒənd/",
       "meaningKo": "전설",
       "meaningEn": "an old traditional story",
@@ -94646,7 +94646,7 @@
     {
       "language": "en",
       "word": "leisure",
-      "seq": 5919,
+      "seq": 5847,
       "phonetic": "/ˈliːʒər/",
       "meaningKo": "여가",
       "meaningEn": "time free from work",
@@ -94662,7 +94662,7 @@
     {
       "language": "en",
       "word": "liberal",
-      "seq": 5920,
+      "seq": 6125,
       "phonetic": "/ˈlɪbərəl/",
       "meaningKo": "자유주의적인",
       "meaningEn": "open to new ideas or reform",
@@ -94678,7 +94678,7 @@
     {
       "language": "en",
       "word": "liberty",
-      "seq": 5921,
+      "seq": 5862,
       "phonetic": "/ˈlɪbərti/",
       "meaningKo": "자유",
       "meaningEn": "freedom to act or choose",
@@ -94694,7 +94694,7 @@
     {
       "language": "en",
       "word": "likewise",
-      "seq": 5922,
+      "seq": 6167,
       "phonetic": "/ˈlaɪkwaɪz/",
       "meaningKo": "마찬가지로",
       "meaningEn": "in the same way",
@@ -94710,7 +94710,7 @@
     {
       "language": "en",
       "word": "liquid",
-      "seq": 5923,
+      "seq": 5588,
       "phonetic": "/ˈlɪkwɪd/",
       "meaningKo": "액체",
       "meaningEn": "a substance that flows",
@@ -94726,7 +94726,7 @@
     {
       "language": "en",
       "word": "literature",
-      "seq": 5924,
+      "seq": 5942,
       "phonetic": "/ˈlɪtərətʃər/",
       "meaningKo": "문학",
       "meaningEn": "written artistic works",
@@ -94742,7 +94742,7 @@
     {
       "language": "en",
       "word": "logic",
-      "seq": 5925,
+      "seq": 5539,
       "phonetic": "/ˈlɑːdʒɪk/",
       "meaningKo": "논리",
       "meaningEn": "clear reasoning",
@@ -94758,7 +94758,7 @@
     {
       "language": "en",
       "word": "lone",
-      "seq": 5926,
+      "seq": 6223,
       "phonetic": "/loʊn/",
       "meaningKo": "홀로 있는",
       "meaningEn": "being the only one",
@@ -94774,7 +94774,7 @@
     {
       "language": "en",
       "word": "loyal",
-      "seq": 5927,
+      "seq": 6234,
       "phonetic": "/ˈlɔɪəl/",
       "meaningKo": "충성스러운",
       "meaningEn": "faithful to someone",
@@ -94790,7 +94790,7 @@
     {
       "language": "en",
       "word": "lump",
-      "seq": 5928,
+      "seq": 5988,
       "phonetic": "/lʌmp/",
       "meaningKo": "덩어리",
       "meaningEn": "a solid piece without a regular shape",
@@ -94806,7 +94806,7 @@
     {
       "language": "en",
       "word": "luxury",
-      "seq": 5929,
+      "seq": 5631,
       "phonetic": "/ˈlʌkʃəri/",
       "meaningKo": "사치, 호화",
       "meaningEn": "great comfort beyond necessity",
@@ -94822,7 +94822,7 @@
     {
       "language": "en",
       "word": "magnet",
-      "seq": 5930,
+      "seq": 5999,
       "phonetic": "/ˈmæɡnət/",
       "meaningKo": "자석",
       "meaningEn": "an object that attracts iron",
@@ -94838,7 +94838,7 @@
     {
       "language": "en",
       "word": "magnificent",
-      "seq": 5931,
+      "seq": 5975,
       "phonetic": "/mæɡˈnɪfɪsənt/",
       "meaningKo": "장엄한",
       "meaningEn": "very impressive and beautiful",
@@ -94854,7 +94854,7 @@
     {
       "language": "en",
       "word": "manipulate",
-      "seq": 5932,
+      "seq": 6079,
       "phonetic": "/məˈnɪpjəleɪt/",
       "meaningKo": "조작하다",
       "meaningEn": "to control skillfully or unfairly",
@@ -94870,7 +94870,7 @@
     {
       "language": "en",
       "word": "marine",
-      "seq": 5933,
+      "seq": 5767,
       "phonetic": "/məˈriːn/",
       "meaningKo": "해양의",
       "meaningEn": "relating to the sea",
@@ -94886,7 +94886,7 @@
     {
       "language": "en",
       "word": "mature",
-      "seq": 5934,
+      "seq": 6182,
       "phonetic": "/məˈtʃʊr/",
       "meaningKo": "성숙한",
       "meaningEn": "fully developed",
@@ -94902,7 +94902,7 @@
     {
       "language": "en",
       "word": "mayor",
-      "seq": 5935,
+      "seq": 5701,
       "phonetic": "/ˈmeɪər/",
       "meaningKo": "시장",
       "meaningEn": "the elected leader of a city",
@@ -94918,7 +94918,7 @@
     {
       "language": "en",
       "word": "meanwhile",
-      "seq": 5936,
+      "seq": 5913,
       "phonetic": "/ˈmiːnwaɪl/",
       "meaningKo": "그동안에",
       "meaningEn": "during the same time",
@@ -94934,7 +94934,7 @@
     {
       "language": "en",
       "word": "mechanic",
-      "seq": 5937,
+      "seq": 5918,
       "phonetic": "/məˈkænɪk/",
       "meaningKo": "정비공",
       "meaningEn": "a person who repairs machines",
@@ -94950,7 +94950,7 @@
     {
       "language": "en",
       "word": "mechanism",
-      "seq": 5938,
+      "seq": 5800,
       "phonetic": "/ˈmekənɪzəm/",
       "meaningKo": "작동 원리, 장치",
       "meaningEn": "a system of working parts",
@@ -94966,7 +94966,7 @@
     {
       "language": "en",
       "word": "medieval",
-      "seq": 5939,
+      "seq": 5866,
       "phonetic": "/ˌmiːdiˈiːvəl/",
       "meaningKo": "중세의",
       "meaningEn": "relating to the Middle Ages",
@@ -94982,7 +94982,7 @@
     {
       "language": "en",
       "word": "medium",
-      "seq": 5940,
+      "seq": 5871,
       "phonetic": "/ˈmiːdiəm/",
       "meaningKo": "매체",
       "meaningEn": "a means of communication or art",
@@ -94998,7 +94998,7 @@
     {
       "language": "en",
       "word": "merchant",
-      "seq": 5941,
+      "seq": 6080,
       "phonetic": "/ˈmɜːrtʃənt/",
       "meaningKo": "상인",
       "meaningEn": "a person who trades goods",
@@ -95014,7 +95014,7 @@
     {
       "language": "en",
       "word": "metropolitan",
-      "seq": 5942,
+      "seq": 5702,
       "phonetic": "/ˌmetrəˈpɑːlɪtən/",
       "meaningKo": "대도시의",
       "meaningEn": "relating to a large city",
@@ -95030,7 +95030,7 @@
     {
       "language": "en",
       "word": "microphone",
-      "seq": 5943,
+      "seq": 6114,
       "phonetic": "/ˈmaɪkrəfoʊn/",
       "meaningKo": "마이크",
       "meaningEn": "a device that picks up sound",
@@ -95046,7 +95046,7 @@
     {
       "language": "en",
       "word": "mild",
-      "seq": 5944,
+      "seq": 5692,
       "phonetic": "/maɪld/",
       "meaningKo": "온화한",
       "meaningEn": "not strong or severe",
@@ -95062,7 +95062,7 @@
     {
       "language": "en",
       "word": "million",
-      "seq": 5945,
+      "seq": 6264,
       "phonetic": "/ˈmɪljən/",
       "meaningKo": "백만",
       "meaningEn": "the number one thousand thousand",
@@ -95078,7 +95078,7 @@
     {
       "language": "en",
       "word": "mine",
-      "seq": 5946,
+      "seq": 6065,
       "phonetic": "/maɪn/",
       "meaningKo": "광산",
       "meaningEn": "a place where minerals are dug",
@@ -95094,7 +95094,7 @@
     {
       "language": "en",
       "word": "mineral",
-      "seq": 5947,
+      "seq": 5822,
       "phonetic": "/ˈmɪnərəl/",
       "meaningKo": "광물",
       "meaningEn": "a natural solid substance",
@@ -95110,7 +95110,7 @@
     {
       "language": "en",
       "word": "minimal",
-      "seq": 5948,
+      "seq": 6233,
       "phonetic": "/ˈmɪnɪməl/",
       "meaningKo": "최소한의",
       "meaningEn": "very small in amount",
@@ -95126,7 +95126,7 @@
     {
       "language": "en",
       "word": "minimum",
-      "seq": 5949,
+      "seq": 6218,
       "phonetic": "/ˈmɪnɪməm/",
       "meaningKo": "최소치",
       "meaningEn": "the smallest allowed amount",
@@ -95142,7 +95142,7 @@
     {
       "language": "en",
       "word": "ministry",
-      "seq": 5950,
+      "seq": 5834,
       "phonetic": "/ˈmɪnɪstri/",
       "meaningKo": "정부 부처",
       "meaningEn": "a government department",
@@ -95158,7 +95158,7 @@
     {
       "language": "en",
       "word": "miracle",
-      "seq": 5951,
+      "seq": 6200,
       "phonetic": "/ˈmɪrəkəl/",
       "meaningKo": "기적",
       "meaningEn": "an amazing unexpected event",
@@ -95174,7 +95174,7 @@
     {
       "language": "en",
       "word": "missile",
-      "seq": 5952,
+      "seq": 5824,
       "phonetic": "/ˈmɪsəl/",
       "meaningKo": "미사일",
       "meaningEn": "a weapon that flies toward a target",
@@ -95190,7 +95190,7 @@
     {
       "language": "en",
       "word": "mobile",
-      "seq": 5953,
+      "seq": 5607,
       "phonetic": "/ˈmoʊbəl/",
       "meaningKo": "이동할 수 있는",
       "meaningEn": "able to move easily",
@@ -95206,7 +95206,7 @@
     {
       "language": "en",
       "word": "mode",
-      "seq": 5954,
+      "seq": 5759,
       "phonetic": "/moʊd/",
       "meaningKo": "방식, 모드",
       "meaningEn": "a particular way of operating",
@@ -95222,7 +95222,7 @@
     {
       "language": "en",
       "word": "modify",
-      "seq": 5955,
+      "seq": 5924,
       "phonetic": "/ˈmɑːdɪfaɪ/",
       "meaningKo": "수정하다",
       "meaningEn": "to change something partly",
@@ -95238,7 +95238,7 @@
     {
       "language": "en",
       "word": "moderate",
-      "seq": 5956,
+      "seq": 5677,
       "phonetic": "/ˈmɑːdərət/",
       "meaningKo": "적당한",
       "meaningEn": "neither extreme nor very small",
@@ -95254,7 +95254,7 @@
     {
       "language": "en",
       "word": "modest",
-      "seq": 5957,
+      "seq": 6202,
       "phonetic": "/ˈmɑːdɪst/",
       "meaningKo": "겸손한",
       "meaningEn": "not boastful",
@@ -95270,7 +95270,7 @@
     {
       "language": "en",
       "word": "molecule",
-      "seq": 5958,
+      "seq": 6007,
       "phonetic": "/ˈmɑːləkjuːl/",
       "meaningKo": "분자",
       "meaningEn": "a small group of bonded atoms",
@@ -95286,7 +95286,7 @@
     {
       "language": "en",
       "word": "monster",
-      "seq": 5959,
+      "seq": 6084,
       "phonetic": "/ˈmɑːnstər/",
       "meaningKo": "괴물",
       "meaningEn": "a frightening imaginary creature",
@@ -95302,7 +95302,7 @@
     {
       "language": "en",
       "word": "monument",
-      "seq": 5960,
+      "seq": 5771,
       "phonetic": "/ˈmɑːnjəmənt/",
       "meaningKo": "기념물",
       "meaningEn": "a structure honoring someone or something",
@@ -95318,7 +95318,7 @@
     {
       "language": "en",
       "word": "motive",
-      "seq": 5961,
+      "seq": 5760,
       "phonetic": "/ˈmoʊtɪv/",
       "meaningKo": "동기",
       "meaningEn": "a reason for doing something",
@@ -95334,7 +95334,7 @@
     {
       "language": "en",
       "word": "multiple",
-      "seq": 5962,
+      "seq": 6225,
       "phonetic": "/ˈmʌltɪpəl/",
       "meaningKo": "여러 개의",
       "meaningEn": "more than one",
@@ -95350,7 +95350,7 @@
     {
       "language": "en",
       "word": "murder",
-      "seq": 5963,
+      "seq": 5718,
       "phonetic": "/ˈmɜːrdər/",
       "meaningKo": "살인",
       "meaningEn": "the unlawful killing of a person",
@@ -95366,7 +95366,7 @@
     {
       "language": "en",
       "word": "mutual",
-      "seq": 5964,
+      "seq": 5723,
       "phonetic": "/ˈmjuːtʃuəl/",
       "meaningKo": "상호의",
       "meaningEn": "shared by both sides",
@@ -95382,7 +95382,7 @@
     {
       "language": "en",
       "word": "myth",
-      "seq": 5965,
+      "seq": 5896,
       "phonetic": "/mɪθ/",
       "meaningKo": "신화",
       "meaningEn": "an old story explaining beliefs",
@@ -95398,7 +95398,7 @@
     {
       "language": "en",
       "word": "naked",
-      "seq": 5966,
+      "seq": 5548,
       "phonetic": "/ˈneɪkɪd/",
       "meaningKo": "벌거벗은",
       "meaningEn": "without clothing or covering",
@@ -95414,7 +95414,7 @@
     {
       "language": "en",
       "word": "narrate",
-      "seq": 5967,
+      "seq": 5626,
       "phonetic": "/ˈnæreɪt/",
       "meaningKo": "이야기하다",
       "meaningEn": "to tell a story aloud",
@@ -95430,7 +95430,7 @@
     {
       "language": "en",
       "word": "nasty",
-      "seq": 5968,
+      "seq": 5679,
       "phonetic": "/ˈnæsti/",
       "meaningKo": "불쾌한",
       "meaningEn": "very unpleasant",
@@ -95446,7 +95446,7 @@
     {
       "language": "en",
       "word": "needle",
-      "seq": 5969,
+      "seq": 5594,
       "phonetic": "/ˈniːdəl/",
       "meaningKo": "바늘",
       "meaningEn": "a thin pointed tool for sewing",
@@ -95462,7 +95462,7 @@
     {
       "language": "en",
       "word": "neglect",
-      "seq": 5970,
+      "seq": 6036,
       "phonetic": "/nɪˈɡlekt/",
       "meaningKo": "소홀히 하다",
       "meaningEn": "to fail to care for",
@@ -95478,7 +95478,7 @@
     {
       "language": "en",
       "word": "negotiate",
-      "seq": 5971,
+      "seq": 5639,
       "phonetic": "/nɪˈɡoʊʃieɪt/",
       "meaningKo": "협상하다",
       "meaningEn": "to discuss terms to reach agreement",
@@ -95494,7 +95494,7 @@
     {
       "language": "en",
       "word": "nephew",
-      "seq": 5972,
+      "seq": 5982,
       "phonetic": "/ˈnefjuː/",
       "meaningKo": "조카",
       "meaningEn": "a brother's or sister's son",
@@ -95510,7 +95510,7 @@
     {
       "language": "en",
       "word": "network",
-      "seq": 5973,
+      "seq": 5853,
       "phonetic": "/ˈnetwɜːrk/",
       "meaningKo": "망, 네트워크",
       "meaningEn": "a connected system",
@@ -95526,7 +95526,7 @@
     {
       "language": "en",
       "word": "neutral",
-      "seq": 5974,
+      "seq": 6005,
       "phonetic": "/ˈnuːtrəl/",
       "meaningKo": "중립적인",
       "meaningEn": "not taking either side",
@@ -95542,7 +95542,7 @@
     {
       "language": "en",
       "word": "nightmare",
-      "seq": 5975,
+      "seq": 5991,
       "phonetic": "/ˈnaɪtmer/",
       "meaningKo": "악몽",
       "meaningEn": "a frightening dream",
@@ -95558,7 +95558,7 @@
     {
       "language": "en",
       "word": "noble",
-      "seq": 5976,
+      "seq": 6122,
       "phonetic": "/ˈnoʊbəl/",
       "meaningKo": "고귀한",
       "meaningEn": "showing high moral qualities",
@@ -95574,7 +95574,7 @@
     {
       "language": "en",
       "word": "nominate",
-      "seq": 5977,
+      "seq": 5773,
       "phonetic": "/ˈnɑːmɪneɪt/",
       "meaningKo": "지명하다",
       "meaningEn": "to formally suggest someone for a role",
@@ -95590,7 +95590,7 @@
     {
       "language": "en",
       "word": "novel",
-      "seq": 5978,
+      "seq": 6060,
       "phonetic": "/ˈnɑːvəl/",
       "meaningKo": "소설",
       "meaningEn": "a long fictional book",
@@ -95606,7 +95606,7 @@
     {
       "language": "en",
       "word": "nuclear",
-      "seq": 5979,
+      "seq": 6211,
       "phonetic": "/ˈnuːkliər/",
       "meaningKo": "핵의",
       "meaningEn": "relating to atomic energy",
@@ -95622,7 +95622,7 @@
     {
       "language": "en",
       "word": "numerous",
-      "seq": 5980,
+      "seq": 6174,
       "phonetic": "/ˈnuːmərəs/",
       "meaningKo": "수많은",
       "meaningEn": "very many",
@@ -95638,7 +95638,7 @@
     {
       "language": "en",
       "word": "obey",
-      "seq": 5981,
+      "seq": 5726,
       "phonetic": "/oʊˈbeɪ/",
       "meaningKo": "따르다, 복종하다",
       "meaningEn": "to follow a rule or order",
@@ -95654,7 +95654,7 @@
     {
       "language": "en",
       "word": "obtain",
-      "seq": 5982,
+      "seq": 6126,
       "phonetic": "/əbˈteɪn/",
       "meaningKo": "얻다",
       "meaningEn": "to get something",
@@ -95670,7 +95670,7 @@
     {
       "language": "en",
       "word": "occupy",
-      "seq": 5983,
+      "seq": 6246,
       "phonetic": "/ˈɑːkjəpaɪ/",
       "meaningKo": "차지하다",
       "meaningEn": "to take up space or time",
@@ -95686,7 +95686,7 @@
     {
       "language": "en",
       "word": "offend",
-      "seq": 5984,
+      "seq": 5730,
       "phonetic": "/əˈfend/",
       "meaningKo": "기분 상하게 하다",
       "meaningEn": "to upset someone by words or actions",
@@ -95702,7 +95702,7 @@
     {
       "language": "en",
       "word": "opportune",
-      "seq": 5985,
+      "seq": 5922,
       "phonetic": "/ˌɑːpərˈtuːn/",
       "meaningKo": "적절한 시기의",
       "meaningEn": "happening at a helpful time",
@@ -95718,7 +95718,7 @@
     {
       "language": "en",
       "word": "opt",
-      "seq": 5986,
+      "seq": 5523,
       "phonetic": "/ɑːpt/",
       "meaningKo": "선택하다",
       "meaningEn": "to choose one option",
@@ -95734,7 +95734,7 @@
     {
       "language": "en",
       "word": "optimist",
-      "seq": 5987,
+      "seq": 5758,
       "phonetic": "/ˈɑːptɪmɪst/",
       "meaningKo": "낙관주의자",
       "meaningEn": "a person expecting good outcomes",
@@ -95750,7 +95750,7 @@
     {
       "language": "en",
       "word": "oral",
-      "seq": 5988,
+      "seq": 5687,
       "phonetic": "/ˈɔːrəl/",
       "meaningKo": "구두의",
       "meaningEn": "spoken rather than written",
@@ -95766,7 +95766,7 @@
     {
       "language": "en",
       "word": "orchestra",
-      "seq": 5989,
+      "seq": 6271,
       "phonetic": "/ˈɔːrkɪstrə/",
       "meaningKo": "관현악단",
       "meaningEn": "a large group of musicians",
@@ -95782,7 +95782,7 @@
     {
       "language": "en",
       "word": "organ",
-      "seq": 5990,
+      "seq": 6224,
       "phonetic": "/ˈɔːrɡən/",
       "meaningKo": "장기",
       "meaningEn": "a body part with a particular job",
@@ -95798,7 +95798,7 @@
     {
       "language": "en",
       "word": "origin",
-      "seq": 5991,
+      "seq": 6046,
       "phonetic": "/ˈɔːrɪdʒɪn/",
       "meaningKo": "기원",
       "meaningEn": "the point where something began",
@@ -95814,7 +95814,7 @@
     {
       "language": "en",
       "word": "outcome",
-      "seq": 5992,
+      "seq": 6186,
       "phonetic": "/ˈaʊtkʌm/",
       "meaningKo": "결과",
       "meaningEn": "what happens in the end",
@@ -95830,7 +95830,7 @@
     {
       "language": "en",
       "word": "outline",
-      "seq": 5993,
+      "seq": 5635,
       "phonetic": "/ˈaʊtlaɪn/",
       "meaningKo": "개요",
       "meaningEn": "a short plan of main points",
@@ -95846,7 +95846,7 @@
     {
       "language": "en",
       "word": "output",
-      "seq": 5994,
+      "seq": 6031,
       "phonetic": "/ˈaʊtpʊt/",
       "meaningKo": "산출량",
       "meaningEn": "the amount produced",
@@ -95862,7 +95862,7 @@
     {
       "language": "en",
       "word": "outrage",
-      "seq": 5995,
+      "seq": 5867,
       "phonetic": "/ˈaʊtreɪdʒ/",
       "meaningKo": "격분",
       "meaningEn": "strong public anger",
@@ -95878,7 +95878,7 @@
     {
       "language": "en",
       "word": "outstanding",
-      "seq": 5996,
+      "seq": 6158,
       "phonetic": "/aʊtˈstændɪŋ/",
       "meaningKo": "뛰어난",
       "meaningEn": "exceptionally good",
@@ -95894,7 +95894,7 @@
     {
       "language": "en",
       "word": "overlook",
-      "seq": 5997,
+      "seq": 5976,
       "phonetic": "/ˌoʊvərˈlʊk/",
       "meaningKo": "간과하다",
       "meaningEn": "to fail to notice",
@@ -95910,7 +95910,7 @@
     {
       "language": "en",
       "word": "overnight",
-      "seq": 5998,
+      "seq": 6070,
       "phonetic": "/ˌoʊvərˈnaɪt/",
       "meaningKo": "하룻밤 사이에",
       "meaningEn": "during one night",
@@ -95926,7 +95926,7 @@
     {
       "language": "en",
       "word": "oversea",
-      "seq": 5999,
+      "seq": 6043,
       "phonetic": "/ˌoʊvərˈsiː/",
       "meaningKo": "*해외의",
       "meaningEn": "located across the sea",
@@ -95942,7 +95942,7 @@
     {
       "language": "en",
       "word": "overwhelm",
-      "seq": 6000,
+      "seq": 5682,
       "phonetic": "/ˌoʊvərˈwelm/",
       "meaningKo": "압도하다",
       "meaningEn": "to affect too strongly",
@@ -95958,7 +95958,7 @@
     {
       "language": "en",
       "word": "owe",
-      "seq": 6001,
+      "seq": 5556,
       "phonetic": "/oʊ/",
       "meaningKo": "빚지다",
       "meaningEn": "to need to pay or give",
@@ -95974,7 +95974,7 @@
     {
       "language": "en",
       "word": "pace",
-      "seq": 6002,
+      "seq": 6230,
       "phonetic": "/peɪs/",
       "meaningKo": "속도",
       "meaningEn": "the speed of movement or progress",
@@ -95990,7 +95990,7 @@
     {
       "language": "en",
       "word": "pad",
-      "seq": 6003,
+      "seq": 5917,
       "phonetic": "/pæd/",
       "meaningKo": "메모지, 패드",
       "meaningEn": "a set of sheets for writing",
@@ -96006,7 +96006,7 @@
     {
       "language": "en",
       "word": "pale",
-      "seq": 6004,
+      "seq": 6208,
       "phonetic": "/peɪl/",
       "meaningKo": "창백한",
       "meaningEn": "light in color",
@@ -96022,7 +96022,7 @@
     {
       "language": "en",
       "word": "palm",
-      "seq": 6005,
+      "seq": 6266,
       "phonetic": "/pɑːm/",
       "meaningKo": "손바닥",
       "meaningEn": "the inner surface of the hand",
@@ -96038,7 +96038,7 @@
     {
       "language": "en",
       "word": "panel",
-      "seq": 6006,
+      "seq": 5856,
       "phonetic": "/ˈpænəl/",
       "meaningKo": "토론단, 패널",
       "meaningEn": "a group chosen to discuss a topic",
@@ -96054,7 +96054,7 @@
     {
       "language": "en",
       "word": "parallel",
-      "seq": 6007,
+      "seq": 6227,
       "phonetic": "/ˈpærəlel/",
       "meaningKo": "평행한",
       "meaningEn": "side by side without meeting",
@@ -96070,7 +96070,7 @@
     {
       "language": "en",
       "word": "parliament",
-      "seq": 6008,
+      "seq": 5623,
       "phonetic": "/ˈpɑːrləmənt/",
       "meaningKo": "의회",
       "meaningEn": "a country's lawmaking assembly",
@@ -96086,7 +96086,7 @@
     {
       "language": "en",
       "word": "participate",
-      "seq": 6009,
+      "seq": 5551,
       "phonetic": "/pɑːrˈtɪsɪpeɪt/",
       "meaningKo": "참여하다",
       "meaningEn": "to take part",
@@ -96102,7 +96102,7 @@
     {
       "language": "en",
       "word": "passage",
-      "seq": 6010,
+      "seq": 5841,
       "phonetic": "/ˈpæsɪdʒ/",
       "meaningKo": "구절, 통로",
       "meaningEn": "a section of text",
@@ -96118,7 +96118,7 @@
     {
       "language": "en",
       "word": "passenger",
-      "seq": 6011,
+      "seq": 6194,
       "phonetic": "/ˈpæsɪndʒər/",
       "meaningKo": "승객",
       "meaningEn": "a person traveling in a vehicle",
@@ -96134,7 +96134,7 @@
     {
       "language": "en",
       "word": "passion",
-      "seq": 6012,
+      "seq": 6057,
       "phonetic": "/ˈpæʃən/",
       "meaningKo": "열정",
       "meaningEn": "strong enthusiasm",
@@ -96150,7 +96150,7 @@
     {
       "language": "en",
       "word": "passport",
-      "seq": 6013,
+      "seq": 5817,
       "phonetic": "/ˈpæspɔːrt/",
       "meaningKo": "여권",
       "meaningEn": "a document for international travel",
@@ -96166,7 +96166,7 @@
     {
       "language": "en",
       "word": "pat",
-      "seq": 6014,
+      "seq": 5743,
       "phonetic": "/pæt/",
       "meaningKo": "가볍게 두드리다",
       "meaningEn": "to touch lightly with the hand",
@@ -96182,7 +96182,7 @@
     {
       "language": "en",
       "word": "patch",
-      "seq": 6015,
+      "seq": 5813,
       "phonetic": "/pætʃ/",
       "meaningKo": "작은 조각, 부분",
       "meaningEn": "a small area of material or land",
@@ -96198,7 +96198,7 @@
     {
       "language": "en",
       "word": "patent",
-      "seq": 6016,
+      "seq": 6157,
       "phonetic": "/ˈpætənt/",
       "meaningKo": "특허",
       "meaningEn": "a legal right over an invention",
@@ -96214,7 +96214,7 @@
     {
       "language": "en",
       "word": "peak",
-      "seq": 6017,
+      "seq": 5849,
       "phonetic": "/piːk/",
       "meaningKo": "정상",
       "meaningEn": "the highest point",
@@ -96230,7 +96230,7 @@
     {
       "language": "en",
       "word": "peasant",
-      "seq": 6018,
+      "seq": 5899,
       "phonetic": "/ˈpezənt/",
       "meaningKo": "소작농",
       "meaningEn": "a poor farmer in a historical society",
@@ -96246,7 +96246,7 @@
     {
       "language": "en",
       "word": "peel",
-      "seq": 6019,
+      "seq": 5809,
       "phonetic": "/piːl/",
       "meaningKo": "껍질을 벗기다",
       "meaningEn": "to remove an outer skin",
@@ -96262,7 +96262,7 @@
     {
       "language": "en",
       "word": "peer",
-      "seq": 6020,
+      "seq": 6032,
       "phonetic": "/pɪr/",
       "meaningKo": "또래",
       "meaningEn": "a person of the same age or status",
@@ -96278,7 +96278,7 @@
     {
       "language": "en",
       "word": "penalty",
-      "seq": 6021,
+      "seq": 5814,
       "phonetic": "/ˈpenəlti/",
       "meaningKo": "벌칙",
       "meaningEn": "a punishment for breaking a rule",
@@ -96294,7 +96294,7 @@
     {
       "language": "en",
       "word": "permanent",
-      "seq": 6022,
+      "seq": 6245,
       "phonetic": "/ˈpɜːrmənənt/",
       "meaningKo": "영구적인",
       "meaningEn": "lasting for a long time without change",
@@ -96310,7 +96310,7 @@
     {
       "language": "en",
       "word": "permit",
-      "seq": 6023,
+      "seq": 5528,
       "phonetic": "/pərˈmɪt/",
       "meaningKo": "허용하다",
       "meaningEn": "to allow something",
@@ -96326,7 +96326,7 @@
     {
       "language": "en",
       "word": "persist",
-      "seq": 6024,
+      "seq": 5953,
       "phonetic": "/pərˈsɪst/",
       "meaningKo": "계속하다",
       "meaningEn": "to continue despite difficulty",
@@ -96342,7 +96342,7 @@
     {
       "language": "en",
       "word": "perspective",
-      "seq": 6025,
+      "seq": 6056,
       "phonetic": "/pərˈspektɪv/",
       "meaningKo": "관점",
       "meaningEn": "a way of seeing something",
@@ -96358,7 +96358,7 @@
     {
       "language": "en",
       "word": "persuade",
-      "seq": 6026,
+      "seq": 5591,
       "phonetic": "/pərˈsweɪd/",
       "meaningKo": "설득하다",
       "meaningEn": "to convince someone",
@@ -96374,7 +96374,7 @@
     {
       "language": "en",
       "word": "phase",
-      "seq": 6027,
+      "seq": 5554,
       "phonetic": "/feɪz/",
       "meaningKo": "단계",
       "meaningEn": "a stage in a process",
@@ -96390,7 +96390,7 @@
     {
       "language": "en",
       "word": "philosophy",
-      "seq": 6028,
+      "seq": 5768,
       "phonetic": "/fəˈlɑːsəfi/",
       "meaningKo": "철학",
       "meaningEn": "the study of basic questions about life",
@@ -96406,7 +96406,7 @@
     {
       "language": "en",
       "word": "phrase",
-      "seq": 6029,
+      "seq": 6038,
       "phonetic": "/freɪz/",
       "meaningKo": "구, 표현",
       "meaningEn": "a short group of words",
@@ -96422,7 +96422,7 @@
     {
       "language": "en",
       "word": "physics",
-      "seq": 6030,
+      "seq": 5983,
       "phonetic": "/ˈfɪzɪks/",
       "meaningKo": "물리학",
       "meaningEn": "the study of matter and energy",
@@ -96438,7 +96438,7 @@
     {
       "language": "en",
       "word": "pill",
-      "seq": 6031,
+      "seq": 6024,
       "phonetic": "/pɪl/",
       "meaningKo": "알약",
       "meaningEn": "a small piece of medicine",
@@ -96454,7 +96454,7 @@
     {
       "language": "en",
       "word": "pioneer",
-      "seq": 6032,
+      "seq": 5859,
       "phonetic": "/ˌpaɪəˈnɪr/",
       "meaningKo": "개척자",
       "meaningEn": "a person who begins new work",
@@ -96470,7 +96470,7 @@
     {
       "language": "en",
       "word": "platform",
-      "seq": 6033,
+      "seq": 6187,
       "phonetic": "/ˈplætfɔːrm/",
       "meaningKo": "승강장",
       "meaningEn": "a raised place beside train tracks",
@@ -96486,7 +96486,7 @@
     {
       "language": "en",
       "word": "plot",
-      "seq": 6034,
+      "seq": 6009,
       "phonetic": "/plɑːt/",
       "meaningKo": "줄거리",
       "meaningEn": "the main events of a story",
@@ -96502,7 +96502,7 @@
     {
       "language": "en",
       "word": "poll",
-      "seq": 6035,
+      "seq": 5557,
       "phonetic": "/poʊl/",
       "meaningKo": "여론 조사",
       "meaningEn": "a survey of opinions",
@@ -96518,7 +96518,7 @@
     {
       "language": "en",
       "word": "pond",
-      "seq": 6036,
+      "seq": 5698,
       "phonetic": "/pɑːnd/",
       "meaningKo": "연못",
       "meaningEn": "a small area of still water",
@@ -96534,7 +96534,7 @@
     {
       "language": "en",
       "word": "populate",
-      "seq": 6037,
+      "seq": 6161,
       "phonetic": "/ˈpɑːpjəleɪt/",
       "meaningKo": "사람이 살다, 채우다",
       "meaningEn": "to live in or fill an area",
@@ -96550,7 +96550,7 @@
     {
       "language": "en",
       "word": "portion",
-      "seq": 6038,
+      "seq": 5882,
       "phonetic": "/ˈpɔːrʃən/",
       "meaningKo": "부분, 1인분",
       "meaningEn": "a part of a whole",
@@ -96566,7 +96566,7 @@
     {
       "language": "en",
       "word": "portrait",
-      "seq": 6039,
+      "seq": 5776,
       "phonetic": "/ˈpɔːrtrət/",
       "meaningKo": "초상화",
       "meaningEn": "an image of a person",
@@ -96582,7 +96582,7 @@
     {
       "language": "en",
       "word": "praise",
-      "seq": 6040,
+      "seq": 6081,
       "phonetic": "/preɪz/",
       "meaningKo": "칭찬하다",
       "meaningEn": "to express approval",
@@ -96598,7 +96598,7 @@
     {
       "language": "en",
       "word": "precise",
-      "seq": 6041,
+      "seq": 5923,
       "phonetic": "/prɪˈsaɪs/",
       "meaningKo": "정확한",
       "meaningEn": "exact and clear",
@@ -96614,7 +96614,7 @@
     {
       "language": "en",
       "word": "predator",
-      "seq": 6042,
+      "seq": 5568,
       "phonetic": "/ˈpredətər/",
       "meaningKo": "포식자",
       "meaningEn": "an animal that hunts others",
@@ -96630,7 +96630,7 @@
     {
       "language": "en",
       "word": "predict",
-      "seq": 6043,
+      "seq": 5969,
       "phonetic": "/prɪˈdɪkt/",
       "meaningKo": "예측하다",
       "meaningEn": "to say what may happen",
@@ -96646,7 +96646,7 @@
     {
       "language": "en",
       "word": "prejudice",
-      "seq": 6044,
+      "seq": 6072,
       "phonetic": "/ˈpredʒədɪs/",
       "meaningKo": "편견",
       "meaningEn": "an unfair opinion formed early",
@@ -96662,7 +96662,7 @@
     {
       "language": "en",
       "word": "premium",
-      "seq": 6045,
+      "seq": 5732,
       "phonetic": "/ˈpriːmiəm/",
       "meaningKo": "보험료, 추가금",
       "meaningEn": "an extra amount paid for a service",
@@ -96678,7 +96678,7 @@
     {
       "language": "en",
       "word": "preserve",
-      "seq": 6046,
+      "seq": 5889,
       "phonetic": "/prɪˈzɜːrv/",
       "meaningKo": "보존하다",
       "meaningEn": "to keep safe from harm",
@@ -96694,7 +96694,7 @@
     {
       "language": "en",
       "word": "prey",
-      "seq": 6047,
+      "seq": 5712,
       "phonetic": "/preɪ/",
       "meaningKo": "먹잇감",
       "meaningEn": "an animal hunted by another",
@@ -96710,7 +96710,7 @@
     {
       "language": "en",
       "word": "primitive",
-      "seq": 6048,
+      "seq": 5600,
       "phonetic": "/ˈprɪmɪtɪv/",
       "meaningKo": "원시적인",
       "meaningEn": "from an early stage of development",
@@ -96726,7 +96726,7 @@
     {
       "language": "en",
       "word": "principal",
-      "seq": 6049,
+      "seq": 5898,
       "phonetic": "/ˈprɪnsəpəl/",
       "meaningKo": "교장",
       "meaningEn": "the head of a school",
@@ -96742,7 +96742,7 @@
     {
       "language": "en",
       "word": "prior",
-      "seq": 6050,
+      "seq": 6102,
       "phonetic": "/ˈpraɪər/",
       "meaningKo": "이전의",
       "meaningEn": "happening before",
@@ -96758,7 +96758,7 @@
     {
       "language": "en",
       "word": "privilege",
-      "seq": 6051,
+      "seq": 5880,
       "phonetic": "/ˈprɪvəlɪdʒ/",
       "meaningKo": "특권",
       "meaningEn": "a special advantage or right",
@@ -96774,7 +96774,7 @@
     {
       "language": "en",
       "word": "professor",
-      "seq": 6052,
+      "seq": 5659,
       "phonetic": "/prəˈfesər/",
       "meaningKo": "교수",
       "meaningEn": "a senior university teacher",
@@ -96790,7 +96790,7 @@
     {
       "language": "en",
       "word": "profile",
-      "seq": 6053,
+      "seq": 5786,
       "phonetic": "/ˈproʊfaɪl/",
       "meaningKo": "소개, 프로필",
       "meaningEn": "a brief description of a person",
@@ -96806,7 +96806,7 @@
     {
       "language": "en",
       "word": "profound",
-      "seq": 6054,
+      "seq": 6035,
       "phonetic": "/prəˈfaʊnd/",
       "meaningKo": "깊은",
       "meaningEn": "very great or deep",
@@ -96822,7 +96822,7 @@
     {
       "language": "en",
       "word": "prohibit",
-      "seq": 6055,
+      "seq": 5686,
       "phonetic": "/proʊˈhɪbɪt/",
       "meaningKo": "금지하다",
       "meaningEn": "to forbid by a rule",
@@ -96838,7 +96838,7 @@
     {
       "language": "en",
       "word": "prompt",
-      "seq": 6056,
+      "seq": 5876,
       "phonetic": "/prɑːmpt/",
       "meaningKo": "촉발하다",
       "meaningEn": "to cause someone to act",
@@ -96854,7 +96854,7 @@
     {
       "language": "en",
       "word": "proof",
-      "seq": 6057,
+      "seq": 5693,
       "phonetic": "/pruːf/",
       "meaningKo": "증거",
       "meaningEn": "evidence that something is true",
@@ -96870,7 +96870,7 @@
     {
       "language": "en",
       "word": "proportion",
-      "seq": 6058,
+      "seq": 5747,
       "phonetic": "/prəˈpɔːrʃən/",
       "meaningKo": "비율",
       "meaningEn": "a part compared with the whole",
@@ -96886,7 +96886,7 @@
     {
       "language": "en",
       "word": "protein",
-      "seq": 6059,
+      "seq": 5993,
       "phonetic": "/ˈproʊtiːn/",
       "meaningKo": "단백질",
       "meaningEn": "a nutrient needed by the body",
@@ -96902,7 +96902,7 @@
     {
       "language": "en",
       "word": "province",
-      "seq": 6060,
+      "seq": 6108,
       "phonetic": "/ˈprɑːvɪns/",
       "meaningKo": "주, 지방",
       "meaningEn": "a region governed as part of a country",
@@ -96918,7 +96918,7 @@
     {
       "language": "en",
       "word": "psychology",
-      "seq": 6061,
+      "seq": 5570,
       "phonetic": "/saɪˈkɑːlədʒi/",
       "meaningKo": "심리학",
       "meaningEn": "the study of mind and behavior",
@@ -96934,7 +96934,7 @@
     {
       "language": "en",
       "word": "publish",
-      "seq": 6062,
+      "seq": 6204,
       "phonetic": "/ˈpʌblɪʃ/",
       "meaningKo": "출판하다",
       "meaningEn": "to make writing available to the public",
@@ -96950,7 +96950,7 @@
     {
       "language": "en",
       "word": "pupil",
-      "seq": 6063,
+      "seq": 5521,
       "phonetic": "/ˈpjuːpəl/",
       "meaningKo": "학생",
       "meaningEn": "a child attending school",
@@ -96966,7 +96966,7 @@
     {
       "language": "en",
       "word": "quantity",
-      "seq": 6064,
+      "seq": 5846,
       "phonetic": "/ˈkwɑːntəti/",
       "meaningKo": "양",
       "meaningEn": "an amount of something",
@@ -96982,7 +96982,7 @@
     {
       "language": "en",
       "word": "questionnaire",
-      "seq": 6065,
+      "seq": 5684,
       "phonetic": "/ˌkwestʃəˈner/",
       "meaningKo": "설문지",
       "meaningEn": "a written set of questions",
@@ -96998,7 +96998,7 @@
     {
       "language": "en",
       "word": "rally",
-      "seq": 6066,
+      "seq": 5933,
       "phonetic": "/ˈræli/",
       "meaningKo": "집회",
       "meaningEn": "a large public gathering",
@@ -97014,7 +97014,7 @@
     {
       "language": "en",
       "word": "random",
-      "seq": 6067,
+      "seq": 5707,
       "phonetic": "/ˈrændəm/",
       "meaningKo": "무작위의",
       "meaningEn": "chosen without a pattern",
@@ -97030,7 +97030,7 @@
     {
       "language": "en",
       "word": "rank",
-      "seq": 6068,
+      "seq": 6089,
       "phonetic": "/ræŋk/",
       "meaningKo": "순위",
       "meaningEn": "a position in an ordered list",
@@ -97046,7 +97046,7 @@
     {
       "language": "en",
       "word": "rational",
-      "seq": 6069,
+      "seq": 5869,
       "phonetic": "/ˈræʃənəl/",
       "meaningKo": "합리적인",
       "meaningEn": "based on reason",
@@ -97062,7 +97062,7 @@
     {
       "language": "en",
       "word": "raw",
-      "seq": 6070,
+      "seq": 6169,
       "phonetic": "/rɔː/",
       "meaningKo": "날것의",
       "meaningEn": "not cooked or processed",
@@ -97078,7 +97078,7 @@
     {
       "language": "en",
       "word": "rear",
-      "seq": 6071,
+      "seq": 5804,
       "phonetic": "/rɪr/",
       "meaningKo": "뒤쪽",
       "meaningEn": "the back part",
@@ -97094,7 +97094,7 @@
     {
       "language": "en",
       "word": "rebel",
-      "seq": 6072,
+      "seq": 5864,
       "phonetic": "/ˈrebəl/",
       "meaningKo": "반란자",
       "meaningEn": "a person who resists authority",
@@ -97110,7 +97110,7 @@
     {
       "language": "en",
       "word": "receipt",
-      "seq": 6073,
+      "seq": 6178,
       "phonetic": "/rɪˈsiːt/",
       "meaningKo": "영수증",
       "meaningEn": "a record of payment",
@@ -97126,7 +97126,7 @@
     {
       "language": "en",
       "word": "recruit",
-      "seq": 6074,
+      "seq": 5549,
       "phonetic": "/rɪˈkruːt/",
       "meaningKo": "모집하다",
       "meaningEn": "to find new members or workers",
@@ -97142,7 +97142,7 @@
     {
       "language": "en",
       "word": "refine",
-      "seq": 6075,
+      "seq": 6088,
       "phonetic": "/rɪˈfaɪn/",
       "meaningKo": "다듬다",
       "meaningEn": "to improve by small changes",
@@ -97158,7 +97158,7 @@
     {
       "language": "en",
       "word": "reform",
-      "seq": 6076,
+      "seq": 5695,
       "phonetic": "/rɪˈfɔːrm/",
       "meaningKo": "개혁",
       "meaningEn": "a change meant to improve a system",
@@ -97174,7 +97174,7 @@
     {
       "language": "en",
       "word": "regret",
-      "seq": 6077,
+      "seq": 6177,
       "phonetic": "/rɪˈɡret/",
       "meaningKo": "후회하다",
       "meaningEn": "to feel sorry about a past choice",
@@ -97190,7 +97190,7 @@
     {
       "language": "en",
       "word": "regulate",
-      "seq": 6078,
+      "seq": 6147,
       "phonetic": "/ˈreɡjəleɪt/",
       "meaningKo": "규제하다",
       "meaningEn": "to control through rules",
@@ -97206,7 +97206,7 @@
     {
       "language": "en",
       "word": "reject",
-      "seq": 6079,
+      "seq": 6207,
       "phonetic": "/rɪˈdʒekt/",
       "meaningKo": "거절하다",
       "meaningEn": "to refuse to accept",
@@ -97222,7 +97222,7 @@
     {
       "language": "en",
       "word": "relevant",
-      "seq": 6080,
+      "seq": 5658,
       "phonetic": "/ˈreləvənt/",
       "meaningKo": "관련 있는",
       "meaningEn": "connected to the matter",
@@ -97238,7 +97238,7 @@
     {
       "language": "en",
       "word": "relieve",
-      "seq": 6081,
+      "seq": 6014,
       "phonetic": "/rɪˈliːv/",
       "meaningKo": "덜어 주다",
       "meaningEn": "to reduce pain or worry",
@@ -97254,7 +97254,7 @@
     {
       "language": "en",
       "word": "religion",
-      "seq": 6082,
+      "seq": 5559,
       "phonetic": "/rɪˈlɪdʒən/",
       "meaningKo": "종교",
       "meaningEn": "a system of beliefs and worship",
@@ -97270,7 +97270,7 @@
     {
       "language": "en",
       "word": "reluctant",
-      "seq": 6083,
+      "seq": 6045,
       "phonetic": "/rɪˈlʌktənt/",
       "meaningKo": "꺼리는",
       "meaningEn": "unwilling to do something",
@@ -97286,7 +97286,7 @@
     {
       "language": "en",
       "word": "remote",
-      "seq": 6084,
+      "seq": 5755,
       "phonetic": "/rɪˈmoʊt/",
       "meaningKo": "외딴",
       "meaningEn": "far away from towns",
@@ -97302,7 +97302,7 @@
     {
       "language": "en",
       "word": "republic",
-      "seq": 6085,
+      "seq": 5703,
       "phonetic": "/rɪˈpʌblɪk/",
       "meaningKo": "공화국",
       "meaningEn": "a country governed by elected representatives",
@@ -97318,7 +97318,7 @@
     {
       "language": "en",
       "word": "reputation",
-      "seq": 6086,
+      "seq": 6184,
       "phonetic": "/ˌrepjəˈteɪʃən/",
       "meaningKo": "평판",
       "meaningEn": "what people generally think of someone",
@@ -97334,7 +97334,7 @@
     {
       "language": "en",
       "word": "rescue",
-      "seq": 6087,
+      "seq": 5667,
       "phonetic": "/ˈreskjuː/",
       "meaningKo": "구하다",
       "meaningEn": "to save from danger",
@@ -97350,7 +97350,7 @@
     {
       "language": "en",
       "word": "resemble",
-      "seq": 6088,
+      "seq": 5770,
       "phonetic": "/rɪˈzembəl/",
       "meaningKo": "닮다",
       "meaningEn": "to look like",
@@ -97366,7 +97366,7 @@
     {
       "language": "en",
       "word": "resign",
-      "seq": 6089,
+      "seq": 5839,
       "phonetic": "/rɪˈzaɪn/",
       "meaningKo": "사임하다",
       "meaningEn": "to leave a job formally",
@@ -97382,7 +97382,7 @@
     {
       "language": "en",
       "word": "resort",
-      "seq": 6090,
+      "seq": 6252,
       "phonetic": "/rɪˈzɔːrt/",
       "meaningKo": "휴양지",
       "meaningEn": "a place for vacations",
@@ -97398,7 +97398,7 @@
     {
       "language": "en",
       "word": "restore",
-      "seq": 6091,
+      "seq": 5736,
       "phonetic": "/rɪˈstɔːr/",
       "meaningKo": "복구하다",
       "meaningEn": "to bring back to an earlier state",
@@ -97414,7 +97414,7 @@
     {
       "language": "en",
       "word": "resume",
-      "seq": 6092,
+      "seq": 6129,
       "phonetic": "/rɪˈzuːm/",
       "meaningKo": "재개하다",
       "meaningEn": "to begin again after a pause",
@@ -97430,7 +97430,7 @@
     {
       "language": "en",
       "word": "retail",
-      "seq": 6093,
+      "seq": 5620,
       "phonetic": "/ˈriːteɪl/",
       "meaningKo": "소매업",
       "meaningEn": "the sale of goods to consumers",
@@ -97446,7 +97446,7 @@
     {
       "language": "en",
       "word": "retain",
-      "seq": 6094,
+      "seq": 5641,
       "phonetic": "/rɪˈteɪn/",
       "meaningKo": "유지하다",
       "meaningEn": "to keep something",
@@ -97462,7 +97462,7 @@
     {
       "language": "en",
       "word": "retreat",
-      "seq": 6095,
+      "seq": 6228,
       "phonetic": "/rɪˈtriːt/",
       "meaningKo": "물러나다",
       "meaningEn": "to move back",
@@ -97478,7 +97478,7 @@
     {
       "language": "en",
       "word": "reveal",
-      "seq": 6096,
+      "seq": 6097,
       "phonetic": "/rɪˈviːl/",
       "meaningKo": "드러내다",
       "meaningEn": "to make known",
@@ -97494,7 +97494,7 @@
     {
       "language": "en",
       "word": "revenge",
-      "seq": 6097,
+      "seq": 5580,
       "phonetic": "/rɪˈvendʒ/",
       "meaningKo": "복수",
       "meaningEn": "harm done in return for harm",
@@ -97510,7 +97510,7 @@
     {
       "language": "en",
       "word": "reverse",
-      "seq": 6098,
+      "seq": 5741,
       "phonetic": "/rɪˈvɜːrs/",
       "meaningKo": "뒤집다",
       "meaningEn": "to change to the opposite",
@@ -97526,7 +97526,7 @@
     {
       "language": "en",
       "word": "revise",
-      "seq": 6099,
+      "seq": 5564,
       "phonetic": "/rɪˈvaɪz/",
       "meaningKo": "수정하다",
       "meaningEn": "to improve by changing",
@@ -97542,7 +97542,7 @@
     {
       "language": "en",
       "word": "revive",
-      "seq": 6100,
+      "seq": 6144,
       "phonetic": "/rɪˈvaɪv/",
       "meaningKo": "되살리다",
       "meaningEn": "to bring back to life or use",
@@ -97558,7 +97558,7 @@
     {
       "language": "en",
       "word": "revolution",
-      "seq": 6101,
+      "seq": 5543,
       "phonetic": "/ˌrevəˈluːʃən/",
       "meaningKo": "혁명",
       "meaningEn": "a major sudden change",
@@ -97574,7 +97574,7 @@
     {
       "language": "en",
       "word": "rhythm",
-      "seq": 6102,
+      "seq": 5708,
       "phonetic": "/ˈrɪðəm/",
       "meaningKo": "리듬",
       "meaningEn": "a repeated pattern of beats",
@@ -97590,7 +97590,7 @@
     {
       "language": "en",
       "word": "rid",
-      "seq": 6103,
+      "seq": 5545,
       "phonetic": "/rɪd/",
       "meaningKo": "없애다",
       "meaningEn": "to remove something unwanted",
@@ -97606,7 +97606,7 @@
     {
       "language": "en",
       "word": "riot",
-      "seq": 6104,
+      "seq": 6141,
       "phonetic": "/ˈraɪət/",
       "meaningKo": "폭동",
       "meaningEn": "a violent public disturbance",
@@ -97622,7 +97622,7 @@
     {
       "language": "en",
       "word": "rival",
-      "seq": 6105,
+      "seq": 5647,
       "phonetic": "/ˈraɪvəl/",
       "meaningKo": "경쟁자",
       "meaningEn": "someone competing for the same goal",
@@ -97638,7 +97638,7 @@
     {
       "language": "en",
       "word": "roast",
-      "seq": 6106,
+      "seq": 6160,
       "phonetic": "/roʊst/",
       "meaningKo": "굽다",
       "meaningEn": "to cook with dry heat",
@@ -97654,7 +97654,7 @@
     {
       "language": "en",
       "word": "rod",
-      "seq": 6107,
+      "seq": 6064,
       "phonetic": "/rɑːd/",
       "meaningKo": "막대",
       "meaningEn": "a long thin straight object",
@@ -97670,7 +97670,7 @@
     {
       "language": "en",
       "word": "romantic",
-      "seq": 6108,
+      "seq": 6253,
       "phonetic": "/roʊˈmæntɪk/",
       "meaningKo": "낭만적인",
       "meaningEn": "connected with love or ideal beauty",
@@ -97686,7 +97686,7 @@
     {
       "language": "en",
       "word": "routine",
-      "seq": 6109,
+      "seq": 6269,
       "phonetic": "/ruːˈtiːn/",
       "meaningKo": "일상, 규칙적인 절차",
       "meaningEn": "a regular way of doing things",
@@ -97702,7 +97702,7 @@
     {
       "language": "en",
       "word": "rumor",
-      "seq": 6110,
+      "seq": 6019,
       "phonetic": "/ˈruːmər/",
       "meaningKo": "소문",
       "meaningEn": "an unconfirmed story",
@@ -97718,7 +97718,7 @@
     {
       "language": "en",
       "word": "rural",
-      "seq": 6111,
+      "seq": 5905,
       "phonetic": "/ˈrʊrəl/",
       "meaningKo": "시골의",
       "meaningEn": "relating to the countryside",
@@ -97734,7 +97734,7 @@
     {
       "language": "en",
       "word": "sack",
-      "seq": 6112,
+      "seq": 6027,
       "phonetic": "/sæk/",
       "meaningKo": "자루",
       "meaningEn": "a large bag for carrying goods",
@@ -97750,7 +97750,7 @@
     {
       "language": "en",
       "word": "satellite",
-      "seq": 6113,
+      "seq": 5534,
       "phonetic": "/ˈsætəlaɪt/",
       "meaningKo": "위성",
       "meaningEn": "an object orbiting a planet",
@@ -97766,7 +97766,7 @@
     {
       "language": "en",
       "word": "scan",
-      "seq": 6114,
+      "seq": 5608,
       "phonetic": "/skæn/",
       "meaningKo": "훑어보다",
       "meaningEn": "to examine quickly",
@@ -97782,7 +97782,7 @@
     {
       "language": "en",
       "word": "scandal",
-      "seq": 6115,
+      "seq": 6078,
       "phonetic": "/ˈskændəl/",
       "meaningKo": "추문",
       "meaningEn": "an event causing public shame",
@@ -97798,7 +97798,7 @@
     {
       "language": "en",
       "word": "scarce",
-      "seq": 6116,
+      "seq": 5970,
       "phonetic": "/skers/",
       "meaningKo": "부족한",
       "meaningEn": "hard to find or limited",
@@ -97814,7 +97814,7 @@
     {
       "language": "en",
       "word": "scatter",
-      "seq": 6117,
+      "seq": 5826,
       "phonetic": "/ˈskætər/",
       "meaningKo": "흩뿌리다",
       "meaningEn": "to spread in different directions",
@@ -97830,7 +97830,7 @@
     {
       "language": "en",
       "word": "scheme",
-      "seq": 6118,
+      "seq": 5694,
       "phonetic": "/skiːm/",
       "meaningKo": "계획",
       "meaningEn": "an organized plan",
@@ -97846,7 +97846,7 @@
     {
       "language": "en",
       "word": "scholar",
-      "seq": 6119,
+      "seq": 5550,
       "phonetic": "/ˈskɑːlər/",
       "meaningKo": "학자",
       "meaningEn": "a person who studies a subject deeply",
@@ -97862,7 +97862,7 @@
     {
       "language": "en",
       "word": "scope",
-      "seq": 6120,
+      "seq": 6237,
       "phonetic": "/skoʊp/",
       "meaningKo": "범위",
       "meaningEn": "the extent of an activity",
@@ -97878,7 +97878,7 @@
     {
       "language": "en",
       "word": "sector",
-      "seq": 6121,
+      "seq": 5616,
       "phonetic": "/ˈsektər/",
       "meaningKo": "부문",
       "meaningEn": "a part of an economy or society",
@@ -97894,7 +97894,7 @@
     {
       "language": "en",
       "word": "sensible",
-      "seq": 6122,
+      "seq": 6257,
       "phonetic": "/ˈsensəbəl/",
       "meaningKo": "분별 있는",
       "meaningEn": "showing good judgment",
@@ -97910,7 +97910,7 @@
     {
       "language": "en",
       "word": "sequence",
-      "seq": 6123,
+      "seq": 6172,
       "phonetic": "/ˈsiːkwəns/",
       "meaningKo": "순서",
       "meaningEn": "an ordered series",
@@ -97926,7 +97926,7 @@
     {
       "language": "en",
       "word": "severe",
-      "seq": 6124,
+      "seq": 6142,
       "phonetic": "/sɪˈvɪr/",
       "meaningKo": "심각한",
       "meaningEn": "very serious or intense",
@@ -97942,7 +97942,7 @@
     {
       "language": "en",
       "word": "shallow",
-      "seq": 6125,
+      "seq": 6137,
       "phonetic": "/ˈʃæloʊ/",
       "meaningKo": "얕은",
       "meaningEn": "not deep",
@@ -97958,7 +97958,7 @@
     {
       "language": "en",
       "word": "sigh",
-      "seq": 6126,
+      "seq": 6229,
       "phonetic": "/saɪ/",
       "meaningKo": "한숨 쉬다",
       "meaningEn": "to breathe out audibly",
@@ -97974,7 +97974,7 @@
     {
       "language": "en",
       "word": "silent",
-      "seq": 6127,
+      "seq": 6168,
       "phonetic": "/ˈsaɪlənt/",
       "meaningKo": "조용한",
       "meaningEn": "making no sound",
@@ -97990,7 +97990,7 @@
     {
       "language": "en",
       "word": "sin",
-      "seq": 6128,
+      "seq": 5977,
       "phonetic": "/sɪn/",
       "meaningKo": "죄",
       "meaningEn": "a wrong act in a religious sense",
@@ -98006,7 +98006,7 @@
     {
       "language": "en",
       "word": "skip",
-      "seq": 6129,
+      "seq": 6260,
       "phonetic": "/skɪp/",
       "meaningKo": "건너뛰다",
       "meaningEn": "to leave something out",
@@ -98022,7 +98022,7 @@
     {
       "language": "en",
       "word": "slice",
-      "seq": 6130,
+      "seq": 6021,
       "phonetic": "/slaɪs/",
       "meaningKo": "얇은 조각",
       "meaningEn": "a thin piece cut from something",
@@ -98038,7 +98038,7 @@
     {
       "language": "en",
       "word": "slim",
-      "seq": 6131,
+      "seq": 6022,
       "phonetic": "/slɪm/",
       "meaningKo": "날씬한",
       "meaningEn": "thin in an attractive way",
@@ -98054,7 +98054,7 @@
     {
       "language": "en",
       "word": "sneak",
-      "seq": 6132,
+      "seq": 5888,
       "phonetic": "/sniːk/",
       "meaningKo": "몰래 움직이다",
       "meaningEn": "to move secretly",
@@ -98070,7 +98070,7 @@
     {
       "language": "en",
       "word": "soak",
-      "seq": 6133,
+      "seq": 6149,
       "phonetic": "/soʊk/",
       "meaningKo": "흠뻑 적시다",
       "meaningEn": "to make completely wet",
@@ -98086,7 +98086,7 @@
     {
       "language": "en",
       "word": "soap",
-      "seq": 6134,
+      "seq": 5746,
       "phonetic": "/soʊp/",
       "meaningKo": "비누",
       "meaningEn": "a substance used for washing",
@@ -98102,7 +98102,7 @@
     {
       "language": "en",
       "word": "sole",
-      "seq": 6135,
+      "seq": 6249,
       "phonetic": "/soʊl/",
       "meaningKo": "유일한",
       "meaningEn": "being the only one",
@@ -98118,7 +98118,7 @@
     {
       "language": "en",
       "word": "sophisticate",
-      "seq": 6136,
+      "seq": 6130,
       "phonetic": "/səˈfɪstɪkeɪt/",
       "meaningKo": "*복잡하게 만들다",
       "meaningEn": "to make more complex",
@@ -98134,7 +98134,7 @@
     {
       "language": "en",
       "word": "sphere",
-      "seq": 6137,
+      "seq": 6215,
       "phonetic": "/sfɪr/",
       "meaningKo": "구체, 영역",
       "meaningEn": "a round solid shape",
@@ -98150,7 +98150,7 @@
     {
       "language": "en",
       "word": "spill",
-      "seq": 6138,
+      "seq": 5602,
       "phonetic": "/spɪl/",
       "meaningKo": "쏟다",
       "meaningEn": "to let liquid fall out",
@@ -98166,7 +98166,7 @@
     {
       "language": "en",
       "word": "spit",
-      "seq": 6139,
+      "seq": 5671,
       "phonetic": "/spɪt/",
       "meaningKo": "침을 뱉다",
       "meaningEn": "to force saliva from the mouth",
@@ -98182,7 +98182,7 @@
     {
       "language": "en",
       "word": "splash",
-      "seq": 6140,
+      "seq": 5851,
       "phonetic": "/splæʃ/",
       "meaningKo": "물을 튀기다",
       "meaningEn": "to scatter liquid",
@@ -98198,7 +98198,7 @@
     {
       "language": "en",
       "word": "split",
-      "seq": 6141,
+      "seq": 5968,
       "phonetic": "/splɪt/",
       "meaningKo": "나누다",
       "meaningEn": "to divide into parts",
@@ -98214,7 +98214,7 @@
     {
       "language": "en",
       "word": "spouse",
-      "seq": 6142,
+      "seq": 5709,
       "phonetic": "/spaʊs/",
       "meaningKo": "배우자",
       "meaningEn": "a husband or wife",
@@ -98230,7 +98230,7 @@
     {
       "language": "en",
       "word": "squeeze",
-      "seq": 6143,
+      "seq": 5530,
       "phonetic": "/skwiːz/",
       "meaningKo": "꽉 짜다",
       "meaningEn": "to press firmly",
@@ -98246,7 +98246,7 @@
     {
       "language": "en",
       "word": "starve",
-      "seq": 6144,
+      "seq": 6236,
       "phonetic": "/stɑːrv/",
       "meaningKo": "굶주리다",
       "meaningEn": "to suffer from lack of food",
@@ -98262,7 +98262,7 @@
     {
       "language": "en",
       "word": "statistic",
-      "seq": 6145,
+      "seq": 6272,
       "phonetic": "/stəˈtɪstɪk/",
       "meaningKo": "통계 수치",
       "meaningEn": "a numerical fact",
@@ -98278,7 +98278,7 @@
     {
       "language": "en",
       "word": "statue",
-      "seq": 6146,
+      "seq": 5830,
       "phonetic": "/ˈstætʃuː/",
       "meaningKo": "조각상",
       "meaningEn": "a carved figure of a person or animal",
@@ -98294,7 +98294,7 @@
     {
       "language": "en",
       "word": "status",
-      "seq": 6147,
+      "seq": 5979,
       "phonetic": "/ˈsteɪtəs/",
       "meaningKo": "상태, 지위",
       "meaningEn": "a person's condition or position",
@@ -98310,7 +98310,7 @@
     {
       "language": "en",
       "word": "steep",
-      "seq": 6148,
+      "seq": 5904,
       "phonetic": "/stiːp/",
       "meaningKo": "가파른",
       "meaningEn": "rising sharply",
@@ -98326,7 +98326,7 @@
     {
       "language": "en",
       "word": "stiff",
-      "seq": 6149,
+      "seq": 5892,
       "phonetic": "/stɪf/",
       "meaningKo": "뻣뻣한",
       "meaningEn": "hard to bend or move",
@@ -98342,7 +98342,7 @@
     {
       "language": "en",
       "word": "stimulate",
-      "seq": 6150,
+      "seq": 6090,
       "phonetic": "/ˈstɪmjəleɪt/",
       "meaningKo": "자극하다",
       "meaningEn": "to encourage activity",
@@ -98358,7 +98358,7 @@
     {
       "language": "en",
       "word": "stove",
-      "seq": 6151,
+      "seq": 5689,
       "phonetic": "/stoʊv/",
       "meaningKo": "난로, 레인지",
       "meaningEn": "a device for cooking or heating",
@@ -98374,7 +98374,7 @@
     {
       "language": "en",
       "word": "strict",
-      "seq": 6152,
+      "seq": 5748,
       "phonetic": "/strɪkt/",
       "meaningKo": "엄격한",
       "meaningEn": "demanding obedience to rules",
@@ -98390,7 +98390,7 @@
     {
       "language": "en",
       "word": "strip",
-      "seq": 6153,
+      "seq": 5873,
       "phonetic": "/strɪp/",
       "meaningKo": "가느다란 조각",
       "meaningEn": "a long narrow piece",
@@ -98406,7 +98406,7 @@
     {
       "language": "en",
       "word": "stripe",
-      "seq": 6154,
+      "seq": 6262,
       "phonetic": "/straɪp/",
       "meaningKo": "줄무늬",
       "meaningEn": "a long narrow band of color",
@@ -98422,7 +98422,7 @@
     {
       "language": "en",
       "word": "stroke",
-      "seq": 6155,
+      "seq": 5879,
       "phonetic": "/stroʊk/",
       "meaningKo": "뇌졸중, 한 번의 동작",
       "meaningEn": "a sudden loss of brain blood flow",
@@ -98438,7 +98438,7 @@
     {
       "language": "en",
       "word": "submarine",
-      "seq": 6156,
+      "seq": 5586,
       "phonetic": "/ˌsʌbməˈriːn/",
       "meaningKo": "잠수함",
       "meaningEn": "a vessel that travels underwater",
@@ -98454,7 +98454,7 @@
     {
       "language": "en",
       "word": "submit",
-      "seq": 6157,
+      "seq": 5715,
       "phonetic": "/səbˈmɪt/",
       "meaningKo": "제출하다",
       "meaningEn": "to hand in for review",
@@ -98470,7 +98470,7 @@
     {
       "language": "en",
       "word": "subscribe",
-      "seq": 6158,
+      "seq": 6263,
       "phonetic": "/səbˈskraɪb/",
       "meaningKo": "구독하다",
       "meaningEn": "to sign up to receive regularly",
@@ -98486,7 +98486,7 @@
     {
       "language": "en",
       "word": "substance",
-      "seq": 6159,
+      "seq": 5532,
       "phonetic": "/ˈsʌbstəns/",
       "meaningKo": "물질",
       "meaningEn": "a particular kind of material",
@@ -98502,7 +98502,7 @@
     {
       "language": "en",
       "word": "substitute",
-      "seq": 6160,
+      "seq": 5911,
       "phonetic": "/ˈsʌbstɪtuːt/",
       "meaningKo": "대체하다",
       "meaningEn": "to use one thing instead of another",
@@ -98518,7 +98518,7 @@
     {
       "language": "en",
       "word": "suburb",
-      "seq": 6161,
+      "seq": 5996,
       "phonetic": "/ˈsʌbɜːrb/",
       "meaningKo": "교외",
       "meaningEn": "an area outside a city center",
@@ -98534,7 +98534,7 @@
     {
       "language": "en",
       "word": "suck",
-      "seq": 6162,
+      "seq": 5589,
       "phonetic": "/sʌk/",
       "meaningKo": "빨아들이다",
       "meaningEn": "to draw in by suction",
@@ -98550,7 +98550,7 @@
     {
       "language": "en",
       "word": "suite",
-      "seq": 6163,
+      "seq": 6136,
       "phonetic": "/swiːt/",
       "meaningKo": "연결된 객실",
       "meaningEn": "a set of connected rooms",
@@ -98566,7 +98566,7 @@
     {
       "language": "en",
       "word": "summit",
-      "seq": 6164,
+      "seq": 5666,
       "phonetic": "/ˈsʌmɪt/",
       "meaningKo": "정상, 정상회의",
       "meaningEn": "the highest point of a mountain",
@@ -98582,7 +98582,7 @@
     {
       "language": "en",
       "word": "superb",
-      "seq": 6165,
+      "seq": 5787,
       "phonetic": "/suːˈpɜːrb/",
       "meaningKo": "훌륭한",
       "meaningEn": "extremely good",
@@ -98598,7 +98598,7 @@
     {
       "language": "en",
       "word": "superior",
-      "seq": 6166,
+      "seq": 5884,
       "phonetic": "/suːˈpɪriər/",
       "meaningKo": "더 우수한",
       "meaningEn": "better than another",
@@ -98614,7 +98614,7 @@
     {
       "language": "en",
       "word": "supervise",
-      "seq": 6167,
+      "seq": 5621,
       "phonetic": "/ˈsuːpərvaɪz/",
       "meaningKo": "감독하다",
       "meaningEn": "to watch and guide work",
@@ -98630,7 +98630,7 @@
     {
       "language": "en",
       "word": "supplement",
-      "seq": 6168,
+      "seq": 5797,
       "phonetic": "/ˈsʌpləmənt/",
       "meaningKo": "보충물",
       "meaningEn": "something added to improve or complete",
@@ -98646,7 +98646,7 @@
     {
       "language": "en",
       "word": "surgery",
-      "seq": 6169,
+      "seq": 5713,
       "phonetic": "/ˈsɜːrdʒəri/",
       "meaningKo": "수술",
       "meaningEn": "medical treatment involving an operation",
@@ -98662,7 +98662,7 @@
     {
       "language": "en",
       "word": "surrender",
-      "seq": 6170,
+      "seq": 6103,
       "phonetic": "/səˈrendər/",
       "meaningKo": "항복하다",
       "meaningEn": "to give up resistance",
@@ -98678,7 +98678,7 @@
     {
       "language": "en",
       "word": "suspend",
-      "seq": 6171,
+      "seq": 5920,
       "phonetic": "/səˈspend/",
       "meaningKo": "중단하다",
       "meaningEn": "to stop temporarily",
@@ -98694,7 +98694,7 @@
     {
       "language": "en",
       "word": "sustain",
-      "seq": 6172,
+      "seq": 5540,
       "phonetic": "/səˈsteɪn/",
       "meaningKo": "유지하다",
       "meaningEn": "to keep going over time",
@@ -98710,7 +98710,7 @@
     {
       "language": "en",
       "word": "swear",
-      "seq": 6173,
+      "seq": 5739,
       "phonetic": "/swer/",
       "meaningKo": "맹세하다",
       "meaningEn": "to promise strongly",
@@ -98726,7 +98726,7 @@
     {
       "language": "en",
       "word": "sweat",
-      "seq": 6174,
+      "seq": 5778,
       "phonetic": "/swet/",
       "meaningKo": "땀",
       "meaningEn": "liquid released through skin",
@@ -98742,7 +98742,7 @@
     {
       "language": "en",
       "word": "swell",
-      "seq": 6175,
+      "seq": 5711,
       "phonetic": "/swel/",
       "meaningKo": "부풀다",
       "meaningEn": "to become larger",
@@ -98758,7 +98758,7 @@
     {
       "language": "en",
       "word": "swift",
-      "seq": 6176,
+      "seq": 5576,
       "phonetic": "/swɪft/",
       "meaningKo": "빠른",
       "meaningEn": "happening quickly",
@@ -98774,7 +98774,7 @@
     {
       "language": "en",
       "word": "symbol",
-      "seq": 6177,
+      "seq": 5964,
       "phonetic": "/ˈsɪmbəl/",
       "meaningKo": "상징",
       "meaningEn": "a sign representing an idea",
@@ -98790,7 +98790,7 @@
     {
       "language": "en",
       "word": "symphony",
-      "seq": 6178,
+      "seq": 5928,
       "phonetic": "/ˈsɪmfəni/",
       "meaningKo": "교향곡",
       "meaningEn": "a long musical work for orchestra",
@@ -98806,7 +98806,7 @@
     {
       "language": "en",
       "word": "symptom",
-      "seq": 6179,
+      "seq": 5704,
       "phonetic": "/ˈsɪmptəm/",
       "meaningKo": "증상",
       "meaningEn": "a sign of illness",
@@ -98822,7 +98822,7 @@
     {
       "language": "en",
       "word": "tackle",
-      "seq": 6180,
+      "seq": 6214,
       "phonetic": "/ˈtækəl/",
       "meaningKo": "해결에 나서다",
       "meaningEn": "to deal with a difficult task",
@@ -98838,7 +98838,7 @@
     {
       "language": "en",
       "word": "tag",
-      "seq": 6181,
+      "seq": 6020,
       "phonetic": "/tæɡ/",
       "meaningKo": "꼬리표",
       "meaningEn": "a label attached to something",
@@ -98854,7 +98854,7 @@
     {
       "language": "en",
       "word": "talent",
-      "seq": 6182,
+      "seq": 5615,
       "phonetic": "/ˈtælənt/",
       "meaningKo": "재능",
       "meaningEn": "a natural ability",
@@ -98870,7 +98870,7 @@
     {
       "language": "en",
       "word": "task",
-      "seq": 6183,
+      "seq": 5972,
       "phonetic": "/tæsk/",
       "meaningKo": "과제",
       "meaningEn": "a piece of work to complete",
@@ -98886,7 +98886,7 @@
     {
       "language": "en",
       "word": "telegraph",
-      "seq": 6184,
+      "seq": 6101,
       "phonetic": "/ˈtelɪɡræf/",
       "meaningKo": "전신기",
       "meaningEn": "an old device for sending messages",
@@ -98902,7 +98902,7 @@
     {
       "language": "en",
       "word": "temple",
-      "seq": 6185,
+      "seq": 5633,
       "phonetic": "/ˈtempəl/",
       "meaningKo": "사원",
       "meaningEn": "a building used for worship",
@@ -98918,7 +98918,7 @@
     {
       "language": "en",
       "word": "temporary",
-      "seq": 6186,
+      "seq": 6171,
       "phonetic": "/ˈtempəreri/",
       "meaningKo": "임시의",
       "meaningEn": "lasting a short time",
@@ -98934,7 +98934,7 @@
     {
       "language": "en",
       "word": "tenant",
-      "seq": 6187,
+      "seq": 5779,
       "phonetic": "/ˈtenənt/",
       "meaningKo": "세입자",
       "meaningEn": "a person renting property",
@@ -98950,7 +98950,7 @@
     {
       "language": "en",
       "word": "tender",
-      "seq": 6188,
+      "seq": 5910,
       "phonetic": "/ˈtendər/",
       "meaningKo": "부드러운",
       "meaningEn": "gentle or soft",
@@ -98966,7 +98966,7 @@
     {
       "language": "en",
       "word": "terminal",
-      "seq": 6189,
+      "seq": 5762,
       "phonetic": "/ˈtɜːrmɪnəl/",
       "meaningKo": "터미널",
       "meaningEn": "a building where travel begins or ends",
@@ -98982,7 +98982,7 @@
     {
       "language": "en",
       "word": "terminate",
-      "seq": 6190,
+      "seq": 5587,
       "phonetic": "/ˈtɜːrmɪneɪt/",
       "meaningKo": "끝내다",
       "meaningEn": "to bring to an end",
@@ -98998,7 +98998,7 @@
     {
       "language": "en",
       "word": "territory",
-      "seq": 6191,
+      "seq": 5610,
       "phonetic": "/ˈterətɔːri/",
       "meaningKo": "영토",
       "meaningEn": "land controlled by a group",
@@ -99014,7 +99014,7 @@
     {
       "language": "en",
       "word": "terror",
-      "seq": 6192,
+      "seq": 5931,
       "phonetic": "/ˈterər/",
       "meaningKo": "공포",
       "meaningEn": "extreme fear",
@@ -99030,7 +99030,7 @@
     {
       "language": "en",
       "word": "theme",
-      "seq": 6193,
+      "seq": 5553,
       "phonetic": "/θiːm/",
       "meaningKo": "주제",
       "meaningEn": "a central idea",
@@ -99046,7 +99046,7 @@
     {
       "language": "en",
       "word": "therapy",
-      "seq": 6194,
+      "seq": 5819,
       "phonetic": "/ˈθerəpi/",
       "meaningKo": "치료",
       "meaningEn": "treatment to improve health",
@@ -99062,7 +99062,7 @@
     {
       "language": "en",
       "word": "thorough",
-      "seq": 6195,
+      "seq": 5634,
       "phonetic": "/ˈθɜːroʊ/",
       "meaningKo": "철저한",
       "meaningEn": "careful and complete",
@@ -99078,7 +99078,7 @@
     {
       "language": "en",
       "word": "thread",
-      "seq": 6196,
+      "seq": 5802,
       "phonetic": "/θred/",
       "meaningKo": "실",
       "meaningEn": "a thin strand used for sewing",
@@ -99094,7 +99094,7 @@
     {
       "language": "en",
       "word": "thrill",
-      "seq": 6197,
+      "seq": 6135,
       "phonetic": "/θrɪl/",
       "meaningKo": "짜릿함",
       "meaningEn": "a sudden feeling of excitement",
@@ -99110,7 +99110,7 @@
     {
       "language": "en",
       "word": "thumb",
-      "seq": 6198,
+      "seq": 5569,
       "phonetic": "/θʌm/",
       "meaningKo": "엄지손가락",
       "meaningEn": "the short thick finger",
@@ -99126,7 +99126,7 @@
     {
       "language": "en",
       "word": "timber",
-      "seq": 6199,
+      "seq": 5674,
       "phonetic": "/ˈtɪmbər/",
       "meaningKo": "목재",
       "meaningEn": "wood prepared for building",
@@ -99142,7 +99142,7 @@
     {
       "language": "en",
       "word": "tissue",
-      "seq": 6200,
+      "seq": 5582,
       "phonetic": "/ˈtɪʃuː/",
       "meaningKo": "조직, 화장지",
       "meaningEn": "a group of similar cells",
@@ -99158,7 +99158,7 @@
     {
       "language": "en",
       "word": "torture",
-      "seq": 6201,
+      "seq": 6047,
       "phonetic": "/ˈtɔːrtʃər/",
       "meaningKo": "고문",
       "meaningEn": "the deliberate causing of severe pain",
@@ -99174,7 +99174,7 @@
     {
       "language": "en",
       "word": "toss",
-      "seq": 6202,
+      "seq": 5854,
       "phonetic": "/tɔːs/",
       "meaningKo": "던지다",
       "meaningEn": "to throw lightly",
@@ -99190,7 +99190,7 @@
     {
       "language": "en",
       "word": "toxic",
-      "seq": 6203,
+      "seq": 6106,
       "phonetic": "/ˈtɑːksɪk/",
       "meaningKo": "유독한",
       "meaningEn": "poisonous",
@@ -99206,7 +99206,7 @@
     {
       "language": "en",
       "word": "tragic",
-      "seq": 6204,
+      "seq": 5845,
       "phonetic": "/ˈtrædʒɪk/",
       "meaningKo": "비극적인",
       "meaningEn": "causing great sadness",
@@ -99222,7 +99222,7 @@
     {
       "language": "en",
       "word": "trail",
-      "seq": 6205,
+      "seq": 6210,
       "phonetic": "/treɪl/",
       "meaningKo": "산책로",
       "meaningEn": "a path through natural land",
@@ -99238,7 +99238,7 @@
     {
       "language": "en",
       "word": "transact",
-      "seq": 6206,
+      "seq": 6004,
       "phonetic": "/trænˈzækt/",
       "meaningKo": "거래하다",
       "meaningEn": "to carry out business",
@@ -99254,7 +99254,7 @@
     {
       "language": "en",
       "word": "transform",
-      "seq": 6207,
+      "seq": 6123,
       "phonetic": "/trænsˈfɔːrm/",
       "meaningKo": "변형하다",
       "meaningEn": "to change greatly",
@@ -99270,7 +99270,7 @@
     {
       "language": "en",
       "word": "transition",
-      "seq": 6208,
+      "seq": 5745,
       "phonetic": "/trænˈzɪʃən/",
       "meaningKo": "전환",
       "meaningEn": "a change from one state to another",
@@ -99286,7 +99286,7 @@
     {
       "language": "en",
       "word": "translate",
-      "seq": 6209,
+      "seq": 6241,
       "phonetic": "/trænsˈleɪt/",
       "meaningKo": "번역하다",
       "meaningEn": "to express in another language",
@@ -99302,7 +99302,7 @@
     {
       "language": "en",
       "word": "treasure",
-      "seq": 6210,
+      "seq": 6029,
       "phonetic": "/ˈtreʒər/",
       "meaningKo": "보물",
       "meaningEn": "valuable objects",
@@ -99318,7 +99318,7 @@
     {
       "language": "en",
       "word": "treaty",
-      "seq": 6211,
+      "seq": 6165,
       "phonetic": "/ˈtriːti/",
       "meaningKo": "조약",
       "meaningEn": "a formal agreement between countries",
@@ -99334,7 +99334,7 @@
     {
       "language": "en",
       "word": "trend",
-      "seq": 6212,
+      "seq": 6180,
       "phonetic": "/trend/",
       "meaningKo": "추세",
       "meaningEn": "a general direction of change",
@@ -99350,7 +99350,7 @@
     {
       "language": "en",
       "word": "tribe",
-      "seq": 6213,
+      "seq": 6155,
       "phonetic": "/traɪb/",
       "meaningKo": "부족",
       "meaningEn": "a group sharing culture and ancestry",
@@ -99366,7 +99366,7 @@
     {
       "language": "en",
       "word": "trigger",
-      "seq": 6214,
+      "seq": 6240,
       "phonetic": "/ˈtrɪɡər/",
       "meaningKo": "촉발하다",
       "meaningEn": "to cause an event to begin",
@@ -99382,7 +99382,7 @@
     {
       "language": "en",
       "word": "trim",
-      "seq": 6215,
+      "seq": 6017,
       "phonetic": "/trɪm/",
       "meaningKo": "다듬다",
       "meaningEn": "to cut a small amount away",
@@ -99398,7 +99398,7 @@
     {
       "language": "en",
       "word": "triumph",
-      "seq": 6216,
+      "seq": 5820,
       "phonetic": "/ˈtraɪəmf/",
       "meaningKo": "승리",
       "meaningEn": "a great success",
@@ -99414,7 +99414,7 @@
     {
       "language": "en",
       "word": "troop",
-      "seq": 6217,
+      "seq": 6120,
       "phonetic": "/truːp/",
       "meaningKo": "부대",
       "meaningEn": "a group of soldiers",
@@ -99430,7 +99430,7 @@
     {
       "language": "en",
       "word": "tube",
-      "seq": 6218,
+      "seq": 5806,
       "phonetic": "/tuːb/",
       "meaningKo": "관",
       "meaningEn": "a long hollow cylinder",
@@ -99446,7 +99446,7 @@
     {
       "language": "en",
       "word": "tunnel",
-      "seq": 6219,
+      "seq": 5655,
       "phonetic": "/ˈtʌnəl/",
       "meaningKo": "터널",
       "meaningEn": "a passage under ground or through a hill",
@@ -99462,7 +99462,7 @@
     {
       "language": "en",
       "word": "ultimate",
-      "seq": 6220,
+      "seq": 5577,
       "phonetic": "/ˈʌltɪmət/",
       "meaningKo": "궁극적인",
       "meaningEn": "final or most important",
@@ -99478,7 +99478,7 @@
     {
       "language": "en",
       "word": "undergo",
-      "seq": 6221,
+      "seq": 6055,
       "phonetic": "/ˌʌndərˈɡoʊ/",
       "meaningKo": "겪다",
       "meaningEn": "to experience a process",
@@ -99494,7 +99494,7 @@
     {
       "language": "en",
       "word": "unique",
-      "seq": 6222,
+      "seq": 5571,
       "phonetic": "/juːˈniːk/",
       "meaningKo": "독특한",
       "meaningEn": "unlike anything else",
@@ -99510,7 +99510,7 @@
     {
       "language": "en",
       "word": "universe",
-      "seq": 6223,
+      "seq": 6025,
       "phonetic": "/ˈjuːnɪvɜːrs/",
       "meaningKo": "우주",
       "meaningEn": "all space and everything in it",
@@ -99526,7 +99526,7 @@
     {
       "language": "en",
       "word": "update",
-      "seq": 6224,
+      "seq": 5812,
       "phonetic": "/ʌpˈdeɪt/",
       "meaningKo": "갱신하다",
       "meaningEn": "to bring up to date",
@@ -99542,7 +99542,7 @@
     {
       "language": "en",
       "word": "upward",
-      "seq": 6225,
+      "seq": 5974,
       "phonetic": "/ˈʌpwərd/",
       "meaningKo": "위쪽으로",
       "meaningEn": "toward a higher place",
@@ -99558,7 +99558,7 @@
     {
       "language": "en",
       "word": "urban",
-      "seq": 6226,
+      "seq": 5724,
       "phonetic": "/ˈɜːrbən/",
       "meaningKo": "도시의",
       "meaningEn": "relating to a city",
@@ -99574,7 +99574,7 @@
     {
       "language": "en",
       "word": "vaccine",
-      "seq": 6227,
+      "seq": 6226,
       "phonetic": "/vækˈsiːn/",
       "meaningKo": "백신",
       "meaningEn": "a preparation that helps prevent disease",
@@ -99590,7 +99590,7 @@
     {
       "language": "en",
       "word": "vacuum",
-      "seq": 6228,
+      "seq": 5651,
       "phonetic": "/ˈvækjuːm/",
       "meaningKo": "진공",
       "meaningEn": "a space without air",
@@ -99606,7 +99606,7 @@
     {
       "language": "en",
       "word": "vague",
-      "seq": 6229,
+      "seq": 5593,
       "phonetic": "/veɪɡ/",
       "meaningKo": "모호한",
       "meaningEn": "not clear or specific",
@@ -99622,7 +99622,7 @@
     {
       "language": "en",
       "word": "valid",
-      "seq": 6230,
+      "seq": 5578,
       "phonetic": "/ˈvælɪd/",
       "meaningKo": "유효한",
       "meaningEn": "legally or logically acceptable",
@@ -99638,7 +99638,7 @@
     {
       "language": "en",
       "word": "vanish",
-      "seq": 6231,
+      "seq": 5783,
       "phonetic": "/ˈvænɪʃ/",
       "meaningKo": "사라지다",
       "meaningEn": "to disappear suddenly",
@@ -99654,7 +99654,7 @@
     {
       "language": "en",
       "word": "vast",
-      "seq": 6232,
+      "seq": 5815,
       "phonetic": "/væst/",
       "meaningKo": "광대한",
       "meaningEn": "very large",
@@ -99670,7 +99670,7 @@
     {
       "language": "en",
       "word": "verb",
-      "seq": 6233,
+      "seq": 5604,
       "phonetic": "/vɜːrb/",
       "meaningKo": "동사",
       "meaningEn": "a word for an action or state",
@@ -99686,7 +99686,7 @@
     {
       "language": "en",
       "word": "verse",
-      "seq": 6234,
+      "seq": 5705,
       "phonetic": "/vɜːrs/",
       "meaningKo": "시구, 절",
       "meaningEn": "a line of poetry or song",
@@ -99702,7 +99702,7 @@
     {
       "language": "en",
       "word": "versus",
-      "seq": 6235,
+      "seq": 5766,
       "phonetic": "/ˈvɜːrsəs/",
       "meaningKo": "~대",
       "meaningEn": "against or compared with",
@@ -99718,7 +99718,7 @@
     {
       "language": "en",
       "word": "vessel",
-      "seq": 6236,
+      "seq": 5729,
       "phonetic": "/ˈvesəl/",
       "meaningKo": "선박, 용기",
       "meaningEn": "a ship or container",
@@ -99734,7 +99734,7 @@
     {
       "language": "en",
       "word": "veterinarian",
-      "seq": 6237,
+      "seq": 5664,
       "phonetic": "/ˌvetərɪˈneriən/",
       "meaningKo": "수의사",
       "meaningEn": "a doctor for animals",
@@ -99750,7 +99750,7 @@
     {
       "language": "en",
       "word": "via",
-      "seq": 6238,
+      "seq": 5902,
       "phonetic": "/ˈvaɪə/",
       "meaningKo": "~을 거쳐",
       "meaningEn": "by way of",
@@ -99766,7 +99766,7 @@
     {
       "language": "en",
       "word": "vice",
-      "seq": 6239,
+      "seq": 5858,
       "phonetic": "/vaɪs/",
       "meaningKo": "악습",
       "meaningEn": "a harmful habit or moral failing",
@@ -99782,7 +99782,7 @@
     {
       "language": "en",
       "word": "victory",
-      "seq": 6240,
+      "seq": 6212,
       "phonetic": "/ˈvɪktəri/",
       "meaningKo": "승리",
       "meaningEn": "success in a contest",
@@ -99798,7 +99798,7 @@
     {
       "language": "en",
       "word": "virgin",
-      "seq": 6241,
+      "seq": 6232,
       "phonetic": "/ˈvɜːrdʒɪn/",
       "meaningKo": "손대지 않은",
       "meaningEn": "not used or developed before",
@@ -99814,7 +99814,7 @@
     {
       "language": "en",
       "word": "virtue",
-      "seq": 6242,
+      "seq": 5872,
       "phonetic": "/ˈvɜːrtʃuː/",
       "meaningKo": "미덕",
       "meaningEn": "a morally good quality",
@@ -99830,7 +99830,7 @@
     {
       "language": "en",
       "word": "virus",
-      "seq": 6243,
+      "seq": 6268,
       "phonetic": "/ˈvaɪrəs/",
       "meaningKo": "바이러스",
       "meaningEn": "a tiny infectious agent",
@@ -99846,7 +99846,7 @@
     {
       "language": "en",
       "word": "visible",
-      "seq": 6244,
+      "seq": 5989,
       "phonetic": "/ˈvɪzəbəl/",
       "meaningKo": "보이는",
       "meaningEn": "able to be seen",
@@ -99862,7 +99862,7 @@
     {
       "language": "en",
       "word": "visual",
-      "seq": 6245,
+      "seq": 5963,
       "phonetic": "/ˈvɪʒuəl/",
       "meaningKo": "시각의",
       "meaningEn": "related to sight",
@@ -99878,7 +99878,7 @@
     {
       "language": "en",
       "word": "vital",
-      "seq": 6246,
+      "seq": 6206,
       "phonetic": "/ˈvaɪtəl/",
       "meaningKo": "필수적인",
       "meaningEn": "extremely important",
@@ -99894,7 +99894,7 @@
     {
       "language": "en",
       "word": "vivid",
-      "seq": 6247,
+      "seq": 5740,
       "phonetic": "/ˈvɪvɪd/",
       "meaningKo": "생생한",
       "meaningEn": "clear and bright",
@@ -99910,7 +99910,7 @@
     {
       "language": "en",
       "word": "vocabulary",
-      "seq": 6248,
+      "seq": 5661,
       "phonetic": "/voʊˈkæbjəleri/",
       "meaningKo": "어휘",
       "meaningEn": "the words known or used",
@@ -99926,7 +99926,7 @@
     {
       "language": "en",
       "word": "wander",
-      "seq": 6249,
+      "seq": 6261,
       "phonetic": "/ˈwɑːndər/",
       "meaningKo": "거닐다",
       "meaningEn": "to walk without a fixed direction",
@@ -99942,7 +99942,7 @@
     {
       "language": "en",
       "word": "wealth",
-      "seq": 6250,
+      "seq": 6087,
       "phonetic": "/welθ/",
       "meaningKo": "부",
       "meaningEn": "a large amount of money or assets",
@@ -99958,7 +99958,7 @@
     {
       "language": "en",
       "word": "weed",
-      "seq": 6251,
+      "seq": 6071,
       "phonetic": "/wiːd/",
       "meaningKo": "잡초",
       "meaningEn": "an unwanted wild plant",
@@ -99974,7 +99974,7 @@
     {
       "language": "en",
       "word": "weird",
-      "seq": 6252,
+      "seq": 5624,
       "phonetic": "/wɪrd/",
       "meaningKo": "이상한",
       "meaningEn": "unusual in a strange way",
@@ -99990,7 +99990,7 @@
     {
       "language": "en",
       "word": "welfare",
-      "seq": 6253,
+      "seq": 5875,
       "phonetic": "/ˈwelfer/",
       "meaningKo": "복지",
       "meaningEn": "health and well-being",
@@ -100006,7 +100006,7 @@
     {
       "language": "en",
       "word": "wheat",
-      "seq": 6254,
+      "seq": 6152,
       "phonetic": "/wiːt/",
       "meaningKo": "밀",
       "meaningEn": "a grain used to make flour",
@@ -100022,7 +100022,7 @@
     {
       "language": "en",
       "word": "whereas",
-      "seq": 6255,
+      "seq": 5950,
       "phonetic": "/werˈæz/",
       "meaningKo": "반면에",
       "meaningEn": "while in contrast",
@@ -100038,7 +100038,7 @@
     {
       "language": "en",
       "word": "whip",
-      "seq": 6256,
+      "seq": 5827,
       "phonetic": "/wɪp/",
       "meaningKo": "휘젓다",
       "meaningEn": "to beat quickly",
@@ -100054,7 +100054,7 @@
     {
       "language": "en",
       "word": "wicked",
-      "seq": 6257,
+      "seq": 6164,
       "phonetic": "/ˈwɪkɪd/",
       "meaningKo": "사악한",
       "meaningEn": "morally bad",
@@ -100070,7 +100070,7 @@
     {
       "language": "en",
       "word": "wit",
-      "seq": 6258,
+      "seq": 5897,
       "phonetic": "/wɪt/",
       "meaningKo": "재치",
       "meaningEn": "quick clever humor",
@@ -100086,7 +100086,7 @@
     {
       "language": "en",
       "word": "withdraw",
-      "seq": 6259,
+      "seq": 5663,
       "phonetic": "/wɪðˈdrɔː/",
       "meaningKo": "철회하다, 인출하다",
       "meaningEn": "to take back or remove",
@@ -100102,7 +100102,7 @@
     {
       "language": "en",
       "word": "witness",
-      "seq": 6260,
+      "seq": 5829,
       "phonetic": "/ˈwɪtnəs/",
       "meaningKo": "목격자",
       "meaningEn": "a person who sees an event",
@@ -100118,7 +100118,7 @@
     {
       "language": "en",
       "word": "worship",
-      "seq": 6261,
+      "seq": 5681,
       "phonetic": "/ˈwɜːrʃɪp/",
       "meaningKo": "숭배하다",
       "meaningEn": "to show deep religious respect",
@@ -100134,7 +100134,7 @@
     {
       "language": "en",
       "word": "wreck",
-      "seq": 6262,
+      "seq": 6176,
       "phonetic": "/rek/",
       "meaningKo": "잔해, 난파선",
       "meaningEn": "a badly damaged vehicle or ship",
@@ -100150,7 +100150,7 @@
     {
       "language": "en",
       "word": "yield",
-      "seq": 6263,
+      "seq": 5843,
       "phonetic": "/jiːld/",
       "meaningKo": "생산하다, 양보하다",
       "meaningEn": "to produce a result",
@@ -100166,7 +100166,7 @@
     {
       "language": "en",
       "word": "zone",
-      "seq": 6264,
+      "seq": 6104,
       "phonetic": "/zoʊn/",
       "meaningKo": "구역",
       "meaningEn": "an area marked for a purpose",
@@ -100182,7 +100182,7 @@
     {
       "language": "en",
       "word": "aggressive",
-      "seq": 6265,
+      "seq": 6000,
       "phonetic": "/əˈɡresɪv/",
       "meaningKo": "공격적인",
       "meaningEn": "ready to attack or argue",
@@ -100198,7 +100198,7 @@
     {
       "language": "en",
       "word": "destruction",
-      "seq": 6266,
+      "seq": 5894,
       "phonetic": "/dɪˈstrʌkʃən/",
       "meaningKo": "파괴",
       "meaningEn": "the act of damaging something completely",
@@ -100214,7 +100214,7 @@
     {
       "language": "en",
       "word": "environment",
-      "seq": 6267,
+      "seq": 6163,
       "phonetic": "/ɪnˈvaɪrənmənt/",
       "meaningKo": "환경",
       "meaningEn": "the natural world or surrounding conditions",
@@ -100230,7 +100230,7 @@
     {
       "language": "en",
       "word": "inevitable",
-      "seq": 6268,
+      "seq": 6213,
       "phonetic": "/ɪnˈevɪtəbəl/",
       "meaningKo": "피할 수 없는",
       "meaningEn": "certain to happen and impossible to avoid",
@@ -100246,7 +100246,7 @@
     {
       "language": "en",
       "word": "illusion",
-      "seq": 6269,
+      "seq": 5632,
       "phonetic": "/ɪˈluːʒən/",
       "meaningKo": "착각; 환상",
       "meaningEn": "a false impression or appearance",
@@ -100262,7 +100262,7 @@
     {
       "language": "en",
       "word": "overseas",
-      "seq": 6270,
+      "seq": 5722,
       "phonetic": "/ˌoʊvərˈsiːz/",
       "meaningKo": "해외로; 해외의",
       "meaningEn": "in or to another country across the sea",
@@ -100278,7 +100278,7 @@
     {
       "language": "en",
       "word": "data",
-      "seq": 6271,
+      "seq": 6091,
       "phonetic": "/ˈdeɪtə/",
       "meaningKo": "자료; 데이터",
       "meaningEn": "facts and figures used for analysis",
@@ -100294,7 +100294,7 @@
     {
       "language": "en",
       "word": "opportunity",
-      "seq": 6272,
+      "seq": 5614,
       "phonetic": "/ˌɑːpərˈtuːnəti/",
       "meaningKo": "기회",
       "meaningEn": "a chance to do something",
